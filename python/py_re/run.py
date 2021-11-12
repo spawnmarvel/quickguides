@@ -4,7 +4,7 @@
 
 import re
 
-# all function names is bad in this case, they are just a name palce holder for the sections form the docs
+# all function names is bad in this case, they are just a name place holder for the sections form the docs (just meaningful in this context)
 def a_5():
     count = 0
     print("Pattern start * * :")
