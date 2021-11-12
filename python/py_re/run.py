@@ -129,7 +129,7 @@ def star():
     # The star symbol * matches zero or more occurrences of the pattern left to it.
     pattern = "ma*n"
     print("Pattern - - - - - -  > " + pattern)
-    list = ["mn", "man", "maan", "main" , "ama", "amani"]
+    list = ["mn", "man", "maan", "main" , "ama", "woman"]
     for idx, val in enumerate(list):
         rv = re.match(pattern, val)
         # match returns true or none
@@ -143,3 +143,109 @@ def star():
     print("Pattern end * * :")
 
 star()
+
+def plus():
+    count = 0
+    print("Pattern start * * :")
+    # The plus symbol + matches one or more occurrences of the pattern left to it.
+    pattern = "ma+n"
+    print("Pattern - - - - - -  > " + pattern)
+    list = ["mn", "man", "maan", "main" , "ama", "woman"]
+    for idx, val in enumerate(list):
+        rv = re.match(pattern, val)
+        # match returns true or none
+        if rv:
+            print("Match at " + str(idx) + " " + val)
+            count +=1
+        else:
+            pass
+            # print("na match ")
+    print("Match vs list: " + str(count) + " ; " + str(len(list)))
+    print("Pattern end * * :")
+
+plus()
+
+def question():
+    count = 0
+    print("Pattern start * * :")
+    # The question mark symbol ? matches zero or one occurrence of the pattern left to it.
+    pattern = "ma?n"
+    print("Pattern - - - - - -  > " + pattern)
+    list = ["mn", "man", "maan", "main" , "ama", "woman"]
+    for idx, val in enumerate(list):
+        rv = re.match(pattern, val)
+        # match returns true or none
+        if rv:
+            print("Match at " + str(idx) + " " + val)
+            count +=1
+        else:
+            pass
+            # print("na match ")
+    print("Match vs list: " + str(count) + " ; " + str(len(list)))
+    print("Pattern end * * :")
+
+question()
+
+def brac():
+    count = 0
+    print("Pattern start * * :")
+    # Consider this code: {n,m}. This means at least n, and at most m repetitions of the pattern left to it.
+    pattern = "a{2,3}"
+    print("Pattern - - - - - -  > " + pattern)
+    list = ["abc dat", "abc daat", "aabc daat", "aabc daaaat"] # match daat, aabc, daaat, daaat
+    for idx, val in enumerate(list):
+        rv = re.match(pattern, val)
+        # match returns true or none
+        if rv:
+            print("Match at " + str(idx) + " " + val)
+            count +=1
+        else:
+            pass
+            # print("na match ")
+    print("Match vs list: " + str(count) + " ; " + str(len(list)))
+    print("Pattern end * * :")
+
+brac()
+
+def test_digits():
+    count = 0
+    print("Pattern start * * :")
+    # This RegEx [0-9]{2, 4} matches at least 2 digits but not more than 4 digits
+    pattern = "[0-9]{2,4}"
+    print("Pattern - - - - - -  > " + pattern)
+    list = ["ab123csde", "12and345673", "1 and 2", "a123"] 
+    for idx, val in enumerate(list):
+        rv = re.match(pattern, val)
+        # match returns true or none
+        if rv:
+            print("Match at " + str(idx) + " " + val)
+            count +=1
+        else:
+            pass
+            # print("na match ")
+    print("Match vs list: " + str(count) + " ; " + str(len(list)))
+    print("Pattern end * * :")
+
+test_digits()
+
+def test_or():
+    count = 0
+    print("Pattern start * * :")
+    # This RegEx [0-9]{2, 4} matches at least 2 digits but not more than 4 digits
+    pattern = "a|b"
+    print("Pattern - - - - - -  > " + pattern)
+    list = ["cde", "ade", "acdbea"] 
+    for idx, val in enumerate(list):
+        rv = re.match(pattern, val)
+        # match returns true or none
+        if rv:
+            print("Match at " + str(idx) + " " + val)
+            count +=1
+        else:
+            pass
+            # print("na match ")
+    print("Match vs list: " + str(count) + " ; " + str(len(list)))
+    print("Pattern end * * :")
+
+test_or()
+
