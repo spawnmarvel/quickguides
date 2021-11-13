@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/14000762/what-does-low-in-coupling-and-high-in-cohesion-mean
+
+Loose coupling:
+
+Loose coupling: Among different classes/modules should be minimal dependency.
+
+Low coupling suggest that class should have least possible dependencies. 
+Also, dependencies that must exist should be weak dependencies - prefer dependency on interface rather than dependency on concrete class, 
+prefer composition over inheritance 
+
+Coupling refers to the degree to which the different modules/classes depend on each other, 
+it is suggested that all modules should be independent as far as possible, that's why low coupling. 
+It has to do with the elements among different modules/classes.
+
+High cohesion:
+
+High cohesion: Elements within one class/module should functionally belong together and do one particular thing.
+
+In software design high cohesion means that class should do one thing and one thing very well.
+
+Cohesion refers to the degree to which the elements of a module/class belong together, 
+it is suggested that the related code should be close to each other, 
+so we should strive for high cohesion and bind all related code together as close as possible. 
+It has to do with the elements within the module/class.
+
