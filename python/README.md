@@ -19,7 +19,7 @@ https://realpython.com/python-pep8/#naming-styles
 
 https://stackoverflow.com/questions/14000762/what-does-low-in-coupling-and-high-in-cohesion-mean
 
-Loose coupling:
+## Loose coupling:
 
 Loose coupling: Among different classes/modules should be minimal dependency.
 
@@ -31,7 +31,7 @@ Coupling refers to the degree to which the different modules/classes depend on e
 it is suggested that all modules should be independent as far as possible, that's why low coupling. 
 It has to do with the elements among different modules/classes.
 
-High cohesion:
+## High cohesion:
 
 High cohesion: Elements within one class/module should functionally belong together and do one particular thing.
 
@@ -44,7 +44,7 @@ It has to do with the elements within the module/class.
 
 https://dzone.com/articles/software-design-principles-dry-and-kiss
 
-The DRY Principle: Don't Repeat Yourself
+## The DRY Principle: Don't Repeat Yourself
 
 DRY stand for "Don't Repeat Yourself," a basic principle of software development aimed at reducing repetition of information. 
 DRY principle is stated as, "Every piece of knowledge or logic must have a single, unambiguous representation within a system."
@@ -61,7 +61,7 @@ Less code is good: It saves time and effort, is easy to maintain, and also reduc
 One good example of the DRY principle is the helper class in enterprise libraries, 
 in which every piece of code is unique in the libraries and helper classes.
 
-KISS: Keep It Simple, Stupid
+## KISS: Keep It Simple, Stupid
 
 The KISS principle is descriptive to keep the code simple and clear, making it easy to understand. 
 After all, programming languages are for humans to understand — computers can only understand 0 and 1 — 
