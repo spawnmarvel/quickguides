@@ -7,13 +7,13 @@ Install erlang
 Add System var:
 
 ERLANG_HOME
-C:\Program Files\erl-24.2
+    C:\Program Files\erl-24.2
 RABBITMQ_ADVANCED_CONFIG_FILE
-c:\software\advanced.config
+    c:\software\advanced.config
 RABBITMQ_BASE
-c:\software
+    c:\software
 RABBITMQ_CONFIG_FILE
-c:\software\rabbitmq.conf
+    c:\software\rabbitmq.conf
 
 Install rabbitmq
 Enable management and shovel plugins
