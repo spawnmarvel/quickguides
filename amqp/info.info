@@ -4,7 +4,7 @@ VM1 + VM2
 
 Install erlang
 
-Add System var on VM1 and VM2:
+Add System var on VM1 and VM2 and a same user (test:test) on both with admin access:
 
 ERLANG_HOME
     C:\Program Files\erl-24.2
