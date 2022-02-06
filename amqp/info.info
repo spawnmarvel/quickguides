@@ -22,7 +22,13 @@ Create user with administator access to vhost /
 
 VM1
 shovel_get_remote_data queue11
+
 shovel_put_local_data queue22
+
+{uris, ["amqp://test:test@xx.xx.xx.xx"]}, default 5672, will work with empty config on VM2
+{uris, ["amqp://test:test@xx.xx.xx.xx:5672"]}, 
+{uris, ["amqp://test:test@xx.xx.xx.xx:5671"]}, will work with tcp_listner config on VM2
+{uris, ["amqps://test:test@xx.xx.xx.xx:5671"]}, SSL
 
 Outbound must be allowed on 5672
 * Outbound must be allowed on 5671
