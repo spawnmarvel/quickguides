@@ -1,10 +1,10 @@
 https://follow-e-lo.com/2022/01/25/rabbitmq-bidirectional-shovel/
 
-VM1 + VM2
+## VM1 + VM2
 
 Install erlang
 
-Add System var on VM1 and VM2 and a same user (test:test) on both with admin access:
+Add System var on VM1 and VM2:
 
 ERLANG_HOME
     C:\Program Files\erl-24.2
@@ -17,8 +17,8 @@ RABBITMQ_CONFIG_FILE
 
 Install rabbitmq
 Enable management and shovel plugins
-Cookie paste form the windir over to the RabbitMQ dir, view content in it
-Create user with administator access to vhost /
+Cookie paste from the windir over to the RabbitMQ dir, view content in it
+Create user with administator access to vhost / and a same user (test:test) on both with admin access:
 
 ## VM1
 shovel_get_remote_data queue11
