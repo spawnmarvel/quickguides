@@ -20,7 +20,7 @@ Enable management and shovel plugins
 Cookie paste form the windir over to the RabbitMQ dir, view content in it
 Create user with administator access to vhost /
 
-VM1
+## VM1
 shovel_get_remote_data queue11
 
 shovel_put_local_data queue22
@@ -35,7 +35,7 @@ Outbound must be allowed on 5672
 TNC 5672 will work from VM1 if RMQ running on VM2 and RMQ has at least default config
 TNC 5671 will work from VM1 if RMQ running on VM2 and RMQ has at tcp_listeners 5671 (5672)
 
-VM2
+## VM2
 queue11
 queue22
 
@@ -55,7 +55,7 @@ to
 ].
 
 
-SSL VM2
+## SSL VM2
 
 https://www.rabbitmq.com/ssl.html
 
