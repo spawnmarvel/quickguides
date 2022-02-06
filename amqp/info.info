@@ -4,7 +4,7 @@ VM1 + VM2
 
 Install erlang
 
-Add System var:
+Add System var on VM1 and VM2:
 
 ERLANG_HOME
     C:\Program Files\erl-24.2
@@ -17,14 +17,77 @@ RABBITMQ_CONFIG_FILE
 
 Install rabbitmq
 Enable management and shovel plugins
+Cookie paste form the windir over to the RabbitMQ dir, view content in it
 Create user with administator access to vhost /
 
 VM1
 shovel_get_remote_data queue11
 shovel_put_local_data queue22
 
+Outbound must be allowed on 5672
+* Outbound must be allowed on 5671
+
 VM2
 queue11
 queue22
 
 Queues can be created programatically or in the management
+Inbound must be allowed on 5672
+
+Enable 5671
+vm2 advanced config from 
+[].
+to
+* Inbound must be allowed on 5671, TNC and shovel with amqp will work, shall work
+
+[{rabbit, [
+{loopback_users, []},
+{tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]} 
+]}
+].
+
+
+SSL VM2
+
+https://www.rabbitmq.com/ssl.html
+
+listeners.ssl	                    A list of ports to listen on for TLS connections. RabbitMQ can listen on a single interface or multiple ones.
+ssl_options.cacertfile	            Certificate Authority (CA) bundle file path
+ssl_options.certfile	            Server certificate file path
+ssl_options.keyfile	                Server private key file path
+ssl_options.verify	                Should peer verification be enabled?
+ssl_options.fail_if_no_peer_cert	When set to true, TLS connection will be rejected if client fails to provide a certificate
+
+vm2 advanced config
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.cer"},
+		{certfile,"C:\\testca\\server\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server\\private_key.pem"},
+		{password, "pass-for-server"},
+                {verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+https://betterprogramming.pub/trusted-self-signed-certificate-and-local-domains-for-testing-7c6e6e3f9548
+
+
+https://www.rabbitmq.com/ssl.html#manual-certificate-generation
+
+First let's create a directory for our test Certificate Authority:
+
+Now add the following OpenSSL configuration file, openssl.cnf, within the newly created testca directory:
+
+\\ or \
+
+Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory:
+
+The process for creating server and client certificates is very similar. First the server:
+
+https://security.stackexchange.com/questions/74345/provide-subjectaltname-to-openssl-directly-on-the-command-line
