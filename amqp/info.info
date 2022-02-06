@@ -32,6 +32,8 @@ shovel_put_local_data queue22
 
 Outbound must be allowed on 5672
 * Outbound must be allowed on 5671
+TNC 5672 will work from VM1 if RMQ running on VM2 and RMQ has at least default config
+TNC 5671 will work from VM1 if RMQ running on VM2 and RMQ has at tcp_listeners 5671 (5672)
 
 VM2
 queue11
