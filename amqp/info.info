@@ -28,7 +28,6 @@ shovel_put_local_data queue22
 {uris, ["amqp://test:test@xx.xx.xx.xx"]}, default 5672, will work with empty config on VM2
 {uris, ["amqp://test:test@xx.xx.xx.xx:5672"]}, 
 {uris, ["amqp://test:test@xx.xx.xx.xx:5671"]}, will work with tcp_listner config on VM2
-{uris, ["amqps://test:test@xx.xx.xx.xx:5671"]}, SSL
 
 Outbound must be allowed on 5672
 * Outbound must be allowed on 5671
@@ -66,16 +65,156 @@ ssl_options.keyfile	                Server private key file path
 ssl_options.verify	                Should peer verification be enabled?
 ssl_options.fail_if_no_peer_cert	When set to true, TLS connection will be rejected if client fails to provide a certificate
 
-vm2 advanced config
+
+SSL and Client Certificate Authentication in RabbitMQ with .NET Standard 2.1
+https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authentication.html
+
+Getting RabbitMQ to work over SSL can be tricky, and it is not helped by a confusion of terminology. SSL, 
+Peer Verification and Certificate Authentication are very similar, but play a different role in the configuration of SSL in RabbitMQ.
+
+* SSL and TLS are both cryptographic protocols used to secure data transmitted between a client and server, with TLS being the newer protocol which superseded SSL a while ago
+
+* Peer Verification builds on top of SSL, and is a way for RabbitMQ to verify that the clients which are attempting to connect can be trusted, that is 
+  — they present a certificate which is signed by a CA which the server also trusts.
+   This helps ensure that only trusted clients can connect to the broker and helps prevent against Man-in-the-Middle attacks.
+   If the client is not able to supply a trusted certificate, then the server will reject the connection. 
+   The exception to this is if the fail_if_no_peer_cert configuration option is set to verify_none, in which case, the server will allow the connection.
+   Peer Verification is not required in order to use SSL, but it is highly recommended, at least in production environments.
+
+* Client Certificate Authentication
+  SSL can also be used as a mechanism for clients to authenticate with the broker instead of the default username and password mechanism. 
+  In order for clients to authenticate with SSL, they must present a certificate to the server which is signed by a trusted CA, 
+  and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN). More details on how to configure this later.
+
+
+* Enabling SSL
+  Creating the Certificates
+   https://www.rabbitmq.com/ssl.html#manual-certificate-generation
+
+   highlight a few things which didn’t seem obvious:
+   * The step to generate a client certificate is only required if you want to use Peer Verification. It is also required if you plan on using certificates for client authentication.
+   * The CA file, which is used to self-sign the certificates, needs to be in the .pem format for RabbitMQ.
+   * The CN or SAN of the server certificate must be set to the name of the host machine on which the broker will be running. The documentation states to use $(hostname), 
+    but this should only be used if the machine you are generating the certificate is the same machine on which the broker will be running on.
+   * The CN of the client certificate can be set to any arbitrary value, unless you are using the certificate for client authentication (explained later).
+   * The passwords used to protect the server and client private keys can, and should, be different.
+   * Although it is common to do it this way, the server and client certificates do not have to be signed by the same CA. 
+    They can be different, as long as they are both trusted by the server and the client.
+
+
+
+At this point, you should have the following files available:
+
+A CA file in the .pem format.
+A certificate/key pair for the server in the .pem format, signed by the CA, whose CN or SAN value is set to the hostname of the machine RabbitMQ will be running on.
+A certificate/key pair for each client, signed by the CA. The format depends on the client-specific implementation.
+
+################### From amqp to amqps server certificate and ca certificate
+
+VM2 is running, VM2 advanced just tcp_listeners:
+
+[{rabbit, [
+{loopback_users, []},
+{tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]}
+
+     
+]}
+].
+
+2022-02-07 17:08:25.578000+00:00 [info] <0.689.0> started TCP listener on 0.0.0.0:5672
+2022-02-07 17:08:25.578000+00:00 [info] <0.707.0> started TCP listener on 0.0.0.0:5671
+:5672 Shovel shovel_put_local_data): user 'test' authenticated and granted access to vhost '/'
+:5671 Shovel shovel_get_remote_data): user 'test' authenticated and granted access to vhost '/'
+
+## Make cert
+
+mkdir testca
+cd testca
+mkdir certs private
+
+echo 01 > serial
+create a new file index.txt (empty, is the db file)
+
+Now add the following OpenSSL configuration file, openssl.cnf, within the newly created testca directory:
+
+Directory of c:\testca
+
+02/07/2022  05:13 PM    <DIR>          .
+02/07/2022  05:13 PM    <DIR>          ..
+02/07/2022  05:12 PM    <DIR>          certs
+02/07/2022  05:13 PM                 0 index.txt
+02/07/2022  05:11 PM             1,302 openssl.cnf
+02/07/2022  05:12 PM    <DIR>          private
+02/07/2022  05:13 PM                 5 serial
+02/07/2022  05:12 PM    <DIR>          server
+
+
+
+Edit openssl.cnf with win path “\\” and set hostname, view the file openssl.cnf
+
+set OPENSSL_CONF=C:\testca\openssl.cnf
+echo %OPENSSL_CONF%
+
+
+openssl req -x509 -config C:\testca\openssl.cnf -newkey rsa:2048 -days 365 -out C:\testca\ca_certificate.pem -outform PEM -subj /CN=MyTestCA/ -nodes
+openssl x509 -in C:\testca\ca_certificate.pem -out C:\testca\ca_certificate.cer -outform DER
+
+C:\testca now has extra:
+ca_certificate.pem
+ca_certificate.cer
+
+
+C:\testca\privat:
+ca_private_key.pem
+
+
+The process for creating server and client certificates is very similar. First the server
+
+mkdir c:\testca\server
+
+openssl genrsa -out c:\testca\server\private_key.pem 2048
+openssl req -new -key c:\testca\server\private_key.pem -out c:\testca\server\req.pem -outform PEM -subj /CN=pdp-shovel-2/O=server/ -nodes
+
+openssl ca -config c:\testca\openssl.cnf -in c:\testca\server\req.pem -out c:\testca\server\server_certificate.pem -notext -batch -extensions server_ca_extensions
+
+## output from cmd
+Using configuration from c:\testca\openssl.cnf
+Check that the request matches the signature
+Signature ok
+The Subject's Distinguished Name is as follows
+commonName            :ASN.1 12:'pdp-shovel-2'
+organizationName      :ASN.1 12:'server'
+Certificate is to be certified until Feb  7 17:23:32 2023 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+## output from cmd
+
+openssl pkcs12 -export -out c:\testca\server\server_certificate.p12 -in c:\testca\server\server_certificate.pem -inkey c:\testca\server\private_key.pem -passout pass:somepassword12
+
+ Directory of c:\testca\server
+
+02/07/2022  05:23 PM    <DIR>          .
+02/07/2022  05:23 PM    <DIR>          ..
+02/07/2022  05:22 PM             1,732 private_key.pem
+02/07/2022  05:23 PM               936 req.pem
+02/07/2022  05:23 PM             2,563 server_certificate.p12
+02/07/2022  05:23 PM             1,170 server_certificate.pem
+02/07/2022  05:12 PM                14 somepassword12.txt, we made this to store tha password
+
+Now check cert
+ca_certificate.cer issued to MyTestCa, CN = MyTestCA
+
+VM2 advanced
 
 [{rabbit, [
 {loopback_users, [<<"guest">>]},
-{tcp_listeners, [{"0.0.0.0",5672}]},
+{tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]},
 {ssl_listeners, [5671]},
-{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.cer"},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
 		{certfile,"C:\\testca\\server\\server_certificate.pem"},
                 {keyfile,"C:\\testca\\server\\private_key.pem"},
-		{password, "pass-for-server"},
+		{password, "somepassword12"},
                 {verify,verify_peer},
                 {fail_if_no_peer_cert, false}]}
 
@@ -83,19 +222,134 @@ vm2 advanced config
 ]}
 ].
 
-https://betterprogramming.pub/trusted-self-signed-certificate-and-local-domains-for-testing-7c6e6e3f9548
+
+2022-02-07 17:32:52.289000+00:00 [info] <0.683.0> started TCP listener on 0.0.0.0:5672
+2022-02-07 17:32:52.289000+00:00 [info] <0.701.0> started TCP listener on 0.0.0.0:5671
+2022-02-07 17:32:52.289000+00:00 [info] <0.721.0> started TLS (SSL) listener on [::]:5671
+
+VM1 change from amqp to amqps in advanced config for shovel:
+
+{uris, ["amqp://test:test@xx.xx.xx.xx:5671"]},
+
+{uris, ["amqps://test:test@xx.xx.xx.xx:5671"]},
 
 
-https://www.rabbitmq.com/ssl.html#manual-certificate-generation
+2022-02-07 17:36:42.288000+00:00 [warning] <0.812.0> Connection (<0.812.0>): certificate chain verification is not enabled for this TLS connection. Please see https://rabbitmq.com/ssl.html for more information.
+2022-02-07 17:36:42.288000+00:00 [warning] <0.815.0> Description: "Authenticity is not established by certificate path validation"
+2022-02-07 17:36:42.288000+00:00 [warning] <0.815.0>      Reason: "Option {verify, verify_peer} and cacertfile/cacerts is missing"
+Shovel 'shovel_get_remote_data' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 
-First let's create a directory for our test Certificate Authority:
 
-Now add the following OpenSSL configuration file, openssl.cnf, within the newly created testca directory:
+VM2 edit config from:
 
-\\ or \
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
 
-Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory:
+ ]}
+].    
 
-The process for creating server and client certificates is very similar. First the server:
 
-https://security.stackexchange.com/questions/74345/provide-subjectaltname-to-openssl-directly-on-the-command-line
+To this, removed tcp_listner 5671
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+
+
+VM1
+Is now connected with ssl, how about that, restart service on VM1 and view logs:
+
+2022-02-07 17:55:55.337000+00:00 [info] <0.505.0> Ready to start client connection listeners
+2022-02-07 17:55:55.337000+00:00 [warning] <0.641.0> Connection (<0.641.0>): certificate chain verification is not enabled for this TLS connection. Please see https://rabbitmq.com/ssl.html for more information.
+2022-02-07 17:55:55.337000+00:00 [info] <0.663.0> started TCP listener on [::]:5672
+2022-02-07 17:55:55.337000+00:00 [info] <0.681.0> started TCP listener on 0.0.0.0:5672
+2022-02-07 17:55:55.353000+00:00 [warning] <0.645.0> Description: "Authenticity is not established by certificate path validation"
+2022-02-07 17:55:55.353000+00:00 [warning] <0.645.0>      Reason: "Option {verify, verify_peer} and cacertfile/cacerts is missing"
+2022-02-07 17:55:55.353000+00:00 [warning] <0.645.0> 
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0> Server startup complete; 5 plugins started.
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0>  * rabbitmq_shovel_management
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0>  * rabbitmq_shovel
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0>  * rabbitmq_management
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0>  * rabbitmq_web_dispatch
+2022-02-07 17:55:55.540000+00:00 [info] <0.505.0>  * rabbitmq_management_agent
+
+No more rolling warnings log, just the 3 warnings 1 time and shovel is running, view image success.jpg
+
+
+VM2
+restart service on VM2 and view logs:
+
+
+2022-02-07 17:59:33.711000+00:00 [info] <0.679.0> started TCP listener on 0.0.0.0:5672
+2022-02-07 17:59:33.711000+00:00 [info] <0.699.0> started TLS (SSL) listener on [::]:5671
+2022-02-07 17:59:33.711000+00:00 [info] <0.719.0> started TLS (SSL) listener on 0.0.0.0:5671
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0> Server startup complete; 5 plugins started.
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0>  * rabbitmq_shovel_management
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0>  * rabbitmq_shovel
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0>  * rabbitmq_management
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0>  * rabbitmq_web_dispatch
+2022-02-07 17:59:33.930000+00:00 [info] <0.546.0>  * rabbitmq_management_agent
+
+[...]
+
+5672 - Shovel shovel_put_local_data): user 'test' authenticated and granted access to vhost '/'
+5671 - Shovel shovel_get_remote_data): user 'test' authenticated and granted access to vhost '/'
+
+################### From amqp to amqps server certificate and ca certificate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################### HOW TO END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
