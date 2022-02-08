@@ -322,7 +322,7 @@ No more rolling warnings log, just the 3 warnings 1 time and shovel is running, 
 ################### Shovel with self signed VM2 Server 
 ################### From amqp to amqps server certificate and ca certificate
 
-################### Shovel with self signed VM2 Server, VM1 Client
+################### Shovel with self signed VM2 Server, VM1 Client self signed
 
 
 https://www.rabbitmq.com/shovel.html
@@ -355,7 +355,7 @@ x509 certificates and PKI can be used instead.
 
 
 TODO READ
-################### Shovel with self signed VM2 Server, VM1 Client
+################### Shovel with self signed VM2 Server, VM1 Client self signed
 
 
 
