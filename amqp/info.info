@@ -109,6 +109,7 @@ A CA file in the .pem format.
 A certificate/key pair for the server in the .pem format, signed by the CA, whose CN or SAN value is set to the hostname of the machine RabbitMQ will be running on.
 A certificate/key pair for each client, signed by the CA. The format depends on the client-specific implementation.
 
+################### Shovel with self signed VM2 Server 
 ################### From amqp to amqps server certificate and ca certificate
 
 VM2 is running, VM2 advanced just tcp_listeners:
@@ -315,28 +316,47 @@ restart service on VM2 and view logs:
 5672 - Shovel shovel_put_local_data): user 'test' authenticated and granted access to vhost '/'
 5671 - Shovel shovel_get_remote_data): user 'test' authenticated and granted access to vhost '/'
 
+
+No more rolling warnings log, just the 3 warnings 1 time and shovel is running, view image success.jpg
+
+################### Shovel with self signed VM2 Server 
 ################### From amqp to amqps server certificate and ca certificate
 
+################### Shovel with self signed VM2 Server, VM1 Client
 
 
+https://www.rabbitmq.com/shovel.html
+
+WAN-friendly
+The Shovel plugin uses client connections under the hood. Acknowledgements and publisher confirms are used to ensure data safety in case of connection and node failures.
+
+https://www.rabbitmq.com/connections.html
+
+* Connections
+
+Protocol Differences
+Different messaging protocols use different ports. Ports also vary for plain TCP and TLS-enabled connections. 
+The Networking guide covers all ports used by RabbitMQ depending on what protocols are enabled, whether TLS is used and so on.
+5672, 5671: used by AMQP 0-9-1 and AMQP 1.0 clients without and with TLS
 
 
+AMQP 0-9-1
+AMQP 0-9-1 provides a way for connections to multiplex over a single TCP connection. That means an application can open multiple "lightweight connections" 
+called channels on a single connection. 
+AMQP 0-9-1 clients open one or more channels after connecting and perform protocol operations (manage topology, publish, consume) on the channels.
+
+Protocol Differences
+AMQP 0-9-1
+AMQP 0-9-1 has a model that includes connections and channels. Channels allow for connection multiplexing (having multiple logical connections on a "physical" or TCP one).
+
+AMQP 0-9-1 supports different authentication mechanisms. 
+While it's most common for applications to provide a pair of credentials, 
+x509 certificates and PKI can be used instead.
 
 
+TODO READ
+################### Shovel with self signed VM2 Server, VM1 Client
 
-
-
-
-
-
-
-
-
-
-
-
-
-################### HOW TO END
 
 
 
