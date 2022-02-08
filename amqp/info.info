@@ -129,6 +129,23 @@ VM2 is running, VM2 advanced just tcp_listeners:
 
 ## Make cert
 
+https://www.openssl.org/
+
+
+Binaries
+https://wiki.openssl.org/index.php/Binaries
+
+OpenSSL for Windows
+Pre-compiled 64-bit (x64) and 32-bit (x86) 1.1.1 and 3.0 executables and libraries for Microsoft Windows Operating Systems with a dependency on the Microsoft Visual Studio 2015-2019 runtime and Microsoft Visual Studio 2015-2022 runtime respectively. 
+The distribution may be used standalone or integrated into any Windows application. The distribution's EXE and DLL files are digitally signed 'FireDaemon Technologies Limited'.
+
+https://kb.firedaemon.com/support/solutions/articles/4000121705
+
+1 Download ZIP File (Preferred)
+3 Installation
+Install the appropriate Visual Studio C++ Runtime found in the "prerequisites" folder in the "openssl-1.1" or "openssl-3 folder"
+
+
 mkdir testca
 cd testca
 mkdir certs private
