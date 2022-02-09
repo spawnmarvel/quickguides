@@ -2,7 +2,10 @@ https://follow-e-lo.com/2022/01/25/rabbitmq-bidirectional-shovel/
 
 ## VM1 + VM2
 
-Install erlang
+
+https://www.rabbitmq.com/install-windows.html
+
+Install erlang run as admin
 
 Add System var on VM1 and VM2:
 
@@ -15,10 +18,29 @@ RABBITMQ_BASE
 RABBITMQ_CONFIG_FILE
     c:\software\rabbitmq.conf
 
-Install rabbitmq
-Enable management and shovel plugins
+Install rabbitmq run as admin
+
+If RabbitMQ is installed using a non-administrative account, 
+a shared secret file used by nodes and CLI tools will not be placed into a correct location, 
+leading to authentication failures when rabbitmqctl.bat and other CLI tools are used.
+
+If the Windows service is used, 
+the cookie should be copied from C:\Windows\system32\config\systemprofile\.erlang.cookie 
+to the expected location for users running commands like rabbitmqctl.bat.
+
+https://www.rabbitmq.com/cli.html#erlang-cookie
+
 Cookie paste from the windir over to the RabbitMQ dir, view content in it
-Create user with administator access to vhost / and a same user (test:test) on both with admin access:
+
+Enable management and shovel plugins
+
+https://www.rabbitmq.com/access-control.html
+
+Create user with administator access to vhost / and a same user (test:testpassword) on both with admin access:
+
+It is advisable to pre-configure a new user with a generated username and password 
+or delete the guest user 
+or at least change its password to reasonably secure generated value that won't be known to the public.
 
 ## VM1
 shovel_get_remote_data queue11
@@ -374,9 +396,40 @@ x509 certificates and PKI can be used instead.
 TODO READ
 ################### Shovel with self signed VM2 Server, VM1 Client self signed
 
+################### Config:
+https://www.rabbitmq.com/configure.html
+
+
+RabbitMQ 3.7.0+
+%APPDATA%\RabbitMQ\rabbitmq.conf
+In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. 
+An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format
+
+
+Modern RabbitMQ versions allow for both formats to be used at the same time in separate files: 
+rabbitmq.conf uses the new style format and is recommended for most settings
+advanced.config covers more advanced settings that the ini-style configuration cannot express. 
+
+Configuration File          Format Used                             Purpose                   
+* rabbitmq.conf             New style format (sysctl or ini-like)   Primary configuration file. Should be used for most settings
+
+https://www.rabbitmq.com/configure.html#config-file
+https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
+
+# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
+
+# listeners.tcp.default = 5672
+# listeners.tcp.other_port = 5673
 
 
 
+* advanced.config           Classic (Erlang terms)                  A limited number of settings that cannot be expressed in the new style configuration format
+
+https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
+
+
+** rabbitmq-env.conf.bat
+################### Config:
 
 
 
