@@ -36,7 +36,8 @@ https://www.rabbitmq.com/cli.html#erlang-cookie
 
 Cookie paste from the windir over to the RabbitMQ dir, view content in it
 
-Enable management and shovel plugins
+Enable management on VM1 AND VM2
+Enable shovel plugins on VM1 only
 
 https://www.rabbitmq.com/access-control.html
 
