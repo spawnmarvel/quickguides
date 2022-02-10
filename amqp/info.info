@@ -220,7 +220,9 @@ openssl req -new -key c:\testca\server\private_key.pem -out c:\testca\server\req
 # Change CN, make new for just CN, it does matter even if you use ip, view section ## Test 5. But CN should be hostname or FQDN
 openssl req -new -key c:\testca\server2\private_key.pem -out c:\testca\server2\req.pem -outform PEM -subj /CN=pdp-shovel-2 -nodes
 
-* Both works when only the server has certificates, view section ################### Shovel with self signed VM2 Server, VM1 Client self signed
+* Both works when only the server has certificates, view section after you have verified the vm2 build with self signed.
+* Then you can set up: ################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
+
 * That means VM2 has SSL in advanced config and VM1 only has amqps shovel in advanced config, not SSL
 
 
@@ -435,7 +437,7 @@ https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advance
 
 
 
-################### Shovel with self signed VM2 Server, VM1 Client will enforce certificate after test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
 
 
 The below were for testing, test1,2,3,4,5, the bottom line was to:
@@ -510,7 +512,7 @@ log
 
 so it verifies correct ca_certificate 
 
-################### Shovel with self signed VM2 Server, VM1 Client will enforce certificate after test 5
+################### Shovel with self signed VM2 Server, VM1 Client will enforce  CA certificate after test 5
 
 
 ## Test 1
@@ -727,8 +729,8 @@ to
 
 
 ## Test 5
-################### Shovel with self signed VM2 Server, VM1 Client will enforce certificate end test 5
-################### Shovel with self signed VM2 Server, VM1 Client will enforce certificat end test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5 ENDED
 
 
 
