@@ -412,6 +412,8 @@ x509 certificates and PKI can be used instead.
 
 The below were for testing, test1,2,3,4,5, the bottom line was to:
 
+View tls_success.jpg
+
 1 Copy the ca_certificate.pem from VM2 to VM1:
 2 VM1, append to the shovel config:
 
