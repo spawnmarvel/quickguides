@@ -484,7 +484,19 @@ NOTE:
 1 So it verifies correct ca_certificate for the sertificate that the server uses (tested with bad_ca_certificate.pem)
 2 and it demands that the server must have a certificate 
 3 but it does not look for CN=HOSTNAME or IP (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
-4 we by pass SNI, server name indication
+4 we bypass SNI, server name indication
+5 (and the client VM1 is not using a certificate)
+So this is:
+
+https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
+
+TLS, the server has a TLS certificate and a public/private key pair, while the client does not. The typical TLS process works like this:
+1 lient connects to server
+2 Server presents its TLS certificate
+3 Client verifies the server's certificate
+4 Client and server exchange information over encrypted TLS connection
+
+In mTLS, however, both the client and server have a certificate, and both sides authenticate using their public/private key pair.
 
 https://pcable.net/posts/2021-02-10-rmq-ldap/
 
