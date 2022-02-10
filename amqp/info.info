@@ -481,7 +481,7 @@ log
 2022-02-10 11:51:13.923000+00:00 [info] <0.505.0>  * rabbitmq_web_dispatch
 
 NOTE: 
-1 So it verifies correct ca_certificate for the sertificate that the server uses 
+1 So it verifies correct ca_certificate for the sertificate that the server uses (tested with bad_ca_certificate.pem)
 2 and it demands that the server must have a certificate 
 3 but it does not look for CN=HOSTNAME OR IP21 (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
 4 we by pass SNI, server name indication
