@@ -483,7 +483,7 @@ log
 NOTE: 
 1 So it verifies correct ca_certificate for the sertificate that the server uses (tested with bad_ca_certificate.pem)
 2 and it demands that the server must have a certificate 
-3 but it does not look for CN=HOSTNAME OR IP21 (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
+3 but it does not look for CN=HOSTNAME or IP (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
 4 we by pass SNI, server name indication
 
 https://pcable.net/posts/2021-02-10-rmq-ldap/
