@@ -5,6 +5,10 @@ https://follow-e-lo.com/2022/01/25/rabbitmq-bidirectional-shovel/
 
 https://www.rabbitmq.com/install-windows.html
 
+
+rabbitmq-server-3.9.12.exe
+otp_win64_24.2.exe
+
 Install erlang run as admin
 
 Add System var on VM1 and VM2:
@@ -476,7 +480,30 @@ log
 2022-02-10 11:51:13.923000+00:00 [info] <0.505.0>  * rabbitmq_management
 2022-02-10 11:51:13.923000+00:00 [info] <0.505.0>  * rabbitmq_web_dispatch
 
-so it verifies correct ca_certificate 
+NOTE: 
+1 So it verifies correct ca_certificate for the sertificate that the server uses 
+2 and it demands that the server must have a certificate 
+3 but it does not look for CN=HOSTNAME OR IP21 (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
+4 we by pass SNI, server name indication
+
+https://pcable.net/posts/2021-02-10-rmq-ldap/
+
+Turns out, later versions of Erlang require SNI information on connections, which is fine - except if that certificate is a wildcard certificate. 
+The folks who work on Erlang made a decision to not validate wildcard certificates unless you specifically allow it
+
+(hm. we have rabbitmq-server-3.9.12.exe.)
+On RabbitMQ 3.8.11 and earlier, you could just turn SNI off - toss 
+{server_name_indication,disable} into the ssl_options block and move on.
+I don’t love this, but it could be OK depending on your threat model and how your LDAP servers are load balanced1.
+
+
+To be continued
+rabbitmq_auth_backend_ldap.ssl_hostname_verification
+
+https://www.rabbitmq.com/ldap.html
+
+rabbitmq-plugins enable rabbitmq_auth_backend_ldap
+
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 INFO
 
