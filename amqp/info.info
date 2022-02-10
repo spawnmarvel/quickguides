@@ -449,7 +449,7 @@ Management Listening ports are:
 amqp/ssl 0.0.0.0 5671 
 amqp/ssl :: 5671 
 
-Aftr success we did:
+Aftr success in Test 5 we did:
 
 LETS FAKE A BAD CA Certificate:
 Just make a file with no content on VM1:
