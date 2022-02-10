@@ -513,7 +513,7 @@ So this is:
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 TLS, the server has a TLS certificate and a public/private key pair, while the client does not. The typical TLS process works like this:
-1 lient connects to server
+1 Client connects to server
 2 Server presents its TLS certificate
 3 Client verifies the server's certificate
 4 Client and server exchange information over encrypted TLS connection
