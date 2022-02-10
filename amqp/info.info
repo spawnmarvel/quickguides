@@ -220,8 +220,8 @@ openssl req -new -key c:\testca\server\private_key.pem -out c:\testca\server\req
 # Change CN, make new for just CN, it does matter even if you use ip, view section ## Test 5. But CN should be hostname or FQDN
 openssl req -new -key c:\testca\server2\private_key.pem -out c:\testca\server2\req.pem -outform PEM -subj /CN=pdp-shovel-2 -nodes
 
-* Both works when only the server has certificates, view section after you have verified the vm2 build with self signed.
-* Then you can set up: ################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
+* Both (or all CN) works when only the server has certificates, after you have verified the vm2 build with self signed toward VM1 with no SSL config.
+* Then you can set up: ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5
 
 * That means VM2 has SSL in advanced config and VM1 only has amqps shovel in advanced config, not SSL
 
@@ -402,42 +402,8 @@ While it's most common for applications to provide a pair of credentials,
 x509 certificates and PKI can be used instead.
 
 
-################### Config:
-https://www.rabbitmq.com/configure.html
 
-
-RabbitMQ 3.7.0+
-%APPDATA%\RabbitMQ\rabbitmq.conf
-In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. 
-An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format
-
-
-Modern RabbitMQ versions allow for both formats to be used at the same time in separate files: 
-rabbitmq.conf uses the new style format and is recommended for most settings
-advanced.config covers more advanced settings that the ini-style configuration cannot express. 
-
-Configuration File          Format Used                             Purpose                   
-* rabbitmq.conf             New style format (sysctl or ini-like)   Primary configuration file. Should be used for most settings
-
-https://www.rabbitmq.com/configure.html#config-file
-https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
-
-# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
-
-# listeners.tcp.default = 5672
-# listeners.tcp.other_port = 5673
-
-
-
-* advanced.config           Classic (Erlang terms)                  A limited number of settings that cannot be expressed in the new style configuration format
-
-https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
-
-
-
-
-
-################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5
 
 
 The below were for testing, test1,2,3,4,5, the bottom line was to:
@@ -729,16 +695,41 @@ to
 
 
 ## Test 5
-################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5
-################### Shovel VM1 with self signed VM2 Server, VM1 Client will enforce VM2 server CA certificate after test 5 ENDED
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 ENDED
 
 
 
 
+################### Config:
+https://www.rabbitmq.com/configure.html
+
+
+RabbitMQ 3.7.0+
+%APPDATA%\RabbitMQ\rabbitmq.conf
+In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. 
+An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format
+
+
+Modern RabbitMQ versions allow for both formats to be used at the same time in separate files: 
+rabbitmq.conf uses the new style format and is recommended for most settings
+advanced.config covers more advanced settings that the ini-style configuration cannot express. 
+
+Configuration File          Format Used                             Purpose                   
+* rabbitmq.conf             New style format (sysctl or ini-like)   Primary configuration file. Should be used for most settings
+
+https://www.rabbitmq.com/configure.html#config-file
+https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
+
+# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
+
+# listeners.tcp.default = 5672
+# listeners.tcp.other_port = 5673
 
 
 
+* advanced.config           Classic (Erlang terms)                  A limited number of settings that cannot be expressed in the new style configuration format
 
+https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
 
 
 
