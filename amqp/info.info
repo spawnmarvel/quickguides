@@ -403,7 +403,7 @@ x509 certificates and PKI can be used instead.
 
 
 
-################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 INFO
 
 
 The below were for testing, test1,2,3,4,5, the bottom line was to:
@@ -478,7 +478,7 @@ log
 
 so it verifies correct ca_certificate 
 
-################### Shovel with self signed VM2 Server, VM1 Client will enforce  CA certificate after test 5
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 INFO
 
 
 ## Test 1
