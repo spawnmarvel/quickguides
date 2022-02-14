@@ -1,0 +1,219 @@
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 INFO
+
+
+## Test 1
+On VM2 if change advanced.config to:
+{fail_if_no_peer_cert, true}]}
+
+
+VM2 log will be:
+
+2022-02-10 08:49:35.365000+00:00 [notice] <0.743.0> TLS server: In state wait_cert at tls_handshake_1_3.erl:1475 generated SERVER ALERT: Fatal - Certificate required
+2022-02-10 08:49:35.365000+00:00 [notice] <0.743.0>  - certificate_required
+2022-02-10 08:49:35.381000+00:00 [notice] <0.744.0> TLS server: In state wait_cert at tls_handshake_1_3.erl:1475 generated SERVER ALERT: Fatal - Certificate required
+2022-02-10 08:49:35.381000+00:00 [notice] <0.744.0>  - certificate_required
+
+VM1 log will be:
+2022-02-10 08:53:12.227000+00:00 [warning] <0.2988.0> Connection (<0.2988.0>): certificate chain verification is not enabled for this TLS connection. Please see https://rabbitmq.com/ssl.html for more information.
+
+## Test 2 
+
+On VM2 if change advanced.config to:
+{fail_if_no_peer_cert, false}]}
+
+VM1 advanced config append and copy the ca_certificate.pem from VM2 to VM1:
+
+[ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+VM1 log
+2022-02-10 10:15:57.249000+00:00 [notice] <0.3745.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-10 10:15:57.249000+00:00 [notice] <0.3745.0>  - {bad_cert,hostname_check_failed}
+
+VM2 log
+2022-02-10 10:16:22.341000+00:00 [notice] <0.15974.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
+
+If we on VM2 change the advanced config to cert with pdp-shovel-2 and not the, O server that was appended
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server2\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server2\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+The error is the same
+
+
+## Test 2 
+
+## Test 3
+https://github.com/rabbitmq/rabbitmq-server/issues/1424
+https://groups.google.com/g/rabbitmq-users/c/PzDpj6we4lk
+
+The hostname check causing this errer is independent of X509 certificate authentication. Using recent versions of Erlang, 
+TLS will verify that the host to which you connect (in this case, your shovel connection) matches the CN= value in the certificate presented by the server.
+You can resolve this issue by using a server certificate with a CN value or SAN value that matches that IP address, 
+or switch to using DNS names and ensuring the host name in the certificate matches the server's host name and the name you use in the amqps:// URI. 
+You can also disable that check completely, but that leaves you open to certain security risks. 
+Note that none of this is specific to RabbitMQ or Erlang, but is how TLS works everywhere. Previous versions of Erlang did not perform this check by default.
+
+make server 3
+
+set OPENSSL_CONF=C:\testca\openssl.cnf
+
+echo %OPENSSL_CONF%
+
+openssl genrsa -out c:\testca\server3\private_key.pem 2048
+
+openssl req -new -key c:\testca\server3\private_key.pem -out c:\testca\server3\req.pem -outform PEM -subj /CN=xx.xx.xx.xx -nodes
+
+openssl ca -config c:\testca\openssl.cnf -in c:\testca\server3\req.pem -out c:\testca\server3\server_certificate.pem -notext -batch -extensions server_ca_extensions
+
+openssl pkcs12 -export -out c:\testca\server3\server_certificate.p12 -in c:\testca\server3\server_certificate.pem -inkey c:\testca\server3\private_key.pem -passout pass:somepassword12
+
+openssl x509 -noout -subject -in c:\testca\server3\server_certificate.pem
+
+subject=CN = xx.xx.xx.xx
+
+Update path on VM2:
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+VM2 log:
+2022-02-10 10:38:28.797000+00:00 [notice] <0.766.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
+
+vm1 log:
+2022-02-10 10:40:00.610000+00:00 [notice] <0.805.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-10 10:40:00.610000+00:00 [notice] <0.805.0>  - {bad_cert,hostname_check_failed}
+
+
+
+
+## Test 3
+## Test 4
+copy from vm2, the new server-certificate.pemi folder 3 to VM2 and point to that in vm1 config
+[ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\server_certificate.pem"},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,false}]}
+	]},
+  {rabbitmq_shovel,
+
+  log vm1
+2022-02-10 10:51:55.863000+00:00 [notice] <0.850.0> TLS client: In state wait_cert at ssl_handshake.erl:2015 generated CLIENT ALERT: Fatal - Unknown CA
+
+
+## Test 4
+
+## Test 5
+vm1 set in advanced config
+
+[ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+
+log
+2022-02-10 10:53:54.149000+00:00 [notice] <0.1079.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-10 10:53:54.149000+00:00 [notice] <0.1079.0>  - {bad_cert,hostname_check_failed}
+
+vm1
+[ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,false}]}
+	]},
+  {rabbitmq_shovel,
+
+log:
+2022-02-10 10:55:43.088000+00:00 [notice] <0.970.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-10 10:55:43.088000+00:00 [notice] <0.970.0>  - {bad_cert,hostname_check_failed}
+
+VM2 CN is IP of server....hm.....
+
+
+http://marianoguerra.org/tmp/html/ssl/book.html
+
+When the option verify is set to verify_peer the check public_key:pkix_verify_hostname/2 will be performed in addition to the usual x509-path validation checks. 
+If the check fails the error {bad_cert, hostname_check_failed} will be propagated to the path validation fun verify_fun, where
+
+
+https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authentication.html
+
+The CA bundle must be installed on the client machine as a trusted authority. 
+This CA is now trusted on the client machine, which means both the server and client certificates are inherently trusted too.
+VM1 installed and same error
+
+2022-02-10 11:12:50.295000+00:00 [notice] <0.2671.0>  - {bad_cert,hostname_check_failed}
+
+https://pcable.net/posts/2021-02-10-rmq-ldap/
+
+
+{server_name_indication,disable} into the ssl_options block and move on
+
+I don’t love this, but it could be OK depending on your threat model and how your LDAP servers are load balanced1.
+
+VM1 advanced config
+
+[ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+	{server_name_indication,disable},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+
+vm1 log
+2022-02-10 11:21:17.760000+00:00 [warning] <0.622.0> Connection (<0.622.0>): certificate chain verification is not enabled for this TLS connection. Please see https://rabbitmq.com/ssl.html for more information.
+2022-02-10 11:21:17.760000+00:00 [warning] <0.622.0> Connection (<0.622.0>): certificate chain verification is not enabled for this TLS connection. Please see https://rabbitmq.com/ssl.html for more information.
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0> Server startup complete; 5 plugins started.
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0>  * rabbitmq_shovel_management
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0>  * rabbitmq_shovel
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0>  * rabbitmq_management
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0>  * rabbitmq_web_dispatch
+2022-02-10 11:21:17.932000+00:00 [info] <0.506.0>  * rabbitmq_management_agent
+
+vm2 log from:
+
+2022-02-10 11:20:09.348000+00:00 [notice] <0.9235.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
+
+to
+
+2022-02-10 11:21:17.775000+00:00 [info] 5671 - Shovel shovel_get_remote_data): user 'test' authenticated and granted access to vhost '/'
+2022-02-10 11:21:17.775000+00:00 [info] 5671 - Shovel shovel_put_local_data): user 'test' authenticated and granted access to vhost '/'
+
+
+
+
+## Test 5
+
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 ENDED

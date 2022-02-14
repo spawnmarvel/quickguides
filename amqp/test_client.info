@@ -1,0 +1,63 @@
+####
+####
+####
+Fishy ?! this was fishy the path on VM2, this caused 2 hours.....BAD:
+{ssl_options, [{cacertfile,"C:\\C:\\testca_client\\ca_certificate.pem"},
+
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
+
+
+
+https://github.com/esl/MongooseIM/issues/1341
+
+
+## Test 6
+
+2 OpenSSL client certificate
+2.1 move OpenSSL to VM1 generate CA TestCA2 and client sertificate
+2.2 Set up VM1 client ssl
+
+VM1:
+C:\testca_client
+ Directory of c:\testca_client
+
+02/14/2022  11:10 AM    <DIR>          .
+02/14/2022  11:10 AM    <DIR>          ..
+02/14/2022  11:07 AM    <DIR>          certs
+02/14/2022  11:10 AM                 0 index.txt
+02/14/2022  11:07 AM             1,344 openssl.cnf
+02/14/2022  11:07 AM    <DIR>          private
+02/14/2022  11:09 AM                 5 serial
+
+Copied the openssl.cnf from VM2 to VM1 and changed the hostname and path to testca_client
+Edit openssl.cnf with win path “\\” and set hostname, view the file openssl.cnf
+
+set OPENSSL_CONF=C:\testca_client\openssl.cnf
+echo %OPENSSL_CONF%
+
+
+openssl req -x509 -config C:\testca_client\openssl.cnf -newkey rsa:2048 -days 365 -out C:\testca_client\ca_certificate.pem -outform PEM -subj /CN=MyTestCA2/ -nodes
+openssl x509 -in C:\testca_client\ca_certificate.pem -out C:\testca_client\ca_certificate.cer -outform DER
+
+Now we ca_certificate and private key
+Made C:\testca_client folder.
+Lets make client cert
+
+
+cd client
+
+openssl genrsa -out C:\testca_client\client\private_key.pem 2048
+
+openssl req -new -key C:\testca_client\client\private_key.pem -out C:\testca_client\client\req.pem -outform PEM -subj /CN=pdp-shovel-1 -nodes
+
+cd ../testca_client
+
+openssl ca -config C:\testca_client\openssl.cnf -in C:\testca_client\client\req.pem -out C:\testca_client\client\client_certificate.pem -notext -batch -extensions client_ca_extensions
+
+MUST DO ABOVE AND TEST AGAIN.
+
+
+# mtls
+
+## Test 6
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
