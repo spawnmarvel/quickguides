@@ -1,15 +1,8 @@
 ####
 ####
 ####
-Fishy ?! this was fishy the path on VM2, this caused 2 hours.....BAD:
-{ssl_options, [{cacertfile,"C:\\C:\\testca_client\\ca_certificate.pem"},
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
-
-
-
-https://github.com/esl/MongooseIM/issues/1341
-
 
 ## Test 6
 
