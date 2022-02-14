@@ -1,4 +1,12 @@
-    1 OpenSSL server certificate lasting just 1 day
-    # check connction after expired
-    2 OpenSSL client certificate
-    # mtls
+https://www.rabbitmq.com/uri-query-parameters.html
+
+&server_name_indication=myhost
+
+Only of use for the amqps scheme and used to configure verification of the server's x509 (TLS) certificate. Note: 
+It is highly recommended to use both values. See the TLS guide to learn more about TLS support in RabbitMQ in general and specifically the Erlang client section.
+
+    
+1 OpenSSL server certificate lasting just 1 day
+# check connction after expired
+2 OpenSSL client certificate
+# mtls
