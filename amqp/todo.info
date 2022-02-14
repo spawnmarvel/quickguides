@@ -9,8 +9,36 @@ amqps://myhost?cacertfile=/path/to/ca_certificate.pem
 Only of use for the amqps scheme and used to configure verification of the server's x509 (TLS) certificate. Note: 
 It is highly recommended to use both values. See the TLS guide to learn more about TLS support in RabbitMQ in general and specifically the Erlang client section.
 
-    
-1 OpenSSL server certificate lasting just 1 day
-# check connction after expired
+
+https://www.erlang.org/doc/man/ssl.html
+
+If the option verify is set to verify_peer the option server_name_indication shall also be specified, 
+if it is not no Server Name Indication extension will be sent, and public_key:pkix_verify_hostname/2 
+will be called with the IP-address of the connection as ReferenceID, which is probably not what you want.
+
+[...]
+
+When the option verify is set to verify_peer the check public_key:pkix_verify_hostname/2 will be performed in addition 
+to the usual x509-path validation checks. If the check fails the error {bad_cert, hostname_check_failed} will be propagated to the path validation fun verify_fun.
+
+
+https://www.erlang.org/doc/apps/ssl/ssl_distribution.html
+
+For the client, the option {server_name_indication, atom_to_list(TargetNode)} is added when connecting. 
+This makes it possible to use the client option {verify, verify_peer}, and the client will verify that the certificate matches the 
+node name you are connecting to. This only works if the the server certificate is issued to the name atom_to_list(TargetNode).
+
+
+For the server it is also possible to use the option {verify, verify_peer} and the server will only accept client connections with 
+certificates that are trusted by a root certificate that the server knows. 
+A client that presents an untrusted certificate will be rejected. This option is preferably combined with {fail_if_no_peer_cert, true} 
+or a client will still be accepted if it does not present any certificate.
+
+
 2 OpenSSL client certificate
+2.1 move OpenSSL to VM1 generate CA TestCA2 and client sertificate
+2.2 Use new CA on vm1, cp client ca to vm2, since VM1 ha server CA.
 # mtls
+
+2 OpenSSL server certificate lasting just 1 day
+# check connction after expired

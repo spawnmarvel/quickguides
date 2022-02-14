@@ -743,7 +743,19 @@ to
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 ENDED
 
 
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
 
+## Test 6
+
+2 OpenSSL client certificate
+2.1 move OpenSSL to VM1 generate CA TestCA2 and client sertificate
+2.2 Set up VM1 client ssl
+
+2.3 Use new CA on vm1, cp client ca to vm2, since VM1 ha server CA.
+# mtls
+
+## Test 6
+################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
 
 ################### Config:
 https://www.rabbitmq.com/configure.html
