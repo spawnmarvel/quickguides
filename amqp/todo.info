@@ -13,7 +13,7 @@ It is highly recommended to use both values. See the TLS guide to learn more abo
 https://www.erlang.org/doc/man/ssl.html
 
 If the option verify is set to verify_peer the option server_name_indication shall also be specified, 
-if it is not no Server Name Indication extension will be sent, and public_key:pkix_verify_hostname/2 
+if it is not, no Server Name Indication extension will be sent, and public_key:pkix_verify_hostname/2 
 will be called with the IP-address of the connection as ReferenceID, which is probably not what you want.
 
 [...]
@@ -34,9 +34,10 @@ certificates that are trusted by a root certificate that the server knows.
 A client that presents an untrusted certificate will be rejected. This option is preferably combined with {fail_if_no_peer_cert, true} 
 or a client will still be accepted if it does not present any certificate.
 
+1 Test SNI
 
 2 OpenSSL client certificate
-2.1 move OpenSSL to VM1 generate CA TestCA2 and client sertificate
+2.1 Move OpenSSL to VM1 generate CA TestCA2 and client sertificate
 2.2 Use new CA on vm1, cp client ca to vm2, since VM1 ha server CA.
 # mtls
 
