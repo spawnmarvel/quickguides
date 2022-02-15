@@ -36,7 +36,27 @@ or a client will still be accepted if it does not present any certificate.
 
 1 Test SNI on VM1 
 2 Read on shovel properties, view 37 server
-3 Test encode URI or password
+
+https://github.com/rabbitmq/rabbitmq-server/blob/master/deps/rabbit/docs/advanced.config.example
+
+%% Rather than specifying some values per-shovel, you can specify
+   %% them for all shovels here.
+
+3 Test encode password for certfile
+3.1 Test encode URI or password in shovel
+
+https://www.rabbitmq.com/configure.html
+
+Encrypted values must be inside an Erlang encrypted tuple
+
+https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl/blob/v3.7.x/README.md
+
+This plugin allows RabbitMQ clients authenticate using x509 certificates and TLS (PKI) peer verification mechanism 
+instead of credentials (username/password pairs).
+
+
+
+
 
 2 OpenSSL client certificate
 2.1 Move OpenSSL to VM1 generate CA TestCA2 and client sertificate
