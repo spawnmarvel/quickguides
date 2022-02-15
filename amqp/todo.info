@@ -58,7 +58,10 @@ instead of credentials (username/password pairs).
 
 2 OpenSSL client certificate
 2.1 Move OpenSSL to VM1 generate CA TestCA2 and client sertificate
-2.2 Use new client certficate on vm1, cp client CA to vm2, since VM1 has server CA
+2.2:
+* Use new client certficate on vm1
+* Copy client CA to vm2, since VM1 has server CA, {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+* Set up client equal to server
 # mtls
 
 2 OpenSSL server certificate lasting just 1 day
