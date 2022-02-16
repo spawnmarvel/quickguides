@@ -34,13 +34,27 @@ certificates that are trusted by a root certificate that the server knows.
 A client that presents an untrusted certificate will be rejected. This option is preferably combined with {fail_if_no_peer_cert, true} 
 or a client will still be accepted if it does not present any certificate.
 
-1 Test SNI on VM1 
-2 Read on shovel properties, view 37 server
+1 Test SNI on VM1 = Check CN on server certificate on VM2, use that string on VM1 =
+* ON VM2
+check CN openssl x509 -noout -subject -in c:\testca\server3\server_certificate.pem
+CN in server3 folder is IP
+Update VM2 to use SNI = IP
 
-https://github.com/rabbitmq/rabbitmq-server/blob/master/deps/rabbit/docs/advanced.config.example
+{server_name_indication,disable},
+{server_name_indication,"xx.xx.xx.xx"},
 
-%% Rather than specifying some values per-shovel, you can specify
-   %% them for all shovels here.
+2022-02-16 19:25:08.846000+00:00 [notice] <0.904.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-16 19:25:23.910000+00:00 [notice] <0.1019.0>  - {bad_cert,hostname_check_failed}
+
+
+Update VM2 to use SNI = hostname
+{server_name_indication,disable},
+{server_name_indication,"pdp-shovel-2"},
+
+2022-02-16 19:22:42.386000+00:00 [notice] <0.1000.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-16 19:22:57.463000+00:00 [notice] <0.1115.0>  - {bad_cert,hostname_check_failed}
+
+Not working, set back to disable and shvel with amqps is running.
 
 3 Test encode password for certfile
 3.1 Test encode URI or password in shovel
@@ -49,6 +63,7 @@ https://www.rabbitmq.com/configure.html
 
 Encrypted values must be inside an Erlang encrypted tuple
 
+3 
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl/blob/v3.7.x/README.md
 
 This plugin allows RabbitMQ clients authenticate using x509 certificates and TLS (PKI) peer verification mechanism 
@@ -68,3 +83,10 @@ instead of credentials (username/password pairs).
 # check connction after expired
 
 
+
+2 Read on shovel properties, view 37 server
+
+https://github.com/rabbitmq/rabbitmq-server/blob/master/deps/rabbit/docs/advanced.config.example
+
+%% Rather than specifying some values per-shovel, you can specify
+   %% them for all shovels here.

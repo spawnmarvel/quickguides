@@ -170,7 +170,7 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 
 The CA bundle must be installed on the client machine as a trusted authority. 
 This CA is now trusted on the client machine, which means both the server and client certificates are inherently trusted too.
-VM1 installed and same error
+VM1 certificate install and same error
 
 2022-02-10 11:12:50.295000+00:00 [notice] <0.2671.0>  - {bad_cert,hostname_check_failed}
 

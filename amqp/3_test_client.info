@@ -1,8 +1,12 @@
-####
-####
-####
+
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate, VM1 own CA and client cert test 
+
+https://www.rabbitmq.com/ssl.html
+
+For client connections, there are two common approache
+* Configure RabbitMQ to handle TLS connections
+
 
 ## Test 6
 

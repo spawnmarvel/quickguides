@@ -136,8 +136,8 @@ A CA file in the .pem format.
 A certificate/key pair for the server in the .pem format, signed by the CA, whose CN or SAN value is set to the hostname of the machine RabbitMQ will be running on.
 A certificate/key pair for each client, signed by the CA. The format depends on the client-specific implementation.
 
-################### Shovel with self signed VM2 Server 
-################### From amqp to amqps server certificate and ca certificate
+################### 1 Shovel with self signed VM2 Server 
+################### 2 From amqp to amqps server certificate and ca certificate
 
 VM2 is running, VM2 advanced just tcp_listeners:
 
@@ -374,8 +374,8 @@ restart service on VM2 and view logs:
 
 No more rolling warnings log, just the 3 warnings 1 time and shovel is running, view image success.jpg
 
-################### Shovel with self signed VM2 Server 
-################### From amqp to amqps server certificate and ca certificate
+################### S1 hovel with self signed VM2 Server 
+################### 2 From amqp to amqps server certificate and ca certificate
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client (with ssl options) will enforce VM2 server CA certificate after test 5 INFO
@@ -501,8 +501,20 @@ TLS, the server has a TLS certificate and a public/private key pair, while the c
 
 In mTLS, however, both the client and server have a certificate, and both sides authenticate using their public/private key pair.
 
+#### Enocode / Decode password
 
-###### shovel
+View 3_test_enoode_decode.info = Failed with using the encrypted string in ssl password....
+
+#### Enocode / Decode password
+
+################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
+
+TODO
+TODO
+
+################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
+
+###### shovel info
 
 https://www.rabbitmq.com/shovel.html
 

@@ -1,0 +1,112 @@
+So for the certificate use there is:
+1 Ca certficate
+2 Server or Client certficate
+3 Private key for server and Client
+4 A password for the key, after we extract it from the request in MMC, EXPORTABLE = True 
+
+VM2
+C:\testca\server3
+
+advanced config:
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+1 Test Encode a string
+Cmd as admin, rabbitmqctl
+
+* The encryption mechanism uses PBKDF2 to produce a derived key from the passphrase. 
+* The default hash function is SHA512 and the default number of iterations is 1000. The default cipher is AES 256 CBC.
+* Note '" and '' Windows, Linux
+
+rabbitmqctl encode ""str"" mypassphrase
+
+rabbitmqctl encode "<<""guest"">>" mypassphrase
+Encrypting value ...
+{encrypted,<<"SwzZCPqyPwPRF8nkW+Jc9+Mzbobg5idVKvIabRmgl/C+W2+LZGcbBL4u8WayLLV8">>}
+
+
+2 Test Decode a string
+
+rabbitmqctl decode "{encrypted, <<""..."">>}" mypassphrase
+
+SwzZCPqyPwPRF8nkW+Jc9+Mzbobg5idVKvIabRmgl/C+W2+LZGcbBL4u8WayLLV8
+
+rabbitmqctl decode "{encrypted, <<""SwzZCPqyPwPRF8nkW+Jc9+Mzbobg5idVKvIabRmgl/C+W2+LZGcbBL4u8WayLLV8"">>}" mypassphrase
+Decrypting value ...
+<<"guest">>
+
+
+3 Test random string
+
+rabbitmqctl encode ""pepsimax"" key1
+Encrypting value ...
+{encrypted,<<"mZjFAokyweTAADcgvaPkBAFRm7d42ljTRjWp2thkZEAkECWiRO426DHqfgiKEtd3">>}
+
+mZjFAokyweTAADcgvaPkBAFRm7d42ljTRjWp2thkZEAkECWiRO426DHqfgiKEtd3
+
+rabbitmqctl decode "{encrypted, <<""mZjFAokyweTAADcgvaPkBAFRm7d42ljTRjWp2thkZEAkECWiRO426DHqfgiKEtd3"">>}" key1
+Decrypting value ...
+pepsimax
+
+3 Test decode somepassword12
+
+rabbitmqctl encode ""somepassword12"" key2
+Encrypting value ...
+{encrypted,<<"+fpwpkk30vyjyNqnPIzRt8YfQPY3CvcDGwiMkCDPCUV4eWoADlMirzJHx0+C5E2iyFdyJ50tEcufwIb2jUUAvg==">>}
+
++fpwpkk30vyjyNqnPIzRt8YfQPY3CvcDGwiMkCDPCUV4eWoADlMirzJHx0+C5E2iyFdyJ50tEcufwIb2jUUAvg==
+
+rabbitmqctl decode "{encrypted, <<""+fpwpkk30vyjyNqnPIzRt8YfQPY3CvcDGwiMkCDPCUV4eWoADlMirzJHx0+C5E2iyFdyJ50tEcufwIb2jUUAvg=="">>}" key2
+Decrypting value ...
+somepassword12
+
+Use it:
+
+
+https://www.rabbitmq.com/configure.html
+
+Encrypted values must be inside an Erlang encrypted tuple
+
+
+[
+  {rabbit, [
+      {default_user, <<"guest">>},
+      {default_pass,
+        {encrypted,
+         <<"cPAymwqmMnbPXXRVqVzpxJdrS8mHEKuo2V+3vt1u/fymexD9oztQ2G/oJ4PAaSb2c5N/hRJ2aqP/X0VAfx8xOQ==">>
+        }
+      },
+      {config_entry_decoder, [
+             {passphrase, <<"mypassphrase">>}
+         ]}
+    ]}
+].
+
+
+VM2 password tuple:
+
+{password, "somepassword12"},
+
+{password, {encrypted,
+         <<"+fpwpkk30vyjyNqnPIzRt8YfQPY3CvcDGwiMkCDPCUV4eWoADlMirzJHx0+C5E2iyFdyJ50tEcufwIb2jUUAvg==">>
+        }
+      },
+
+
+      {config_entry_decoder, [
+             {passphrase, <<"key2">>}
+         ]},
+
