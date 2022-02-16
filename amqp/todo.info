@@ -12,40 +12,13 @@ It is highly recommended to use both values. See the TLS guide to learn more abo
 
 https://www.erlang.org/doc/man/ssl.html
 
-If the option verify is set to verify_peer the option server_name_indication shall also be specified, 
-if it is not, no Server Name Indication extension will be sent, and public_key:pkix_verify_hostname/2 
-will be called with the IP-address of the connection as ReferenceID, which is probably not what you want.
-
-[...]
-
-When the option verify is set to verify_peer the check public_key:pkix_verify_hostname/2 will be performed in addition 
-to the usual x509-path validation checks. If the check fails the error {bad_cert, hostname_check_failed} will be propagated to the path validation fun verify_fun.
-
 
 https://www.erlang.org/doc/apps/ssl/ssl_distribution.html
 
-For the client, the option {server_name_indication, atom_to_list(TargetNode)} is added when connecting. 
-This makes it possible to use the client option {verify, verify_peer}, and the client will verify that the certificate matches the 
-node name you are connecting to. This only works if the the server certificate is issued to the name atom_to_list(TargetNode).
-
-
-For the server it is also possible to use the option {verify, verify_peer} and the server will only accept client connections with 
-certificates that are trusted by a root certificate that the server knows. 
-A client that presents an untrusted certificate will be rejected. This option is preferably combined with {fail_if_no_peer_cert, true} 
-or a client will still be accepted if it does not present any certificate.
-
 1 Test SNI on VM1 = Check CN on server certificate on VM2, use that string on VM1 =
-* ON VM2
-check CN openssl x509 -noout -subject -in c:\testca\server3\server_certificate.pem
-CN in server3 folder is IP
-Update VM2 to use SNI = IP
 
 {server_name_indication,disable},
 {server_name_indication,"xx.xx.xx.xx"},
-
-2022-02-16 19:25:08.846000+00:00 [notice] <0.904.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
-2022-02-16 19:25:23.910000+00:00 [notice] <0.1019.0>  - {bad_cert,hostname_check_failed}
-
 
 Update VM2 to use SNI = hostname
 {server_name_indication,disable},
@@ -56,12 +29,7 @@ Update VM2 to use SNI = hostname
 
 Not working, set back to disable and shvel with amqps is running.
 
-3 Test encode password for certfile
-3.1 Test encode URI or password in shovel
-
-https://www.rabbitmq.com/configure.html
-
-Encrypted values must be inside an Erlang encrypted tuple
+3 Test encode password for certfile = view 2_test_encode
 
 3 
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl/blob/v3.7.x/README.md

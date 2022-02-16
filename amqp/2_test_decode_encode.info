@@ -110,3 +110,12 @@ VM2 password tuple:
              {passphrase, <<"key2">>}
          ]},
 
+
+
+hm...
+https://www.rabbitmq.com/ssl.html#private-key-passwords
+
+Classic config file format allows for config value encryption, which is recommended for passwords.
+
+A classic format snippet, now used by advanced.config files.
+So it should work

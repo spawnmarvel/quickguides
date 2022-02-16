@@ -5,7 +5,9 @@
 https://www.rabbitmq.com/ssl.html
 
 For client connections, there are two common approache
-* Configure RabbitMQ to handle TLS connections
+* Configure RabbitMQ to handle TLS connections is what we will look
+* Read
+* Password is optional
 
 
 ## Test 6

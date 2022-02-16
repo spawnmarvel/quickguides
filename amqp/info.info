@@ -503,7 +503,7 @@ In mTLS, however, both the client and server have a certificate, and both sides 
 
 #### Enocode / Decode password
 
-View 3_test_enoode_decode.info = Failed with using the encrypted string in ssl password....
+View 3_test_enoode_decode.info = Encrypted string in ssl password....hm..Classic config file format allows for config value encryption, which is recommended for passwords.
 
 #### Enocode / Decode password
 
