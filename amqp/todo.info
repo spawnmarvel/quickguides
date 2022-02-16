@@ -26,7 +26,8 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 * Using SSL for Client Authentication 
 * Server Side Changes, rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
 
-* Setting up Client Certificate Authentication is straight forward once SSL has been configured. 
+* Setting up Client Certificate Authentication is straight forward once SSL has been configured. !!!!!!!!!! 
+
   It works on the principle of having password-less user logins, and clients authenticating with the broker by providing the username as the CN or SAN on the certificate they supply. Passwords are not required, as clients who posses a trusted certificate are implicitly authenticated.
 * In order to be able to authenticate with the broker using SSL, 
   the certificate which the client presents on connection must have the CN or SAN set to the username of the password-less user created previously. 
