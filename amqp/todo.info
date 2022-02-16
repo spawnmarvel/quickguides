@@ -10,34 +10,6 @@ Only of use for the amqps scheme and used to configure verification of the serve
 It is highly recommended to use both values. See the TLS guide to learn more about TLS support in RabbitMQ in general and specifically the Erlang client section.
 
 
-https://www.erlang.org/doc/man/ssl.html
-
-
-https://www.erlang.org/doc/apps/ssl/ssl_distribution.html
-
-1 Test SNI on VM1 = Check CN on server certificate on VM2, use that string on VM1 =
-
-{server_name_indication,disable},
-{server_name_indication,"xx.xx.xx.xx"},
-
-Update VM2 to use SNI = hostname
-{server_name_indication,disable},
-{server_name_indication,"pdp-shovel-2"},
-
-2022-02-16 19:22:42.386000+00:00 [notice] <0.1000.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
-2022-02-16 19:22:57.463000+00:00 [notice] <0.1115.0>  - {bad_cert,hostname_check_failed}
-
-Not working, set back to disable and shvel with amqps is running.
-
-3 Test encode password for certfile = view 2_test_encode
-
-3 
-https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl/blob/v3.7.x/README.md
-
-This plugin allows RabbitMQ clients authenticate using x509 certificates and TLS (PKI) peer verification mechanism 
-instead of credentials (username/password pairs).
-
-
 
 2 OpenSSL client certificate
 2.1 Move OpenSSL to VM1 generate CA TestCA2 and client sertificate
@@ -47,12 +19,23 @@ instead of credentials (username/password pairs).
 * Set up client equal to server
 # mtls
 
-2 OpenSSL server certificate lasting just 1 day
-# check connction after expired
+https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authentication.html
+
+* Client Authentication in RabbitMQ
+* Certificate Authentication
+* Using SSL for Client Authentication 
+* Server Side Changes, rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
+
+* Setting up Client Certificate Authentication is straight forward once SSL has been configured. 
+  It works on the principle of having password-less user logins, and clients authenticating with the broker by providing the username as the CN or SAN on the certificate they supply. Passwords are not required, as clients who posses a trusted certificate are implicitly authenticated.
+* In order to be able to authenticate with the broker using SSL, 
+  the certificate which the client presents on connection must have the CN or SAN set to the username of the password-less user created previously. 
+
+https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl/blob/v3.7.x/README.md
 
 
 
-2 Read on shovel properties, view 37 server
+3 Read on shovel properties, view 37 server
 
 https://github.com/rabbitmq/rabbitmq-server/blob/master/deps/rabbit/docs/advanced.config.example
 
