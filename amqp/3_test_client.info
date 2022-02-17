@@ -12,48 +12,220 @@ For client connections, there are two common approache
 
 ## Test 6
 
-2 OpenSSL client certificate
-2.1 move OpenSSL to VM1 generate CA TestCA2 and client sertificate
-2.2 Set up VM1 client ssl
-
 VM1:
-C:\testca_client
- Directory of c:\testca_client
 
-02/14/2022  11:10 AM    <DIR>          .
-02/14/2022  11:10 AM    <DIR>          ..
-02/14/2022  11:07 AM    <DIR>          certs
-02/14/2022  11:10 AM                 0 index.txt
-02/14/2022  11:07 AM             1,344 openssl.cnf
-02/14/2022  11:07 AM    <DIR>          private
-02/14/2022  11:09 AM                 5 serial
+ Directory of c:\testca_store
 
-Copied the openssl.cnf from VM2 to VM1 and changed the hostname and path to testca_client
+02/17/2022  08:27 PM    <DIR>          .
+02/17/2022  08:27 PM    <DIR>          ..
+02/17/2022  08:26 PM    <DIR>          certs
+02/17/2022  08:23 PM    <DIR>          client
+02/17/2022  08:27 PM                 0 index.txt
+02/07/2022  05:11 PM             1,302 openssl.cnf
+02/17/2022  08:25 PM    <DIR>          private
+02/17/2022  08:25 PM    <DIR>          serial
+
+Copied the openssl.cnf from VM2 to VM1 and changed the hostname and path to c:\testca_store
 Edit openssl.cnf with win path “\\” and set hostname, view the file openssl.cnf
 
-set OPENSSL_CONF=C:\testca_client\openssl.cnf
+set OPENSSL_CONF=C:\testca_store\openssl.cnf
 echo %OPENSSL_CONF%
 
 
-openssl req -x509 -config C:\testca_client\openssl.cnf -newkey rsa:2048 -days 365 -out C:\testca_client\ca_certificate.pem -outform PEM -subj /CN=MyTestCA2/ -nodes
-openssl x509 -in C:\testca_client\ca_certificate.pem -out C:\testca_client\ca_certificate.cer -outform DER
+openssl req -x509 -config C:\testca_store\openssl.cnf -newkey rsa:2048 -days 365 -out C:\testca_store\ca_client_certificate.pem -outform PEM -subj /CN=MyTestCA2/ -nodes
+openssl x509 -in C:\testca_store\ca_client_certificate.pem -out C:\testca_store\ca_client_certificate.cer -outform DER
 
 Now we ca_certificate and private key
-Made C:\testca_client folder.
+
+Directory of c:\testca_store
+
+02/17/2022  08:35 PM    <DIR>          .
+02/17/2022  08:35 PM    <DIR>          ..
+02/17/2022  08:35 PM               758 ca_client_certificate.cer
+02/17/2022  08:34 PM             1,100 ca_client_certificate.pem
+02/17/2022  08:26 PM    <DIR>          certs
+02/17/2022  08:23 PM    <DIR>          client
+02/17/2022  08:27 PM                 0 index.txt
+02/17/2022  08:34 PM             1,338 openssl.cnf
+02/17/2022  08:25 PM    <DIR>          private
+
+
 Lets make client cert
 
 
+Cd client
+
+openssl genrsa -out C:\testca_store\client\private_key.pem 2048
+
+openssl req -new -key C:\testca_store\client\private_key.pem -out C:\testca_store\client\req.pem -outform PEM -subj /CN=pdp-shovel-1 -nodes
+
+cd testca_store
+
+openssl ca -config C:\testca_store\openssl.cnf -in C:\testca_store\client\req.pem -out C:\testca_store\client\client_certificate.pem -notext -batch -extensions client_ca_extensions
+
+Using configuration from C:\testca_store\openssl.cnf
+Check that the request matches the signature
+Signature ok
+The Subject's Distinguished Name is as follows
+commonName            :ASN.1 12:'pdp-shovel-1'
+Certificate is to be certified until Feb 17 20:52:50 2023 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+
 cd client
+openssl pkcs12 -export -out C:\testca_store\client\client_certificate.p12 -in C:\testca_store\client\client_certificate.pem -inkey C:\testca_store\client\private_key.pem -passout pass:MySecretPassword
 
-openssl genrsa -out C:\testca_client\client\private_key.pem 2048
 
-openssl req -new -key C:\testca_client\client\private_key.pem -out C:\testca_client\client\req.pem -outform PEM -subj /CN=pdp-shovel-1 -nodes
+To configure Shovel to use TLS, one needs to
 
-cd ../testca_client
+* Specify CA certificate and client certificate/key pair, as well as other parameters (e.g. peer verification depth) via URI query parameters
+* Configure Erlang client to use TLS
+* Just like with "regular" client connections, server's CA should be trusted on the node where Shovel runs, and vice versa. 
+  The same TLS troubleshooting methodology that is recommended for application connections applies to shovels.
 
-openssl ca -config C:\testca_client\openssl.cnf -in C:\testca_client\client\req.pem -out C:\testca_client\client\client_certificate.pem -notext -batch -extensions client_ca_extensions
 
-MUST DO ABOVE AND TEST AGAIN.
+Now we have all client certs and we made a new shovel shovel_get_remote_data2, that works with below URI:
+
+VM1 advanced config
+%%  {uris, ["amqps://test:test@xx.xx.xx.xx:5671"]},
+
+lets Specify CA certificate and client certificate/key pair, as well as other parameters (e.g. peer verification depth) via URI query parameters
+
+{uris, ["amqps://10.75.17.17?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\private_key.pem"]},
+
+2022-02-17 21:21:26.602000+00:00 [error] <0.802.0> Shovel 'shovel_get_remote_data2' failed to connect (URI: amqps://10.75.17.17): {options,{keyfile,"c:\\testca_store\\clientprivate_key.pem",{error,enoent}}}
+
+enoent is good, it means the file does not exist, lets fix that.
+
+{uris, ["amqps://xx.xx.xx.xx?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem"]},
+
+2022-02-17 21:27:48.272000+00:00 [notice] <0.789.0> TLS client: In state wait_cert at ssl_handshake.erl:2015 generated CLIENT ALERT: Fatal - Unknown CA
+
+VM2 log
+
+2022-02-17 21:27:38.198000+00:00 [notice] <0.4546.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Unknown CA
+
+
+https://www.rabbitmq.com/troubleshooting-ssl.html
+
+
+
+openssl s_client -connect xx.xx.xx.xx:5671 -cert c:\testca_store\client\client_certificate.pem -key c:\testca_store\client\private_key.pem -CAfile c:\testca_store\ca_client_certificate.pem
+
+Copied ca_client_certificate.cer from VM1 to VM2 and imported in in MMC Trusted Root Certificate Authority
+VM2, C:\testca_client\ca_client_certificate.cer = did not change anything
+
+
+Verification error: self-signed certificate in certificate chain
+
+https://stackoverflow.com/questions/12180552/openssl-error-self-signed-certificate-in-certificate-chain
+
+Now import the C:\testca\ca_certificate.cer on VM1 (the VM2 ca in same matter as above) = did not change anything
+
+if we change the URI and add verify=verify_none
+{uris, ["amqps://test:test@xx.xx.xx.xx?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem&verify=verify_none"]},
+
+the log is:
+2022-02-17 22:17:47.221000+00:00 [error] <0.870.0> Shovel 'shovel_get_remote_data2' failed to connect (URI: amqps://xx.xx.xx.x): {options,incompatible,{verify,verify_none},{fail_if_no_peer_cert,true}}
+
+That means that the top section takes presedenc:
+
+{amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+	{server_name_indication,disable},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+
+  set URI to:
+
+{uris, ["amqps://test:test@xx.xx.xx.xx?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem"]}
+
+set top to
+
+
+    {fail_if_no_peer_cert,false}]}
+	
+
+
+start it:
+Nope, same error. Set &verify=verify_none
+
+{uris, ["amqps://test:test@xx.xx.xx.xx?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem&verify=verify_none"]}
+
+log
+
+2022-02-17 22:27:20.875000+00:00 [error] <0.826.0> Shovel 'shovel_get_remote_data2' failed to connect (URI: amqps://xx.xx.xx.xx): {{socket_error,{tls_alert,{unknown_ca,"TLS client: In state connection received SERVER ALERT: Fatal - Unknown CA\n"}}},
+2022-02-17 22:27:46.048000+00:00 [error] <0.904.0>  {expecting,'connection.start'}}
+
+https://github.com/rabbitmq/cluster-operator/issues/796
+
+VM2 log
+2022-02-17 22:28:56.450000+00:00 [notice] <0.11080.0> TLS server: In state wait_cert at ssl_handshake.erl:2015 generated SERVER ALERT: Fatal - Unknown CA
+
+change from
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+to
+
+{verify,verify_none},
+
+     
+]}
+].
+
+and we are connected view image tls2_mtls_hm.jpg
+VM1 log
+2022-02-17 22:41:37.924000+00:00 [info] <0.473.0> Server startup complete; 5 plugins started.
+2022-02-17 22:41:37.924000+00:00 [info] <0.473.0>  * rabbitmq_shovel_management
+2022-02-17 22:41:37.924000+00:00 [info] <0.473.0>  * rabbitmq_shovel
+2022-02-17 22:41:37.924000+00:00 [info] <0.473.0>  * rabbitmq_management
+2022-02-17 22:41:37.924000+00:00 [info] <0.473.0>  * rabbitmq_web_dispatch
+
+VM2 log
+2022-02-17 22:41:37.787000+00:00 [info] <0.1781.0> Connection <0.1781.0> (xx.xx.xx.14:55479 -> xx.xx.xx.xx:5671) has a client-provided name: Shovel shovel_get_remote_data2
+
+!!!!!!!!!!!!! Now make a bad_client_certificate.pem, it should fail....
+
+{uris, ["amqps://test:test@10.75.17.17?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem&verify=verify_none"]},
+
+{uris, ["amqps://test:test@10.75.17.17?cacertfile=c:\\testca_store\\ca_client_certificate.pem&certfile=c:\\testca_store\\client\\bad_client_certificate.pem&keyfile=c:\\testca_store\\client\\private_key.pem&verify=verify_none"]},
+
+and it still works, the cert in uri stuff is not working at all....
+
+SUM THE STUFF UP:
+
+so what did we do:
+
+VM1 generated ca for client and client cert and private key with password
+
+We then made a new shovel, view image tls2_mtls_hm.jpg
+We alterd the advanced config on vm1 to:
+
+
+and new shovel uri:
+
+VM2 advanced config changed:
+
+
+
+
 
 
 # mtls

@@ -509,8 +509,40 @@ View 3_test_enoode_decode.info = Encrypted string in ssl password....hm..Classic
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
 
+Info:
+https://www.rabbitmq.com/uri-spec.html
+
+* The "amqps" URI scheme is used to instruct a client to make an secured connection to the server.
+
+https://www.rabbitmq.com/uri-query-parameters.html
+
+* TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config file.
+* They will be merged with the TLS parameters from the URI (the latter will take precedence) 
+  and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
+* If the RabbitMQ node is not using SSL, the src-uri or dest-uri should start with amqp://. If SSL is being used, the src-uri or dest-uri should start with amqps://.
+
+https://www.rabbitmq.com/shovel.html
+
+* Securing Shovel Connections with TLS
+* Shovel connections can use TLS. Because Shovel uses client libraries under the hood, 
+  it is necessary to both configure the source broker to listen for TLS connections and the Shovel to use TLS when connecting.
+
+To configure Shovel to use TLS, one needs to
+
+* Specify CA certificate and client certificate/key pair, as well as other parameters (e.g. peer verification depth) via URI query parameters
+* Configure Erlang client to use TLS
+* Just like with "regular" client connections, server's CA should be trusted on the node where Shovel runs, and vice versa. 
+  The same TLS troubleshooting methodology that is recommended for application connections applies to shovels.
+
+
+Done:
+3_test_client.info URI is not working, it seems that the global ssl options has presedence over URI.
+
 TODO
-TODO
+global ssl continue with that, same as server setup.
+swap ca and test that, 5 min....
+
+
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
 

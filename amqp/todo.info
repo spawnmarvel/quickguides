@@ -24,6 +24,9 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 * Client Authentication in RabbitMQ
 * Certificate Authentication
 * Using SSL for Client Authentication 
+
+###### 
+
 * Server Side Changes, rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
 
 * Setting up Client Certificate Authentication is straight forward once SSL has been configured. !!!!!!!!!! 
