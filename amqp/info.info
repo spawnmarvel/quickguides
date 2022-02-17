@@ -542,6 +542,9 @@ TODO
 global ssl continue with that, same as server setup.
 swap ca and test that, 5 min....
 
+https://www.rabbitmq.com/uri-query-parameters.html
+
+
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
