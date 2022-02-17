@@ -567,7 +567,13 @@ vm1 keep server ca and set to true:
 
 on vm1 add client cert and private key with password, use ca from server as before, set the shovel2 equal to shovel 1, no ssl URI, what log output do we get?
 
-https://www.rabbitmq.com/uri-query-parameters.html
+Ref https://www.rabbitmq.com/uri-query-parameters.html
+
+They will be merged with the TLS parameters from the URI (the latter will take precedence) 
+and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
+
+debug from that, just the global ssl
+
 
 
 
