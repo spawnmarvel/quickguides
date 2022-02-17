@@ -540,7 +540,32 @@ Done:
 
 TODO
 global ssl continue with that, same as server setup.
-swap ca and test that, 5 min....
+vm1 keep server ca and set to true:
+
+{amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+	{server_name_indication,disable},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+  vm2 set back to:
+
+
+  [{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+
+on vm1 add client cert and private key with password, use ca from server as before, set the shovel2 equal to shovel 1, no ssl URI, what log output do we get?
 
 https://www.rabbitmq.com/uri-query-parameters.html
 
