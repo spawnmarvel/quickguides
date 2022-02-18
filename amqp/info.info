@@ -383,7 +383,7 @@ No more rolling warnings log, just the 3 warnings 1 time and shovel is running, 
 
 The below were for testing, test server certificate 1,2,3,4,5, the bottom line was to:
 
-View tls_success.jpg
+View tls_success_1.jpg
 
 1 Copy the ca_certificate.pem from VM2 to VM1:
 2 VM1, append to the shovel config:
@@ -537,6 +537,14 @@ To configure Shovel to use TLS, one needs to
 
 Done:
 3_test_client.info URI is not working, it seems that the global ssl options has presedence over URI.
+Done.
+
+From View tls_success_1.jpg, we faked a bad_ca_certificate and the client did not connect, good. That means the server had a different ca_certificate then what we trusted.
+Now lets face a bad server sertificate before we go to mTLS.
+From tls_success_2_bad_server_cert.jpg we see that now we trust the CA on both ends and we still connect even if the bad_server_certificate.pem is not signed by the CA.
+That means the trust on only on CA level.
+
+Lets go a step further:
 
 TODO
 Global ssl continue with that, rollback same as before no URI with cert server setup
