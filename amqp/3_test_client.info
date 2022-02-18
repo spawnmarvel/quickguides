@@ -226,6 +226,41 @@ VM2 advanced config changed:
 
 
 
+TODO
+global ssl continue with that, rollback same as before no URI with cert server setup
+
+{amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+	{server_name_indication,disable},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+  vm2 set back to:
+
+
+  [{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, false}]}
+
+
+on vm1 add client cert and private key with password, use ca from server as before, set the shovel2 equal to shovel 1, no ssl URI, what log output do we get?
+
+Ref https://www.rabbitmq.com/uri-query-parameters.html
+
+They will be merged with the TLS parameters from the URI (the latter will take precedence) 
+and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
+
+debug from that, just the global ssl or debug from tls and add SNI=Hostname?
+
 
 
 # mtls

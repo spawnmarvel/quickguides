@@ -485,7 +485,7 @@ rabbitmq-plugins enable rabbitmq_auth_backend_ldap
 
 NOTE: 
 1 So it verifies correct ca_certificate for the sertificate that the server uses (tested with bad_ca_certificate.pem)
-2 and it demands that the server must have a certificate 
+2 and it demands that the server must have a certificate that is signed bu the trusted CA.
 3 but it does not look for CN=HOSTNAME or IP (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
 4 we bypass SNI, server name indication
 5 (and the client VM1 is not using a certificate)
@@ -539,43 +539,15 @@ Done:
 3_test_client.info URI is not working, it seems that the global ssl options has presedence over URI.
 
 TODO
-global ssl continue with that, same as server setup.
-vm1 keep server ca and set to true:
+Global ssl continue with that, rollback same as before no URI with cert server setup
+make bundle of ca certificate
 
-{amqp_client, [
-    {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
-	{server_name_indication,disable},
-    {verify,verify_peer},
-    {fail_if_no_peer_cert,true}]}
-	]},
-  {rabbitmq_shovel,
+Lets step back, remove the shovel2 URI and go back to server has cert and client trusts the server ca certificate.
 
-  vm2 set back to:
-
-
-  [{rabbit, [
-{loopback_users, [<<"guest">>]},
-{tcp_listeners, [{"0.0.0.0",5672}]},
-{ssl_listeners, [5671]},
-{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
-		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
-                {keyfile,"C:\\testca\\server3\\private_key.pem"},
-		{password, "somepassword12"},
-		{verify,verify_peer},
-                {fail_if_no_peer_cert, false}]}
-
-
-on vm1 add client cert and private key with password, use ca from server as before, set the shovel2 equal to shovel 1, no ssl URI, what log output do we get?
-
-Ref https://www.rabbitmq.com/uri-query-parameters.html
-
-They will be merged with the TLS parameters from the URI (the latter will take precedence) 
-and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
-
-debug from that, just the global ssl
-
-
-
+1 Make bundle of client_ca_certificate VM1 and ca_certificate VM2 for server bundle.crt 
+2 Use bundle on both machines VM1, VM2
+3 Add client server section to client, VM1
+3 Keep orginal shovel setup
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
