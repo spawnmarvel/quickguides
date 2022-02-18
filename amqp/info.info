@@ -556,6 +556,7 @@ Lets step back, remove the shovel2 URI and go back to server has cert and client
 2 Use bundle on both machines VM1, VM2
 3 Add client server section to client, VM1
 3 Keep orginal shovel setup
+4 If it works, test with bad_server_certificate....
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
