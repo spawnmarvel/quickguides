@@ -569,11 +569,6 @@ Pinging pdp-shovel-2.reddog.microsoft.com
 
 Nope, all failed.....
 
-
-TODO
-Global ssl continue with that, rollback same as before no URI with cert server setup
-make bundle of ca certificate
-
 https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
 
 
@@ -587,7 +582,29 @@ Lets step back, remove the shovel2 URI and go back to server has cert and client
 SUCCESS..... view tls_mTLS_success.jpg
 
 3 Keep orginal shovel setup on VM1 = yes
-4 If it works, test with client_server_certificate....
+4 If it works, test with bad_client_server_certificate.pem view test_7_mTLS_SNI disable reason.
+It works even with bad_client_certificatesame as with bad_server_certificate since we trust the CA.....
+
+
+
+TODO SNI
+If we remove on VM1: test_8_SNI
+
+VM1
+{server_name_indication, disable},
+
+LOG
+
+2022-02-19 12:12:15.559000+00:00 [notice] <0.805.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-19 12:12:15.559000+00:00 [notice] <0.805.0>  - {bad_cert,hostname_check_failed}
+2022-02-19 12:12:15.559000+00:00 [error] <0.777.0> Shovel 'shovel_put_local_data' failed to connect (URI: amqps://XX.XX.XX.XX:5671): {tls_alert,{handshake_failure,"TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
+
+VM2 LOG
+
+2022-02-19 12:13:20.827000+00:00 [notice] <0.4004.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
+
+
+Must read on SNI, this is only due to certificate check for client....
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
