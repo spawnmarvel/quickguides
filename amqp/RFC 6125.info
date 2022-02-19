@@ -1,0 +1,22 @@
+
+Representation and Verification of Domain-Based Application Service
+ Identity within Internet Public Key Infrastructure Using X.509 (PKIX)
+     Certificates in the Context of Transport Layer Security (TLS)
+
+https://datatracker.ietf.org/doc/html/rfc6125
+
+
+
+Likewise, during TLS
+   negotiation, the server presents its notion of the service's identity
+   in the form of a public-key certificate that was issued by a
+   certification authority (CA) in the context of the Internet Public
+   Key Infrastructure using X.509 [PKIX].  
+
+
+Informally, we can think of
+   these identities as the client's "reference identity" and the
+   server's "presented identity" 
+
+   
+

@@ -627,6 +627,10 @@ This function checks that the:
 
 The function is intended to be added as an extra client check of the peer certificate when performing public_key:pkix_path_validation/3
 
+See RFC 6125 for detailed information about hostname verification. The User's Guide and code examples describes this function more detailed.
+
+https://datatracker.ietf.org/doc/html/rfc6125
+
 
 
 
