@@ -608,6 +608,31 @@ VM2 LOG
 
 Must read on SNI, this is only due to certificate check for client....
 
+bad_cert,hostname_check_failed
+
+https://www.erlang.org/doc/man/ssl.html
+
+When the option verify is set to verify_peer 
+
+* The check public_key:pkix_verify_hostname/2 will be performed in addition to the usual x509-path validation checks.
+
+https://www.erlang.org/doc/man/public_key.html#pkix_verify_hostname-2
+
+pkix_verify_hostname(Cert, ReferenceIDs) -> boolean() OTP 19.3
+
+This function checks that the:
+
+* Presented Identifier (e.g hostname) in a peer certificate is in agreement with at least one of 
+* the Reference Identifier that the client expects to be connected to. 
+
+The function is intended to be added as an extra client check of the peer certificate when performing public_key:pkix_path_validation/3
+
+
+
+
+
+
+
 
 
 
