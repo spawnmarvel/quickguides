@@ -585,6 +585,8 @@ SUCCESS..... view tls_mTLS_success.jpg
 4 If it works, test with bad_client_server_certificate.pem view test_7_mTLS_SNI disable reason.
 It works even with bad_client_certificatesame as with bad_server_certificate since we trust the CA.....
 
+################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
+
 
 
 TODO SNI
@@ -607,71 +609,9 @@ VM2 LOG
 Must read on SNI, this is only due to certificate check for client....
 
 
-################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
-
-###### shovel info
-
-https://www.rabbitmq.com/shovel.html
-
-WAN-friendly
-The Shovel plugin uses client connections under the hood. Acknowledgements and publisher confirms are used to ensure data safety in case of connection and node failures.
-
-https://www.rabbitmq.com/connections.html
-
-* Connections
-
-Protocol Differences
-Different messaging protocols use different ports. Ports also vary for plain TCP and TLS-enabled connections. 
-The Networking guide covers all ports used by RabbitMQ depending on what protocols are enabled, whether TLS is used and so on.
-5672, 5671: used by AMQP 0-9-1 and AMQP 1.0 clients without and with TLS
-
-
-AMQP 0-9-1
-AMQP 0-9-1 provides a way for connections to multiplex over a single TCP connection. That means an application can open multiple "lightweight connections" 
-called channels on a single connection. 
-AMQP 0-9-1 clients open one or more channels after connecting and perform protocol operations (manage topology, publish, consume) on the channels.
-
-Protocol Differences
-AMQP 0-9-1
-AMQP 0-9-1 has a model that includes connections and channels. Channels allow for connection multiplexing (having multiple logical connections on a "physical" or TCP one).
-
-AMQP 0-9-1 supports different authentication mechanisms. 
-While it's most common for applications to provide a pair of credentials, 
-x509 certificates and PKI can be used instead.
-
-##### shovel
-
-
-################### Config:
-https://www.rabbitmq.com/configure.html
-
-
-RabbitMQ 3.7.0+
-%APPDATA%\RabbitMQ\rabbitmq.conf
-In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. 
-An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format
-
-
-Modern RabbitMQ versions allow for both formats to be used at the same time in separate files: 
-rabbitmq.conf uses the new style format and is recommended for most settings
-advanced.config covers more advanced settings that the ini-style configuration cannot express. 
-
-Configuration File          Format Used                             Purpose                   
-* rabbitmq.conf             New style format (sysctl or ini-like)   Primary configuration file. Should be used for most settings
-
-https://www.rabbitmq.com/configure.html#config-file
-https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
-
-# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
-
-# listeners.tcp.default = 5672
-# listeners.tcp.other_port = 5673
 
 
 
-* advanced.config           Classic (Erlang terms)                  A limited number of settings that cannot be expressed in the new style configuration format
-
-https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
 
 
 
