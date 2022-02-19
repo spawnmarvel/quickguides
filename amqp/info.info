@@ -374,7 +374,7 @@ restart service on VM2 and view logs:
 
 No more rolling warnings log, just the 3 warnings 1 time and shovel is running, view image success.jpg
 
-################### S1 hovel with self signed VM2 Server 
+################### Shovel with self signed VM2 Server 
 ################### 2 From amqp to amqps server certificate and ca certificate
 
 
@@ -574,13 +574,20 @@ TODO
 Global ssl continue with that, rollback same as before no URI with cert server setup
 make bundle of ca certificate
 
+https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
+
+
 Lets step back, remove the shovel2 URI and go back to server has cert and client trusts the server ca certificate.
 
-1 Make bundle of client_ca_certificate VM1 and ca_certificate VM2 for server bundle.crt 
-2 Use bundle on both machines VM1, VM2
-3 Add client server section to client, VM1
-3 Keep orginal shovel setup
-4 If it works, test with bad_server_certificate....
+1 Make bundle of client_ca_certificate VM1 and ca_certificate VM2 for server bundle.crt view 4_make_bundle.info
+2 Use bundle on both machines VM1, VM2 = success view image tls_bundle.jpg
+3 Add client certificate section to client, VM1 = success, view 5_mTLS.info
+4 Change config on VM2 to verify_peer, true on {verify,verify_none},{fail_if_no_peer_cert, false}]} = 5_mTLS.info
+
+SUCCESS..... view tls_mTLS_success.jpg
+
+3 Keep orginal shovel setup on VM1 = yes
+4 If it works, test with client_server_certificate....
 
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test

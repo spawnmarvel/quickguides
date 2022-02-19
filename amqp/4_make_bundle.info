@@ -1,0 +1,54 @@
+You may do this using you favorite text editor or by using the command line.
+
+GUI Text Editor
+
+1. Open All files in a text editor. (Remember, not your domain certificate.)
+2. Create a new blank text file.
+3. Copy contents of all files in reverse order and paste them into the new file.
+Example: Intermediate 3, Intermediate 2, Intermediate 1, Root Certificate.
+4. Save newly created file as 'yourDomain.ca-bundle'.
+
+CA-bundle is a file that contains root and intermediate certificates in the right order. The order must be:
+
+- Intermediate CA Certificate 2
+
+- Intermediate CA Certificate 1
+
+- Root CA Certificate
+
+
+VM1
+C:\testca_store\bundle
+Directory of C:\testca_store\bundle
+
+02/19/2022  10:39 AM    <DIR>          .
+02/19/2022  10:39 AM    <DIR>          ..
+02/07/2022  05:18 PM             1,096 ca_certificate.pem
+02/17/2022  08:34 PM             1,100 ca_client_certificate.pem
+
+cp 1 ca_client_certificate.pem, 2 ca_certificate.pem notepad save as (.), pdp-shovel-1.ca-bundle
+
+now lets point to that for VM1:
+
+ {ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+ {ssl_options, [{cacertfile,"C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle"},
+
+and the connection is success
+
+lets to the same on VM2:
+
+ Directory of c:\testca\bundle
+
+02/19/2022  10:52 AM    <DIR>          .
+02/19/2022  10:52 AM    <DIR>          ..
+02/07/2022  05:18 PM             1,096 ca_certificate.pem
+02/17/2022  08:34 PM             1,100 ca_client_certificate.pem
+
+cp 1 ca_certificate.pem 2 ca_client_certificate.pem, notepad save as (.), pdp-shovel-2.ca-bundle
+
+Now lets point to that for VM2:
+
+{ssl_options, [{cacertfile,"C:\\testca\\ca_certificate.pem"},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+
+view image tls_bundle.jpg

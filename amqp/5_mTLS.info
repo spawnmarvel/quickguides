@@ -1,0 +1,64 @@
+
+VM1
+[
+ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle"},
+	{certfile,"C:\\testca_store\\client\\client_certificate.pem"},
+                {keyfile,"C:\\testca_store\\client\\private_key.pem"},
+		{password, "MySecretPassword"},
+	{server_name_indication, disable},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+log
+
+
+VM2
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+		{certfile,"C:\\testca\\server3\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server3\\private_key.pem"},
+		{password, "somepassword12"},
+		{verify,verify_none},
+                {fail_if_no_peer_cert, false}]}
+
+     
+]}
+].
+
+
+log
+2022-02-19 10:57:41.916000+00:00 [info] <0.718.0> started TLS (SSL) listener on 0.0.0.0:5671
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0> Server startup complete; 5 plugins started.
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0>  * rabbitmq_shovel_management
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0>  * rabbitmq_shovel
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0>  * rabbitmq_management
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0>  * rabbitmq_web_dispatch
+2022-02-19 10:57:42.073000+00:00 [info] <0.552.0>  * rabbitmq_management_agent
+
+[...]
+
+2022-02-19 11:08:35.377000+00:00 [info] <0.1291.0> accepting AMQP connection <0.1291.0> (XX.XX.XX.XX:50517 -> XX.XX.XX.XX:5671)
+2022-02-19 11:08:35.377000+00:00 [info] <0.1285.0> accepting AMQP connection <0.1285.0> (XX.XX.XX.XX:50516 -> XX.XX.XX.XX:5671)
+2022-02-19 11:08:35.377000+00:00 [info] <0.1285.0> Connection <0.1285.0> (10.75.17.14:50516 -> XX..XX.XX.XX:5671) has a client-provided name: Shovel shovel_get_remote_data
+2022-02-19 11:08:35.377000+00:00 [info] <0.1291.0> Connection <0.1291.0> (10.75.17.14:50517 -> XX..XX.XX.XX:5671) has a client-provided name: Shovel shovel_put_local_data
+2022-02-19 11:08:35.377000+00:00 [info] <0.1291.0> connection <0.1291.0> (10.75.17.14:50517 -> XX..XX.XX.XX:5671 - Shovel shovel_put_local_data): user 'test' authenticated and granted access to vhost '/'
+2022-02-19 11:08:35.377000+00:00 [info] <0.1285.0> connection <0.1285.0> (10.75.17.14:50516 -> XX..XX.XX.XX:5671 - Shovel shovel_get_remote_data): user 'test' authenticated and granted access to vhost '/'
+
+
+Change config on VM2 to true on 
+
+  {verify,verify_none},
+  {fail_if_no_peer_cert, false}]}
+
+  {verify,verify_peer},
+  {fail_if_no_peer_cert, true}]}
+
+
+
