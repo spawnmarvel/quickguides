@@ -606,13 +606,19 @@ VM2 LOG
 2022-02-19 12:13:20.827000+00:00 [notice] <0.4004.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
 
 
-Must read on SNI, this is only due to certificate check for client....
+Must read on SNI, this is only due to certificate check for client on what it is recievening from the server.
 
 bad_cert,hostname_check_failed
 
 https://www.erlang.org/doc/man/ssl.html
 
 When the option verify is set to verify_peer 
+
+When peer verification is enabled, it is common for clients to also check whether the hostname of the server they are connecting to 
+matches one of two fields in the server certificate: 
+* the SAN (Subject Alternative Name) or CN (Common Name). 
+* When wildcard certificates are used, the hostname is matched against a pattern. 
+* If there is no match, peer verification will also be failed by the client. Hostname checks are also optional and generally orthogonal to certificate chain verification performed by the client.
 
 * The check public_key:pkix_verify_hostname/2 will be performed in addition to the usual x509-path validation checks.
 
@@ -633,10 +639,48 @@ https://datatracker.ietf.org/doc/html/rfc6125
 
 
 
+Lets go a step further 2 SNI:
 
 
+{server_name_indication, "my.rmq-server.net"}],
+
+SNI, try to find out what it is presenting (server, client) and add that string
+https://www.rabbitmq.com/ssl.html
+server_name_indication - set this option to the host name of the server to which a TLS connection will be made to enable "Server Name Indication" 
+verification of the certificate presented by the server. This ensures that the server certificate's CN= value will be verified during TLS connection establishment. 
+
+You can override this behavior by setting server_name_indication to a different host name or to the special value disable to disable this verification.
+{server_name_indication, "my.rmq-server.net"}],
+
+VM2 can we just use SNI?
+cmd ipconfig
+ping -a IP add
+
+Pinging pdp-shovel-2.reddog.microsoft.com
+
+{server_name_indication,disable}, = success
+{server_name_indication,"pdp-shovel-2.reddog.microsoft.com"}, = 2022-02-18 11:43:24.667000+00:00 [notice] <0.969.0>  - {bad_cert,hostname_check_failed}
+{server_name_indication,"pdp-shovel-2"}, = 2022-02-18 11:46:32.628000+00:00 [notice] <0.773.0>  - {bad_cert,hostname_check_failed}
+{server_name_indication,"xx.xx.xx.xx"}, = 2022-02-18 11:47:49.641000+00:00 [notice] <0.888.0>  - {bad_cert,hostname_check_failed}
+
+Nope, all failed.....
 
 
+https://www.rabbitmq.com/ssl.html
+
+edit config
+
+SslOpts = [{cacertfile, "/path/to/ca_certificate.pem"},
+           {certfile, "/path/to/client/certificate.pem"},
+           {keyfile, "/path/to/client/private_key.pem"},
+
+           {verify, verify_peer},
+            {server_name_indication, "my.rmq-server.net"}],
+
+Params = #amqp_params_network{host = "my.rmq-server.net",
+                              port = 5671,
+                              ssl_options = SslOpts}
+{ok, Conn} = amqp_connection:start(Params),
 
 
 
