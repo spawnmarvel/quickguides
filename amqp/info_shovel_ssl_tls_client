@@ -8,6 +8,48 @@ https://www.rabbitmq.com/shovel.html
 * rabbitmq-plugins enable rabbitmq_shovel
 * rabbitmq-plugins enable rabbitmq_shovel_management
 
+Authentication and authorisation for Shovels
+* Shovel connection must successfully authenticate and be authorized to access the virtual host and resources it is trying to use. 
+* This is true for both sources and destinations.
+
+Securing Shovel Connections with TLS
+* To configure Shovel to use TLS, one needs to:
+* Specify CA certificate and client certificate/key pair, as well as other parameters (e.g. peer verification depth) via URI query parameters
+* Configure Erlang client to use TLS
+* Just like with "regular" client connections:
+* Server's CA should be trusted on the node where Shovel runs, and vice versa. 
+* The same TLS troubleshooting methodology that is recommended for application connections applies to shovels.
+
+URI Query Parameters 
+https://www.rabbitmq.com/uri-query-parameters.html
+
+TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config file in this manner:
+* {amqp_client, [
+    {ssl_options, [
+
+
+https://github.com/rabbitmq/rabbitmq-website/issues/42
+
+Shovel uses RabbitMQ Erlang client under the hood. So you need to configure
+amqp_client.ssl_options much like you do with rabbit.ssl_options.
+amqp_client and rabbit should be siblings (not nested of one into the other)
+in the config file.
+Then just don’t forget to set `verify` to `verify_peer` ;) 
+
+
+https://www.rabbitmq.com/ssl.html#peer-verification-depth
+
+Certificate Chains and Verification Depth
+* When using a client certificate signed by an intermediate CA, it may be necessary to configure RabbitMQ server to use a higher verification depth.
+* The depth is the maximum number of non-self-issued intermediate certificates that may follow the peer certificate in a valid certification path. 
+* So if depth is 0 the peer (e.g. client) certificate must be signed by the trusted CA directly, 
+* if 1 the path can be "peer, CA, trusted CA", if it is 2 "peer, CA, CA, trusted CA", and so on. The default depth is 1.
+
+RabbitMQ server:
+*  {depth, 0}, should fail with bad cert, this is the strongest.
+*  Since not specified, it is default 1
+*  {depth, 2}, should also work
+
 
 SSL and Client Certificate Authentication in RabbitMQ
 https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authentication.html
@@ -27,7 +69,7 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 * Client Certificate Authentication
 * SSL can also be used as a mechanism for clients to authenticate with the broker instead of the default username and password mechanism. 
 * In order for clients to authenticate with SSL, they must present a certificate to the server which is: 
-** signed by a trusted CA, and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN).
+* signed by a trusted CA, and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN).
 
 
 
