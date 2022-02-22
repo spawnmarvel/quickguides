@@ -683,7 +683,7 @@ Params = #amqp_params_network{host = "my.rmq-server.net",
 {ok, Conn} = amqp_connection:start(Params),
 
 
-Then the answer must på SAN:
+Then the answer must på SAN i certificate:
 
 ## request.inf
 
@@ -717,6 +717,11 @@ openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
 prompt password
 
 openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
+
+
+
+####
+
 
 
 

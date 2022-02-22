@@ -1,0 +1,38 @@
+
+Shovel Plugin
+https://www.rabbitmq.com/shovel.html
+
+* A shovel behaves like a well-written client application, which connects to its source and destination, 
+* consumes and republishes messages, 
+* and uses acknowledgements on both ends to cope with failures.
+* rabbitmq-plugins enable rabbitmq_shovel
+* rabbitmq-plugins enable rabbitmq_shovel_management
+
+
+SSL and Client Certificate Authentication in RabbitMQ
+https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authentication.html
+
+# SSL/TLS
+* SSL is enabled on RabbitMQ by setting the desired port and pointing it to a pair of public and private key files, 
+  and a CA file which signed the certificate/key pair. 
+* For a trusted connection to be established, the client applications will need to trust the same CA.
+
+# Peer Verification
+* Peer Verification builds on top of SSL, and is a way for RabbitMQ to verify that the clients which are attempting to connect can be trusted, 
+  that is — they present a certificate which is signed by a CA which the server also trusts. 
+* This helps ensure that only trusted clients can connect to the broker and helps prevent against Man-in-the-Middle attacks.
+* If the client is not able to supply a trusted certificate, then the server will reject the connection. 
+* The exception to this is if the: fail_if_no_peer_cert configuration option is set to verify_none, in which case, the server will allow the connection.
+
+* Client Certificate Authentication
+* SSL can also be used as a mechanism for clients to authenticate with the broker instead of the default username and password mechanism. 
+* In order for clients to authenticate with SSL, they must present a certificate to the server which is: 
+** signed by a trusted CA, and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN).
+
+
+
+
+
+https://github.com/rabbitmq/rabbitmq-server/issues/2983
+The plugin that makes it possible to login with the certificates is
+rabbitmq-auth-mechanism-ssl.
