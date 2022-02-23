@@ -638,7 +638,7 @@ ProviderType = 12
 RequestType = PKCS10
 KeyUsage = 0xa0
 [RequestAttributes] 
-SAN="dns=myserver.domain.com"
+SAN="dns=myserver.domain.com", "goodtech"
 
 ## request.inf
 
