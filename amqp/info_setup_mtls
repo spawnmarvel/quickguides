@@ -677,7 +677,7 @@ Set back
 * {server_name_indication,"pdp-shovel-2"},
 And shovel is success.
 
-It worked, view 1 images test_8_mTLS_SNI_Hostname_success.jpg
+It worked, view 1 images test_8_mTLS_SNI_Hostname_success_and_fail.jpg
 
 * Test with NO SNI since it points correct now.
 Failed
@@ -686,7 +686,7 @@ Failed
 #### Test SNI VM1 and bad cert VM2
 
 Success since CN or SAN is not pdp-shovel-2
-view 2 images SNI, 1_correct_CN_wrong_CN
+view 1 images test_8.1_mTLS_SNI_correct_CN_wrong_CN.jpg
 
 ### 100 % success mTLS:
 
