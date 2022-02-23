@@ -73,8 +73,3 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 
 
 
-
-
-https://github.com/rabbitmq/rabbitmq-server/issues/2983
-The plugin that makes it possible to login with the certificates is
-rabbitmq-auth-mechanism-ssl.

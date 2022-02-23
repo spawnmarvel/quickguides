@@ -487,7 +487,7 @@ NOTE:
 1 So it verifies correct ca_certificate for the sertificate that the server uses (tested with bad_ca_certificate.pem)
 2 and it demands that the server must have a certificate that is signed bu the trusted CA.
 3 but it does not look for CN=HOSTNAME or IP (which we generated 2 times, one with hostname and 1 with ip and checked it in openssl)
-4 we bypass SNI, server name indication
+4 we bypass SNI, server name indication . Update 23.02.2022 view: #### Test SNI 23.02.2022 (Tested with correct SNI, wrong SNI and no SNI)
 5 (and the client VM1 is not using a certificate)
 So this is:
 
@@ -556,18 +556,7 @@ verification of the certificate presented by the server. This ensures that the s
 You can override this behavior by setting server_name_indication to a different host name or to the special value disable to disable this verification.
 {server_name_indication, "my.rmq-server.net"}],
 
-VM2 can we just use SNI?
-cmd ipconfig
-ping -a IP add
 
-Pinging pdp-shovel-2.reddog.microsoft.com
-
-{server_name_indication,disable}, = success
-{server_name_indication,"pdp-shovel-2.reddog.microsoft.com"}, = 2022-02-18 11:43:24.667000+00:00 [notice] <0.969.0>  - {bad_cert,hostname_check_failed}
-{server_name_indication,"pdp-shovel-2"}, = 2022-02-18 11:46:32.628000+00:00 [notice] <0.773.0>  - {bad_cert,hostname_check_failed}
-{server_name_indication,"xx.xx.xx.xx"}, = 2022-02-18 11:47:49.641000+00:00 [notice] <0.888.0>  - {bad_cert,hostname_check_failed}
-
-Nope, all failed.....
 
 https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
 
@@ -586,31 +575,6 @@ SUCCESS..... view tls_mTLS_success.jpg
 It works even with bad_client_certificatesame as with bad_server_certificate since we trust the CA.....
 
 ################### Shovel VM1 with self signed VM2 Server, VM1 Client with self signed will enforce VM2 server CA certificate after test
-
-
-
-TODO SNI
-If we remove on VM1: test_8_SNI
-
-VM1
-{server_name_indication, disable},
-
-LOG
-
-2022-02-19 12:12:15.559000+00:00 [notice] <0.805.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
-2022-02-19 12:12:15.559000+00:00 [notice] <0.805.0>  - {bad_cert,hostname_check_failed}
-2022-02-19 12:12:15.559000+00:00 [error] <0.777.0> Shovel 'shovel_put_local_data' failed to connect (URI: amqps://XX.XX.XX.XX:5671): {tls_alert,{handshake_failure,"TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
-
-VM2 LOG
-
-2022-02-19 12:13:20.827000+00:00 [notice] <0.4004.0> TLS server: In state wait_cert received CLIENT ALERT: Fatal - Handshake Failure
-
-
-Must read on SNI, this is only due to certificate check for client on what it is recievening from the server.
-
-bad_cert,hostname_check_failed
-
-https://www.erlang.org/doc/man/ssl.html
 
 When the option verify is set to verify_peer 
 
@@ -652,38 +616,8 @@ verification of the certificate presented by the server. This ensures that the s
 You can override this behavior by setting server_name_indication to a different host name or to the special value disable to disable this verification.
 {server_name_indication, "my.rmq-server.net"}],
 
-VM2 can we just use SNI?
-cmd ipconfig
-ping -a IP add
 
-Pinging pdp-shovel-2.reddog.microsoft.com
-
-{server_name_indication,disable}, = success
-{server_name_indication,"pdp-shovel-2.reddog.microsoft.com"}, = 2022-02-18 11:43:24.667000+00:00 [notice] <0.969.0>  - {bad_cert,hostname_check_failed}
-{server_name_indication,"pdp-shovel-2"}, = 2022-02-18 11:46:32.628000+00:00 [notice] <0.773.0>  - {bad_cert,hostname_check_failed}
-{server_name_indication,"xx.xx.xx.xx"}, = 2022-02-18 11:47:49.641000+00:00 [notice] <0.888.0>  - {bad_cert,hostname_check_failed}
-
-Nope, all failed.....
-
-
-https://www.rabbitmq.com/ssl.html
-
-edit config
-
-SslOpts = [{cacertfile, "/path/to/ca_certificate.pem"},
-           {certfile, "/path/to/client/certificate.pem"},
-           {keyfile, "/path/to/client/private_key.pem"},
-
-           {verify, verify_peer},
-            {server_name_indication, "my.rmq-server.net"}],
-
-Params = #amqp_params_network{host = "my.rmq-server.net",
-                              port = 5671,
-                              ssl_options = SslOpts}
-{ok, Conn} = amqp_connection:start(Params),
-
-
-Then the answer must på SAN i certificate:
+Then the answer must på CN or SAN i certificate:
 
 ## request.inf
 
@@ -720,9 +654,86 @@ openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
 
 
 
-####
+#### Test SNI 23.02.2022
+
+# Test for SNI with CN frm path c:\testca\server2\server_certificate.pem
+* VM2 use cert with pdp-shovel-2 as CN
+C:\ssl\openssl-3.0.1\openssl-3\x64\bin>openssl x509 -noout -subject -in c:\testca\server2\server_certificate.pem
+subject=CN = pdp-shovel-2
+
+edit advanced.config on VM1
+* {server_name_indication,disable},
+* {server_name_indication,"pdp-shovel-2"},
+
+It worked, view images 1_SNI_to_hostname
+* Test with wrong name: pdp-shovel-23 should fail on VM1 client
+
+Log on VM1:
+2022-02-23 09:25:55.488000+00:00 [notice] <0.739.0> TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure
+2022-02-23 09:25:55.488000+00:00 [notice] <0.739.0>  - {bad_cert,hostname_check_failed}
+2022-02-23 09:25:55.488000+00:00 [error] <0.717.0> Shovel 'shovel_put_local_data' failed to connect (URI: amqps://XX.XX.XX.17:5671): {tls_alert,{handshake_failure,"TLS client: In state wait_cert at ssl_handshake.erl:2017 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
+
+Set back
+* {server_name_indication,"pdp-shovel-2"},
+And shovel is success.
+
+It worked, view 1 images test_8_mTLS_SNI_Hostname_success.jpg
+
+* Test with NO SNI since it points correct now.
+Failed
+2022-02-23 09:59:06.915000+00:00 [notice] <0.1295.0>  - {bad_cert,hostname_check_failed}
+
+#### Test SNI VM1 and bad cert VM2
+
+Success since CN or SAN is not pdp-shovel-2
+view 2 images SNI, 1_correct_CN_wrong_CN
+
+### 100 % success mTLS:
+
+test_9_mTLS_with SNI_Hostname
+test_9_mTLS_with SNI_Hostname_GET_PUT
+
+#####
+##### The end for SSL/mTLS
+#####
 
 
+
+https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
+
+Normally in TLS, the server has a TLS certificate and a public/private key pair, while the client does not. The typical TLS process works like this:
+1 Client connects to server = ok
+2 Server presents its TLS certificate = ok
+3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+4 Client and server exchange information over encrypted TLS connection
+
+In mTLS, however, both the client and server have a certificate, and both sides authenticate using their public/private key pair.
+
+1 Client connects to server = ok, 
+2 Server presents its TLS certificate = ok
+3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+4 Client presents its TLS certificate = ok
+5 Server verifies the client's certificate ok, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+6 Server grants access = ok
+7 Client and server exchange information over encrypted TLS connection = ok
+
+
+#####
+##### The end for SSL/mTLS
+#####
+
+# Test Verification depth at 0:
+* 1 Valid client certificate VM1
+* 2 Bad client certtificate VM1
+
+
+# Auth mech
+
+https://github.com/rabbitmq/rabbitmq-server/issues/2983
+The plugin that makes it possible to login with the certificates is
+rabbitmq-auth-mechanism-ssl.
+view
+info_shovel_ssl_tls_server-depth_for_client
 
 
 
