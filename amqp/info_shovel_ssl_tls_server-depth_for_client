@@ -91,6 +91,8 @@ Finally, add a password-less user through the Management UI which will be used f
 
 In order to be able to authenticate with the broker using SSL, the certificate which the client presents on connection must have the CN or SAN set to the username of the password-less user created previously.
 
+https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
+
 
 
 
