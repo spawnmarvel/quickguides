@@ -71,5 +71,26 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 * In order for clients to authenticate with SSL, they must present a certificate to the server which is: 
 * signed by a trusted CA, and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN).
 
+* Server Side Changes
+
+rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
+auth_backends.1   = rabbit_auth_backend_internal
+auth_mechanisms.1 = PLAIN
+auth_mechanisms.2 = EXTERNAL
+
+Authentication Backends configure where the user logins are stored. By default, this is set to rabbit_auth_backend_internal, but there other options available, like LDAP for example (if you want to make use of an existing user store in Active Directory). I added this line explicitly just for completeness.
+
+Authentication Mechanisms configure how user/client authentication should be performed. By default, this is set to PLAIN which is Basic username/password authentication. We need to also add EXTERNAL as an additional mechanism to support SSL authentication. PLAIN must remain as a mechanism if you wish to still have access via the Management UI.
+
+ssl_cert_login_from: common_name
+
+service rabbitmq-server restart
+Finally, add a password-less user through the Management UI which will be used for the client authenticating with the broker. Keep note of the username you choose here for the next section.
+
+* Client Side Changes
+
+In order to be able to authenticate with the broker using SSL, the certificate which the client presents on connection must have the CN or SAN set to the username of the password-less user created previously.
+
+
 
 
