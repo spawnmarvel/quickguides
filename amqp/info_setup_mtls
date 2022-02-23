@@ -722,10 +722,7 @@ In mTLS, however, both the client and server have a certificate, and both sides 
 ##### The end for SSL/mTLS
 #####
 
-# Test Verification depth at 0:
-* 1 Valid client certificate VM1
-* 2 Bad client certtificate VM1
-
+# Verification depth of Chain:
 
 # Auth mech
 
