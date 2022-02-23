@@ -702,20 +702,21 @@ test_9_mTLS_with SNI_Hostname_GET_PUT
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 Normally in TLS, the server has a TLS certificate and a public/private key pair, while the client does not. The typical TLS process works like this:
-1 Client connects to server = ok
-2 Server presents its TLS certificate = ok
-3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
-4 Client and server exchange information over encrypted TLS connection
+
+* 1 Client connects to server = ok
+* 2 Server presents its TLS certificate = ok
+* 3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+* 4 Client and server exchange information over encrypted TLS connection
 
 In mTLS, however, both the client and server have a certificate, and both sides authenticate using their public/private key pair.
 
-1 Client connects to server = ok, 
-2 Server presents its TLS certificate = ok
-3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
-4 Client presents its TLS certificate = ok
-5 Server verifies the client's certificate ok, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
-6 Server grants access = ok
-7 Client and server exchange information over encrypted TLS connection = ok
+* 1 Client connects to server = ok, 
+* 2 Server presents its TLS certificate = ok
+* 3 Client verifies the server's certificate = ok, with SNI = Hostname, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+* 4 Client presents its TLS certificate = ok
+* 5 Server verifies the client's certificate ok, ssl_options.verify = verify_peer, ssl_options.fail_if_no_peer_cert = true
+* 6 Server grants access = ok
+* 7 Client and server exchange information over encrypted TLS connection = ok
 
 
 #####
