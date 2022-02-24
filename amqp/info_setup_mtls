@@ -652,8 +652,6 @@ prompt password
 
 openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
 
-
-
 #### Test SNI 23.02.2022
 
 # Test for SNI with CN frm path c:\testca\server2\server_certificate.pem
