@@ -1,0 +1,59 @@
+https://www.thesecmaster.com/how-to-export-a-private-key-file-from-a-windows-machine/
+
+How To Export A Private Key File From A Windows Machine?
+
+Procedure To Export A Private Key File From Windows:
+
+1 Create CSR.
+2 Submit the CSR to a CA and get the Certificate.
+3 Import the Certificate on your Windows machine.
+4 Export the Certificate in PFX format.
+5 Install OpenSSL on your Windows machine.
+6 Export the private key file from the PFX certificate.
+
+3 Import the Certificate on your Windows machine.
+After CA has issued the certificate. You should download that and import it along with the chain certificates.
+Note: If you don’t have the chain certificates imported to trusted stores, please import chain certificates (intermediate & root CA certificates) on your machine.
+
+https://www.thesslstore.com/knowledgebase/ssl-install/how-to-import-intermediate-root-certificates-using-mmc/
+
+
+For importing the Intermediate Certificate, right click on the ‘Intermediate Certification Authorities’ and then go to All Tasks > Import
+
+To import Root Certificates through MMC (Windows Microsoft Management Console), you must go through same process. 
+Instead of right-clicking on ‘Intermediate Certification Authorities,’ right-click on the ‘Trusted Root Certification Authorities’ 
+and go to All Tasks > Import. The rest of the steps (steps 8 – 11) are the same for Root certificate
+
+Import certificate in personal
+
+If you need to export the private key from either MMC or IIS, you should export the certificate in .pfx (PKCS#12) file format along with the private key.
+
+navigate to OpenSSL after installing from msi
+
+c:\Program Files\OpenSSL-Win64\bin>openssl version
+OpenSSL 1.1.1m  14 Dec 2021
+
+Go to MMC->certificates->personal (then one you imported that came back from the request)
+Right click and export, yes export the private key
+Choose
+
+Run the following command to extract the private key:
+
+openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
+
+You will be prompted to type the import password. Type the password that you used to protect your keypair when you created the .pfx file. 
+You will be prompted again to provide a new password to protect the .key file that you are creating. 
+Store the password to your key file in a secure place to avoid misuse.
+
+Run the following command to extract the certificate:
+clcerts
+Only output client certificates (not CA certificates).
+
+openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
+
+
+
+
+
+
+
