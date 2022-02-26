@@ -185,7 +185,7 @@ openssl x509 -nout -subject -in public.crt.pem
 
 Open the .crt in Notepad and copy contents of all files in reverse order and paste them into the new file.
 
-Example: Intermediate 3, Intermediate 2, Intermediate 1, Root Certificate.
+Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
 
 * (VM1 intermediate,) VM1 root, (VM2 intermediate,) VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
 * (VM2 intermediate,) VM2 root, (VM1 intermediate,) VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
