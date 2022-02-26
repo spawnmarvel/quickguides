@@ -17,11 +17,11 @@ https://www.rabbitmq.com/shovel.html
 ### Dependencies
 It depends in which way you install RabbitMQ. 
 The file usually is not present. If you need it, you have to create it.
-Prior to 3.7.0:
-%APPDATA%\RabbitMQ\rabbitmq.config
+* Prior to 3.7.0:
+* %APPDATA%\RabbitMQ\rabbitmq.config
 The configuration file is named rabbitmq.config and uses the Erlang term format (aka the "classic format" for RabbitMQ config files).
-RabbitMQ 3.7.0+
-%APPDATA%\RabbitMQ\rabbitmq.conf
+* RabbitMQ 3.7.0+
+* %APPDATA%\RabbitMQ\rabbitmq.conf
 In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
 
 ### Installing
