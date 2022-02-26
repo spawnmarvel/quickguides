@@ -104,18 +104,19 @@ openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
 ```cmd
 openssl x509 -nout -subject -in public.crt.pem
 ```
-### 5 Update config
+### 5 Update config VM2 (Server):
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
-* 6 Check shovel VM1-> VM2 status running
+* Check shovel VM1-> VM2 status running
 * SSL/TLS success
 * Now the client knows that the server is THE SERVER
+* Keep the VM1 (Client) test shovel as is with tcp listner 5671 for now
 
-### 7 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:
+### 6 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:
 * https://www.rabbitmq.com/ssl.html
 * TLS has two primary purposes: encrypting connection traffic and providing a way to authenticate (verify) the peer to mitigate against Man-in-the-Middle attacks. 
 * Both are  accomplished using a set of roles, policies and procedures known as Public Key Infrastructure (PKI).
 
-### 8 Make Bundle of Root CA in this order:
+### 7 Make Bundle of Root CA in this order:
 * https://www.rabbitmq.com/ssl.html
 * All trusted CA certificates must be added to a single file called the CA certificate bundle (MMC Gui of certmgr from our CSR)
 * On Windows trusted certificates are managed using tools such as certmgr.
@@ -129,17 +130,18 @@ openssl x509 -nout -subject -in public.crt.pem
 ## SSL VM1 (Client):
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
-* GOTO 8
+* GOTO 6, 7
 
-### 5 Update config {amqp_client,
-* 5.1 Now use the vm1yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm1yourDomain.ca-bundle"},
-* 5.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]} ,\\ for win path
-* 5.2 Here we will also add, {server_name_indication,"hostname-VM2"} so we only connect to that host (mTLS) and reject all other hosts.
-* 5.3 VM2 Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
-* 5.4 Check shovel VM1-> VM2 status running
+### 8 Update config
+* 8.0 Add section {amqp_client, above the {rabbitmq_shovel, section
+* 8.1 Now use the vm1yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm1yourDomain.ca-bundle"},
+* 8.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]} ,\\ for win path
+* 8.2 Here we will also add, {server_name_indication,"hostname-VM2"} so we only connect to that host (mTLS) and reject all other hosts.
+* 8.3 VM2 Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
+* 8.4 Check shovel VM1-> VM2 status running
 * SSL/mTLS success
 
-### 6 VM2 Edit config from
+### 9 VM2 Edit config from
 * this {fail_if_no_peer_cert, false}]} to true
 * SSL/mTLS success
 * Now the client knows that the server is THE SERVER and server knows that the client is THE CLIENT.
