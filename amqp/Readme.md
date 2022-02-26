@@ -86,19 +86,24 @@ ERLANG_HOME=C:\Program Files\erl-24.2
 * 4 Get the private key
 
 * 4.1 Run cms as admin navigate to openssl bin and check version
+```cmd
 cd "c:\Program Files\OpenSSL-Win64\bin"
 openssl version
+```
 * It should be OpenSSL 1.1.1m 14 Dec 2021
 
 * 4.2 Run the following command to extract the private key:
+```cmd
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
-
+```
 * 4.3 Run the following command to extract the certificate
+```cmd
 openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
-
+```
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
+```cmd
 openssl x509 -nout -subject -in public.crt.pem
-
+```
 #### 5 Update config
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 * 6 Check shovel VM1-> VM2 status running
