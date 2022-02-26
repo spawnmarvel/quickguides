@@ -60,6 +60,13 @@ Azure
 ### TCP 5671 configuration (test shovel communication):
 
 * 1 Install Erlang, set home
+
+* RABBITMQ_BASE=c:\software
+* RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
+* RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
+* ERLANG_HOME=C:\Program Files\erl-24.2
+
+
 * 2 Set RabbitMQ environments
 * 3 Install RabbitMQ
 * 4 Enable management, shovel and shovel management
