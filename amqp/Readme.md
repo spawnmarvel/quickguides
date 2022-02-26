@@ -192,7 +192,7 @@ openssl x509 -nout -subject -in public.crt.pem
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 
-[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_ssl.jpg)
+[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
 
  
