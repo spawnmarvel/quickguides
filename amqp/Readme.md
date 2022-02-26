@@ -9,6 +9,37 @@ Identity within Internet Public Key Infrastructure Using X.509 (PKIX)
 Certificates in the Context of Transport Layer Security (TLS)
 * RFC-6125
 
+## Server Identity Check RFC-6125
+
+### 2.4.  Server Identity Check
+
+   During the TLS negotiation, the client MUST check its understanding
+   of the server hostname against the server's identity as presented in
+   the server Certificate message, in order to prevent man-in-the-middle
+   attacks.  Matching is performed according to these rules:
+
+   * The client MUST use the server hostname it used to open the
+      connection as the value to compare against the server name as
+      expressed in the server certificate.  The client MUST NOT use any
+      form of the server hostname derived from an insecure remote source
+      (e.g., insecure DNS lookup).  CNAME canonicalization is not done.
+
+   *  If a subjectAltName extension of type dNSName is present in the
+      certificate, it SHOULD be used as the source of the server's
+      identity.
+
+   *  Matching is case-insensitive.
+
+   *  A "*" wildcard character MAY be used as the left-most name
+      component in the certificate.  For example, *.example.com would
+      match a.example.com, foo.example.com, etc. but would not match
+      example.com.
+
+   *  If the certificate contains multiple names (e.g. more than one
+      dNSName field), then a match with any one of the fields is
+      considered acceptable.
+
+
 
 ## Shovel
 * A shovel behaves like a well-written client application, which connects to its source and destination, 
