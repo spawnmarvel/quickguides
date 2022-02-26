@@ -194,6 +194,14 @@ Now the client knows that the server is THE SERVER and the server knows that the
 Hence we can connect many clients to that server and all will be on mTls with encryption.
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
+## Erlang SNI
+
+https://www.erlang.org/doc/man/ssl.html
+
+* Specify the hostname to be used in TLS Server Name Indication extension. If not specified it will default to the Host argument of connect/[3,4] unless it is of type inet:ipaddress().
+
+* The HostName will also be used in the hostname verification of the peer certificate using public_key:pkix_verify_hostname/2.
+
 
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
