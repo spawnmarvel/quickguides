@@ -85,7 +85,9 @@ ERLANG_HOME=C:\Program Files\erl-24.2
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 
 ```cmd
+# [...]
 CN = hostname(.domain.something)
+# [...]
 Exportable = TRUE
 [RequestAttributes] 
 SAN="dns=hostname(.domain.something)"
