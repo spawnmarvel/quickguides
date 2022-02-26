@@ -181,7 +181,7 @@ openssl x509 -nout -subject -in public.crt.pem
 * 8.1 Now use the vm1yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm1yourDomain.ca-bundle"},
 * 8.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]} ,\\ for win path
 * 8.2 Here we will also add, {server_name_indication,"hostname-VM2"} so we only connect to that host (mTLS) and reject all other hosts.
-* 8.3 VM2 Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
+* 8.3 VM2 server: Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
 * 8.4 Check shovel VM1-> VM2 status running
 * SSL/mTLS success
 
