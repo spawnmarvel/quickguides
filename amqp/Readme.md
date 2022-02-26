@@ -1,18 +1,49 @@
+# AMQP Shovel MTLS SNI
+
 https://www.rabbitmq.com/shovel.html
 
+## Shovel
 * A shovel behaves like a well-written client application, which connects to its source and destination, 
-* consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
+  consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 
-Scenario and roles:
-
-VM2 SERVER
+## Scenario and roles:
+  VM2 server:
 * Getting shovel data)
-VM1 Client
+  VM1 Client
 * Initiator of shovel amqp client for PUT or GET data
 * Uses amqp_client
 
-TCP 5671 configuration (test shovel communication):
+### Dependencies
+It depends in which way you install RabbitMQ. 
+The file usually is not present. If you need it, you have to create it.
+Prior to 3.7.0:
+%APPDATA%\RabbitMQ\rabbitmq.config
+The configuration file is named rabbitmq.config and uses the Erlang term format (aka the "classic format" for RabbitMQ config files).
+RabbitMQ 3.7.0+
+%APPDATA%\RabbitMQ\rabbitmq.conf
+In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
+
+### Installing
+For this test:
+* https://www.rabbitmq.com/install-windows.html
+* rabbitmq-server-3.9.12
+* otp_win64_24.2
+* Win64 OpenSSL v1.1.1m
+* https://slproweb.com/products/Win32OpenSSL.html
+* The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows. 
+* Win64 OpenSSL v1.1.1m MSI (63MB Installer)
+* Latest News, https://www.openssl.org/
+* 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
+* For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
+
+### Environment
+Azure
+
+
+
+
+### TCP 5671 configuration (test shovel communication):
 
 1 Install Erlang, set home
 2 Set RabbitMQ environments
@@ -33,12 +64,10 @@ SSL VM2:
 3 Export personal as pfx (yes, export private key, include all certs if possible), save the password for later use
 4 Get the private key
 
-4.1 For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
-Win32/Win64 OpenSSL Installer for Windows - Shining Light Productions (slproweb.com)
-* The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows. 
-* Win64 OpenSSL v1.1.1m MSI (63MB Installer)
-* Latest News, https://www.openssl.org/
-* 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
+4.1 Run cms as admin navigate to openssl bin and check version
+cd "c:\Program Files\OpenSSL-Win64\bin"
+openssl version
+* It should be OpenSSL 1.1.1m 14 Dec 2021
 
 4.2 Run the following command to extract the private key:
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
