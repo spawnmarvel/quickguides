@@ -1,4 +1,4 @@
-# AMQP Shovel MTLS SNI
+# AMQP Shovel MTLS  with SNI = hostname
 
 https://www.rabbitmq.com/shovel.html
 
