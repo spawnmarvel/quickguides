@@ -188,7 +188,8 @@ openssl x509 -nout -subject -in public.crt.pem
 ### 9 VM2 Edit config from
 * this {fail_if_no_peer_cert, false}]} to true
 * SSL/mTLS success
-* Now the client knows that the server is THE SERVER and server knows that the client is THE CLIENT.
+* Now the client knows that the server is THE SERVER and server knows that the client is A CLIENT.
+* Hence we can connect many clients to that server and all wil be on mTls encryption.
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 
