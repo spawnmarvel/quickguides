@@ -81,6 +81,8 @@ GOTO 8
 * SSL/mTLS success
 * Now the client knows that the server is THE SERVER and server knows that the client is THE CLIENT.
 
+View:
+test_9_mTLS_with SNI_Hostname1_Build_.jpg
 
 
 
