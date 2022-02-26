@@ -90,8 +90,8 @@ Azure
 
 ### TCP 5671 configuration (test shovel communication):
 
-* 1 Install Erlang, set home
-
+* 1 Install Erlang (admin)
+* Set home after
 ```cmd
 # Path to bin, set this after
 ERLANG_HOME=C:\Program Files\erl-24.2
@@ -113,7 +113,8 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 ```
 
 
-* 3 Install RabbitMQ
+* 3 Install RabbitMQ (admin)
+* 3.1 Rememeber the cookie, if there is an issue.
 * 4 Enable management, shovel and shovel management
 * 5 Add a new user on both VM's with access to vhost as administrator.
 * 6 VM1 -> Oubound 5671, VM2 -> Inbound 5671
