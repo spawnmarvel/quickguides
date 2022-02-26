@@ -55,6 +55,11 @@ openssl x509 -nout -subject -in public.crt.pem
 * Both are  accomplished using a set of roles, policies and procedures known as Public Key Infrastructure (PKI).
 
 8 Make Bundle of Root CA in this order:
+* https://www.rabbitmq.com/ssl.html
+* All trusted CA certificates must be added to a single file called the CA certificate bundle (MMC Gui of certmgr from our CSR)
+* On Windows trusted certificates are managed using tools such as certmgr.
+* For Rabbitmq to read the files:
+
 * https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
 * VM1 root, VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
 * VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
