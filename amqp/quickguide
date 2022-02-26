@@ -32,18 +32,23 @@ SSL VM2:
 2 When CSR approved is back, import certificate in personal
 3 Export personal as pfx (yes, export private key, include all certs if possible), save the password for later use
 4 Get the private key
+
 4.1 For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
 Win32/Win64 OpenSSL Installer for Windows - Shining Light Productions (slproweb.com)
 * The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows. 
 * Win64 OpenSSL v1.1.1m MSI (63MB Installer)
 * Latest News, https://www.openssl.org/
 * 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
+
 4.2 Run the following command to extract the private key:
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
+
 4.3 Run the following command to extract the certificate
 openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
+
 4.4 Run the following command to verify CN (must be hostname(.domain.something))
 openssl x509 -nout -subject -in public.crt.pem
+
 5 Update config, ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 6 Check shovel VM1-> VM2 status running
 * SSL/TLS success
