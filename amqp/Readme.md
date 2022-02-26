@@ -16,7 +16,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 
 ## Scenario and roles for this test:
-* VM2 server:
+* VM2 Server:
 * Getting shovel data
 * VM1 Client
 * Initiator of shovel amqp client for PUT or GET data
@@ -34,14 +34,14 @@ In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional 
 
 ### Installing
 For this test:
-* https://www.rabbitmq.com/install-windows.html
+https://www.rabbitmq.com/install-windows.html
 * rabbitmq-server-3.9.12
 * otp_win64_24.2
 * Win64 OpenSSL v1.1.1m
-* https://slproweb.com/products/Win32OpenSSL.html
+https://slproweb.com/products/Win32OpenSSL.html
 * The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows. 
 * Win64 OpenSSL v1.1.1m MSI (63MB Installer)
-* Latest News, https://www.openssl.org/
+Latest News, https://www.openssl.org/
 * 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
 * For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
 
