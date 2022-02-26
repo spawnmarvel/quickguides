@@ -7,6 +7,13 @@ Procedure To Export A Private Key File From Windows:
 1 Create CSR.
 2 Submit the CSR to a CA and get the Certificate.
 3 Import the Certificate on your Windows machine.
+
+https://www.rapidsslonline.com/ssl/is-it-possible-to-have-two-ssl-certificates-for-one-domain/
+
+* There’s no mechanism that would stop you from issuing multiple certificates for the same domain. 
+* In fact, that’s what you do every time you renew your SSL certificate — you issue a new certificate while the old one is still active. 
+* So, at least for a while, you have two certificates for the same domain. It’s not unusual.
+
 4 Export the Certificate in PFX format.
 5 Install OpenSSL on your Windows machine.
 6 Export the private key file from the PFX certificate.
