@@ -1,10 +1,10 @@
-# AMQP Shovel MTLS  with SNI = hostname- RFC-6125
+# AMQP Shovel MTLS  with SNI = hostname - RFC-6125
 
 https://www.rabbitmq.com/shovel.html
 * Shovel plugin
 
 https://datatracker.ietf.org/doc/html/rfc6125
-Representation and Verification of Domain-Based Application Service
+* Representation and Verification of Domain-Based Application Service
 Identity within Internet Public Key Infrastructure Using X.509 (PKIX)
 Certificates in the Context of Transport Layer Security (TLS)
 * RFC-6125
