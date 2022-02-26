@@ -66,7 +66,7 @@ Azure
 
 * TCP 5671 Success
 
-## SSL VM2:
+## SSL VM2 (Server):
 * 1 Make CSR key must be exportable and CN + SAN must be hostname(.domain.something)
 * 2 When CSR approved is back, import certificate in personal
 * 3 Export personal as pfx (yes, export private key, include all certs if possible), save the password for later use
@@ -107,7 +107,7 @@ openssl x509 -nout -subject -in public.crt.pem
 * VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
 
-## SSL VM1:
+## SSL VM1 (Client):
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 8
