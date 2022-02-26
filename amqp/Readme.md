@@ -110,7 +110,7 @@ ERLANG_HOME=C:\Program Files\erl-24.2
 
 ## We now have a server and a client running a shovel to the server, TCP 5671 Success
 
-### SSL VM2 (Server):
+### SSL VM2 Server:
 * 1 Make CSR key must be exportable and CN + SAN must be hostname(.domain.something)
 * 1.1 The certreq command can be used [...] create a new request from an .inf file
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
@@ -146,7 +146,7 @@ openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
 ```cmd
 openssl x509 -nout -subject -in public.crt.pem
 ```
-### 5 Update config VM2 (Server):
+### 5 Update config VM2 Server:
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 * Check shovel VM1-> VM2 status running
 * SSL/TLS success
@@ -171,21 +171,23 @@ openssl x509 -nout -subject -in public.crt.pem
 * VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
 
-## SSL VM1 (Client):
+### SSL VM1 Client:
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 6, 7
 
-### 8 Update config
+### 8 Update config VM1 Client:
 * 8.0 Add section {amqp_client, above the {rabbitmq_shovel, section
 * 8.1 Now use the vm1yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm1yourDomain.ca-bundle"},
 * 8.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]} ,\\ for win path
 * 8.2 Here we will also add, {server_name_indication,"hostname-VM2"} so we only connect to that host (mTLS) and reject all other hosts.
-* 8.3 VM2 server: Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
+
+### 8 Update config VM2 server: 
+* Edit config to use the bundle: Now use the vm2yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm2yourDomain.ca-bundle"},
 * 8.4 Check shovel VM1-> VM2 status running
 * SSL/mTLS success
 
-### 9 VM2 Edit config from
+### 9 Update config VM2 server
 * this {fail_if_no_peer_cert, false}]} to true
 * SSL/mTLS success
 
