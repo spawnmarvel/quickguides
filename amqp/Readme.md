@@ -2,6 +2,9 @@
 
 https://www.rabbitmq.com/shovel.html
 
+https://datatracker.ietf.org/doc/html/rfc6125
+* RFC-6125
+
 ## Shovel
 * A shovel behaves like a well-written client application, which connects to its source and destination, 
   consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
