@@ -189,7 +189,7 @@ openssl x509 -nout -subject -in public.crt.pem
 * this {fail_if_no_peer_cert, false}]} to true
 * SSL/mTLS success
 
-Now the client knows that the server is THE SERVER and server knows that the client is A CLIENT with it's own certificate and public / privet keys for encryption.
+Now the client knows that the server is THE SERVER and the server knows that the client is A CLIENT with it's own certificate and public / privet keys for encryption.
 
 Hence we can connect many clients to that server and all wil be on mTls encryption.
 
