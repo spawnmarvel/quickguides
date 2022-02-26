@@ -183,7 +183,7 @@ openssl x509 -nout -subject -in public.crt.pem
 
 * https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
 
-Copy contents of all files in reverse order and paste them into the new file.
+Open the .crt in Notepad and copy contents of all files in reverse order and paste them into the new file.
 
 Example: Intermediate 3, Intermediate 2, Intermediate 1, Root Certificate.
 
