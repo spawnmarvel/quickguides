@@ -81,6 +81,8 @@ ERLANG_HOME=C:\Program Files\erl-24.2
 
 ### SSL VM2 (Server):
 * 1 Make CSR key must be exportable and CN + SAN must be hostname(.domain.something)
+* 1.1 The certreq command can be used [...] create a new request from an .inf file
+* https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 * 2 When CSR approved is back, import certificate in personal
 * 3 Export personal as pfx (yes, export private key, include all certs if possible), save the password for later use
 * 4 Get the private key
