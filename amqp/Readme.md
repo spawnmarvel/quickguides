@@ -1,6 +1,7 @@
-# AMQP Shovel MTLS  with SNI = hostname
+# AMQP Shovel MTLS  with SNI = hostname- RFC-6125
 
 https://www.rabbitmq.com/shovel.html
+* https://www.rabbitmq.com/shovel.html
 
 https://datatracker.ietf.org/doc/html/rfc6125
 * RFC-6125
