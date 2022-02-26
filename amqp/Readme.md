@@ -91,17 +91,31 @@ Azure
 ### TCP 5671 configuration (test shovel communication):
 
 * 1 Install Erlang, set home
+
 ```cmd
-RABBITMQ_BASE=c:\software
-RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
-RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
+# Path to bin, set this after
 ERLANG_HOME=C:\Program Files\erl-24.2
 ```
 
 * 2 Set RabbitMQ environments
+
+https://www.rabbitmq.com/configure.html
+
+* In the context of deployment automation this means that environment variables such as 
+* RABBITMQ_BASE and RABBITMQ_CONFIG_FILE should ideally be set before RabbitMQ is installed. 
+* This would help avoid unnecessary confusion and Windows service re-installations.
+
+```cmd
+# Set this before install, preferable to to data disk, i.e F:
+RABBITMQ_BASE=c:\software
+RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
+RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
+```
+
+
 * 3 Install RabbitMQ
 * 4 Enable management, shovel and shovel management
-* 5 Add a new user on both VM's with same password.
+* 5 Add a new user on both VM's with access to vhost as administrator.
 * 6 VM1 -> Oubound 5671, VM2 -> Inbound 5671
 * 7 Make a test shovel with tcp listner 5671 (5672 must also avaliable on hosts VM1, VM2 but just in trusted network for writing data to RabbtiMQ, not internet)
 * 8 Make the queues on VM1, if the shovel is running then 8
