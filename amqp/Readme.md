@@ -191,7 +191,7 @@ openssl x509 -nout -subject -in public.crt.pem
 
 Now the client knows that the server is THE SERVER and the server knows that the client is A CLIENT with it's own certificate and public / privet keys for encryption.
 
-Hence we can connect many clients to that server and all wil be on mTls encryption.
+Hence we can connect many clients to that server and all will be on mTls with encryption.
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 
