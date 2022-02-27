@@ -56,7 +56,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ```mermaid
 graph TD;
-    Client-VM1-Shovel-GET-PUT-->Server-VM2;
+    Client-VM1-->Server-VM2;
     Server-VM2-->Client-VM1;
 ```
 
