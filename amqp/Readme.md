@@ -55,8 +55,8 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ```mermaid
 graph TD;
-    Client-->Server;
-    Server-->Client;
+    Client(VM1)-->Server(VM2);
+    Server(VM2)-->Client(VM1);
 ```
 
 ## Dependencies
