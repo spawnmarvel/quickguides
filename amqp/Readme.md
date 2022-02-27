@@ -138,7 +138,9 @@ Latest News, https://www.openssl.org/
 
 <details><summary>Azure</summary>
 <p>
+
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
+
 </p>
 </details>
 
