@@ -296,6 +296,7 @@ VM1 change from amqp to amqps in advanced config for shovel:
 Shovel 'shovel_get_remote_data' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 
 
+
 VM2 edit config from:
 
 [{rabbit, [
