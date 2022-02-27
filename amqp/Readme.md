@@ -47,6 +47,12 @@ Certificates in the Context of Transport Layer Security (TLS)
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 
 ## Scenario and roles for this test:
+
+<details><summary>The New and Old Config File Formats</summary>
+<p>
+
+#### We can hide anything, even code!
+
 * Two way direction
 * VM1 Client
 * Initiator of shovel amqp client for:
@@ -75,6 +81,8 @@ graph TD;
 graph TD;
     Client-VM1-->Server-VM2;
 ```
+</p>
+</details>
 
 ## Dependencies
 
