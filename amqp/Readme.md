@@ -269,6 +269,9 @@ Hence we can connect many clients to that server and all will be on mTls with en
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 ## Erlang SNI
 
+<details><summary>Specify the hostname to be used in TLS Server Name Indication extension</summary>
+<p>
+
 https://www.erlang.org/doc/man/ssl.html
 
 * Specify the hostname to be used in TLS Server Name Indication extension. If not specified it will default to the Host argument of connect/[3,4] unless it is of type inet:ipaddress().
@@ -278,6 +281,8 @@ https://www.erlang.org/doc/man/ssl.html
 
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
+</p>
+</details>
 
 ## Notes
 
