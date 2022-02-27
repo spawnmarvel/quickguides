@@ -86,17 +86,20 @@ The configuration file is named rabbitmq.config and uses the Erlang term format 
 * %APPDATA%\RabbitMQ\rabbitmq.conf
 In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
 
-https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
+
 
 <details><summary>The New and Old Config File Formats</summary>
 <p>
 
 #### We can hide anything, even code!
 
- | First Header  | Second Header |
- | ------------- | ------------- |
- | Content Cell  | Content Cell  |
- | Content Cell  | Content Cell  |
+https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
+
+
+ | Configuration File  | Format Used                            |
+ | ------------------- | -------------------------------------- |
+ | rabbitmq.conf       | New style format (sysctl or ini-like)  |
+ | advanced.config     | Classic (Erlang terms)                 |
 
 </p>
 </details>
