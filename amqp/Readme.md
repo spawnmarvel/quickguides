@@ -247,6 +247,15 @@ openssl x509 -nout -subject -in public.crt.pem
 * https://www.rabbitmq.com/ssl.html
 * All trusted CA certificates must be added to a single file called the CA certificate bundle (MMC Gui of certmgr from our CSR)
 * On Windows trusted certificates are managed using tools such as certmgr.
+* For example, if certificate B is signed by A and C is signed by B, the chain is A (Root), B (Intermediat), C (Server certificate) (commas here are used for clarity). 
+* The "topmost" (first or only) CA is often referred to as the root CA for the chain.
+* Mutual Peer Verification (Mutual TLS Authentication or mTLS)
+* When both sides perform this peer verification process, this is known as mutual TLS authentication or mTLS.
+* When Peer Verification Fails: 
+* * If no trusted and otherwise valid certificate is found, 
+* * peer verification fails and client's TLS (TCP) connection is closed with a fatal error ("alert" in OpenSSL parlance) that says "Unknown CA" or similar
+* RabbitMQ relies on Erlang's TLS implementation. It assumes that all trusted CA certificates are added to the server certificate bundle.
+
 * For Rabbitmq to read the files:
 
 * https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
@@ -258,6 +267,7 @@ Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
 * (VM1 intermediate,) VM1 root, (VM2 intermediate,) VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
 * (VM2 intermediate,) VM2 root, (VM1 intermediate,) VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
+* http://marianoguerra.org/tmp/site/ssl/usersguide/
 
 ### SSL VM1 Client:
 * 1 = Same steps as VM2 but with VM1 hostname
