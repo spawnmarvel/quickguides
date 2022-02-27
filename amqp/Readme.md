@@ -266,13 +266,13 @@ Open the .crt in Notepad and copy contents of all files in reverse order and pas
 
 Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
 
-#### Note
+### Note
 For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
 
 * https://www.rabbitmq.com/ssl.html#manual-certificate-generation
 * OpenSSL.cnf on VM1, own CA root and certificate
 * OpenSSL.cnf on VM2, own CA root and certificate
-* Made bundle of 
+* Made bundle of:
 * VM1 root, VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
 * VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
