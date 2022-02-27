@@ -301,7 +301,8 @@ https://www.erlang.org/doc/man/ssl.html
 <p>
 
 * 1 If the distance is long between server and client:
-* {ssl_handshake_timeout, 5000}, default is 5 seconds, increase it.
+* server {ssl_handshake_timeout, 5000}, default is 5 seconds, increase it.
+* client shovel {reconnect_delay, 15}
 
 * Advanced config https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
 * Advanced.config.example https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
