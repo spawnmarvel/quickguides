@@ -48,10 +48,12 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Scenario and roles for this test:
 * VM1 Client
-* Initiator of shovel amqp client for PUT or GET data
+* Initiator of shovel amqp client for:
+* 1 PUT (shovel_put_local_data, queue22)
+* 2 GET (shovel_get_remote_data, queue11)
 * Uses amqp_client
 * VM2 Server:
-* Getting shovel data
+* Receives shovel data from PUT (on queue22) and can send back on GET (on queue11)
 
 
 ```mermaid
@@ -61,10 +63,11 @@ graph TD;
 ```
 
 * VM1 Client
-* Initiator of shovel amqp client for PUT data
+* Initiator of shovel amqp client for:
+* 1 PUT (shovel_put_local_data, queue22)
 * Uses amqp_client
 * VM2 Server:
-* Getting shovel data
+* Receives shovel data from PUT (on queue22)
 
 ```mermaid
 graph TD;
