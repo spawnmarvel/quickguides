@@ -225,6 +225,8 @@ openssl x509 -nout -subject -in public.crt.pem
 ```
 ### 5 Update config VM2 Server:
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
+
+### 5.1 Update config VM1 Client:
 * Check shovel VM1-> VM2 status running
 * SSL/TLS success
 * Now the client knows that the server is THE SERVER
