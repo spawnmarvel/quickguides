@@ -118,6 +118,9 @@ https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GU
 </details>
 
 ## Installing
+<details><summary>Software version</summary>
+<p>
+
 For this test:
 https://www.rabbitmq.com/install-windows.html
 * rabbitmq-server-3.9.12
@@ -133,6 +136,9 @@ Latest News, https://www.openssl.org/
 
 * 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
 * For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
+
+</p>
+</details>
 
 ## Environment
 
