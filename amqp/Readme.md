@@ -135,9 +135,12 @@ Latest News, https://www.openssl.org/
 * For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
 
 ## Environment
-Azure
 
+<details><summary>Azure</summary>
+<p>
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
+</p>
+</details>
 
 ### TCP 5671 configuration (test shovel communication):
 
