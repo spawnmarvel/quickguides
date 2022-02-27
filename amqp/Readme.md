@@ -77,6 +77,13 @@ graph TD;
 ```
 
 ## Dependencies
+
+<details><summary>The New and Old Config File Formats</summary>
+<p>
+
+#### We can hide anything, even code!
+
+
 It depends in which way you install RabbitMQ. 
 The file usually is not present. If you need it, you have to create it.
 * Prior to 3.7.0:
@@ -86,12 +93,6 @@ The configuration file is named rabbitmq.config and uses the Erlang term format 
 * %APPDATA%\RabbitMQ\rabbitmq.conf
 In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
 
-
-
-<details><summary>The New and Old Config File Formats</summary>
-<p>
-
-#### We can hide anything, even code!
 
 https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
 
