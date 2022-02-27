@@ -228,4 +228,4 @@ https://www.erlang.org/doc/man/ssl.html
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
 
- 
+https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
