@@ -96,10 +96,10 @@ In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional 
 https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
 
 
- | Configuration File  | Format Used                            |
- | ------------------- | -------------------------------------- |
- | rabbitmq.conf       | New style format (sysctl or ini-like)  |
- | advanced.config     | Classic (Erlang terms)                 |
+ | Configuration File  | Format Used                            | Purpose                             |
+ | ------------------- | -------------------------------------- | ----------------------------------- |
+ | rabbitmq.conf       | New style format (sysctl or ini-like)  | Should be used for most settings.   |
+ | advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format |
 
 </p>
 </details>
