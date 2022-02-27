@@ -217,7 +217,8 @@ openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
 ```
 * 4.3 Run the following command to extract the certificate
 ```cmd
-openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
+(openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes)
+openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
 ```
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
 ```cmd
