@@ -60,6 +60,17 @@ graph TD;
     Server-VM2-->Client-VM1;
 ```
 
+* VM1 Client
+* Initiator of shovel amqp client for PUT data
+* Uses amqp_client
+* VM2 Server:
+* Getting shovel data
+
+```mermaid
+graph TD;
+    Client-VM1-->Server-VM2;
+```
+
 ## Dependencies
 It depends in which way you install RabbitMQ. 
 The file usually is not present. If you need it, you have to create it.
