@@ -224,6 +224,7 @@ openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
 ```cmd
 openssl x509 -nout -subject -in public.crt.pem
 ```
+
 ### 5 Update config VM2 Server:
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 
@@ -265,8 +266,15 @@ Open the .crt in Notepad and copy contents of all files in reverse order and pas
 
 Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
 
-* (VM1 intermediate,) VM1 root, (VM2 intermediate,) VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
-* (VM2 intermediate,) VM2 root, (VM1 intermediate,) VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
+#### Note
+For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
+
+* https://www.rabbitmq.com/ssl.html#manual-certificate-generation
+* OpenSSL.cnf on VM1, own CA root and certificate
+* OpenSSL.cnf on VM2, own CA root and certificate
+* Made bundle of 
+* VM1 root, VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
+* VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
 * http://marianoguerra.org/tmp/site/ssl/usersguide/
 
