@@ -53,6 +53,12 @@ Certificates in the Context of Transport Layer Security (TLS)
 * Initiator of shovel amqp client for PUT or GET data
 * Uses amqp_client
 
+```mermaid
+graph TD;
+    Client-->Server;
+    Server-->Client;
+```
+
 ## Dependencies
 It depends in which way you install RabbitMQ. 
 The file usually is not present. If you need it, you have to create it.
@@ -65,7 +71,7 @@ In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional 
 
 https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
 
-<details><summary>CLICK ME</summary>
+<details><summary>The New and Old Config File Formats</summary>
 <p>
 
 #### We can hide anything, even code!
