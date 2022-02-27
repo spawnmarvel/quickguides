@@ -47,15 +47,16 @@ Certificates in the Context of Transport Layer Security (TLS)
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 
 ## Scenario and roles for this test:
-* VM2 Server:
-* Getting shovel data
 * VM1 Client
 * Initiator of shovel amqp client for PUT or GET data
 * Uses amqp_client
+* VM2 Server:
+* Getting shovel data
+
 
 ```mermaid
 graph TD;
-    Client-VM1-->Server-VM2;
+    Client-VM1-Shovel-GET-PUT-->Server-VM2;
     Server-VM2-->Client-VM1;
 ```
 
