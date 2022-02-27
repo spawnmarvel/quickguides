@@ -63,6 +63,13 @@ The configuration file is named rabbitmq.config and uses the Erlang term format 
 * %APPDATA%\RabbitMQ\rabbitmq.conf
 In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
 
+https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
+
+| First Header  | Second Header | | First Header  |
+| ------------- | ------------- | | ------------- |
+| Content Cell  | Content Cell  | | First Header  |
+| Content Cell  | Content Cell  | | First Header  |
+
 ## Installing
 For this test:
 https://www.rabbitmq.com/install-windows.html
@@ -84,9 +91,6 @@ Latest News, https://www.openssl.org/
 Azure
 
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
-
-
-
 
 ### TCP 5671 configuration (test shovel communication):
 
@@ -228,4 +232,10 @@ https://www.erlang.org/doc/man/ssl.html
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
 
-https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
+#### Notes
+
+* 1 If the distance is long between server and client:
+* {ssl_handshake_timeout, 5000}, default is 5 seconds, increase it.
+
+* Advanced config https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
+* Advanced.config.example https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
