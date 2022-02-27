@@ -266,7 +266,7 @@ Open the .crt in Notepad and copy contents of all files in reverse order and pas
 
 Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
 
-### Note
+### Extra Note
 For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
 
 * https://www.rabbitmq.com/ssl.html#manual-certificate-generation
