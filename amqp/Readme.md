@@ -48,7 +48,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Scenario and roles for this test:
 
-<details><summary>The New and Old Config File Formats</summary>
+<details><summary>Two way direction and One way direction</summary>
 <p>
 
 #### We can hide anything, even code!
