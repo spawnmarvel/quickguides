@@ -11,7 +11,10 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Server Identity Check RFC-6125
 
-### 2.4.  Server Identity Check
+<details><summary>2.4.  Server Identity Check</summary>
+<p>
+
+#### We can hide anything, even code!
 
    During the TLS negotiation, the client MUST check its understanding
    of the server hostname against the server's identity as presented in
@@ -38,7 +41,8 @@ Certificates in the Context of Transport Layer Security (TLS)
    *  If the certificate contains multiple names (e.g. more than one
       dNSName field), then a match with any one of the fields is
       considered acceptable.
-
+</p>
+</details>
 
 
 ## Shovel
