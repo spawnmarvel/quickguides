@@ -279,10 +279,16 @@ https://www.erlang.org/doc/man/ssl.html
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
 
 
-#### Notes
+## Notes
+
+<details><summary>Notes</summary>
+<p>
 
 * 1 If the distance is long between server and client:
 * {ssl_handshake_timeout, 5000}, default is 5 seconds, increase it.
 
 * Advanced config https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
 * Advanced.config.example https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
+
+</p>
+</details>
