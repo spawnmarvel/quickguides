@@ -227,12 +227,13 @@ openssl x509 -nout -subject -in public.crt.pem
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 
 ### 5.1 Update config VM1 Client:
-* Check shovel VM1-> VM2 status running
-* SSL/TLS success
-* Now the client knows that the server is THE SERVER
-* Update VM1 (Client) test shovel with AMQPS tcp listner 5671
+* Check shovel VM1-> VM2 status running, it should be starting
+ * Update VM1 (Client) test shovel with AMQPS tcp listner 5671
 * {uris, ["amqp://test:test@xx.xx.xx.xx:5671"]},
 * {uris, ["amqps://test:test@xx.xx.xx.xx:5671"]},
+* SSL/TLS success
+* Now the client knows that the server is THE SERVER
+
 
 ## We now have a server with certificate and a client with no certificate running a shovel to the server AMQPS
 
