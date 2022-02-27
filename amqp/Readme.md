@@ -65,11 +65,18 @@ In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional 
 
 https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
 
+<details><summary>CLICK ME</summary>
+<p>
+
+#### We can hide anything, even code!
 
  | First Header  | Second Header |
  | ------------- | ------------- |
  | Content Cell  | Content Cell  |
  | Content Cell  | Content Cell  |
+
+</p>
+</details>
 
 ## Installing
 For this test:
