@@ -325,14 +325,14 @@ https://www.erlang.org/doc/man/ssl.html
 <details><summary>Notes</summary>
 <p>
 
+## Tips
 * 1 If the distance is long between server and client:
 * server {ssl_handshake_timeout, 5000}, default is 5 seconds, increase it.
 * client shovel {reconnect_delay, 15}
 
-* Understanding TLS Connection Log Errors
+### Understanding TLS Connection Log Errors
 * https://www.rabbitmq.com/troubleshooting-ssl.html
-
-### {ssl_upgrade_error, ...} This is a generic error that could have many causes. Make sure you are using the recommended version of Erlang.
+* {ssl_upgrade_error, ...} This is a generic error that could have many causes. Make sure you are using the recommended version of Erlang.
 * {ssl_upgrade_error,"record overflow"} = server response is record oveflow, client is amqp, set amqps
 
 ### Getting Help and Providing Feedback
