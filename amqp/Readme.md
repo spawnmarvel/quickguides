@@ -335,15 +335,15 @@ https://www.erlang.org/doc/man/ssl.html
 ### {ssl_upgrade_error, ...} This is a generic error that could have many causes. Make sure you are using the recommended version of Erlang.
 * {ssl_upgrade_error,"record overflow"} = server response is record oveflow, client is amqp, set amqps
 
+### Getting Help and Providing Feedback
+* If you have questions about the contents of this guide or any other topic related to RabbitMQ, don't hesitate to ask them on the RabbitMQ mailing list.
+* https://groups.google.com/g/rabbitmq-users
+
 * Advanced config https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
 * Advanced.config.example https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
 
 * The plugin is enough to use the Common Name as a user name.
 * https://groups.google.com/g/rabbitmq-users/c/8L1O9YuKP-E
-
-### Getting Help and Providing Feedback
-* If you have questions about the contents of this guide or any other topic related to RabbitMQ, don't hesitate to ask them on the RabbitMQ mailing list.
-* https://groups.google.com/g/rabbitmq-users
 
 </p>
 </details>
