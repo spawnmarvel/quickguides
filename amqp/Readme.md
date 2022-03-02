@@ -246,7 +246,7 @@ Log should be:
 * SSL/TLS success
 * Now the client knows that the server is THE SERVER
 
-### Note: if you get this behaviour:
+### Note: if you get this behaviour use tcp viewer:
 * VM1 shovel log:
 * * Shovel 'shovel_get_remote_data' failed to connect (URI: amqp://xx.xx.xx.xx:5671): {server_sent_malformed_header,<<21,3,1,0,2,2,10>>}
 * VM2 will report:
