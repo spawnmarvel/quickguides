@@ -318,7 +318,7 @@ So we came across "Commit Warnings" that say for exmaple application "rabbitmq" 
 
 Open the .crt in Notepad and copy contents of all files in reverse order and paste them into the new file.
 
-Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate.
+Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate. This is reverse order.
 
 ### Extra Note:
 For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
