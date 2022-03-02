@@ -11,7 +11,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Server Identity Check RFC-6125
 
-<details><summary>2.4.  Server Identity Check</summary>
+<details><summary>2.4. Server Identity Check -></summary>
 <p>
 
 #### We can hide anything, even code!
@@ -52,7 +52,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Scenario and roles for this test:
 
-<details><summary>Two way direction and One way direction</summary>
+<details><summary>Two way direction and One way direction -></summary>
 <p>
 
 #### We can hide anything, even code!
@@ -90,7 +90,7 @@ graph TD;
 
 ## Dependencies
 
-<details><summary>The New and Old Config File Formats</summary>
+<details><summary>The New and Old Config File Formats -></summary>
 <p>
 
 #### We can hide anything, even code!
@@ -118,7 +118,7 @@ https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GU
 </details>
 
 ## Installing
-<details><summary>Software version</summary>
+<details><summary>Software version -></summary>
 <p>
 
 For this test:
@@ -142,7 +142,7 @@ Latest News, https://www.openssl.org/
 
 ## Environment
 
-<details><summary>Azure</summary>
+<details><summary>Azure -></summary>
 <p>
 
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
@@ -252,7 +252,7 @@ Log should be:
 * TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal
 * Shovel 'my_shovel' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 
-<details><summary>Notes of confusion</summary>
+<details><summary>Notes of confusion -></summary>
 <p>
 
 * VM1 shovel log:
@@ -346,7 +346,7 @@ Hence we can connect many clients to that server and all will be on mTls with en
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 ## Erlang SNI
 
-<details><summary>Specify the hostname to be used in TLS Server Name Indication extension</summary>
+<details><summary>Specify the hostname to be used in TLS Server Name Indication extension -></summary>
 <p>
 
 https://www.erlang.org/doc/man/ssl.html
@@ -363,7 +363,7 @@ https://www.erlang.org/doc/man/ssl.html
 
 ## Notes
 
-<details><summary>Notes</summary>
+<details><summary>Notes -></summary>
 <p>
 
 ## Tips
