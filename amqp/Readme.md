@@ -233,7 +233,7 @@ ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, veri
 
 ```cmd
 # (two slashes) for win path
-C:\\folder\\
+"C:\\folder\\certs\\ca_cert.crt, .pem"
 ```
 
 Log should be:
@@ -345,7 +345,11 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 ### 8 Update config VM1 Client:
 * 8.0 Add section {amqp_client, above the {rabbitmq_shovel, section
 * 8.1 Now use the vm1yourDomain.ca-bundle as ssl_options, [{cacertfile, "c:\\op\ssl\\vm1yourDomain.ca-bundle"},
-* 8.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]} ,'\\', (two slashes) for win path
+* 8.2 The rest of the ssl_options is what we have for VM1, ssl options certfile, keyfile, verify  verify_peer, password, set this {fail_if_no_peer_cert, true}]}, 
+```cmd
+# (two slashes) for win path
+"C:\\folder\\certs\\ca_cert.crt, .pem"
+```
 * 8.2 Here we will also add, {server_name_indication,"hostname-VM2"} so we only connect to that host (mTLS) and reject all other hosts.
 
 ### 8 Update config VM2 server: 
