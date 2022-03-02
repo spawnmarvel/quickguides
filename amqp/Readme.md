@@ -248,7 +248,13 @@ Log should be:
 * SSL/TLS success
 * Now the client knows that the server is THE SERVER
 
-### Note: if you get this behaviour use tcp viewer:
+### Note: if you get this behaviour use tcp viewer and check connection with AMQP, then switch to AMQPS:
+* TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal
+* Shovel 'my_shovel' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
+
+<details><summary>Notes of confusion</summary>
+<p>
+
 * VM1 shovel log:
 * * Shovel 'shovel_get_remote_data' failed to connect (URI: amqp://xx.xx.xx.xx:5671): {server_sent_malformed_header,<<21,3,1,0,2,2,10>>}
 * VM2 will report:
@@ -258,7 +264,7 @@ Log should be:
 * You need to alter amqp to amqps
 
 * VM1 shovel log:
-* * Shovel 'shovel_put_local_data' failed to connect (URI: amqps://94.127.120.147:5671): closed
+* * Shovel 'shovel_put_local_data' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 * * Shovel 'shovel_put_local_data' has no more URIs to try for connection
 * * Shovel 'shovel_put_local_data' could not connect to destination
 * Even if Test-NetConnection -ComputerName VM2 -Port 5671 works:
@@ -270,7 +276,8 @@ https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClibCA
 One example is, if a client sends a server a SYN and the Palo Alto Networks device creates a session for that SYN , 
 but the server never sends a SYN ACK back to the client, then that session is incomplete.
 
-
+</p>
+</details>
 
 ## We now have a server with certificate and a client with no certificate running a shovel to the server AMQPS
 
