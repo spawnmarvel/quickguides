@@ -245,9 +245,9 @@ Log should be:
 * Update VM1 (Client) test shovel with AMQPS tcp listner 5671
 * {uris, ["amqp://test:test@xx.xx.xx.xx:5671"]},
 * {uris, ["amqps://test:test@xx.xx.xx.xx:5671"]},
-* Check shovel VM1-> VM2 status running, and check VM2 connection parameters * SSL/TLS
+* Check shovel VM1-> VM2 status running, and check VM2 connection parameters in Management * SSL/TLS
 * SSL/TLS success
-* Now the client knows that the server is THE SERVER
+
 
 ### Note: if you get this behaviour use tcp viewer and check connection with AMQP, then switch to AMQPS:
 * TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal
