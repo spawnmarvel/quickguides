@@ -229,13 +229,13 @@ openssl x509 -nout -subject -in public.crt.pem
 ### 5 Update config VM2 Server:
 * ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,\\ for win path
 Log should be:
-[info] <0.506.0> Ready to start client connection listeners
-[info] <0.617.0> started TCP listener on [::]:5672
-[info] <0.635.0> started TCP listener on 0.0.0.0:5672
-[info] <0.655.0> started TLS (SSL) listener on [::]:5671
-[info] <0.675.0> started TLS (SSL) listener on 0.0.0.0:5671
-[info] <0.506.0> Server startup complete; 3 plugins started.
-[info] <0.506.0>  * rabbitmq_management
+* * [info] <0.506.0> Ready to start client connection listeners
+* * [info] <0.617.0> started TCP listener on [::]:5672
+* * [info] <0.635.0> started TCP listener on 0.0.0.0:5672
+* * [info] <0.655.0> started TLS (SSL) listener on [::]:5671
+* * [info] <0.675.0> started TLS (SSL) listener on 0.0.0.0:5671
+* * [info] <0.506.0> Server startup complete; 3 plugins started.
+* * [info] <0.506.0>  * rabbitmq_management
 
 ### 5.1 Update config VM1 Client:
 * Check shovel VM1-> VM2, it should be starting......
