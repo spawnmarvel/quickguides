@@ -246,19 +246,19 @@ Log should be:
 * SSL/TLS success
 * Now the client knows that the server is THE SERVER
 
-### Note if you get this behaviour:
+### Note: if you get this behaviour:
 * VM1 shovel log:
 * * Shovel 'shovel_get_remote_data' failed to connect (URI: amqp://xx.xx.xx.xx:5671): {server_sent_malformed_header,<<21,3,1,0,2,2,10>>}
 * VM2 will report:
-Unexpected Message
-{unsupported_record_type,65}
-TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal 
+* * Unexpected Message
+* * {unsupported_record_type,65}
+* * TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal 
 * You need to alter amqp to amqps
 
 * VM1 shovel log:
-Shovel 'shovel_put_local_data' failed to connect (URI: amqps://94.127.120.147:5671): closed
-Shovel 'shovel_put_local_data' has no more URIs to try for connection
-Shovel 'shovel_put_local_data' could not connect to destination
+* * Shovel 'shovel_put_local_data' failed to connect (URI: amqps://94.127.120.147:5671): closed
+* * Shovel 'shovel_put_local_data' has no more URIs to try for connection
+* * Shovel 'shovel_put_local_data' could not connect to destination
 * IS THE FW, .i.e Paloalto configured with amqp, rabbitmq and not amqps? (use any)
 
 https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClibCAC
