@@ -249,7 +249,7 @@ Log should be:
 * SSL/TLS success
 
 
-### Note: if you get this behaviour: use tcp viewer and check connection with AMQP, then switch to AMQPS:
+### Note: if you do NOT get the behaviour mentioned above: use TCP Viewer and check connection with AMQP, then switch to AMQPS:
 * TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal
 * Shovel 'my_shovel' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 
