@@ -227,7 +227,7 @@ openssl x509 -nout -subject -in public.crt.pem
 ```
 
 ### 5 Update config VM2 Server:
-* ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,"\\" for win path
+* ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]} ,'\\', (two slashes) for win path
 Log should be:
 * * [info] <0.506.0> Ready to start client connection listeners
 * * [info] <0.617.0> started TCP listener on [::]:5672
