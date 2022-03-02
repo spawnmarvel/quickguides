@@ -261,7 +261,8 @@ Log should be:
 * * Shovel 'shovel_put_local_data' failed to connect (URI: amqps://94.127.120.147:5671): closed
 * * Shovel 'shovel_put_local_data' has no more URIs to try for connection
 * * Shovel 'shovel_put_local_data' could not connect to destination
-* IS THE FW, .i.e Paloalto configured with amqp, rabbitmq and not amqps? (use any)
+* Even if Test-NetConnection -ComputerName VM2 -Port 5671 works:
+* * IS THE FW APPLICATION USED:(i.e Paloalto or other) configured with amqp, rabbitmq and not amqps? (use any)
 
 https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClibCAC
 
