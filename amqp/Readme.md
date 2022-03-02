@@ -249,7 +249,7 @@ Log should be:
 * SSL/TLS success
 
 
-### Note: if you get this behaviour use tcp viewer and check connection with AMQP, then switch to AMQPS:
+### Note: if you get this behaviour: use tcp viewer and check connection with AMQP, then switch to AMQPS:
 * TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal
 * Shovel 'my_shovel' failed to connect (URI: amqps://xx.xx.xx.xx:5671): closed
 
@@ -276,6 +276,18 @@ https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClibCA
 - incomplete
 One example is, if a client sends a server a SYN and the Palo Alto Networks device creates a session for that SYN , 
 but the server never sends a SYN ACK back to the client, then that session is incomplete.
+
+https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/get-started-with-prisma-cloud/prisma-cloud-faqs.html
+
+What is the list of web applications that Prisma Cloud automatically classifies?
+
+* 5672, RabbitMQ
+* 5671, RabbitMQ
+
+https://www.reddit.com/r/paloaltonetworks/comments/og2okd/commit_warnings_xxx_requires_certain/
+
+So we came across "Commit Warnings" that say for exmaple application "rabbitmq" requires "ssl" to be allowed.
+
 
 </p>
 </details>
