@@ -10,7 +10,7 @@ local occToDel integer;
 --which record and what repeat area
 Arec = 'my_get_rec_01 1 io_tagname';
 --pick a tag
-for(select line as tagname from 'C:\temp\tag\clam\clamdel.txt')do
+for(select line as tagname from 'C:\temp\tag\tags_to_be_del.txt')do
 	--get that tags reference
 	for(select occnum as onum, "IO_VALUE_RECORD&&FLD" as tag, io_data_status st
           from my_get_rec_01 
