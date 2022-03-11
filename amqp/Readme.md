@@ -342,7 +342,7 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 
 * http://marianoguerra.org/tmp/site/ssl/usersguide/
 
-### SSL VM1 Client:
+### 11.03.2022 Update: Before SSL VM1 Client verify all recieved CA's and generated server certificate:
 
 #### 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
 Update 11.03.2022
@@ -381,6 +381,7 @@ Now we have verifed all certificates from the server VM2 and saved alot of time.
 
 #### 11.03.2022 Update end
 
+### SSL VM1 Client:
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 6, 7
