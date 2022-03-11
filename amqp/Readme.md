@@ -416,7 +416,8 @@ Hence we can connect many clients to that server and all will be on mTls with en
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 
 ### 10 Renew certificate tips
-
+ This depends on what certificate is expired, server VM2 or client VM1?
+ 
 * Plan ahead, make an alert for the dates
 * Set back both configs to:
 * * VM1 just {rabbitmq_shovel, amqp
