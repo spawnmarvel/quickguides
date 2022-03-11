@@ -346,9 +346,9 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 ### 11.03.2022 Update: Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate:
 
 #### 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
-Update 11.03.2022
-In this test the setup was: VM1 Azure WE, VM2 on-prem NO with external signed server certificate and 1 intermediate and 1 root certificate.
- 
+Update 11.03.2022:
+In this test the setup was: VM1 Azure WE, VM2 on-prem NO with external signed server certificate, 1 intermediate and 1 root certificate.
+
 Before you set up client certificate it can be good to verify server TLS 100% so you know that the certificates are correct.
 On VM1 client you now only have the shovel config section, but on VM2 you have the server ssl section and more.
 On VM2 copy the bundle (intermediate and root) as-is over to the VM1, after you have verifed that all works on VM2 with the new cert and CA's from server.
