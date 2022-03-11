@@ -217,11 +217,12 @@ openssl version
 * 4.2 Run the following command to extract the private key:
 ```cmd
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
+# enter the password used from the mmc export or create a new one.
 ```
 * 4.3 Run the following command to extract the certificate
 ```cmd
-(openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes)
-openssl pkcs12 -in myfile.pfx -nokeys -out public.crt.pem -nodes
+openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
+# enter the same password (from 4.2)
 ```
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
 ```cmd
@@ -316,7 +317,6 @@ So we came across "Commit Warnings" that say for exmaple application "rabbitmq" 
 * * If no trusted and otherwise valid certificate is found, 
 * * peer verification fails and client's TLS (TCP) connection is closed with a fatal error ("alert" in OpenSSL parlance) that says "Unknown CA" or similar
 * RabbitMQ relies on Erlang's TLS implementation. It assumes that all trusted CA certificates are added to the server certificate bundle.
-
 * For Rabbitmq to read the files:
 
 * https://support.comodo.com/index.php?/Knowledgebase/Article/View/1145/1/how-do-i-make-my-own-bundle-file-from-crt-files
@@ -325,6 +325,11 @@ Open the .crt in Notepad and copy contents of all files in reverse order and pas
 
 Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate. This is reverse order.
 
+* When using RabbitMQ plugins such as Federation or Shovel with TLS, 
+it may be necessary to configure verification depth for the Erlang client that those plugins use under the hood.
+
+* 
+
 ### Extra Note:
 For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
 
@@ -332,12 +337,49 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 * OpenSSL.cnf on VM1, own CA root and certificate
 * OpenSSL.cnf on VM2, own CA root and certificate
 * Made bundle of:
-* VM1 root, VM2 root on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
-* VM2 root, VM1 root on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
+* VM1 root, VM2 root, on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
+* VM2 root, VM1 root, on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
 
 * http://marianoguerra.org/tmp/site/ssl/usersguide/
 
 ### SSL VM1 Client:
+
+#### 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
+Update 11.03.2022
+
+Before you set up client certificate it can be good to verify server TLS 100% so you know that the certificates are correct.
+On VM1 client you now only have the shovel config section, but on VM2 you have the server ssl section and more.
+On VM2 copy the bundle (intermediate root) as-is over to the VM2, after you have verifed that all works on VM2 with the new cert and CA's.
+At this point it can be a need to make higher depth for SSL, depth = 2.
+If we expect this code in the advanced config:
+```cmd
+[{rabbitmq_shovel,
+  [ {shovels, 
+  [ {shovel_get_remote_data,
+# [...]
+```
+Then on VM1 test in this order after adding amqp_client section:
+* 1 add the bundle from server, keep server_name_indication,disabled, verify,verify_none, fail_if_no_peer_cert,false
+* 2 alter verify,verify_peer
+* 3 fail_if_no_peer_cert,true
+* 4 server_name_indication,"CN from server sertificate aka hostname.domain.xx"
+* 5 Check the shovel status at VM1 on every stop/start of RabbitMQ, to see if one step fails
+
+The result will be
+```cmd
+[{amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca_store\\bundle\\only-server-ca-intermediate-then-root.ca-bundle"},
+	{server_name_indication,"CN from server sertificate aka hostname.domain.xx"},
+   {depth, 2},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+ {rabbitmq_shovel,
+```
+Now we have verifed all certificates from the server VM2 and saved alot of time.....
+
+#### 11.03.2022 Update end
+
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 6, 7
