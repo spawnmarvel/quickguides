@@ -414,6 +414,14 @@ Now the client knows that the server is THE SERVER and the server knows that the
 Hence we can connect many clients to that server and all will be on mTls with encryption.
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
+
+## Renew certificate tips
+* Plan ahead, make an alert for the dates
+* Set back both configs to:
+* * VM1 just {rabbitmq_shovel,
+* * VM2 {tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]}
+* * * And then renew your certificates.
+
 ## Erlang SNI
 
 <details><summary>Specify the hostname to be used in TLS Server Name Indication extension -></summary>
