@@ -349,7 +349,7 @@ Update 11.03.2022
 
 Before you set up client certificate it can be good to verify server TLS 100% so you know that the certificates are correct.
 On VM1 client you now only have the shovel config section, but on VM2 you have the server ssl section and more.
-On VM2 copy the bundle (intermediate root) as-is over to the VM2, after you have verifed that all works on VM2 with the new cert and CA's.
+On VM2 copy the bundle (intermediate and root) as-is over to the VM2, after you have verifed that all works on VM2 with the new cert and CA's from server.
 At this point it can be a need to make higher depth for SSL, depth = 2.
 If we expect this code in the advanced config:
 ```cmd
