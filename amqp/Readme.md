@@ -383,6 +383,7 @@ Now we have verifed all certificates from the server VM2 and saved alot of time.
 #### 11.03.2022 Update end
 
 ### SSL VM1 Client:
+* If you do not need or dont have yet have the client CA's and certificate, go to: 6.1 But we can verify_peer from client
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 6, 7
