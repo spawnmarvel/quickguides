@@ -362,6 +362,7 @@ If we expect this code in the advanced config:
 ```
 Then on VM1 test in this order after adding amqp_client section:
 * 1 add the bundle from server, keep server_name_indication,disabled, verify,verify_none, fail_if_no_peer_cert,false
+* 1.1 Check the shovel status at VM1 on every stop/start of RabbitMQ, to see if one step fails
 * 2 alter verify,verify_peer
 * 3 fail_if_no_peer_cert,true
 * 4 server_name_indication,"CN from server sertificate aka hostname.domain.xx"
