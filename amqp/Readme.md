@@ -415,11 +415,13 @@ Hence we can connect many clients to that server and all will be on mTls with en
 
 ## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
 
-## Renew certificate tips
+### 10 Renew certificate tips
+
 * Plan ahead, make an alert for the dates
 * Set back both configs to:
-* * VM1 just {rabbitmq_shovel,
+* * VM1 just {rabbitmq_shovel, amqp
 * * VM2 {tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]}
+* * section: We now have a server and a client running a shovel to the server, TCP 5671 Success AMQP
 * * * And then renew your certificates.
 
 ## Erlang SNI
