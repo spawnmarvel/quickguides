@@ -301,7 +301,7 @@ So we came across "Commit Warnings" that say for exmaple application "rabbitmq" 
 ## We now have a server with certificate and a client with no certificate running a shovel to the server AMQPS
 
 ### 6 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:
-#### 6.1 But we can verify_peer from client if we have all server certificates and server CA's, view: 11.03.2022 Update: Before SSL VM1 Client
+#### 6.1 But we can verify_peer from client if we have all server certificates and server CA's, go to section:11.03.2022 Update: Before SSL VM1 Client
 * https://www.rabbitmq.com/ssl.html
 * TLS has two primary purposes: encrypting connection traffic and providing a way to authenticate (verify) the peer to mitigate against Man-in-the-Middle attacks. 
 * Both are  accomplished using a set of roles, policies and procedures known as Public Key Infrastructure (PKI).
@@ -383,7 +383,7 @@ Now we have verifed all certificates from the server VM2 and saved alot of time.
 #### 11.03.2022 Update end
 
 ### SSL VM1 Client:
-* If you do not need or don't yet have the client CA's and certificate, go to: 6.1 But we can verify_peer from client
+* If you do not need or don't yet have the client CA's and certificate, go to: 6.1 section: But we can verify_peer from client
 * 1 = Same steps as VM2 but with VM1 hostname
 * 2, 3, 4 = same steps
 * GOTO 6, 7
