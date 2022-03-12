@@ -427,6 +427,36 @@ Hence we can connect many clients to that server and all will be on mTls with en
 * * section: We now have a server and a client running a shovel to the server, TCP 5671 Success AMQP
 * * * And then renew your certificates.
 
+## How to Optimize the RabbitMQ Prefetch Count
+
+<details><summary>How to Optimize the RabbitMQ Prefetch Count</summary>
+<p>
+
+https://www.cloudamqp.com/blog/how-to-optimize-the-rabbitmq-prefetch-count.html
+
+#### A larger prefetch count generally improves the rate of message delivery. 
+
+The broker does not need to wait for acknowledgments as often and the communication between the broker and consumers decreases. 
+
+Still, smaller prefetch values can be ideal for distributing messages across larger systems. 
+
+Smaller values maintain the evenness of message consumption. A value of one helps ensure equal message distribution.
+
+* A prefetch count that is set too small may hurt performance since RabbitMQ might end up in a state, where the broker is waiting to get permission to send more messages.
+
+* A large prefetch count, on the other hand, could take lots of messages off the queue and deliver all of them to one single consumer, keeping the other consumers in an idling state.
+
+#### How to set the correct prefetch value?
+
+If you have one single or only a few consumers processing messages quickly, we recommend prefetching many messages at once to keep your client as busy as possible. 
+
+If you have about the same processing time all the time and network behavior remains the same, simply take the total round trip time and divide by the processing time on the client for each message to get an estimated prefetch value.
+
+
+</p>
+</details>
+
+
 ## Erlang SNI
 
 <details><summary>Specify the hostname to be used in TLS Server Name Indication extension -></summary>
