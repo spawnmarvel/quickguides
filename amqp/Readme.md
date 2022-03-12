@@ -347,6 +347,7 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 
 #### 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
 Update 11.03.2022:
+
 In this test the setup was: VM1 Azure WE, VM2 on-prem NO with external signed server certificate, 1 intermediate and 1 root certificate.
 
 Before you set up client certificate it can be good to verify server TLS 100% so you know that the certificates are correct.
