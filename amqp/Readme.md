@@ -230,7 +230,7 @@ openssl x509 -nout -subject -in public.crt.pem
 ```
 
 ### 5 Update config VM2 Server:
-ssl listner 5671, ssl options cacertfile (use root.csr), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]},
+ssl listner 5671, ssl options cacertfile (use root.csr or bundle (intermediate, root) it depends on amount of certificates), certfile, keyfile, verify,verify_peer, password, set this {fail_if_no_peer_cert, false}]},
 
 ```cmd
 # (two slashes) for win path
