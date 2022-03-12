@@ -206,7 +206,7 @@ SAN="dns=hostname(.domain.something)"
 * 2 When CSR approved is back, import certificate in MMC at the personal certificate store
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use
 
-* 4 now get the private key and extract the certificate fro the pfx file
+* 4 Now get the private key and extract the certificate fro the pfx file
 
 * 4.1 Run cms as admin navigate to openssl bin and check version
 ```cmd
