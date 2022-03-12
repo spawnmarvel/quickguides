@@ -351,7 +351,7 @@ In this test the setup was: VM1 Azure WE, VM2 on-prem NO with external signed se
 
 Before you set up client certificate it can be good to verify server TLS 100% so you know that the certificates are correct.
 On VM1 client you now only have the shovel config section, but on VM2 you have the server ssl section and more.
-On VM2 copy the bundle (intermediate and root) as-is over to the VM1, after you have verifed that all works on VM2 with the new cert and CA's from server.
+On VM2 copy the bundle (intermediate and root is the order in the bundle) as-is over to the VM1, after you have verifed that all works on VM2 with the new cert and CA's from server.
 At this point it can be a need to make higher depth for SSL, depth = 2.
 
 If we expect this code in the advanced config:
@@ -417,7 +417,7 @@ Hence we can connect many clients to that server and all will be on mTls with en
 
 ### 10 Renew certificate tips
  This depends on what certificate is expired, server VM2 or client VM1?
- 
+
 * Plan ahead, make an alert for the dates
 * Set back both configs to:
 * * VM1 just {rabbitmq_shovel, amqp
