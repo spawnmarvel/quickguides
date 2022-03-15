@@ -66,32 +66,20 @@ https://cjshelton.github.io/blog/2019/12/18/rabbitmq-client-certificate-authenti
 * If the client is not able to supply a trusted certificate, then the server will reject the connection. 
 * The exception to this is if the: fail_if_no_peer_cert configuration option is set to verify_none, in which case, the server will allow the connection.
 
-* Client Certificate Authentication
-* SSL can also be used as a mechanism for clients to authenticate with the broker instead of the default username and password mechanism. 
-* In order for clients to authenticate with SSL, they must present a certificate to the server which is: 
-* signed by a trusted CA, and which contains the login username as the Common Name (CN) or Subject Alternative Name (SAN).
+depth done Update 11.03.2022:
 
-* Server Side Changes
+client 
 
-rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
-auth_backends.1   = rabbit_auth_backend_internal
-auth_mechanisms.1 = PLAIN
-auth_mechanisms.2 = EXTERNAL
+[{amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca_store\\bundle\\only-server-ca-intermediate-then-root.ca-bundle"},
+	{server_name_indication,"CN from server sertificate aka hostname.domain.xx"},
+   {depth, 2},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+ {rabbitmq_shovel,
 
-Authentication Backends configure where the user logins are stored. By default, this is set to rabbit_auth_backend_internal, but there other options available, like LDAP for example (if you want to make use of an existing user store in Active Directory). I added this line explicitly just for completeness.
-
-Authentication Mechanisms configure how user/client authentication should be performed. By default, this is set to PLAIN which is Basic username/password authentication. We need to also add EXTERNAL as an additional mechanism to support SSL authentication. PLAIN must remain as a mechanism if you wish to still have access via the Management UI.
-
-ssl_cert_login_from: common_name
-
-service rabbitmq-server restart
-Finally, add a password-less user through the Management UI which will be used for the client authenticating with the broker. Keep note of the username you choose here for the next section.
-
-* Client Side Changes
-
-In order to be able to authenticate with the broker using SSL, the certificate which the client presents on connection must have the CN or SAN set to the username of the password-less user created previously.
-
-https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
+ 
 
 
 
