@@ -196,6 +196,11 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 
 ```cmd
+certreq –new request.inf certificate.req
+```
+Example content, view RequestExample for example on windows.
+
+```cmd
 # [...]
 CN = hostname(.domain.something)
 # [...]
