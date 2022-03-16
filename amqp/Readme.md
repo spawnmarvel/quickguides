@@ -50,6 +50,21 @@ Certificates in the Context of Transport Layer Security (TLS)
   consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 
+##### 2709 Encrypt in init
+
+<details><summary>#2709</summary>
+<p>
+
+https://github.com/rabbitmq/rabbitmq-server/issues/2709
+
+As of #2056:
+
+* The client used by Shovel and Federation encrypts credentials on init and decrypts them when they have to be used.
+* If for any reason an exception is logged before the process had a chance to encrypt them, there is nothing that can be done to prevent the runtime from logging what's in the process state as part of an exception.
+*  #2056 has shipped with RabbitMQ 3.8
+</p>
+</details>
+
 ## Scenario and roles for this test:
 
 <details><summary>Two way direction and One way direction -></summary>
@@ -85,21 +100,6 @@ graph TD;
 graph TD;
     Client-VM1-->Server-VM2;
 ```
-</p>
-</details>
-
-##### 2709 Encrypt in init
-
-<details><summary>#2709</summary>
-<p>
-
-https://github.com/rabbitmq/rabbitmq-server/issues/2709
-
-As of #2056:
-
-* The client used by Shovel and Federation encrypts credentials on init and decrypts them when they have to be used.
-* If for any reason an exception is logged before the process had a chance to encrypt them, there is nothing that can be done to prevent the runtime from logging what's in the process state as part of an exception.
-*  #2056 has shipped with RabbitMQ 3.8
 </p>
 </details>
 
