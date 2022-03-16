@@ -88,6 +88,20 @@ graph TD;
 </p>
 </details>
 
+##### 2709 Encrypt in init
+
+<details><summary>#2709</summary>
+<p>
+
+https://github.com/rabbitmq/rabbitmq-server/issues/2709
+
+As of #2056:
+
+* The client used by Shovel and Federation encrypts credentials on init and decrypts them when they have to be used.
+* If for any reason an exception is logged before the process had a chance to encrypt them, there is nothing that can be done to prevent the runtime from logging what's in the process state as part of an exception.
+</p>
+</details>
+
 ## Dependencies
 
 <details><summary>The New and Old Config File Formats -></summary>
