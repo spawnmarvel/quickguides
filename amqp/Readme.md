@@ -228,6 +228,9 @@ SAN="dns=hostname(.domain.something)"
 
 * 4 Now get the private key and extract the certificate fro the pfx file
 
+* It could be that you need to type c:\Program Files\OpenSSL-Win64\bin\openssl "enter"
+* OpenSSL>
+
 * 4.1 Run cms as admin navigate to openssl bin and check version
 ```cmd
 cd "c:\Program Files\OpenSSL-Win64\bin"
@@ -319,7 +322,7 @@ So we came across "Commit Warnings" that say for exmaple application "rabbitmq" 
 </p>
 </details>
 
-## We now have a server with certificate and a client with no certificate running a shovel to the server AMQPS
+## We now a client that trust the server and uses the server CA certificates, verifies server, it must have a certificate with our configured SNI in CN of the sertificate, running a shovel to the server AMQPS, SSL/TLS. This can be enough in many situations.
 
 ### 6 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:
 #### 6.1 But we can verify_peer from client if we have all server certificates and server CA's, go to section:11.03.2022 Update: Before SSL VM1 Client
@@ -435,7 +438,8 @@ Now the client knows that the server is THE SERVER and the server knows that the
 
 Hence we can connect many clients to that server and all will be on mTls with encryption.
 
-## We now have a server with certificate and a client with certificate and SNI enabled, running a shovel to the server. SSL/mTLS
+## We now a client that trust the server and uses the server CA certificates, verifies server, it must have a certificate with our configured SNI in CN of the sertificate, running a shovel to the server AMQPS, SSL/TLS. This can be enough in many situations.
+## We have upgraded to a trust between the client and server CA's and are now forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
 
 ### 10 Renew certificate tips
  This depends on what certificate is expired, server VM2 or client VM1?
