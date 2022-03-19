@@ -61,7 +61,7 @@ As of #2056:
 
 * The client used by Shovel and Federation encrypts credentials on init and decrypts them when they have to be used.
 * If for any reason an exception is logged before the process had a chance to encrypt them, there is nothing that can be done to prevent the runtime from logging what's in the process state as part of an exception.
-*  #2056 has shipped with RabbitMQ 3.8
+* #2056 has shipped with RabbitMQ 3.8
 </p>
 </details>
 
@@ -73,7 +73,11 @@ As of #2056:
 https://www.rabbitmq.com/access-control.html#basics
 
 * a virtual host named / (a slash)
-* a user named johndoe with a password, granted full access to the /remotehost virtual host
+* a user named johndoe with a password, granted full access to the /somehost virtual host
+* Two primary ways of authenticating a client are username/password pairs and X.509 certificates. 
+* Username/password pairs can be used with a variety of authentication backends that verify the credentials.
+* * Connections that fail to authenticate will be closed with an error message in the server log.
+* [...]
 
 </p>
 </details>
