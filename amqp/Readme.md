@@ -364,6 +364,9 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 * Made bundle of:
 * VM1 root, VM2 root, on VM1, Save newly created file as 'vm1yourDomain.ca-bundle'.
 * VM2 root, VM1 root, on VM2, Save newly created file as 'vm2yourDomain.ca-bundle'.
+* If intermediate:
+* VM1 intermediate root, VM2 intermediate, root, on VM1, Save newly created file as 'vm1_vm2_yourDomain.ca-bundle'.
+* VM2 intermediate, root, VM1 intermediate, root, on VM2, Save newly created file as 'vm2_vm1_yourDomain.ca-bundle'.
 
 * http://marianoguerra.org/tmp/site/ssl/usersguide/
 
