@@ -65,6 +65,19 @@ As of #2056:
 </p>
 </details>
 
+## Authentication
+
+<details><summary>Authentication, Authorisation, Access Control</summary>
+<p>
+
+https://www.rabbitmq.com/access-control.html#basics
+
+* a virtual host named / (a slash)
+* a user named johndoe with a password, granted full access to the /remotehost virtual host
+
+</p>
+</details>
+
 ## Scenario and roles for this test:
 
 <details><summary>Two way direction and One way direction -></summary>
