@@ -462,7 +462,7 @@ Hence we can connect many clients to that server and all will be on mTls with en
 ## We have upgraded to a trust between the client and server CA's and are now forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
 
 
-### 10 Example automatic setup of queues, topic.
+## 10 Example automatic setup of queues, topic.
 When 1-9 is done, mTLS (or TLS), shovel, queues, put and send etc.
 It can be further automated for RabbitMQ to auto create the queues at both ends, bind the remote queue to a routing key.
 
