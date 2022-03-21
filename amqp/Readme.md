@@ -482,6 +482,8 @@ Config used:
 * * vm1_advanced_10_amqps_ssl_auto_gen_queues_.config
 * * vm2_advanced_4_tcp_ssl_mtls_bundle_handshake_timeout.config was unchanged.
 
+You can now patch server, restart RabbitMQ and all will queues with configiration will stay.
+
 <details><summary>Example automatic setup</summary>
 <p>
 
