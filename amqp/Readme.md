@@ -485,7 +485,7 @@ Config used:
 <details><summary>Example automatic setup</summary>
 <p>
 
-[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/3_images_Auto_Gen_Queue_Routing_SSL_TLS_MTLS_/10_auto_gen_queue_routing_mtls_bundle.jpg.jpg)
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/3_images_Auto_Gen_Queue_Routing_SSL_TLS_MTLS_/10_auto_gen_queue_routing_mtls_bundle.jpg
 
 </p>
 </details>
