@@ -482,7 +482,7 @@ Config used:
 * * vm1_advanced_10_amqps_ssl_auto_gen_queues_.config
 * * vm2_advanced_4_tcp_ssl_mtls_bundle_handshake_timeout.config was unchanged.
 
-You can now patch server, restart RabbitMQ and all will queues with configiration will stay.
+### You can now patch server, restart RabbitMQ and all will queues with configiration will stay.
 
 <details><summary>Example automatic setup</summary>
 <p>
@@ -493,18 +493,26 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/3_images_Auto_Gen_Queu
 </details>
 
 
-
 Service user and lock file.
 
 
 
 ### 11 Renew certificate tips
- This depends on what certificate is expired, server VM2 or client VM1?
+This depends on what certificate is expired, server VM2 or client VM1?
+
+TLS:
+* VM2 server has a certificate
+* VM1 client on amqps shovel and we use the bundle from VM2 with SNI
+
+mTLS:
+* VM2 server has a certificate and bundle contains VM1 certs, VM2 cert.
+* VM1 client has a certificate and bundle contains VM2 certs, VM1 certs and SNI configured.
+
 
 * Plan ahead, make an alert for the dates
 * Set back both configs to:
-* * VM1 just {rabbitmq_shovel, amqp
-* * VM2 {tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]}
+* * VM1 just {rabbitmq_shovel, amqp, edit from amqps, and keep other configuration, but remove ssl section.
+* * VM2 {tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]} and keep other configuration, but remove ssl section.
 * * section: We now have a server and a client running a shovel to the server, TCP 5671 Success AMQP
 * * * And then renew your certificates.
 
