@@ -461,7 +461,42 @@ Hence we can connect many clients to that server and all will be on mTls with en
 ## We now have a client that trust the server and uses the server CA certificates, verifies server, it must have a certificate with our configured SNI in CN of the sertificate, running a shovel to the server AMQPS, SSL/TLS. This can be enough in many situations.
 ## We have upgraded to a trust between the client and server CA's and are now forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
 
-### 10 Renew certificate tips
+
+### 10 Example automatic setup of queues, topic.
+When 1-9 is done, mTLS (or TLS), shovel, queues, put and send etc.
+It can be further automated for RabbitMQ to auto create the queues at both ends, bind the remote queue to a routing key.
+
+Let's make 1 new shovel:
+
+* Name: shovel_put
+* source, [ {protocol, amqp091}, {uris, [ "amqp://"....
+* destination,[ {protocol, amqp091}, {uris, ["amqps://...
+
+With new queue names and routing:
+
+* Queue name: AZQueueData [Will be create at amqp and amqps (remote)]
+* Routing key: AZQueueDataRoute, amq.topic [Will be create at amqp and amqps (remote)]
+* Prefetch_count, 1, delivery_mode, 2, ack_mode, on_confirm, reconnect_delay, 15
+
+Config used:
+* * vm1_advanced_10_amqps_ssl_auto_gen_queues_.config
+* * vm2_advanced_4_tcp_ssl_mtls_bundle_handshake_timeout.config was unchanged.
+
+<details><summary>Example automatic setup</summary>
+<p>
+
+[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/3_images_Auto_Gen_Queue_Routing_SSL_TLS_MTLS_/10_auto_gen_queue_routing_mtls_bundle.jpg.jpg)
+
+</p>
+</details>
+
+
+
+Service user and lock file.
+
+
+
+### 11 Renew certificate tips
  This depends on what certificate is expired, server VM2 or client VM1?
 
 * Plan ahead, make an alert for the dates
