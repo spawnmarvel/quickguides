@@ -1,0 +1,27 @@
+https://www.ibm.com/docs/en/arl/9.7?topic=certification-extracting-certificate-keys-from-pfx-file
+
+Extracting the certificate and keys from a .pfx file
+Last Updated: 2021-03-05
+
+The .pfx file, which is in a PKCS#12 format, contains the SSL certificate (public keys) and the corresponding private keys. Sometimes, you might have to import the certificate and private keys separately in an unencrypted plain text format to use it on another system. This topic provides instructions on how to convert the .pfx file to .crt and .key files.
+
+Extract .crt and .key files from .pfx file
+PREREQUISITE: Ensure OpenSSL is installed in the server that contains the SSL certificate.
+
+1 Start OpenSSL from the OpenSSL\bin folder.
+2 Open the command prompt and go to the folder that contains your .pfx file.
+3 Run the following command to extract the private key:
+    openssl pkcs12 -in [yourfile.pfx] -nocerts -out [drlive.key]
+
+You will be prompted to type the import password. Type the password that you used to protect your keypair when you created the .pfx file. You will be prompted again to provide a new password to protect the .key file that you are creating. Store the password to your key file in a secure place to avoid misuse.
+
+4 Run the following command to extract the certificate:
+    openssl pkcs12 -in [yourfile.pfx] -clcerts -nokeys -out [drlive.crt]
+
+5 Run the following command to decrypt the private key:
+    openssl rsa -in [drlive.key] -out [drlive-decrypted.key]
+
+Type the password that you created to protect the private key file in the previous step.
+The .crt file and the decrypted and encrypted .key files are available in the path, where you started OpenSSL.
+
+

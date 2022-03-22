@@ -243,6 +243,8 @@ SAN="dns=hostname(.domain.something)"
 * 2 When CSR approved is back, import certificate in MMC at the personal certificate store
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use
 
+* * View IBM.info 
+
 * 4 Now get the private key and extract the certificate fro the pfx file
 
 * It could be that you need to type c:\Program Files\OpenSSL-Win64\bin\openssl "enter"
