@@ -63,7 +63,10 @@ As of #2056:
 * If for any reason an exception is logged before the process had a chance to encrypt them, there is nothing that can be done to prevent the runtime from logging what's in the process state as part of an exception.
 * #2056 has shipped with RabbitMQ 3.8
 
-[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
+Example:
+
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/Shovel_Encrypted_1.jpg
+
 
 
 </p>
