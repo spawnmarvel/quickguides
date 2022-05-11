@@ -41,4 +41,3 @@ KeyUsage = 0xa0
 _continue_ = "dns=jekl.elo.com&"
 _continue_ = "dns=jekl-alias1.elo.com&"
 _continue_ = "dns=jekl-alias2.elo.com&"
-_continue_ = "ipaddress=xx.xx.xx.xx&"

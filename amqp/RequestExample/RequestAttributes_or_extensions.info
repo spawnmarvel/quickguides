@@ -34,7 +34,7 @@ there are three methods that can be used to specify SAN information in a certifi
 
 Windows Server 2008 R2 or later has two:
 
- Add a SAN extension in text format to the Extensions section of RequestPolicy.inf.
+ Add a SAN extension in text format to the Extensions section of RequestPolicy.inf. (Yes)
  Add a SAN attribute to the RequestAttributes section of RequestPolicy.inf.
 
 
