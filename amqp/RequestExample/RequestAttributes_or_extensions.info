@@ -1,0 +1,43 @@
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625722(v=ws.10)
+
+
+[Extensions]
+; If your client operating system is Windows Server 2008, Windows Server 2008 R2, Windows Vista, or Windows 7
+; SANs can be included in the Extensions section by using the following text format. 
+; Note 2.5.29.17 is the OID for a SAN extension.
+
+2.5.29.17 = "{text}"
+_continue_ = "dns=www01.fabrikam.com&"
+_continue_ = "dn=CN=www01,OU=Web Servers,DC=fabrikam,DC=com&"
+_continue_ = "url=https://www.fabrikam.com&"
+_continue_ = "ipaddress=172.31.10.134&"
+_continue_ = "email=hazem@fabrikam.com&"
+_continue_ = "upn=hazem@fabrikam.com&"
+_continue_ = "guid=f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39&"
+
+
+
+[RequestAttributes]
+; If your client operating system is Windows Server 2003, Windows Server 2003 R2, or Windows XP
+; and you are using a standalone CA, SANs can be included in the RequestAttributes 
+; section by using the following text format.
+
+SAN="dns=www01.fabrikam.com&dns=www.fabrikam.com&ipaddress=172.31.10.130"
+
+; Multiple alternative names must be separated by an ampersand (&).
+
+
+
+When using Certreq.exe and a RequestPolicy.inf file, 
+there are three methods that can be used to specify SAN information in a certificate request.
+
+
+Windows Server 2008 R2 or later has two:
+
+ Add a SAN extension in text format to the Extensions section of RequestPolicy.inf.
+ Add a SAN attribute to the RequestAttributes section of RequestPolicy.inf.
+
+
+
+
+

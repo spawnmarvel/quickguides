@@ -231,6 +231,7 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 
 ### SSL VM2 Server:
 * 1 Make CSR key must be exportable and CN + SAN must be hostname(.domain.something)
+* (Look in RequestAttributes_or_extensions.info, Note 2.5.29.17 is the OID for a SAN extension. )
 * 1.1 The certreq command can be used [...] create a new request from an .inf file
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 
