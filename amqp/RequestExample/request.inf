@@ -16,3 +16,29 @@ RequestType = PKCS10
 KeyUsage = 0xa0
 [RequestAttributes] 
 SAN="hostname.domain.com"
+
+
+#############################
+
+[Version]
+Signature= "$Windows NT$"
+[NewRequest]
+Subject= "CN=jekl.elo.com"
+KeySpec = 1
+KeyLength = 2048
+Exportable = TRUE
+MachineKeySet = TRUE
+SMIME = FALSE
+PrivateKeyArchive = FALSE
+UserProtected = FALSE
+UseExistingKeySet = FALSE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=jekl.elo.com&"
+_continue_ = "dns=jekl-alias1.elo.com&"
+_continue_ = "dns=jekl-alias2.elo.com&"
+_continue_ = "ipaddress=xx.xx.xx.xx&"
