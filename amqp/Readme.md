@@ -248,6 +248,12 @@ CN = hostname(.domain.something)
 Exportable = TRUE
 [RequestAttributes] 
 SAN="dns=hostname(.domain.something)"
+
+or
+
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=.domain.something&"
 ```
 * 2 When CSR approved is back, import certificate in MMC at the personal certificate store
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use
