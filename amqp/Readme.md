@@ -50,6 +50,7 @@ Certificates in the Context of Transport Layer Security (TLS)
   consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
 * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 * https://www.rabbitmq.com/shovel.html
+* https://www.rabbitmq.com/uri-spec.html
 * https://www.rabbitmq.com/uri-query-parameters.html
 
 
