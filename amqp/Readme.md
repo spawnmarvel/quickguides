@@ -172,10 +172,10 @@ https://www.rabbitmq.com/install-windows.html
 * rabbitmq-server-3.9.12
 * otp_win64_24.2
 * Win64 OpenSSL v1.1.1m (for most servers and a must if old win 2008)
+* * https://slproweb.com/products/Win32OpenSSL.html or download the msi in this repository ~ OpenSSLMsi
 * * Win 2019 (OpenSSL 3.0 and 1.1.1 Binary Distributions for Microsoft Windows) should (!?) work that was used for the smoke test.
 * * https://kb.firedaemon.com/support/solutions/articles/4000121705
 
-https://slproweb.com/products/Win32OpenSSL.html
 
 * The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows. 
 * Win64 OpenSSL v1.1.1m MSI (63MB Installer)
