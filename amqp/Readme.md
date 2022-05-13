@@ -58,7 +58,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 ## SSL
 * How Peer Verification Works
 * * When a TLS connection is established client and server perform connection negotiation that takes several steps. The first step is when the peers optionally exchange their certificates. Having exchanged certificates, the peers can optionally attempt to establish a chain of trust between their CA certificates and the certificates presented. This acts to verify that the peer is who it claims to be
-
+* * The process is known as peer verification or peer validation and follows an algorithm known as the Certification path validation algorithm.
 
 
 ##### 2709 Encrypt in init
