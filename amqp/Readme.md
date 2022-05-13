@@ -53,6 +53,8 @@ Certificates in the Context of Transport Layer Security (TLS)
 * https://www.rabbitmq.com/uri-spec.html
 * * The client must act as a TLS client, and begin the TLS handshake as soon as the underlying TCP/IP connection has been established. All AMQP 0-9-1 protocol data is sent as TLS "application data". Other than this, normal AMQP 0-9-1 behaviour is followed.
 * https://www.rabbitmq.com/uri-query-parameters.html
+* * amqps: TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config
+
 
 
 ##### 2709 Encrypt in init
