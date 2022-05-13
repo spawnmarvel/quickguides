@@ -55,6 +55,10 @@ Certificates in the Context of Transport Layer Security (TLS)
 * https://www.rabbitmq.com/uri-query-parameters.html
 * * amqps: TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config
 
+## SSL
+* How Peer Verification Works
+* * When a TLS connection is established client and server perform connection negotiation that takes several steps. The first step is when the peers optionally exchange their certificates. Having exchanged certificates, the peers can optionally attempt to establish a chain of trust between their CA certificates and the certificates presented. This acts to verify that the peer is who it claims to be
+
 
 
 ##### 2709 Encrypt in init
