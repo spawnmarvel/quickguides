@@ -171,7 +171,9 @@ For this test:
 https://www.rabbitmq.com/install-windows.html
 * rabbitmq-server-3.9.12
 * otp_win64_24.2
-* Win64 OpenSSL v1.1.1m
+* Win64 OpenSSL v1.1.1m (for most servers and a must if old win 2008)
+* * Win 2019 (OpenSSL 3.0 and 1.1.1 Binary Distributions for Microsoft Windows) should (!?) work that was used for the smoke test.
+* * https://kb.firedaemon.com/support/solutions/articles/4000121705
 
 https://slproweb.com/products/Win32OpenSSL.html
 
@@ -222,7 +224,7 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 
 
 * 3 Install RabbitMQ (admin)
-* 3.1 Rememeber the cookie, if there is an issue.
+* 3.1 Remember the cookie, if there is an issue.
 * 4 VM1 Enable management, shovel and shovel management
 * 4.1 VM2 Enable management
 * 5 Add a new user on both VM's with access to vhost as administrator.
