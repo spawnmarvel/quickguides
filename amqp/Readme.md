@@ -46,11 +46,12 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 
 ## Shovel
-* A shovel behaves like a well-written client application, which connects to its source and destination, 
-  consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
-* A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 * https://www.rabbitmq.com/shovel.html
+* * A shovel behaves like a well-written client application, which connects to its source and destination, 
+  consumes and republishes messages, and uses acknowledgements on both ends to cope with failures.
+* * A Shovel uses Erlang AMQP 0-9-1 and Erlang AMQP 1.0 clients under the hood.
 * https://www.rabbitmq.com/uri-spec.html
+* * The client must act as a TLS client, and begin the TLS handshake as soon as the underlying TCP/IP connection has been established. All AMQP 0-9-1 protocol data is sent as TLS "application data". Other than this, normal AMQP 0-9-1 behaviour is followed.
 * https://www.rabbitmq.com/uri-query-parameters.html
 
 
