@@ -1,0 +1,37 @@
+set OPENSSL_CONF=C:\testca_store\openssl.cnf
+
+openssl genrsa -out c:\testca_store\client_bad\private_key.pem 2048
+
+openssl req -new -key c:\testca_store\client_bad\private_key.pem -out c:\testca_store\client_bad\req.pem -outform PEM -subj /CN=pdp-shovel-bad-server -nodes
+
+ Directory of c:\testca_store\client_bad
+
+05/15/2022  06:45 PM    <DIR>          .
+05/15/2022  06:45 PM    <DIR>          ..
+05/15/2022  06:45 PM             1,732 private_key.pem
+05/15/2022  06:45 PM               922 req.pem
+
+# sign it with ca (the same as we used for the good cert)
+
+openssl ca -config C:\testca_store\openssl.cnf -in c:\testca_store\client_bad\req.pem -out c:\testca_store\client_bad\wrong_cn_client_certificate.pem -notext -batch -extensions server_ca_extensions
+
+# out put from cmd
+
+c:\ssl\openssl-3.0.1\openssl-3\x64\bin>openssl ca -config C:\testca_store\openssl.cnf -in c:\testca_store\client_bad\req.pem -out c:\testca_store\client_bad\wrong_cn_client_certificate.pem -notext -batch -extensions server_ca_extensions
+Using configuration from C:\testca_store\openssl.cnf
+Check that the request matches the signature
+Signature ok
+The Subject's Distinguished Name is as follows
+commonName            :ASN.1 12:'pdp-shovel-bad-server'
+Certificate is to be certified until May 15 18:49:06 2023 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+
+ Directory of c:\testca_store\client_bad
+
+05/15/2022  06:49 PM    <DIR>          .
+05/15/2022  06:49 PM    <DIR>          ..
+05/15/2022  06:45 PM             1,732 private_key.pem
+05/15/2022  06:45 PM               922 req.pem
+05/15/2022  06:49 PM             1,162 wrong_cn_client_certificate.pem

@@ -41,3 +41,28 @@ KeyUsage = 0xa0
 _continue_ = "dns=hostname.domain.com&"
 _continue_ = "dns=alias1.domain.com&"
 _continue_ = "dns=alias2.domain.com&"
+
+
+
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/98c4ce19-391c-49bc-bf5b-388a2f005ed9/inf-file-parameters-to-use-with-the-certutil-command-for-providertype-keyusage-and-other?forum=winserversecurity
+
+both Digital signature and Key encipherment.
+
+include Extended Key usage and include Server Authentication and Client Authentication. Not sure what parameter to use.
+
+Key usage must be 0xa0 (not 0x20). This INF should be enough:
+
+Subject = "CN=www.domain.com, OU=Web Development, O=Company name, C=US"
+KeySpec = 1
+KeyLength = 2048
+Exportable = TRUE
+MachineKeySet = TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+
+Just edit Subject entry as per your needs.
+
+https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx
+
