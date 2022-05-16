@@ -1,3 +1,6 @@
+
+Make a new cert with different cn
+
 set OPENSSL_CONF=C:\testca_store\openssl.cnf
 
 openssl genrsa -out c:\testca_store\client_bad\private_key.pem 2048
@@ -35,3 +38,7 @@ Data Base Updated
 05/15/2022  06:45 PM             1,732 private_key.pem
 05/15/2022  06:45 PM               922 req.pem
 05/15/2022  06:49 PM             1,162 wrong_cn_client_certificate.pem
+
+
+Make a new cert with correct CN
+
