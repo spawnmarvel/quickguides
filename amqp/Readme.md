@@ -516,7 +516,9 @@ With new queue names and routing:
 
 * Queue name: AZQueueData [Will be create at amqp and amqps (remote)]
 * Routing key: AZQueueDataRoute, amq.topic [Will be create at amqp and amqps (remote)]
-* Prefetch_count, 1, delivery_mode, 2, ack_mode, on_confirm, reconnect_delay, 15
+* Prefetch_count, 1 (how many messages are being sent at the same time)
+* delivery_mode, 2 (persistent, write it to disk on the queue)
+* ack_mode, on_confirm, reconnect_delay, 15
 
 Config used:
 * * vm1_advanced_10_amqps_ssl_auto_gen_queues_.config
