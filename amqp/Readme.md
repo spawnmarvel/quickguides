@@ -53,7 +53,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 * https://www.rabbitmq.com/uri-spec.html
 * * The client must act as a TLS client, and begin the TLS handshake as soon as the underlying TCP/IP connection has been established. All AMQP 0-9-1 protocol data is sent as TLS "application data". Other than this, normal AMQP 0-9-1 behaviour is followed.
 * https://www.rabbitmq.com/uri-query-parameters.html
-* * amqps: TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config
+* * amqps: TLS options can also be specified globally using the amqp_client.ssl_optionsmstsc configuration key in the rabbitmq.config or advanced.config
 
 ## SSL
 * https://www.rabbitmq.com/ssl.html#peer-verification
@@ -157,6 +157,13 @@ The configuration file is named rabbitmq.config and uses the Erlang term format 
 * %APPDATA%\RabbitMQ\rabbitmq.conf
 In RabbitMQ 3.7.0+, the main configuration file is rabbitmq.conf. An additional config file named advanced.config is also used for some advanced configuration settings; it uses the classic format.
 
+* https://www.rabbitmq.com/configure.html
+* That file is commonly named advanced.config. It will be merged with the configuration provided in rabbitmq.conf
+
+* https://github.com/rabbitmq/rabbitmq-server/blob/v3.7.x/deps/rabbit/docs/rabbitmq.config.example
+* Users of RabbitMQ 3.7.x, or later should prefer the new style format (rabbitmq.conf) in combination with an advanced.config file (as needed).
+
+
 
 https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GUID-configure.html
 
@@ -226,7 +233,8 @@ https://www.rabbitmq.com/configure.html
 RABBITMQ_BASE=c:\software
 RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
 RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
-```
+``
+
 
 
 * 3 Install RabbitMQ (admin)

@@ -39,6 +39,10 @@ Data Base Updated
 05/15/2022  06:45 PM               922 req.pem
 05/15/2022  06:49 PM             1,162 wrong_cn_client_certificate.pem
 
+This gives a server certificate extension when it should be a client_bad
 
-Make a new cert with correct CN
+openssl ca -config C:\testca_store\openssl.cnf -in c:\testca_store\client_bad\req.pem -out c:\testca_store\client_bad\wrong_cn_client_certificate.pem -notext -batch 
+-extensions server_ca_extensions
+
+Make a new cert with correct CN and correct CA or leave CA out of it, then maybe it is both?
 
