@@ -227,6 +227,7 @@ https://www.rabbitmq.com/configure.html
 * In the context of deployment automation this means that environment variables such as 
 * RABBITMQ_BASE and RABBITMQ_CONFIG_FILE should ideally be set before RabbitMQ is installed. 
 * This would help avoid unnecessary confusion and Windows service re-installations.
+* Make advanced.config (with content [].) and rabbitmq.conf in the location of value for RABBITMQ_BASE (c:software)
 
 ```cmd
 # Set this before install, preferable to to data disk, i.e F:
