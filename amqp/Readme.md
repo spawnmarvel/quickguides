@@ -241,6 +241,8 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 * 3 Install RabbitMQ (admin)
 * 3.1 Remember the cookie, if there is an issue.
 * 4 VM1 Enable management, shovel and shovel management
+* * rabbitmq-plugins list
+* * rabbitmq-plugins enable <plugin-name>
 * 4.1 VM2 Enable management
 * 5 Add a new user on both VM's with access to vhost as administrator.
 * 6 VM1 -> Oubound 5671
