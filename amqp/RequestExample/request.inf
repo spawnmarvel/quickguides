@@ -46,6 +46,8 @@ check the above in ssl checker, you will see:
 Common Name (CN)	hostname.domain.com
 SANS	hostname.domain.com, hostname
 
+* Even if the server is not in domain and nslookup gives just hostname it resolves after importing all certs, root, inter and personal to mmc.
+
 
 
 https://www.rabbitmq.com/ssl.html
