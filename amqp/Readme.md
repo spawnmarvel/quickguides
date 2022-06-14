@@ -545,6 +545,11 @@ Service user and lock file.
 
 ### 11 Renew certificate tips
 This depends on what certificate is expired, server VM2 or client VM1?
+The main task is to check what is expired:
+* CA's or personal
+* Generate CSR personal or download new CA's from repository (owner etc)
+* Import new personal, make private key and cert or import CA's
+* Update folder with personal cert or update bundle with new CA's
 
 TLS:
 * VM2 server has a certificate
