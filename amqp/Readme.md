@@ -383,7 +383,7 @@ So we came across "Commit Warnings" that say for exmaple application "rabbitmq" 
 </p>
 </details>
 
-## We now have a client that trust the server and uses the server CA certificates, verifies server, it must have a certificate with our configured SNI in CN of the sertificate, running a shovel to the server AMQPS, SSL/TLS. This can be enough in many situations.
+## We now have a client that trust the server and uses the server CA certificates, verifies server, server present a certificate with our configured SNI in CN of the sertificate. Shovel is now configured with AMQPS, SSL/TLS towards the server. This can be enough in many situations.
 
 ### 6 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:
 #### 6.1 But we can verify_peer from client if we have all server certificates and server CA's, go to section:11.03.2022 Update: Before SSL VM1 Client
