@@ -244,7 +244,8 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 * * rabbitmq-plugins list
 * * rabbitmq-plugins enable <plugin-name>
 * 4.1 VM2 Enable management
-* 5 Add a new user on both VM's with access to vhost as administrator.
+* 5 Add a new user on both VM' with name equal to the CN that will be used on the client
+* 5.1 Give access to that user to a vhost as administrator.
 * 6 VM1 -> Oubound 5671
 * 6.1 VM2 -> Inbound 5671
 * 6.1 Test-NetConnection -ComputerName VM2 -Port 5671
