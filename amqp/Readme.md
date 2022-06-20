@@ -54,6 +54,10 @@ Certificates in the Context of Transport Layer Security (TLS)
 * * The client must act as a TLS client, and begin the TLS handshake as soon as the underlying TCP/IP connection has been established. All AMQP 0-9-1 protocol data is sent as TLS "application data". Other than this, normal AMQP 0-9-1 behaviour is followed.
 * https://www.rabbitmq.com/uri-query-parameters.html
 * * amqps: TLS options can also be specified globally using the amqp_client.ssl_optionsmstsc configuration key in the rabbitmq.config or advanced.config
+* https://www.rabbitmq.com/ssl.html
+* * Peer verification is highly recommended in production environments. With careful consideration, disabling it can make sense in certain environments (e.g. development).
+* * Thus it is possible to create an encrypted TLS connection without having to verify certificates. Client libraries usually support both modes of operation.
+* * When peer verification is enabled, it is common for clients to also check whether the hostname of the server they are connecting to matches one of two fields in the server certificate: the SAN (Subject Alternative Name) or CN (Common Name).
 
 ## SSL
 * https://www.rabbitmq.com/ssl.html#peer-verification
