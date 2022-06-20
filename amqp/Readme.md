@@ -86,16 +86,9 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/Shovel_Encrypted_1.jpg
 
 * Encode / Decode
 
-Values of different types can be encoded. The example above encodes both binaries (<<"guest">>) and strings ("amqp://fred:secret@host1.domain/my_vhost").
-
-rabbitmqctl encode '"amqp://fred:secret@host1.domain/my_vhost"' mypassphrase
-{encrypted,<<"... long encrypted value...">>}
-
-rabbitmqctl encode '"amqp://fred:secret@host1.domain/my_vhost"' mypassphrase
-{encrypted,<<"... long encrypted value...">>}
+Values of different types can be encoded. The example above encodes binaries (<<"guest">>) 
 
 https://www.rabbitmq.com/configure.html#configuration-encryption
-
 
 
 </p>
