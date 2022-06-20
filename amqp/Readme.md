@@ -63,7 +63,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/1_Images_SSL_TLS_MTLS/test_9.2_mTLS_with%20SNI_Hostname1_Build_Global_SSL.jpg
 
-##### 2709 Encrypt in init
+##### 2709 Encrypt in init (Encode, Decode)
 
 <details><summary>#2709</summary>
 <p>
