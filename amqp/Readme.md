@@ -80,6 +80,18 @@ Example:
 
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/Shovel_Encrypted_1.jpg
 
+* Encode / Decode
+
+Values of different types can be encoded. The example above encodes both binaries (<<"guest">>) and strings ("amqp://fred:secret@host1.domain/my_vhost").
+
+rabbitmqctl encode '"amqp://fred:secret@host1.domain/my_vhost"' mypassphrase
+{encrypted,<<"... long encrypted value...">>}
+
+rabbitmqctl encode '"amqp://fred:secret@host1.domain/my_vhost"' mypassphrase
+{encrypted,<<"... long encrypted value...">>}
+
+https://www.rabbitmq.com/configure.html#configuration-encryption
+
 
 
 </p>
@@ -235,8 +247,6 @@ RABBITMQ_BASE=c:\software
 RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
 RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 ``
-
-
 
 * 3 Install RabbitMQ (admin)
 * 3.1 Remember the cookie, if there is an issue.
