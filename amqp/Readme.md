@@ -82,7 +82,7 @@ As of #2056:
 
 Example:
 
-https://github.com/spawnmarvel/quickguides/blob/main/amqp/Shovel_Encrypted_1.jpg
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/info/Shovel_Encrypted_1.jpg
 
 
 </p>
@@ -209,7 +209,7 @@ Latest News, https://www.openssl.org/
 <details><summary>Azure -></summary>
 <p>
 
-[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm.jpg)
+[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/iamges/2_images_readme/azure_vm.jpg)
 
 </p>
 </details>
@@ -535,7 +535,7 @@ Config used:
 <details><summary>Example automatic setup</summary>
 <p>
 
-https://github.com/spawnmarvel/quickguides/blob/main/amqp/3_images_Auto_Gen_Queue_Routing_SSL_TLS_MTLS_/10_auto_gen_queue_routing_mtls_bundle.jpg
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/3_images_Auto_Gen_Queue_Routing_SSL_TLS_MTLS_/10_auto_gen_queue_routing_mtls_bundle.jpg
 
 </p>
 </details>
@@ -611,7 +611,7 @@ https://www.erlang.org/doc/man/ssl.html
 * The HostName will also be used in the hostname verification of the peer certificate using public_key:pkix_verify_hostname/2.
 
 
-[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/2_images_readme/azure_vm_rfc-6125.jpg)
+[![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/2_images_readme/azure_vm_rfc-6125.jpg)
 
 </p>
 </details>
