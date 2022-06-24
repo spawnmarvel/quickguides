@@ -540,11 +540,6 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/3_images_Auto_G
 </p>
 </details>
 
-
-### TLS: We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI. 
-### mTLS: Upgraded to a trust between the client and server CA's. Forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
-### x509 (TLS/SSL) certificate Authentication Mechanism
-
 ## 11 x509 (TLS/SSL) certificate Authentication Mechanism
 
 Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authentication Mechanism
