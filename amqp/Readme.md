@@ -638,8 +638,6 @@ mTLS:
 </p>
 </details>
 
-## How to Optimize the RabbitMQ Prefetch Count
-
 <details><summary>How to Optimize the RabbitMQ Prefetch Count</summary>
 <p>
 
