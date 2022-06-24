@@ -585,11 +585,23 @@ Steps:
 * * CN=CN-name
 
 * Enable rabbitmq_auth_mechanism_ssl on VM2
-* Copy the global SSL properties and make it URI friendly and also add the heartbeat
+* Add to existing advanced.config
+* * {auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']}, {auth_backends, [rabbit_auth_backend_internal]}, {ssl_cert_login_from, common_name}
+* On the amqp_client (VM2):
+* Copy the global SSL properties and make it URI friendly and also add:
+* * auth_mechanism=external and heartbeat=15 (sec)
 * *  {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]}, 
+* The URI even works without the user name, since it it extracted from the certificate and also from the {auth_backends, [rabbit_auth_backend_internal]},
+
+* *  {uris, ["amqps://xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]}, 
+
+As mentioned in above section for shovel and docs:
+TLS options can also be specified globally using the amqp_client.ssl_options configuration key in the rabbitmq.config or advanced.config
+* {amqp_client, [{ssl_options, [
+They will be merged with the TLS parameters from the URI (the latter will take precedence) and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
 
 
-
+### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal
 
 ### 12 Renew certificate tips
 This depends on what certificate is expired, server VM2 or client VM1?
@@ -683,9 +695,6 @@ https://www.erlang.org/doc/man/ssl.html
 
 * Advanced config https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
 * Advanced.config.example https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/advanced.config.example
-
-* The plugin is enough to use the Common Name as a user name.
-* https://groups.google.com/g/rabbitmq-users/c/8L1O9YuKP-E
 
 </p>
 </details>
