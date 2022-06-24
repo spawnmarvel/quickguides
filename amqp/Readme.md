@@ -11,7 +11,7 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 ## Server Identity Check RFC-6125
 
-<details><summary>2.4. Server Identity Check -></summary>
+<details><summary>2.4. Server Identity Check</summary>
 <p>
 
 #### We can hide anything, even code!
@@ -606,7 +606,7 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/x509/mtls_x509.jpg
 ### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal does authorization.
 
 
-<details><summary>12 Renew certificate tips -></summary>
+<details><summary>Renew certificate tips</summary>
 <p>
 
 This depends on what certificate is expired, server VM2 or client VM1?
@@ -665,7 +665,7 @@ If you have about the same processing time all the time and network behavior rem
 </p>
 </details>
 
-<details><summary>Erlang SNI: Specify the hostname to be used in TLS Server Name Indication extension -></summary>
+<details><summary>Erlang SNI: Specify the hostname to be used in TLS Server Name Indication extension</summary>
 <p>
 
 https://www.erlang.org/doc/man/ssl.html
