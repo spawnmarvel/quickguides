@@ -542,7 +542,7 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/3_images_Auto_G
 
 ## 11 x509 (TLS/SSL) certificate Authentication Mechanism
 
-Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authentication Mechanism
+#### Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authentication Mechanism
 
 
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
@@ -551,15 +551,16 @@ https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 * In order to use this mechanism the client must connect with TLS enabled, and present a client certificate.
 * For safety the server must be configured with the SSL option 'verify' set to 'verify_peer', to ensure that if an SSL client presents a certificate, it gets verified.
 
-Username Extraction from Certificate
+#### Username Extraction from Certificate
 
-Distinguished Name
+#### Distinguished Name
 * By default this will set the username to an RFC 4514-ish string form of the certificate's subject's Distinguished Name, similar to that produced by OpenSSL's "-nameopt RFC 2253" option.
 * You can obtain this string form from a certificate with a command like:
 * * openssl x509 -in path/to/cert.pem -nameopt RFC2253 -subject -noout
 * or from an existing amqps connection with commands like:
 * * rabbitmqctl list_connections peer_cert_subject
 
+#### Subject Alternative Name
 
 https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
 
