@@ -585,7 +585,8 @@ Steps:
 * * CN=CN-name
 
 * Enable rabbitmq_auth_mechanism_ssl on VM2
-
+* Copy the global SSL properties and make it URI friendly and also add the heartbeat
+* *  {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]}, 
 
 
 
