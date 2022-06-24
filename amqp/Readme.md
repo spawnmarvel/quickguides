@@ -548,7 +548,12 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/3_images_Auto_G
 ## 11 x509 (TLS/SSL) certificate Authentication Mechanism
 
 Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authentication Mechanism
+
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
+
+https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
+
+
 
 
 ### 12 Renew certificate tips
