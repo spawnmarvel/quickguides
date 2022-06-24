@@ -555,12 +555,13 @@ Steps:
 * * openssl x509 -noout -subject -in c:\path\to-client\client_certificate.pem
 * * subject=CN = CN-name
 * Verify that you have a user on VM1 and VM2 equal to the CN-name from the certificate on VM1
-* Verify on VM2 (Broker) the client (VM1) certificate subject from the above mTls connection:
+* Verify on VM2 (Broker) the client (VM1) certificate subject from the above mTls connection (global mTLS):
 * * rabbitmqctl list_connections peer_cert_subject
 * * Listing connections ...
 * * peer_cert_subject
 * * CN=CN-name
-* 
+
+
 
 
 ### 12 Renew certificate tips
