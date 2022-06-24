@@ -418,7 +418,9 @@ it may be necessary to configure verification depth for the Erlang client that t
 
 * 
 
-### Extra Note:
+<details><summary>Extra Note about this test</summary>
+<p>
+
 For this test, I followed: Manually Generating a CA, Certificates and Private Keys:
 
 * https://www.rabbitmq.com/ssl.html#manual-certificate-generation
@@ -432,6 +434,9 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 * VM2 intermediate, root, VM1 intermediate, root, on VM2, Save newly created file as 'vm2_vm1_yourDomain.ca-bundle'.
 
 * http://marianoguerra.org/tmp/site/ssl/usersguide/
+
+</p>
+</details>
 
 ### 11.03.2022 Update: Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate:
 
