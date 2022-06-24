@@ -530,7 +530,7 @@ Config used:
 * * vm1_advanced_10_amqps_ssl_auto_gen_queues_.config
 * * vm2_advanced_4_tcp_ssl_mtls_bundle_handshake_timeout.config was unchanged.
 
-### You can now the patch server, restart RabbitMQ and all queues with configiration will stay.
+### You can now the patch server, restart RabbitMQ and all queues with configuration will stay.
 
 <details><summary>Example automatic setup</summary>
 <p>
@@ -541,8 +541,14 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/3_images_Auto_G
 </details>
 
 
-Service user and lock file.
+### TLS: We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI. 
+### mTLS: Upgraded to a trust between the client and server CA's. Forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
+### x509 (TLS/SSL) certificate Authentication Mechanism
 
+## 11 x509 (TLS/SSL) certificate Authentication Mechanism
+
+Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authentication Mechanism
+https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 
 
 ### 11 Renew certificate tips
