@@ -1,0 +1,296 @@
+
+def info():
+    pass_info = "Internal authentication backend allows for users without a password or with a blank one (assuming credential validator also allows it). \
+    Such users are only meant to be used with passwordless authentication mechanisms such as authentication using x509 certificates."
+    create_info = "In order to create a passwordless user, create one with any password that passes validation and clear the password using rabbitmqctl's clear_password command:"
+    
+    url = "https://rabbitmq.com/passwords.html#passwordless-users"
+    
+
+def x509():
+    a = "Authentication Using TLS (x509) Certificates"
+    b = "Create a passwordless user (see above)" 
+    c = "Enable the rabbitmq-auth-mechanism-ssl plugin" 
+    d = "Follow the plugin's configuration instructions "
+    e = "Configure client connections to use TLS and the EXTERNAL authentication mechanism"
+    f = "Configure client connections to provide a certificate/key pair and a CA certificate (or chain of certificates). The chain of certificates will be verified by the server and thus at least one certificate in it must be trusted by the target node."
+    
+
+
+https://rabbitmq.com/passwords.html
+
+
+######################
+VM1
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0> Server startup complete; 5 plugins started.
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0>  * rabbitmq_shovel_management
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0>  * rabbitmq_shovel
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0>  * rabbitmq_management
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0>  * rabbitmq_web_dispatch
+2022-06-24 10:18:33.573000+00:00 [info] <0.492.0>  * rabbitmq_management_agent
+
+user
+pdp-shovel-1 = add in management
+TLS = ok
+{certfile,"C:\\testca_store\\client\\client_certificate.pem"},
+
+set OPENSSL_CONF=C:\testca\openssl.cnf
+
+c:\ssl\openssl-3.0.1\openssl-3\x64\bin>openssl version
+OpenSSL 3.0.1 14 Dec 2021 (Library: OpenSSL 3.0.1 14 Dec 2021)
+
+c:\ssl\openssl-3.0.1\openssl-3\x64\bin>openssl x509 -noout -subject -in c:\testca_store\client\client_certificate.pem
+subject=CN = pdp-shovel-1
+
+test shovel with pdp-shovel-1, and a password
+
+[
+ {amqp_client, [
+    {ssl_options, [{cacertfile,"C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle"},
+	{certfile,"C:\\testca_store\\client\\client_certificate.pem"},
+                {keyfile,"C:\\testca_store\\client\\private_key.pem"},
+	{server_name_indication,"pdp-shovel-2"},
+    {verify,verify_peer},
+    {fail_if_no_peer_cert,true}]}
+	]},
+  {rabbitmq_shovel,
+
+if this comes in log on vm2, then add to vm2 advanced = {auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']}
+2022-06-24 10:54:29.288000+00:00 [error] <0.2004.0> Shovel 'shovel_put' failed to connect (URI: amqps://xx.xx.xx.xx:5671): {no_suitable_auth_mechanism,["EXTERNAL"]}
+
+then we are good again
+2022-06-24 11:16:42.982000+00:00 [info] <0.1007.0> connection <0.1007.0> (xx.xx.xx.xx:50962 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+
+now remove password from shovel
+{uris, ["amqps://pdp-shovel-1:OverPowered89@xx.xx.xx.xx:5671"]},
+{uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671"]},
+
+2022-06-24 11:20:49.766000+00:00 [error] <0.721.0> Shovel 'shovel_put' failed to connect (URI: amqps://xx.xx.xx.xx:5671): ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+
+log on vm2
+2022-06-24 11:20:49.765000+00:00 [error] <0.1359.0> PLAIN login refused: user 'pdp-shovel-1' - invalid credentials
+add vm2 {auth_backends, [rabbit_auth_backend_internal]},
+
+Try to see with URI in amqps
+
+
+amqps://myhost?cacertfile=/path/to/ca_certificate.pem
+  &certfile=/path/to/client_certificate.pem
+  &keyfile=/path/to/client_key.pem
+  &verify=verify_peer
+  &server_name_indication=myhost
+  
+
+
+{uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671"]},
+
+sett same as in advanced config
+  
+{uris, ["amqps://pdp-shovel-1:OverPowered89@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2"]},
+
+
+2022-06-24 12:54:20.558000+00:00 [info] <0.9108.0> connection <0.9108.0> (xx.xx.xx.xx:53050 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+remove password
+
+ {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2"]},
+ 
+
+2022-06-24 12:57:13.349000+00:00 [error] <0.881.0> Shovel 'shovel_put' failed to connect (URI: amqps://xx.xx.xx.xx:5671): ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+
+
+2022-06-24 12:56:58.306000+00:00 [error] <0.9398.0> PLAIN login refused: user 'pdp-shovel-1' - invalid credentials
+
+?auth_mechanism=external
+
+ {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external"]},
+ 
+ 
+2022-06-24 13:04:14.811000+00:00 [error] <0.1014.0> Shovel 'shovel_put' failed to connect (URI: amqps://xx.xx.xx.xx:5671): ACCESS_REFUSED - Login was refused using authentication mechanism EXTERNAL. For details see the broker logfile.
+
+
+2022-06-24 13:04:29.845000+00:00 [error] <0.10238.0> EXTERNAL login refused: user 'CN=pdp-shovel-1' - invalid credentials
+
+
+
+{ssl_cert_login_from, common_name} add to VM2 = success
+
+2022-06-24 13:07:09.154000+00:00 [info] <0.738.0> connection <0.738.0> (xx.xx.xx.xx:53389 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+
+no now password is used and success
+
+{uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external"]},
+
+
+2022-06-24 13:07:09.154000+00:00 [info] <0.738.0> connection <0.738.0> (xx.xx.xx.xx:53389 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+
+remove user name also is success
+
+ {uris, ["amqps://xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external"]},
+ 
+ 2022-06-24 13:28:42.876000+00:00 [info] <0.736.0> connection <0.736.0> (xx.xx.xx.xx:54273 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+Now cn is used for access.
+remove the pdp-shovel-1 user from vm2
+
+2022-06-24 13:29:26.667000+00:00 [info] <0.822.0> Deleted user 'pdp-shovel-1'
+
+
+2022-06-24 13:29:41.694000+00:00 [error] <0.889.0> EXTERNAL login refused: user 'pdp-shovel-1' - invalid credentials
+
+vm1 log
+
+2022-06-24 13:30:11.767000+00:00 [error] <0.1142.0> Shovel 'shovel_put' failed to connect (URI: amqps://xx.xx.xx.xx:5671): ACCESS_REFUSED - Login was refused using authentication mechanism EXTERNAL. For details see the broker logfile.
+
+
+create the user on vm2 again.
+2022-06-24 13:31:09.856000+00:00 [info] <0.1054.0> Created user 'pdp-shovel-1'
+2022-06-24 13:31:09.856000+00:00 [info] <0.1054.0> Successfully set user tags for user 'pdp-shovel-1' to [administrator]
+
+2022-06-24 13:31:26.931000+00:00 [info] <0.1118.0> connection <0.1118.0> (xx.xx.xx.xx:54300 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+
+
+###################################
+VM2
+
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0> Server startup complete; 6 plugins started.
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_auth_mechanism_ssl
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_shovel_management
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_shovel
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_management
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_web_dispatch
+2022-06-24 10:32:07.311000+00:00 [info] <0.535.0>  * rabbitmq_management_agent
+
+Applying plugin configuration to rabbit@pdp-shovel-2...
+The following plugins have been disabled:
+  rabbitmq_auth_mechanism_ssl
+
+stopped 1 plugins.
+
+
+user
+pdp-shovel-1 = add in management
+
+2022-06-24 10:35:27.028000+00:00 [info] <0.1059.0> connection <0.1059.0> (xx.xx.xx.xx:50247 -> xx.xx.xx.xx:5671 - Shovel shovel_put): user 'pdp-shovel-1' authenticated and granted access to vhost '/'
+
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+		{certfile,"C:\\testca\\server2\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server2\\private_key.pem"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, true}]},
+{ssl_handshake_timeout, 15000}
+
+     
+]}
+].
+
+
+Enable the rabbitmq-auth-mechanism-ssl plugin = ok
+
+2022-06-24 10:50:58.127000+00:00 [info] <0.1633.0> Plugins changed; enabled [rabbitmq_auth_mechanism_ssl]
+
+https://www.ibm.com/support/pages/example-rabbitmq-configuration-file-encryption
+
+
+{auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']},
+
+
+advanced.config 
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+		{certfile,"C:\\testca\\server2\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server2\\private_key.pem"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, true}]},
+{ssl_handshake_timeout, 15000},
+{auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']}
+
+     
+]}
+].
+
+plain login refused
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+		{certfile,"C:\\testca\\server2\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server2\\private_key.pem"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, true}]},
+{ssl_handshake_timeout, 15000},
+{auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']},
+{auth_backends, [rabbit_auth_backend_internal]}
+
+     
+]}
+].
+
+
+
+[{rabbit, [
+{loopback_users, [<<"guest">>]},
+{tcp_listeners, [{"0.0.0.0",5672}]},
+{ssl_listeners, [5671]},
+{ssl_options, [{cacertfile,"C:\\testca\\bundle\\pdp-shovel-2.ca-bundle"},
+		{certfile,"C:\\testca\\server2\\server_certificate.pem"},
+                {keyfile,"C:\\testca\\server2\\private_key.pem"},
+		{verify,verify_peer},
+                {fail_if_no_peer_cert, true}]},
+{ssl_handshake_timeout, 15000},
+{auth_mechanisms, ['PLAIN', 'AMQPLAIN', 'EXTERNAL']},
+{auth_backends, [rabbit_auth_backend_internal]},
+{ssl_cert_login_from, common_name}
+
+     
+]}
+].
+
+#############
+
+https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
+
+When a client connects and performs TLS upgrade, the username is obtained from the client's TLS (x509) certificate. The user's password is not checked.
+
+
+
+You can obtain this string form from a certificate with a command like:
+
+
+rabbitmqctl list_connections peer_cert_subject
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.9.12\sbin>rabbitmqctl list_connections peer_cert_subject
+Listing connections ...
+peer_cert_subject
+CN=pdp-shovel-1
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.9.12\sbin>hostname
+pdp-shovel-2
+
+
+
+
+
+
+
+
+
+
+
+
+
