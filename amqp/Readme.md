@@ -560,6 +560,10 @@ Steps:
 * Verify that you have a user on VM1 and VM2 equal to the CN
 * Verify on VM2 (Broker) the client (VM1) certificate subject from the above mTls connection:
 * * rabbitmqctl list_connections peer_cert_subject
+* * Listing connections ...
+* * peer_cert_subject
+* * CN=thename
+* 
 
 
 ### 12 Renew certificate tips
