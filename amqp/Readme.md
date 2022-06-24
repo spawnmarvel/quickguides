@@ -416,7 +416,6 @@ Example: (Intermediate 3, Intermediate 2,) Intermediate 1, Root Certificate. Thi
 * When using RabbitMQ plugins such as Federation or Shovel with TLS, 
 it may be necessary to configure verification depth for the Erlang client that those plugins use under the hood.
 
-* 
 
 <details><summary>Extra Note about this test</summary>
 <p>
@@ -438,9 +437,11 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 </p>
 </details>
 
-### 11.03.2022 Update: Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate:
+<details><summary>Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate</summary>
+<p>
+11.03.2022 Update: Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate:
+11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
 
-#### 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
 Update 11.03.2022:
 
 In this test the setup was: VM1 Azure WE, VM2 on-prem NO with external signed server certificate, 1 intermediate and 1 root certificate.
@@ -478,7 +479,9 @@ The result will be
 ```
 Now we have verifed all certificates from the server VM2 and saved alot of time.....
 
-#### 11.03.2022 Update end
+11.03.2022 Update end
+</p>
+</details>
 
 ### SSL VM1 Client:
 * If you do not need or don't yet have the client CA's and certificate, go to: 6.1 section: But we can verify_peer from client
