@@ -600,6 +600,8 @@ TLS options can also be specified globally using the amqp_client.ssl_options con
 * {amqp_client, [{ssl_options, [
 They will be merged with the TLS parameters from the URI (the latter will take precedence) and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
 
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/x509/mtls_x509.jpg
+
 
 ### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal
 
