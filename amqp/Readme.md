@@ -561,6 +561,9 @@ Steps:
 * * peer_cert_subject
 * * CN=CN-name
 
+* Enable rabbitmq_auth_mechanism_ssl on VM2
+
+
 
 
 
