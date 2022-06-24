@@ -439,6 +439,7 @@ For this test, I followed: Manually Generating a CA, Certificates and Private Ke
 
 <details><summary>Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate</summary>
 <p>
+
 11.03.2022 Update: Before SSL VM1 Client: Take the time to verify all recieved CA's and generated server certificate:
 11.03.2022 Update start: Test CA's (bundle with only server CA), server certificate, SNI before proceeding to client SSL.
 
