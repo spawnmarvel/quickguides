@@ -107,7 +107,7 @@ https://www.rabbitmq.com/access-control.html#basics
 
 ## Scenario and roles for this test:
 
-<details><summary>Two way direction and One way direction -></summary>
+<details><summary>Two way direction and One way direction</summary>
 <p>
 
 #### We can hide anything, even code!
@@ -145,7 +145,7 @@ graph TD;
 
 ## Dependencies
 
-<details><summary>The New and Old Config File Formats -></summary>
+<details><summary>The New and Old Config File Formats</summary>
 <p>
 
 #### We can hide anything, even code!
@@ -180,7 +180,7 @@ https://docs.vmware.com/en/VMware-Tanzu-RabbitMQ-for-Kubernetes/1.2/tanzu-rmq/GU
 </details>
 
 ## Installing
-<details><summary>Software version -></summary>
+<details><summary>Software version</summary>
 <p>
 
 For this test:
@@ -206,7 +206,7 @@ Latest News, https://www.openssl.org/
 
 ## Environment
 
-<details><summary>Azure -></summary>
+<details><summary>Azure</summary>
 <p>
 
 [![Screenshot](https://github.com/spawnmarvel/quickguides/blob/main/amqp/iamges/2_images_readme/azure_vm.jpg)
