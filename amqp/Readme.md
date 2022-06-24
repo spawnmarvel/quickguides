@@ -551,9 +551,15 @@ Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authe
 
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 
+When a client connects and performs TLS upgrade, the username is obtained from the client's TLS (x509) certificate. The user's password is not checked.
+
 https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
 
-
+Steps:
+* Verify the CN of the client certificate:
+* Verify that you have a user on VM1 and VM2 equal to the CN
+* Verify on VM2 (Broker) the client (VM1) certificate subject from the above mTls connection:
+* * rabbitmqctl list_connections peer_cert_subject
 
 
 ### 12 Renew certificate tips
