@@ -603,15 +603,21 @@ They will be merged with the TLS parameters from the URI (the latter will take p
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/x509/mtls_x509.jpg
 
 
-### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal
+### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal does authorization.
 
-### 12 Renew certificate tips
+
+<details><summary>12 Renew certificate tips -></summary>
+<p>
+
 This depends on what certificate is expired, server VM2 or client VM1?
+Is is also dependendt on if you used x.509 or not.
 The main task is to check what is expired:
 * CA's or personal
 * Generate CSR personal or download new CA's from repository (owner etc)
 * Import new personal, make private key and cert or import CA's
 * Update folder with personal cert or update bundle with new CA's
+* Update first global ssl, set back URI from x.509 to -u -p 
+* When global is success, set back URI from -u -p to x.509 
 
 TLS:
 * VM2 server has a certificate
@@ -628,6 +634,9 @@ mTLS:
 * * VM2 {tcp_listeners, [{"0.0.0.0",5672}, {"0.0.0.0",5671}]} and keep other configuration, but remove ssl section.
 * * section: We now have a server and a client running a shovel to the server, TCP 5671 Success AMQP
 * * * And then renew your certificates.
+
+</p>
+</details>
 
 ## How to Optimize the RabbitMQ Prefetch Count
 
