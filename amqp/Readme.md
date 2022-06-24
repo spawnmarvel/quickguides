@@ -680,8 +680,6 @@ https://www.erlang.org/doc/man/ssl.html
 </p>
 </details>
 
-## Notes
-
 <details><summary>Notes -></summary>
 <p>
 
