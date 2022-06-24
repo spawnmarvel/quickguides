@@ -561,6 +561,16 @@ https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 * * rabbitmqctl list_connections peer_cert_subject
 
 #### Subject Alternative Name
+* Can be used, https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
+* Or of type email
+
+#### Common Name
+* To use the Common Name instead, set rabbit.ssl_cert_login_from to common_name
+* auth_mechanisms.1 = EXTERNAL
+* ssl_cert_login_from = common_name
+
+
+
 
 https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
 
