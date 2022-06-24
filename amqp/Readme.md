@@ -665,10 +665,7 @@ If you have about the same processing time all the time and network behavior rem
 </p>
 </details>
 
-
-## Erlang SNI
-
-<details><summary>Specify the hostname to be used in TLS Server Name Indication extension -></summary>
+<details><summary>Erlang SNI: Specify the hostname to be used in TLS Server Name Indication extension -></summary>
 <p>
 
 https://www.erlang.org/doc/man/ssl.html
