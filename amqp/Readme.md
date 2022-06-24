@@ -569,8 +569,7 @@ https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 * auth_mechanisms.1 = EXTERNAL
 * ssl_cert_login_from = common_name
 
-
-
+####  11.1 Implement X.509
 
 https://github.com/rabbitmq/rabbitmq-server/tree/master/deps/rabbitmq_auth_mechanism_ssl
 
