@@ -551,7 +551,7 @@ Now we can further secure the connectivety with x509 (TLS/SSL) certificate Authe
 https://github.com/rabbitmq/rabbitmq-auth-mechanism-ssl
 
 
-### 11 Renew certificate tips
+### 12 Renew certificate tips
 This depends on what certificate is expired, server VM2 or client VM1?
 The main task is to check what is expired:
 * CA's or personal
