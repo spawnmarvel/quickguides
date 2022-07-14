@@ -1,0 +1,155 @@
+
+
+Disable cleartext authentication mechanisms in the AMQP configuration.
+
+https://liquidwarelabs.zendesk.com/hc/en-us/articles/360019562832-Disable-cleartext-authentication-option-in-RabbitMQ
+
+Problem:
+
+Vulnerability scans may flag the RabbitMQ service on port 5672 of your ProfileUnity Console server(s) as supporting cleartext authentication.  
+While this is true by default, the messages used by ProfileUnity are encrypted, regardless.  
+While the alert on the scan results is accurate regarding allowed cleartext authentication, it can't be exploited in the context of 
+ProfileUnity because of the message encryption in use.
+
+
+
+SSL management
+
+https://www.rabbitmq.com/management.html
+
+vm1 rabbitmq config
+
+disk_free_limit.absolute = 2GB
+management.tcp.port = 15673
+
+http://localhost:15673/#/ = success from 72 to 73
+
+ssl:
+
+test 1
+management.ssl.port       = 15671
+management.ssl.cacertfile = "C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle"
+management.ssl.certfile   = "C:\\testca_store\\client\\client_certificate.pem"
+management.ssl.keyfile    = "C:\\testca_store\\client\\private_key.pem"
+
+log
+application_start_failure,rabbitmq_prelaunch,{{shutdown,{failed_to_start_child,prelaunch,failed_to_prepare_configuration}},{rabbit_prelaunch_app,start,[normal,[]]}}})
+
+test 2
+disk_free_limit.absolute = 2GB
+management.ssl.port       = 15671
+management.ssl.cacertfile = C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle
+management.ssl.certfile   = C:\\testca_store\\client\\client_certificate.pem
+management.ssl.keyfile    = C:\\testca_store\\client\\private_key.pem
+
+https://localhost:15671/
+
+"Your connection is not private"-> not able to browse
+log:
+
+2022-07-13 15:06:59.438000+00:00 [info] <0.544.0> Management plugin: HTTPS listener started on port 15671
+2022-07-13 15:06:59.438000+00:00 [info] <0.574.0> Statistics database started.
+2022-07-13 15:06:59.438000+00:00 [info] <0.573.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+2022-07-13 15:06:59.438000+00:00 [warning] <0.600.0> AMQP 0-9-1 client call timeout was 70000 ms, is updated to a safe effective value of 130000 ms
+2022-07-13 15:06:59.438000+00:00 [info] <0.485.0> Ready to start client connection listeners
+2022-07-13 15:06:59.438000+00:00 [info] <0.623.0> started TCP listener on [::]:5672
+2022-07-13 15:06:59.454000+00:00 [info] <0.641.0> started TCP listener on 0.0.0.0:5672
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0> Server startup complete; 5 plugins started.
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0>  * rabbitmq_shovel_management
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0>  * rabbitmq_shovel
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0>  * rabbitmq_management
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0>  * rabbitmq_web_dispatch
+2022-07-13 15:06:59.657000+00:00 [info] <0.485.0>  * rabbitmq_management_agent
+2022-07-13 15:07:21.543000+00:00 [notice] <0.688.0> TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal - Unexpected Message
+2022-07-13 15:07:21.543000+00:00 [notice] <0.688.0>  - {unsupported_record_type,71}
+2022-07-13 15:07:22.592000+00:00 [notice] <0.692.0> TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal - Unexpected Message
+2022-07-13 15:07:22.592000+00:00 [notice] <0.692.0>  - {unsupported_record_type,71}
+2022-07-13 15:07:27.922000+00:00 [notice] <0.700.0> TLS server: In state hello at tls_record.erl:564 generated SERVER ALERT: Fatal - Unexpected Message
+2022-07-13 15:07:27.922000+00:00 [notice] <0.700.0>  - {unsupported_record_type,71}
+2022-07-13 15:07:29.095000+00:00 [notice] <0.710.0> TLS server: In state wait_finished received CLIENT ALERT: Fatal - Certificate Unknown
+2022-07-13 15:07:29.095000+00:00 [notice] <0.710.0> 
+2022-07-13 15:07:29.334000+00:00 [notice] <0.714.0> TLS server: In state wait_finished received CLIENT ALERT: Fatal - Certificate Unknown
+
+
+does it affect the shovel at VM2?
+VM2 check connections:
+
+Overview
+Name
+SSL / TLS
+xx.xx.xx.14:52765
+Shovel shovel_put_X509
+pdp-shovel-1	running	●	AMQP 0-9-1	1	0 B/s	0 B/s
+vm2 connection is ok, hm..
+
+vm1 investigate:
+unsupported_record_type,71 = nothing on internet
+
+
+test 3
+
+log on test 2
+2022-07-13 15:06:59.438000+00:00 [info] <0.544.0> Management plugin: HTTPS listener started on port 15671
+
+disk_free_limit.absolute = 2GB
+management.ssl.port       = 15671
+management.ssl.cacertfile = C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle
+management.ssl.certfile   = C:\\testca_store\\client\\client_certificate.pem
+# management.ssl.keyfile    = C:\\testca_store\\client\\private_key.pem
+
+no error
+
+2022-07-13 15:23:18.678000+00:00 [info] <0.544.0> Management plugin: HTTPS listener started on port 15671
+2022-07-13 15:23:18.678000+00:00 [info] <0.574.0> Statistics database started.
+2022-07-13 15:23:18.678000+00:00 [info] <0.573.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+2022-07-13 15:23:18.678000+00:00 [warning] <0.600.0> AMQP 0-9-1 client call timeout was 70000 ms, is updated to a safe effective value of 130000 ms
+2022-07-13 15:23:18.678000+00:00 [info] <0.485.0> Ready to start client connection listeners
+2022-07-13 15:23:18.678000+00:00 [info] <0.623.0> started TCP listener on [::]:5672
+2022-07-13 15:23:18.694000+00:00 [info] <0.641.0> started TCP listener on 0.0.0.0:5672
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0> Server startup complete; 5 plugins started.
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0>  * rabbitmq_shovel_management
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0>  * rabbitmq_shovel
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0>  * rabbitmq_management
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0>  * rabbitmq_web_dispatch
+2022-07-13 15:23:18.865000+00:00 [info] <0.485.0>  * rabbitmq_management_agent
+
+
+open fw, make inbound 15671
+
+https://localhost:15671/
+https://pdp-shovel-1:15671/
+
+test 3
+
+disk_free_limit.absolute = 2GB
+management.ssl.port       = 15671
+management.ssl.cacertfile = C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle
+management.ssl.certfile   = C:\\testca_store\\client\\client_certificate.pem
+# management.ssl.keyfile    = C:\\testca_store\\client\\private_key.pem
+
+management.ssl.verify = verify_peer
+management.ssl.fail_if_no_peer_cert = true
+
+does not work, set back to tcp port management:
+
+disk_free_limit.absolute = 2GB
+management.tcp.port = 15671
+
+http://pdp-shovel-1:15671/ = success
+
+http://localhost:15671/#/ = success
+
+test 4
+
+
+
+
+
+
+
+
+
+
+
+
+
