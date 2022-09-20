@@ -1,0 +1,35 @@
+
+
+
+rabbitmq.conf
+
+We use the same certificates as for shovel and amqp_client
+
+# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
+
+## The default "guest" user is only permitted to access the server
+## via a loopback interface (e.g. localhost).
+## {loopback_users, [<<"guest">>]},
+##
+
+loopback_users.guest = true
+
+# to disable 5672
+listeners.tcp  = none
+
+# ssl only
+listeners.ssl.default = 5671
+
+ssl_options.cacertfile = C:\testca\ca_certificate.pem
+ssl_options.certfile   = C:\testca\server\server_certificate.pem
+ssl_options.keyfile    = C:\testca\server\private_key.pem
+ssl_options.verify     = verify_none
+ssl_options.fail_if_no_peer_cert = false
+
+# management.tcp.port = 15672
+management.ssl.port       = 15671
+management.ssl.cacertfile = C:\testca\ca_certificate.pem
+management.ssl.certfile   = C:\testca\server\server_certificate.pem
+management.ssl.keyfile    = C:\testca\server\private_key.pem
+
+# https://ber-0803:15671/ but it is not trusted
