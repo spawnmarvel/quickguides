@@ -33,3 +33,23 @@ management.ssl.certfile   = C:\testca\server\server_certificate.pem
 management.ssl.keyfile    = C:\testca\server\private_key.pem
 
 # https://ber-0803:15671/ but it is not trusted
+
+
+log from rabbitmq
+2022-09-20 12:39:44.147000+02:00 [info] <0.591.0> Management plugin: HTTPS listener started on port 15671
+2022-09-20 12:39:44.147000+02:00 [info] <0.621.0> Statistics database started.
+2022-09-20 12:39:44.147000+02:00 [info] <0.620.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+2022-09-20 12:39:44.148000+02:00 [info] <0.532.0> Ready to start client connection listeners
+2022-09-20 12:39:44.150000+02:00 [info] <0.647.0> started TLS (SSL) listener on [::]:5671
+2022-09-20 12:39:44.151000+02:00 [info] <0.667.0> started TLS (SSL) listener on 0.0.0.0:5671
+2022-09-20 12:39:44.246000+02:00 [info] <0.532.0> Server startup complete; 3 plugins started.
+2022-09-20 12:39:44.246000+02:00 [info] <0.532.0>  * rabbitmq_management
+2022-09-20 12:39:44.246000+02:00 [info] <0.532.0>  * rabbitmq_web_dispatch
+2022-09-20 12:39:44.246000+02:00 [info] <0.532.0>  * rabbitmq_management_agent
+
+when you visit the URL you get an error in the log
+
+2022-09-20 12:41:18.195000+02:00 [notice] <0.670.0> TLS server: In state wait_finished received CLIENT ALERT: Fatal - Certificate Unknown
+
+
+

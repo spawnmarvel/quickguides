@@ -722,6 +722,10 @@ https://github.com/spawnmarvel/python-snippets/tree/master/rabbitmq_pika
 
 <details><summary>Management SSL</summary>
 <p>
+when you visit the URL you get an error in the log
+
+2022-09-20 12:41:18.195000+02:00 [notice] <0.670.0> TLS server: In state wait_finished received CLIENT ALERT: Fatal - Certificate Unknown
+
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/4_images_management_ssl/management_ssl.jpg
 </p>
 </details>
