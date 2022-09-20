@@ -719,3 +719,11 @@ https://github.com/spawnmarvel/python-snippets/tree/master/rabbitmq_pika
 </p>
 </details>
 
+
+<details><summary>Management SSL</summary>
+<p>
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/4_images_management_ssl/management_ssl.jpg
+</p>
+</details>
+
+
