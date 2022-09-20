@@ -711,3 +711,11 @@ https://www.erlang.org/doc/man/ssl.html
 
 </p>
 </details>
+
+
+<details><summary>Python Pika SSL</summary>
+<p>
+https://github.com/spawnmarvel/python-snippets/tree/master/rabbitmq_pika
+</p>
+</details>
+

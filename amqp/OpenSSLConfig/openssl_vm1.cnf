@@ -9,7 +9,7 @@ private_key = "C:\\testca_store\\private\\ca_private_key.pem"
 serial = "C:\\testca_store\\serial"
 
 default_crl_days = 7
-default_days = 365
+default_days = 180
 default_md = sha256
 
 policy = testca_policy
