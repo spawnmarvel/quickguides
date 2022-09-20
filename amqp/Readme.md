@@ -732,3 +732,8 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/4_images_manage
 </details>
 
 
+## 13 Common RabbitMQ Mistakes and How to Avoid Them
+https://www.cloudamqp.com/blog/part4-rabbitmq-13-common-errors.html
+
+
+
