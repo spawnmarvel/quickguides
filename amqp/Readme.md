@@ -601,6 +601,9 @@ Steps:
 
 ### After you have installed RabbitMQ, navigate to Shovel Management. URI examples is available on the webpage.
 
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/4_images_management_ssl/uri.jpg
+
+
 * * auth_mechanism=external and heartbeat=15 (sec)
 * *  {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]}, 
 * The URI even works without the user name, since it it extracted from the certificate and also from the {auth_backends, [rabbit_auth_backend_internal]},
