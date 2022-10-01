@@ -1,2 +1,2 @@
-# quickguides
-quickguides, markdown, nutshell reference
+# Quickguides
+Quickguides, markdown and nutshell reference
