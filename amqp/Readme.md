@@ -1,4 +1,4 @@
-# AMQP Shovel MTLS  with SNI = hostname - RFC-6125
+# AMQP Shovel MTLS RFC-6125
 
 https://www.rabbitmq.com/shovel.html
 * Shovel plugin
@@ -27,7 +27,7 @@ In addition to being a common messaging protocol between systems, AMQP is design
 * Open
 
 
-AMQP Shovel MTLS  with SNI = hostname - RFC-6125
+## AMQP Shovel MTLS URI with SNI and RFC-6125
 
 
 
