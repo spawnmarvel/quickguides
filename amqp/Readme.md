@@ -27,14 +27,17 @@ In addition to being a common messaging protocol between systems, AMQP is design
 * Open
 
 
+AMQP Shovel MTLS  with SNI = hostname - RFC-6125
+
+
+
+## Server Identity Check RFC-6125
 
 https://datatracker.ietf.org/doc/html/rfc6125
 * Representation and Verification of Domain-Based Application Service
 Identity within Internet Public Key Infrastructure Using X.509 (PKIX)
 Certificates in the Context of Transport Layer Security (TLS)
 * RFC-6125
-
-## Server Identity Check RFC-6125
 
 <details><summary>2.4. Server Identity Check</summary>
 <p>
