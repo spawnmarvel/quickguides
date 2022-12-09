@@ -26,11 +26,6 @@ In addition to being a common messaging protocol between systems, AMQP is design
 * Standard
 * Open
 
-
-## AMQP Shovel MTLS URI with SNI and RFC-6125
-
-
-
 ## Server Identity Check RFC-6125
 
 https://datatracker.ietf.org/doc/html/rfc6125
@@ -71,6 +66,9 @@ Certificates in the Context of Transport Layer Security (TLS)
       considered acceptable.
 </p>
 </details>
+
+## AMQP Shovel MTLS URI with SNI and RFC-6125
+
 
 
 ## Shovel (amqp_client.ssl_options)
