@@ -3,10 +3,28 @@
 https://www.rabbitmq.com/shovel.html
 * Shovel plugin
 
-ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
+## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
 AMQP provides a platform-agnostic method for ensuring information is safely transported between applications, among organizations, within mobile infrastructures, and across the Cloud. [...]
+
 https://www.oasis-open.org/news/pr/iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol/
 
+
+## Open standard
+AMQP v1.0 is an international standard that is ISO and IEC approved as ISO/IEC 19464:2014.
+There are many reasons to develop an open standard. One of these reasons is easily implied by the term “open standard.” 
+
+With AMQP being an open standard messaging protocol it’s much easier for completely different software systems to communicate without requiring a lot of extra overhead; 
+such as custom integration code between any 2 systems, or even whole applications whose sole role is to facilitate those communications.
+
+* 1 messaging protocol to rule them all
+
+In addition to being a common messaging protocol between systems, AMQP is designed with a few key features in mind:
+
+* Security
+* Reliability
+* Interoperability
+* Standard
+* Open
 
 
 
