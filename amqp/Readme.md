@@ -3,6 +3,13 @@
 https://www.rabbitmq.com/shovel.html
 * Shovel plugin
 
+ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
+AMQP provides a platform-agnostic method for ensuring information is safely transported between applications, among organizations, within mobile infrastructures, and across the Cloud. [...]
+https://www.oasis-open.org/news/pr/iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol/
+
+
+
+
 https://datatracker.ietf.org/doc/html/rfc6125
 * Representation and Verification of Domain-Based Application Service
 Identity within Internet Public Key Infrastructure Using X.509 (PKIX)
@@ -616,6 +623,7 @@ TLS options can also be specified globally using the amqp_client.ssl_options con
 They will be merged with the TLS parameters from the URI (the latter will take precedence) and affect all outgoing RabbitMQ Erlang client connections on the node, including plugins that use the client internally (Federation, Shovel, etc).
 
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/x509/mtls_x509.jpg
+
 
 
 ### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal does authorization.
