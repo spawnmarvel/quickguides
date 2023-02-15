@@ -346,7 +346,7 @@ openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
 ```
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
 ```cmd
-openssl x509 -nout -subject -in public.crt.pem
+openssl x509 -noout -subject -in public.crt.pem
 ```
 
 ### 5 Update config VM2 Server:
