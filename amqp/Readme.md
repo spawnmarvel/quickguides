@@ -357,6 +357,12 @@ ssl listner 5671, ssl options cacertfile (use root.csr or bundle (intermediate, 
 "C:\\folder\\certs\\ca_cert.crt, .pem"
 ```
 
+#### rabbitmq.conf (easier format)
+You could use the rabbitmq.conf (easier format) for the server that is not using the shovel.
+The has its own format, Erlang syntax.
+
+https://github.com/spawnmarvel/quickguides/blob/main/amqp/management.txt
+
 Log should be:
 * * [info] <0.506.0> Ready to start client connection listeners
 * * [info] <0.617.0> started TCP listener on [::]:5672
