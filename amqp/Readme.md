@@ -268,6 +268,7 @@ https://www.rabbitmq.com/configure.html
 
 <details><summary>Cookie and rabbitmqctl bat issue</summary>
 <p>
+```cmd
 1.	If Erlang is version 20.2 or above, copy the following file:
 
 C:\Windows\System32\config\systemprofile\.erlang.cookie 
@@ -278,6 +279,7 @@ C:\Windows\.erlang.cookie
 
 2.	Place the file in the following location:
 C:\Users\<your user profile>
+```cmd
 </p>
 </details>
 
