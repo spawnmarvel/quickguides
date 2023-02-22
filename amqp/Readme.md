@@ -360,7 +360,8 @@ A pem encoded certificate is already a “cert”, and the .cert file extension 
 </details>
 
 * 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing)
-* 2.1 When all CA's are imported in MMC, the personal should be valid.
+* 2.1 When all CA's are imported in MMC, the personal should be valid. (If you cannot find the cert in mmc personal, import it direct on personal tab
+)
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use just for openssl.
 
 * * View IBM.info 
