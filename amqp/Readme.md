@@ -334,7 +334,7 @@ or
 2.5.29.17 = "{text}"
 _continue_ = "dns=.domain.something&"
 ```
-<details><summary>Convert pem to other formats</summary>
+<details><summary>Convert pem to other formats or follow below</summary>
 <p>
 https://www.misterpki.com/convert-pem-to-other-formats/
 
@@ -348,6 +348,13 @@ https://www.misterpki.com/convert-pem-to-other-formats/
 
 .pfx – The .pfx file extension is a PKCS12 certificate bundle which may contain an end entity certificate, a certificate chain, and matching private key. .pfx can be interchanged with .p12 and may be protected by a password.
 
+.p12 – Personal Information Exchange File that is encrypted with a password and is interchangeable with the .pfx file extension.
+
+* To convert a pem encoded certificate to a .crt extension, simply rename the file. This assumes you want .crt to be Base64 encoded. 
+
+* To convert a pem encoded certificate to a .cer extension, simply rename the file. This assumes you want .cer to remain Base64 encoded. 
+
+A pem encoded certificate is already a “cert”, and the .cert file extension isn’t a “real” extension, so it is better to used an already defined file extension such as .cer, .pem, or .crt.
 
 </p>
 </details>
