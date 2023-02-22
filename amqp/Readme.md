@@ -334,6 +334,24 @@ or
 2.5.29.17 = "{text}"
 _continue_ = "dns=.domain.something&"
 ```
+<details><summary>Convert pem to other formats</summary>
+<p>
+https://www.misterpki.com/convert-pem-to-other-formats/
+
+.pem – Privacy Enhanced Mail Certificate. A PEM file is Base64 encoded and may be an X.509 certificate file, a private key file, or any other key material. PEM encoded files are commonly used in Apache and Tomcat servers.
+
+.crt – Shorthand way to say “cert”, the .crt file extension is a security extension that may be either Base64 encoded or binary. Most commonly, .crt is a Base64 encoded certificate.
+
+.cer – Shorthand way to almost say “cert”, the .cer file extension is an Internet Security Certificate that may be either Base64 encoded or binary. Most commonly, .cer is a binary certificate.
+
+.der – The .der file extension is for a certificate file in binary format.
+
+.pfx – The .pfx file extension is a PKCS12 certificate bundle which may contain an end entity certificate, a certificate chain, and matching private key. .pfx can be interchanged with .p12 and may be protected by a password.
+
+
+</p>
+</details>
+
 * 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing)
 * 2.1 When all CA's are imported in MMC, the personal should be valid.
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use just for openssl.
