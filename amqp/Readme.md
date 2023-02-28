@@ -838,6 +838,6 @@ rabbitmqctl status
 rabbitmqctl add_user newuser pass123
 rabbitmqctl list_users
 rabbitmqctl set_user_tags newuser administrator
-rabbitmqctl set_permissions -p / newuser "^newuser.*" ".*" ".*"
+rabbitmqctl set_permissions -p / newuser ".*" ".*" ".*"
 
 ```
