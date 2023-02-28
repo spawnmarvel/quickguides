@@ -826,4 +826,18 @@ https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/4_images_manage
 https://www.cloudamqp.com/blog/part4-rabbitmq-13-common-errors.html
 
 
+## 14 rabbitmqctl(8)
 
+
+https://www.rabbitmq.com/rabbitmqctl.8.html
+
+```cmd
+
+rabbitmqctl list_queues
+rabbitmqctl status
+rabbitmqctl add_user newuser "pass123"
+rabbitmqctl list_users
+rabbitmqctl set_user_tags newuser administrator
+rabbitmqctl set_permissions -p / newuser "^newuser.*" ".*" ".*"
+
+```cmd
