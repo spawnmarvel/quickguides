@@ -840,4 +840,4 @@ rabbitmqctl list_users
 rabbitmqctl set_user_tags newuser administrator
 rabbitmqctl set_permissions -p / newuser "^newuser.*" ".*" ".*"
 
-```cmd
+```
