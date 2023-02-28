@@ -835,7 +835,7 @@ https://www.rabbitmq.com/rabbitmqctl.8.html
 
 rabbitmqctl list_queues
 rabbitmqctl status
-rabbitmqctl add_user newuser "pass123"
+rabbitmqctl add_user newuser pass123
 rabbitmqctl list_users
 rabbitmqctl set_user_tags newuser administrator
 rabbitmqctl set_permissions -p / newuser "^newuser.*" ".*" ".*"
