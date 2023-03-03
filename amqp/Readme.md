@@ -841,4 +841,6 @@ rabbitmqctl set_user_tags newuser administrator
 rabbitmqctl set_permissions -p / newuser ".*" ".*" ".*"
 rabbitmqctl list_permissions
 
+rabbitmqctl delete_queue AZQueueData
+
 ```
