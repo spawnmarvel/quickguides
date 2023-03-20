@@ -168,9 +168,18 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 ### Create and configure VMs
 
-Create a VM
+#### Create a VM
 
-Manage images by using the Azure Compute Gallery
+Done it 100 times
+
+#### Manage images by using the Azure Compute Gallery
+
+* An Azure Compute Gallery helps you build structure and organization around your Azure resources, like images and applications
+* Create a gallery for storing and sharing resources
+* https://learn.microsoft.com/en-us/azure/virtual-machines/create-gallery?tabs=portal%2Cportaldirect%2Ccli2
+
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/azure-compute-gallery
 
 #### Configure Azure Disk Encryption
 
