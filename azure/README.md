@@ -205,7 +205,9 @@ Create and configure Azure Container Apps
 
 Configure storage for Azure Kubernetes Service (AKS)
 
-Configure scaling for AKS
+#### Configure scaling for AKS
+
+https://follow-e-lo.com/2023/03/20/az-lab-09c-implement-azure-kubernetes-service/
 
 ### ps1 / cli / aks / cmd
 
@@ -213,17 +215,34 @@ Configure scaling for AKS
 * Step-by-step bullets
 
 ```
-az aks create # Create an AKS cluster
+# The following example creates an AKS cluster with a single node pool backed by a virtual machine scale set. 
+# It also enables the cluster autoscaler on the node pool for the cluster and sets a minimum of 1 and maximum of 3 nodes:
 
-az aks update \ # To enable and configure the cluster autoscaler on the node pool for the existing cluster
+# First create a resource group
+az group create --name myResourceGroup --location eastus
+
+# Now create the AKS cluster and enable the cluster autoscaler
+az aks create \
+  --resource-group myResourceGroup \
+  --name myAKSCluster \
+  --node-count 1 \
+  --vm-set-type VirtualMachineScaleSets \
+  --load-balancer-sku standard \
+  --enable-cluster-autoscaler \
+  --min-count 1 \
+  --max-count 3
+
+
+# To enable and configure the cluster autoscaler on the node pool for the existing cluster
+az aks update \ 
   --resource-group myResourceGroup \
   --name myAKSCluster \
   --enable-cluster-autoscaler \ # Use the --enable-cluster-autoscaler
   --min-count 1 \ # specify a node --min-count
   --max-count 3   # specify a node --max-count
 
-
-az aks update \ # To change the node count, use the az aks update command.
+# To change the node count, use the az aks update command.
+az aks update \ 
   --resource-group myResourceGroup \
   --name myAKSCluster \
   --update-cluster-autoscaler \
