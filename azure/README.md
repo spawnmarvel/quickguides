@@ -211,6 +211,7 @@ https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-l
 * Change the VM size
 * Pick a new size from the list of available sizes and then select Resize.
 * If the virtual machine is currently running, changing its size will cause it to restart.
+* You can't resize a VM size that has a local temp disk to a VM size with no local temp disk and vice versa.
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/resize-vm?tabs=portal
 
