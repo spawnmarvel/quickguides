@@ -172,12 +172,28 @@ Create a VM
 
 Manage images by using the Azure Compute Gallery
 
-Configure Azure Disk Encryption
+#### Configure Azure Disk Encryption
+
+
+* Azure Disk Encryption for Windows VMs
+* * BitLocker
+* * Integrated with Azure Key Vault (manage the disk encryption keys and secrets.)
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-overview
+
+* Azure Disk Encryption for Linux VMs
+* * DM-Crypt
+* * Integrated with Azure Key Vault (manage the disk encryption keys and secrets.)
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-overview
+
+
+
 
 #### Move VMs from one resource group to another
 
 * A virtual machine that is integrated with a key vault to implement Azure Disk Encryption for Linux VMs or Azure Disk Encryption for Windows VMs can be moved to another resource group when it is in deallocated state.
-* 
+
 
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations?tabs=azure-cli
 
