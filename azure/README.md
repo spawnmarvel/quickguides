@@ -17,11 +17,7 @@ Study Guide
 https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
 Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
-
-https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azure-az-104-exam/
-
-
-
+* Hard work, work with Azure, repeat stuff, words, concepts and steps.
 
 ## AZ-104: Prerequisites for Azure administrators
 
