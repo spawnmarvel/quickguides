@@ -54,6 +54,11 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * Default backup configuration is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
 * Default security configuration is soft delete enabled
 
+
+| VM Back up  | File and folder backup
+| ------- |   | ------- |
+
+
 * VM Back up
 1. Recovery service vault is created
 2. Backup
