@@ -33,23 +33,11 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 | SAAS | On the other end of the spectrum, SaaS places most of the responsibility with the cloud provider. | Login | Cloud 70%
 | Data | Information and data, Devices that are allowed to connect, Accounts and identities. | | You 100%
 | Infrastructure | Physical datacenter, physical network, physical hosts. | | Cloud 100%
+| CLI | The CLI is cross-platform and can be installed on Linux, macOS, and Windows. | |
+| PS1 | On both Linux and macOS, you'll use a package manager to install PowerShell Core. On macOS, you'll use Homebrew to install PowerShell. | |
+| ARM Template | JSON file that defines the infrastructure and configuration for the deployment. Templates declare what will be deployed without having to write the sequence of programming commands to create it.  | |
+| ARM Idempotent | What happens if the same template is run a second time? | | 
 
-
-#### IAAS
-* RDP, mstc
-
-#### PAAS
-* Connection strings
-
-#### SAAS
-* Login user
-
-#### CLI
-* The CLI is cross-platform and can be installed on Linux, macOS, and Windows. 
-
-#### PS1
-* On both Linux and macOS, you'll use a package manager to install PowerShell Core.
-* On macOS, you'll use Homebrew to install PowerShell.
 
 #### ARM Template
 * An Azure Resource Manager template is a JSON file that defines the infrastructure and configuration for the deployment. 
