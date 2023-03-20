@@ -55,6 +55,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * Default security configuration is soft delete enabled
 * Must be in same region as rg's
 
+##### Backup
 
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
@@ -67,6 +68,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | 7 |                                   | 7 | Policy schedule for bck
 | 8 |                                   | 8 | Backup now 
 
+##### Backup recovery
 
 | VM recovery snapshop | Steps | File and folder recovery | Steps
 | ---- | ----------- | ------- | -----------
