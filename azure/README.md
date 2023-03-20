@@ -58,34 +58,17 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
-| 1 | Recovery service vault is created | 1 | Do Steps
-| 2 | Go to backup                      | 2 | Do Steps
-| 3 | Choose VM Azure                   | 3 | Do Steps
-| 4 | Policy schedule for bck           | 4 | Do Steps
-| 5 | Backup now                        | 5 | Do Steps
-| 6 | Do steps                          | 6 | Do Steps
-| 7 | Do steps                          | 7 | Do Steps
-| 8 | Do steps                          | 8 | Do Steps
+| 1 | Recovery service vault is created | 1 | Recovery service vault created
+| 2 | Go to backup                      | 2 | On VM, browse to Portal
+| 3 | Choose VM Azure                   | 3 | Browse to vault backup on-prem and filed and folders
+| 4 | Policy schedule for bck           | 4 | Install MARS agent
+| 5 | Backup now                        | 5 | Download vault credentials and register server
+| 6 |                                   | 6 | Launce MS Azure Recovery service
+| 7 |                                   | 7 | Policy schedule for bck
+| 8 |                                   | 8 | Backup now 
 
 
 
-
-* VM Back up
-1. Recovery service vault is created
-2. Backup
-3. Choose VM Azure
-5. Policy schedule for bck
-6. Backup now
-
-* File and folder backup
-1. Recovery service vault created
-2. On VM, browse to Portal
-3. Browse to vault backup on-prem and filed and folders
-4. Install MARS agent
-5. Download vault credentials and register server
-6. Launce MS Azure Recovery service
-7. Policy schedule for bck
-8. Backup now 
 
 ### ps1 / cli / aks / cmd
 
