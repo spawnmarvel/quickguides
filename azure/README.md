@@ -80,15 +80,15 @@ Start, Stop, Restart, Suspend, Resume #
 
 ## 
 ## Skills measured
-Manage Azure identities and governance (15–20%) :heavy_exclamation_mark:
+Manage Azure identities and governance (15–20%) :white_circle:
 
-Implement and manage storage (15–20%) :heavy_exclamation_mark:
+Implement and manage storage (15–20%) :white_circle:
 
-Deploy and manage Azure compute resources (20–25%) :bangbang:
+Deploy and manage Azure compute resources (20–25%) :red_circle:
 
-Configure and manage virtual networking (20-25%) :bangbang:
+Configure and manage virtual networking (20-25%) :red_circle:
 
-Monitor and maintain Azure resources (10–15%) :interrobang:
+Monitor and maintain Azure resources (10–15%) :black_circle:
 
 
 ## AZ-104: Manage identities and governance (15-20%)
