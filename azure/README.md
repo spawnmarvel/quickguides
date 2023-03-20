@@ -46,10 +46,11 @@ https://learn.microsoft.com/en-us/certifications/azure-administrator/
 * Perform backup and restore operations by using Azure Backup
 
 https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
+
 https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 
-* TBD
+* Recovery service vault, default backup is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
 * TBD
 
 
