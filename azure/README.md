@@ -68,6 +68,17 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | 8 |                                   | 8 | Backup now 
 
 
+| VM recovery snapshop | Steps | File and folder recovery | Steps
+| ---- | ----------- | ------- | -----------
+| 1 | On vm | 1 | Recovery service vault created
+| 2 | Go to backup                      | 2 | On VM, browse to Portal
+| 3 | Choose VM Azure                   | 3 | Browse to vault backup on-prem and filed and folders
+| 4 | Policy schedule for bck           | 4 | Install MARS agent
+| 5 | Backup now                        | 5 | Download vault credentials and register server
+| 6 |                                   | 6 | Launce MS Azure Recovery service
+| 7 |                                   | 7 | Policy schedule for bck
+| 8 |                                   | 8 | Backup now 
+
 
 
 ### ps1 / cli / aks / cmd
