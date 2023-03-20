@@ -55,13 +55,21 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * Default security configuration is soft delete enabled
 
 * VM Back up
-1. Recovery service vault
+1. Recovery service vault is created
 2. Backup
 3. Choose VM Azure
-5. Policy
+5. Policy schedule for bck
 6. Backup now
 
-
+* File and folder backup
+1. Recovery service vault created
+2. On VM, browse to Portal
+3. Browse to vault backup on-prem and filed and folders
+4. Install MARS agent
+5. Download vault credentials and register server
+6. Launce MS Azure Recovery service
+7. Policy schedule for bck
+8. Backup now 
 
 ### ps1 / cli / aks / cmd
 
