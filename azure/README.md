@@ -1,6 +1,6 @@
-# Project Title
+# Microsoft Certified: Azure Administrator
 
-Microsoft Certified: Azure Administrator Associate
+Microsoft Certified: Azure Administrator
 
 ## Description
 
@@ -8,7 +8,14 @@ Azure Administrator Cheat Sheet
 
 #### Links
 
+Learn
+
 https://learn.microsoft.com/en-us/certifications/azure-administrator/
+
+Study Guide
+
+https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
+
 
 
 ### AZ-104: Prerequisites for Azure administrators
