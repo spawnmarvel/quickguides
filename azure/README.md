@@ -40,10 +40,12 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 | 1. | If the resource already exists and no change is detected in the properties, no action is taken. | |
 | 2. | If the resource already exists and a property has changed, the resource is updated. | | 
 | 3. |If the resource doesn't exist, it's created. ||
-| LRS | Locally redundant storage (LRS) replicates your storage account three times within a single data center in the primary region | 11 nines | 
-| ZRS |  Zone-redundant storage (ZRS) replicates your storage account synchronously across three Azure availability zones in the primary region. | 12 9’s |
+| LRS | Locally redundant storage (LRS) replicates your storage account three times within a single data center in the primary region | 99.999999999%  | 11 nines
+| ZRS |  Zone-redundant storage (ZRS) replicates your storage account synchronously across three Azure availability zones in the primary region. | 99.9999999999% | 12 9's
 | GRS | Geo-Redundant Storage (GRS) is like the LRS option, but it adds a secondary region for durability. | |
 | GZRS | Geo-Zone-Redundant Storage (GZRS) protects your data by copying it to three availability zones in the primary region using ZRS. It then replicates data asynchronously to a single data center in the secondary region using LRS. | |
+| RA-GRS | Read-Access Geo-Redundant Storage (RA-GRS) is almost the same as GRS, but it provides read-only access to data in the secondary region during an outage in the primary region. | |
+
 https://follow-e-lo.com/az-glossary/
 
 
