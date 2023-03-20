@@ -16,6 +16,11 @@ Study Guide
 
 https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
+Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
+
+https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azure-az-104-exam/
+
+
 
 
 ### AZ-104: Prerequisites for Azure administrators
@@ -111,6 +116,11 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | 7 | Mount                              | 7 | Unmount
 | 8 | Robocopy                           | 8 |  
 | 9 | Unmount                            | 9 |
+
+
+#### Configure Azure Site Recovery for Azure resources
+#### Perform failover to a secondary region by using Azure Site Recovery
+#### Configure and review backup reports
 
 
 ### ps1 / cli / aks / cmd
