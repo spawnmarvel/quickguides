@@ -80,20 +80,16 @@ Start, Stop, Restart, Suspend, Resume #
 
 ## 
 ## Skills measured
-```diff
-! Manage Azure identities and governance (15–20%)
+Manage Azure identities and governance (15–20%)
 
-! Implement and manage storage (15–20%)
+Implement and manage storage (15–20%)
 
-$\color{green}{test}$
+Deploy and manage Azure compute resources (20–25%) :fire:
 
-> __Warning__ Deploy and manage Azure compute resources (20–25%)
+Configure and manage virtual networking (20-25%)
 
-- Configure and manage virtual networking (20-25%)
+Monitor and maintain Azure resources (10–15%)
 
-! Monitor and maintain Azure resources (10–15%)
-
-```
 
 ## AZ-104: Manage identities and governance (15-20%)
 
