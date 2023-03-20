@@ -16,27 +16,34 @@ https://learn.microsoft.com/en-us/certifications/azure-administrator/
 * TBD
 * TBD
 
-### AZ-104: Manage identities and governance in Azure
+### AZ-104: Manage identities and governance (15-20%)
 
 * TBD
 * TBD
 
-### AZ-104: Implement and manage storage in Azure
+### AZ-104: Implement and manage storage (15-20%)
 
 * TBD
 * TBD
 
-### AZ-104: Deploy and manage Azure compute resources
+### AZ-104: Deploy and manage Azure compute resources (20-25%)
 
 * TBD
 * TBD
 
-### AZ-104: Configure and manage virtual networks for Azure administrators
+### AZ-104: Configure and manage virtual networking (20-25%)
 
 * TBD
 * TBD
 
-### AZ-104: Monitor and back up Azure resources
+### AZ-104: Monitor and back up Azure resources (10-15%)
+
+#### Monitor resources by using Azure Monitor
+#### Implement backup and recovery
+
+* Create an Azure Recovery Services vault
+https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
+
 
 * TBD
 * TBD
