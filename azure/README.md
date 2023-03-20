@@ -60,6 +60,12 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | VM Back up   | ------- | File and folder backup
 
 
+| VM Back Up | Steps | File and folder backup | Steps
+| ---- | ----------- | ------- | -----------
+| 1 | Do steps | 1 | Do Steps
+| 2 | Use a lowercase single letter, word, or words. Separate words with underscores to improve readability | x, var, my_variable
+
+
 
 * VM Back up
 1. Recovery service vault is created
