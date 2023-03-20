@@ -88,7 +88,7 @@ Deploy and manage Azure compute resources (20–25%) :triangular_flag_on_post:
 
 Configure and manage virtual networking (20-25%) :triangular_flag_on_post:
 
-Monitor and maintain Azure resources (10–15%) :small_orange_diamond:
+Monitor and maintain Azure resources (10–15%) :tomato:
 
 
 ## AZ-104: Manage identities and governance (15-20%)
