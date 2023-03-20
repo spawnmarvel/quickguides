@@ -34,6 +34,21 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 #### SAAS
 * Login user
 
+#### CLI
+* The CLI is cross-platform and can be installed on Linux, macOS, and Windows. 
+
+#### PS1
+* On both Linux and macOS, you'll use a package manager to install PowerShell Core.
+* On macOS, you'll use Homebrew to install PowerShell.
+
+#### ARM Template
+* An Azure Resource Manager template is a JSON file that defines the infrastructure and configuration for the deployment. 
+* Templates declare what will be deployed without having to write the sequence of programming commands to create it.
+* What happens if the same template is run a second time? Idempotent
+* * If the resource already exists and no change is detected in the properties, no action is taken. 
+* * If the resource already exists and a property has changed, the resource is updated. 
+* * If the resource doesn't exist, it's created.
+
 ### ps1 / cli / aks / cmd
 
 * TBD
