@@ -293,20 +293,26 @@ Configure monitoring of VMs, storage accounts, and networks by using VM insights
 
 ### Create an Azure Recovery Services vault
 
-Create an Azure Backup vault
-
-#### Create and configure backup policy
-#### Perform backup and restore operations by using Azure Backup
-
-https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
-
-https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
-
-
 * Recovery service vault:
 * * Default backup configuration is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
 * * Default security configuration is soft delete enabled
 * * Must be in same region as rg's
+
+### Create an Azure Backup vault
+
+*  What is difference between Recovery Services vault and backup vault
+1. The first difference between an Azure Recovery Services Vault (ARSV) and an Azure Backup Vault (ABV) is are the available datasources of each vault.
+2. The second difference is: In an ARSV you can be used for Azure Backup and Azure Site Recovery data. An ABV is for Azure Backup data only.
+
+
+https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
+
+
+#### Create and configure backup policy
+#### Perform backup and restore operations by using Azure Backup
+
+https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
+
 
 #### Backup
 
