@@ -281,6 +281,8 @@ Configure and interpret metrics
 
 Configure Azure Monitor Logs
 
+https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
+
 Query and analyze logs
 
 https://follow-e-lo.com/2023/01/28/5-min-azure-functions-compute-with-powershell-log-analytics-workspace/
