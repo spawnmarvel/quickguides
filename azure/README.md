@@ -47,8 +47,6 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 | RA-GRS | Read-Access Geo-Redundant Storage (RA-GRS) is almost the same as GRS, but it provides read-only access to data in the secondary region during an outage in the primary region. | |
 | Storage Redundancy | https://tutorialsdojo.com/azure-storage-redundancy-options/ | |
 
-https://follow-e-lo.com/az-glossary/
-
 
 ### ps1 / cli
 
