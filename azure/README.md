@@ -59,7 +59,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
 | 1 | Recovery service vault is created | 1 | Recovery service vault created
-| 2 | Go to backup                      | 2 | On VM, browse to Portal
+| 2 | Go to backup                      | 2 | On VM -> browse to Portal
 | 3 | Choose VM Azure                   | 3 | Browse to vault backup on-prem and filed and folders
 | 4 | Policy schedule for bck           | 4 | Install MARS agent
 | 5 | Backup now                        | 5 | Download vault credentials and register server
@@ -70,15 +70,15 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 | VM recovery snapshop | Steps | File and folder recovery | Steps
 | ---- | ----------- | ------- | -----------
-| 1 | On vm | 1 | Recovery service vault created
-| 2 | Go to backup                      | 2 | On VM, browse to Portal
-| 3 | Choose VM Azure                   | 3 | Browse to vault backup on-prem and filed and folders
-| 4 | Policy schedule for bck           | 4 | Install MARS agent
-| 5 | Backup now                        | 5 | Download vault credentials and register server
-| 6 |                                   | 6 | Launce MS Azure Recovery service
-| 7 |                                   | 7 | Policy schedule for bck
-| 8 |                                   | 8 | Backup now 
-
+| 1 | On VM open browser->Azure          | 1 | On VM open browser->Azure 
+| 2 | Go to vault-> VM                   | 2 | Recover data on MS Azure Recovery service
+| 3 | Choose File recovery               | 3 | Select recover mode-> files and folders
+| 4 | Select recovery point              | 4 | Select volume and date
+| 5 | Download iaas.exe script           | 5 | Mount
+| 6 | Click .exe add password            | 6 | Robocopy
+| 7 | Mount                              | 7 | Unmount
+| 8 | Robocopy                           | 8 |  
+| 9 | Unmount                            | 9 |
 
 
 ### ps1 / cli / aks / cmd
