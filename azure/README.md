@@ -26,7 +26,7 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 ## AZ-104: Prerequisites for Azure administrators
 
 
-| Type | Description | Connect | Responsibility
+| Type | Description | How | Responsibility
 | ---- | ------------| ------- | -------------
 | IAAS | IaaS places the most responsibility on the consumer, with the cloud provider being responsible for the basics of physical security, power, and connectivity. | Msts, RDP | You most 70%
 | PASS | PaaS, being a middle ground between IaaS and SaaS, rests somewhere in the middle and evenly distributes responsibility between the cloud provider and the consumer. | Connection string | Middle you and cloud 50-50 %
@@ -39,7 +39,12 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 | Idempotent | What happens if the same template is run a second time?  | | 
 | 1. | If the resource already exists and no change is detected in the properties, no action is taken. | |
 | 2. | If the resource already exists and a property has changed, the resource is updated. | | 
-| 3. |If the resource doesn't exist, it's created.
+| 3. |If the resource doesn't exist, it's created. ||
+| LRS | Locally redundant storage (LRS) replicates your storage account three times within a single data center in the primary region | 11 nines | 
+| ZRS |  Zone-redundant storage (ZRS) replicates your storage account synchronously across three Azure availability zones in the primary region. | 12 9’s |
+| GRS | Geo-Redundant Storage (GRS) is like the LRS option, but it adds a secondary region for durability. | |
+| GZRS | Geo-Zone-Redundant Storage (GZRS) protects your data by copying it to three availability zones in the primary region using ZRS. It then replicates data asynchronously to a single data center in the secondary region using LRS. | |
+https://follow-e-lo.com/az-glossary/
 
 
 ### ps1 / cli / aks / cmd
