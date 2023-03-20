@@ -199,7 +199,21 @@ https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-l
 
 Manage VM sizes
 
-Add data disks
+#### Add data disks
+
+* On the Virtual machine pane, select Disks.
+* On the Disks pane, select Create and attach a new disk. 
+* Make disk selection
+* Select Save to create and attach the new data disk to the VM.
+
+Initialize a new data disk
+
+* On vm, diskmgt
+* Select the new disk, initialize disk
+* Disk is now unallocated, click it and New simple volume and close diskmgt
+* Format disk, start it and erase all, name the volume.
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal
 
 Configure VM network settings
 
