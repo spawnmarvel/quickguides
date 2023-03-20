@@ -63,7 +63,14 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
 | 1 | Do steps | 1 | Do Steps
-| 2 | Use a lowercase single letter, word, or words. Separate words with underscores to improve readability | x, var, my_variable
+| 2 | Do steps | 2 | Do Steps
+| 3 | Do steps | 3 | Do Steps
+| 4 | Do steps | 4 | Do Steps
+| 5 | Do steps | 5 | Do Steps
+| 6 | Do steps | 6 | Do Steps
+| 7 | Do steps | 7 | Do Steps
+| 8 | Do steps | 8 | Do Steps
+
 
 
 
