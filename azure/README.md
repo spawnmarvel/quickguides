@@ -42,11 +42,10 @@ https://learn.microsoft.com/en-us/certifications/azure-administrator/
 #### Implement backup and recovery
 
 * Create an Azure Recovery Services vault
-* Create an Azure Recovery Services vault
-* Create an Azure Backup vault
-https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
 * Create and configure backup policy
 * Perform backup and restore operations by using Azure Backup
+
+https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
 https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 
