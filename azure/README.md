@@ -88,7 +88,7 @@ Deploy and manage Azure compute resources (20–25%) :red_circle:
 
 Configure and manage virtual networking (20-25%) :red_circle:
 
-Monitor and maintain Azure resources (10–15%) :black_circle:
+Monitor and maintain Azure resources (10–15%) :small_orange_diamond:
 
 
 ## AZ-104: Manage identities and governance (15-20%)
