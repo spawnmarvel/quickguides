@@ -129,8 +129,6 @@ Configure object replication
 
 #### Create an Azure file share
 
-https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
-
 https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
 
 Configure Azure Blob Storage
@@ -150,6 +148,8 @@ Azure File Sync transforms Windows Server into a quick cache of your Azure file 
 | 3 | Register Windows server with Storage Sync Service (Establishes a trust relationship between your server (or cluster) and the Storage Sync Service)
 | 4 | Create a sync group and clound endpoint (A sync group defines the sync topology for a set of files.)
 | 5 | Create server endpoint (such as a folder on a server volume)
+
+https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
                                   
 
 ## AZ-104: Deploy and manage Azure compute resources (20-25%)
