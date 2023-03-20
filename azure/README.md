@@ -205,8 +205,28 @@ Configure scaling for AKS
 * Step-by-step bullets
 
 ```
-code blocks for commands
+az aks create # Create an AKS cluster
+
+az aks update \ # To enable and configure the cluster autoscaler on the node pool for the existing cluster
+  --resource-group myResourceGroup \
+  --name myAKSCluster \
+  --enable-cluster-autoscaler \ # Use the --enable-cluster-autoscaler
+  --min-count 1 \ # specify a node --min-count
+  --max-count 3   # specify a node --max-count
+
+
+az aks update \ # To change the node count, use the az aks update command.
+  --resource-group myResourceGroup \
+  --name myAKSCluster \
+  --update-cluster-autoscaler \
+  --min-count 1 \
+  --max-count 5
+
 ```
+
+https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler
+
+
 
 Configure network connections for AKS
 
