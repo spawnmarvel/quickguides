@@ -25,14 +25,14 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 
 ## AZ-104: Prerequisites for Azure administrators
 
-### IAAS
-RDP, mstc
+#### IAAS
+* RDP, mstc
 
-### PASS
-Connection strings
+#### PAAS
+* Connection strings
 
-### SAAS
-Login user
+#### SAAS
+* Login user
 
 ### ps1 / cli / aks / cmd
 
