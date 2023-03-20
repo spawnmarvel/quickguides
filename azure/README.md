@@ -55,8 +55,10 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * Default security configuration is soft delete enabled
 
 
-| VM Back up  | File and folder backup
-| ------- |   | ------- |
+| VM Back up   | ------- | File and folder backup
+
+| VM Back up   | ------- | File and folder backup
+
 
 
 * VM Back up
