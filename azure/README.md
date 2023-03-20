@@ -80,9 +80,9 @@ Start, Stop, Restart, Suspend, Resume #
 
 ## 
 ## Skills measured
-Manage Azure identities and governance (15–20%) :heavy_exclamation_mark
+Manage Azure identities and governance (15–20%) :heavy_exclamation_mark:
 
-Implement and manage storage (15–20%) :heavy_exclamation_mark
+Implement and manage storage (15–20%) :heavy_exclamation_mark:
 
 Deploy and manage Azure compute resources (20–25%) :bangbang:
 
