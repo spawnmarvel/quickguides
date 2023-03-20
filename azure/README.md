@@ -40,12 +40,20 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 | 1. | If the resource already exists and no change is detected in the properties, no action is taken. | |
 | 2. | If the resource already exists and a property has changed, the resource is updated. | | 
 | 3. |If the resource doesn't exist, it's created. ||
+| Geography   | a discrete market, typically containing 2+ regions, that preserves data residency and compliance boundaries. | |
+| Azure region  | a set of datacenters deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network | |
+| Region pair   | each Azure region is paired with another region within the same geography. | |
+| Availability zone | a physically separate location within an Azure region. Each AZ is made up of 1+ datacenters with independent power, cooling, and networking.|  |
+| Availability   | recoverability and protection from system failures, natural disasters or malicious attacks. |   |
+| RPO  | Recovery point objective (RPO) - the amount of data which can be lost while bringing the system back online after a critical failure, i.e. the point in time to which the data can be recovered.|  |
+| RTO   | Recovery time objective (RTO) - the amount of time that it takes to get the system back online after a critical failure, i.e. how long you can sustain a service interruption before you absolutely need to be back online. | |
+|     | https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-azure-storage-redundancy-offerings/ba-p/1431700 | |
 | LRS | Locally redundant storage (LRS) replicates your storage account three times within a single data center in the primary region | 99.999999999%  | 11 nines
 | ZRS |  Zone-redundant storage (ZRS) replicates your storage account synchronously across three Azure availability zones in the primary region. | 99.9999999999% | 12 9's
-| GRS | Geo-Redundant Storage (GRS) is like the LRS option, but it adds a secondary region for durability. | |
+| GRS | Geo-Redundant Storage (GRS) is like the LRS option, but it adds a secondary region for durability. | 9.9999999999999999 | 16 9's
 | GZRS | Geo-Zone-Redundant Storage (GZRS) protects your data by copying it to three availability zones in the primary region using ZRS. It then replicates data asynchronously to a single data center in the secondary region using LRS. | |
 | RA-GRS | Read-Access Geo-Redundant Storage (RA-GRS) is almost the same as GRS, but it provides read-only access to data in the secondary region during an outage in the primary region. | |
-| Storage Redundancy | https://tutorialsdojo.com/azure-storage-redundancy-options/ | |
+| | https://tutorialsdojo.com/azure-storage-redundancy-options/ | |
 | SLA | https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics | 99% = 1.68 h, 99.999% = 6 sec week |
 
 
