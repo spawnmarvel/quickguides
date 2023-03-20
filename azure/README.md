@@ -49,7 +49,7 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 https://follow-e-lo.com/az-glossary/
 
 
-### ps1 / cli / aks / cmd
+### ps1 / cli
 
 * TBD
 * Step-by-step bullets
