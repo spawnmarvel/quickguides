@@ -38,7 +38,7 @@ https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
 Azure File Sync transforms Windows Server into a quick cache of your Azure file share.
 
 | Azure File Sync | Steps 
-| ---- | ----------- | ------- 
+| ---- | -------
 | 1 | Deploy the storage sync service (Create a resource and then search for Azure File Sync.)
 | 2 | Install the Azure File sync agent (Azure File Sync agent (downloadable package) enables Win Server to synced with Azure fileshare.)                 
 | 3 | Register Windows server with Storage Sync Service (Establishes a trust relationship between your server (or cluster) and the Storage Sync Service)
