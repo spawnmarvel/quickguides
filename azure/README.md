@@ -26,7 +26,7 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 ## AZ-104: Prerequisites for Azure administrators
 
 
-| Type | Description | How | Responsibility
+| Type or # | Description | How | Responsibility
 | ---- | ------------| ------- | -------------
 | IAAS | IaaS places the most responsibility on the consumer, with the cloud provider being responsible for the basics of physical security, power, and connectivity. | Msts, RDP | You most 70%
 | PASS | PaaS, being a middle ground between IaaS and SaaS, rests somewhere in the middle and evenly distributes responsibility between the cloud provider and the consumer. | Connection string | Middle you and cloud 50-50 %
