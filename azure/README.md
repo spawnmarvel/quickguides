@@ -48,6 +48,9 @@ Manage guest accounts
 
 Configure self-service password reset
 
+https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
+
+
 #### Manage access control
 
 Create custom role-based access control (RBAC) and Azure AD roles
@@ -134,33 +137,39 @@ Azure File Sync transforms Windows Server into a quick cache of your Azure file 
 
 #### Automate deployment of resources by using templates
 
-Modify an ARM template
+* Modify an ARM template
 
-Deploy a template
+* Deploy a template
 
-Save a deployment as an ARM template
+* Save a deployment as an ARM template
 
-Deploy virtual machine (VM) extensions
+##### Deploy virtual machine (VM) extensions
+
+https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 #### Create and configure VMs
 
-Create a VM
+* Create a VM
 
-Manage images by using the Azure Compute Gallery
+* Manage images by using the Azure Compute Gallery
 
-Configure Azure Disk Encryption
+* Configure Azure Disk Encryption
 
-Move VMs from one resource group to another
+* Move VMs from one resource group to another
 
-Manage VM sizes
+* Manage VM sizes
 
-Add data disks
+* Add data disks
 
-Configure VM network settings
+* Configure VM network settings
 
-Configure VM availability options
+* Configure VM availability options
 
-Deploy and configure VM scale sets
+##### Deploy and configure VM scale sets
+
+https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
+
+
 
 ####  Create and configure containers
 
@@ -203,15 +212,23 @@ Configure deployment settings
 
 #### Configure virtual networks
 
-Create and configure virtual networks and subnets
+##### Create and configure virtual networks and subnets
+##### Create and configure virtual network peering
 
-Create and configure virtual network peering
+https://follow-e-lo.com/2023/03/11/azure-lab-05-implement-intersite-connectivity/
 
-Configure private and public IP addresses
+##### Configure private and public IP addresses
 
-Configure user-defined network routes
+https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
-Configure Azure DNS
+##### Configure user-defined network routes
+
+https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
+
+##### Configure Azure DNS
+
+https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
+
 
 #### Configure secure access to virtual networks
 
@@ -227,7 +244,9 @@ Configure private endpoints
 
 #### Configure load balancing
 
-Configure Azure Application Gateway
+##### Configure Azure Application Gateway
+
+https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
 Configure an internal or public load balancer
 
@@ -239,7 +258,17 @@ Monitor on-premises connectivity
 
 Configure and use Azure Monitor for networks
 
-Use Azure Network Watcher
+##### Use Azure Network Watcher
+
+https://follow-e-lo.com/2023/02/11/azure-network-watcher/
+
+| Type | Description | Info
+| ---- | -------
+| Connection Monitor                | Monitor connectivity and latency between a VM and another network resource.                  | FTB
+| IP Flow                           | Allows you to detect traffic filtering issues at a VM level.                                 |  FTYBF
+| Next Hop                          | Helps you verify traffic routes and detect routing issues.                                   | TY
+| Connection Troubleshoot           | Enables a one-time connectivity and latency check between a VM and another network resource  | N
+| Packet Capture                    | Enables you to capture all traffic on a VM in your virtual network.                          | FTF
 
 Troubleshoot external networking
 
@@ -257,6 +286,8 @@ Configure and interpret metrics
 Configure Azure Monitor Logs
 
 Query and analyze logs
+
+https://follow-e-lo.com/2023/01/28/5-min-azure-functions-compute-with-powershell-log-analytics-workspace/
 
 Set up alerts and actions
 
