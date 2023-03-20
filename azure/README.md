@@ -39,6 +39,7 @@ New # : Creates a new resource or object. For example, New-AzResourceGroup creat
 
 Remove # : Deletes an existing resource or object. For example, Remove-AzResourceGroup deletes a specific resource group.
 
+Start, Stop, Restart, Suspend, Resume # 
 ```
 
 ## AZ-104: Manage identities and governance (15-20%)
