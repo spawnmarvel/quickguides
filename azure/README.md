@@ -23,8 +23,31 @@ https://learn.microsoft.com/en-us/certifications/azure-administrator/
 
 ### AZ-104: Implement and manage storage (15-20%)
 
-* TBD
-* TBD
+#### Configure access to storage
+#### Manage data in Azure storage accounts
+#### Configure Azure Files and Azure Blob Storage
+
+##### Create an Azure file share
+
+https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
+
+https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
+
+##### Deploy Azure File Sync
+
+Azure File Sync transforms Windows Server into a quick cache of your Azure file share.
+
+| Azure File Sync | Steps 
+| ---- | ----------- | ------- 
+| 1 | Deploy the storage sync service (Create a resource and then search for Azure File Sync.)
+| 2 | Install the Azure File sync agent (Azure File Sync agent (downloadable package) enables Win Server to synced with Azure fileshare.)                 
+| 3 | Register Windows server with Storage Sync Service (Establishes a trust relationship between your server (or cluster) and the Storage Sync Service)
+| 4 | Create a sync group and clound endpoint (A sync group defines the sync topology for a set of files.)
+| 5 | Create server endpoint (such as a folder on a server volume)
+                                  
+
+
+
 
 ### AZ-104: Deploy and manage Azure compute resources (20-25%)
 
