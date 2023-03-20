@@ -32,16 +32,20 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 
 ```
 Get 
-# : Retrieves information about a resource or object. For example, Get-AzResourceGroup retrieves information about a specific resource group.
+# : Retrieves information about a resource or object. 
+# For example, Get-AzResourceGroup retrieves information about a specific resource group.
 
 Set 
-# : Modifies the properties of an existing resource or object. For example, Set-AzVM modifies the properties of an existing virtual machine.
+# : Modifies the properties of an existing resource or object. 
+# For example, Set-AzVM modifies the properties of an existing virtual machine.
 
 New 
-# : Creates a new resource or object. For example, New-AzResourceGroup creates a new resource group.
+# : Creates a new resource or object. 
+# For example, New-AzResourceGroup creates a new resource group.
 
 Remove 
-# : Deletes an existing resource or object. For example, Remove-AzResourceGroup deletes a specific resource group.
+# : Deletes an existing resource or object. 
+# For example, Remove-AzResourceGroup deletes a specific resource group.
 
 Start, Stop, Restart, Suspend, Resume # 
 ```
