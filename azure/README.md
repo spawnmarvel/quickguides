@@ -75,9 +75,6 @@ Manage costs by using alerts, budgets, and recommendations
 
 Configure management groups
 
-* TBD
-* TBD
-
 ### AZ-104: Implement and manage storage (15-20%)
 
 #### Configure access to storage
@@ -137,11 +134,11 @@ Azure File Sync transforms Windows Server into a quick cache of your Azure file 
 
 #### Automate deployment of resources by using templates
 
-* Modify an ARM template
+Modify an ARM template
 
-* Deploy a template
+Deploy a template
 
-* Save a deployment as an ARM template
+Save a deployment as an ARM template
 
 ##### Deploy virtual machine (VM) extensions
 
@@ -149,21 +146,26 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 #### Create and configure VMs
 
-* Create a VM
+Create a VM
 
-* Manage images by using the Azure Compute Gallery
+Manage images by using the Azure Compute Gallery
 
-* Configure Azure Disk Encryption
+Configure Azure Disk Encryption
 
-* Move VMs from one resource group to another
+##### Move VMs from one resource group to another
 
-* Manage VM sizes
+* A virtual machine that is integrated with a key vault to implement Azure Disk Encryption for Linux VMs or Azure Disk Encryption for Windows VMs can be moved to another resource group when it is in deallocated state.
+* 
 
-* Add data disks
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations?tabs=azure-cli
 
-* Configure VM network settings
+Manage VM sizes
 
-* Configure VM availability options
+Add data disks
+
+Configure VM network settings
+
+Configure VM availability options
 
 ##### Deploy and configure VM scale sets
 
@@ -204,9 +206,6 @@ Configure backup for an App Service
 Configure networking settings
 
 Configure deployment settings
-
-* TBD
-* TBD
 
 ### AZ-104: Configure and manage virtual networking (20-25%)
 
@@ -260,8 +259,6 @@ Configure and use Azure Monitor for networks
 
 ##### Use Azure Network Watcher
 
-https://follow-e-lo.com/2023/02/11/azure-network-watcher/
-
 | Type | Description | Info
 | ---- | ------------| -------
 | Connection Monitor                | Monitor connectivity and latency between a VM and another network resource.                  | 
@@ -270,12 +267,11 @@ https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 | Connection Troubleshoot           | Enables a one-time connectivity and latency check between a VM and another network resource  | 
 | Packet Capture                    | Enables you to capture all traffic on a VM in your virtual network.                          | 
 
+https://follow-e-lo.com/2023/02/11/azure-network-watcher/
+
 Troubleshoot external networking
 
 Troubleshoot virtual network connectivity
-
-* TBD
-* TBD
 
 ### AZ-104: Monitor and back up Azure resources (10-15%)
 
