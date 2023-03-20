@@ -53,23 +53,19 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * Recovery service vault:
 * Default backup configuration is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
 * Default security configuration is soft delete enabled
-
-
-| VM Back up   | ------- | File and folder backup
-
-| VM Back up   | ------- | File and folder backup
+* Must be in same region as rg's
 
 
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
-| 1 | Do steps | 1 | Do Steps
-| 2 | Do steps | 2 | Do Steps
-| 3 | Do steps | 3 | Do Steps
-| 4 | Do steps | 4 | Do Steps
-| 5 | Do steps | 5 | Do Steps
-| 6 | Do steps | 6 | Do Steps
-| 7 | Do steps | 7 | Do Steps
-| 8 | Do steps | 8 | Do Steps
+| 1 | Recovery service vault is created | 1 | Do Steps
+| 2 | Go to backup                      | 2 | Do Steps
+| 3 | Choose VM Azure                   | 3 | Do Steps
+| 4 | Policy schedule for bck           | 4 | Do Steps
+| 5 | Backup now                        | 5 | Do Steps
+| 6 | Do steps                          | 6 | Do Steps
+| 7 | Do steps                          | 7 | Do Steps
+| 8 | Do steps                          | 8 | Do Steps
 
 
 
