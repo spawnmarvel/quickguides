@@ -80,9 +80,9 @@ Start, Stop, Restart, Suspend, Resume #
 
 ## 
 ## Skills measured
-Manage Azure identities and governance (15–20%) :white_circle:
+Manage Azure identities and governance (15–20%) :large_orange_diamond:
 
-Implement and manage storage (15–20%) :white_circle:
+Implement and manage storage (15–20%) :large_orange_diamond:
 
 Deploy and manage Azure compute resources (20–25%) :red_circle:
 
