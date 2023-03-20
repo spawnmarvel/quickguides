@@ -263,7 +263,7 @@ Configure and use Azure Monitor for networks
 https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
 | Type | Description | Info
-| ---- | -------
+| ---- | ------------| -------
 | Connection Monitor                | Monitor connectivity and latency between a VM and another network resource.                  | FTB
 | IP Flow                           | Allows you to detect traffic filtering issues at a VM level.                                 |  FTYBF
 | Next Hop                          | Helps you verify traffic routes and detect routing issues.                                   | TY
