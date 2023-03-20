@@ -6,7 +6,7 @@ Microsoft Certified: Azure Administrator
 
 Azure Administrator Cheat Sheet
 
-#### Links
+## Links
 
 Learn
 
@@ -23,14 +23,14 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 
 
 
-### AZ-104: Prerequisites for Azure administrators
+## AZ-104: Prerequisites for Azure administrators
 
 * TBD
 * TBD
 
-### AZ-104: Manage identities and governance (15-20%)
+## AZ-104: Manage identities and governance (15-20%)
 
-#### Manage Azure AD objects
+### Manage Azure AD objects
 
 Create users and groups
 
@@ -51,7 +51,7 @@ Configure self-service password reset
 https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
-#### Manage access control
+### Manage access control
 
 Create custom role-based access control (RBAC) and Azure AD roles
 
@@ -59,7 +59,7 @@ Provide access to Azure resources by assigning roles at different scopes
 
 Interpret access assignments
 
-#### Manage Azure subscriptions and governance
+### Manage Azure subscriptions and governance
 
 Configure and manage Azure Policy
 
@@ -75,9 +75,9 @@ Manage costs by using alerts, budgets, and recommendations
 
 Configure management groups
 
-### AZ-104: Implement and manage storage (15-20%)
+## AZ-104: Implement and manage storage (15-20%)
 
-#### Configure access to storage
+### Configure access to storage
 
 Configure network access to storage accounts
 
@@ -93,7 +93,7 @@ Configure Azure AD authentication for a storage account
 
 Configure storage encryption
 
-#### Manage data in Azure storage accounts
+### Manage data in Azure storage accounts
 
 Create import and export jobs
 
@@ -103,9 +103,9 @@ Implement Azure Storage redundancy
 
 Configure object replication
 
-#### Configure Azure Files and Azure Blob Storage
+### Configure Azure Files and Azure Blob Storage
 
-##### Create an Azure file share
+#### Create an Azure file share
 
 https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
 
@@ -117,7 +117,7 @@ Configure storage tiers
 
 Configure blob lifecycle management
 
-##### Deploy Azure File Sync
+#### Deploy Azure File Sync
 
 Azure File Sync transforms Windows Server into a quick cache of your Azure file share.
 
@@ -130,9 +130,9 @@ Azure File Sync transforms Windows Server into a quick cache of your Azure file 
 | 5 | Create server endpoint (such as a folder on a server volume)
                                   
 
-### AZ-104: Deploy and manage Azure compute resources (20-25%)
+## AZ-104: Deploy and manage Azure compute resources (20-25%)
 
-#### Automate deployment of resources by using templates
+### Automate deployment of resources by using templates
 
 Modify an ARM template
 
@@ -140,11 +140,11 @@ Deploy a template
 
 Save a deployment as an ARM template
 
-##### Deploy virtual machine (VM) extensions
+#### Deploy virtual machine (VM) extensions
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
-#### Create and configure VMs
+### Create and configure VMs
 
 Create a VM
 
@@ -152,7 +152,7 @@ Manage images by using the Azure Compute Gallery
 
 Configure Azure Disk Encryption
 
-##### Move VMs from one resource group to another
+#### Move VMs from one resource group to another
 
 * A virtual machine that is integrated with a key vault to implement Azure Disk Encryption for Linux VMs or Azure Disk Encryption for Windows VMs can be moved to another resource group when it is in deallocated state.
 * 
@@ -167,13 +167,13 @@ Configure VM network settings
 
 Configure VM availability options
 
-##### Deploy and configure VM scale sets
+#### Deploy and configure VM scale sets
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 
 
-####  Create and configure containers
+###  Create and configure containers
 
 Configure sizing and scaling for Azure Container Instances
 
@@ -189,7 +189,7 @@ Configure network connections for AKS
 
 Upgrade an AKS cluster
 
-####  Create and configure an Azure App Service
+###  Create and configure an Azure App Service
 
 Create an App Service plan
 
@@ -207,29 +207,29 @@ Configure networking settings
 
 Configure deployment settings
 
-### AZ-104: Configure and manage virtual networking (20-25%)
+## AZ-104: Configure and manage virtual networking (20-25%)
 
-#### Configure virtual networks
+### Configure virtual networks
 
-##### Create and configure virtual networks and subnets
-##### Create and configure virtual network peering
+#### Create and configure virtual networks and subnets
+#### Create and configure virtual network peering
 
 https://follow-e-lo.com/2023/03/11/azure-lab-05-implement-intersite-connectivity/
 
-##### Configure private and public IP addresses
+#### Configure private and public IP addresses
 
 https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
-##### Configure user-defined network routes
+#### Configure user-defined network routes
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
-##### Configure Azure DNS
+#### Configure Azure DNS
 
 https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 
-#### Configure secure access to virtual networks
+### Configure secure access to virtual networks
 
 Create and configure network security groups (NSGs) and application security groups (ASGs)
 
@@ -241,9 +241,9 @@ Configure service endpoints on subnets
 
 Configure private endpoints
 
-#### Configure load balancing
+### Configure load balancing
 
-##### Configure Azure Application Gateway
+#### Configure Azure Application Gateway
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
@@ -251,13 +251,13 @@ Configure an internal or public load balancer
 
 Troubleshoot load balancing
 
-#### Monitor virtual networking
+### Monitor virtual networking
 
 Monitor on-premises connectivity
 
 Configure and use Azure Monitor for networks
 
-##### Use Azure Network Watcher
+#### Use Azure Network Watcher
 
 | Type | Description | Info
 | ---- | ------------| -------
@@ -273,9 +273,9 @@ Troubleshoot external networking
 
 Troubleshoot virtual network connectivity
 
-### AZ-104: Monitor and back up Azure resources (10-15%)
+## AZ-104: Monitor and back up Azure resources (10-15%)
 
-#### Monitor resources by using Azure Monitor
+### Monitor resources by using Azure Monitor
 
 Configure and interpret metrics
 
@@ -289,14 +289,14 @@ Set up alerts and actions
 
 Configure monitoring of VMs, storage accounts, and networks by using VM insights
 
-#### Implement backup and recovery
+### Implement backup and recovery
 
-##### Create an Azure Recovery Services vault
+### Create an Azure Recovery Services vault
 
 Create an Azure Backup vault
 
-##### Create and configure backup policy
-##### Perform backup and restore operations by using Azure Backup
+#### Create and configure backup policy
+#### Perform backup and restore operations by using Azure Backup
 
 https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
 
@@ -308,7 +308,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 * * Default security configuration is soft delete enabled
 * * Must be in same region as rg's
 
-##### Backup
+#### Backup
 
 | VM Back Up | Steps | File and folder backup | Steps
 | ---- | ----------- | ------- | -----------
@@ -321,7 +321,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | 7 |                                   | 7 | Policy schedule for bck
 | 8 |                                   | 8 | Backup now 
 
-##### Backup recovery
+#### Backup recovery
 
 | VM recovery snapshop | Steps | File and folder recovery | Steps
 | ---- | ----------- | ------- | -----------
