@@ -50,8 +50,17 @@ https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-be
 https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 
-* Recovery service vault, default backup is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
-* TBD
+* Recovery service vault:
+* Default backup configuration is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
+* Default security configuration is soft delete enabled
+
+* VM Back up
+1. Recovery service vault
+2. Backup
+3. Choose VM Azure
+5. Policy
+6. Backup now
+
 
 
 ### ps1 / cli / aks / cmd
