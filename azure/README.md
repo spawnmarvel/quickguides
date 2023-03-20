@@ -206,7 +206,13 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-o
 
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations?tabs=azure-cli
 
-Manage VM sizes
+#### Manage VM sizes
+
+* Change the VM size
+* Pick a new size from the list of available sizes and then select Resize.
+* If the virtual machine is currently running, changing its size will cause it to restart.
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/resize-vm?tabs=portal
 
 #### Add data disks
 
