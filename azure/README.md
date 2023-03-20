@@ -4,27 +4,49 @@ Microsoft Certified: Azure Administrator Associate
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Azure Administrator Cheat Sheet
 
-## Links
+#### Links
 
 https://learn.microsoft.com/en-us/certifications/azure-administrator/
 
 
-### Dependencies
+### AZ-104: Prerequisites for Azure administrators
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* TBD
+* TBD
 
-### Installing
+### AZ-104: Manage identities and governance in Azure
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* TBD
+* TBD
 
-### Executing program
+### AZ-104: Implement and manage storage in Azure
 
-* How to run the program
+* TBD
+* TBD
+
+### AZ-104: Deploy and manage Azure compute resources
+
+* TBD
+* TBD
+
+### AZ-104: Configure and manage virtual networks for Azure administrators
+
+* TBD
+* TBD
+
+### AZ-104: Monitor and back up Azure resources
+
+* TBD
+* TBD
+
+
+### ps1 / cli / aks / cmd
+
+* TBD
 * Step-by-step bullets
+
 ```
 code blocks for commands
 ```
