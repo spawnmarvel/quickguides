@@ -85,7 +85,7 @@ Start, Stop, Restart, Suspend, Resume #
 
 ! Implement and manage storage (15–20%)
 
-- Deploy and manage Azure compute resources (20–25%)
+> __Warning__ Deploy and manage Azure compute resources (20–25%)
 
 - Configure and manage virtual networking (20-25%)
 
