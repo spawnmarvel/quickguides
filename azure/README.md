@@ -25,8 +25,21 @@ https://www.testpreptraining.com/blog/tips-and-tricks-to-pass-the-microsoft-azur
 
 ## AZ-104: Prerequisites for Azure administrators
 
+### ps1 / cli / aks / cmd
+
 * TBD
-* TBD
+* Step-by-step bullets
+
+```
+Get # : Retrieves information about a resource or object. For example, Get-AzResourceGroup retrieves information about a specific resource group.
+
+Set # : Modifies the properties of an existing resource or object. For example, Set-AzVM modifies the properties of an existing virtual machine.
+
+New # : Creates a new resource or object. For example, New-AzResourceGroup creates a new resource group.
+
+Remove # : Deletes an existing resource or object. For example, Remove-AzResourceGroup deletes a specific resource group.
+
+```
 
 ## AZ-104: Manage identities and governance (15-20%)
 
@@ -185,9 +198,27 @@ Configure storage for Azure Kubernetes Service (AKS)
 
 Configure scaling for AKS
 
+### ps1 / cli / aks / cmd
+
+* TBD
+* Step-by-step bullets
+
+```
+code blocks for commands
+```
+
 Configure network connections for AKS
 
 Upgrade an AKS cluster
+
+### ps1 / cli / aks / cmd
+
+* TBD
+* Step-by-step bullets
+
+```
+code blocks for commands
+```
 
 ###  Create and configure an Azure App Service
 
@@ -351,11 +382,3 @@ Perform failover to a secondary region by using Azure Site Recovery
 Configure and review backup reports
 
 
-### ps1 / cli / aks / cmd
-
-* TBD
-* Step-by-step bullets
-
-```
-code blocks for commands
-```
