@@ -212,6 +212,7 @@ Configure Azure Blob Storage
 Configure storage tiers
 
 * Type of storage account, Supported storage services, Redundancy options and usage
+
 https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview
 
 Configure blob lifecycle management
