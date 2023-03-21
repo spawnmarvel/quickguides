@@ -53,7 +53,7 @@ Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
 | SLA | https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics | 99% = 1.68 h, 99.999% = 6 sec week |
 
 
-### ps1 / cli
+#### ps1 / cli
 
 * TBD
 * Step-by-step bullets
@@ -302,7 +302,7 @@ Configure storage for Azure Kubernetes Service (AKS)
 
 https://follow-e-lo.com/2023/03/20/az-lab-09c-implement-azure-kubernetes-service/
 
-### ps1 / cli / aks / cmd
+#### ps1 / cli / aks / cmd
 
 * TBD
 * Step-by-step bullets
@@ -386,11 +386,15 @@ https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler
 
 
 
-Configure network connections for AKS
+#### Configure network connections for AKS
+
+https://learn.microsoft.com/en-us/azure/aks/concepts-network
+
+
 
 Upgrade an AKS cluster
 
-### ps1 / cli / aks / cmd
+#### ps1 / cli / aks / cmd
 
 * TBD
 * Step-by-step bullets
