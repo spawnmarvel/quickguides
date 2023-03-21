@@ -1,0 +1,43 @@
+[ 
+
+  {rabbitmq_shovel,
+  [ {shovels, [ {shovel_put_B,
+                  [ {source,
+                      [ {protocol, amqp091},
+                        {uris, [ "amqp://" ]},
+                        {declarations, [ {'queue.declare',
+                                            [{queue, <<"TestfromB">> },  durable]},
+				            {'exchange.declare',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {type, <<"topic">>},
+                                              durable
+                                            ]},
+                                          {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"TestfromB">>},
+					 {routing_key, <<"TestfromBroute">>}
+                                            ]}
+                                          ]},
+                        {queue, <<"TestfromB">>},
+                        {prefetch_count, 1}
+                      ]},
+                    {destination,
+                      [ {protocol, amqp091},
+                        {uris, ["amqps://ShoveluserB:pass@ip-adr:5671"]},
+                        {declarations, [
+					{'queue.declare',
+                                            [{queue, <<"TestfromB">> },  durable]},
+					 {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"TestfromB">>},
+					      {routing_key, <<"TestfromBroute">>}
+                                            ]}
+					 ]},
+                        {publish_properties, [ {delivery_mode, 2} ]},
+                        {add_forward_headers, true}
+                          ]},
+                    {ack_mode, on_confirm},
+                    {reconnect_delay, 15}
+                  ]}
+              ]}
+  ]}].
