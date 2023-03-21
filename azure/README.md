@@ -135,7 +135,7 @@ Configure and manage Azure Policy
 https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
 
-Configure resource locks
+#### Configure resource locks
 
 * You can use delete locks to block the deletion
 * * virtual machines, subscriptions and resource groups
@@ -151,11 +151,15 @@ https://follow-e-lo.com/2022/12/20/az-900-fundamentals/
 
 
 
-Apply and manage tags on resources
+#### Apply and manage tags on resources
 
-Manage resource groups
+Done it
 
-Manage subscriptions
+#### Manage resource groups
+
+Done it
+
+#### Manage subscriptions
 
 Manage costs by using alerts, budgets, and recommendations
 
