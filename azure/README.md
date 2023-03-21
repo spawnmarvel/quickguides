@@ -128,7 +128,6 @@ Interpret access assignments
 
 Configure and manage Azure Policy
 
-* Management groups provide a governance scope above subscriptions. 
 * Policy
 * With an initiative definition, you can group several policy definitions to achieve one overarching goal. 
 
@@ -163,7 +162,13 @@ Done it
 
 Manage costs by using alerts, budgets, and recommendations
 
-Configure management groups
+#### Configure management groups
+
+* Management groups provide a governance scope above subscriptions. 
+* Policy
+* With an initiative definition, you can group several policy definitions to achieve one overarching goal. 
+
+https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
 ## AZ-104: Implement and manage storage (15-20%)
 
