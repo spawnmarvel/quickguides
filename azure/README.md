@@ -128,6 +128,10 @@ Configure and manage Azure Policy
 
 Configure resource locks
 
+* You can use delete locks to block the deletion
+* * virtual machines, subscriptions and resource groups
+
+
 Apply and manage tags on resources
 
 Manage resource groups
@@ -165,6 +169,9 @@ Manage data by using Azure Storage Explorer and AzCopy
 Implement Azure Storage redundancy
 
 Configure object replication
+
+* Versioning must be enabled for both the source and destination accounts.
+
 
 ### Configure Azure Files and Azure Blob Storage
 
@@ -211,7 +218,15 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 #### Create a VM
 
-Done it 100 times
+* Done it 100 times
+
+* You need to use VM1 as a template to create a new Azure virtual machine. Which three methods can you use to complete the task?
+* * From RG source, select Export template, select download, and then, from Azure Cloud Shell run the New-AzResourceGroupDeployment
+* * From Azure Cloud Shell, run the Save-AzDeploymentTemplate and New-AzResourceGroupDeployment cmd
+* * From VM Source, select Export template, and then select Deploy
+
+* You need to move the virtual machine to a different host to avoid a service interruption.
+* * Redeploy the VM
 
 #### Manage images by using the Azure Compute Gallery
 
@@ -376,14 +391,16 @@ nginx-deployment-85c6d5f6dd-wmjn8   1/1     Running   0          26s
 nginx-deployment-85c6d5f6dd-xrbhp   1/1     Running   0          19m
 nginx-deployment-85c6d5f6dd-zxvgf   1/1     Running   0          26s
 
-
-
-
-
 ```
 
 https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler
 
+
+* You have an Azure subscription that contains an Azure Kubernetes Service (AKS) cluster named AKS1. The autoscaling feature is enabled.
+* You need to configure the minimum and maximum node counts for AKS1.
+* Set-AzAKsCluster
+* * Set-AzAKsCluster: Configures minimum and maximum node values for AKS autoscaling
+* * Update-AzAksNodePool: Updates a node pool in a managed cluster
 
 
 #### Configure network connections for AKS
@@ -462,6 +479,13 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 Create and configure network security groups (NSGs) and application security groups (ASGs)
 
+* NSG
+* * 
+
+* ASG
+* * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
+* * and then use the group as the source or destination in an NSG rule. The network interfaces must be in the same virtual network.
+
 Evaluate effective security rules
 
 Implement Azure Bastion
@@ -524,10 +548,15 @@ Configure monitoring of VMs, storage accounts, and networks by using VM insights
 
 ### Create an Azure Recovery Services vault
 
-* Recovery service vault:
+* Recovery service vault create:
 * * Default backup configuration is GEO-redundant (3 copies within singel location in primary region, then 3 copies within secondary location, 16 9's )
 * * Default security configuration is soft delete enabled
 * * Must be in same region as rg's
+
+* Recovery service vault delete:
+* * Stop the backups
+* * Disable the soft delete feature and delete all data
+* * Permanently remove any items in the soft delete state
 
 ### Create an Azure Backup vault
 
@@ -576,6 +605,9 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 Configure Azure Site Recovery for Azure resources
 
 Perform failover to a secondary region by using Azure Site Recovery
+
+* You need to reprotect VM1 after the failover so that VM1 will replicate back to the primary region.
+* * Before you begin, you must ensure that the virtual machine status is Failover committed. This will ensure replication back to the primary region.
 
 Configure and review backup reports
 
