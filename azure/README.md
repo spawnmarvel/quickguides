@@ -105,7 +105,9 @@ Manage user and group properties
 
 Manage device settings and device identity
 
-Perform bulk updates
+##### Perform bulk updates
+
+https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
 
 Manage guest accounts
 
@@ -126,10 +128,27 @@ Interpret access assignments
 
 Configure and manage Azure Policy
 
+* Management groups provide a governance scope above subscriptions. 
+* Policy
+* With an initiative definition, you can group several policy definitions to achieve one overarching goal. 
+
+https://follow-e-lo.com/2023/02/07/azure-management-groups/
+
+
 Configure resource locks
 
 * You can use delete locks to block the deletion
 * * virtual machines, subscriptions and resource groups
+
+* Types of Resource Locks
+* * Delete means authorized users can still read and modify a resource, but they can’t delete the resource.
+* * ReadOnly, The resource group is read only and tags on the resource group can’t be modified.
+
+* To modify a locked resource, you must first remove the lock. After you remove the lock, you can apply any action you have permissions to perform. 
+* * Resource locks apply regardless of RBAC permissions.
+
+https://follow-e-lo.com/2022/12/20/az-900-fundamentals/
+
 
 
 Apply and manage tags on resources
