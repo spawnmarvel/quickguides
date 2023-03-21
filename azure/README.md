@@ -388,6 +388,21 @@ https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler
 
 #### Configure network connections for AKS
 
+* You can connect to and expose applications internally or externally.
+* You can build highly available applications by load balancing your applications.
+
+From the Cloud Shell pane, run the following to make the pod available from Internet:
+
+#### ps1 / cli / aks / cmd
+```
+kubectl create deployment nginx-deployment --image=nginx
+# From the Cloud Shell pane, run the following to deploy the nginx image from the Docker Hub:
+
+kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
+# service/nginx-deployment exposed
+
+```
+
 https://learn.microsoft.com/en-us/azure/aks/concepts-network
 
 
