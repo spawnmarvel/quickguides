@@ -569,17 +569,23 @@ Troubleshoot virtual network connectivity
 
 ### Monitor resources by using Azure Monitor
 
-Configure and interpret metrics
-
-Configure Azure Monitor Logs
+#### Configure and interpret metrics
 
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
-Query and analyze logs
+#### Configure Azure Monitor Logs
+
+https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
+
+#### Query and analyze logs
+
+https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
 https://follow-e-lo.com/2023/01/28/5-min-azure-functions-compute-with-powershell-log-analytics-workspace/
 
-Set up alerts and actions
+#### Set up alerts and actions
+
+https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
 Configure monitoring of VMs, storage accounts, and networks by using VM insights
 
