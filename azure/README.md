@@ -223,8 +223,9 @@ Configure blob lifecycle management
 
 Azure File Sync transforms Windows Server into a quick cache of your Azure file share.
 
-https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-infrastructure/6-implement-azure-file-synchronization
+![Implement Azure File Sync manually ](https://github.com/spawnmarvel/quickguides/blob/main/azure/az-file-sync.jpg)
 
+https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-infrastructure/6-implement-azure-file-synchronization
 
 
 | Azure File Sync | Steps 
