@@ -294,6 +294,12 @@ Configure storage for Azure Kubernetes Service (AKS)
 
 #### Configure scaling for AKS
 
+* A Pod always runs on a Node.
+* A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. Each Node is managed by the control plane
+
+* Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
+* Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
+
 https://follow-e-lo.com/2023/03/20/az-lab-09c-implement-azure-kubernetes-service/
 
 ### ps1 / cli / aks / cmd
@@ -335,6 +341,44 @@ az aks update \
   --update-cluster-autoscaler \
   --min-count 1 \
   --max-count 5
+
+# From the Cloud Shell pane, and run the following to scale the deployment by increasing of the number of pods to 2:
+kubectl scale --replicas=2 deployment/nginx-deployment
+
+kubectl get pods
+
+NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-85c6d5f6dd-p4b29   1/1     Running   0          23s
+nginx-deployment-85c6d5f6dd-xrbhp   1/1     Running   0          9m29s
+
+# From the Cloud Shell pane, run the following to scale out the cluster by increasing the number of nodes to 2:
+
+az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
+
+kubectl get nodes
+
+NAME                                STATUS   ROLES   AGE     VERSION
+aks-agentpool-37282351-vmss000000   Ready    agent   28m     v1.24.6
+aks-agentpool-37282351-vmss000001   Ready    agent   2m58s   v1.24.6
+
+# From the Cloud Shell pane, run the following to scale the deployment:
+
+kubectl scale --replicas=10 deployment/nginx-deployment
+
+
+nginx-deployment-85c6d5f6dd-lqvdj   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-nrc9n   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-p4b29   1/1     Running   0          10m
+nginx-deployment-85c6d5f6dd-pbxqk   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-prqw8   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-tcrjs   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-wmjn8   1/1     Running   0          26s
+nginx-deployment-85c6d5f6dd-xrbhp   1/1     Running   0          19m
+nginx-deployment-85c6d5f6dd-zxvgf   1/1     Running   0          26s
+
+
+
+
 
 ```
 
