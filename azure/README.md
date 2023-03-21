@@ -225,7 +225,7 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 * * From Azure Cloud Shell, run the Save-AzDeploymentTemplate and New-AzResourceGroupDeployment cmd
 * * From VM Source, select Export template, and then select Deploy
 
-* You need to move the virtual machine to a different host to avoid a service interruption.
+* You need to move the virtual machine to a different host to avoid a service interruption?
 * * Redeploy the VM
 
 #### Manage images by using the Azure Compute Gallery
