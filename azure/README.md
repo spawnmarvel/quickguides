@@ -120,7 +120,12 @@ https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-a
 
 Create custom role-based access control (RBAC) and Azure AD roles
 
-Provide access to Azure resources by assigning roles at different scopes
+#### Provide access to Azure resources by assigning roles at different scopes
+
+* 4 scopes
+* * Broad to narrow: management group, subscription, resource group, and resource.
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
 
 Interpret access assignments
 
