@@ -313,7 +313,6 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-o
 
 
 
-
 #### Move VMs from one resource group to another
 
 * A virtual machine that is integrated with a key vault to implement Azure Disk Encryption for Linux VMs or Azure Disk Encryption for Windows VMs can be moved to another resource group when it is in deallocated state.
@@ -496,8 +495,10 @@ code blocks for commands
 
 ###  Create and configure an Azure App Service
 
-Create an App Service plan
+##### Create an App Service plan
 
+* 1 For Windows (so Windows is the only alternative if using ASP.NET)
+* 1 For Linux (.Net core, Pyton, Ruby, PHP etc)
 Configure scaling settings in an App Service plan
 
 Create an App Service
