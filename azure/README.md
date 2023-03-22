@@ -601,6 +601,10 @@ https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
 #### Query and analyze logs
 
+* Write your first query with Kusto Query Language
+
+https://learn.microsoft.com/en-us/training/modules/write-first-query-kusto-query-language/
+
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
 https://follow-e-lo.com/2023/01/28/5-min-azure-functions-compute-with-powershell-log-analytics-workspace/
