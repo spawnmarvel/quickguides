@@ -101,8 +101,15 @@ Create users and groups
 
 * The recommended way to enable and use Azure AD Multi-Factor Authentication is with Conditional Access policies.
 * Conditional Access policies can be applied to specific users, groups, and apps.
-* 
+
 https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
+
+
+* Enable cloud sync self-service password reset writeback to an on-premises environment
+* With Azure Active Directory (Azure AD) self-service password reset (SSPR), users can update their password or unlock their account using a web browser.
+
+https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr-writeback
+
 
 
 Manage licenses in Azure AD
