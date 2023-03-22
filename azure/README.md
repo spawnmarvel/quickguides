@@ -97,6 +97,14 @@ Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 
 Create users and groups
 
+##### MFA
+
+* The recommended way to enable and use Azure AD Multi-Factor Authentication is with Conditional Access policies.
+* Conditional Access policies can be applied to specific users, groups, and apps.
+* 
+https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
+
+
 Manage licenses in Azure AD
 
 Create administrative units
