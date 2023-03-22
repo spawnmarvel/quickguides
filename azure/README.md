@@ -118,7 +118,25 @@ Create administrative units
 
 Manage user and group properties
 
+* You need to grant several users that must belong to the same Azure group temporary access to the Microsoft SharePoint document library. 
+* The group must automatically be deleted after 180 days for compliance purposes.
+* * Set up a dynamic membership on Microsoft 365 groups.
+* * Set up an assigned membership on Microsoft 365 groups.
+* * Set up an assigned membership on security groups and Set up a dynamic membership on security groups are incorrect because security groups can only be used for devices or users and not for groups.
+
+* User 1, User administrator:
+* * Can create users and manage all aspects of users with some restrictions, and can update password expiration policies, can create and manage all groups.
+* User 2, Cloud device administrator:
+* * Can enable, disable, and delete devices in Azure AD. The role does not grant permission to manage any other properties on the device.
+* User 3, Security administrator:
+* * has permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Active Directory Authentication, Azure Information Protection, and Office 365 Security & Compliance Center.
+* * 
+
+
 Manage device settings and device identity
+
+* You plan to add a local administrator to manage all the computers and devices that will join your domain?
+* * Configure the settings
 
 ##### Perform bulk updates
 
@@ -229,6 +247,10 @@ https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
 
 Configure Azure Blob Storage
 
+* Encryption scope enables you to manage encryption at the level of an individual blob or container. 
+* You can use encryption scopes to create secure boundaries between data that resides in the same storage account but belongs to different customers.
+* https://learn.microsoft.com/en-us/azure/storage/blobs/encryption-scope-overview
+
 Configure storage tiers
 
 * Type of storage account, Supported storage services, Redundancy options and usage
@@ -242,6 +264,8 @@ Configure blob lifecycle management
 #### Deploy Azure File Sync
 
 Azure File Sync transforms Windows Server into a quick cache of your Azure file share.
+* Azure File Sync will not overwrite any files in your endpoints. 
+* It will simply append a conflict number to the filename of the older file, while the most recent change will retain the original file name.
 
 ![Implement Azure File Sync manually ](https://github.com/spawnmarvel/quickguides/blob/main/azure/az-file-sync.jpg)
 
@@ -286,6 +310,11 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 * You need to move the virtual machine to a different host to avoid a service interruption?
 * * Redeploy the VM
+
+* You have Virtual machine, Virtual network, Recovery Services vault, and Storage account and plan to move all?
+* * Take note that when you move a resource to a new resource group or subscription, the location of the resource won’t change.
+* * Virtual machine, Virtual network, Recovery Services vault, and Storage account can be moved.
+* * https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources
 
 #### Manage images by using the Azure Compute Gallery
 
@@ -350,6 +379,12 @@ Configure VM network settings
 Configure VM availability options
 
 #### Deploy and configure VM scale sets
+
+* A proximity placement group is a logical grouping used to make sure that Azure compute resources are physically located close to each other. 
+* Proximity placement groups are useful for workloads where low latency is a requirement. 
+* When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, 
+* resulting in lower and deterministic latency for your applications.
+* https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
@@ -541,7 +576,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 Create and configure network security groups (NSGs) and application security groups (ASGs)
 
 * NSG
-* * 
+* * Protocol, any allows all, else UDP, TCP.
 
 * ASG
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
@@ -607,6 +642,7 @@ https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 * * Select columns to return by using the project operator.
 * * Filter data by using the where operator.
 * * Reorder returned data by using the sort operator.
+* *  This query searches the “TableName” table for records that contains the word “value”: search in (TableName) "value"
 
 https://learn.microsoft.com/en-us/training/modules/write-first-query-kusto-query-language/
 
