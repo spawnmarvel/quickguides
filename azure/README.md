@@ -499,6 +499,7 @@ code blocks for commands
 
 * 1 For Windows (so Windows is the only alternative if using ASP.NET)
 * 1 For Linux (.Net core, Pyton, Ruby, PHP etc)
+
 Configure scaling settings in an App Service plan
 
 Create an App Service
