@@ -602,6 +602,11 @@ https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 #### Query and analyze logs
 
 * Write your first query with Kusto Query Language
+* * Count the number of records by using the count operator.
+* * Return a specific number or rows by using the take operator.
+* * Select columns to return by using the project operator.
+* * Filter data by using the where operator.
+* * Reorder returned data by using the sort operator.
 
 https://learn.microsoft.com/en-us/training/modules/write-first-query-kusto-query-language/
 
