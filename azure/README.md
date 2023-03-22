@@ -635,6 +635,9 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 ![Backup vm ](https://github.com/spawnmarvel/quickguides/blob/main/azure/backup-vm.jpg)
 https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
 
+![Backup vm files and folders ]
+https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
+
 
 
 #### Backup recovery
