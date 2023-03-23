@@ -79,6 +79,8 @@ Start, Stop, Restart, Suspend, Resume #
 ```
 
 #### Get started with AzCopy
+AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
+
 
 ```
 azcopy copy	
@@ -99,6 +101,21 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#tr
 ```
 #### Transfer data with AzCopy and file storage
 
+```
+
+azcopy copy '<local-file-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-name><SAS-token>'
+# Upload a file
+
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name><SAS-token>' --recursive
+# Upload a directory
+
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-or-directory-name><SAS-token>' --include-path <semicolon-separated-file-list>
+# Upload specific files
+
+azcopy copy 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-path><SAS-token>' '<local-file-path>'
+# Download a file
+
+```
 https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-files
 
 ## 
