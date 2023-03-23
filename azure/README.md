@@ -662,7 +662,7 @@ Configure and use Azure Monitor for networks
 
 | Type | Description | Info
 | ---- | ------------| -------
-| Connection Monitor                | Monitor connectivity and latency between a VM and another network resource.                  | 
+| Connection Monitor                | Monitor connectivity and latency between a VM and another network resource, and to track the average round-trip time (RTT)                 | 
 | IP Flow                           | Allows you to detect traffic filtering issues at a VM level.                                 |  Protocol, local IP, remote IP, local port, and a remote port.
 | Next Hop                          | Helps you verify traffic routes and detect routing issues.                                   |
 | Connection Troubleshoot           | Enables a one-time connectivity and latency check between a VM and another network resource  | 
