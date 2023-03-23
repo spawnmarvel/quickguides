@@ -696,6 +696,9 @@ https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 * * Reorder returned data by using the sort operator.
 * *  This query searches the “TableName” table for records that contains the word “value”: search in (TableName) "value"
 
+* There is a requirement that requires you to configure Azure Backup reports using XXBackup1 (RSV in Southeast Asia) to determine which backup items consume the most storage.
+* Take note that when you create a Log Analytics workspace, it does not matter if the vault is located in a different region or subscription.
+
 https://learn.microsoft.com/en-us/training/modules/write-first-query-kusto-query-language/
 
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
