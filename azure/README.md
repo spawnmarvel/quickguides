@@ -83,9 +83,15 @@ Start, Stop, Restart, Suspend, Resume #
 ```
 azcopy copy	
 # Copies source data to a destination location
-azcopy login	Logs in to Azure Active Directory to access Azure Storage resources.
-# azcopy make	Creates a container or file share.
+
+azcopy login
+# Logs in to Azure Active Directory to access Azure Storage resources.
+
+azcopy make	
+# Creates a container or file share.
+
 # There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. You need to provision an Azure Container instance to host the container image.
+
 AzCopy make "url.core.windows.net" blob
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#transfer-data
