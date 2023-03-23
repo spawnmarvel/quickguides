@@ -597,7 +597,7 @@ Configure deployment settings
 
 You need to connect your on-premises network to Azure by using a site-to-site VPN.
 * Which four actions should you perform in sequence?
-| # | Steps
+| Steps | Description
 | --- |------
 | 1   | Deploy a gateway subnet
 | 2   | Deploy a VPN gateway
