@@ -594,6 +594,17 @@ Configure deployment settings
 ### Configure virtual networks
 
 #### Create and configure virtual networks and subnets
+
+You need to connect your on-premises network to Azure by using a site-to-site VPN.
+* Which four actions should you perform in sequence?
+| # | Steps
+| --- |------
+| 1   | Deploy a gateway subnet
+| 2   | Deploy a VPN gateway
+| 3   | Deploy a local network gateway
+| 4   | Deploy a VPN Connection
+
+
 #### Create and configure virtual network peering
 
 https://follow-e-lo.com/2023/03/11/azure-lab-05-implement-intersite-connectivity/
