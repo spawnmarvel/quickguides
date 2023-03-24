@@ -666,6 +666,8 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
 * * and then use the group as the source or destination in an NSG rule. The network interfaces must be in the same virtual network.
 
+[NSG] (https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg.jpg)
+
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
 
