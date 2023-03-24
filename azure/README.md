@@ -665,7 +665,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * Associate to vnet->subnet or nic
 
 
-![NSG Associate] (https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-associate.jpg)
+![NSG Associate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-associate.jpg)
 
 
 * Service tags
