@@ -661,6 +661,10 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 ![NSG Default](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-default.jpg)
 
+Associate network security group to subnet
+
+
+
 * Service tags
 * * A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules.
 
