@@ -57,6 +57,9 @@ Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
 | Term | Description | Note |
 | -----| ------------ | --
 | Tenant | A tenant represents an organization. Each Azure AD tenant is distinct and separate from other Azure AD tenants. | |
+|      | An organization can have multiple subscriptions |
+|      | Licenses can be assigned to individual user accounts |
+|      | User accounts are stored in an Azure AD tenant |
 | Subscription | An Azure Subscription is a logical container for your resources. Each Azure resource is associated with only one subscription. |  Cost/Billing: If you want to view other subscriptions, you'll have to switch to that specific tenant.
 
 
