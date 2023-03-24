@@ -678,6 +678,8 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 * Create security rules
 * * Create a security rule that allows ports 80 and 443 to the Asg01WebServers application security group 
+
+![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg.jpg)
 * * Create VM
 * * Associate network interfaces to an ASG
 
