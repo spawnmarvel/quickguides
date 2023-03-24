@@ -51,6 +51,9 @@ Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
 | RA-GRS | Read-Access Geo-Redundant Storage (RA-GRS) is almost the same as GRS, but it provides read-only access to data in the secondary region during an outage in the primary region. | |
 | | https://tutorialsdojo.com/azure-storage-redundancy-options/ | |
 | SLA | https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics | 99% = 1.68 h, 99.999% = 6 sec week |
+
+| Term | Description | |
+| -------------| ------------ | - | -
 | Tenant | A tenant represents an organization. Each Azure AD tenant is distinct and separate from other Azure AD tenants. | |
 | Subscription | An Azure Subscription is a logical container for your resources. Each Azure resource is associated with only one subscription. |  Cost/Billing: If you want to view other subscriptions, you'll have to switch to that specific tenant.
 
