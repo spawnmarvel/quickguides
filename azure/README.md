@@ -635,10 +635,15 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 ### Configure secure access to virtual networks
 
-Create and configure network security groups (NSGs) and application security groups (ASGs)
+#### Create and configure network security groups (NSGs) and application security groups (ASGs)
 
-* NSG
-* * Protocol, any allows all, else UDP, TCP.
+##### NSG
+
+| Field | Description | Note
+| --- |---------------| 
+| Name | Unique |
+
+
 
 * ASG
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
