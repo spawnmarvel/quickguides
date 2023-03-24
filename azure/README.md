@@ -637,7 +637,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 #### Create and configure network security groups (NSGs) and application security groups (ASGs)
 
-##### NSG
+##### NSG / ASG
 
 | Field | Description | Note
 | --- |---------------| ---
@@ -659,14 +659,21 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * * AllowVnetOutBound
 * * * AllowInternetOutBound (Internet)
 
-
-https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
-
-
+* Service tags
+* * A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules.
 
 * ASG
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
 * * and then use the group as the source or destination in an NSG rule. The network interfaces must be in the same virtual network.
+
+https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
+
+
+##### How network security groups filter network traffic
+
+https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
+
+
 
 Evaluate effective security rules
 
