@@ -645,9 +645,22 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 | Priority | A number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers, because lower numbers have higher priority. | Once traffic matches a rule, processing stops.
 | Source or destination | Any, or an individual IP address, classless inter-domain routing (CIDR) block (10.0.0.0/24, for example), service tag, or application security group | 
 | Protocol | TCP, UDP, ICMP, ESP, AH, or Any. |
-|Direction | rule applies to inbound, or outbound traffic.|
+|Direction | Rule applies to inbound, or outbound traffic.|
 | Port range |specify 80 or 10000-10005. |
 | Action | Allow or deny |
+
+
+* Default security rules:
+* * Inbound
+* * * AllowVNetInBound
+* * * AllowAzureLoadBalancerInBound
+* * * DenyAllInbound (Internet)
+* * Outbound
+* * * AllowVnetOutBound
+* * * AllowInternetOutBound (Internet)
+
+
+https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
 
 
