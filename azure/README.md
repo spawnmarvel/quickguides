@@ -174,13 +174,13 @@ Manage user and group properties
 * * Set up an assigned membership on Microsoft 365 groups.
 * * Set up an assigned membership on security groups and Set up a dynamic membership on security groups are incorrect because security groups can only be used for devices or users and not for groups.
 
-| Role | Description
-| ---- | -----------
-| Contributor| Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries.
+| Role | Description | Note
+| ---- | ----------- | -----
+| Contributor| Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. | Example: Classic Virtual Machine Contributor, CDN Endpoint Contributor, Network Contributor
 |  Owner    | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.
-|  Reader    | View all resources, but does not allow you to make any changes.
+|  Reader    | View all resources, but does not allow you to make any changes. | Example: Disk Backup Reader, Backup Reader, Storage Blob Data Reader
 |   User Access Administrator   | Lets you manage user access to Azure resources.
-| Backup Operator |  Lets you manage backup services, except removal of backup, vault creation and giving access to others
+| Operator |  Lets you manage backup services, except removal of backup, vault creation and giving access to others  | Example: Backup Operator
 
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
