@@ -671,6 +671,14 @@ https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-
 
 ##### How network security groups filter network traffic
 
+* Inbound traffic
+* * Azure processes the rules in a network security group associated to a subnet first, if there's one, 
+* * and then the rules in a network security group associated to the network interface, if there's one. 
+
+* Outbound traffic
+* * For outbound traffic, Azure processes the rules in a network security group associated to a network interface first, if there's one, 
+* * and then the rules in a network security group associated to the subnet, if there's one.
+
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
 
 
