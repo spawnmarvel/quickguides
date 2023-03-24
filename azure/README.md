@@ -174,6 +174,10 @@ Manage user and group properties
 * * Set up an assigned membership on Microsoft 365 groups.
 * * Set up an assigned membership on security groups and Set up a dynamic membership on security groups are incorrect because security groups can only be used for devices or users and not for groups.
 
+| Role | Description
+| ---- | -----------
+| Contributor| Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries.
+
 * User 1, User administrator:
 * * Can create users and manage all aspects of users with some restrictions, and can update password expiration policies, can create and manage all groups.
 * User 2, Cloud device administrator:
