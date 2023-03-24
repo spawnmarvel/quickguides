@@ -640,7 +640,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 ##### NSG
 
 | Field | Description | Note
-| --- |---------------| 
+| --- |---------------| ---
 | Name | Unique |
 
 
