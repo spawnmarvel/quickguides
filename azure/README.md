@@ -181,17 +181,12 @@ Manage user and group properties
 |  Reader    | View all resources, but does not allow you to make any changes. | Example: Disk Backup Reader, Backup Reader, Storage Blob Data Reader
 |   User Access Administrator   | Lets you manage user access to Azure resources.
 | Operator |  Lets you manage backup services, except removal of backup, vault creation and giving access to others  | Example: Backup Operator
+|Cloud device administrator |Can enable, disable, and delete devices in Azure AD. The role does not grant permission to manage any other properties on the device. |
+|Security administrator | has permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Active Directory Authentication, Azure Information Protection, and Office 365 Security & Compliance Center.|
 
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
-* User 1, User administrator:
-* * Can create users and manage all aspects of users with some restrictions, and can update password expiration policies, can create and manage all groups.
-* User 2, Cloud device administrator:
-* * Can enable, disable, and delete devices in Azure AD. The role does not grant permission to manage any other properties on the device.
-* User 3, Security administrator:
-* * has permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Active Directory Authentication, Azure Information Protection, and Office 365 Security & Compliance Center.
-* * 
 
 
 Manage device settings and device identity
