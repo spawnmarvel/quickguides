@@ -52,6 +52,8 @@ Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
 | | https://tutorialsdojo.com/azure-storage-redundancy-options/ | |
 | SLA | https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics | 99% = 1.68 h, 99.999% = 6 sec week |
 
+#### More fun
+
 | Term | Description | Note |
 | -----| ------------ | --
 | Tenant | A tenant represents an organization. Each Azure AD tenant is distinct and separate from other Azure AD tenants. | |
