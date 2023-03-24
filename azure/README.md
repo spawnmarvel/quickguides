@@ -642,7 +642,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 | Field | Description | Note
 | --- |---------------| ---
 | Name | Unique |
-| Priority | A number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers, because lower numbers have higher priority. Once traffic matches a rule, processing stops.|
+| Priority | A number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers, because lower numbers have higher priority. | Once traffic matches a rule, processing stops.
 
 
 
