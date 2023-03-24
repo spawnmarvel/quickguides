@@ -177,6 +177,12 @@ Manage user and group properties
 | Role | Description
 | ---- | -----------
 | Contributor| Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries.
+|  Owner    | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.
+|  Reader    | View all resources, but does not allow you to make any changes.
+|   User Access Administrator   | Lets you manage user access to Azure resources.
+
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
 * User 1, User administrator:
 * * Can create users and manage all aspects of users with some restrictions, and can update password expiration policies, can create and manage all groups.
