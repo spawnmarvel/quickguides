@@ -659,7 +659,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * * AllowVnetOutBound
 * * * AllowInternetOutBound (Internet)
 
-![NSG Default](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-default.jpg)
+![NSG Default](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-default1.jpg)
 
 * Associate network security group to subnet
 * * Associate to vnet->subnet or nic
