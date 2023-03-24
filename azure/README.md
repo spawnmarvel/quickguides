@@ -180,6 +180,7 @@ Manage user and group properties
 |  Owner    | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.
 |  Reader    | View all resources, but does not allow you to make any changes.
 |   User Access Administrator   | Lets you manage user access to Azure resources.
+| Backup Operator |  Lets you manage backup services, except removal of backup, vault creation and giving access to others
 
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
