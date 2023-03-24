@@ -663,6 +663,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 * Associate network security group to subnet
 * * Associate to vnet->subnet or nic
+* * To delete the NSG you must dissociate
 
 
 ![NSG Associate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-associate1.jpg)
@@ -675,9 +676,16 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
 * * and then use the group as the source or destination in an NSG rule. The network interfaces must be in the same virtual network.
 
+* Create security rules
+* * Create a security rule that allows ports 80 and 443 to the Asg01WebServers application security group 
+* * Create VM
+* * Associate network interfaces to an ASG
+
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
+
+https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-filter-network-traffic
 
 ##### How network security groups filter network traffic
 
