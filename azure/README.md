@@ -295,7 +295,7 @@ Done it
 
 The SAS token contains the following components, or query parameters.
 
-| Query parmeter | F name | Example | Description
+| Query parmeter | Field name | Example | Description
 | --- | --- | --- | ---
 | sp | signed premission| sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
 | st* | start time | st=2020-01-20T11:42:32Z | Start
@@ -348,11 +348,47 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-mana
 
 https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal
 
-Configure storage encryption
+#### Configure storage encryption
+
+* Azure Storage uses service-side encryption (SSE) to automatically encrypt your data when it is persisted to the cloud.
+* Data in Azure Storage is encrypted and decrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant. Azure Storage encryption is similar to BitLocker encryption on Windows.
+* Azure Storage encryption is enabled for all storage accounts.
+* Azure Storage encryption cannot be disabled. 
+*You can continue to rely on Microsoft-managed keys for the encryption of your data, or you can manage encryption with your own keys.
+
+https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption
+
 
 ### Manage data in Azure storage accounts
 
-Create import and export jobs
+#### Create import and export jobs
+
+* Azure Import/Export service is used to securely import large amounts of data to:
+* * Azure Blob storage
+* * Azure Files
+* * by shipping disk drives to an Azure datacenter. 
+
+
+https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service
+
+Import data to Blob Storage with Azure Import/Export service
+
+| Step for drives | Description
+| --- | ---
+| 1   |  Prepare the drives, generates a journal file. The journal file stores basic information such as drive serial number, encryption key, and storage account details. Together with the journal file, a <Journal file name>_DriveInfo_<Drive serial ID>.xml
+| 2   |  Create an import job, Azure Data Box, in Job Details WAImportExport tool
+| 3   |  (Optional): Configure customer managed key
+| 4   | Ship the drives
+| 5   | Update the job with tracking information, fill in the tracking information
+| 6   | Verify data upload to Azure
+
+https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-blobs?tabs=azure-portal-preview
+
+| Step for files | Description
+| --- | ---
+
+https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal-preview
+
 
 Manage data by using Azure Storage Explorer and AzCopy
 
