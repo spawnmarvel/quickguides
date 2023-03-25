@@ -709,8 +709,10 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
+Tutorial: Filter network traffic with a network security group using the Azure portal
 
-https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-filter-network-traffic
+https://follow-e-lo.com/2023/03/25/az-lab-filter-network-traffic-with-a-network-security-group-using-the-azure-portal/
+
 
 ##### How network security groups filter network traffic
 
