@@ -902,6 +902,8 @@ Troubleshoot virtual network connectivity
 
 ### Monitor resources by using Azure Monitor
 
+![Monitor storage](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-storage.jpg)
+
 #### Configure and interpret metrics
 
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
