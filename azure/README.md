@@ -266,7 +266,19 @@ https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
 ### Configure access to storage
 
-Configure network access to storage accounts
+##### Configure network access to storage accounts
+
+* Storage provides a layered security model
+* You can limit access to your storage account to requests originating from:
+* * specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
+
+* Storage accounts have a public endpoint that is accessible through the internet.
+* Private Endpoints can also be enabled for storage account, which assigns a private IP address from your VNet to the storage account, and secures all traffic between your VNet and the storage account over a private link.
+
+
+https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
+
+![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure.jpg)
 
 Create and configure storage accounts
 
