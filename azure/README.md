@@ -697,10 +697,11 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
 * * and then use the group as the source or destination in an NSG rule. The network interfaces must be in the same virtual network.
 
-* Create security rules
-* * Create a security rule that allows ports 80 and 443 to the Asg01WebServers application security group 
 
-![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg.jpg)
+Create security rules
+* * Create a security rule that allows ports 80 and 443 to the web and 3389 to mgmt application security group s
+
+![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg1.jpg)
 
 * Inbound
 ![Destination ASG Done](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-inbound.jpg)
