@@ -701,7 +701,10 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 Create security rules
 * * Create a security rule that allows ports 80 and 443 to the web and 3389 to mgmt application security group s
 
-![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg1.jpg)
+![NSG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg1.jpg)
+
+* * ASG
+![ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/asg1.jpg)
 
 * Inbound
 ![Destination ASG Done](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-inbound.jpg)
