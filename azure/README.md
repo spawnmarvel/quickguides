@@ -386,6 +386,11 @@ https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data
 
 | Step for files | Description
 | --- | ---
+| 1   | Prepare the drives, This step generates a journal file. The journal file stores basic information such as drive serial number, encryption key, and storage account details. dataset.csv
+| 2   | Create an import job
+| 3   | Ship the drives to the Azure datacenter
+| 4   | Update the job with tracking information
+| 5   | Verify data upload to Azure
 
 https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal-preview
 
