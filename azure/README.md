@@ -293,6 +293,12 @@ Done it
 | --- |---
 | https://medicalrecords.blob.core.windows.net/patient-images/patient-116139-nq8z7f.jpg? | sp=r&st=2020-01-20T11:42:32Z&se=2020-01-20T19:42:32Z&spr=https&sv=2019-02-02&sr=b&sig=SrW1HZ5Nb6MbRzTbXCaPm%2BJiSEn15tC91Y4umMPwVZs%3D
 
+| Query parmeter | F name | Example | Description
+| --- | --- | --- | ---
+| sp | signed premission| | sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
+| | | |
+| | | | 
+
 https://learn.microsoft.com/en-us/training/modules/control-access-to-azure-storage-with-sas/3-use-shared-access-signatures
 
 https://follow-e-lo.com/2022/01/24/5-min-azure-storage-explorer/
