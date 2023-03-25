@@ -297,7 +297,7 @@ The SAS token contains the following components, or query parameters.
 
 | Query parmeter | F name | Example | Description
 | --- | --- | --- | ---
-| sp | signed premission| | sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
+| sp | signed premission| sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
 | st* | start time | st=2020-01-20T11:42:32Z | Start
 | se | expiry time | se=2020-01-20T19:42:32Z | End
 | spr | signed protocol | spr=https | HTTPS and HTTP (the default value), or HTTPS only.
