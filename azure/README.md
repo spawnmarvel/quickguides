@@ -611,7 +611,7 @@ Configure deployment settings
 
 #### Create and configure virtual networks and subnets
 
-| Note | Comment |
+| # | Comment | Note
 |-- | -- | ---
 | Subnet address range | The range must be unique within the address space and can't overlap with other subnet address ranges in the virtual network. You must specify the address space by using Classless Inter-Domain Routing (CIDR) notation. | For example, in a virtual network with address space 10.0.0.0/16, you might define a subnet address space of 10.0.0.0/22
 
