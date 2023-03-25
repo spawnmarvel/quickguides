@@ -690,6 +690,10 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 ![NSG Associate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-associate1.jpg)
 
 
+* Any
+
+* IP A ddressed
+
 * Service tags
 * * A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules.
 
