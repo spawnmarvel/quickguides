@@ -614,9 +614,13 @@ Configure deployment settings
 | # | Comment | Note
 |-- | -- | ---
 | Subnet address range | The range must be unique within the address space and can't overlap with other subnet address ranges in the virtual network. You must specify the address space by using Classless Inter-Domain Routing (CIDR) notation. | For example, in a virtual network with address space 10.0.0.0/16, you might define a subnet address space of 10.0.0.0/22
-| Address space 10.50.0.0/24 | Address range 10.50.0.0 - 10.50.0.255, Address count 256 | |
+| Address space 10.50.0.0/24 | Address range 10.50.0.0 - 10.50.0.255 | Address count 256 |
 | | subnet31 | 10.50.0.0/27, IP's 27
 | | subnet95 | 10.50.0.64/27 , IP's 27
+| Address space 10.0.0.0/16  | Address range 10.0.0.0 - 10.0.255.255  |Address count 65536
+| | |
+| | |
+| | |
 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet?tabs=azure-portal#add-a-subnet
