@@ -145,7 +145,7 @@ Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 
 ### Manage Azure AD objects
 
-Create users and groups
+#### Create users and groups
 
 ##### MFA
 
@@ -162,11 +162,17 @@ https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial
 
 
 
-Manage licenses in Azure AD
+#### Manage licenses in Azure AD
 
-Create administrative units
+#### Create administrative units
 
-Manage user and group properties
+* Administrative units restrict permissions in a role to any portion of your organization that you define.
+* Azure AD administrative units are used to restrict the scope of administrative role assignments whereas Azure AD groups are used to manage users' access to apps and resources
+
+https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-units
+
+
+##### Manage user and group properties
 
 * You need to grant several users that must belong to the same Azure group temporary access to the Microsoft SharePoint document library. 
 * The group must automatically be deleted after 180 days for compliance purposes.
@@ -186,8 +192,6 @@ Manage user and group properties
 
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
-
-
 
 Manage device settings and device identity
 
@@ -259,6 +263,7 @@ Manage costs by using alerts, budgets, and recommendations
 #### Configure management groups
 
 * Management groups provide a governance scope above subscriptions. 
+* If your organization has many Azure subscriptions, you may need a way to efficiently manage access, policies, and compliance for those subscriptions.
 
 https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
