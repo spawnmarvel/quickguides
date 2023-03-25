@@ -293,11 +293,17 @@ Done it
 | --- |---
 | https://medicalrecords.blob.core.windows.net/patient-images/patient-116139-nq8z7f.jpg? | sp=r&st=2020-01-20T11:42:32Z&se=2020-01-20T19:42:32Z&spr=https&sv=2019-02-02&sr=b&sig=SrW1HZ5Nb6MbRzTbXCaPm%2BJiSEn15tC91Y4umMPwVZs%3D
 
+The SAS token contains the following components, or query parameters.
+
 | Query parmeter | F name | Example | Description
 | --- | --- | --- | ---
 | sp | signed premission| | sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
-| | | |
-| | | | 
+| st* | start time | st=2020-01-20T11:42:32Z | Start
+| se | expiry time | se=2020-01-20T19:42:32Z | End
+| spr | signed protocol | spr=https | HTTPS and HTTP (the default value), or HTTPS only.
+| sv | signed version | sv=2019-02-02 | The service version of the storage API to use.
+| sr* | scope of resource | sr=b |  b (blob), c (container), d (directory), f (file) s (share)
+|sig  | signature | sig=SrW1...wVZs%3D | The cryptographic signature.
 
 https://learn.microsoft.com/en-us/training/modules/control-access-to-azure-storage-with-sas/3-use-shared-access-signatures
 
