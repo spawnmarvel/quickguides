@@ -313,9 +313,40 @@ https://follow-e-lo.com/2022/01/24/5-min-azure-storage-explorer/
 
 Configure stored access policies
 
-Manage access keys
+* A stored access policy provides an additional level of control over service-level shared access signatures (SASs) on the server side.
+*  Stored access policy serves to group shared access signatures and to provide additional restrictions for signatures that are bound by the policy.
+* Use a stored access policy to:
+* * change the start time, expiry time
+* * permissions for a signature.
+* * revoke a signature after it has been issued
+* * For Blob containers, File Shares, Queues, Tables
 
-Configure Azure AD authentication for a storage account
+https://learn.microsoft.com/en-us/rest/api/storageservices/define-stored-access-policy
+
+#### Manage access keys
+
+* Storage account access keys provide full access to the configuration of a storage account, as well as the data.
+* Use Azure Key Vault to manage and rotate your keys securely
+
+* Manually rotate access keys
+* * Update the connection strings in your application code to reference the secondary access key for the storage account.
+* *  Regenerate primary access key 
+* * Update the connection strings in your code to reference the new primary access key.
+* * Regenerate the secondary access key in the same manner.
+
+* Create a key expiration policy
+* * A key expiration policy enables you to set a reminder for the rotation of the account access keys.
+* Monitor your storage accounts for compliance to ensure that the account access keys are rotated regularly.
+
+https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal
+
+#### Configure Azure AD authentication for a storage account
+
+*  Setting this property implicitly "domain joins" the storage account with the associated Azure AD DS deployment
+
+![Storage AD ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-ad.jpg)
+
+https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal
 
 Configure storage encryption
 
