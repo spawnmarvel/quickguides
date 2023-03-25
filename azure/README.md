@@ -904,6 +904,8 @@ Troubleshoot virtual network connectivity
 
 ![Monitor storage](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-storage.jpg)
 
+![Monitor Activity ](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-activity.jpg)
+
 #### Configure and interpret metrics
 
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
