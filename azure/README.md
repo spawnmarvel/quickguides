@@ -617,6 +617,18 @@ Configure deployment settings
 | Address space 10.50.0.0/24 | Address range 10.50.0.0 - 10.50.0.255, Address count 256 | |
 
 
+<table>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet?tabs=azure-portal#add-a-subnet
 
