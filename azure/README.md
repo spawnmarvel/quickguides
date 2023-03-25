@@ -280,9 +280,23 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?
 
 ![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure-1.jpg)
 
-Create and configure storage accounts
+##### Create and configure storage accounts
 
-Generate shared access signature tokens
+Done it
+
+##### Generate shared access signature tokens
+
+* By using a shared access signature (SAS), you can delegate access to your resources. Clients don't have direct access to your storage account credentials and, at a granular level, you control what they access.
+* A SAS has two components, a URI that points to one or more storage resources, and a token that indicates how the resources may be accessed by the client.
+
+| Uri | SAS Token
+| --- |---
+| https://medicalrecords.blob.core.windows.net/patient-images/patient-116139-nq8z7f.jpg? | sp=r&st=2020-01-20T11:42:32Z&se=2020-01-20T19:42:32Z&spr=https&sv=2019-02-02&sr=b&sig=SrW1HZ5Nb6MbRzTbXCaPm%2BJiSEn15tC91Y4umMPwVZs%3D
+
+https://learn.microsoft.com/en-us/training/modules/control-access-to-azure-storage-with-sas/3-use-shared-access-signatures
+
+https://follow-e-lo.com/2022/01/24/5-min-azure-storage-explorer/
+
 
 
 Configure stored access policies
