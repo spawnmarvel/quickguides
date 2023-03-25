@@ -692,7 +692,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 * Any
 
-* IP A ddressed
+* IP Addresses
 
 * Service tags
 * * A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules.
