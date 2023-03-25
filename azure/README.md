@@ -902,7 +902,11 @@ Troubleshoot virtual network connectivity
 
 ### Monitor resources by using Azure Monitor
 
+Storage
+
 ![Monitor storage](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-storage.jpg)
+
+Activity
 
 ![Monitor Activity ](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-activity.jpg)
 
