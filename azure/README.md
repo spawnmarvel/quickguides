@@ -707,7 +707,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 * * Create VM
 * * Associate network interfaces to an ASG
-![Destination VM ASG Assosicate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-assosicate_vm.jpg)
+![Destination VM ASG Assosicate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-assosicate-to-vm.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
