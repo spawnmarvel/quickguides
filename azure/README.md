@@ -682,7 +682,7 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 ![NSG Default](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-default1.jpg)
 
-* Associate network security group to subnet
+* Associate network security group to:
 * * Associate to vnet->subnet or nic
 * * To delete the NSG you must dissociate
 
