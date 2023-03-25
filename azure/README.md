@@ -702,10 +702,13 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 ![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg.jpg)
 
+* Inbound
+![Destination ASG Done](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-assosicate.jpg.jpg)
+
 * * Create VM
 * * Associate network interfaces to an ASG
 
-![Destination ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/asg-vm.jpg)
+
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
