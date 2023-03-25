@@ -690,6 +690,8 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 ![NSG Associate](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-associate1.jpg)
 
 
+Source / Destination
+
 * Any
 
 * IP Addresses
