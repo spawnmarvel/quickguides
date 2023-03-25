@@ -704,6 +704,7 @@ Create security rules
 ![NSG](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg1.jpg)
 
 * * ASG
+
 ![ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/asg1.jpg)
 
 * Inbound
