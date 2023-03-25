@@ -220,7 +220,7 @@ Interpret access assignments
 
 ### Manage Azure subscriptions and governance
 
-Configure and manage Azure Policy
+#### Configure and manage Azure Policy
 
 * Policy
 * With an initiative definition, you can group several policy definitions to achieve one overarching goal. 
@@ -311,7 +311,7 @@ https://follow-e-lo.com/2022/01/24/5-min-azure-storage-explorer/
 
 
 
-Configure stored access policies
+#### Configure stored access policies
 
 * A stored access policy provides an additional level of control over service-level shared access signatures (SASs) on the server side.
 *  Stored access policy serves to group shared access signatures and to provide additional restrictions for signatures that are bound by the policy.
