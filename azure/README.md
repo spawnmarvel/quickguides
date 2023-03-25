@@ -618,9 +618,9 @@ Configure deployment settings
 | | subnet31 | 10.50.0.0/27, IP's 27
 | | subnet95 | 10.50.0.64/27 , IP's 27
 | Address space 10.0.0.0/16  | Address range 10.0.0.0 - 10.0.255.255  |Address count 65536
-| | |
-| | |
-| | |
+| | default | 10.0.0.0/28, IP's 11
+| | pass-subnet | 10.0.1.0/28, IP's 11
+| | vm-subnet |  10.0.2.0/28, IP's 11
 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet?tabs=azure-portal#add-a-subnet
