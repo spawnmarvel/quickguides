@@ -278,7 +278,7 @@ https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
 
-![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure.jpg)
+![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure-1.jpg)
 
 Create and configure storage accounts
 
