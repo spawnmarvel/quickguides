@@ -1024,6 +1024,12 @@ Configure monitoring of VMs, storage accounts, and networks by using VM insights
 1. The first difference between an Azure Recovery Services Vault (ARSV) and an Azure Backup Vault (ABV) is are the available datasources of each vault.
 2. The second difference is: In an ARSV you can be used for Azure Backup and Azure Site Recovery data. An ABV is for Azure Backup data only.
 
+* Vault support:
+* Azure Backup uses Recovery Services vaults to orchestrate and manage backups for the following workload types:
+* * Azure VMs, SQL in Azure VMs, SAP HANA in Azure VMs, Azure File shares and on-premises workloads using Azure Backup Agent, Azure Backup Server and System Center DPM.
+
+https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix#vault-support
+
 
 https://learn.microsoft.com/en-us/answers/questions/405915/what-is-difference-between-recovery-services-vault
 
