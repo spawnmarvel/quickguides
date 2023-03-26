@@ -580,10 +580,9 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 |                 | By default, the virtual machines configured within your availability set are separated across up to three fault domains. 
 
 
+![Fault and update domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/fault-update-domain-1.jpg)
+
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
-
-
-![Fault and update domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/fault-update-domain.jpg)
 
 ###  Create and configure containers
 
