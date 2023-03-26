@@ -896,6 +896,13 @@ Evaluate effective security rules
 #### Implement Azure Bastion
 
 * Azure Bastion is a service that lets you connect to a virtual machine by using a browser, without exposing RDP and SSH ports.
+* To associate a vnet witha Bastion, it must contain a subnet with name AzureBastionSubnet and a prefix of at least /26
+
+| Subnet | IPV4 |Available IPs
+| ------- | -- | ---------
+| AzureBastionSubnet | 10.0.3.0/26 | 59
+
+![Bastion](https://github.com/spawnmarvel/quickguides/blob/main/azure/bastion.jpg)
 
 https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
 
