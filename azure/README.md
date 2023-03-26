@@ -303,12 +303,17 @@ The SAS token contains the following components, or query parameters.
 | Query parmeter | Field name | Example | Description
 | --- | --- | --- | ---
 | sp | signed premission| sp=r | a (add), c (create), d (delete), l (list), r (read), and w (write). sp=r is read only; sp=acdlrw grants all the available rights.
-| st* | start time | st=2020-01-20T11:42:32Z | Start
+| st | start time | st=2020-01-20T11:42:32Z | Start
 | se | expiry time | se=2020-01-20T19:42:32Z | End
 | spr | signed protocol | spr=https | HTTPS and HTTP (the default value), or HTTPS only.
 | sv | signed version | sv=2019-02-02 | The service version of the storage API to use.
-| sr* | scope of resource | sr=b |  b (blob), c (container), d (directory), f (file) s (share)
-|sig  | signature | sig=SrW1...wVZs%3D | The cryptographic signature.
+| sr | scope of resource | sr=b |  b (blob), c (container), d (directory), f (file) s (share)
+| sig  | signature | sig=SrW1...wVZs%3D | The cryptographic signature.
+
+* Which two parameters are required for the SAS token?
+* * SignedServices (ss) is required to refer blobs, queues, tables, and files. 
+* * SignedResourceTypes (srt) is required to refer services, containers, or objects. 
+* * st (start) and sip () signed ip
 
 https://learn.microsoft.com/en-us/training/modules/control-access-to-azure-storage-with-sas/3-use-shared-access-signatures
 
@@ -554,11 +559,18 @@ Configure VM availability options
 * Proximity placement groups are useful for workloads where low latency is a requirement. 
 * When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, 
 * resulting in lower and deterministic latency for your applications.
-* https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
+https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 
+* How do availability sets work?
+| | |
+| --- |--- |
+|      | Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform.
+
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
 
 ###  Create and configure containers
 
@@ -739,6 +751,9 @@ Configure deployment settings
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet?tabs=azure-portal#add-a-subnet
 
+* You have an on-premises device named Device1 that runs Windows and has a Point-to-Site (P2S) VPN client installed.
+* You configure network peering between VNet1 and VNet2. What should you do?
+* * Point-to-Site (P2S) VPN clients must be downloaded and reinstalled again after virtual network peering is successfully configured to ensure that the new routes are downloaded to the client.
 
 You need to connect your on-premises network to Azure by using a site-to-site VPN.
 * Which four actions should you perform in sequence?
@@ -860,7 +875,12 @@ https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-h
 
 Evaluate effective security rules
 
-Implement Azure Bastion
+#### Implement Azure Bastion
+
+* Azure Bastion is a service that lets you connect to a virtual machine by using a browser, without exposing RDP and SSH ports.
+
+https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
+
 
 Configure service endpoints on subnets
 
@@ -869,6 +889,10 @@ Configure private endpoints
 ### Configure load balancing
 
 #### Configure Azure Application Gateway
+
+* Azure Application Gateway is a web traffic load balancer that operates at Layer 7 of the OSI model. 
+* Application Gateway can make routing decisions based on additional attributes of an HTTP request, such as the URI path or host headers.
+* Azure Load Balancer can be used to balance requests, but Azure Load Balancer will balance requests at Layer 4 (TCP and UDP) only.
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
