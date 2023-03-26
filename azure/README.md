@@ -559,6 +559,7 @@ Configure VM availability options
 * Proximity placement groups are useful for workloads where low latency is a requirement. 
 * When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, 
 * resulting in lower and deterministic latency for your applications.
+
 https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
@@ -580,6 +581,9 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
+
+
+![Fault and update domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/fault-update-domain.jpg)
 
 ###  Create and configure containers
 
