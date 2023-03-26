@@ -583,7 +583,7 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 ![Fault and update domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/fault-update-domain-1.jpg)
 
 *  10 Update domains, 18 VM's how many will be booted at the same time?
-*  2 VMS
+*  2 VMS 
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
 
