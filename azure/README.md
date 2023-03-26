@@ -561,6 +561,10 @@ Configure VM availability options
 * When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, 
 * resulting in lower and deterministic latency for your applications.
 
+* Orchestration:
+* * Uniform: optimized for large scale statless workloads with identicial instances
+* * Flexible: Achive high availability at scale with identicial or multiple virtual machine type
+
 https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
 
 https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
