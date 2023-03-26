@@ -907,9 +907,12 @@ Configure private endpoints
 
 * Azure Application Gateway is a web traffic load balancer that operates at Layer 7 of the OSI model. 
 * Application Gateway can make routing decisions based on additional attributes of an HTTP request, such as the URI path or host headers.
+* Azure Application Gateway supports end-to-end traffic encryption and TLS/SSL termination.
 * Azure Load Balancer can be used to balance requests, but Azure Load Balancer will balance requests at Layer 4 (TCP and UDP) only.
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
+
+![Application GW vs LB ](https://github.com/spawnmarvel/quickguides/blob/main/azure/application-gw-vs-lb.jpg)
 
 Configure an internal or public load balancer
 
