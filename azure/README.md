@@ -732,6 +732,9 @@ code blocks for commands
 * 1 For Windows (so Windows is the only alternative if using ASP.NET)
 * 1 For Linux (.Net core, Pyton, Ruby, PHP etc)
 
+* Take note that you cannot change an App Service plan’s region. 
+* Also, if you move a resource to a new resource group or subscription, the location of the resource would not change.
+
 Configure scaling settings in an App Service plan
 
 Create an App Service
