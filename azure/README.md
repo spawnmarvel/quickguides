@@ -569,7 +569,7 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 | # | Description 
 | ---     |--- 
 |                       | Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform.
-|  3,20                 | Each availability set can be configured with up to three fault domains and twenty update domains.
+|  3 and 20                 | Each availability set can be configured with up to three fault domains and twenty update domains.
 |  Update domains       | Groups of virtual machines and underlying physical hardware that can be rebooted at the same time.
 |  > 5 VM's?            |  When more than five virtual machines are configured within a single availability set with five update domains:
 |   6 VM                | Is placed into the same update domain as the first virtual machine
