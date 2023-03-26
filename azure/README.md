@@ -565,7 +565,7 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 
 * How do availability sets work?
-| | |
+| # | Description |
 | --- |--- |
 |      | Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform.
 
