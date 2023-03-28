@@ -471,6 +471,7 @@ Set-azStorageBlobContent -Container testco0041 -File ./toblob0041/test.txt -Blob
 * * number of days since the blob was last accessed (x)
 * * (x) To use this condition in an action, you should first optionally enable last access time tracking.
 
+![Storage blob lifecycle ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-blob-lifecycle.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal#see-also
