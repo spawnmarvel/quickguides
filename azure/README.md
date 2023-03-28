@@ -446,7 +446,22 @@ Configure storage tiers
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview
 
-Configure blob lifecycle management
+#### Configure blob lifecycle management
+
+```
+$staccount = "staccount0041"
+$rgName = "rg0041exam"
+Get-AzStorageAccount -Name $staccount -resourceGroupName $rgName
+
+Set-AzCurrentStorageAccount -ResourceGroupName $rgName -Name $staccount 
+# Modifies the current Storage account of the specified subscription.
+
+Get-AzStorageContainer -Name testco0041
+
+Set-azStorageBlobContent -Container testco0041 -File ./toblob0041/test.txt -Blob "test.txt"
+# Uploads a local file to an Azure Storage blob.
+```
+
 
 #### Deploy Azure File Sync
 
