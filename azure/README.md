@@ -449,6 +449,7 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview
 #### Configure blob lifecycle management
 
 ```
+
 $staccount = "staccount0041"
 $rgName = "rg0041exam"
 Get-AzStorageAccount -Name $staccount -resourceGroupName $rgName
@@ -460,7 +461,19 @@ Get-AzStorageContainer -Name testco0041
 
 Set-azStorageBlobContent -Container testco0041 -File ./toblob0041/test.txt -Blob "test.txt"
 # Uploads a local file to an Azure Storage blob.
+
 ```
+* Azure Storage lifecycle management offers a rule-based policy that you can use to transition blob data to the appropriate access tiers or to expire data at the end of the data lifecycle. 
+* A lifecycle policy acts on a base blob, and optionally on the blob's versions or snapshots.
+* One or more rules that define a set of actions o take based on a condition being met:
+* * number of days since the blob was created.
+* * number of days since the blob was last modified.
+* * number of days since the blob was last accessed (x)
+* * (x) To use this condition in an action, you should first optionally enable last access time tracking.
+
+
+
+https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal#see-also
 
 
 #### Deploy Azure File Sync
