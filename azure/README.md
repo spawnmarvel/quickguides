@@ -87,48 +87,6 @@ Remove
 
 Start, Stop, Restart, Suspend, Resume # 
 ```
-
-#### Get started with AzCopy
-AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
-
-
-```
-azcopy copy	
-# Copies source data to a destination location
-
-azcopy login
-# Logs in to Azure Active Directory to access Azure Storage resources.
-
-azcopy make	
-# Creates a container or file share.
-
-# There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. You need to provision an Azure Container instance to host the container image.
-
-AzCopy make "url.core.windows.net" blob
-
-https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#transfer-data
-
-```
-#### Transfer data with AzCopy and file storage
-
-```
-
-azcopy copy '<local-file-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-name><SAS-token>'
-# Upload a file
-
-azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name><SAS-token>' --recursive
-# Upload a directory
-
-azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-or-directory-name><SAS-token>' --include-path <semicolon-separated-file-list>
-# Upload specific files
-
-azcopy copy 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-path><SAS-token>' '<local-file-path>'
-# Download a file
-
-```
-https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-files
-
-## 
 ## Skills measured
 Manage Azure identities and governance (15–20%) :round_pushpin:
 
@@ -411,6 +369,56 @@ https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data
 
 Manage data by using Azure Storage Explorer and AzCopy
 
+#### Azure Storage Explorer
+
+* Azure Storage Explorer allows you to quickly view all the storage services under your account. 
+* You can browse through, read, and edit data stored in those services through a user-friendly graphical interface.
+
+![Storage Explorer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-explorer.jpg)
+
+https://learn.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows
+
+#### Get started with AzCopy
+AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
+
+
+```
+azcopy copy	
+# Copies source data to a destination location
+
+azcopy login
+# Logs in to Azure Active Directory to access Azure Storage resources.
+
+azcopy make	
+# Creates a container or file share.
+
+# There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. You need to provision an Azure Container instance to host the container image.
+
+AzCopy make "url.core.windows.net" blob
+
+https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#transfer-data
+
+```
+#### Transfer data with AzCopy and file storage
+
+```
+
+azcopy copy '<local-file-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-name><SAS-token>'
+# Upload a file
+
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name><SAS-token>' --recursive
+# Upload a directory
+
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-or-directory-name><SAS-token>' --include-path <semicolon-separated-file-list>
+# Upload specific files
+
+azcopy copy 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-path><SAS-token>' '<local-file-path>'
+# Download a file
+
+```
+https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-files
+
+
 Implement Azure Storage redundancy
 
 Configure object replication
@@ -572,7 +580,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-
 |              | Azure ExpressRoute uses a combination of ExpressRoute circuits and routing domains to provide high-bandwidth connectivity to the Microsoft Cloud.|
 |              | Connections into ExpressRoute can be through the following mechanisms: |
 |              | IP VPN network (any-to-any) |
-|              |Virtual cross-connection through an ethernet exchange |
+|              | Virtual cross-connection through an ethernet exchange |
 |              | Point-to-point ethernet connection|
 
 https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/
