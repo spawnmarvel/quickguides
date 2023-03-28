@@ -207,6 +207,9 @@ Manage guest accounts
 
 Configure self-service password reset
 
+Custom domain
+* custom domain name by using TXT or MX record types.
+
 https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
