@@ -788,6 +788,8 @@ You need to connect your on-premises network to Azure by using a site-to-site VP
 | 3   | Deploy a local network gateway
 | 4   | Deploy a VPN Connection
 
+https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal?toc=%2Fazure%2Fvirtual-network%2Ftoc.json
+
 
 #### Create and configure virtual network peering
 
