@@ -553,8 +553,37 @@ Initialize a new data disk
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal
 
-Configure VM network settings
+#### Configure VM network settings
 
+
+* Communicate between Azure resources
+* * Virtual networks and virtual network peering (These virtual networks can be in separate regions)
+* * Virtual networks can connect to App Service Environment, Azure Kubernetes Service, and Azure virtual machine scale sets.
+* * Service endpoints to Storage, SQL
+
+* Communicate with on-premises resources
+* * Link resources together in your on-premises environment and within your Azure subscription, 3 types
+
+| Type | Description | Route
+| ---  | ----------- | -----
+| Point-to-site Virtual Private Networks | Similar to VPN, but client pc initiates VPN connection to Azure | Encrypted
+| Site-to-site  Virtual Private Networks | Links your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network (appear as being on local network) | Encrypted
+| ExpressRoute | Greater bandwidth and even higher levels of security, provides dedicated private connectivity | Private, no inet
+|              | Azure ExpressRoute uses a combination of ExpressRoute circuits and routing domains to provide high-bandwidth connectivity to the Microsoft Cloud.|
+|              | Connections into ExpressRoute can be through the following mechanisms: |
+|              | IP VPN network (any-to-any) |
+|              |Virtual cross-connection through an ethernet exchange |
+|              | Point-to-point ethernet connection|
+
+https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/
+
+* Plan a VPN gateway factors
+* * Throughput, internet or private, public IP, vpn device compatibillity, many clients (points) or site, gateway type, SKU.
+https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/4-explore-azure-vpn-gateway
+
+
+
+![VPN MS Learn](https://github.com/spawnmarvel/quickguides/blob/main/azure/vpn-ms-learn.jpg)
 Configure VM availability options
 
 #### Deploy and configure VM scale sets
