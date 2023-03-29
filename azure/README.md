@@ -232,7 +232,7 @@ Manage costs by using alerts, budgets, and recommendations
 * These permissions are inherited to child resources that exist in the hierarchy. 
 
 * For example, the Azure role VM contributor can be assigned to a management group. 
-* This role has no action on the management group, but will inherit to all VMs under that management group.
+* * This role has no action on the management group, but will inherit to all VMs under that management group.
 
 
 ![Management groups ](https://github.com/spawnmarvel/quickguides/blob/main/azure/management-groups.jpg)
