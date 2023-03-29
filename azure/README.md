@@ -259,8 +259,8 @@ Manage costs by using alerts, budgets, and recommendations
 | Name Subscriptions | Mangement group
 | ----- | -----
 | MK-Subscription1 | MK-Management-Group11
-| MK-Subscription1 | MK-Management-Group20
-| MK-Subscription1 | Tenant Root Group
+| MK-Subscription2 | MK-Management-Group20
+| MK-Subscription3 | Tenant Root Group
 
 
 | Name Policy | Parameter | Scope
