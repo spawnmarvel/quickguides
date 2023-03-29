@@ -275,7 +275,12 @@ You can create a virtual network in MK-Subscription1 = no
 
 You can create a virtual machine in MK-Subscription2 = no
 
+Tenant Root Group has a Deny policy that restricts it, as well as its related resource groups (e.g. MK-Management-Group11), from deploying virtual networks. If you can’t create a virtual network, then you also can’t deploy a virtual machine.
+
 You can move TD-Subscription3 to MK-Management-Group20 = yes
+
+
+![Management groups quiz ](https://github.com/spawnmarvel/quickguides/blob/main/azure/management-groups-quiz.jpg)
 
 * For example, the Azure role VM contributor can be assigned to a management group. 
 * * This role has no action on the management group, but will inherit to all VMs under that management group.
