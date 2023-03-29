@@ -124,10 +124,22 @@ https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial
 
 #### Create administrative units
 
+* An administrative unit is an Azure AD resource that can be a container for other Azure AD resources. 
+* An administrative unit can contain only users, groups, or devices.
 * Administrative units restrict permissions in a role to any portion of your organization that you define.
 * Azure AD administrative units are used to restrict the scope of administrative role assignments whereas Azure AD groups are used to manage users' access to apps and resources
 
 https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-units
+
+* Create or delete administrative units
+* Administrative units let you subdivide your organization into any unit that you want, and then assign specific administrators that can manage only the members of that unit. 
+* * For example, you could use administrative units to delegate permissions to administrators of each lab department at a hospital, so they can manage users and control access and policies in the bone lab only.
+
+
+![Administrative units ](https://github.com/spawnmarvel/quickguides/blob/main/azure/administrative-unit.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/active-directory/roles/admin-units-manage#next-steps
 
 
 ##### Manage user and group properties
