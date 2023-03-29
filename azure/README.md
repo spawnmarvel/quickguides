@@ -643,7 +643,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-
 
 | Type | Description | Route
 | ---  | ----------- | -----
-| Point-to-site Virtual Private Networks | Similar to VPN, but client pc initiates VPN connection to Azure | Encrypted
+| Point-to-site Virtual Private Networks | Similar to VPN, but client pc initiates VPN connection to Azure | Encrypted, IPsec/IKE (IKEv1 or IKEv2)
 | Site-to-site  Virtual Private Networks | Links your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network (appear as being on local network) | Encrypted
 | ExpressRoute | Greater bandwidth and even higher levels of security, provides dedicated private connectivity | Private, no inet
 |              | Azure ExpressRoute uses a combination of ExpressRoute circuits and routing domains to provide high-bandwidth connectivity to the Microsoft Cloud.|
@@ -1045,6 +1045,9 @@ Configure private endpoints
 * Application Gateway can make routing decisions based on additional attributes of an HTTP request, such as the URI path or host headers.
 * Azure Application Gateway supports end-to-end traffic encryption and TLS/SSL termination.
 * Azure Load Balancer can be used to balance requests, but Azure Load Balancer will balance requests at Layer 4 (TCP and UDP) only.
+
+* You need to associate a public IP address to a public Azure load balancer with an SKU of standard?
+* * publicIpVm02, SKU(must match):STANDARD, Assigment: Static
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
