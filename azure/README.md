@@ -248,7 +248,7 @@ Manage costs by using alerts, budgets, and recommendations
 * You can create a virtual network in MK-Subscription1 = no
 * * Deny overrides allow
 
-*You can create a virtual machine in MK-Subscription2 = no
+* You can create a virtual machine in MK-Subscription2 = no
 * * Tenant Root Group has a Deny policy that restricts it, as well as its related resource groups (e.g. MK-Management-Group11), from deploying virtual networks. If you can’t create a vnet, then you also can’t deploy a vm.
 
 * You can move TD-Subscription3 to MK-Management-Group20 = yes
