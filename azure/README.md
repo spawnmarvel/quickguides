@@ -226,6 +226,20 @@ Manage costs by using alerts, budgets, and recommendations
 
 * Management groups provide a governance scope above subscriptions. 
 * If your organization has many Azure subscriptions, you may need a way to efficiently manage access, policies, and compliance for those subscriptions.
+* Organize your resources into a hierarchy for unified policy and access management
+* You can create a hierarchy that applies a policy, for example, which limits VM locations to the West Europe region in the management group called "Corp".
+* Azure management groups support Azure RBAC for all resource accesses and role definitions. 
+* These permissions are inherited to child resources that exist in the hierarchy. 
+
+* For example, the Azure role VM contributor can be assigned to a management group. 
+* This role has no action on the management group, but will inherit to all VMs under that management group.
+
+
+![Management groups ](https://github.com/spawnmarvel/quickguides/blob/main/azure/management-groups.jpg)
+
+Policy in Root->Finance
+
+![Management groups policy ](https://github.com/spawnmarvel/quickguides/blob/main/azure/management-groups-policy.jpg)
 
 https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
