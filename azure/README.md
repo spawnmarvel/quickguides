@@ -245,39 +245,14 @@ Manage costs by using alerts, budgets, and recommendations
 
 
 
-* You are allowed to move subscriptions between management groups, bit can only have one parent.
+* You can create a virtual network in MK-Subscription1 = no
+* * Deny overrides allow
 
+*You can create a virtual machine in MK-Subscription2 = no
+* * Tenant Root Group has a Deny policy that restricts it, as well as its related resource groups (e.g. MK-Management-Group11), from deploying virtual networks. If you can’t create a vnet, then you also can’t deploy a vm.
 
-| Name Management group | Parent
-| ----- | -----
-| Tenant Root Group | NA
-| MK-Management-Group10 | Tenant Root Group
-| MK-Management-Group11 | MK-Management-Group10
-| MK-Management-Group20 | Tenant Root Group
-
-
-| Name Subscriptions | Mangement group
-| ----- | -----
-| MK-Subscription1 | MK-Management-Group11
-| MK-Subscription2 | MK-Management-Group20
-| MK-Subscription3 | Tenant Root Group
-
-
-| Name Policy | Parameter | Scope
-| ----- | ----- | ---------
-| Allowed resource types | virtualNetworks | MK-Management-Group20
-| Not allowed resource types | virtualNetworks |Tenant Root Group
-
-
-
-
-You can create a virtual network in MK-Subscription1 = no
-
-You can create a virtual machine in MK-Subscription2 = no
-
-Tenant Root Group has a Deny policy that restricts it, as well as its related resource groups (e.g. MK-Management-Group11), from deploying virtual networks. If you can’t create a virtual network, then you also can’t deploy a virtual machine.
-
-You can move TD-Subscription3 to MK-Management-Group20 = yes
+* You can move TD-Subscription3 to MK-Management-Group20 = yes
+* * You are allowed to move subscriptions between management groups, but can only have one parent.
 
 
 ![Management groups quiz ](https://github.com/spawnmarvel/quickguides/blob/main/azure/management-groups-quiz.jpg)
