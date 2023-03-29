@@ -272,7 +272,9 @@ Manage costs by using alerts, budgets, and recommendations
 
 
 You can create a virtual network in MK-Subscription1 = no
+
 You can create a virtual machine in MK-Subscription2 = no
+
 You can move TD-Subscription3 to MK-Management-Group20 = yes
 
 * For example, the Azure role VM contributor can be assigned to a management group. 
