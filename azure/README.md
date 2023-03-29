@@ -243,6 +243,37 @@ Manage costs by using alerts, budgets, and recommendations
 * Azure management groups support Azure RBAC for all resource accesses and role definitions. 
 * These permissions are inherited to child resources that exist in the hierarchy. 
 
+
+
+* You are allowed to move subscriptions between management groups, bit can only have one parent.
+
+
+| Name Management group | Parent
+| ----- | -----
+| Tenant Root Group | NA
+| MK-Management-Group10 | Tenant Root Group
+| MK-Management-Group11 | MK-Management-Group10
+| MK-Management-Group20 | Tenant Root Group
+
+
+| Name Subscriptions | Mangement group
+| ----- | -----
+| MK-Subscription1 | MK-Management-Group11
+| MK-Subscription1 | MK-Management-Group20
+| MK-Subscription1 | Tenant Root Group
+
+
+| Name Policy | Parameter | Scope
+| ----- | ----- | ---------
+| Allowed resource types | virtualNetworks | MK-Management-Group20
+| Not allowed resource types | virtualNetworks |Tenant Root Group
+
+
+
+* You can move TD-Subscription3 to MK-Management-Group20 = yes
+* You can create a virtual network in MK-Subscription1 = no
+* You can create a virtual machine in MK-Subscription2 = no
+
 * For example, the Azure role VM contributor can be assigned to a management group. 
 * * This role has no action on the management group, but will inherit to all VMs under that management group.
 
@@ -697,6 +728,9 @@ Configure container groups for Azure Container Instances
 Create and configure Azure Container Apps
 
 Configure storage for Azure Kubernetes Service (AKS)
+
+* The app should be accessible via the pod's IP address.
+* * With Azure Container Networking Interface (CNI), every pod gets an IP address from the subnet and can be accessed directly.
 
 #### Configure scaling for AKS
 
