@@ -180,6 +180,19 @@ Configure self-service password reset
 Custom domain
 * custom domain name by using TXT or MX record types.
 
+* How to delegate a subdomain?
+* Navigate to the yourdomain.com DNS zone and add an NS record named portal
+* PTR, CNAME, and TXT records are not used to delegate an Azure DNS subdomain.
+
+| Record | Description
+| -------| -----------
+| A     | IPV4
+| AAAA  | IPV6
+| CNAME | Canonical Name record
+| MX    | Mail Exchange server
+| NS    | Nameserver record
+| TXT   | Text record
+
 https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
