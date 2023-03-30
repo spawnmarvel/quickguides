@@ -207,6 +207,16 @@ Create custom role-based access control (RBAC) and Azure AD roles
 
 ![Rbac role ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role.jpg)
 
+| Property | Descriptions
+| --------- |------------
+|Name, IsCustom(true / false), description
+| Actions
+actions | An array of strings that specifies the control plane actions that the role allows to be performed.
+| |
+| | 
+| | 
+| |
+
 #### Provide access to Azure resources by assigning roles at different scopes
 
 * 4 scopes
