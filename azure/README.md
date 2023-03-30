@@ -210,12 +210,11 @@ Create custom role-based access control (RBAC) and Azure AD roles
 | Property | Descriptions
 | --------- |------------
 |Name, IsCustom(true / false), description
-| Actions
-actions | An array of strings that specifies the control plane actions that the role allows to be performed.
-| |
-| | 
-| | 
-| |
+| Actions, actions | An array of strings that specifies the control plane actions that the role allows to be performed.
+| NotActions, notActions | An array of strings that specifies the control plane actions that are excluded from the allowed Actions.
+| DataActions, dataActions | An array of strings that specifies the data plane actions that the role allows to be performed to your data within that object.
+| NotDataActions, notDataActions| An array of strings that specifies the data plane actions that are excluded from the allowed DataActions.
+| AssignableScopes, assignableScopes |An array of strings that specifies the scopes that the role is available for assignment.
 
 #### Provide access to Azure resources by assigning roles at different scopes
 
