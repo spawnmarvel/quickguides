@@ -700,6 +700,7 @@ https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-v
 
 * Plan a VPN gateway factors
 * * Throughput, internet or private, public IP, vpn device compatibillity, many clients (points) or site, gateway type, SKU.
+
 https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/4-explore-azure-vpn-gateway
 
 
