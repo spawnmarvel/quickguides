@@ -196,6 +196,8 @@ Custom domain
 | NS    | Nameserver record
 | TXT   | Text record
 
+![Custom domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/domain.jpg)
+
 https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
