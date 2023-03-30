@@ -205,7 +205,9 @@ https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-a
 
 Create custom role-based access control (RBAC) and Azure AD roles
 
-![Rbac role ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role.jpg)
+User access administrator
+
+![Rbac role User access administrator ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role.jpg)
 
 | Property | Descriptions
 | --------- |------------
@@ -221,9 +223,8 @@ Create custom role-based access control (RBAC) and Azure AD roles
 * 4 scopes
 * * Broad to narrow: management group, subscription, resource group, and resource.
 
-User access administrator
 
-![RBAC user access admin ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
+![RBAC Scope ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
 
 
 ![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-contributor.jpg)
