@@ -226,6 +226,7 @@ User access administrator
 
 ![RBAC Scope ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
 
+#### Interpret access assignments
 
 Storage Account Contributor
 
@@ -237,7 +238,7 @@ Storage Blob Data Reader
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
 
-Interpret access assignments
+
 
 ### Manage Azure subscriptions and governance
 
