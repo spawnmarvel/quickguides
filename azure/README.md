@@ -227,6 +227,8 @@ User access administrator
 ![RBAC Scope ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
 
 
+Storage Account Contributor
+
 ![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-contributor.jpg)
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
