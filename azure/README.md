@@ -170,8 +170,8 @@ Manage device settings and device identity
 
 | Example 
 | ------- 
-| Name [displayName] Required	User name [userPrincipalName] Required	Initial password [passwordProfile] Required	Block sign in (Yes/No) [accountEnabled] Required
-| Chris Green	chrisg@corpcompany.onmicrosoft.com	Amqphasshovel15672	 No
+| Name [displayName], Required	User name [userPrincipalName], Required	Initial password [passwordProfile], Required	Block sign in (Yes/No) [accountEnabled] 
+| Chris Green,	chrisg@corpcompany.onmicrosoft.com,	Thewordis42Hesaid,	 No
 
 
 https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
