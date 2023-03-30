@@ -168,7 +168,7 @@ Manage device settings and device identity
 
 ##### Perform bulk updates
 
-| Example 
+| Example csv
 | ------- 
 | Name [displayName], Required	User name [userPrincipalName], Required	Initial password [passwordProfile], Required	Block sign in (Yes/No) [accountEnabled] 
 | Chris Green,	chrisg@corpcompany.onmicrosoft.com,	Thewordis42Hesaid,	 No
