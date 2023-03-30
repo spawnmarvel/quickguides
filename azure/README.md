@@ -410,7 +410,7 @@ https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-aut
 * Data in Azure Storage is encrypted and decrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant. Azure Storage encryption is similar to BitLocker encryption on Windows.
 * Azure Storage encryption is enabled for all storage accounts.
 * Azure Storage encryption cannot be disabled. 
-*You can continue to rely on Microsoft-managed keys for the encryption of your data, or you can manage encryption with your own keys.
+* You can continue to rely on Microsoft-managed keys for the encryption of your data, or you can manage encryption with your own keys.
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption
 
@@ -687,8 +687,8 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-
 
 | Type | Description | Route
 | ---  | ----------- | -----
-| Point-to-site Virtual Private Networks | Similar to VPN, but client pc initiates VPN connection to Azure | Encrypted, IPsec/IKE (IKEv1 or IKEv2)
-| Site-to-site  Virtual Private Networks | Links your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network (appear as being on local network) | Encrypted
+| Point-to-site Virtual Private Networks | Similar to VPN, but client pc initiates VPN connection to Azure | Encrypted, IPsec/IKE (IKEv1 or IKEv2) (OpenVPN, Secure Socket Tunneling Protocol (SSTP))
+| Site-to-site  Virtual Private Networks | Links your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network (appear as being on local network) | Encrypted, IPsec/IKE (IKEv1 or IKEv2)
 | ExpressRoute | Greater bandwidth and even higher levels of security, provides dedicated private connectivity | Private, no inet
 |              | Azure ExpressRoute uses a combination of ExpressRoute circuits and routing domains to provide high-bandwidth connectivity to the Microsoft Cloud.|
 |              | Connections into ExpressRoute can be through the following mechanisms: |
