@@ -1,6 +1,6 @@
-# Microsoft Certified: Azure Administrator
+# Azure Administrator
 
-Microsoft Certified: Azure Administrator
+Azure Administrator
 
 ## Description
 
@@ -15,9 +15,6 @@ https://learn.microsoft.com/en-us/certifications/azure-administrator/
 Study Guide
 
 https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
-
-Tips and Tricks to pass the Microsoft Azure AZ-104 Exam
-* Hard work, work with Azure, repeat stuff, words, concepts and steps.
 
 ## AZ-104: Prerequisites for Azure administrators
 
