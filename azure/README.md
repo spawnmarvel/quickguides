@@ -210,7 +210,7 @@ Create custom role-based access control (RBAC) and Azure AD roles
 * 4 scopes
 * * Broad to narrow: management group, subscription, resource group, and resource.
 
-![RBAC ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac.jpg)
+![RBAC ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
 
