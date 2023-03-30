@@ -205,6 +205,8 @@ https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-a
 
 Create custom role-based access control (RBAC) and Azure AD roles
 
+![Rbac role ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role.jpg)
+
 #### Provide access to Azure resources by assigning roles at different scopes
 
 * 4 scopes
