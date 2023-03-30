@@ -229,11 +229,11 @@ User access administrator
 
 Storage Account Contributor
 
-![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-contributor.jpg)
+![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-contributor-1.jpg)
 
 Storage Blob Data Reader
 
-![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-data-reader.jpg)
+![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac-role-storage-account-data-reader-1.jpg)
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
 
