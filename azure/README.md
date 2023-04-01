@@ -994,14 +994,27 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 
 #### Configure scaling settings in an App Service plan
 
+* Choose tier
+
 ![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-scaling.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
 
-#### Create an App Service
+Create an App Service
 
-Secure an App Service
+#### Secure an App Service
+
+* HTTPS and Certificates
+* Client authentication and authorization
+* *  including Azure Active Directory, Microsoft accounts, Facebook, Google, and Twitter
+* Service-to-service authentication
+* When authenticating against a back-end service, App Service provides two different mechanisms depending on your need:
+* * Service identity - Sign in to the remote resource using the identity of the app itself, managed identity
+* * On-behalf-of (OBO) - Make delegated access to remote resources on behalf of the user. With Azure Active Directory as the authentication provider, your App Service app can perform delegated sign-in to a remote service
+
+
+https://learn.microsoft.com/en-us/azure/app-service/overview-security
 
 Configure custom domain names
 
