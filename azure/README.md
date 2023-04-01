@@ -257,7 +257,8 @@ https://follow-e-lo.com/2023/02/07/azure-management-groups/
 #### Configure resource locks
 
 * You can use delete locks to block the deletion
-* * virtual machines, subscriptions and resource groups
+* * Subscriptions, resource groups and resources
+* *  the only resource that we cannot apply a tag and lock is the Management Group
 
 * Types of Resource Locks
 * * Delete means authorized users can still read and modify a resource, but they can’t delete the resource.
@@ -273,6 +274,8 @@ https://follow-e-lo.com/2022/12/20/az-900-fundamentals/
 #### Apply and manage tags on resources
 
 * Tags are metadata elements that can be applied to resources, can be used for tracking resources: vm's, and associate to a dept. for billing and reporting.
+* Subscriptions, resource groups and resources
+* * the only resource that we cannot apply a tag and lock is the Management Group
 
 #### Manage resource groups
 
