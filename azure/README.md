@@ -121,6 +121,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial
 
 #### Create administrative units
 
+* Administrative units are containers used for delegating administrative roles to mange a spesfic portion of Azure AD.
 * An administrative unit is an Azure AD resource that can be a container for other Azure AD resources. 
 * An administrative unit can contain only users, groups, or devices.
 * Administrative units restrict permissions in a role to any portion of your organization that you define.
@@ -268,7 +269,7 @@ https://follow-e-lo.com/2022/12/20/az-900-fundamentals/
 
 #### Apply and manage tags on resources
 
-Done it
+* Tags are metadata elements that can be applied to resources, can be used for tracking resources: vm's, and associate to a dept. for billing and reporting.
 
 #### Manage resource groups
 
@@ -281,6 +282,7 @@ Manage costs by using alerts, budgets, and recommendations
 #### Configure management groups
 
 * Management groups provide a governance scope above subscriptions. 
+* Management groups are containers tha can be used to manage access, policy and compliance across multiple subscriptions.
 * If your organization has many Azure subscriptions, you may need a way to efficiently manage access, policies, and compliance for those subscriptions.
 * Organize your resources into a hierarchy for unified policy and access management
 * You can create a hierarchy that applies a policy, for example, which limits VM locations to the West Europe region in the management group called "Corp".
@@ -1012,6 +1014,7 @@ Source / Destination
 
 * Service tags
 * * A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules.
+* * Example App service or Azure Backup
 
 * ASG
 * * Application security groups allow you to group together the network interfaces from multiple virtual machines, 
