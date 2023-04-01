@@ -469,14 +469,14 @@ AzCopy is a command-line utility that you can use to copy blobs or files to or f
 
 
 ```
-azcopy copy	
 # Copies source data to a destination location
+azcopy copy [source] [destination] [flags]
 
-azcopy login
 # Logs in to Azure Active Directory to access Azure Storage resources.
+azcopy login
 
-azcopy make	
 # Creates a container or file share.
+azcopy make
 
 # There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. You need to provision an Azure Container instance to host the container image.
 
@@ -488,18 +488,18 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#tr
 #### Transfer data with AzCopy and file storage
 
 ```
-
-azcopy copy '<local-file-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-name><SAS-token>'
 # Upload a file
+azcopy copy '<local-file-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-name><SAS-token>'
 
-azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name><SAS-token>' --recursive
 # Upload a directory
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-name><SAS-token>' --recursive
 
-azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-or-directory-name><SAS-token>' --include-path <semicolon-separated-file-list>
 # Upload specific files
+azcopy copy '<local-directory-path>' 'https://<storage-account-name>.file.core.windows.net/<file-share-or-directory-name><SAS-token>' --include-path <semicolon-separated-file-list>
 
-azcopy copy 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-path><SAS-token>' '<local-file-path>'
 # Download a file
+azcopy copy 'https://<storage-account-name>.file.core.windows.net/<file-share-name>/<file-path><SAS-token>' '<local-file-path>'
+
 
 ```
 https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-files
