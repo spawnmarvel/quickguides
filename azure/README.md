@@ -1460,6 +1460,7 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-fa
 
 1. Create a Log Analytics workspace or use an existing one
 2. Configure diagnostics settings for your vaults
+
 ![Backup reports diagnostics ](https://github.com/spawnmarvel/quickguides/blob/main/azure/backup-reports.jpg)
 
 
