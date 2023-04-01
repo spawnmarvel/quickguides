@@ -764,10 +764,33 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overvi
 | Min number of replicas per revision | 0 | 0 | 30
 | Max number of replicas per revision | 10 | 1 | 30
 
+
+* Scale rules
+* Scaling is driven by three different categories of triggers:
+* * HTTP: Based on the number of concurrent HTTP requests to your revision.
+* * TCP: Based on the number of concurrent TCP connections to your revision.
+* * Custom: Based on CPU, memory, or supported event-driven data sources such as:
+* * * Azure Service Bus
+* * * Azure Event Hubs
+* * * Apache Kafka
+* * * Redis
+
 ![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-scale.jpg)
 
 
-Configure container groups for Azure Container Instances
+#### Configure container groups for Azure Container Instances
+
+* A container group is a collection of containers that get scheduled on the same host machine. 
+* The containers in a container group share a lifecycle, resources, local network, and storage volumes. It's similar in concept to a pod in Kubernetes.
+* The top-level resource in Azure Container Instances is the container group.
+
+![Container Group ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-group.jpg)
+
+
+
+https://learn.microsoft.com/en-us/azure/container-instances/container-instances-container-groups
+
+
 
 #### Create and configure Azure Container Apps
 
