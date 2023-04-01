@@ -753,6 +753,17 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overvi
 
 #### Configure sizing and scaling for Azure Container Instances
 
+* Azure Container Apps manages automatic horizontal scaling through a set of declarative scaling rules. 
+* As a container app revision scales out, new instances of the revision are created on-demand. These instances are known as replicas.
+
+* Scale definition
+* Scaling is defined by the combination of limits and rules.
+
+| Scale limit | Default value | Min | Max 
+| ------------| --------------| --- |----
+| Min number of replicas per revision | 0 | 0 | 30
+| Max number of replicas per revision | 10 | 1 | 30
+
 ![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-scale.jpg)
 
 
