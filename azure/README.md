@@ -1036,7 +1036,13 @@ https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-cus
 * Automatic vs custom backups
 * * Automatic backups made for your app regularly as long as it's in a supported pricing tier.
 
+Backup
+
 ![Web app bck ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-bck.jpg)
+
+Restore
+
+![Web app bck restore ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-bck-restore.jpg)
 
 * * Custom backups require initial configuration, and can be made on-demand or on a schedule.
 
