@@ -1447,6 +1447,8 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr
 | 3 | Reprotect the VM | After failover, you reprotect the VM in the secondary region, so that it replicates back to the primary region. 
 |   | Make sure that VM Status is Failover committed
 
+![Disaster recovery failover committed ](https://github.com/spawnmarvel/quickguides/blob/main/azure/disaster-recovery-failover-commited.jpg)
+
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
 
 Configure and review backup reports
