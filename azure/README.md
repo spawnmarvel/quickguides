@@ -751,7 +751,10 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overvi
 
 ###  Create and configure containers
 
-Configure sizing and scaling for Azure Container Instances
+#### Configure sizing and scaling for Azure Container Instances
+
+![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-scale.jpg)
+
 
 Configure container groups for Azure Container Instances
 
@@ -771,6 +774,7 @@ FQDN URL
 ![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-deploy-FQDN.jpg)
 
 Logs
+
 ![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-deploy-FQDN-logs.jpg)
 
 
