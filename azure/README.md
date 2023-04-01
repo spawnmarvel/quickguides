@@ -83,7 +83,10 @@ Remove
 # For example, Remove-AzResourceGroup deletes a specific resource group.
 
 Start, Stop, Restart, Suspend, Resume # 
+
 ```
+
+
 ## Skills measured
 Manage Azure identities and governance (15–20%) :round_pushpin:
 
@@ -1045,13 +1048,24 @@ Restore
 ![Web app bck restore ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-bck-restore.jpg)
 
 * * Custom backups require initial configuration, and can be made on-demand or on a schedule.
-
-
+* * In your app management page in the Azure portal, in the left menu, select Backups.
+* * At the top of the Backups page, select Configure custom backups.
+* * In Storage account, select an existing storage account (in the same subscription) or select Create new. Do the same with Container.
+* * Link db and create a schedule
 
 https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal
 
 
-Configure networking settings
+#### Configure networking settings
+
+* Because App Service Environments are isolated to the individual customer, there are certain configuration settings that can be applied exclusively to App Service Environments.
+* * Allow new private endpoint connections (For apps hosted on both ILB and External App Service Environment, you can allow creation of private endpoints.)
+* * FTP access (This ftpEnabled setting allows you to allow or deny FTP connections are the App Service Environment level.)
+* * Remote debugging access (Remote debugging is default disabled at the App Service Environment level. You can enable it)
+
+
+https://learn.microsoft.com/en-us/azure/app-service/environment/configure-network-settings
+
 
 Configure deployment settings
 
@@ -1395,9 +1409,26 @@ Configure Azure Site Recovery for Azure resources
 
 Perform failover to a secondary region by using Azure Site Recovery
 
+| Steps | Description | Note
+| ------| ---------- | ------
+| 1  | Create a Recovery Services vault | Create a Recovery Services vault in any region, except in the source region from which you want to replicate VMs.
+| 2  | Enable Site Recovery  | In the vault settings
+| 3  | Enable replication   | Select the source settings and enable VM replication.
+| 4  | Select the VMs |
+| 5  | Review replication settings |
+| 6  | Manage, Replication policy, Replication group
+
 * You need to reprotect VM1 after the failover so that VM1 will replicate back to the primary region.
 * * Before you begin, you must ensure that the virtual machine status is Failover committed. This will ensure replication back to the primary region.
 
+
+![Disaster recovery ](https://github.com/spawnmarvel/quickguides/blob/main/azure/disaster-recovery.jpg)
+
 Configure and review backup reports
+
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
+
+
 
 
