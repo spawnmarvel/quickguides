@@ -755,7 +755,14 @@ Configure sizing and scaling for Azure Container Instances
 
 Configure container groups for Azure Container Instances
 
-Create and configure Azure Container Apps
+#### Create and configure Azure Container Apps
+
+* Deploy Docker
+* Review functionality of container instance
+
+![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance.jpg)
+
+https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.md
 
 Configure storage for Azure Kubernetes Service (AKS)
 
