@@ -1424,10 +1424,34 @@ Perform failover to a secondary region by using Azure Site Recovery
 
 ![Disaster recovery ](https://github.com/spawnmarvel/quickguides/blob/main/azure/disaster-recovery.jpg)
 
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
+
+#### Run a disaster recovery drill for Azure VMs
+
+| Steps | Description | Note
+| ------| ---------- | ------
+| 1 | Check VM settings before the drill | In the vault > Replicated items, select the VM. check that the VM is protected and healthy.
+| 2 | Run a test failover | In Test Failover, choose a recovery point. The Azure VM in the target region is created using data from this recovery point.
+| 3 | Clean up after the drill |
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr-drill
+
+#### Fail over Azure VMs to a secondary region
+
+*  Fail over Azure VMs that are enabled for disaster recovery with Azure Site Recovery, to a secondary Azure region. After failover, you reprotect VMs in the target region so that they replicate back to the primary region.
+
+| Steps | Description | Note
+| ------| ---------- | ------
+| 1 | Verify the VM settings | check that the VM is protected and healthy, before you run a failover.
+| 2 | Run a failover | In Failover, choose a recovery point. The Azure VM in the target region is created using data from this recovery point.
+| 3 | Reprotect the VM | After failover, you reprotect the VM in the secondary region, so that it replicates back to the primary region. 
+|   | Make sure that VM Status is Failover committed
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
+
 Configure and review backup reports
 
 
-https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
 
 
 
