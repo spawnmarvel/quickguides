@@ -1463,6 +1463,32 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-fa
 
 ![Backup reports diagnostics ](https://github.com/spawnmarvel/quickguides/blob/main/azure/backup-reports.jpg)
 
+3. View reports in the Azure portal
+
+![Backup reports  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/backup-reports-reports.jpg)
+
+* Summary
+* * high-level overview of your backup estate. 
+* Backup Items
+* * information and trends on cloud storage consumed at a Backup-item level. 
+* Usage
+* * view key billing parameters for your backups
+* Jobs
+* *  view long-running trends on jobs, such as the number of failed jobs per day and the top causes of job failure.
+* Policies
+* * view information on all of your active policies, such as the number of associated items and the total cloud storage consumed by items backed up under a given policy.
+* Optimize
+* * gain visibility into potential cost-optimization opportunities for your backups.
+* Inactive resources
+* *  identify those backup items that haven't had a successful backup for a significant duration of time. 
+* Backup Items with a large retention duration
+* * identify those items that have backups retained for a longer duration than required by your organization.
+* Databases configured for daily full backup
+* *  identify database workloads that have been configured for daily full backup.
+* Policy adherence
+* * identify whether all of your backup instances have had at least one successful backup every day.
+* Email Azure Backup reports
+* * create automated tasks to receive periodic reports via email.
 
 https://learn.microsoft.com/en-us/azure/backup/configure-reports
 
