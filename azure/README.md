@@ -926,11 +926,12 @@ From the Cloud Shell pane, run the following to make the pod available from In
 
 #### ps1 / cli / aks / cmd
 ```
-kubectl create deployment nginx-deployment --image=nginx
 # From the Cloud Shell pane, run the following to deploy the nginx image from the Docker Hub:
+kubectl create deployment nginx-deployment --image=nginx
 
-kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
 # service/nginx-deployment exposed
+kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
+
 
 ```
 
@@ -938,15 +939,44 @@ https://learn.microsoft.com/en-us/azure/aks/concepts-network
 
 
 
-Upgrade an AKS cluster
+#### Upgrade an AKS cluster
 
-#### ps1 / cli / aks / cmd
+* Part of the AKS cluster lifecycle involves performing periodic upgrades to the latest Kubernetes version. 
+* It’s important you apply the latest security releases, or upgrade to get the latest features.
+* Performing upgrade operations requires the Microsoft.ContainerService/managedClusters/agentPools/write RBAC role.
+* When you upgrade a supported AKS cluster, Kubernetes minor versions can't be skipped. All upgrades must be performed sequentially by major version number.
 
-* TBD
-* Step-by-step bullets
+
+
+https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster?tabs=azure-cli
+
+#### ps1 / cli / aks 
+
 
 ```
-code blocks for commands
+# Check for available AKS cluster upgrades
+az aks get-upgrades --resource-group myResourceGroup --name myAKSCluster --output table
+
+# The following example output shows that the cluster can be upgraded to versions 1.19.1 and 1.19.3:
+
+Name     ResourceGroup    MasterVersion    Upgrades
+-------  ---------------  ---------------  --------------
+default  myResourceGroup  1.18.10          1.19.1, 1.19.3
+
+# It takes a few minutes to upgrade the cluster, depending on how many nodes you have.
+az aks upgrade \
+    --resource-group myResourceGroup \
+    --name myAKSCluster \
+    --kubernetes-version KUBERNETES_VERSION
+
+# To confirm that the upgrade was successful, use the az aks show command:
+az aks show --resource-group myResourceGroup --name myAKSCluster --output table
+
+Name          Location    ResourceGroup    KubernetesVersion    ProvisioningState    Fqdn
+------------  ----------  ---------------  -------------------  -------------------  ----------------------------------------------
+myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded            myakscluster-dns-379cbbb9.hcp.eastus.azmk8s.io
+
+
 ```
 
 ###  Create and configure an Azure App Service
