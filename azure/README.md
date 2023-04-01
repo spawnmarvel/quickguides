@@ -1016,9 +1016,28 @@ Create an App Service
 
 https://learn.microsoft.com/en-us/azure/app-service/overview-security
 
-Configure custom domain names
+#### Configure custom domain names
 
-Configure backup for an App Service
+* www.contoso.com domain, which shows a CNAME record and a TXT record to add.
+* Create the DNS records
+* * You can use Azure DNS to manage DNS records for your domain and configure a custom DNS name for Azure App Service.
+
+https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain?tabs=root%2Cazurecli
+
+
+#### Configure backup for an App Service
+
+* Automatic vs custom backups
+* * Automatic backups made for your app regularly as long as it's in a supported pricing tier.
+
+![Web app bck ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-bck.jpg)
+
+* * Custom backups require initial configuration, and can be made on-demand or on a schedule.
+
+
+
+https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal
+
 
 Configure networking settings
 
