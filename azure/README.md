@@ -762,6 +762,20 @@ Configure container groups for Azure Container Instances
 
 ![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance.jpg)
 
+Deploy
+
+![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-deploy.jpg)
+
+FQDN URL
+
+![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-deploy-FQDN.jpg)
+
+Logs
+![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/container-instance-deploy-FQDN-logs.jpg)
+
+
+https://follow-e-lo.com/2023/04/01/az-lab-09b-implement-azure-container-instances/
+
 https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.md
 
 Configure storage for Azure Kubernetes Service (AKS)
