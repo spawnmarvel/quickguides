@@ -992,7 +992,12 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 
 ![Web app ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app.jpg)
 
-Configure scaling settings in an App Service plan
+#### Configure scaling settings in an App Service plan
+
+![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-scaling.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
 
 #### Create an App Service
 
