@@ -1451,7 +1451,19 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr
 
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
 
-Configure and review backup reports
+#### Configure and review backup reports
+
+* A common requirement for backup admins is to obtain insights on backups based on data that spans a long period of time. Use cases for such a solution include:
+* * Allocating and forecasting of cloud storage consumed.
+* * Auditing of backups and restores.
+* * Identifying key trends at different levels of granularity.
+
+1. Create a Log Analytics workspace or use an existing one
+2. Configure diagnostics settings for your vaults
+![Backup reports diagnostics ](https://github.com/spawnmarvel/quickguides/blob/main/azure/backup-reports.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/backup/configure-reports
 
 
 
