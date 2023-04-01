@@ -995,8 +995,14 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 #### Configure scaling settings in an App Service plan
 
 * Choose tier
+* An app service always runs in an App Service plan. In addition, Azure Functions also has the option of running in an App Service plan. 
+* An App Service plan defines a set of compute resources for a web app to run.
 
 ![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-scaling.jpg)
+
+Function
+
+![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
