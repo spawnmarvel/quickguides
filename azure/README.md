@@ -637,6 +637,16 @@ https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-
 | FileServer1 | E:\RabbitMQFolder, F:\Software | MKSync1
 | FileServer2 | C:\temp | MKSync1
 
+* You then add E:\RabbitMQFolder of FileServer1 as the server endpoint of MKGroup1.
+
+* Can you add fs2 to MKGroup1 as a cloud endpoint ?
+* * No, is incorrect because you can only have one cloud endpoint per sync group. If you want to add another cloud endpoint, you must create another sync group.
+
+* Can you add F:\Software of Fileserver1 as a server endpoint to MKGroup1 ?
+* * No, is incorrect because TDGroup1 already has a server endpoint for FileServer1 for the folder E:\RabbitMQFolder.  If you want to add another cloud endpoint, you must create another sync group.
+
+* Can you add c:\temp of Fileserver2 as a server endpoint of MKGroup1 ?
+* * Yes, is correct because FileServer2 has no server endpoint yet on MKGroup1
 
 https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
                                   
