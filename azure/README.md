@@ -1175,6 +1175,7 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
 * Task 6: Configure Azure DNS for external name resolution (domain check with provider)
 * * Azure portal, search for and select DNS zones
+* * epicetus.com
 * * Name server 1 to 4 is here.
 * On the DNS zone blade, click + Record set.
 * * Add record sets for vm
