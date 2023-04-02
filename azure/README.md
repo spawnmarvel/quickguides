@@ -1507,7 +1507,7 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to
 
 #### Backup recovery
 
-| VM recovery snapshop | Steps | File and folder recovery | Steps
+| VM  file recovery snapshop | Steps | Recover files from Azure to a Windows Server | Steps
 | ---- | ----------- | ------- | -----------
 | 1 | On VM open browser->Azure          | 1 | On VM open browser->Azure 
 | 2 | Go to vault-> VM                   | 2 | Recover data on MS Azure Recovery service
@@ -1518,6 +1518,9 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to
 | 7 | Mount                              | 7 | Unmount
 | 8 | Robocopy                           | 8 |  
 | 9 | Unmount                            | 9 |
+
+
+https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-restore-files-windows-server
 
 
 Configure Azure Site Recovery for Azure resources
