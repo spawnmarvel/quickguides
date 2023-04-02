@@ -1273,7 +1273,6 @@ https://follow-e-lo.com/2023/03/25/az-lab-filter-network-traffic-with-a-network-
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
 
-![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-evaluate-effective-security.jpg)
 
 #### Evaluate effective security rules
 
@@ -1282,6 +1281,8 @@ https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-h
 * With effective security rules view in Network Watcher, you can see all inbound and outbound security rules that apply to a virtual machine’s network interface(s).
 
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security-group-view-overview
+
+![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-evaluate-effective-security.jpg)
 
 #### Implement Azure Bastion
 
