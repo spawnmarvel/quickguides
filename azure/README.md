@@ -1273,7 +1273,7 @@ https://follow-e-lo.com/2023/03/25/az-lab-filter-network-traffic-with-a-network-
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
 
-![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-evalute-effective-security.jpg)
+![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-evaluate-effective-security.jpg)
 
 #### Evaluate effective security rules
 
