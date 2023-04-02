@@ -1484,7 +1484,7 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 
 #### Backup
 
-| VM Back Up | Steps | File and folder backup | Steps
+| Back up vm in Azure | Steps | Backup up Win server in Azure | Steps
 | ---- | ----------- | ------- | -----------
 | 1 | Recovery service vault is created | 1 | Recovery service vault created
 | 2 | Go to backup                      | 2 | On VM -> browse to Portal
