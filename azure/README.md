@@ -1337,6 +1337,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-
 
 The link will be shown here
 
+
 ![Private end points links ](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-private-endpoints-result.jpg)
 
 https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip
