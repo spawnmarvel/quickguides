@@ -1403,6 +1403,8 @@ https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-troubles
 
 ### Monitor resources by using Azure Monitor
 
+Azure monitor 
+
 Storage
 
 ![Monitor storage](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-storage.jpg)
