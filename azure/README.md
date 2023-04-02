@@ -1377,13 +1377,13 @@ Configure and use Azure Monitor for networks
 
 #### Use Azure Network Watcher
 
-| Type | Description | Info
-| ---- | ------------| -------
-| Connection Monitor                | Monitor connectivity and latency between a VM and another network resource, and to track the average round-trip time (RTT)                 | 
-| IP Flow                           | Allows you to detect traffic filtering issues at a VM level.                                 |  Protocol, local IP, remote IP, local port, and a remote port.
-| Next Hop                          | Helps you verify traffic routes and detect routing issues.                                   |
-| Connection Troubleshoot           | Enables a one-time connectivity and latency check between a VM and another network resource  | 
-| Packet Capture                    | Enables you to capture all traffic on a VM in your virtual network.                          | 
+|Tab  | Type | Description | Info
+| ----| ---- | ------------| -------
+|Monitoring | Connection Monitor | Monitor connectivity and latency between a VM and another network resource, and to track the average round-trip time (RTT)                 | 
+|Network diagnostics tools | IP Flow | Allows you to detect traffic filtering issues at a VM level.                                 |  Protocol, local IP, remote IP, local port, and a remote port.
+|Network diagnostics tools| Next Hop | Helps you verify traffic routes and detect routing issues.                                   |
+|Network diagnostics tools| Connection Troubleshoot| Enables a one-time connectivity and latency check between a VM and another network resource  | 
+|Network diagnostics tools| Packet Capture| Enables you to capture all traffic on a VM in your virtual network.                          | 
 
 https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
