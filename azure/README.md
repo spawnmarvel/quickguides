@@ -1364,7 +1364,10 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
 Configure an internal or public load balancer
 
-Troubleshoot load balancing
+#### Troubleshoot load balancing
+
+
+https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-troubleshoot
 
 ### Monitor virtual networking
 
