@@ -515,7 +515,8 @@ azcopy login
 # Creates a container or file share.
 azcopy make
 
-# There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. You need to provision an Azure Container instance to host the container image.
+# There is a requirement to copy a virtual machine image to a container named tdimage from your on-premises datacenter. 
+# You need to provision an Azure Container instance to host the container image.
 
 AzCopy make "url.core.windows.net" blob
 
