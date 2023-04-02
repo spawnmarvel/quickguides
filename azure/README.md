@@ -743,7 +743,9 @@ https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-v
 
 https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/4-explore-azure-vpn-gateway
 
-
+* VNet-to-VNet connections that use Azure VPN gateways work across Azure Active Directory tenants.
+* WorkS for virtual networks that have different subscriptions.
+* One VPN gateway for each virtual network
 
 ![VPN MS Learn](https://github.com/spawnmarvel/quickguides/blob/main/azure/vpn-ms-learn.jpg)
 
@@ -1353,6 +1355,15 @@ https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-por
 
 * You need to associate a public IP address to a public Azure load balancer with an SKU of standard?
 * * publicIpVm02, SKU(must match):STANDARD, Assigment: Static
+
+* Application Gateway web application firewall (WAF) protects web applications from common vulnerabilities and exploits.
+* Protects against the following web vulnerabilities:
+* * SQL injection attacks
+* * Cross-site scripting attacks
+* * Other common attacks, such as command injection, HTTP request smuggling, HTTP response splitting, and remote file inclusion
+* * HTTP protocol violations,HTTP protocol anomalies, such as missing host user-agent and accept headers
+* * Bots, crawlers, and scanners
+* * Common application misconfigurations (for example, Apache and IIS)
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
