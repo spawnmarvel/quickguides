@@ -1376,10 +1376,6 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 #### Configure an internal or public load balancer
 
 
-| -----| Standard Load Balancer | Basic Load Balancer
-|------| ---------------------- | -------------------
-
-
 ![Load balancer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/loadbalancer-sku.jpg)
 
 https://learn.microsoft.com/en-us/azure/load-balancer/skus
