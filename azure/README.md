@@ -1273,9 +1273,12 @@ https://follow-e-lo.com/2023/03/25/az-lab-filter-network-traffic-with-a-network-
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
 
+![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-evalute-effective-security.jpg)
+
+#### Evaluate effective security rules
 
 
-Evaluate effective security rules
+https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security-group-view-overview
 
 #### Implement Azure Bastion
 
