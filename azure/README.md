@@ -1388,7 +1388,7 @@ Configure and use Azure Monitor for networks
 https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
 
-![Monitor vnet ](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-vent.jpg)
+![Monitor vnet ](https://github.com/spawnmarvel/quickguides/blob/main/azure/monitor-vnet.jpg)
 
 Troubleshoot external networking
 
