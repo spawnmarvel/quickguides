@@ -1244,7 +1244,7 @@ Create security rules
 
 ![ASG](https://github.com/spawnmarvel/quickguides/blob/main/azure/asg1.jpg)
 
-* Inbound
+* Inbound ASG as destination
 ![Destination ASG Done](https://github.com/spawnmarvel/quickguides/blob/main/azure/nsg-asg-inbound.jpg)
 
 * * Create VM
