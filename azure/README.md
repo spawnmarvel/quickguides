@@ -123,6 +123,8 @@ Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 |   | Select Require multi-factor authentication, and then choose Select.
 
 
+![Ad conditional policy ](https://github.com/spawnmarvel/quickguides/blob/main/azure/ad-conditional-policy.jpg)
+
 https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
 
