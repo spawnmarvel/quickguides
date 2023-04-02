@@ -192,6 +192,8 @@ Manage device settings and device identity
 | Name [displayName], Required	User name [userPrincipalName], Required	Initial password [passwordProfile], Required	Block sign in (Yes/No) [accountEnabled] 
 | Chris Green,	chrisg@corpcompany.onmicrosoft.com,	Thewordis42Hesaid,	 No
 
+![Ad users ](https://github.com/spawnmarvel/quickguides/blob/main/azure/ad-users.jpg)
+
 
 https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
 
