@@ -1062,11 +1062,21 @@ https://learn.microsoft.com/en-us/azure/app-service/overview-security
 
 #### Configure custom domain names
 
-* www.contoso.com domain, which shows a CNAME record and a TXT record to add.
-* Create the DNS records
-* * You can use Azure DNS to manage DNS records for your domain and configure a custom DNS name for Azure App Service.
+* Map an existing custom DNS name to Azure App Service
+* You can use Azure DNS to manage DNS records for your domain and configure a custom DNS name for Azure App Service.
+1. Configure a custom domain
+2. The Hostname record type box defaults to the recommended DNS record to use
+* * depending on whether the domain is a root domain (like contoso.com), 
+* * a subdomain (like www.contoso.com, or a wildcard domain *.contoso.com).
+2. Create the DNS records
+* * Sign in to the website of your domain provider. (Domain Name, DNS, or Name Server Management.),create a record
+* * You can use either a CNAME record or an A record to map a custom DNS name to App Service.
+3. Validate and complete
+
 
 https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain?tabs=root%2Cazurecli
+
+https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
 #### Configure backup for an App Service
