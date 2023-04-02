@@ -194,6 +194,10 @@ Manage device settings and device identity
 
 ![Ad users ](https://github.com/spawnmarvel/quickguides/blob/main/azure/ad-users.jpg)
 
+Properties
+
+![Ad users properties ](https://github.com/spawnmarvel/quickguides/blob/main/azure/ad-user-properties.jpg)
+
 
 https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
 
