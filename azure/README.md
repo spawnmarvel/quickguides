@@ -109,6 +109,18 @@ Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 
 * The recommended way to enable and use Azure AD Multi-Factor Authentication is with Conditional Access policies.
 * Conditional Access policies can be applied to specific users, groups, and apps.
+1. Create a Conditional Access policy
+2. Configure the conditions for multi-factor authentication
+
+1. An account with Conditional Access Administrator, Security Administrator, or Global Administrator privileges.
+2. Create a Conditional Access policy
+2. 1 (Under What does this policy apply to?, verify that Users and groups is selected.)
+3. Configure the conditions for multi-factor authentication
+3. 1 (Now that the Conditional Access policy is created and a test group of users is assigned, define the cloud apps or actions that trigger the policy. )
+3. 2 Configure which apps require multi-factor authentication
+4. Configure multi-factor authentication for access
+4. 1 Under Access controls, select the current value under Grant, and then select Grant access.
+4. 2 Select Require multi-factor authentication, and then choose Select.
 
 https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
