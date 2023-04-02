@@ -203,7 +203,9 @@ https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identitie
 
 Manage guest accounts
 
-Configure self-service password reset
+#### Configure self-service password reset
+
+https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/3-implement-azure-ad-self-service-password-reset
 
 Custom domain
 * custom domain name by using TXT or MX record types.
