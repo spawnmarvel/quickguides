@@ -1392,7 +1392,12 @@ https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
 Troubleshoot external networking
 
-Troubleshoot virtual network connectivity
+#### Troubleshoot virtual network connectivity
+
+![Vnet troubleshoot ](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-troubleshoot.jpg)
+
+https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-troubleshoot-connectivity-problem-between-vms
+
 
 ## AZ-104: Monitor and back up Azure resources (10-15%)
 
