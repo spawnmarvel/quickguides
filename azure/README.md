@@ -1373,7 +1373,20 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 * Azure Load Balancer: You can use this service to create public and internal load balancers only.
 * Azure Front Door and CDN:  Azure Front Door is a global, scalable entry-point that uses the Microsoft global edge network to create fast, secure, and widely scalable web applications.
 
-Configure an internal or public load balancer
+#### Configure an internal or public load balancer
+
+
+| -----| Standard Load Balancer | Basic Load Balancer
+|------| ---------------------- | -------------------
+
+
+![Load balancer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/loadbalancer-sku.jpg)
+
+https://learn.microsoft.com/en-us/azure/load-balancer/skus
+
+![Load balancer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/loadbalancer.jpg)
+
+https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview
 
 #### Troubleshoot load balancing
 
