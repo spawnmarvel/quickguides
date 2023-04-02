@@ -1167,6 +1167,19 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
 #### Configure Azure DNS
 
+* Task 5: Configure Azure DNS for internal name resolution
+* * Azure portal, search for and select Private DNS zones 
+* * epok.org
+* * on a vnet add VIRTUAL NETWORK LINK and enable auto registration
+* * Verify that the DNS records for az104-04-vm0 and az104-04-vm1 appear in the list of record sets as Auto registered.
+
+* Task 6: Configure Azure DNS for external name resolution (domain check with provider)
+* * Azure portal, search for and select DNS zones
+* * Name server 1 to 4 is here.
+* On the DNS zone blade, click + Record set.
+* * Add record sets for vm
+
+
 https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 
 
