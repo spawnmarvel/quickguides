@@ -205,6 +205,14 @@ Manage guest accounts
 
 #### Configure self-service password reset
 
+* You can enable it for all users in the Azure AD organization or for selected users.
+* To enable for selected users, you must specify the security group. Members of this group can use SSPR.
+
+1. Authentication methods (require one or two authentication methods), mobile app, email, sms, security questions
+2. Registration (Specify whether users are required to register for SSPR when they next sign in.Specify how often users are asked to reconfirm their authentication information )
+3. Notifications: Choose whether to notify users and administrators of password resets.
+4. Customization: Provide an email address or web page URL where your users can get help.
+
 https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/3-implement-azure-ad-self-service-password-reset
 
 Custom domain
