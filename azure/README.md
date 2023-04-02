@@ -626,7 +626,7 @@ https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-
 |Name | Service
 | --- | -------
 | MKSync1  | Storage Sync Service
-| MKGroup| | Sync Group
+| MKGroup1 | Sync Group
 
 * fs1 is the cloud endpoint of MKGroup1
 
