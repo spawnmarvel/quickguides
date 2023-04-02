@@ -1302,7 +1302,14 @@ https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security
 https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
 
 
-Configure service endpoints on subnets
+#### Configure service endpoints on subnets
+
+* Service endpoints are available for the following Azure services and regions. 
+
+![Service end points](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-service-endpoints.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview
 
 Configure private endpoints
 
