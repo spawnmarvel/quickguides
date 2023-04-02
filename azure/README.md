@@ -1308,6 +1308,10 @@ https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
 
 ![Service end points](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-service-endpoints.jpg)
 
+Service endpoint example
+
+![Service end points](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-service-endpoints-example.jpg)
+
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview
 
