@@ -1277,6 +1277,9 @@ https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-h
 
 #### Evaluate effective security rules
 
+* Network security groups can be associated at a subnet level or at a network interface level. 
+* When associated at a subnet level, it applies to all virtual machines (VMs) in the virtual network subnet. 
+* With effective security rules view in Network Watcher, you can see all inbound and outbound security rules that apply to a virtual machine’s network interface(s).
 
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security-group-view-overview
 
