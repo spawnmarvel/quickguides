@@ -1322,6 +1322,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-
 * In the Basics tab of Create a private endpoint, enter or select the following information.
 * * myPrivateEndpoint, rg and more
 * In the Resource pane, enter or select the following information.
+
 | Field | Value
 | ---- |------
 | Resource type |  Microsoft.Web.Sites
