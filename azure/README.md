@@ -620,6 +620,24 @@ https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-
 | 4 | Create a sync group and clound endpoint (A sync group defines the sync topology for a set of files.)
 | 5 | Create server endpoint (such as a folder on a server volume)
 
+* You have a subscription with two fileshares fs1 and fs2 in samme storage account and region.
+* You create:
+
+|Name | Service
+| --- | -------
+| MKSync1  | Storage Sync Service
+| MKGroup| | Sync Group
+
+* fs1 is the cloud endpoint of MKGroup1
+
+* You plan to backup:
+
+| Name | Folders | Registered to
+| ---- | ------- | ------------
+| FileServer1 | E:\RabbitMQFolder, F:\Software | MKSync1
+| FileServer2 | C:\temp | MKSync1
+
+
 https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
                                   
 
