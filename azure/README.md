@@ -1315,7 +1315,22 @@ Service endpoint example
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview
 
-Configure private endpoints
+#### Configure private endpoints
+
+* You must have a previously deployed Azure WebApp (or another AZ resource) to proceed with the steps in this article.
+* In the search box at the top of the portal, enter Private endpoint. Select Private endpoints.
+* In the Basics tab of Create a private endpoint, enter or select the following information.
+* * myPrivateEndpoint, rg and more
+* In the Resource pane, enter or select the following information.
+| Field | Value
+| ---- |------
+| Resource type |  Microsoft.Web.Sites
+| Resource      |  mywebapp41
+| Target subresources | Site
+
+![Private end points](https://github.com/spawnmarvel/quickguides/blob/main/azure/vnet-private-endpoints.jpg)
+
+https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip
 
 ### Configure load balancing
 
