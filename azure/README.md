@@ -496,6 +496,7 @@ Manage data by using Azure Storage Explorer and AzCopy
 
 * Azure Storage Explorer allows you to quickly view all the storage services under your account. 
 * You can browse through, read, and edit data stored in those services through a user-friendly graphical interface.
+* Supported on OS: Windows, Linux, macOS
 
 ![Storage Explorer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-explorer.jpg)
 
@@ -1427,11 +1428,12 @@ Configure and use Azure Monitor for networks
 
 |Tab  | Type | Description | Info
 | ----| ---- | ------------| -------
-|Monitoring | Connection Monitor | Monitor connectivity and latency between a VM and another network resource, and to track the average round-trip time (RTT)                 | 
-|Network diagnostics tools | IP Flow verify | Allows you to detect traffic filtering issues at a VM level.                                 |  Protocol, local IP, remote IP, local port, and a remote port.
-|Network diagnostics tools| Next Hop | Helps you verify traffic routes and detect routing issues.                                   |
-|Network diagnostics tools| Connection Troubleshoot| Enables a one-time connectivity and latency check between a VM and another network resource  | 
-|Network diagnostics tools| Packet Capture| Enables you to capture all traffic on a VM in your virtual network.                          | 
+|Monitoring               | Connection Monitor | Monitor connectivity and latency between a VM and another network resource, and to track the average round-trip time (RTT) | 
+|Network diagnostics tools| IP Flow verify | Allows you to detect traffic filtering issues at a VM level.|  Protocol, local IP, remote IP, local port, and a remote port.
+|Network diagnostics tools| Next Hop | Helps you verify traffic routes and detect routing issues. |
+|Network diagnostics tools| Connection Troubleshoot| Enables a one-time connectivity and latency check between a VM and another network resource | 
+|Network diagnostics tools| Packet Capture| Enables you to capture all traffic on a VM in your virtual network. |
+|Logs                     | NSG Flow logs| NSG flow logs is a feature of Azure Network Watcher that allows you to log information about IP traffic flowing through a NSG. | State, who's connecting, and from where, open ports to inernet. Flow logs are the source of truth for all network activity in your cloud environment
 
 https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
