@@ -270,8 +270,24 @@ User access administrator
 
 #### Provide access to Azure resources by assigning roles at different scopes
 
+* In Azure Active Directory (Azure AD), you typically assign Azure AD roles so that they apply to the entire tenant. 
+* However, you can also assign Azure AD roles for different resources, such as administrative units or application registrations.
+* *  Could assign the Helpdesk Administrator role so that it just applies to a particular administrative unit and not the entire tenant.
+
+* Scope
+* * When you assign a role, you specify one of the following types of scope:
+* * * Tenant
+* * * Administrative unit
+* * * Azure AD resource
+
+https://learn.microsoft.com/en-us/azure/active-directory/roles/custom-overview#scope
+
+
+* RBAC Scope
 * 4 scopes
 * * Broad to narrow: management group, subscription, resource group, and resource.
+
+https://learn.microsoft.com/en-us/azure/active-directory/roles/assign-roles-different-scopes
 
 
 ![RBAC Scope ](https://github.com/spawnmarvel/quickguides/blob/main/azure/rbac1.jpg)
