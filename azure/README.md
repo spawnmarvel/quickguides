@@ -527,15 +527,14 @@ Manage data by using Azure Storage Explorer and AzCopy
 
 * Azure Storage Explorer allows you to quickly view all the storage services under your account. 
 * You can browse through, read, and edit data stored in those services through a user-friendly graphical interface.
-* Supported on OS: Windows, Linux, macOS
 
 ![Storage Explorer ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-explorer.jpg)
 
 https://learn.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows
 
 #### Get started with AzCopy
-AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
-
+* AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
+* Supported on OS: Windows, Linux, macOS
 
 ```
 # Copies source data to a destination location
