@@ -160,6 +160,21 @@ https://learn.microsoft.com/en-us/azure/active-directory/roles/admin-units-manag
 
 ##### Manage user and group properties
 
+* Groups
+* * grant access and permissions to a group of users instead of for each individual user.
+
+https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/concept-learn-about-groups?context=%2Fazure%2Factive-directory%2Fenterprise-users%2Fcontext%2Fugr-context
+
+* Dynamic groups
+* * can use rules to determine group membership based on user or device properties In Azure Active Directory (Azure AD)
+* * AZ AD-> Groups->All groups-> New group
+* * Select a Membership type for either users or devices, and then select Add dynamic query. The rule builder supports up to five expressions. To add more than five expressions, you must use the text box.
+
+![Ad dynamic gropus ](https://github.com/spawnmarvel/quickguides/blob/main/azure/ad-dynamic-group.jpg)
+
+https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-create-rule
+
+
 * You need to grant several users that must belong to the same Azure group temporary access to the Microsoft SharePoint document library. 
 * The group must automatically be deleted after 180 days for compliance purposes.
 * * Set up a dynamic membership on Microsoft 365 groups.
