@@ -716,6 +716,10 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 https://learn.microsoft.com/en-us/answers/questions/130410/how-to-change-the-vnet-of-a-vm
 
+
+* Deploy a virtual machine without vnet?
+* No
+
 * You have Virtual machine, Virtual network, Recovery Services vault, and Storage account and plan to move all?
 * * Take note that when you move a resource to a new resource group or subscription, the location of the resource won’t change.
 * * Virtual machine, Virtual network, Recovery Services vault, and Storage account can be moved.
