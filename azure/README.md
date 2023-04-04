@@ -710,6 +710,9 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 * You need to move the virtual machine to a different host to avoid a service interruption?
 * * Redeploy the VM
 
+* You need to move the virtual machine to a different vnet?
+* * Redeploy the VM
+
 * You have Virtual machine, Virtual network, Recovery Services vault, and Storage account and plan to move all?
 * * Take note that when you move a resource to a new resource group or subscription, the location of the resource won’t change.
 * * Virtual machine, Virtual network, Recovery Services vault, and Storage account can be moved.
