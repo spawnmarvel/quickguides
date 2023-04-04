@@ -712,6 +712,9 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 
 * You need to move the virtual machine to a different vnet?
 * * Redeploy the VM
+* *  (Delete the VM but keep the OS Disk.,Deploy a new VM in the new subnet and use the still existing OS Disk. )
+
+https://learn.microsoft.com/en-us/answers/questions/130410/how-to-change-the-vnet-of-a-vm
 
 * You have Virtual machine, Virtual network, Recovery Services vault, and Storage account and plan to move all?
 * * Take note that when you move a resource to a new resource group or subscription, the location of the resource won’t change.
