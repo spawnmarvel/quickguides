@@ -1599,7 +1599,7 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to
 
 | VM  file recovery snapshop | Steps | Recover files from Azure to a Windows Server | Steps
 | ---- | ----------- | ------- | -----------
-| 1 | On VM open browser->Azure          | 1 | On VM open browser->Azure 
+| 1 | On VM open browser->Azure          | 1 | On VM, Open Azure Recovery Services (MARS) agent
 | 2 | Go to vault-> VM                   | 2 | Recover data on MS Azure Recovery service
 | 3 | Choose File recovery               | 3 | Select recover mode-> files and folders
 | 4 | Select recovery point              | 4 | Select volume and date
