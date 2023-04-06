@@ -153,6 +153,7 @@ Things to know about configuring service endpoints
 ## Questions
 
 1. SAS. It looks like you are trying to load a container via the URL in your browser. 
+
 Unfortunately this is not supported by default. 
 If you try loading a specific blob then it should work as you are intending. 
 If you want to list all blobs in the container you need to use the List Blobs format.
@@ -160,13 +161,16 @@ If you want to list all blobs in the container you need to use the List Blobs fo
 https://learn.microsoft.com/en-us/answers/questions/982062/cannot-access-to-uri-sas-blob-storage-authenticati
 
 2. You can't convert a Standard tier storage account to a Premium tier storage account or vice versa. 
+
 You must create a new storage account with the desired type and copy data, if applicable, to a new storage account.
 
 3. Which storage solution replicates data to a secondary region, maintains six copies of the data, and is the default replication option?
+
 Read-access geo-redundant storage is the default replication option. 
 Geo-redundant storage (GRS) copies the data synchronously three times within a single physical location in the primary region by using LRS. The data is then copied asynchronously to a single physical location in the secondary region.
 
 4. To what extent does a storage account name need to be unique?
+
 The storage account name is used as part of the URI for API access, so it must be globally unique.
 
 
