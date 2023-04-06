@@ -87,7 +87,7 @@ Things to consider when choosing Azure Storage services
 #### Determine replication strategies
 
 Locally redundant storage (LRS)
-* One Zone
+* One zone
 
 Zone redundant storage (ZRS)
 * Replicates your data across three storage clusters (Zones) in a single region.
@@ -97,9 +97,9 @@ Geo-redundant storage (GRS)
 
 * If you implement GRS, you have two related options to choose from:
 * * GRS replicates your data to another data center in a secondary region. The data is available to be read only if Microsoft initiates a failover from the primary to secondary region.
-* * Read-access geo-redundant storage (RA-GRS) is based on GRS. RA-GRS replicates your data to another data center in a secondary region, and also provides you with the option to read from the secondary region.
+* * * Read-access geo-redundant storage (RA-GRS) is based on GRS. RA-GRS replicates your data to another data center in a secondary region, and also provides you with the option to read from the secondary region.
 * * GRS or RA-GRS enabled, all data is first replicated with locally redundant storage.
-* * The update is then replicated asynchronously to the secondary region by using GRS,it's also replicated within that location by using LRS. 
+* * * The update is then replicated asynchronously to the secondary region by using GRS,it's also replicated within that location by using LRS. 
 
 
 Geo-zone-redundant storage (GZRS)
