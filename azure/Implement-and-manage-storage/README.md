@@ -250,6 +250,8 @@ The following contents are copied from the source container to the destination c
 
 Any type of data and any size file.
 
+![Blob select type  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-select-type.jpg)
+
 Block blob (Default, after you create a blob, you can't change its type.)
 
 * A block blob consists of blocks of data that are assembled to make a blob. 
