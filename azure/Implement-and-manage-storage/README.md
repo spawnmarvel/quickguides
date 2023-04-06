@@ -126,6 +126,11 @@ Can configure a custom domain to access blob data in your Azure storage account.
 
 ![Secure storage endpoints  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/secure-storage-endpoints.jpg)
 
+Things to know about configuring service endpoints
+
+* The Firewalls and virtual networks settings restrict access to your storage account from specific subnets on virtual networks or public IPs.
+* The Firewalls and virtual networks settings restrict access to your storage account from specific subnets on virtual networks or public IPs.
+* Subnets and virtual networks must exist in the same Azure region or region pair as your storage account.
 
 ## Questions
 
