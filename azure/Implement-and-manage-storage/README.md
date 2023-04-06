@@ -214,6 +214,13 @@ Use lifecycle policy rules to transition your data to the appropriate access tie
 
 ![Blob lifecycle managment  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-lifecycle-management.jpg)
 
+Rule
+
+* If: The If clause sets the evaluation clause for the policy rule.
+* Then: The Then clause sets the action clause for the policy rule.
+
+![Blob lifecycle managment add rule  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-lifecycle-management-add-rule.jpg)
+
 
 ## Configure Azure Storage Security
 
