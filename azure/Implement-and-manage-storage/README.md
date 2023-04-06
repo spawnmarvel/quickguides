@@ -162,6 +162,30 @@ In the Azure portal, you configure two settings to create a container for an Azu
 *  Blob: Allow anonymous public read access for the blobs only.
 *  Container: Allow anonymous public read and list access to the entire container, including the blobs.
 
+#### Assign blob access tiers
+
+Access tiers for blob data, including Hot, Cool, Archive, and Premium Blob Storage.
+
+* Hot tier, frequent reads and writes of objects. (Default)
+
+* Cool tier, data that's infrequently accessed (30 days), short-term backup and disaster recovery datasets and older media content.
+* * This content shouldn't be viewed freq
+uently, but it needs to be immediately available.
+* * Cool tier is more cost-effective, but access more expensive then hot.
+
+* Archive tier
+* Offline tier that's optimized for data that can tolerate several hours of retrieval latency.
+* Data must remain in the Archive tier for at least 180 days or be subject to an early deletion charge.
+* Secondary backups, original raw data, and legally required compliance information.
+* Most cost-effective option for storing data, accessing data is more expensive.
+
+* Premium Blob Storage
+* * Premium Blob Storage is best suited for I/O intensive workloads that require low and consistent storage latency. (SSD)
+* * Workloads that perform many small transactions.
+
+![Compare access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-acces-tiers.jpg)
+
+
 
 ## Configure Azure Storage Security
 
