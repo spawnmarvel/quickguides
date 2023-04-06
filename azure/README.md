@@ -401,6 +401,12 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?
 
 ![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure-1.jpg)
 
+Security
+* Default to Azure Active Directory authorization in the Azure portal.
+* * When this property is enabled, the Azure portal authorizes requests to blobs, queues, and tables with Azure Active Directory by default.
+
+![Storage secure AD ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure-1-ad.jpg)
+
 ##### Create and configure storage accounts
 
 Done it
