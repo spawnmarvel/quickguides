@@ -86,6 +86,9 @@ Things to consider when choosing Azure Storage services
 
 #### Determine replication strategies
 
+
+![Storage account performance ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/storage-account-performance.jpg)
+
 Locally redundant storage (LRS)
 * One zone
 
