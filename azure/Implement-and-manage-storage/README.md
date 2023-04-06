@@ -135,6 +135,19 @@ Things to know about configuring service endpoints
 
 ## Configure Azure Blob Storage
 
+The module concepts are covered in: Implement and manage storage (15–20%)
+
+Configure Azure Files and Azure Blob Storage
+* Configure Azure Blob Storage
+* Configure storage tiers for Azure Blob Storage
+* Configure Blob lifecycle management
+
+#### Implement Azure Blob Storage
+
+Blob Storage is also referred to as object storage or container storage.
+
+![Configure blob storage  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/configure-blob-storage.jpg)
+
 ## Configure Azure Storage Security
 
 ## Configure Azure Files and File Sync
