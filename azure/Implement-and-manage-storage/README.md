@@ -221,6 +221,19 @@ Rule
 
 ![Blob lifecycle managment add rule  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-lifecycle-management-add-rule.jpg)
 
+#### Determine blob object replication
+
+Object replication copies blobs in a container asynchronously according to policy rules that you configure.
+
+The following contents are copied from the source container to the destination container:
+
+* The blob contents
+* The blob metadata and properties
+* Any versions of data associated with the blob
+
+![Blob object replication  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-object-replication.jpg)
+
+
 
 ## Configure Azure Storage Security
 
