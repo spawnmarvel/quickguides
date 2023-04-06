@@ -23,8 +23,9 @@ https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
 ## Questions
 
-1. It looks like you are trying to load a container via the URL in your browser. 
-Unfortunately this is not supported by default. If you try loading a specific blob then it should work as you are intending. 
+1. SAS. It looks like you are trying to load a container via the URL in your browser. 
+Unfortunately this is not supported by default. 
+If you try loading a specific blob then it should work as you are intending. 
 If you want to list all blobs in the container you need to use the List Blobs format.
 
 https://learn.microsoft.com/en-us/answers/questions/982062/cannot-access-to-uri-sas-blob-storage-authenticati
