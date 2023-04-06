@@ -197,7 +197,18 @@ Configure the blob access tier
 
 #### Add blob lifecycle management rules
 
+Azure Blob Storage supports lifecycle management for data sets. It offers a rich rule-based policy for:
+* GPv2
+* Blob Storage accounts.
 
+Use lifecycle policy rules to transition your data to the appropriate access tiers, and set expiration times for the end of a data set's lifecycle.
+
+#### Things to know about lifecycle management
+
+* Transition blobs to a cooler storage tier (Hot to Cool, Hot to Archive, Cool to Archive) to optimize for performance and cost.
+* Delete blobs at the end of their lifecycles.
+* Define rule-based conditions to run once per day at the Azure storage account level.
+* Apply rule-based conditions to containers or a subset of blobs.
 
 
 
@@ -244,6 +255,13 @@ The storage account name is used as part of the URI for API access, so it must b
 ```
  New-AzStorageContainer
 ```
+
+6. Consider a scenario where data is frequently accessed in the early stages of the lifecycle, but only occasionally after two weeks. After the first month, the data set is rarely accessed.
+
+In this scenario, the Hot tier of Blob Storage is best during the early stages. 
+Cool tier storage is most appropriate for occasional access. 
+Archive tier storage is the best option after the data ages over a month. 
+To achieve this transition, lifecycle management policy rules are available to move aging data to cooler tiers.
 
 
 
