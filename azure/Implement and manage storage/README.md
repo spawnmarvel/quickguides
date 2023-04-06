@@ -29,7 +29,7 @@ Secure storage
 * Configure network access to storage accounts
 
 
-Things to know about Azure Storage
+#### Things to know about Azure Storage
 
 | Category | Description | Storage example
 | -------- | ----------- | ---------------
@@ -41,7 +41,7 @@ Storage account tiers
 * General purpose Azure storage accounts have two tiers: Standard (HDD) and Premium (SSD).
 
 
-Explore Azure Storage services
+#### Explore Azure Storage services
 
 Four services:
 
