@@ -289,6 +289,17 @@ Page blob
 
 https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/9-simulation-blobs
 
+Task 1: Create a storage account.
+* Create a storage account in your region with locally redundant storage.
+* Verify the storage account was created.
+
+Task 2: Work with blob storage.
+* Create a private blob container.
+* Upload a file to the container.
+
+Task 3: Monitor the storage container.
+* Review common storage problems and troubleshooting guides.
+* Review insights for performance, availability, and capacity.
 
 
 
