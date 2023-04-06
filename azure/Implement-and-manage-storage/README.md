@@ -117,7 +117,8 @@ To access the myblob data in the mycontainer location in your storage account:
 
 #### Configure custom domains
 
-* Can configure a custom domain to access blob data in your Azure storage account.
+Can configure a custom domain to access blob data in your Azure storage account.
+
 1. Direct mapping lets you enable a custom domain for a subdomain to an Azure storage account.
 2. Intermediary domain mapping is applied to a domain that's already in use within Azure.
 
