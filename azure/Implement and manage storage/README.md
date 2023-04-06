@@ -50,13 +50,13 @@ Azure Blob Storage (containers): A massively scalable object store for text and 
 * Storing data for backup and restore, disaster recovery, and archiving.
 * Storing data for analysis by an on-premises or Azure-hosted service.
 
-* Azure Files: Managed file shares for cloud or on-premises deployments.
+Azure Files: Managed file shares for cloud or on-premises deployments.
 
 
-* Azure Queue Storage: A messaging store for reliable messaging between application components.
+Azure Queue Storage: A messaging store for reliable messaging between application components.
 
 
-* Azure Table Storage: A NoSQL store for schemaless storage of structured data or relational data.
+Azure Table Storage: A NoSQL store for schemaless storage of structured data or relational data.
 
 
 ## Questions
