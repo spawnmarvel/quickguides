@@ -1109,12 +1109,22 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 
 ![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-scaling.jpg)
 
+https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
+
 Function
 
 ![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan.jpg)
 
+Web app tiers Linux
 
-https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
+![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan-linux.jpg)
+
+Web app tier Windows
+
+![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan-windows.jpg)
+
+https://azure.microsoft.com/en-us/pricing/details/app-service/windows/
+
 
 Create an App Service
 
