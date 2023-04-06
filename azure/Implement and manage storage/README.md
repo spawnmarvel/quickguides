@@ -76,6 +76,10 @@ Things to consider when choosing Azure Storage services
 * Consider storage for messages. Use Azure Queue Storage to store large numbers of messages
 * Consider storage for structured data. Azure Table Storage is ideal for storing structured, non-relational data.
 
+#### Determine storage account types
+
+![Account types ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/administrative-unit.jpg)
+
 ## Questions
 
 1. SAS. It looks like you are trying to load a container via the URL in your browser. 
