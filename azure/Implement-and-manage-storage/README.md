@@ -210,6 +210,9 @@ Use lifecycle policy rules to transition your data to the appropriate access tie
 * Define rule-based conditions to run once per day at the Azure storage account level.
 * Apply rule-based conditions to containers or a subset of blobs.
 
+#### Configure lifecycle management policy rules
+
+![Blob lifecycle managment  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-lifecycle-management.jpg)
 
 
 ## Configure Azure Storage Security
