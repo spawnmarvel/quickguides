@@ -4,7 +4,7 @@ Implement and manage storage (15–20%)
 
 ## Description
 
-Azure Administrator Cheat Sheet
+Azure Administrator Cheat Sheetl
 
 ## Links
 
@@ -106,6 +106,8 @@ Geo-zone-redundant storage (GZRS)
 * Data in a GZRS storage account is replicated across three Azure availability zones in the primary region, and also replicated to a secondary geographic region for protection from regional disasters. 
 * Each Azure region is paired with another region within the same geography, together making a regional pair.
 
+
+![Lrs, zrs, grs, gzrs ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lrs-grs-zrs-gzrs.jpg)
 
 #### Access storage
 
@@ -232,6 +234,51 @@ The following contents are copied from the source container to the destination c
 * Any versions of data associated with the blob
 
 ![Blob object replication  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/blob-object-replication.jpg)
+
+#### Things to know about blob object replication
+
+* Object replication requires that blob versioning is enabled on both the source and destination accounts.
+* Object replication doesn't support blob snapshots. Any snapshots on a blob in the source account aren't replicated to the destination account.
+* Object replication is supported when the source and destination accounts are in the Hot or Cool tier. The source and destination accounts can be in different tiers.
+* When you configure object replication, you create a replication policy that specifies the source Azure storage account and the destination storage account.
+* A replication policy includes one or more rules that specify a source container and a destination container
+
+#### Upload blobs
+
+Any type of data and any size file.
+
+Block blob (Default, after you create a blob, you can't change its type.)
+
+* A block blob consists of blocks of data that are assembled to make a blob. 
+* Ideal for storing text and binary data in the cloud, like files, images, and videos.
+
+Append blob
+
+* An append blob is similar to a block blob because the append blob also consists of blocks of data.
+* Optimized for append operations,  logging scenarios.
+
+Page blob
+
+* A page blob can be up to 8 TB in size.
+* More efficient for frequent read/write operations.
+* Virtual Machines uses page blobs for operating system disks and data disks.
+
+#### Things to consider when using blob upload tools
+
+* Uploading blobs to your Azure storage account with Azure Storage Explorer (Common).
+* AzCopy,  Windows and Linux, copy data to and from Blob Storage, across containers, and across storage accounts.
+* Azure Data Box Disk, A service for transferring on-premises data to Blob Storage when large datasets or network constraints make uploading data over the wire unrealistic. (Get SSD from MS)
+* Azure Import/Export, export large amounts of data from your storage account to hard drives that you provide and that Microsoft then ships back to you with your data.
+
+#### Things to know about pricing for Blob Storage
+
+* Performance tiers. The Blob Storage tier determines the amount of data stored and the cost for storing that data.(When tier gets cooler, per gb cost decreases)
+* Data access costs. Data access charges increase as the tier gets cooler. 
+* Transaction costs. There's a per-transaction charge for all tiers. The charge increases as the tier gets cooler.
+* Geo-replication data transfer costs. This charge only applies to accounts that have geo-replication configured, including GRS and RA-GRS. 
+* 
+
+
 
 
 
