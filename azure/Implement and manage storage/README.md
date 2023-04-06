@@ -20,3 +20,5 @@ https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
 ## MS learn AZ-104: Implement and manage storage in Azure
 
+
+## Questions
