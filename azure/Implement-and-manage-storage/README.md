@@ -185,6 +185,11 @@ uently, but it needs to be immediately available.
 
 ![Compare access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-access-tiers.jpg)
 
+Configure the blob access tier
+
+* Can also change the blob access tier for your account at any time.
+
+![Change access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/change-access-tiers.jpg)
 
 
 ## Configure Azure Storage Security
