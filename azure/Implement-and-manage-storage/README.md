@@ -20,7 +20,7 @@ https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
 ## MS learn AZ-104: Implement and manage storage in Azure
 
-### Configure storage accounts
+## Configure storage accounts
 
 The module concepts are covered in: Implement and manage storage (15–20%)
 
@@ -132,6 +132,24 @@ Things to know about configuring service endpoints
 * The Firewalls and virtual networks settings restrict access to your storage account from specific subnets on virtual networks or public IPs.
 * Subnets and virtual networks must exist in the same Azure region or region pair as your storage account.
 
+
+## Configure Azure Blob Storage
+
+## Configure Azure Storage Security
+
+## Configure Azure Files and File Sync
+
+## Configure Azure Storage with tools
+
+## Create and Azure Storage account
+
+## Control access to Azure Storage with shared acess signatures
+
+## Upload, download, and manage data with Azure Storage Explorer
+
+
+
+
 ## Questions
 
 1. SAS. It looks like you are trying to load a container via the URL in your browser. 
@@ -143,6 +161,15 @@ https://learn.microsoft.com/en-us/answers/questions/982062/cannot-access-to-uri-
 
 2. You can't convert a Standard tier storage account to a Premium tier storage account or vice versa. 
 You must create a new storage account with the desired type and copy data, if applicable, to a new storage account.
+
+3. Which storage solution replicates data to a secondary region, maintains six copies of the data, and is the default replication option?
+Read-access geo-redundant storage is the default replication option. 
+Geo-redundant storage (GRS) copies the data synchronously three times within a single physical location in the primary region by using LRS. The data is then copied asynchronously to a single physical location in the secondary region.
+
+4. To what extent does a storage account name need to be unique?
+The storage account name is used as part of the URI for API access, so it must be globally unique.
+
+
 
 
 
