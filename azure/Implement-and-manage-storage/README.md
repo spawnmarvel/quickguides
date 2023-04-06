@@ -148,6 +148,21 @@ Blob Storage is also referred to as object storage or container storage.
 
 ![Configure blob storage  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/configure-blob-storage.jpg)
 
+#### Things to know about containers and blobs
+
+* All blobs must be in a container.
+* A container can store an unlimited number of blobs.
+* An Azure storage account can contain an unlimited number of containers.
+
+In the Azure portal, you configure two settings to create a container for an Azure storage account:
+
+1. Name (The name must be unique within the Azure storage account.)
+2. Public access level:
+*  Private: (Default) Prohibit anonymous access to the container and blobs.
+*  Blob: Allow anonymous public read access for the blobs only.
+*  Container: Allow anonymous public read and list access to the entire container, including the blobs.
+
+
 ## Configure Azure Storage Security
 
 ## Configure Azure Files and File Sync
@@ -185,6 +200,12 @@ Geo-redundant storage (GRS) copies the data synchronously three times within a s
 4. To what extent does a storage account name need to be unique?
 
 The storage account name is used as part of the URI for API access, so it must be globally unique.
+
+5. You can also create a blob container with PowerShell by using the New-AzStorageContainer command.
+
+```
+ New-AzStorageContainer
+```
 
 
 
