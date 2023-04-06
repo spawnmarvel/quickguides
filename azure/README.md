@@ -401,7 +401,8 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?
 
 ![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/azure/storage-secure-1.jpg)
 
-Security
+Security and AD
+
 * Default to Azure Active Directory authorization in the Azure portal.
 * * When this property is enabled, the Azure portal authorizes requests to blobs, queues, and tables with Azure Active Directory by default.
 
