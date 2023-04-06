@@ -45,7 +45,8 @@ Storage account tiers
 
 4 services:
 
-1. Azure Blob Storage (containers): A massively scalable object store for text and binary data.
+Azure Blob Storage (containers): A massively scalable object store for text and binary data.
+
 * Text or binary data (images, docs, files, video/audio)
 * Storing data for backup and restore, disaster recovery, and archiving.
 * Storing data for analysis by an on-premises or Azure-hosted service.
@@ -53,6 +54,7 @@ Storage account tiers
 
 
 Azure Files: Managed file shares for cloud or on-premises deployments.
+
 * Highly available network file shares
 * Server Message Block (SMB) protocol and the Network File System (NFS) protocol.
 * Many on-premises applications use file shares. 
@@ -62,10 +64,12 @@ Azure Files: Managed file shares for cloud or on-premises deployments.
 
 
 Azure Queue Storage: A messaging store for reliable messaging between application components.
+
 * Queue messages can be up to 64 KB in size.
 
 
 Azure Table Storage: A NoSQL store for schemaless storage of structured data or relational data.
+
 * Azure Table Storage is now part of Azure Cosmos DB, which is a fully managed NoSQL database service for modern app development.
 * NoSQL
 
