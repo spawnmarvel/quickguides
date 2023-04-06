@@ -49,15 +49,32 @@ Azure Blob Storage (containers): A massively scalable object store for text and 
 * Text or binary data (images, docs, files, video/audio)
 * Storing data for backup and restore, disaster recovery, and archiving.
 * Storing data for analysis by an on-premises or Azure-hosted service.
+* HTTP(S), access  blobs via URL, REST API, PS1, CLI, SDK.
+
 
 Azure Files: Managed file shares for cloud or on-premises deployments.
+* Highly available network file shares
+* Server Message Block (SMB) protocol and the Network File System (NFS) protocol.
+* Many on-premises applications use file shares. 
+* Configuration files can be stored on a file share and accessed from multiple virtual machines.
+* Diagnostic logs, metrics, and crash dumps are just three examples.
+* The storage account credentials are used to provide authentication for access to the file share. 
 
 
 Azure Queue Storage: A messaging store for reliable messaging between application components.
+* Queue messages can be up to 64 KB in size.
 
 
 Azure Table Storage: A NoSQL store for schemaless storage of structured data or relational data.
+* Azure Table Storage is now part of Azure Cosmos DB, which is a fully managed NoSQL database service for modern app development.
+* NoSQL
 
+Things to consider when choosing Azure Storage services
+
+* Consider storage optimization for massive data. Azure Blob Storage is optimized for storing massive amounts of unstructured data.
+* Consider storage with high availability. Azure Files supports highly available network file shares.
+* Consider storage for messages. Use Azure Queue Storage to store large numbers of messages
+* Consider storage for structured data. Azure Table Storage is ideal for storing structured, non-relational data.
 
 ## Questions
 
