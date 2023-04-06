@@ -43,9 +43,9 @@ Storage account tiers
 
 #### Explore Azure Storage services
 
-Four services:
+4 services:
 
-Azure Blob Storage (containers): A massively scalable object store for text and binary data.
+1. Azure Blob Storage (containers): A massively scalable object store for text and binary data.
 * Text or binary data (images, docs, files, video/audio)
 * Storing data for backup and restore, disaster recovery, and archiving.
 * Storing data for analysis by an on-premises or Azure-hosted service.
@@ -158,9 +158,9 @@ In the Azure portal, you configure two settings to create a container for an Azu
 
 1. Name (The name must be unique within the Azure storage account.)
 2. Public access level:
-*  Private: (Default) Prohibit anonymous access to the container and blobs.
-*  Blob: Allow anonymous public read access for the blobs only.
-*  Container: Allow anonymous public read and list access to the entire container, including the blobs.
+* *  Private: (Default) Prohibit anonymous access to the container and blobs.
+* *  Blob: Allow anonymous public read access for the blobs only.
+* *  Container: Allow anonymous public read and list access to the entire container, including the blobs.
 
 #### Assign blob access tiers
 
@@ -174,10 +174,10 @@ uently, but it needs to be immediately available.
 * * Cool tier is more cost-effective, but access more expensive then hot.
 
 * Archive tier
-* Offline tier that's optimized for data that can tolerate several hours of retrieval latency.
-* Data must remain in the Archive tier for at least 180 days or be subject to an early deletion charge.
-* Secondary backups, original raw data, and legally required compliance information.
-* Most cost-effective option for storing data, accessing data is more expensive.
+* * Offline tier that's optimized for data that can tolerate several hours of retrieval latency.
+* * Data must remain in the Archive tier for at least 180 days or be subject to an early deletion charge.
+* * Secondary backups, original raw data, and legally required compliance information.
+* * Most cost-effective option for storing data, accessing data is more expensive.
 
 * Premium Blob Storage
 * * Premium Blob Storage is best suited for I/O intensive workloads that require low and consistent storage latency. (SSD)
@@ -190,6 +190,11 @@ Configure the blob access tier
 * Can also change the blob access tier for your account at any time.
 
 ![Change access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/change-access-tiers.jpg)
+
+#### Add blob lifecycle management rules
+
+
+
 
 
 ## Configure Azure Storage Security
