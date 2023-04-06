@@ -80,6 +80,52 @@ Things to consider when choosing Azure Storage services
 
 ![Account types ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement%20and%20manage%20storage/account-types.jpg)
 
+#### Determine replication strategies
+
+Locally redundant storage (LRS)
+* One Zone
+
+Zone redundant storage (ZRS)
+* Replicates your data across three storage clusters (Zones) in a single region.
+
+Geo-redundant storage (GRS)
+* Replicates your data to a secondary region (hundreds of miles away from the primary location of the source data).
+
+* If you implement GRS, you have two related options to choose from:
+* * GRS replicates your data to another data center in a secondary region. The data is available to be read only if Microsoft initiates a failover from the primary to secondary region.
+* * Read-access geo-redundant storage (RA-GRS) is based on GRS. RA-GRS replicates your data to another data center in a secondary region, and also provides you with the option to read from the secondary region.
+* * GRS or RA-GRS enabled, all data is first replicated with locally redundant storage.
+* * The update is then replicated asynchronously to the secondary region by using GRS,it's also replicated within that location by using LRS. 
+
+
+Geo-zone-redundant storage (GZRS)
+* Data in a GZRS storage account is replicated across three Azure availability zones in the primary region, and also replicated to a secondary geographic region for protection from regional disasters. 
+* Each Azure region is paired with another region within the same geography, together making a regional pair.
+
+
+#### Access storage
+
+| Service | Default endpoint
+| -------- | ---------------
+| Container service | //mystorageaccount.blob.core.windows.net
+| Table service     | //mystorageaccount.table.core.windows.net
+| Queue service     | //mystorageaccount.queue.core.windows.net
+| File service      | //mystorageaccount.file.core.windows.net
+
+To access the myblob data in the mycontainer location in your storage account:
+* //mystorageaccount.blob.core.windows.net/mycontainer/myblob
+
+#### Configure custom domains
+
+* Can configure a custom domain to access blob data in your Azure storage account.
+1. Direct mapping lets you enable a custom domain for a subdomain to an Azure storage account.
+2. Intermediary domain mapping is applied to a domain that's already in use within Azure.
+
+#### Secure storage endpoints
+
+![Secure storage endpoints  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/secure-storage-endpoints.jpg)
+
+
 ## Questions
 
 1. SAS. It looks like you are trying to load a container via the URL in your browser. 
