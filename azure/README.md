@@ -1107,7 +1107,12 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 * An app service always runs in an App Service plan. In addition, Azure Functions also has the option of running in an App Service plan. 
 * An App Service plan defines a set of compute resources for a web app to run.
 
+Scale up
 ![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan-scale-up.jpg)
+
+Scale out
+![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/azure/web-app-plan-scale-out.jpg)
+
 
 https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
 
