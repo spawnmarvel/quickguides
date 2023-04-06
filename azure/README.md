@@ -123,7 +123,7 @@ Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 |   | Select Require multi-factor authentication, and then choose Select.
 
 
-![Ad conditional policy ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/ad-conditional-policy.jpg)
+![Ad conditional policy ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/ad-conditional-policy.jpg)
 
 https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
@@ -152,7 +152,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-un
 * * For example, you could use administrative units to delegate permissions to administrators of each lab department at a hospital, so they can manage users and control access and policies in the bone lab only.
 
 
-![Administrative units ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/administrative-unit.jpg)
+![Administrative units ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/administrative-unit.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/active-directory/roles/admin-units-manage#next-steps
@@ -170,7 +170,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/concept-le
 * * AZ AD-> Groups->All groups-> New group
 * * Select a Membership type for either users or devices, and then select Add dynamic query. The rule builder supports up to five expressions. To add more than five expressions, you must use the text box.
 
-![Ad dynamic gropus ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/ad-dynamic-group.jpg)
+![Ad dynamic gropus ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/ad-dynamic-group.jpg)
 
 https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-create-rule
 
@@ -207,11 +207,11 @@ Manage device settings and device identity
 | Name [displayName], Required	User name [userPrincipalName], Required	Initial password [passwordProfile], Required	Block sign in (Yes/No) [accountEnabled] 
 | Chris Green,	chrisg@corpcompany.onmicrosoft.com,	Thewordis42Hesaid,	 No
 
-![Ad users ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/ad-users.jpg)
+![Ad users ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/ad-users.jpg)
 
 Properties
 
-![Ad users properties ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/ad-user-properties.jpg)
+![Ad users properties ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/ad-user-properties.jpg)
 
 
 https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
@@ -246,7 +246,7 @@ Custom domain
 | NS    | Nameserver record
 | TXT   | Text record
 
-![Custom domain ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/domain.jpg)
+![Custom domain ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/domain.jpg)
 
 https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
@@ -257,7 +257,7 @@ Create custom role-based access control (RBAC) and Azure AD roles
 
 User access administrator
 
-![Rbac role User access administrator ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/rbac-role.jpg)
+![Rbac role User access administrator ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/rbac-role.jpg)
 
 | Property | Descriptions
 | --------- |------------
@@ -290,17 +290,17 @@ https://learn.microsoft.com/en-us/azure/active-directory/roles/custom-overview#s
 https://learn.microsoft.com/en-us/azure/active-directory/roles/assign-roles-different-scopes
 
 
-![RBAC Scope ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/rbac1.jpg)
+![RBAC Scope ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/rbac1.jpg)
 
 #### Interpret access assignments
 
 Storage Account Contributor
 
-![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/rbac-role-storage-account-contributor-1.jpg)
+![RBAC st account contributor ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/rbac-role-storage-account-contributor-1.jpg)
 
 Storage Blob Data Reader
 
-![RBAC st account contributor ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/rbac-role-storage-account-data-reader-1.jpg)
+![RBAC st account contributor ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/rbac-role-storage-account-data-reader-1.jpg)
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
 
@@ -369,17 +369,17 @@ Manage costs by using alerts, budgets, and recommendations
 * * You are allowed to move subscriptions between management groups, but can only have one parent.
 
 
-![Management groups quiz ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/management-groups-quiz.jpg)
+![Management groups quiz ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/management-groups-quiz.jpg)
 
 * For example, the Azure role VM contributor can be assigned to a management group. 
 * * This role has no action on the management group, but will inherit to all VMs under that management group.
 
 
-![Management groups ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/management-groups.jpg)
+![Management groups ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/management-groups.jpg)
 
 Policy in Root->Finance
 
-![Management groups policy ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/management-groups-policy.jpg)
+![Management groups policy ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/management-groups-policy.jpg)
 
 https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
@@ -399,14 +399,14 @@ https://follow-e-lo.com/2023/02/07/azure-management-groups/
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
 
-![Storage secure ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-secure-1.jpg)
+![Storage secure ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-secure-1.jpg)
 
 Security and AD
 
 * Default to Azure Active Directory authorization in the Azure portal.
 * * When this property is enabled, the Azure portal authorizes requests to blobs, queues, and tables with Azure Active Directory by default.
 
-![Storage secure AD ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-secure-1-ad.jpg)
+![Storage secure AD ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-secure-1-ad.jpg)
 
 ##### Create and configure storage accounts
 
@@ -477,7 +477,7 @@ https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-mana
 
 *  Setting this property implicitly "domain joins" the storage account with the associated Azure AD DS deployment
 
-![Storage AD ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-ad.jpg)
+![Storage AD ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-ad.jpg)
 
 https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal
 
@@ -535,7 +535,7 @@ Manage data by using Azure Storage Explorer and AzCopy
 * Azure Storage Explorer allows you to quickly view all the storage services under your account. 
 * You can browse through, read, and edit data stored in those services through a user-friendly graphical interface.
 
-![Storage Explorer ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-explorer.jpg)
+![Storage Explorer ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-explorer.jpg)
 
 https://learn.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows
 
@@ -604,7 +604,7 @@ Configure storage tiers
 
 * Type of storage account, Supported storage services, Redundancy options and usage
 
-![Storage account over view ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-overview.jpg)
+![Storage account over view ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-overview.jpg)
 
 https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview
 
@@ -633,7 +633,7 @@ Set-azStorageBlobContent -Container testco0041 -File ./toblob0041/test.txt -Blob
 * * number of days since the blob was last accessed (x)
 * * (x) To use this condition in an action, you should first optionally enable last access time tracking.
 
-![Storage blob lifecycle ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/storage-blob-lifecycle1.jpg)
+![Storage blob lifecycle ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/storage-blob-lifecycle1.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal#see-also
@@ -645,7 +645,7 @@ Azure File Sync transforms Windows Server into a quick cache of your Azure file 
 * Azure File Sync will not overwrite any files in your endpoints. 
 * It will simply append a conflict number to the filename of the older file, while the most recent change will retain the original file name.
 
-![Implement Azure File Sync manually ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/az-file-sync.jpg)
+![Implement Azure File Sync manually ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/az-file-sync.jpg)
 
 https://learn.microsoft.com/en-us/training/modules/implement-hybrid-file-server-infrastructure/6-implement-azure-file-synchronization
 
@@ -823,7 +823,7 @@ https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-v
 * WorkS for virtual networks that have different subscriptions.
 * One VPN gateway for each virtual network
 
-![VPN MS Learn](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vpn-ms-learn.jpg)
+![VPN MS Learn]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vpn-ms-learn.jpg)
 
 Configure VM availability options
 
@@ -858,7 +858,7 @@ https://follow-e-lo.com/2023/03/18/az-lab-08-manage-virtual-machines/
 |                 | By default, the virtual machines configured within your availability set are separated across up to three fault domains. 
 
 
-![Fault and update domain ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/fault-update-domain-1.jpg)
+![Fault and update domain ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/fault-update-domain-1.jpg)
 
 *  10 Update domains, 18 VM's how many will be booted at the same time?
 *  2 VMS 
@@ -891,7 +891,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overvi
 * * * Apache Kafka
 * * * Redis
 
-![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-instance-scale.jpg)
+![Container instance ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-instance-scale.jpg)
 
 
 #### Configure container groups for Azure Container Instances
@@ -900,7 +900,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overvi
 * The containers in a container group share a lifecycle, resources, local network, and storage volumes. It's similar in concept to a pod in Kubernetes.
 * The top-level resource in Azure Container Instances is the container group.
 
-![Container Group ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-group.jpg)
+![Container Group ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-group.jpg)
 
 
 
@@ -913,19 +913,19 @@ https://learn.microsoft.com/en-us/azure/container-instances/container-instances-
 * Deploy Docker
 * Review functionality of container instance
 
-![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-instance.jpg)
+![Container instance ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-instance.jpg)
 
 Deploy
 
-![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-instance-deploy.jpg)
+![Container instance ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-instance-deploy.jpg)
 
 FQDN URL
 
-![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-instance-deploy-FQDN.jpg)
+![Container instance ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-instance-deploy-FQDN.jpg)
 
 Logs
 
-![Container instance ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/container-instance-deploy-FQDN-logs.jpg)
+![Container instance ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/container-instance-deploy-FQDN-logs.jpg)
 
 
 https://follow-e-lo.com/2023/04/01/az-lab-09b-implement-azure-container-instances/
@@ -1106,7 +1106,7 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 * Also, if you move a resource to a new resource group or subscription, the location of the resource would not change.
 
 
-![Web app ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app.jpg)
+![Web app ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app.jpg)
 
 #### Configure scaling settings in an App Service plan
 
@@ -1117,13 +1117,13 @@ myAKSCluster  eastus      myResourceGroup  1.19.1               Succeeded       
 
 Resources
 
-![Web app resources ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-resources.jpg)
+![Web app resources ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-resources.jpg)
 
 Scale up
-![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-plan-scale-up.jpg)
+![Web app scaling ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-plan-scale-up.jpg)
 
 Scale out
-![Web app scaling ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-plan-scale-out.jpg)
+![Web app scaling ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-plan-scale-out.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
@@ -1131,11 +1131,11 @@ https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
 
 Web app tiers Linux
 
-![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-plan-linux.jpg)
+![Web app plan examples ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-plan-linux.jpg)
 
 Web app tier Windows
 
-![Web app plan examples ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-plan-windows.jpg)
+![Web app plan examples ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-plan-windows.jpg)
 
 https://azure.microsoft.com/en-us/pricing/details/app-service/windows/
 
@@ -1181,11 +1181,11 @@ https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-a
 
 Backup
 
-![Web app bck ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-bck.jpg)
+![Web app bck ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-bck.jpg)
 
 Restore
 
-![Web app bck restore ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/web-app-bck-restore.jpg)
+![Web app bck restore ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/web-app-bck-restore.jpg)
 
 * * Custom backups require initial configuration, and can be made on-demand or on a schedule.
 * * In your app management page in the Azure portal, in the left menu, select Backups.
@@ -1243,7 +1243,7 @@ You need to connect your on-premises network to Azure by using a site-to-site VP
 | 3   | Deploy a local network gateway
 | 4   | Deploy a VPN Connection
 
-![VPN](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vpn.jpg)
+![VPN]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vpn.jpg)
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal?toc=%2Fazure%2Fvirtual-network%2Ftoc.json
 
@@ -1305,14 +1305,14 @@ https://follow-e-lo.com/2023/03/07/azure-lab-04-implement-virtual-networking/
 * * * AllowVnetOutBound
 * * * AllowInternetOutBound (Internet)
 
-![NSG Default](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg-default1.jpg)
+![NSG Default]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg-default1.jpg)
 
 * Associate network security group to:
 * * Associate to vnet->subnet or nic
 * * To delete the NSG you must dissociate
 
 
-![NSG Associate](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg-associate1.jpg)
+![NSG Associate]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg-associate1.jpg)
 
 
 Source / Destination
@@ -1333,18 +1333,18 @@ Source / Destination
 Create security rules
 * * Create a security rule that allows ports 80 and 443 to the web and 3389 to mgmt application security group s
 
-![NSG](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg1.jpg)
+![NSG]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg1.jpg)
 
 * * ASG
 
-![ASG](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/asg1.jpg)
+![ASG]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/asg1.jpg)
 
 * Inbound ASG as destination
-![Destination ASG Done](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg-asg-inbound.jpg)
+![Destination ASG Done]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg-asg-inbound.jpg)
 
 * * Create VM
 * * Associate network interfaces to an ASG
-![Destination VM ASG Assosicate](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg-asg-assosicate-to-vm.jpg)
+![Destination VM ASG Assosicate]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg-asg-assosicate-to-vm.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
@@ -1364,7 +1364,7 @@ https://follow-e-lo.com/2023/03/25/az-lab-filter-network-traffic-with-a-network-
 * * For outbound traffic, Azure processes the rules in a network security group associated to a network interface first, if there's one, 
 * * and then the rules in a network security group associated to the subnet, if there's one.
 
-![NSG](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg.jpg)
+![NSG]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg.jpg)
 
 https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works
 
@@ -1377,7 +1377,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-h
 
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security-group-view-overview
 
-![NSG effective security rules](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/nsg-evaluate-effective-security.jpg)
+![NSG effective security rules]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/nsg-evaluate-effective-security.jpg)
 
 #### Implement Azure Bastion
 
@@ -1392,7 +1392,7 @@ https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security
 | ------- | -- | ---------
 | AzureBastionSubnet | 10.0.3.0/26 | 59
 
-![Bastion](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/bastion.jpg)
+![Bastion]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/bastion.jpg)
 
 https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
 
@@ -1401,11 +1401,11 @@ https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
 
 * Service endpoints are available for the following Azure services and regions. 
 
-![Service end points](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vnet-service-endpoints.jpg)
+![Service end points]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vnet-service-endpoints.jpg)
 
 Service endpoint example
 
-![Service end points](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vnet-service-endpoints-example.jpg)
+![Service end points]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vnet-service-endpoints-example.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview
@@ -1428,12 +1428,12 @@ https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-
 *  your vnet
 
 
-![Private end points](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vnet-private-endpoints.jpg)
+![Private end points]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vnet-private-endpoints.jpg)
 
 The link will be shown here
 
 
-![Private end points links ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vnet-private-endpoints-result.jpg)
+![Private end points links ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vnet-private-endpoints-result.jpg)
 
 https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip
 
@@ -1460,7 +1460,7 @@ https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-por
 
 https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 
-![Application GW vs LB ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/application-gw-vs-lb.jpg)
+![Application GW vs LB ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/application-gw-vs-lb.jpg)
 
 * Azure Traffic Manager: This service is mainly used for DNS-based traffic load balancing.
 * Azure Load Balancer: You can use this service to create public and internal load balancers only.
@@ -1469,11 +1469,11 @@ https://follow-e-lo.com/2023/03/17/azure-lab-06-implement-traffic-management/
 #### Configure an internal or public load balancer
 
 
-![Load balancer ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/loadbalancer-sku.jpg)
+![Load balancer ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/loadbalancer-sku.jpg)
 
 https://learn.microsoft.com/en-us/azure/load-balancer/skus
 
-![Load balancer ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/loadbalancer.jpg)
+![Load balancer ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/loadbalancer.jpg)
 
 https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview
 
@@ -1502,13 +1502,13 @@ Configure and use Azure Monitor for networks
 https://follow-e-lo.com/2023/02/11/azure-network-watcher/
 
 
-![Monitor vnet ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/monitor-vnet.jpg)
+![Monitor vnet ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/monitor-vnet.jpg)
 
 Troubleshoot external networking
 
 #### Troubleshoot virtual network connectivity
 
-![Vnet troubleshoot ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/vnet-troubleshoot.jpg)
+![Vnet troubleshoot ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vnet-troubleshoot.jpg)
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-troubleshoot-connectivity-problem-between-vms
 
@@ -1521,11 +1521,11 @@ Azure monitor
 
 Storage
 
-![Monitor storage](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/monitor-storage.jpg)
+![Monitor storage]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/monitor-storage.jpg)
 
 Activity
 
-![Monitor Activity ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/monitor-activity.jpg)
+![Monitor Activity ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/monitor-activity.jpg)
 
 #### Configure and interpret metrics
 
@@ -1609,11 +1609,11 @@ https://follow-e-lo.com/2023/03/19/az-lab-10-backup-virtual-machines/
 | 7 |                                   | 7 | Policy schedule for bck
 | 8 |                                   | 8 | Backup now 
 
-![Backup vm ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/backup-vm.jpg)
+![Backup vm ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/backup-vm.jpg)
 
 https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
 
-![Backup vm files and folders ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/backup-vm-files-and-folders.jpg)
+![Backup vm files and folders ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/backup-vm-files-and-folders.jpg)
 
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
 
@@ -1654,7 +1654,7 @@ Perform failover to a secondary region by using Azure Site Recovery
 * * Before you begin, you must ensure that the virtual machine status is Failover committed. This will ensure replication back to the primary region.
 
 
-![Disaster recovery ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/disaster-recovery.jpg)
+![Disaster recovery ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/disaster-recovery.jpg)
 
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
 
@@ -1679,7 +1679,7 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr
 | 3 | Reprotect the VM | After failover, you reprotect the VM in the secondary region, so that it replicates back to the primary region. 
 |   | Make sure that VM Status is Failover committed
 
-![Disaster recovery failover committed ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/disaster-recovery-failover-commited.jpg)
+![Disaster recovery failover committed ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/disaster-recovery-failover-commited.jpg)
 
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
 
@@ -1693,11 +1693,11 @@ https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-fa
 1. Create a Log Analytics workspace or use an existing one
 2. Configure diagnostics settings for your vaults
 
-![Backup reports diagnostics ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/backup-reports.jpg)
+![Backup reports diagnostics ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/backup-reports.jpg)
 
 3. View reports in the Azure portal
 
-![Backup reports  ](https://github.com/spawnmarvel/quickguides/blob/main/images/azure/backup-reports-reports.jpg)
+![Backup reports  ]https://github.com/spawnmarvel/quickguides/blob/main/azure/images/backup-reports-reports.jpg)
 
 * Summary
 * * high-level overview of your backup estate. 
