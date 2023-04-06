@@ -281,7 +281,14 @@ Page blob
 * Data access costs. Data access charges increase as the tier gets cooler. 
 * Transaction costs. There's a per-transaction charge for all tiers. The charge increases as the tier gets cooler.
 * Geo-replication data transfer costs. This charge only applies to accounts that have geo-replication configured, including GRS and RA-GRS. 
-* 
+* Outbound data transfer costs. Outbound data transfers (data that's transferred out of an Azure region)
+* Changes to the storage tier. If you change the account storage tier from Cool to Hot, you incur a charge equal to reading all the data existing in the storage account. 
+* * Changing the account storage tier from Hot to Cool incurs a charge equal to writing all the data into the Cool tier (GPv2 accounts only).
+
+#### Interactive lab simulation
+
+https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/9-simulation-blobs
+
 
 
 
