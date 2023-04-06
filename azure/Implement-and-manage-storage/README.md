@@ -78,7 +78,7 @@ Things to consider when choosing Azure Storage services
 
 #### Determine storage account types
 
-![Account types ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement%20and%20manage%20storage/account-types.jpg)
+![Account types ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/account-types.jpg)
 
 #### Determine replication strategies
 
