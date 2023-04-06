@@ -28,7 +28,7 @@ The module concepts are covered in: Implement and manage storage (15–20%)
 * * Create and configure storage accounts
 * * Configure network access to storage accounts
 
-* Things to know about Azure Storage
+Things to know about Azure Storage
 
 | Category | Description | Storage example
 | -------- | ----------- | ---------------
