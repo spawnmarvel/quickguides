@@ -183,7 +183,7 @@ uently, but it needs to be immediately available.
 * * Premium Blob Storage is best suited for I/O intensive workloads that require low and consistent storage latency. (SSD)
 * * Workloads that perform many small transactions.
 
-![Compare access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-acces-tiers.jpg)
+![Compare access tiers  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-access-tiers.jpg)
 
 
 
