@@ -20,6 +20,15 @@ https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 
 ## MS learn AZ-104: Implement and manage storage in Azure
 
+### Configure storage accounts
+
+The module concepts are covered in: Implement and manage storage (15–20%)
+
+* Secure storage
+* * Create and configure storage accounts
+* * Configure network access to storage accounts
+
+
 
 ## Questions
 
