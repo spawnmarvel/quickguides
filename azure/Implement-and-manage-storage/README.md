@@ -386,6 +386,12 @@ Do it again.
 
 ## Configure Azure Storage with tools
 
+The module concepts are covered in: Implement and manage storage (15–20%)
+
+* Use Azure Storage Explorer
+* * Work with Azure Storage data on Windows, macOS, and Linux
+
+
 ## Create and Azure Storage account
 
 ## Control access to Azure Storage with shared acess signatures
