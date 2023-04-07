@@ -306,7 +306,7 @@ Task 3: Monitor the storage container.
 
 * Review insights for performance, availability, and capacity.
 
-![Lab monitor Insights  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor-storage-insight.jpg)
+![Lab monitor Insights  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor-storage-insight-1.jpg)
 
 
 
