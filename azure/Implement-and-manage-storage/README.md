@@ -312,6 +312,29 @@ Task 3: Monitor the storage container.
 
 ## Configure Azure Storage Security
 
+The module concepts are covered in: Implement and manage storage (15–20%)
+
+Secure storage
+* Generate shared access signature (SAS) tokens
+* Manage access keys
+* Configure Azure Active Directory authentication for an Azure storage account
+
+#### Create shared access signatures
+
+A shared access signature (SAS) is a uniform resource identifier (URI) that grants restricted access rights to Azure Storage resources. 
+SAS is a secure way to share your storage resources without compromising your account keys.
+
+SAS provides account-level and service-level control.
+
+Account-level SAS delegates access to resources in one or more Azure Storage services.
+
+![SAS account  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/sas-account.jpg)
+
+Service-level SAS delegates access to a resource in only one Azure Storage service.
+
+![SAS container  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/sas-container.jpg)
+
+
 ## Configure Azure Files and File Sync
 
 ## Configure Azure Storage with tools
@@ -361,6 +384,18 @@ Cool tier storage is most appropriate for occasional access.
 Archive tier storage is the best option after the data ages over a month. 
 To achieve this transition, lifecycle management policy rules are available to move aging data to cooler tiers.
 
+
+7. What statement best describes Azure Blob Storage access tiers?
+
+The administrator can switch between hot and cool performance tiers at any time.
+
+8. Which of the following changes between access tiers happens immediately?
+
+Changes between the hot and cool tiers, and to the archive tier, happen immediately
+
+9. How would you describe blob object replication?
+
+Any snapshots on a blob in the source account aren't replicated to the destination account.
 
 
 
