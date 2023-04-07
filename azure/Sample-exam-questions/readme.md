@@ -30,6 +30,7 @@ Which two types of groups should you use? Each correct presents a complete solut
 
 <details>
   <summary>Click me</summary>
+  
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | A AND B
