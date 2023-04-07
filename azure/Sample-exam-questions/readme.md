@@ -449,3 +449,61 @@ Which storage accounts meet the technical requirements?
 | Objective | 2.3 Configure Azure files and Azure Blob Storage
 | Rationale | ![answer 16 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-16.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
+
+
+### Question # 17 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+You need to address the issue that relates to contosostorage2. The solution must meet the security requirements.
+
+What should you do?
+
+* A. Set a rotation reminder for the access keys.
+* B. Configure a lifecycle management rule.
+* C. Create a new access review.
+* D. Generate a shared access signature (SAS).
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | D
+| Objective | 2.1 Configure access to storage
+| Rationale | ![answer 17 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-17.jpg)
+| URL:      | https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
+
+### Question # 18 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+You need to implement the planned changes for Vnet1 and Vnet2.
+
+What should you do first?
+
+* A. Move Vnet1 to the East US Azure region.
+* B. Move Vnet2 to the ContosoSub1 subscription.
+* C. Modify the tag for Vnet2.
+* D. Modify the address space for Vnet1.
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | D
+| Objective | 4.1 Configure virtual networks
+| Rationale | ![answer 18 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-18.jpg)
+| URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+
+### Question # 19 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+Before you deploy DevVM1, you need to consider the technical and security requirements.
+
+What should you do to ensure that access to DevVM1 is secure?
+
+* A. Install the Remote Desktop client on all the devices that will connect to DevVM1.
+* B. Deploy the Azure Bastion service.
+* C. Configure Remote Desktop Gateway on all the devices that will connect to DevVM1.
+* D. Configure the Azure Network Watcher service.
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | B
+| Objective | 4.2 Configure secure access to virtual networks
+| Rationale | ![answer 19 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-19.jpg)
+| URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
