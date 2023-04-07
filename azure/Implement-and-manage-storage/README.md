@@ -368,6 +368,15 @@ https://learn.microsoft.com/en-us/training/modules/configure-storage-security/7-
 
 https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md
 
+In this lab, you will:
+
+Task 1: Provision the lab environment
+Task 2: Create and configure Azure Storage accounts
+Task 3: Manage blob storage
+Task 4: Manage authentication and authorization for Azure Storage
+Task 5: Create and configure an Azure Files shares
+Task 6: Manage network access for Azure Storage
+
 
 ## Configure Azure Files and File Sync
 
