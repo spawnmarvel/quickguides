@@ -301,6 +301,7 @@ Task 3: Monitor the storage container.
 * Review common storage problems and troubleshooting guides.
 * Review insights for performance, availability, and capacity.
 
+![Lab monitor  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor.jpg)
 
 
 
