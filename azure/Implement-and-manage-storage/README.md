@@ -334,6 +334,40 @@ Service-level SAS delegates access to a resource in only one Azure Storage servi
 
 ![SAS container  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/sas-container.jpg)
 
+#### Identify URI and SAS parameters
+
+Done it in main
+
+#### Configure Azure Storage encryption
+
+In the Azure portal, you configure Azure Storage encryption by specifying the encryption type. 
+You can manage the keys yourself, or you can have the keys managed by Microsoft.
+
+#### Apply Azure Storage security best practices
+
+If a SAS is compromised, it can be used by anyone who obtains it, including a malicious user.
+
+If a SAS provided to a client application expires and the application is unable to retrieve a new SAS from your service, the application functionality might be hindered.
+
+Recommendations for managing risks
+
+* Always use HTTPS for creation and distribution
+* Reference stored access policies where possible
+* Set near-term expiry times for an unplanned SAS
+* Require clients automatically renew the SAS
+* Plan carefully for the SAS start time
+* Define minimum access permissions for resources
+* Understand account billing for usage, including a SAS
+* Validate data written by using a SAS
+* Don't assume a SAS is always the correct choice
+* Monitor your applications with Azure Storage Analytics
+
+https://learn.microsoft.com/en-us/training/modules/configure-storage-security/7-apply-best-practices
+
+#### Lab 07 - Manage Azure Storage
+
+https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md
+
 
 ## Configure Azure Files and File Sync
 
