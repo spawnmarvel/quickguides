@@ -388,16 +388,28 @@ Which administrator can implement the planned changes for the new employees?
 | Answer    | B 
 | Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
 | Rationale | ![answer 13 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-13.jpg)
-| URL:      |
+| URL:      | https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-add
 
 
 
-###
+### Question # 14 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+You need to implement the planned changes for User1 and User2.
+
+What should you do first?
+
+* A. Create two new resource groups.
+* B. Create two new management groups.
+* C. Create two new named locations.
+* D. Create two new administrative units.
+
+
 | Item      | Description
 | -------   | -------------------------------
-| Answer    | 
-| Objective | 
-| Rationale |
+| Answer    | D
+| Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
+| Rationale | ![answer 14 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-14.jpg)
 | URL:      |
 
 ### 
