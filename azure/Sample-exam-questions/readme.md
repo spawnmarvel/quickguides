@@ -309,6 +309,13 @@ ContosoSub1 has the resource group shown in the following table.
 
 ![Contoso resources ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources.jpg)
 
+ResourceGroup1 contains the resources shown in the following table.
+
+![Contoso resources rg1 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources-rg1.jpg)
+
+
+
+###
 
 | Item      | Description
 | -------   | -------------------------------
