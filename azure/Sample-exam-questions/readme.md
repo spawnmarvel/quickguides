@@ -28,15 +28,15 @@ Which two types of groups should you use? Each correct presents a complete solut
 * D. a security group that uses the assigned membership type
 * E. a Microsoft 365 group that uses the assigned membership type
 
-
-
+<details>
+  <summary>Click me</summary>
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | A AND B
 | Objective | 1.1 Manage Azure Active Directory (Azure AD) objects
 | Rationale | Groups that use dynamic membership rules reduce the overhead of access management by providing attribute-based membership and access to resources. Based on membership rules the membership, and resulting access, can be granted and removed automatically.
 | URL:      | https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-dynamic-membership
-
+</details>
 
 ### Question # 2 (Multiple Choice)
 
@@ -507,3 +507,16 @@ What should you do to ensure that access to DevVM1 is secure?
 | Objective | 4.2 Configure secure access to virtual networks
 | Rationale | ![answer 19 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-19.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+
+#### Question # 20 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+You need to resolve the issue that relates to the replication costs for backups.
+
+Which Recovery Services vault can be configured to use locally-redundant storage (LRS) replication?
+
+A. Rsv1 only
+B. Rsv2 only
+C. Rsv3 only
+D. Rsv1 and Rsv2 only
+E. Rsv1, Rsv2, and Rsv3
