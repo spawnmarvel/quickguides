@@ -295,7 +295,21 @@ Which two resources can you back up to a Recovery Services vault? Each correct p
 | Rationale | Recovery Services vault supports Azure Virtual Machines, SQL in Azure VM, Azure Files, SAP HANA in Azure VM, Azure Backup Server, Azure Backup Agent, and DPM. Backup vault supports Azure Database for PostgreSQL servers, Azure Blobs, and Azure disks.
 | URL:      | https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix#vault-support , https://learn.microsoft.com/en-us/azure/backup/backup-azure-recovery-services-vault-overview , https://learn.microsoft.com/en-us/azure/backup/backup-vault-overview
 
-###
+
+### Case Study
+
+#### Overview
+Contoso, Ltd. is a consulting company. The company has a main office in Vancouver and branch offices in Seattle and New York.
+
+##### Existing Environment
+Azure Environment
+Contoso has two Azure subscriptions named ContosoSub1 and ContosoSub2.
+
+ContosoSub1 has the resource group shown in the following table.
+
+![Cotonso resources ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contonso-resources.jpg)
+
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | 
