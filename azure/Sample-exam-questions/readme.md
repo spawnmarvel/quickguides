@@ -307,11 +307,15 @@ Contoso has two Azure subscriptions named ContosoSub1 and ContosoSub2.
 
 ContosoSub1 has the resource group shown in the following table.
 
-![Contoso resources ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources.jpg)
+![Contoso sub 1 resources ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources1.jpg)
 
 ResourceGroup1 contains the resources shown in the following table.
 
 ![Contoso resources rg1 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources-rg1.jpg)
+
+ContosoSub2 has the resource group shown in the following table.
+
+![Contoso sub 2 resources ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources2.jpg)
 
 
 
