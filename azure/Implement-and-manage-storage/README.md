@@ -4,7 +4,7 @@ Implement and manage storage (15–20%)
 
 ## Description
 
-Azure Administrator Cheat Sheetl
+Azure Administrator Cheat Sheet
 
 ## Links
 
