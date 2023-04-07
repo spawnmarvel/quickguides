@@ -30,7 +30,7 @@ Which two types of groups should you use? Each correct presents a complete solut
 
 <details>
   <summary>Click me</summary>
-  
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | A AND B
@@ -52,6 +52,8 @@ Which role should you assign to User1?
 * C. Reports reader
 * D. Global reader
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -59,7 +61,7 @@ Which role should you assign to User1?
 | Objective | 1.2 Manage access control
 | Rationale | A user that is assigned the Global reader role is prevented from making any modifications. The role is a read-only version of Global Administrator that allows the user to read settings and administrative information across all services but can't take management actions.
 | URL:      | https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-reader
-
+</details>
 
 ### Question # 3 (Multiple Choice)
 
@@ -76,6 +78,8 @@ What should you do first?
 * C. From the development tenant, perform a backup.
 * D. From the production tenant, create an administrative unit.
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -83,7 +87,7 @@ What should you do first?
 | Objective | 1.2 Manage access control
 | Rationale | Creating Custom roles in Azure can be complex due to thousands of permissions so custom roles can be exported as JSON and then imported into a new custom role. The first step is to export the role to a JSON format. A JSON file can then be imported into another tenant; containing all of the details in the custom role.
 | URL:      | https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles
-
+</details>
 
 ### Question # 4 (Multiple Choice)
 
@@ -98,6 +102,8 @@ What should you create?
 * C. Distribution group
 * D. Microsoft 365 group
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -105,7 +111,7 @@ What should you create?
 | Objective | 5.1 Monitor resources by using Azure Monitor
 | Rationale | An action group is a collection of notification preferences defined by the owner of an Azure subscription. Azure Monitor, Service Health and Azure Advisor alerts use action groups to notify users that an alert has been triggered.
 | URL:      | https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups
-
+</details>
 
 ### Question # 5 (Multiple Choice)
 
@@ -122,6 +128,8 @@ Which two solutions should you use? Each correct presents a complete solution.
 * C. app registrations
 * D. Azure Advisor
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -130,6 +138,7 @@ Which two solutions should you use? Each correct presents a complete solution.
 | Rationale | Assigning Tags to Virtual machines will allow you create reports and dashboards for Alerting, budget and performance management. Tags can be applied by using PowerShell, Azure CLI, and ARM templates.
 | URL:      | https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/
 
+</details>
 
 ### Question # 6 (Multiple Choice)
 
@@ -148,13 +157,16 @@ Which storage accounts should you identify?
 * E. storage1 and storage4 only
 * F. storage2 and storage3 only
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | B
 | Objective | 2.1 Configure access to storage
 | Rationale | Geo-redundant storage (GRS) copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in a secondary region that is hundreds of miles away from the primary region. Storage accounts configured with the Premium performance setting only support LRS. Any storage account already configured with ZRS cannot be changed or directly switched to another replication setting. In this scenario, the only storage account that is not set to LRS or Premium performance is storage2, which can be switched to use Geo-redundant storage.
 | URL:      | https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy
-
+</details>
 
 ### Question # 7 (Multiple Choice)
 
@@ -171,6 +183,8 @@ What should you use?
 * C. Azure storage account
 * D. Azure Encryption scopes
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -179,6 +193,7 @@ What should you use?
 | Rationale | You can retrieve secrets from an Azure key vault and pass the secrets as parameters when you deploy an Azure Resource Manager template (ARM template). The parameter value is never exposed, because you can reference only the key vault ID and not the credentials directly.
 | URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-use-key-vault
 
+</details>
 
 
 ### Question # 8 (Multiple Choice)
@@ -194,6 +209,9 @@ Which command should you use?
 * C. az group update --name rg1 --remove
 * D. az group wait –deleted –resource-group rg1
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | A
@@ -201,6 +219,7 @@ Which command should you use?
 | Rationale | To remove a resource group using Azure CLI you would use the az group delete command. The –no-wait switch specifies to not wait for long-running operations before you can continue using the open command prompt for additional commands, and the –yes switch specifies no prompt for confirmation.
 | URL:      | https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_delete&preserve-view=true
 
+</details>
 
 ### Question # 9 (Multiple Choice)
 
@@ -217,6 +236,9 @@ What should you do next?
 * C. Select Redeploy + reapply.
 * D. Select Export template.
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | D
@@ -224,6 +246,7 @@ What should you do next?
 | Rationale | If you need to create multiple Azure resources based upon an existing resource, you should export and use a JSON template. You can export a template from the resource itself, from a resource group, or from the deployment history. In this scenario, you would export the template from the VM1 blade. You would only use Capture if you wanted to create an image of the existing VM. However, this will make the source VM unusable. There are also several preparation tasks to complete before capturing the VM image. You would not select Redeploy + reapply as these two options are used to address failed connections or VM states. Availability and scaling is used to set up and manage VM high availability, not for creating additional VMs based upon a set configuration setting.
 | URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal
 
+</details>
 
 ### Question # 10 (Multiple Choice)
 
@@ -240,13 +263,16 @@ Which DNS record should you use next?
 * C. TXT
 * D. PTR
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | B
 | Objective | 3.4 Create and configure an Azure App Service
 | Rationale | When you add a custom domain to an App Service, you need to validate the domain to verify domain ownership. To verify domain ownership for contoso.com you will create a txt record that contains the Custom Domain Verification ID. The CNAME record is used to map www.contoso.com to webapp.azurewebsites.net.
 | URL:      | https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain?tabs=cname
-
+</details>
 
 ### Question # 11 (Multiple Choice)
 
@@ -265,6 +291,9 @@ Which setting should you modify for vault1?
 * C. Access policies
 * D. Security
 
+<details>
+  <summary>Click me</summary>
+
 
 | Item      | Description
 | -------   | -------------------------------
@@ -273,6 +302,7 @@ Which setting should you modify for vault1?
 | Rationale | To enable support for Azure Disk Encryption, you need to modify the Access policies for the key vault. This provides an option to enable access to Azure Disk Encryption for volume encryption.
 | URL:      | https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-key-vault
 
+</details>
 
 ### Question # 12 (Multiple Choice)
 
@@ -288,6 +318,8 @@ Which two resources can you back up to a Recovery Services vault? Each correct p
 * D. share1
 * E. Database1
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -295,6 +327,7 @@ Which two resources can you back up to a Recovery Services vault? Each correct p
 | Objective | 5.2 Implement backup and recovery
 | Rationale | Recovery Services vault supports Azure Virtual Machines, SQL in Azure VM, Azure Files, SAP HANA in Azure VM, Azure Backup Server, Azure Backup Agent, and DPM. Backup vault supports Azure Database for PostgreSQL servers, Azure Blobs, and Azure disks.
 | URL:      | https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix#vault-support , https://learn.microsoft.com/en-us/azure/backup/backup-azure-recovery-services-vault-overview , https://learn.microsoft.com/en-us/azure/backup/backup-vault-overview
+</details>
 
 
 ### Case Study
@@ -384,13 +417,16 @@ Which administrator can implement the planned changes for the new employees?
 * D. Admin1 and Admin2 only
 * E. Admin1 and Admin3 only
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | B 
 | Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
 | Rationale | ![answer 13 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-13.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-add
-
+</details>
 
 
 ### Question # 14 (Multiple Choice)
@@ -405,6 +441,9 @@ What should you do first?
 * C. Create two new named locations.
 * D. Create two new administrative units.
 
+<details>
+  <summary>Click me</summary>
+
 
 | Item      | Description
 | -------   | -------------------------------
@@ -412,6 +451,7 @@ What should you do first?
 | Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
 | Rationale | ![answer 14 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-14.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-units
+</details>
 
 ### Question # 15 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -425,6 +465,8 @@ What should you do first?
 * C. Modify the RG:1 tag.
 * D. Remove Lock2 from ResourceGroup2.
 
+<details>
+  <summary>Click me</summary>
 
 | Item      | Description
 | -------   | -------------------------------
@@ -432,7 +474,7 @@ What should you do first?
 | Objective | 1.3 Manage Azure subscriptions and governance
 | Rationale | ![answer 15 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-15.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json
-
+</details>
 
 ### Question # 16 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -444,13 +486,16 @@ Which storage accounts meet the technical requirements?
 * C. contosostorage1 and contosostorage3 only
 * D. contosostorage2 and contosostorage4 only
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | C
 | Objective | 2.3 Configure Azure files and Azure Blob Storage
 | Rationale | ![answer 16 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-16.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
-
+</details>
 
 ### Question # 17 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -464,12 +509,16 @@ What should you do?
 * C. Create a new access review.
 * D. Generate a shared access signature (SAS).
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | D
 | Objective | 2.1 Configure access to storage
 | Rationale | ![answer 17 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-17.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
+</details>
 
 ### Question # 18 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -483,12 +532,16 @@ What should you do first?
 * C. Modify the tag for Vnet2.
 * D. Modify the address space for Vnet1.
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | D
 | Objective | 4.1 Configure virtual networks
 | Rationale | ![answer 18 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-18.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+</details>
 
 ### Question # 19 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -502,12 +555,16 @@ What should you do to ensure that access to DevVM1 is secure?
 * C. Configure Remote Desktop Gateway on all the devices that will connect to DevVM1.
 * D. Configure the Azure Network Watcher service.
 
+<details>
+  <summary>Click me</summary>
+
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | B
 | Objective | 4.2 Configure secure access to virtual networks
 | Rationale | ![answer 19 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-19.jpg)
 | URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+</details>
 
 #### Question # 20 (Multiple Choice)
 Answer the following question based on the information presented in the case study.
@@ -516,8 +573,23 @@ You need to resolve the issue that relates to the replication costs for backups.
 
 Which Recovery Services vault can be configured to use locally-redundant storage (LRS) replication?
 
-A. Rsv1 only
-B. Rsv2 only
-C. Rsv3 only
-D. Rsv1 and Rsv2 only
-E. Rsv1, Rsv2, and Rsv3
+* A. Rsv1 only
+* B. Rsv2 only
+* C. Rsv3 only
+* D. Rsv1 and Rsv2 only
+* E. Rsv1, Rsv2, and Rsv3
+
+<details>
+  <summary>Click me</summary>
+  
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | C
+| Objective | 5.2 Implement backup and recovery
+| Rationale | ![answer 20 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-20.jpg)
+| URL:      | https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+</details>
+
+
+
+
