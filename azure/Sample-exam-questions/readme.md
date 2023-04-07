@@ -430,4 +430,22 @@ What should you do first?
 | Answer    | B
 | Objective | 1.3 Manage Azure subscriptions and governance
 | Rationale | ![answer 15 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-15.jpg)
-| URL:      |
+| URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json
+
+
+### Question # 16 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+Which storage accounts meet the technical requirements?
+
+* A. contosostorage1 and contosostorage4 only
+* B. contosostorage2 and contosostorage3 only
+* C. contosostorage1 and contosostorage3 only
+* D. contosostorage2 and contosostorage4 only
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | C
+| Objective | 2.3 Configure Azure files and Azure Blob Storage
+| Rationale | ![answer 16 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-16.jpg)
+| URL:      | https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
