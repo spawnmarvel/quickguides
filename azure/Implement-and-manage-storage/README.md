@@ -391,6 +391,28 @@ The module concepts are covered in: Implement and manage storage (15–20%)
 * Use Azure Storage Explorer
 * * Work with Azure Storage data on Windows, macOS, and Linux
 
+* Use the Azure Import/Export service
+* * import large amounts of data to Azure Blob Storage and Azure Files by shipping disk drives to an Azure datacenter.
+
+* Create an Azure Import job
+1. Determine the number of disks needed to accommodate the data to transfer.
+2. Identify the computer to use to perform the data copy, and attach the physical disks you intend to ship to Microsoft.
+3. Install the WAImportExport tool on the disks
+4. Run the WAImportExport tool to copy the data on the disks.
+5. In the Azure portal, create an Azure Import job
+6. Ship the required number of disks to the Azure region datacenter that hosts the storage account. Note the shipment tracking number.
+7. Update the Import job to include the shipment tracking number.
+
+* Create an Azure Export job
+1. Identify the data in Azure Blob Storage to export.
+2. Determine the number of disks needed to accommodate the data to transfer.
+3. In the Azure portal, create an Azure Export job
+4. Ship the required number of disks to the Azure region datacenter that hosts the storage account. Note the shipment tracking number.
+5. Update the Export job to include the shipment tracking number.
+
+* Use the AzCopy tool
+
+
 
 ## Create and Azure Storage account
 
