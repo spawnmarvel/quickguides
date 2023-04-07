@@ -370,13 +370,17 @@ https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/mas
 
 In this lab, you will:
 
-Task 1: Provision the lab environment
-Task 2: Create and configure Azure Storage accounts
-Task 3: Manage blob storage
-Task 4: Manage authentication and authorization for Azure Storage
-Task 5: Create and configure an Azure Files shares
-Task 6: Manage network access for Azure Storage
+* Task 1: Provision the lab environment
+* Task 2: Create and configure Azure Storage accounts
+* Task 3: Manage blob storage
+* Task 4: Manage authentication and authorization for Azure Storage
+* Task 5: Create and configure an Azure Files shares
+* Task 6: Manage network access for Azure Storage
 
+Done it
+https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
+
+Do it again.
 
 ## Configure Azure Files and File Sync
 
