@@ -298,11 +298,15 @@ Task 2: Work with blob storage.
 * Upload a file to the container.
 
 Task 3: Monitor the storage container.
+
 * Review common storage problems and troubleshooting guides.
+
+![Lab monitor Diagnose and solve problems  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor-storage.jpg)
+
+
 * Review insights for performance, availability, and capacity.
 
-![Lab monitor  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor-storage.jpg)
-
+![Lab monitor Insights  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-monitor-storage-insight.jpg)
 
 
 
