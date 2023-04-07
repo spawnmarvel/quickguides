@@ -321,6 +321,10 @@ ResourceGroup2 contains the resources shown in the following table.
 
 ![Contoso resources rg2 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-resources-rg2.jpg)
 
+Contoso has an Azure Active Directory (Azure AD) tenant named contoso.com that contains the user accounts shown in the following table.
+
+
+![Contoso ad ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-ad.jpg)
 
 
 ###
