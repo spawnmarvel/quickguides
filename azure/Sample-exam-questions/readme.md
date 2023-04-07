@@ -326,9 +326,14 @@ Contoso has an Azure Active Directory (Azure AD) tenant named contoso.com that c
 ![Contoso ad ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-ad.jpg)
 
 Azure Storage Environment
+
 ContosoSub1 contains the storage accounts shown in the following table.
 
 ![Contoso sub1 storage accounts ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-storage.jpg)
+
+Contoso has the Recovery Service vaults shown in the following table.
+
+![Contoso recovery service vault ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-recvault.jpg)
 
 
 ###
