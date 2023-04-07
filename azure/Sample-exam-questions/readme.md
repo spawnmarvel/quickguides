@@ -22,11 +22,11 @@ You need to ensure that the users can access the departmental file shares. The s
 
 Which two types of groups should you use? Each correct presents a complete solution.
 
-A. a security group that uses the dynamic membership type
-B. a Microsoft 365 group that uses the dynamic membership type
-C. a distribution group
-D. a security group that uses the assigned membership type
-E. a Microsoft 365 group that uses the assigned membership type
+* A. a security group that uses the dynamic membership type
+* B. a Microsoft 365 group that uses the dynamic membership type
+* C. a distribution group
+* D. a security group that uses the assigned membership type
+* E. a Microsoft 365 group that uses the assigned membership type
 
 
 
@@ -46,10 +46,10 @@ You need to ensure that a user named User1 can review all the settings of the te
 
 Which role should you assign to User1?
 
-A. Directory readers
-B. Security reader
-C. Reports reader
-D. Global reader
+* A. Directory readers
+* B. Security reader
+* C. Reports reader
+* D. Global reader
 
 
 | Item      | Description
@@ -70,10 +70,10 @@ You need to copy the roles to the production tenant.
 
 What should you do first?
 
-A. From the development tenant, export the custom roles to JSON.
-B. From the production tenant, create a new custom role.
-C. From the development tenant, perform a backup.
-D. From the production tenant, create an administrative unit.
+* A. From the development tenant, export the custom roles to JSON.
+* B. From the production tenant, create a new custom role.
+* C. From the development tenant, perform a backup.
+* D. From the production tenant, create an administrative unit.
 
 
 | Item      | Description
@@ -92,10 +92,10 @@ You need to specify the recipient of the action rule notification.
 
 What should you create?
 
-A. Action group
-B. Security group
-C. Distribution group
-D. Microsoft 365 group
+* A. Action group
+* B. Security group
+* C. Distribution group
+* D. Microsoft 365 group
 
 
 | Item      | Description
@@ -116,10 +116,10 @@ You plan to apply resource tags for each department to the virtual machines.
 
 Which two solutions should you use? Each correct presents a complete solution.
 
-A. PowerShell
-B. Azure Resource Manager (ARM) templates
-C. app registrations
-D. Azure Advisor
+* A. PowerShell
+* B. Azure Resource Manager (ARM) templates
+* C. app registrations
+* D. Azure Advisor
 
 
 | Item      | Description
@@ -140,12 +140,12 @@ You need to identify which storage accounts can be switched to geo-redundant sto
 
 Which storage accounts should you identify?
 
-A. storage1 only
-B. storage2 only
-C. storage3 only
-D. storage4 only
-E. storage1 and storage4 only
-F. storage2 and storage3 only
+* A. storage1 only
+* B. storage2 only
+* C. storage3 only
+* D. storage4 only
+* E. storage1 and storage4 only
+* F. storage2 and storage3 only
 
 | Item      | Description
 | -------   | -------------------------------
@@ -165,10 +165,10 @@ You need to securely store the credentials that will be used for the deployment.
 
 What should you use?
 
-A. Azure Active Directory (Azure AD) Identity Protection
-B. Azure Key Vault
-C. Azure storage account
-D. Azure Encryption scopes
+* A. Azure Active Directory (Azure AD) Identity Protection
+* B. Azure Key Vault
+* C. Azure storage account
+* D. Azure Encryption scopes
 
 
 | Item      | Description
@@ -188,10 +188,10 @@ You need to use the Azure CLI to remove RG1 and all its resources, without requi
 
 Which command should you use?
 
-A. az group delete --name rg1 --no-wait --yes
-B. az group deployment delete --name rg1 --no-wait
-C. az group update --name rg1 --remove
-D. az group wait –deleted –resource-group rg1
+* A. az group delete --name rg1 --no-wait --yes
+* B. az group deployment delete --name rg1 --no-wait
+* C. az group update --name rg1 --remove
+* D. az group wait –deleted –resource-group rg1
 
 | Item      | Description
 | -------   | -------------------------------
@@ -211,10 +211,10 @@ From the Azure portal, you open the blade for VM1.
 
 What should you do next?
 
-A. Select Capture.
-B. Select Availability and scaling.
-C. Select Redeploy + reapply.
-D. Select Export template.
+* A. Select Capture.
+* B. Select Availability and scaling.
+* C. Select Redeploy + reapply.
+* D. Select Export template.
 
 | Item      | Description
 | -------   | -------------------------------
@@ -235,10 +235,10 @@ You verify the domain ownership.
 
 Which DNS record should you use next?
 
-A. SRV
-B. CNAME
-C. TXT
-D. PTR
+* A. SRV
+* B. CNAME
+* C. TXT
+* D. PTR
 
 | Item      | Description
 | -------   | -------------------------------
@@ -260,10 +260,10 @@ You need to configure vault1 to support Azure Disk Encryption for volume encrypt
 
 Which setting should you modify for vault1?
 
-A. Keys
-B. Secrets
-C. Access policies
-D. Security
+* A. Keys
+* B. Secrets
+* C. Access policies
+* D. Security
 
 
 | Item      | Description
@@ -282,11 +282,11 @@ You have an Azure subscription that contains the resources shown in the followin
 
 Which two resources can you back up to a Recovery Services vault? Each correct presents part of the solution.
 
-A. VM1
-B. blob1
-C. Disk1
-D. share1
-E. Database1
+* A. VM1
+* B. blob1
+* C. Disk1
+* D. share1
+* E. Database1
 
 
 | Item      | Description
