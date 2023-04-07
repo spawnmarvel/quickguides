@@ -410,12 +410,24 @@ What should you do first?
 | Answer    | D
 | Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
 | Rationale | ![answer 14 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-14.jpg)
-| URL:      |
+| URL:      | https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-units
 
-### 
+### Question # 15 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+You need to implement the planned changes for Disk1.
+
+What should you do first?
+
+* A. Add ContosoSub1 and ContosoSub2 to a new management group.
+* B. Remove Lock1 from ResourceGroup1.
+* C. Modify the RG:1 tag.
+* D. Remove Lock2 from ResourceGroup2.
+
+
 | Item      | Description
 | -------   | -------------------------------
-| Answer    | 
-| Objective | 
-| Rationale |
+| Answer    | B
+| Objective | 1.3 Manage Azure subscriptions and governance
+| Rationale | ![answer 15 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-15.jpg)
 | URL:      |
