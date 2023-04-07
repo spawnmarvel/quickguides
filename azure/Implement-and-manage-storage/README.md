@@ -392,7 +392,7 @@ Do it again.
 
 ## Upload, download, and manage data with Azure Storage Explorer
 
-
+![Storage explorer  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/storage-explorer.jpg)
 
 
 ## Questions
