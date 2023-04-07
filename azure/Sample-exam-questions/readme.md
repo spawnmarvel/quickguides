@@ -136,6 +136,167 @@ You have an Azure subscription that contains the storage accounts shown in the f
 
 ![Storage accounts ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/storage-accounts-6.jpg)
 
+You need to identify which storage accounts can be switched to geo-redundant storage (GRS).
+
+Which storage accounts should you identify?
+
+A. storage1 only
+B. storage2 only
+C. storage3 only
+D. storage4 only
+E. storage1 and storage4 only
+F. storage2 and storage3 only
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | B
+| Objective | 2.1 Configure access to storage
+| Rationale | Geo-redundant storage (GRS) copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in a secondary region that is hundreds of miles away from the primary region. Storage accounts configured with the Premium performance setting only support LRS. Any storage account already configured with ZRS cannot be changed or directly switched to another replication setting. In this scenario, the only storage account that is not set to LRS or Premium performance is storage2, which can be switched to use Geo-redundant storage.
+| URL:      | https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy
+
+
+### Question # 7 (Multiple Choice)
+
+You have an Azure subscription.
+
+You plan to deploy multiple Azure virtual machines by using an Azure Resource Manager (ARM) template.
+
+You need to securely store the credentials that will be used for the deployment.
+
+What should you use?
+
+A. Azure Active Directory (Azure AD) Identity Protection
+B. Azure Key Vault
+C. Azure storage account
+D. Azure Encryption scopes
+
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | B
+| Objective | 3.2 Automate deployment of resources by using templates
+| Rationale | You can retrieve secrets from an Azure key vault and pass the secrets as parameters when you deploy an Azure Resource Manager template (ARM template). The parameter value is never exposed, because you can reference only the key vault ID and not the credentials directly.
+| URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-use-key-vault
+
+
+
+### Question # 8 (Multiple Choice)
+
+You have a resource group named RG1 that contains several unused resources.
+
+You need to use the Azure CLI to remove RG1 and all its resources, without requiring a confirmation.
+
+Which command should you use?
+
+A. az group delete --name rg1 --no-wait --yes
+B. az group deployment delete --name rg1 --no-wait
+C. az group update --name rg1 --remove
+D. az group wait –deleted –resource-group rg1
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | A
+| Objective | 1.3 Manage Azure subscriptions and governance
+| Rationale | To remove a resource group using Azure CLI you would use the az group delete command. The –no-wait switch specifies to not wait for long-running operations before you can continue using the open command prompt for additional commands, and the –yes switch specifies no prompt for confirmation.
+| URL:      | https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_delete&preserve-view=true
+
+
+### Question # 9 (Multiple Choice)
+
+You have an Azure virtual machine named VM1.
+
+You need to create five additional virtual machines that have the same configurations as VM1. The solution must ensure that VM1 remains available.
+
+From the Azure portal, you open the blade for VM1.
+
+What should you do next?
+
+A. Select Capture.
+B. Select Availability and scaling.
+C. Select Redeploy + reapply.
+D. Select Export template.
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | D
+| Objective | 3.1 Automate deployment of resources by using templates
+| Rationale | If you need to create multiple Azure resources based upon an existing resource, you should export and use a JSON template. You can export a template from the resource itself, from a resource group, or from the deployment history. In this scenario, you would export the template from the VM1 blade.
+You would only use Capture if you wanted to create an image of the existing VM. However, this will make the source VM unusable. There are also several preparation tasks to complete before capturing the VM image. You would not select Redeploy + reapply as these two options are used to address failed connections or VM states. Availability and scaling is used to set up and manage VM high availability, not for creating additional VMs based upon a set configuration setting.
+| URL:      | https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal
+
+
+### Question # 10 (Multiple Choice)
+
+You have an Azure subscription that contains an Azure App Service web app named webapp1. Webapp1 uses a domain name of webapp1.azurewebsites.net.
+
+You need to add a custom domain named www.contoso.com to webapp1.
+
+You verify the domain ownership.
+
+Which DNS record should you use next?
+
+A. SRV
+B. CNAME
+C. TXT
+D. PTR
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | B
+| Objective | 3.4 Create and configure an Azure App Service
+| Rationale | When you add a custom domain to an App Service, you need to validate the domain to verify domain ownership. To verify domain ownership for contoso.com you will create a txt record that contains the Custom Domain Verification ID. The CNAME record is used to map www.contoso.com to webapp.azurewebsites.net.
+| URL:      | https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain?tabs=cname
+
+
+### Question # 11 (Multiple Choice)
+
+You have an Azure subscription that contains a virtual machine named VM1.
+
+VM1 requires volume encryption for its operating system and data disks.
+
+You create an Azure key vault named vault1.
+
+You need to configure vault1 to support Azure Disk Encryption for volume encryption.
+
+Which setting should you modify for vault1?
+
+A. Keys
+B. Secrets
+C. Access policies
+D. Security
+
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | C
+| Objective | 3.2 Create and configure VMs
+| Rationale | To enable support for Azure Disk Encryption, you need to modify the Access policies for the key vault. This provides an option to enable access to Azure Disk Encryption for volume encryption.
+| URL:      | https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-key-vault
+
+
+### Question # 12 (Multiple Choice)
+
+You have an Azure subscription that contains the resources shown in the following table.
+
+![Backup ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/backup-12.jpg)
+
+Which two resources can you back up to a Recovery Services vault? Each correct presents part of the solution.
+
+A. VM1
+B. blob1
+C. Disk1
+D. share1
+E. Database1
+
+
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | A AND D
+| Objective | 5.2 Implement backup and recovery
+| Rationale | Recovery Services vault supports Azure Virtual Machines, SQL in Azure VM, Azure Files, SAP HANA in Azure VM, Azure Backup Server, Azure Backup Agent, and DPM. Backup vault supports Azure Database for PostgreSQL servers, Azure Blobs, and Azure disks.
+| URL:      | https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix#vault-support , https://learn.microsoft.com/en-us/azure/backup/backup-azure-recovery-services-vault-overview , https://learn.microsoft.com/en-us/azure/backup/backup-vault-overview
+
+###
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | 
@@ -143,7 +304,15 @@ You have an Azure subscription that contains the storage accounts shown in the f
 | Rationale |
 | URL:      |
 
+###
+| Item      | Description
+| -------   | -------------------------------
+| Answer    | 
+| Objective | 
+| Rationale |
+| URL:      |
 
+### 
 | Item      | Description
 | -------   | -------------------------------
 | Answer    | 
