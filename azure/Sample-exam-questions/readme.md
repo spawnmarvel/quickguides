@@ -336,14 +336,61 @@ Contoso has the Recovery Service vaults shown in the following table.
 ![Contoso recovery service vault ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-contoso-recvault.jpg)
 
 
-###
+##### Problem Statement
+Administrators share the contosostorage2 access key with external users.
+Replication costs for backups are over budget.
+
+##### Requirements
+
+##### Planned Changes
+
+Contoso plans to implement the following changes:
+
+* Configure backups to use locally-redundant storage (LRS) replication whenever possible.
+* Hire 125 new employees, each of whom will require an account created in the tenant.
+* Delegate User1 to manage all the user and group accounts in the New York office.
+* Delegate User2 to manage all the user and group accounts in the Seattle office.
+* Deploy a new Azure virtual machine named DevVM1 that will run Windows 10.
+* Create peering between Vnet1 and Vnet2.
+* Move Disk1 to ResourceGroup2.
+
+##### Technical Requirements
+
+Contoso must meet the following technical requirements:
+
+* For supported storage accounts, data not accessed for 60 days must be moved automatically to cool storage. Data not accessed for 120 days must be moved automatically to archive storage.
+* DevVM1 must be accessible from the Azure portal over TLS and provide seamless RDP/SSH connectivity.
+* Delegated administrative permissions must be scoped to specific locations.
+* Administrative effort and costs must be minimized whenever possible.
+* The principle of least privilege must be used.
+
+##### Security Requirements
+
+Contoso must meet the following security requirements:
+
+* User access to storage account data must be granted for a specified start and expiration date and time.
+* DevVM1 must be protected from port scanning from outside the virtual network.
+* Storage account access keys must not be shared directly with users.
+
+### Question # 13 (Multiple Choice)
+Answer the following question based on the information presented in the case study.
+
+Which administrator can implement the planned changes for the new employees?
+
+* A. Admin1 only
+* B. Admin2 only
+* C. Admin3 only
+* D. Admin1 and Admin2 only
+* E. Admin1 and Admin3 only
 
 | Item      | Description
 | -------   | -------------------------------
-| Answer    | 
-| Objective | 
-| Rationale |
+| Answer    | B 
+| Objective | Objective 1.1: Manage Azure Active Directory (Azure AD) objects
+| Rationale | ![answer 13 ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/case-answer-13.jpg)
 | URL:      |
+
+
 
 ###
 | Item      | Description
