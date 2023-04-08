@@ -559,8 +559,8 @@ A storage account is a container that groups a set of Azure Storage services tog
 
 * Location: The datacenter that will store the services in the account.
 * Performance:
-1. Standard allows you to have any data service (Blob, File, Queue, Table) and uses magnetic disk drives. (HDD)
-2. Premium provides more services for storing data. For example, storing unstructured object data as block blobs or append blobs, and specialized file storage used to store and create premium file shares. (SSD)
+* * 1. Standard allows you to have any data service (Blob, File, Queue, Table) and uses magnetic disk drives. (HDD)
+* * 2. Premium provides more services for storing data. For example, storing unstructured object data as block blobs or append blobs, and specialized file storage used to store and create premium file shares. (SSD)
 Replication: 
 
 
