@@ -455,6 +455,15 @@ Configure Azure Files and Azure Blob Storage
 ![ Compare Azure Files to Blob Storage and Azure Disks ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-files-to-blob-and-disks.jpg)
 
 
+Create file share snapshots
+
+* Azure Files provides the capability to take share snapshots of file shares. 
+* File share snapshots capture a point-in-time, read-only copy of your data.
+
+![ Fileshare ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/fileshare.jpg)
+
+
+
 ## Configure Azure Storage with tools
 
 The module concepts are covered in: Implement and manage storage (15–20%)
