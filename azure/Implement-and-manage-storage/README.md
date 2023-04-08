@@ -433,6 +433,21 @@ Do it again.
 
 ## Configure Azure Files and File Sync
 
+The module concepts are covered in: Implement and manage storage (15–20%)
+
+Configure Azure Files and Azure Blob Storage
+
+* Create an Azure Files share
+* Create and configure Azure File Sync
+
+* SMB, 445
+* Azure Files shares can be mounted concurrently by cloud or on-premises deployments of Windows, Linux, and macOS.
+
+##### Compare Azure Files to Blob Storage and Azure Disks
+
+![ Compare Azure Files to Blob Storage and Azure Disks ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-files-to-blob-to-disk.jpg)
+
+
 ## Configure Azure Storage with tools
 
 The module concepts are covered in: Implement and manage storage (15–20%)
