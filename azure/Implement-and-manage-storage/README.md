@@ -561,12 +561,40 @@ A storage account is a container that groups a set of Azure Storage services tog
 * Performance:
 * * 1. Standard allows you to have any data service (Blob, File, Queue, Table) and uses magnetic disk drives. (HDD)
 * * 2. Premium provides more services for storing data. For example, storing unstructured object data as block blobs or append blobs, and specialized file storage used to store and create premium file shares. (SSD)
-Replication: 
-
-
+* Replication: Determines the strategy used to make copies of your data to protect against hardware failure or natural disaster.
+* Access tier: Controls how quickly you will be able to access the blobs in a storage account. Hot gives quicker access than Cool, but at increased cost. Hot access tier applies only to blobs, and serves as the default value for new blobs.
+* Secure transfer required: Enabled requires HTTPS, while disabled allows HTTP.
+* Virtual networks: A security feature that allows inbound access requests only from the virtual network(s) you specify.
 
 
 ## Control access to Azure Storage with shared acess signatures
+
+#### Access Azure Storage
+
+Files stored in Azure Storage are accessed by clients over HTTP/HTTPS. Azure checks each client request for authorization to access stored data. 
+Four options are available for blob storage:
+
+* Public access
+
+* Azure Active Directory (Azure AD)
+* * Use this form of authentication if you're running an app with managed identities or using security principals.
+* * First, you authenticate a security principal that returns an OAuth 2.0 token if successful. This token is then passed to Azure Storage to enable authorization to the requested resource.
+
+* Shared key
+* These keys grant anyone with access the equivalent of root access to your storage.
+
+* Shared access signature (SAS)
+* A SAS lets you grant granular access to files in Azure Storage, such as read-only or read-write access, expiration time, after which the SAS no longer enables the client to access the chosen resources.
+
+#### How shared access signatures work
+
+Done it
+
+#### Use stored access policies to delegate access to Azure Storage
+
+
+![Stored access policy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/stored-access-policy.jpg)
+
 
 ## Upload, download, and manage data with Azure Storage Explorer
 
