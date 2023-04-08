@@ -372,6 +372,9 @@ In this lab, you will:
 
 * Task 1: Provision the lab environment
 * Task 2: Create and configure Azure Storage accounts
+
+![Storage redundancy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-redundancy.jpg)
+
 * Task 3: Manage blob storage
 * Task 4: Manage authentication and authorization for Azure Storage
 * Task 5: Create and configure an Azure Files shares
@@ -411,7 +414,11 @@ The module concepts are covered in: Implement and manage storage (15–20%)
 5. Update the Export job to include the shipment tracking number.
 
 * Use the AzCopy tool
-
+* command-line utility for copying data to and from Azure Blob Storage and Azure Files.
+* AzCopy is available on Windows, Linux, and macOS.
+* * Azure Active Directory (Azure AD)
+* * SAS tokens
+* Azure Storage Explorer uses the AzCopy tool for all of its data transfers. 
 
 
 ## Create and Azure Storage account
