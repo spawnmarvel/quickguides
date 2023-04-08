@@ -452,7 +452,7 @@ Configure Azure Files and Azure Blob Storage
 
 ##### Compare Azure Files to Blob Storage and Azure Disks
 
-![ Compare Azure Files to Blob Storage and Azure Disks ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-files-to-blob-to-disk.jpg)
+![ Compare Azure Files to Blob Storage and Azure Disks ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/compare-files-to-blob-and-disk.jpg)
 
 
 ## Configure Azure Storage with tools
