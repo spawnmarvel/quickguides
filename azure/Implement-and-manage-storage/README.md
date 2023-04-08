@@ -462,7 +462,9 @@ Create file share snapshots
 
 ![ Fileshare ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/fileshare.jpg)
 
+Fileshare snapshot, delete and view / restore with snapshot
 
+![ Fileshare Snapshot ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/fileshare-snapshot.jpg)
 
 ## Configure Azure Storage with tools
 
