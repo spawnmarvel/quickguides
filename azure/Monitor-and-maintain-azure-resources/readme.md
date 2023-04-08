@@ -19,3 +19,6 @@ https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104
 ## Implement and manage storage (15–20%)
 
 ## MS learn AZ-104: Monitor and back up Azure resources
+
+## Configure file and folder backups
+
