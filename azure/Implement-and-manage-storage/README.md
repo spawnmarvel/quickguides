@@ -403,7 +403,7 @@ In this lab, you will:
 
 * Verify AD
 
-![Container blob AD IAM Role verify  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-AD-OK.jpg)
+![Container blob AD IAM Role verify  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-AD-ok.jpg)
 
 * Task 5: Create and configure an Azure Files shares
 * Task 6: Manage network access for Azure Storage
