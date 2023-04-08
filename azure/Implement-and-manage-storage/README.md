@@ -391,7 +391,14 @@ In this lab, you will:
 * Task 1: Provision the lab environment
 * Task 2: Create and configure Azure Storage accounts
 
+Default
+
+![Storage redundancy default  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-default-redundancy.jpg)
+
+Read access + GRS
 ![Storage redundancy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-redundancy.jpg)
+
+
 
 * Task 3: Manage blob storage (after upload a file)
 
