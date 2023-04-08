@@ -485,7 +485,7 @@ Azure File Sync is composed of four main components that work together to provid
 * * Azure File Sync agent is a downloadable package that enables Windows Server to be synced with an Azure Files share.
 * * Three main components:
 * * * 1. FileSyncSvc.exe, monitoring changes on server endpoints, and for initiating sync sessions to Azure.
-* * * 2. StorageSync.sys, The filter is responsible for tiering files to Azure Files when cloud tiering is enabled.
+* * * 2. StorageSync.sys, The filter is responsible for tiering files to Azure Files when cloud tiering is enabled. Cloud tiering archives infrequently access files to free up space on the local file share.
 * * * 3. PowerShell cmdlets,  allow you to interact with the Microsoft.StorageSync Azure resource provider. You can find the cmdlets at the following (default) locations:
 * * * * C:\\Program Files\\Azure\\StorageSyncAgent\\StorageSync.Management.PowerShell.Cmdlets.dll
 * * * * C:\\Program Files\\Azure\\StorageSyncAgent\\StorageSync.Management.ServerCmdlets.dll
@@ -507,6 +507,7 @@ Step 4: Register each Windows Server with the Storage Sync Service
  (Cloud endpoint)
  (Server enpoint)
 
+Note :A server (or cluster) can be registered with only one Storage Sync Service resource at a time.
 
 ## Configure Azure Storage with tools
 
@@ -543,6 +544,27 @@ The module concepts are covered in: Implement and manage storage (15–20%)
 
 
 ## Create and Azure Storage account
+
+#### What is Azure Storage?
+
+![Azure storage  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/azure-storage.jpg)
+
+Blobs, Files, Queues, and Tables are contained within storage accounts, while other services are not.
+
+These four data services are all primitive, cloud-based storage services, and are often used together in the same application.
+
+A storage account is a container that groups a set of Azure Storage services together.
+
+#### Storage account settings
+
+* Location: The datacenter that will store the services in the account.
+* Performance:
+1. Standard allows you to have any data service (Blob, File, Queue, Table) and uses magnetic disk drives. (HDD)
+2. Premium provides more services for storing data. For example, storing unstructured object data as block blobs or append blobs, and specialized file storage used to store and create premium file shares. (SSD)
+Replication: 
+
+
+
 
 ## Control access to Azure Storage with shared acess signatures
 
