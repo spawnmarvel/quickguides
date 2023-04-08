@@ -466,6 +466,48 @@ Fileshare snapshot, delete and view / restore with snapshot
 
 ![ Fileshare Snapshot ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/fileshare-snapshot.jpg)
 
+#### Azure File Sync components
+
+Azure File Sync is composed of four main components that work together to provide caching for Azure Files shares on an on-premises Windows Server or cloud virtual machine.
+
+![ File sync ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/file-sync.jpg)
+
+* Storage Sync Service
+* * The Storage Sync Service forms sync relationships with multiple storage accounts by using multiple sync groups.
+
+* Sync group
+* * A sync group defines the sync topology for a set of files. 
+
+* Registered server
+* Represents a trust relationship between your server (or cluster) and the Storage Sync Service resource.
+
+* Azure File Sync agent
+* * Azure File Sync agent is a downloadable package that enables Windows Server to be synced with an Azure Files share.
+* * Three main components:
+* * * 1. FileSyncSvc.exe, monitoring changes on server endpoints, and for initiating sync sessions to Azure.
+* * * 2. StorageSync.sys, The filter is responsible for tiering files to Azure Files when cloud tiering is enabled.
+* * * 3. PowerShell cmdlets,  allow you to interact with the Microsoft.StorageSync Azure resource provider. You can find the cmdlets at the following (default) locations:
+* * * * C:\\Program Files\\Azure\\StorageSyncAgent\\StorageSync.Management.PowerShell.Cmdlets.dll
+* * * * C:\\Program Files\\Azure\\StorageSyncAgent\\StorageSync.Management.ServerCmdlets.dll
+
+* Server endpoint
+* A specific location on a registered server, such as a folder on a server volume. for example, F:\\sync1 and F:\\sync2).
+
+* Cloud endpoint
+* * A cloud endpoint is an Azure Files share that's part of a sync group.
+* * An Azure Files share can be a member of one cloud endpoint only. (1 JUST 1)
+* * An Azure Files share can be a member of one sync group only.  (1 JUST 1)
+
+#### Deploy Azure File Sync
+
+Step 1: Deploy the Storage Sync Service
+Step 2: Prepare each Windows Server to use Azure File Sync
+Step 3: Install the Azure File Sync agent
+Step 4: Register each Windows Server with the Storage Sync Service
+ (Cloud endpoint)
+ (Server enpoint)
+
+
 ## Configure Azure Storage with tools
 
 The module concepts are covered in: Implement and manage storage (15–20%)
