@@ -376,6 +376,9 @@ In this lab, you will:
 ![Storage redundancy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-redundancy.jpg)
 
 * Task 3: Manage blob storage
+
+![Container blob edit tier  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-edit-tier.jpg)
+
 * Task 4: Manage authentication and authorization for Azure Storage
 * Task 5: Create and configure an Azure Files shares
 * Task 6: Manage network access for Azure Storage
