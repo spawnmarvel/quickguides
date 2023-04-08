@@ -364,6 +364,24 @@ Recommendations for managing risks
 
 https://learn.microsoft.com/en-us/training/modules/configure-storage-security/7-apply-best-practices
 
+Stored access policy
+
+https://learn.microsoft.com/en-us/rest/api/storageservices/define-stored-access-policy
+
+The following storage resources support stored access policies:
+
+* Blob containers
+* File shares
+* Queues
+* Tables
+
+![Stored access policy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/stored-access-policy.jpg)
+
+Generate SAS with policy
+
+![Stored access policy SAS  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/stored-access-policy-sas.jpg)
+
+
 #### Lab 07 - Manage Azure Storage
 
 https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md
