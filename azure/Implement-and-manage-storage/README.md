@@ -375,7 +375,7 @@ In this lab, you will:
 
 ![Storage redundancy  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-redundancy.jpg)
 
-* Task 3: Manage blob storage
+* Task 3: Manage blob storage (after upload a file)
 
 ![Container blob edit tier  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-edit-tier.jpg)
 
