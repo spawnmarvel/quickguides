@@ -380,6 +380,14 @@ In this lab, you will:
 ![Container blob edit tier  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-edit-tier.jpg)
 
 * Task 4: Manage authentication and authorization for Azure Storage
+
+![Container blob edit sas  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-sas.jpg)
+
+* Generate SAS token and URL.
+* Start date, yesterday's date
+
+![Container blob url  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-url.jpg)
+
 * Task 5: Create and configure an Azure Files shares
 * Task 6: Manage network access for Azure Storage
 
