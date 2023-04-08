@@ -392,6 +392,11 @@ In this lab, you will:
 
 ![Container blob AD  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-AD.jpg)
 
+* click Access Control (IAM)
+
+
+![Container blob AD IAM  ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Implement-and-manage-storage/lab-7-container-blob-AD-IAM.jpg)
+
 * Task 5: Create and configure an Azure Files shares
 * Task 6: Manage network access for Azure Storage
 
