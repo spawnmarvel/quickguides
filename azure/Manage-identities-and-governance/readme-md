@@ -82,6 +82,7 @@ Use PowerShell to bulk invite Azure AD B2B collaboration users
 6. Sign in to your tenant
 7. Send bulk invitations
 
+
 ```
 $invitations = import-csv c:\bulkinvite\invitations.csv
 
