@@ -95,6 +95,14 @@ Locally redundant storage (LRS)
 Zone redundant storage (ZRS)
 * Replicates your data across three storage clusters (Zones) in a single region.
 
+Note:
+ZRS is supported for all Azure Storage services through standard general-purpose v2 storage accounts, including:
+* Azure Blob storage (hot and cool block blobs and append blobs, non-disk page blobs)
+* Azure Files (all standard tiers: transaction optimized, hot, and cool)
+* Azure Table storage, Azure Queue storage
+
+https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy
+
 Geo-redundant storage (GRS)
 * Replicates your data to a secondary region (hundreds of miles away from the primary location of the source data).
 
