@@ -112,3 +112,21 @@ Enforce multi-factor authentication for B2B guest users
 https://learn.microsoft.com/en-us/azure/active-directory/external-identities/b2b-tutorial-require-mfa
 
 
+## Configure subscriptions
+
+## Configure Azure Policy
+
+## Configure role-based access control
+
+
+Note
+
+| Built-in role | Description
+| ------------- | -----------
+| Virtual Machine Contributor | Lets you manage classic virtual machines, but not access to them, and not the virtual network or storage account they're connected to.
+|               | 
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+
+
+
