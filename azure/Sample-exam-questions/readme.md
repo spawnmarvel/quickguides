@@ -606,7 +606,7 @@ https://learn.microsoft.com/en-us/certifications/practice-assessments-for-micros
 
 ## Questions
 
-### Question # 1
+### Question # 21
 
 
 You have an Azure subscription that contains the following StorageV2 (general purpose v2) storage accounts:
@@ -637,7 +637,7 @@ Live migration is not supported for read-access geo-redundant storage (RA-GRS) a
 </details>
 
 
-### Question # 2
+### Question # 22
 
 
 You plan to configure object replication between two Azure Storage accounts.
@@ -657,7 +657,7 @@ Versioning must be enabled for both the source and destination accounts.
 </details>
 
 
-### Question # 3
+### Question # 23
 
 
 You plan to create an alert in Azure Monitor that will have an action group to send SMS messages.
@@ -678,7 +678,7 @@ A maximum of one SMS message can be sent every five minutes. Therefore, a maximu
 
 </details>
 
-### Question # 4
+### Question # 24
 
 
 You have an Azure virtual network that contains two subnets named Subnet1 and Subnet2. You have a virtual machine named VM1 that is connected to Subnet1. VM1 runs Windows Server.
@@ -705,7 +705,7 @@ To connect VM1 directly to Subnet2, you must create a new network interface that
 </details>
 
 
-### Question # 5
+### Question # 25
 
 
 You have an Azure virtual network named VNet1.
@@ -733,7 +733,7 @@ https://learn.microsoft.com/azure/app-service/networking/private-endpoint
 
 </details>
 
-### Question # 6
+### Question # 26
 
 
 You have an Azure subscription that contains a resource group named RG1. RG1 contains a virtual machine named VM1 connected to a virtual network named Network1.
@@ -765,7 +765,7 @@ To modify network settings, you must assign the Network Contributor role.
 </details>
 
 
-### Question # 7
+### Question # 27
 
 
 You need to create a custom RBAC role from the Reader role
