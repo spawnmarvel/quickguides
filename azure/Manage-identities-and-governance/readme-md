@@ -129,4 +129,9 @@ Note
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
 
+#### Create an Azure custom role using Azure PowerShell
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell
+
+
 
