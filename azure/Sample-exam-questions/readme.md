@@ -627,7 +627,8 @@ Which storage account should you identify?
 
 <details>
   <summary>Click me</summary>
-  
+
+
 store2
 
 Only zone-redundant replication (ZRS) supports StorageV2, FileStorage, and BlockBlobStorage accounts. 
