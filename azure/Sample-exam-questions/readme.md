@@ -635,3 +635,166 @@ Only zone-redundant replication (ZRS) supports StorageV2, FileStorage, and Block
 Live migration is not supported for read-access geo-redundant storage (RA-GRS) and only standard storage accounts can be used.
 
 </details>
+
+
+### Question # 2
+
+
+You plan to configure object replication between two Azure Storage accounts.
+
+* Change feed
+* Blob soft delete
+* Hierarchical namespace
+* Versioning
+
+<details>
+  <summary>Click me</summary>
+
+Versioning
+
+Versioning must be enabled for both the source and destination accounts. 
+
+</details>
+
+
+### Question # 3
+
+
+You plan to create an alert in Azure Monitor that will have an action group to send SMS messages.
+
+What is the maximum number of SMS messages that will be sent every hour if the alert gets triggered every minute?
+
+* 4
+* 6
+* 12
+* 60
+
+<details>
+  <summary>Click me</summary>
+
+12
+
+A maximum of one SMS message can be sent every five minutes. Therefore, a maximum of 12 messages will be sent per hour.
+
+</details>
+
+### Question # 4
+
+
+You have an Azure virtual network that contains two subnets named Subnet1 and Subnet2. You have a virtual machine named VM1 that is connected to Subnet1. VM1 runs Windows Server.
+
+You need to ensure that VM1 is connected directly to both subnets.
+
+What should you do first?
+
+
+* From the Azure portal, create an IP group.
+* From the Azure portal, add a network interface.
+* Sign in to Windows Server and create a network bridge.
+* From the Azure portal, modify the IP configurations of an existing network interface.
+
+<details>
+  <summary>Click me</summary>
+
+From the Azure portal, add a network interface.
+
+From the Azure portal, add a network interface.
+A network interface is used to connect a virtual machine to a subnet. Since VM1 is connected to Subnet1, VM1 already has a network interface attached that is connected to Subnet1. 
+To connect VM1 directly to Subnet2, you must create a new network interface that is connected to Subnet2. Next, you must attach the new network interface to VM1.
+
+</details>
+
+
+### Question # 5
+
+
+You have an Azure virtual network named VNet1.
+
+You deploy an Azure App Service web app named WebApp1.
+
+You need to ensure that you can access WebApp1 by using an IP address from VNet1.
+
+What should you do?
+
+* Add a peering to VNet1.
+* Deploy Azure Bastion to VNet1.
+* Add VNet integration to WebApp1.
+* Add a private endpoint connection to WebApp1.
+
+<details>
+  <summary>Click me</summary>
+
+Add a private endpoint connection to WebApp1.
+
+A private endpoint connection will expose a web app on a virtual network and provide the web app with an IP address on the virtual network. 
+The web app can then be accessed through the virtual network instead of using the public endpoint.
+
+https://learn.microsoft.com/azure/app-service/networking/private-endpoint
+
+</details>
+
+### Question # 6
+
+
+You have an Azure subscription that contains a resource group named RG1. RG1 contains a virtual machine named VM1 connected to a virtual network named Network1.
+
+A user named Admin1 must be able to change the settings of Network1.
+
+You need to use PowerShell to assign Admin1 the appropriate role and permissions.
+
+Which two PowerShell statements should you use to complete the task? Each correct answer presents part of the solution.
+
+* $User = Get-AzADServicePrinciple -DisplayName admin1
+* New-AzRoleAssignment -ObjectId $User.id ` -RoleDefinitionName "Network Contributor" ` -ResourceName Network1 ` -ResourceType Microsoft.Network/virtualNetworks ` -ResourceGroupName RG1
+* New-AzRoleAssignment -ObjectId $User.id ` -RoleDefinitionName "Virtual Machine Contributor" ` -ResourceGroupName RG1
+* $User = Get-AzADUser -DisplayName admin1
+
+<details>
+  <summary>Click me</summary>
+
+* New-AzRoleAssignment -ObjectId $User.id ` -RoleDefinitionName "Network Contributor" ` -ResourceName Network1 ` -ResourceType Microsoft.Network/virtualNetworks ` -ResourceGroupName RG1
+* $User = Get-AzADUser -DisplayName admin1
+
+
+Before assigning an RBAC role to a user, you must use the Get-AzADUser cmdlet to obtain the ID of the user. 
+The New-AzRoleAssignment cmdlet can be used to assign an RBAC role to any resource. 
+If you assign the Virtual Machine Contributor role to RG1, it will only allow changes to the virtual machine, it will not allow Admin1 to manage the virtual network. 
+To modify network settings, you must assign the Network Contributor role.
+
+
+</details>
+
+
+### Question # 7
+
+
+You need to create a custom RBAC role from the Reader role
+
+* Get-AzRoleDefinition Reader | ConvertTo-Json 
+* Get-AzRoleAssignment | ConvertTo-Json 
+* Get-AzRoleAssignment | ConvertFrom-Json 
+* Get-AzRoleDefinition Reader | ConvertFrom-Json 
+
+Which PowerShell statements should you use to complete the task?
+
+<details>
+  <summary>Click me</summary>
+
+
+Get-AzRoleDefinition Reader | ConvertTo-Json 
+
+Get-AzRoleDefinition Reader | ConvertTo-Json  is correct
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-powershell
+
+Lists Azure RBAC role assignments at the specified scope. By default it lists all role assignments in the selected Azure subscription.
+
+Example
+
+Get-AzRoleAssignment -SignInName user@someaccount.onmicrosoft.com
+
+https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azroleassignment?view=azps-9.6.0
+
+
+
+</details>
