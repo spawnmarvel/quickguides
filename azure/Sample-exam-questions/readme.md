@@ -593,3 +593,43 @@ Which Recovery Services vault can be configured to use locally-redundant storage
 
 
 
+
+
+## Practice Assessments for Microsoft Certifications
+
+Links
+
+Practice Assessments for Microsoft Certifications
+
+https://learn.microsoft.com/en-us/certifications/practice-assessments-for-microsoft-certifications
+
+
+## Questions
+
+### Question # 1
+
+
+You have an Azure subscription that contains the following StorageV2 (general purpose v2) storage accounts:
+
+store1 is a Premium account that uses geo-redundant storage (GRS) redundancy.
+store2 is a Standard account that uses locally-redundant storage (LRS) redundancy.
+store3 is a Premium account that uses read-access geo-redundant storage (RA-GRS) redundancy.
+store4 is a Premium account that uses RA-GRS redundancy.
+You need to identify which storage account can be converted to zone-redundant replication (ZRS) for live migration.
+
+Which storage account should you identify?
+
+store1
+store2
+store3
+store4
+
+<details>
+  <summary>Click me</summary>
+  
+store2
+
+Only zone-redundant replication (ZRS) supports StorageV2, FileStorage, and BlockBlobStorage accounts. 
+Live migration is not supported for read-access geo-redundant storage (RA-GRS) and only standard storage accounts can be used.
+
+</details>
