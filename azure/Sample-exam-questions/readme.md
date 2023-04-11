@@ -802,38 +802,6 @@ https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azroleassig
 
 ### Question # 28
 
-Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
-After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
-
-
-You have an Azure Active Directory (Azure AD) tenant named contoso.com.
-You have a CSV file that contains the names and email addresses of 500 external users.
-You need to create a guest user account in contoso.com for each of the 500 external users.
-Solution: You create a PowerShell script that runs the New-AzureADMSInvitation cmdlet for each external user.
-Does this meet the goal?
-
-* A:Yes
-* B:No
-
-<details>
-  <summary>Click me</summary>
-
-A:Yes
-
-This cmdlet is used to invite a new external user to your directory.
-
-https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation?view=azureadps-2.0
-
-Use the New-AzureADMSInvitation cmdlet which is used to invite a new external user to your directory.
-Reference:
-https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation
-
-
-</details>
-
-
-### Question # 29
-
 Your company has three virtual machines (VMs) that are included in an availability set.
 You try to resize one of the VMs, which returns an allocation failure message.
 It is imperative that the VM is resized.
@@ -857,7 +825,7 @@ https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/azure/vi
 
 </details>
 
-### Question # 30
+### Question # 29
 
 Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
 
@@ -882,7 +850,7 @@ https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-si
 </details>
 
 
-### Question # 31
+### Question # 30
 
 Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
 The company has users that work remotely. The remote workers require access to the VMs on VNet1.
@@ -908,7 +876,7 @@ https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
 
 </details>
 
-### Question # 32
+### Question # 31
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 
@@ -937,7 +905,7 @@ https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitati
 </details>
 
 
-### Question # 33
+### Question # 32
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -964,7 +932,7 @@ https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitati
 </details>
 
 
-### Question # 34
+### Question # 33
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
