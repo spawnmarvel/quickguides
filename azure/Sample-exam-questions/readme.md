@@ -812,7 +812,7 @@ You need to create a guest user account in contoso.com for each of the 500 exter
 Solution: You create a PowerShell script that runs the New-AzureADMSInvitation cmdlet for each external user.
 Does this meet the goal?
 
-* A: Yes
+* A:Yes
 * B:No
 
 <details>
