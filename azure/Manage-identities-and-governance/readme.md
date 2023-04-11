@@ -61,7 +61,7 @@ Bulk operations, including bulk create and delete for user accounts.
 Only Global administrators or User administrators have privileges to create and delete user accounts in the Azure portal.
 
 
-[Bulk operations ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_operations.jpg)
+![Bulk operations ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_operations.jpg)
 
 ##### Bulk create users in Azure Active Directory
 
