@@ -54,11 +54,14 @@ Things to know about user accounts
 #### Create bulk user accounts
 
 Bulk operations, including bulk create and delete for user accounts.
+
 * Azure portal common approach
 * Azure Powershell can be used for bulk upload
 
 Only Global administrators or User administrators have privileges to create and delete user accounts in the Azure portal.
 
+
+[Bulk operations ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_operations.jpg)
 
 ##### Bulk create users in Azure Active Directory
 
