@@ -84,6 +84,13 @@ Use PowerShell to bulk invite Azure AD B2B collaboration users
 7. Send bulk invitations
 
 
+In Microsoft Excel, create a CSV file with the list of invitee user names and email addresses. 
+Make sure to include the Name and InvitedUserEmailAddress column headings.
+
+For example, create a worksheet in the following format:
+
+![Bulk csv ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_csv.jpg)
+
 ```
 $invitations = import-csv c:\bulkinvite\invitations.csv
 

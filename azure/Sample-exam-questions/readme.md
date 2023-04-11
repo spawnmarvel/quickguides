@@ -798,3 +798,35 @@ https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azroleassig
 
 
 </details>
+
+
+### Question # 28
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+
+You have an Azure Active Directory (Azure AD) tenant named contoso.com.
+You have a CSV file that contains the names and email addresses of 500 external users.
+You need to create a guest user account in contoso.com for each of the 500 external users.
+Solution: You create a PowerShell script that runs the New-AzureADMSInvitation cmdlet for each external user.
+Does this meet the goal?
+
+* A: Yes
+* B:No
+
+<details>
+  <summary>Click me</summary>
+
+A:Yes
+
+This cmdlet is used to invite a new external user to your directory.
+
+https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation?view=azureadps-2.0
+
+Use the New-AzureADMSInvitation cmdlet which is used to invite a new external user to your directory.
+Reference:
+https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation
+
+
+</details>
