@@ -830,3 +830,53 @@ https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitati
 
 
 </details>
+
+
+### Question # 29
+
+Your company has three virtual machines (VMs) that are included in an availability set.
+You try to resize one of the VMs, which returns an allocation failure message.
+It is imperative that the VM is resized.
+Which of the following actions should you take?
+
+* A. You should only stop one of the VMs.
+* B. You should stop two of the VMs.
+* C. You should stop all three VMs. Most Voted
+* D. You should remove the necessary VM from the availability set.
+
+<details>
+  <summary>Click me</summary>
+
+* C. You should stop all three VMs. Most Voted
+
+If the VM you wish to resize is part of an availability set, then you must stop all VMs in the availability set before changing the size of any VM in the availability set.
+The reason all VMs in the availability set must be stopped before performing the resize operation to a size that requires different hardware is that all running VMs in the availability set must be using the same physical hardware cluster. Therefore, if a change of physical hardware cluster is required to change the VM size then all VMs must be first stopped and then restarted one-by-one to a different physical hardware clusters.
+
+https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/azure/virtual-machines/restart-resize-error-troubleshooting.md
+
+
+</details>
+
+### Question # 30
+
+Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+
+Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB.
+VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your company's on- premises network and VirtualNetworkA.
+You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between
+VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation.
+You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation.
+Solution: You download and re-install the VPN client configuration package on the Windows 10 workstation.
+Does the solution meet the goal?
+
+A. Yes
+B. No
+
+<details>
+  <summary>Click me</summary>
+
+A. Yes
+
+https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing
+
+</details>
