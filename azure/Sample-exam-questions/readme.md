@@ -880,3 +880,30 @@ A. Yes
 https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing
 
 </details>
+
+
+### Question # 31
+
+Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
+The company has users that work remotely. The remote workers require access to the VMs on VNet1.
+You need to provide access for the remote workers.
+
+What should you do?
+
+* A. Configure a Site-to-Site (S2S) VPN.
+* B. Configure a VNet-toVNet VPN.
+* C. Configure a Point-to-Site (P2S) VPN.
+* D. Configure DirectAccess on a Windows Server 2012 server VM.
+* E. Configure a Multi-Site VPN
+
+<details>
+  <summary>Click me</summary>
+
+C. Configure a Point-to-Site (P2S) VPN.
+
+A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer.
+
+
+https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+
+</details>
