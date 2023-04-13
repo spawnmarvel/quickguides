@@ -8,6 +8,18 @@ Azure Administrator Cheat Sheet
 
 ## Links
 
+Exam Readiness Zone
+
+https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=az-104
+
+* 1. Preparing for AZ-104 - Manage Azure identities and governance (1 of 5)
+* 2
+* 3
+* 4
+* 5
+
+
+
 Learn
 
 https://learn.microsoft.com/en-us/certifications/azure-administrator/
