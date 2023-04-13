@@ -12,12 +12,17 @@ Exam Readiness Zone
 
 https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=az-104
 
-* 1. Preparing for AZ-104 - Manage Azure identities and governance (1 of 5)
-* 2
-* 3
-* 4
-* 5
 
+Preparing for exam:
+
+* 1. Preparing for AZ-104 - Manage Azure identities and governance (1 of 5)
+
+Skills measured
+* Manage Azure identities and governance (15–20%) :round_pushpin:
+* Implement and manage storage (15–20%) :round_pushpin:
+* Deploy and manage Azure compute resources (20–25%) :triangular_flag_on_post:
+* Configure and manage virtual networking (25-30%) :triangular_flag_on_post:
+* Monitor and maintain Azure resources (10–15%) :small_red_triangle:
 
 
 Learn
@@ -97,19 +102,6 @@ Remove
 Start, Stop, Restart, Suspend, Resume # 
 
 ```
-
-
-## Skills measured
-Manage Azure identities and governance (15–20%) :round_pushpin:
-
-Implement and manage storage (15–20%) :round_pushpin:
-
-Deploy and manage Azure compute resources (20–25%) :triangular_flag_on_post:
-
-Configure and manage virtual networking (20-25%) :triangular_flag_on_post:
-
-Monitor and maintain Azure resources (10–15%) :small_red_triangle:
-
 
 ## AZ-104: Manage identities and governance (15-20%)
 
