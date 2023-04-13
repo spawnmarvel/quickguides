@@ -15,11 +15,11 @@ https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=az-104
 
 Skills measured:
 
-* Manage Azure identities and governance (15–20%) :round_pushpin:
-* Implement and manage storage (15–20%) :round_pushpin:
-* Deploy and manage Azure compute resources (20–25%) :triangular_flag_on_post:
-* Configure and manage virtual networking (25-30%) :triangular_flag_on_post:
-* Monitor and maintain Azure resources (10–15%) :small_red_triangle:
+* Manage Azure identities and governance (15–20%) :round_pushpin: (1: Compareble, 2: Compareble. =)
+* Implement and manage storage (15–20%) :round_pushpin: (1: Improvement, 2: Improvement. =)
+* Deploy and manage Azure compute resources (20–25%) :triangular_flag_on_post: (1: Comparable, 2: Strength. +)
+* Configure and manage virtual networking (25-30%) :triangular_flag_on_post: (1: Improvement, 2: Comparable. +)
+* Monitor and maintain Azure resources (10–15%) :small_red_triangle: (1: Comparable, 2: Improvement. -)
 
 
 Learn
