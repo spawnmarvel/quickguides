@@ -1229,6 +1229,8 @@ When you need a highly secure, dedicated route, you can use Azure ExpressRoute. 
 
 https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-virtual-machines/8-summary
 
+![Vpn create ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vpn_create.jpg)
+
 
 Virtual network peering
 
