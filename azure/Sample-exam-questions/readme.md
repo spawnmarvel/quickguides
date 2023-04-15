@@ -1242,3 +1242,24 @@ If your account is not assigned to one of the previously listed roles, it must b
 Microsoft.Network/and-many-things
 
 </details>
+
+### Question # 43
+
+What roles can be used to delete an Azure AD device
+
+
+* Cloud Device Administrator
+* Global Administrator
+* Contributor
+* Owner
+
+<details>
+  <summary>Click me</summary>
+
+Cloud Device Administrator
+
+Global Administrator
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal
+
+</details>
