@@ -900,7 +900,9 @@ You need to create a guest user account in contoso.com for each of the 500 exter
 Solution: From Azure AD in the Azure portal, you use the Bulk create user operation.
 
 Does this meet the goal?
+
 A. Yes
+
 B. No
 
 
