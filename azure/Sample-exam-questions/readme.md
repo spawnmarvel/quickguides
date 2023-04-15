@@ -1270,10 +1270,10 @@ https://learn.microsoft.com/en-us/azure/active-directory/devices/device-manageme
 What is Azure AD registered devices?
 
 
-* Personal laptop
+* Peronal laptop
 * Mobile phone
-* Server
-* Monitor
+* Operating Systems	Windows 10
+* iOS, Android, macOS, Ubuntu 20.04/22.04
 
 
 <details>
@@ -1308,17 +1308,54 @@ What is Azure AD joined devices?
 * Personal laptop
 * Mobile phone
 * Server
-* Monitor
+* Operating Systems	All Windows 11 and Windows 10 devices
 
 <details>
   <summary>Click me</summary>
 
 
-Device ownership	User or Organization
-Operating Systems	Windows 10 or newer, iOS, Android, macOS, Ubuntu 20.04/22.04
+Definition	Joined only to Azure AD requiring organizational account to sign in to the device
 
-https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-register
+Primary audience	Suitable for both cloud-only and hybrid organizations.
+* Applicable to all users in an organization
+* Device ownership	Organization
+* Operating Systems	All Windows 11 and Windows 10 devices except Home editions
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-join
+
+</details>
 
 
+### Question # 46
+
+What is Hybrid Azure AD joined devices
+
+
+* PC
+* Operating Systems	Windows 11, Windows 10
+* Server
+* Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
+
+<details>
+  <summary>Click me</summary>
+
+
+Definition	Joined to on-premises AD and Azure AD requiring organizational account to sign in to the device
+
+Primary audience	Suitable for hybrid organizations with existing on-premises AD infrastructure
+* Applicable to all users in an organization
+* Device ownership	Organization
+* Operating Systems	Windows 11, Windows 10 or 8.1 except Home editions
+* Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
+
+
+Use Azure AD hybrid joined devices if:
+
+* You support down-level devices running Windows 8.1, Windows Server 2008/R2, 2012/R2, 2016.
+* You want to continue to use Group Policy to manage device configuration.
+* You want to continue to use existing imaging solutions to deploy and configure devices.
+* You have Win32 apps deployed to these devices that rely on Active Directory machine authentication.
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-join-hybrid
 
 </details>
