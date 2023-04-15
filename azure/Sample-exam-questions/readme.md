@@ -1276,23 +1276,26 @@ What is Azure AD registered devices?
 * Monitor
 
 
-![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/azure-ad-registred-device.jpg)
 <details>
   <summary>Click me</summary>
 
 
 Definition	Registered to Azure AD without requiring organizational account to sign in to the device
+
 Primary audience	Applicable to all users with the following criteria:
 * Bring your own device
 * Mobile devices
 * Device ownership	User or Organization
 * Operating Systems	Windows 10 or newer, iOS, Android, macOS, Ubuntu 20.04/22.04
 
+
+Scenarios
+A user in your organization wants to access your benefits enrollment tool from their home PC. Your organization requires that anyone accesses this tool from an Intune compliant device. The user registers their home PC with Azure AD and Enrolls the device in Intune, then the required Intune policies are enforced giving the user access to their resources.
+
 https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-register
 
 
 
-![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/azure-ad-registred-device.jpg)
 
 
 </details>
