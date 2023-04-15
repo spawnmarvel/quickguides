@@ -1070,3 +1070,126 @@ Packet capture may help you narrow down the scope of the issue, but it will not 
 
 
 </details>
+
+### Question # 38
+
+You have an Azure virtual network named VNet1.
+
+You create an Azure Private DNS zone named contoso.com.
+
+You need to ensure that the virtual machines on VNet1 register in the cotonso.com private DNS zone.
+
+What should you do?
+
+* Configure each virtual machine to use a custom DNS server
+* Add Azure DNS Private Resolver to VNet1
+* Configure VNet1 to use a custom DNS server
+* Add a virtual network link to contoso.com
+
+<details>
+  <summary>Click me</summary>
+
+Add a virtual network link to contoso.com
+
+To associate a virtual network to aprivate DNS zone, you add the virtual network to the zone by creating a virtual network link.
+
+Azure DNS Private Resolver is used to proxy DNS queries between on-premises environments and Azure DNS.
+
+A custom DNS server will work if you deploy a DNS server as a virtual machine or an appliance, however, this configuration
+does not work with private DNS zone.
+
+
+
+
+</details>
+
+### Question # 39
+
+You have multiple Azure virtual machines and Azure recovery service vault. Virtual machines are configured with the default backup policy.
+
+What is the retention perdiod of virtula machine backups in the default backup policy?
+
+
+* 7 days
+* 14 days
+* 30 days
+* 90 days 
+
+<details>
+  <summary>Click me</summary>
+
+30 days
+
+By default, backups of virtula machines are kept for 30 days.
+
+
+</details>
+
+### Question # 39
+
+You haved a log analytics workspace that collects data from various data sources.
+
+You create a new Azure Monitor log query.
+
+You plan to view data pinned as a chart to a shared dashboard.
+
+What is the maximum number of days for which data can be pinned as a chart on the dashboard.
+
+
+
+* 14
+* 30
+* 90
+* 100 
+
+<details>
+  <summary>Click me</summary>
+
+14
+
+Data pinned on a shared dashboard can only be displayed for a maximum of 14 days.
+
+</details>
+
+### Question # 40
+
+You plan to create an alert in Azure monitor thatw will have an action group to send SMS messages.
+
+What is the maximum of SMS messages that will be sent every hour if the alert gets triggerd every minute.
+
+
+* 4
+* 6
+* 12
+* 60 
+
+<details>
+  <summary>Click me</summary>
+
+12
+
+A maximum of one SMS message can be sendt every five minutes. Therefor, a maximum of 12 messages will be sent every hour.
+
+</details>
+
+### Question # 41
+
+You need to create an Azure Storage account that supports the Azure Data Lake Storage Gen2 capabilities.
+
+Which two types of storage accounts can you use? Each correct answer presents a complete solution
+
+
+* premium block blobs
+* premium file shares
+* premium page blobs
+* standard general-purpose v2
+
+<details>
+  <summary>Click me</summary>
+
+premium block blobs, standard general-purpose v2
+
+To support Data Lake Storage, the storage account must support blob storage, which is available as standard
+general-purpose v2 and premium block blobs, when you create the storage account, you must enable the hierarchical namespace.
+
+</details>
