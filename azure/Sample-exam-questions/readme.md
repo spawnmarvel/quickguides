@@ -1275,6 +1275,8 @@ What is Azure AD registered devices?
 * Server
 * Monitor
 
+
+![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/Sample-exam-questions/azure-ad-registred-device.jpg)
 <details>
   <summary>Click me</summary>
 
