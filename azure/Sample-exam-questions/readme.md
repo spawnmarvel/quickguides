@@ -1265,9 +1265,38 @@ https://learn.microsoft.com/en-us/azure/active-directory/devices/device-manageme
 </details>
 
 
-### Question # 43
+### Question # 44
 
-What is Azure AD registered devices
+What is Azure AD registered devices?
+
+
+* Personal laptop
+* Mobile phone
+* Server
+* Monitor
+
+<details>
+  <summary>Click me</summary>
+
+
+Definition	Registered to Azure AD without requiring organizational account to sign in to the device
+Primary audience	Applicable to all users with the following criteria:
+* Bring your own device
+* Mobile devices
+* Device ownership	User or Organization
+* Operating Systems	Windows 10 or newer, iOS, Android, macOS, Ubuntu 20.04/22.04
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-register
+
+
+![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/Sample-exam-questions/azure-ad-registred-device.jpg)
+
+
+</details>
+
+### Question # 45
+
+What is Azure AD joined devices?
 
 
 * Personal laptop
