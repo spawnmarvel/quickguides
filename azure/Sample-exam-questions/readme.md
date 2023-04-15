@@ -984,3 +984,23 @@ Live migration is not supported for read-access geo-redundant storage (RA-GRS) a
 
 
 </details>
+
+### Question # 35
+
+You need to create an Azure Storage account that supports the Azure Data Lake Storage Gen2 capabilities
+Which two types of storage accounts can use use? Each correct answer presents a complete solution
+
+* premium block blobs
+* premium file shares
+* premium page blobs
+* standard general-purpose v2
+
+<details>
+  <summary>Click me</summary>
+
+To support Data Lake Storage, the storage account must support blob storage, which is available as standard general purpose v2 and premium block blobs.
+Additionally, when you create the storage account, you must enable the hierarchical namespace.
+
+
+
+</details>
