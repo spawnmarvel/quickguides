@@ -1276,7 +1276,7 @@ What is Azure AD registered devices?
 * Monitor
 
 
-![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/Sample-exam-questions/azure-ad-registred-device.jpg)
+![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/azure-ad-registred-device.jpg)
 <details>
   <summary>Click me</summary>
 
@@ -1291,7 +1291,7 @@ Primary audience	Applicable to all users with the following criteria:
 https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-register
 
 
-![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/Sample-exam-questions/azure-ad-registred-device.jpg)
+![Azure AD Registred Device ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Sample-exam-questions/azure-ad-registred-device.jpg)
 
 
 </details>
