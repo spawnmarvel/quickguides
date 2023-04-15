@@ -978,6 +978,8 @@ You need to identify whic storage account that can be converted to zone-redundan
 <details>
   <summary>Click me</summary>
 
+store2 
+
 Only zone-redundant replication (ZRS) supports storageV2, FilesStorage, and BlockBlobStorage accounts.
 Live migration is not supported for read-access geo-redundant storage (RA-GRS) and only standard storage accounts can be used.
 
@@ -998,8 +1000,72 @@ Which two types of storage accounts can use use? Each correct answer presents a 
 <details>
   <summary>Click me</summary>
 
+premium block blobs
+standard general-purpose v2
+
+
 To support Data Lake Storage, the storage account must support blob storage, which is available as standard general purpose v2 and premium block blobs.
 Additionally, when you create the storage account, you must enable the hierarchical namespace.
+
+
+
+</details>
+
+### Question # 36
+
+You have an Azure virtual machine.
+You recieve a notification that the virtual machine is going to be affected by an underlying maintenace activity on the physical infrastructure.
+
+You need to move the virtual machine
+
+* Apply a tag
+* Move the virtual machine to another subscription
+* Apply an Azure policy
+* Redeploy the virtual machine
+
+<details>
+  <summary>Click me</summary>
+
+Redeploy the virtual machine
+
+You must redeploy the virtual machine, which can move the virtual machine to a different host.
+Azure will shut down the virtual machine and move the virtual machine to a new node in the Azure infrastructure.
+
+
+
+</details>
+
+### Question # 37
+
+You have an Azure subscription that contains 20 virtual networks and 500 virtual machines.
+You deploy a new virtual machone named VM501.
+
+You discover that VM501 us unable to communicate with a virtual machine named VM20 in the subscription.
+You suspect that that a network security group (NSG) is the cause of issue.
+
+You need to identify whether an NSG is blocking communication. The solution must minimize administrative effort.
+
+What should you use?
+
+* Nsg flow logs
+* packet capture
+* IP flow verify
+* diagnostics logs
+
+<details>
+  <summary>Click me</summary>
+
+IP flow verify
+
+IP flow verify lest you specify a source and destination IPv4 address, port, protocol (TCP or UDP), and traffic direction (inbound or outbound).
+IP flow verify can identify network security group (NSG) that prevents communication.
+
+NSG Flow logs is a feature of Azure Network Watcher that allows you to log information about IP traffic flowing trhough an NSG.
+
+Although the logs may help you identify the source of the issue, it requires much more configuration and manual evaluation.
+
+Packet capture allows you to create packet capture sessions to track traffic to and from a virtual machine.
+Packet capture may help you narrow down the scope of the issue, but it will not identify the spesific NSG that prevents communication
 
 
 
