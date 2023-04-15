@@ -809,7 +809,7 @@ Which of the following actions should you take?
 
 * A. You should only stop one of the VMs.
 * B. You should stop two of the VMs.
-* C. You should stop all three VMs. Most Voted
+* C. You should stop all three VMs.
 * D. You should remove the necessary VM from the availability set.
 
 <details>
