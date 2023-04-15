@@ -1084,7 +1084,7 @@ IP flow verify
 IP flow verify lest you specify a source and destination IPv4 address, port, protocol (TCP or UDP), and traffic direction (inbound or outbound).
 IP flow verify can identify network security group (NSG) that prevents communication.
 
-NSG Flow logs is a feature of Azure Network Watcher that allows you to log information about IP traffic flowing trhough an NSG.
+NSG Flow logs is a feature of Azure Network Watcher that allows you to log information about IP traffic flowing through an NSG.
 
 Although the logs may help you identify the source of the issue, it requires much more configuration and manual evaluation.
 
@@ -1215,5 +1215,30 @@ premium block blobs, standard general-purpose v2
 
 To support Data Lake Storage, the storage account must support blob storage, which is available as standard
 general-purpose v2 and premium block blobs, when you create the storage account, you must enable the hierarchical namespace.
+
+</details>
+
+### Question # 42
+
+What roles can be used to enable traffic analytics?
+
+
+* Owner
+* Contributor
+* Reader
+* Network contributor
+
+<details>
+  <summary>Click me</summary>
+
+All.
+
+Your account must have any one of the following Azure roles at the subscription scope: owner, contributor, reader, or network contributor.
+
+https://learn.microsoft.com/en-us/azure/network-watcher/traffic-analytics-faq
+
+
+If your account is not assigned to one of the previously listed roles, it must be assigned to a custom role that is assigned the following actions, at the subscription level.
+Microsoft.Network/and-many-things
 
 </details>
