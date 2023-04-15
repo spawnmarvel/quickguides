@@ -1263,3 +1263,27 @@ Global Administrator
 https://learn.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal
 
 </details>
+
+
+### Question # 43
+
+What is Azure AD registered devices
+
+
+* Personal laptop
+* Mobile phone
+* Server
+* Monitor
+
+<details>
+  <summary>Click me</summary>
+
+
+Device ownership	User or Organization
+Operating Systems	Windows 10 or newer, iOS, Android, macOS, Ubuntu 20.04/22.04
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-register
+
+
+
+</details>
