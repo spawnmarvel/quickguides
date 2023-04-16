@@ -970,7 +970,11 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-
 
 
 * Communicate between Azure resources
-* * Virtual networks and virtual network peering (These virtual networks can be in separate regions)
+* * Virtual network peering: Connecting virtual networks within the same Azure region.
+* * Global virtual network peering: Connecting virtual networks across Azure regions.
+
+https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview
+
 * * Virtual networks can connect to App Service Environment, Azure Kubernetes Service, and Azure virtual machine scale sets.
 * * Service endpoints to Storage, SQL
 
