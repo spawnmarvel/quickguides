@@ -206,14 +206,25 @@ https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial
 
 #### Manage licenses in Azure AD
 
-* To assign a license to a user
-* On the Products page, select the name of the license plan you want to assign to the user.
-* On the Assign page, select Users and groups, and then search for and select the user you're assigning the license.
+To assign a license to a user
+1. On the Products page, select the name of the license plan you want to assign to the user.
+2. After you select the license plan, select Assign.
+3. On the Assign page, select Users and groups, and then search for and select the user you're assigning the license.
+4. [..]
 
-* To assign a license to a group
-* 
-* 
+To remove a license from a user
+1. On the Licensed users page for the service plan, select the user that should no longer have the license.
+2. Select Remove license.
 
+To assign a license to a group
+1. On the Products page, select the name of the license plan you want to assign to the user.
+2. On the Azure Active Directory Premium Plan 2 page, select Assign.
+3. On the Assign page, select Users and groups, and then search for and select the group you're assigning the license.
+4. [...]
+
+To remove a license from a group
+1. On the Licensed groups page for the license plan, select the group that should no longer have the license.
+2. Select Remove license.
 
 #### Create administrative units
 
@@ -238,6 +249,25 @@ https://learn.microsoft.com/en-us/azure/active-directory/roles/admin-units-manag
 
 ##### Manage user and group properties
 
+Azure Active Directory (Azure AD) allows your organization to define two different types of group accounts:
+
+* Security groups are used to manage member and computer access to shared resources for a group of users.
+* You can create a security group for a specific security policy and apply the same permissions to all members of a group.
+
+* Microsoft 365 groups provide collaboration opportunities. 
+* Group members have access to a shared mailbox, calendar, files, SharePoint site, and more.
+
+
+##### Things to consider when adding group members
+
+* Assigned, Add specific users as members of a group, where each user can have unique permissions.
+* Dynamic user, Use dynamic membership rules to automatically add and remove group members. When member attributes change, Azure reviews the dynamic group rules for the directory.
+* Dynamic device, (Security groups only) Apply dynamic group rules to automatically add and remove devices in security groups.
+
+
+https://learn.microsoft.com/en-us/training/modules/configure-user-group-accounts/5-create
+
+
 * Groups
 * * grant access and permissions to a group of users instead of for each individual user.
 
@@ -253,11 +283,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/concept-le
 https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-create-rule
 
 
-* You need to grant several users that must belong to the same Azure group temporary access to the Microsoft SharePoint document library. 
-* The group must automatically be deleted after 180 days for compliance purposes.
-* * Set up a dynamic membership on Microsoft 365 groups.
-* * Set up an assigned membership on Microsoft 365 groups.
-* * Set up an assigned membership on security groups and Set up a dynamic membership on security groups are incorrect because security groups can only be used for devices or users and not for groups.
+
 
 | Role | Description | Note
 | ---- | ----------- | -----
