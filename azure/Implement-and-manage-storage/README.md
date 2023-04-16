@@ -146,7 +146,6 @@ Can configure a custom domain to access blob data in your Azure storage account.
 Things to know about configuring service endpoints
 
 * The Firewalls and virtual networks settings restrict access to your storage account from specific subnets on virtual networks or public IPs.
-* The Firewalls and virtual networks settings restrict access to your storage account from specific subnets on virtual networks or public IPs.
 * Subnets and virtual networks must exist in the same Azure region or region pair as your storage account.
 
 
@@ -509,9 +508,13 @@ Azure File Sync is composed of four main components that work together to provid
 #### Deploy Azure File Sync
 
 Step 1: Deploy the Storage Sync Service
+
 Step 2: Prepare each Windows Server to use Azure File Sync
+
 Step 3: Install the Azure File Sync agent
+
 Step 4: Register each Windows Server with the Storage Sync Service
+
  (Cloud endpoint)
  (Server enpoint)
 
