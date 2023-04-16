@@ -335,6 +335,73 @@ Properties
 
 https://follow-e-lo.com/2023/02/06/azure-manage-azure-active-directory-identities/
 
+
+Bulk operations, including bulk create and delete for user accounts.
+
+* Azure portal common approach
+* Azure Powershell can be used for bulk upload
+
+Only Global administrators or User administrators have privileges to create and delete user accounts in the Azure portal.
+
+
+![Bulk operations ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_operations.jpg)
+
+Bulk create users in Azure Active Directory
+
+https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-add
+
+
+Use PowerShell to bulk invite Azure AD B2B collaboration users
+
+* If you use Azure Active Directory (Azure AD) B2B collaboration to work with external partners, you can invite multiple guest users to your organization at the same time via the portal or via PowerShell.
+* In this tutorial, you learn how to use PowerShell to send bulk invitations to external users. 
+
+1. Install the latest AzureADPreview module
+2. Make sure that you install the latest version of the Azure AD PowerShell for Graph module
+3. Get test email accounts
+4. You need two or more test email accounts that you can send the invitations to. (NEED 2 OR MORE USERS)
+5. Prepare the CSV file
+6. Sign in to your tenant
+7. Send bulk invitations
+
+
+In Microsoft Excel, create a CSV file with the list of invitee user names and email addresses. 
+Make sure to include the Name and InvitedUserEmailAddress column headings.
+
+For example, create a worksheet in the following format:
+
+![Bulk csv ](https://github.com/spawnmarvel/quickguides/blob/main/azure/Manage-identities-and-governance/bulk_csv.jpg)
+
+```
+$invitations = import-csv c:\bulkinvite\invitations.csv
+
+$messageInfo = New-Object Microsoft.Open.MSGraph.Model.InvitedUserMessageInfo
+
+$messageInfo.customizedMessageBody = "Hello. You are invited to the Contoso organization."
+
+foreach ($email in $invitations)
+   {New-AzureADMSInvitation `
+      -InvitedUserEmailAddress $email.InvitedUserEmailAddress `
+      -InvitedUserDisplayName $email.Name `
+      -InviteRedirectUrl https://myapps.microsoft.com `
+      -InvitedUserMessageInfo $messageInfo `
+      -SendInvitationMessage $true
+   }
+
+```
+
+
+
+https://learn.microsoft.com/en-us/azure/active-directory/external-identities/bulk-invite-powershell
+
+Bulk invite Azure AD B2B collaboration users
+
+https://learn.microsoft.com/en-us/azure/active-directory/external-identities/tutorial-bulk-invite
+
+Enforce multi-factor authentication for B2B guest users
+
+https://learn.microsoft.com/en-us/azure/active-directory/external-identities/b2b-tutorial-require-mfa
+
 Manage guest accounts
 
 #### Configure self-service password reset
