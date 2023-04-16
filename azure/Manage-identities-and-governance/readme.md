@@ -47,6 +47,23 @@ Things to know about user accounts
 * Guest user
 * * Guest user accounts are defined outside Azure.
 
+* Azure AD registered devices
+* * Definition	Registered to Azure AD without requiring organizational account to sign in to the device
+* * BYOD, bring your own device (laptop, phone)
+* * Device ownership	User or Organization
+
+* Azure AD joined devices
+* * Definition	Joined only to Azure AD requiring organizational account to sign in to the device
+* * All Windows 11 and Windows 10 devices except Home editions
+* * Device ownership	Organization
+
+* Hybrid Azure AD joined devices
+* * Definition	Joined to on-premises AD and Azure AD requiring organizational account to sign in to the device
+* * Operating Systems	Windows 11, Windows 10 or 8.1
+* * Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
+* * Device ownership	Organization
+
+
 #### Manage user accounts
 
 
