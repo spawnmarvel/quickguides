@@ -1264,3 +1264,64 @@ https://learn.microsoft.com/en-us/azure/active-directory/devices/device-manageme
 
 </details>
 
+
+### Question # 44
+
+You have an Azure subscription that contains 200 virtual machines.
+
+You plan to use Azure Advisor to provide cost recommendations when underutilized virtual machines are detected.
+
+You need to ensure that all Azure admins are notified whenever an Advisor alert is generated. The solution must minimize administrative effort.
+
+What you should you configure?
+
+
+* an Azure Automation account
+* an action group
+* an application security group
+* a capacity reservation group
+
+<details>
+  <summary>Click me</summary>
+
+an Azure Automation account and an action group
+
+
+
+</details>
+
+
+### Question # 45
+
+You have an Azure subscription that contains an Azure App service web app named App1.
+
+You have the following diagnostics logging configurations:
+
+* Application Logging (Filesystem): Error
+* Application Logging (Blob): Information
+* Detailed Error Messages: Warning
+* Web server Logging: Verbose
+
+You need to configure diagnostics logging to store all warnings or higher
+
+Which types of diagnostics logging and severity should you enable
+
+* Application Logging (Blob) 
+* Warning
+* Application Logging (Filesystem)
+* Detailed Error Message
+* Verbose
+
+
+<details>
+  <summary>Click me</summary>
+
+Application Logging (Blob) and Warning
+
+You muste enable the Application Logging (Blob) diagnostics , whciche can be stored for more then a week.
+
+You must also set the severity level to warning, to store warning, error and critical log messages.
+
+
+</details>
+
