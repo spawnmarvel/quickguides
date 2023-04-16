@@ -8,7 +8,9 @@ Azure Administrator Cheat Sheet
 
 ## Path
 
-(1 554 (2021 NA), 2 670 (2023 WORK), 3 780 (2023 MORE WORK))
+1 554 (2021 50 work, na for 3 mnt.)
+2 670 (2023 50 work, study 2-3 weeks)
+3 780 (2023 50 work, study for 2 weeks))
 
 ## Links
 
