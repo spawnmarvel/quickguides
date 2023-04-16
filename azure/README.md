@@ -10,7 +10,7 @@ Azure Administrator Cheat Sheet
 
 * 1 554 (2021 50 work, Na study for 3 mnt.)
 * 2 670 (2023 50 work, study all 2-3 weeks)
-* 3 ?   (2023 50 work, study extra for 2 weeks)
+* 3 ?   (2023 50 work, study extra for 2 weeks focus improvment ++)
 
 ## Links
 
