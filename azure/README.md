@@ -16,7 +16,7 @@ Work mostly VM, function app, logic app, mointor. All labs one time.
 Dojo all above pass 70-80%
 Ms practice assessment a bunch of times all above 90 %
 Created this cheat sheet
-* 2 670 05042023
+* 1 670 05042023
 
 Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
 Dojo all above pass 87-95 %
@@ -28,7 +28,9 @@ IT exam questions
 Updated this cheat sheet with details, add an extra for Implement and manage storage
 Did some reading on bulk user, powershell, nic on vm and move, traffic manager role and custom app domain.
 Youtube, 40 more practice questions with good explanations (parts 1-4)
-* 3 ? 19042023
+* 2 ? 19042023
+
+And that's ot
 
 
 ## Practice
