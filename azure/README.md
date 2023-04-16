@@ -32,6 +32,17 @@ For failed questions, fill it in here to the question bank.
 
 https://github.com/spawnmarvel/quickguides/tree/main/azure/Sample-exam-questions
 
+## Youtube
+
+Watch these Youtube follow alongs for 40 more practice questions with good explanations (parts 1-4)
+
+* https://www.youtube.com/watch?v=FxUfoqCLEcE
+
+
+AZ-104 Microsoft Azure Administrator Associate Certification SUPER Study Cram
+* https://www.youtube.com/watch?v=VOod_VNgdJk
+
+
 ## Links
 
 Exam Readiness Zone
