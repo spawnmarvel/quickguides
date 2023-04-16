@@ -13,7 +13,7 @@ Exam Readiness Zone
 https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=az-104
 
 
-Skills measured: (1 554, 2 670, 3 780)
+Skills measured: (1 554 (2021 NA), 2 670 (2023 WORK), 3 780 (2023 MORE WORK))
 
 * Manage Azure identities and governance (15–20%) :round_pushpin: (1: Compareble, 2: Compareble, 3: )
 * Implement and manage storage (15–20%) :round_pushpin: (1: Improvement, 2: Improvement, 3:)
