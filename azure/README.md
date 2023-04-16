@@ -40,6 +40,9 @@ Watch these Youtube follow alongs for 40 more practice questions with good expla
 
 
 AZ-104 Microsoft Azure Administrator Associate Certification SUPER Study Cram
+
+Watch this cram video which will cement in the concepts
+
 * https://www.youtube.com/watch?v=VOod_VNgdJk
 
 
