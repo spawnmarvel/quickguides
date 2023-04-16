@@ -402,7 +402,14 @@ Enforce multi-factor authentication for B2B guest users
 
 https://learn.microsoft.com/en-us/azure/active-directory/external-identities/b2b-tutorial-require-mfa
 
-Manage guest accounts
+#### Manage guest accounts
+
+In any scenario where external users need temporary or restricted access to your organization's resources, give them guest user access. 
+
+The guest can get the invitation through email. Or you can share the invitation to an application by using a direct link.
+
+
+https://learn.microsoft.com/en-us/training/modules/create-users-and-groups-in-azure-active-directory/6-collaborate-guest-accounts-azure-ad-b2b
 
 #### Configure self-service password reset
 
@@ -415,26 +422,6 @@ Manage guest accounts
 4. Customization: Provide an email address or web page URL where your users can get help.
 
 https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/3-implement-azure-ad-self-service-password-reset
-
-Custom domain
-* custom domain name by using TXT or MX record types.
-
-* How to delegate a subdomain?
-* Navigate to the yourdomain.com DNS zone and add an NS record named portal
-* PTR, CNAME, and TXT records are not used to delegate an Azure DNS subdomain.
-
-| Record | Description
-| -------| -----------
-| A     | IPV4
-| AAAA  | IPV6
-| CNAME | Canonical Name record
-| MX    | Mail Exchange server
-| NS    | Nameserver record
-| TXT   | Text record
-
-![Custom domain ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/domain.jpg)
-
-https://follow-e-lo.com/2023/03/15/az-lab-add-your-custom-domain-name-to-azure-ad/
 
 
 ### Manage access control
