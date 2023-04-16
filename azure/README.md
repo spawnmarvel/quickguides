@@ -1008,7 +1008,7 @@ https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-v
 #### Configure VM availability options
 
 
-![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vm-avilability-options.jpg)
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vm-availability-options.jpg)
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability
 
