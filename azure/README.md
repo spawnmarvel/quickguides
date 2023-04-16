@@ -30,7 +30,7 @@ Did some reading on bulk user, powershell, nic on vm and move, traffic manager r
 Youtube, 40 more practice questions with good explanations (parts 1-4)
 * 2 ? 19042023
 
-And that's ot
+And that's ok
 
 
 ## Practice
