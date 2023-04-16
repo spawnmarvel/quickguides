@@ -12,6 +12,26 @@ Azure Administrator Cheat Sheet
 * 2 670 (2023 50 work, study all 2-3 weeks)
 * 3 ?   (2023 50 work, study extra for 2 weeks focus improvment ++)
 
+
+## Practice
+
+Practice Assessments for Microsoft Certifications questions 50 
+
+* https://learn.microsoft.com/en-us/certifications/practice-assessments-for-microsoft-certifications
+
+AZ-104 Microsoft Azure Administrator questions 120
+
+* https://portal.tutorialsdojo.com/courses/az-104-microsoft-azure-administrator-practice-exams/
+
+
+Practice Test 1: Microsoft Azure Administrator 57 questions
+
+* https://www.udemy.com/course/70533-azure/learn/quiz/5438484/results?expanded=947715484#overview
+
+For failed questions, fill it in here to the question bank.
+
+https://github.com/spawnmarvel/quickguides/tree/main/azure/Sample-exam-questions
+
 ## Links
 
 Exam Readiness Zone
@@ -112,6 +132,34 @@ Start, Stop, Restart, Suspend, Resume #
 
 #### Create users and groups
 
+
+Things to know about user accounts
+
+* Cloud identity
+* * A user account with a cloud identity is defined only in Azure AD. 
+
+* Directory-synchronized identity
+* * User accounts that have a directory-synchronized identity are defined in an on-premises Active Directory. A synchronization activity occurs via Azure AD Connect to bring these user accounts in to Azure. The source for these accounts is Windows Server Active Directory.
+
+* Guest user
+* * Guest user accounts are defined outside Azure.
+
+* Azure AD registered devices
+* * Definition	Registered to Azure AD without requiring organizational account to sign in to the device
+* * BYOD, bring your own device (laptop, phone)
+* * Device ownership	User or Organization
+
+* Azure AD joined devices
+* * Definition	Joined only to Azure AD requiring organizational account to sign in to the device
+* * All Windows 11 and Windows 10 devices except Home editions
+* * Device ownership	Organization
+
+* Hybrid Azure AD joined devices
+* * Definition	Joined to on-premises AD and Azure AD requiring organizational account to sign in to the device
+* * Operating Systems	Windows 11, Windows 10 or 8.1
+* * Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
+* * Device ownership	Organization
+
 ##### MFA
 
 * The recommended way to enable and use Azure AD Multi-Factor Authentication is with Conditional Access policies.
@@ -143,6 +191,15 @@ https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial
 
 
 #### Manage licenses in Azure AD
+
+* To assign a license to a user
+* On the Products page, select the name of the license plan you want to assign to the user.
+* On the Assign page, select Users and groups, and then search for and select the user you're assigning the license.
+
+* To assign a license to a group
+* 
+* 
+
 
 #### Create administrative units
 
