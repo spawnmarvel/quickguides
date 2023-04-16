@@ -158,21 +158,7 @@ Things to know about user accounts
 * Guest user
 * * Guest user accounts are defined outside Azure.
 
-* Azure AD registered devices
-* * Definition	Registered to Azure AD without requiring organizational account to sign in to the device
-* * BYOD, bring your own device (laptop, phone)
-* * Device ownership	User or Organization
 
-* Azure AD joined devices
-* * Definition	Joined only to Azure AD requiring organizational account to sign in to the device
-* * All Windows 11 and Windows 10 devices except Home editions
-* * Device ownership	Organization
-
-* Hybrid Azure AD joined devices
-* * Definition	Joined to on-premises AD and Azure AD requiring organizational account to sign in to the device
-* * Operating Systems	Windows 11, Windows 10 or 8.1
-* * Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
-* * Device ownership	Organization
 
 ##### MFA
 
@@ -247,7 +233,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/roles/administrative-un
 https://learn.microsoft.com/en-us/azure/active-directory/roles/admin-units-manage#next-steps
 
 
-##### Manage user and group properties
+#### Manage user and group properties
 
 Azure Active Directory (Azure AD) allows your organization to define two different types of group accounts:
 
@@ -299,7 +285,36 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
-Manage device settings and device identity
+##### Manage device settings and device identity
+
+
+* Azure AD registered devices
+* * Definition	Registered to Azure AD without requiring organizational account to sign in to the device
+* * BYOD, bring your own device (laptop, phone)
+* * Device ownership	User or Organization
+
+* Azure AD joined devices
+* * Definition	Joined only to Azure AD requiring organizational account to sign in to the device
+* * All Windows 11 and Windows 10 devices except Home editions
+* * Device ownership	Organization
+
+* Hybrid Azure AD joined devices
+* * Definition	Joined to on-premises AD and Azure AD requiring organizational account to sign in to the device
+* * Operating Systems	Windows 11, Windows 10 or 8.1
+* * Windows Server 2008/R2, 2012/R2, 2016, 2019 and 2022
+* * Device ownership	Organization
+
+##### Configure device settings
+
+You must be assigned one of the following roles to view or manage device settings in the Azure portal:
+
+* Global Administrator
+* Cloud Device Administrator
+* Global Reader
+* Directory Reader
+
+https://learn.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal
+
 
 * You plan to add a local administrator to manage all the computers and devices that will join your domain?
 * * Configure the settings
