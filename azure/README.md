@@ -1785,7 +1785,18 @@ https://follow-e-lo.com/2023/01/28/5-min-azure-functions-compute-with-powershell
 
 https://follow-e-lo.com/2023/03/20/az-lab-11-implement-monitoring/
 
-Configure monitoring of VMs, storage accounts, and networks by using VM insights
+#### Configure monitoring of VMs, storage accounts, and networks by using VM insights
+
+VM insights monitors the performance and health of your virtual machines and virtual machine scale sets. 
+
+It monitors their running processes and dependencies on other resources. 
+
+* VM insights supports Windows and Linux operating system
+* VM insights stores its data in Azure Monitor Logs
+* Access VM insights for all your virtual machines and virtual machine scale sets by selecting Virtual Machines from the Monitor menu in the Azure portal. 
+* To access VM insights for a single virtual machine or virtual machine scale set, select Insights from the machine's menu in the Azure portal.
+
+https://learn.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-overview
 
 ### Implement backup and recovery
 
