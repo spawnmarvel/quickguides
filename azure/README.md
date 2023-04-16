@@ -1005,7 +1005,12 @@ https://learn.microsoft.com/en-us/training/modules/configure-network-for-azure-v
 
 ![VPN MS Learn](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vpn-ms-learn.jpg)
 
-Configure VM availability options
+#### Configure VM availability options
+
+
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vm-avilability-options.jpg)
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/availability
 
 #### Deploy and configure VM scale sets
 
