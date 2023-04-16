@@ -285,7 +285,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
-##### Manage device settings and device identity
+#### Manage device settings and device identity
 
 
 * Azure AD registered devices
@@ -319,7 +319,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/devices/device-manageme
 * You plan to add a local administrator to manage all the computers and devices that will join your domain?
 * * Configure the settings
 
-##### Perform bulk updates
+#### Perform bulk updates
 
 | Example csv
 | ------- 
