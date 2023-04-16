@@ -1014,14 +1014,22 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/availability
 
 #### Deploy and configure VM scale sets
 
+Virtual Machine Scale Set allows you to deploy and manage a set of auto-scaling virtual machines. 
+
+You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage like CPU, memory demand, or network traffic.
+
+* Orchestration:
+* * Uniform: optimized for large scale statless workloads with identicial instances
+* * Flexible: Achive high availability at scale with identicial or multiple virtual machine type
+
+
+https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/quick-create-portal
+
 * A proximity placement group is a logical grouping used to make sure that Azure compute resources are physically located close to each other. 
 * Proximity placement groups are useful for workloads where low latency is a requirement. 
 * When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, 
 * resulting in lower and deterministic latency for your applications.
 
-* Orchestration:
-* * Uniform: optimized for large scale statless workloads with identicial instances
-* * Flexible: Achive high availability at scale with identicial or multiple virtual machine type
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/windows/proximity-placement-groups-portal
 
