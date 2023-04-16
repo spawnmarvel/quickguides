@@ -54,7 +54,7 @@ https://github.com/spawnmarvel/quickguides/tree/main/azure/Sample-exam-questions
 
 ## Youtube
 
-Watch these Youtube follow alongs for 40 more practice questions with good explanations (parts 1-4)
+Watch these Youtube follow alongs for 40 more practice questions with good explanations (parts 1-4) questions 40
 
 * https://www.youtube.com/watch?v=FxUfoqCLEcE
 
