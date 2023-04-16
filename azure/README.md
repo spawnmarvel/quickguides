@@ -351,7 +351,7 @@ Bulk create users in Azure Active Directory
 https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-add
 
 
-Use PowerShell to bulk invite Azure AD B2B collaboration users
+Use PowerShell to bulk invite Azure AD B2B collaboration users with New-AzureADMSInvitation
 
 * If you use Azure Active Directory (Azure AD) B2B collaboration to work with external partners, you can invite multiple guest users to your organization at the same time via the portal or via PowerShell.
 * In this tutorial, you learn how to use PowerShell to send bulk invitations to external users. 
