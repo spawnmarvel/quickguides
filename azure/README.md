@@ -910,6 +910,8 @@ https://learn.microsoft.com/en-us/answers/questions/130410/how-to-change-the-vne
 
 * An Azure Compute Gallery helps you build structure and organization around your Azure resources, like images and applications
 * Create a gallery for storing and sharing resources
+* The Azure Compute Gallery lets you share custom VM images and application packages with others in your organization, within or across regions, within a tenant. 
+* Choose what you want to share, which regions you want to make them available in, and who you want to share them with.
 * https://learn.microsoft.com/en-us/azure/virtual-machines/create-gallery?tabs=portal%2Cportaldirect%2Ccli2
 
 
