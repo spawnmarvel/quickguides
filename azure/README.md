@@ -1400,7 +1400,13 @@ https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal
 https://learn.microsoft.com/en-us/azure/app-service/environment/configure-network-settings
 
 
-Configure deployment settings
+#### Configure deployment settings
+
+When you deploy your web app, web app on Linux, mobile back end, or API app to Azure App Service, you can use a separate deployment slot instead of the default production slot when you're running in the Standard, Premium, or Isolated App Service plan tier. 
+
+Deployment slots are live apps with their own host names. App content and configurations elements can be swapped between two deployment slots, including the production slot.
+
+https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots
 
 ## AZ-104: Configure and manage virtual networking (20-25%)
 
