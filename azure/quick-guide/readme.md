@@ -85,6 +85,24 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to
 ### Configure VM availability options SLA
 
 
-![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vm-availability-options.jpg)
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/quick-guide/vm-availability-options.jpg)
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability
+
+### Availability set
+
+Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform. 
+
+Each availability set can be configured with up to three fault domains and twenty update domains. 
+
+When more than five virtual machines are configured within a single availability set with five update domains, the sixth virtual machine is placed into the same update domain as the first virtual machine, the seventh in the same update domain as the second virtual machine, and so on. 
+
+Only one update domain is rebooted at a time.
+
+Fault domains define the group of virtual machines that share a common power source and network switch. By default, the virtual machines configured within your availability set are separated across up to three fault domains.
+
+
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/quick-guide/availability-fault-and-update-domain.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
