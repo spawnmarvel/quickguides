@@ -55,33 +55,6 @@ https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs
 
 
 
-### Back up a virtual machine in Azure :heavy_check_mark:
-
-1. Create a Recovery Services vault
-2. Apply a backup policy
-3. Select a VM to back up
-4. Enable backup on a VM
-5. Start a backup job
-
-
-Azure backups can be created through the Azure portal. This method provides a browser-based user interface to create and configure Azure backups and all related resources.
-
-https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
-
-
-### Back up Windows Server to Azure :heavy_check_mark:
-
-1. Create a Recovery Services vault
-2. Download Recovery Service agent (Mars)
-3. Install and register the agent
-4. Configure backup and retention
-5. Run on-demand backup
-
-This tutorial describes how to back up on-premises Windows Server to Azure using the Microsoft Azure Recovery Services (MARS) agent.
-
-https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
-
-
 ### Configure VM availability options SLA :heavy_check_mark:
 
 
@@ -119,3 +92,58 @@ Azure Virtual Machine Scale Sets let you create and manage a group of load balan
 
 
 https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview
+
+
+### Back up a virtual machine in Azure :heavy_check_mark:
+
+1. Create a Recovery Services vault
+2. Apply a backup policy
+3. Select a VM to back up
+4. Enable backup on a VM
+5. Start a backup job
+
+
+Azure backups can be created through the Azure portal. This method provides a browser-based user interface to create and configure Azure backups and all related resources.
+
+https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
+
+
+### Recover files from Azure virtual machine backup
+
+1. On VM open browser->Azure
+2. Go to vault-> VM
+3. Choose File recovery
+4. Select recovery point
+5. Download iaas.exe script
+6. Click .exe add password
+7. Mount
+8. Robocopy or copy
+9. Unmount
+
+https://learn.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm
+
+
+### Back up Windows Server to Azure :heavy_check_mark:
+
+1. Create a Recovery Services vault
+2. Download Recovery Service agent (Mars)
+3. Install and register the agent
+4. Configure backup and retention
+5. Run on-demand backup
+
+This tutorial describes how to back up on-premises Windows Server to Azure using the Microsoft Azure Recovery Services (MARS) agent.
+
+https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
+
+
+### Recover files from Azure to a Windows Server
+
+1. On VM, Open Azure Recovery Services (MARS) agent
+2. Recover data on MS Azure Recovery service
+3. Select recover mode-> files and folders
+4. Select volume and date
+5. Mount
+6. Robocopy or copy
+7. Unmount
+
+https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-restore-files-windows-server
