@@ -4,6 +4,7 @@
 ## Description
 
 Azure Administrator Cheat Sheet quick guide
+
 Most questions will be on Virtual network and Storage
 
 ## Mount this in your brain, write it 3 times on paper.
