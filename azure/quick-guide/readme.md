@@ -82,9 +82,9 @@ This tutorial describes how to back up on-premises Windows Server to Azure using
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
 
 
-### SLA
+### Configure VM availability options SLA
 
-1. VM 99.9
-2. Availability set 99.95
-3. Avaliability zone 99.999999
-4. RA
+
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/vm-availability-options.jpg)
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/availability
