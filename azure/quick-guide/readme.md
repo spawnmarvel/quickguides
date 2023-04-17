@@ -171,7 +171,7 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-restore-files-win
 5. Review replication settings
 6. Manage, Replication policy, Replication group
 
-![Enable replication](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/enable-replication.jpg)
+![Enable replication](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/enable_replication.jpg)
 
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
 
