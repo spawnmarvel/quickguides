@@ -11,7 +11,7 @@ Most questions will be on Virtual network and Storage
 
 
 
-##### High level main roles
+### High level main roles :heavy_check_mark:
 
 
 * Readers: Readers on Azure can see things in a Resource, Resource Group, or Subscription, but cannot change anything in any of these. This role is useful for people who are typically in an observer type role, such as an auditor. 
