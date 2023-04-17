@@ -33,11 +33,11 @@ https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-g
 
 ### Transfer data to Azure Files with Azure Import/Export :heavy_check_mark:
 
-Step 1: Prepare the drives, driveset.csv
-Step 2: Create an import job, WAImportExport tool.
-Step 3: Ship the drives to the Azure datacenter
-Step 4: Update the job with tracking information
-Step 5: Verify data upload to Azure
+1. Prepare the drives, driveset.csv
+2. Create an import job, WAImportExport tool.
+3. Ship the drives to the Azure datacenter
+4. Update the job with tracking information
+5. Verify data upload to Azure
 
 This article provides step-by-step instructions on how to use the Azure Import/Export service to securely import large amounts of data into Azure Files.
 
