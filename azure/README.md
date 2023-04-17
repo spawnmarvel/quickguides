@@ -317,7 +317,7 @@ https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 * Owner: An Owner can do everything a Contributor can do with one additional ability, and that is the ability to assign roles to a Subscription, Resource Group, or Resource, depending on where the ownership role is set. 
 
 
-(**) Elevate access to manage all Azure subscriptions and management groups
+##### (**) Elevate access to manage all Azure subscriptions and management groups
 
 Global Administrator
 
