@@ -332,15 +332,16 @@ If you are a Global Administrator, there might be times when you want to do the 
 * Allow an automation app (such as an invoicing or auditing app) to access all Azure subscriptions or management groups
 
 
-![Main elevate ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-elevate.jpg)
-
-
 Elevate access for a Global Administrator
 * Open Azure Active Directory.
 * Under Manage, select Properties.
 
 
-When you set the toggle to Yes, you are assigned the User Access Administrator role in Azure RBAC at root scope (/). This grants you permission to assign roles in all Azure subscriptions and management groups associated with this Azure AD directory. This toggle is only available to users who are assigned the Global Administrator role in Azure AD.
+![Main elevate ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-elevate.jpg)
+
+When you set the toggle to Yes, you are assigned the User Access Administrator role in Azure RBAC at root scope (/). 
+
+This grants you permission to assign roles in all Azure subscriptions and management groups associated with this Azure AD directory. This toggle is only available to users who are assigned the Global Administrator role in Azure AD.
 
 When you set the toggle to No, the User Access Administrator role in Azure RBAC is removed from your user account. You can no longer assign roles in all Azure subscriptions and management groups that are associated with this Azure AD directory. 
 
