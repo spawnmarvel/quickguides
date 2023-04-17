@@ -331,6 +331,9 @@ If you are a Global Administrator, there might be times when you want to do the 
 * See all Azure subscriptions or management groups in an organization
 * Allow an automation app (such as an invoicing or auditing app) to access all Azure subscriptions or management groups
 
+
+![Main elevate ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-elevate.jpg)
+
 https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin
 
 #### Manage device settings and device identity
