@@ -306,7 +306,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
 
-![Main roles ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-roles.jpg)
+![Main roles ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-roles2.jpg)
 
 
 (**) Elevate access to manage all Azure subscriptions and management groups
