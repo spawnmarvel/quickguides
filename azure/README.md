@@ -293,7 +293,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 | Role | Description | Note
 | ---- | ----------- | -----
-| Global Administrator| | x Can manage all aspects of Azure AD and Microsoft services that use Azure AD identities. | ** Grant another user or yourself access to an Azure subscription or management group
+| Global Administrator| | x Can manage all aspects of Azure AD and Microsoft services that use Azure AD identities.  ** Grant another user or yourself access to an Azure subscription or management group
 | Contributor           | Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. | Example: Classic Virtual Machine Contributor, CDN Endpoint Contributor, Network Contributor
 | Owner                 | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC. |
 | Reader                | View all resources, but does not allow you to make any changes. | Example: Disk Backup Reader, Backup Reader, Storage Blob Data Reader |
