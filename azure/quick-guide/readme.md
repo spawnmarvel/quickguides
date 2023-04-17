@@ -161,3 +161,37 @@ https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to
 7. Unmount
 
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-restore-files-windows-server
+
+### Set up disaster recovery for Azure VMs  :heavy_check_mark:
+
+1. Create a Recovery Services vault, create a Recovery Services vault in any region, except in the source region from which you want to replicate VMs.
+2. Enable Site Recovery, in the vault settings
+3. Enable replication, select the source settings and enable VM replication.
+4. Select the VMs
+5. Review replication settings
+6. Manage, Replication policy, Replication group
+
+![Enable replication](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/enable-replication.jpg)
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
+
+
+### Run a disaster recovery drill for Azure VMs :heavy_check_mark:
+
+1. Check VM settings before the drill, in the vault > Replicated items, select the VM. check that the VM is protected and healthy.
+2. Run a test failover, in Test Failover, choose a recovery point. The Azure VM in the target region is created using data from this recovery point.
+3. Clean up after the drill
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr-drill
+
+### Fail over Azure VMs to a secondary region :heavy_check_mark:
+
+Learn how to fail over Azure VMs that are enabled for disaster recovery with Azure Site Recovery, to a secondary Azure region. After failover, you reprotect VMs in the target region so that they replicate back to the primary region.
+
+1. Verify the VM settings, check that the VM is protected and healthy, before you run a failover.
+2. Run a failover, in Failover, choose a recovery point. The Azure VM in the target region is created using data from this recovery point.
+3. Reprotect the VM, after failover, you reprotect the VM in the secondary region, so that it replicates back to the primary region
+4. Make sure that VM Status is Failover committed
+
+
+https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
