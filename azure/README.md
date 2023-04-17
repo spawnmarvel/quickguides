@@ -290,6 +290,19 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 
 
+##### High level main roles
+
+
+* Readers: Readers on Azure can see things in a Resource, Resource Group, or Subscription, but cannot change anything in any of these. This role is useful for people who are typically in an observer type role, such as an auditor. 
+
+* Contributor: Contributors can do pretty much anything a Reader can do, but with the added ability to change resources. Contributors can create new resources.
+
+* Owner: An Owner can do everything a Contributor can do with one additional ability, and that is the ability to assign roles to a Subscription, Resource Group, or Resource, depending on where the ownership role is set. 
+
+![Main roles ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-roles2.jpg)
+
+
+
 
 | Role | Description | Note
 | ---- | ----------- | -----
@@ -305,17 +318,6 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 
-
-##### High level main roles
-
-
-* Readers: Readers on Azure can see things in a Resource, Resource Group, or Subscription, but cannot change anything in any of these. This role is useful for people who are typically in an observer type role, such as an auditor. 
-
-* Contributor: Contributors can do pretty much anything a Reader can do, but with the added ability to change resources. Contributors can create new resources.
-
-* Owner: An Owner can do everything a Contributor can do with one additional ability, and that is the ability to assign roles to a Subscription, Resource Group, or Resource, depending on where the ownership role is set. 
-
-![Main roles ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/main-roles2.jpg)
 
 ##### (**) Elevate access to manage all Azure subscriptions and management groups
 
