@@ -10,6 +10,20 @@ Most questions will be on Virtual network and Storage
 ## Mount this in your brain, write it 3 times on paper.
 
 
+
+##### High level main roles
+
+
+* Readers: Readers on Azure can see things in a Resource, Resource Group, or Subscription, but cannot change anything in any of these. This role is useful for people who are typically in an observer type role, such as an auditor. 
+
+* Contributor: Contributors can do pretty much anything a Reader can do, but with the added ability to change resources. Contributors can create new resources.
+
+* Owner: An Owner can do everything a Contributor can do with one additional ability, and that is the ability to assign roles to a Subscription, Resource Group, or Resource, depending on where the ownership role is set. 
+
+![Main roles ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/main-roles2.jpg)
+
+
+
 ### Detail cost for each department :heavy_check_mark:
 
 1. Assign a tag to each resource.
@@ -108,7 +122,7 @@ Azure backups can be created through the Azure portal. This method provides a br
 https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
 
 
-### Recover files from Azure virtual machine backup
+### Recover files from Azure virtual machine backup :heavy_check_mark:
 
 1. On VM open browser->Azure
 2. Go to vault-> VM
@@ -136,7 +150,7 @@ This tutorial describes how to back up on-premises Windows Server to Azure using
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
 
 
-### Recover files from Azure to a Windows Server
+### Recover files from Azure to a Windows Server :heavy_check_mark:
 
 1. On VM, Open Azure Recovery Services (MARS) agent
 2. Recover data on MS Azure Recovery service
