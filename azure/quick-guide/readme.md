@@ -195,3 +195,17 @@ Learn how to fail over Azure VMs that are enabled for disaster recovery with Azu
 
 
 https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback
+
+
+### Delete an Azure Backup Recovery Services vault :heavy_check_mark:
+
+1. Go to vault Overview, click Delete, and then follow the instructions to complete the removal of Azure Backup and Azure Site Recovery items for vault deletion as shown below
+2. Disable the soft delete and Security features
+3. Delete Cloud protected items
+4. Delete Backup Servers
+5. Unregister Storage Accounts if used
+6. Remove Private Endpoints if used
+7. Delete vault
+
+
+https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal#delete-a-recovery-services-vault
