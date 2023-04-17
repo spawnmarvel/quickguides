@@ -293,17 +293,34 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 | Role | Description | Note
 | ---- | ----------- | -----
-| Global Administrator| | Can manage all aspects of Azure AD and Microsoft services that use Azure AD identities. |
-| Contributor| Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. | Example: Classic Virtual Machine Contributor, CDN Endpoint Contributor, Network Contributor
-|  Owner    | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.
-|  Reader    | View all resources, but does not allow you to make any changes. | Example: Disk Backup Reader, Backup Reader, Storage Blob Data Reader
-|   User Administrator   | Lets you manage user access to Azure resources. | Take note that the User Administrator role does not have permission to modify security questions. -> Global Administrator
-| Operator |  Lets you manage backup services, except removal of backup, vault creation and giving access to others  | Example: Backup Operator
-|Cloud device administrator |Can enable, disable, and delete devices in Azure AD. The role does not grant permission to manage any other properties on the device. |
-|Security administrator | has permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Active Directory Authentication, Azure Information Protection, and Office 365 Security & Compliance Center.|
+| Global Administrator| | Can manage all aspects of Azure AD and Microsoft services that use Azure AD identities. | ** Grant another user or yourself access to an Azure subscription or management group
+| Contributor           | Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. | Example: Classic Virtual Machine Contributor, CDN Endpoint Contributor, Network Contributor
+| Owner                 | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.
+| Reader                | View all resources, but does not allow you to make any changes. | Example: Disk Backup Reader, Backup Reader, Storage Blob Data Reader
+| User Administrator    | Lets you manage user access to Azure resources. | Take note that the User Administrator role does not have permission to modify security questions. -> Global Administrator
+| Operator              |  Lets you manage backup services, except removal of backup, vault creation and giving access to others  | Example: Backup Operator
+| Cloud device administrator | Can enable, disable, and delete devices in Azure AD. The role does not grant permission to manage any other properties on the device. |
+| Security administrator | Has permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Active Directory Authentication, Azure Information Protection, and Office 365 Security & Compliance Center.|
 
 
 https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+
+
+(**) Elevate access to manage all Azure subscriptions and management groups
+
+Global Administrator
+
+As a Global Administrator in Azure Active Directory (Azure AD), you might not have access to all subscriptions and management groups in your directory. 
+
+Why would you need to elevate your access?
+
+If you are a Global Administrator, there might be times when you want to do the following actions:
+* Regain access to an Azure subscription or management group when a user has lost access
+* Grant another user or yourself access to an Azure subscription or management group
+* See all Azure subscriptions or management groups in an organization
+* Allow an automation app (such as an invoicing or auditing app) to access all Azure subscriptions or management groups
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin
 
 #### Manage device settings and device identity
 
