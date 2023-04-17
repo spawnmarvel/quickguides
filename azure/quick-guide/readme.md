@@ -69,7 +69,7 @@ Azure backups can be created through the Azure portal. This method provides a br
 https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
 
 
-### Back up Windows Server to Azure
+### Back up Windows Server to Azure :heavy_check_mark:
 
 1. Create a Recovery Services vault
 2. Download Recovery Service agent (Mars)
@@ -82,10 +82,10 @@ This tutorial describes how to back up on-premises Windows Server to Azure using
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
 
 
-### Configure VM availability options SLA
+### Configure VM availability options SLA :heavy_check_mark:
 
 
-![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/quick-guide/vm-availability-options.jpg)
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/vm-availability-options.jpg)
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability
 
@@ -102,7 +102,7 @@ Only one update domain is rebooted at a time.
 Fault domains define the group of virtual machines that share a common power source and network switch. By default, the virtual machines configured within your availability set are separated across up to three fault domains.
 
 
-![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/quick-guide/availability-fault-and-update-domain.jpg)
+![Vm avaliability options](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/availability-fault-and-update-domain.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
