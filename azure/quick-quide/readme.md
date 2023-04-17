@@ -47,8 +47,12 @@ https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data
 
 ### Live migration storage account
 
+When planning to change your replication settings, consider the following limitations related to the storage account type.
 
-https://mail.google.com/mail/u/0/#inbox/KtbxLzGPnKSnlFqxdRtBvTRhMMJTmKdFnq
+![Live migration ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/live-migration.jpg)
+
+https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal#limitations-for-changing-replication-types
+
 
 
 ### Back up a virtual machine in Azure :heavy_check_mark:
