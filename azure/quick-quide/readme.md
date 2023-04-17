@@ -6,10 +6,10 @@
 Azure Administrator Cheat Sheet quick guide
 Most questions will be on Virtual network and Storage
 
-### Mount this in your brain, write it 3 times on paper.
+## Mount this in your brain, write it 3 times on paper.
 
 
-#### Detail cost for each department :heavy_check_mark:
+### Detail cost for each department :heavy_check_mark:
 
 1. Assign a tag to each resource.
 2. From Cost analysis blade, filter the view by tag
@@ -18,7 +18,7 @@ Most questions will be on Virtual network and Storage
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
 
 
-#### Deploy Azure File Sync :heavy_check_mark:
+### Deploy Azure File Sync :heavy_check_mark:
 
 1. Deploy the Storage Sync Service
 2. Install the Azure File Sync agent
@@ -31,7 +31,7 @@ Use Azure File Sync to centralize your organization's file shares in Azure Files
 https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
 
 
-##### Transfer data to Azure Files with Azure Import/Export :heavy_check_mark:
+### Transfer data to Azure Files with Azure Import/Export :heavy_check_mark:
 
 Step 1: Prepare the drives, driveset.csv
 Step 2: Create an import job, WAImportExport tool.
@@ -44,13 +44,13 @@ This article provides step-by-step instructions on how to use the Azure Import/E
 https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal-preview
 
 
-#### Live migration storage account
+### Live migration storage account
 
 
 https://mail.google.com/mail/u/0/#inbox/KtbxLzGPnKSnlFqxdRtBvTRhMMJTmKdFnq
 
 
-#### Back up a virtual machine in Azure :heavy_check_mark:
+### Back up a virtual machine in Azure :heavy_check_mark:
 
 1. Create a Recovery Services vault
 2. Apply a backup policy
@@ -64,7 +64,7 @@ Azure backups can be created through the Azure portal. This method provides a br
 https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
 
 
-#### Back up Windows Server to Azure
+### Back up Windows Server to Azure
 
 1. Create a Recovery Services vault
 2. Download Recovery Service agent (Mars)
@@ -77,7 +77,7 @@ This tutorial describes how to back up on-premises Windows Server to Azure using
 https://learn.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure
 
 
-#### SLA
+### SLA
 
 1. VM 99.9
 2. Availability set 99.95
