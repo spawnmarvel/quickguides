@@ -303,6 +303,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups
 
 
 
+Definition
 
 | Role | Description | Note
 | ---- | ----------- | -----
