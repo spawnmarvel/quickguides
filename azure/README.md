@@ -12,6 +12,7 @@ Azure Administrator Cheat Sheet
 * Work mostly VM and some labs, no read for 3 months and jump to exam.
 * * 1 554 30062021
 
+2. 
 * Scott Duffy Microsoft Azure Administrator
 * Work mostly VM, function app, logic app, mointor. All labs one time.
 * Dojo all above pass 70-80%
@@ -19,7 +20,7 @@ Azure Administrator Cheat Sheet
 * Created this cheat sheet
 * * 1 670 05042023
 
-2. 
+3. 
 * Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
 * Dojo section 2 and 5 100%
 * Dojo all above pass 87-95 %
