@@ -31,7 +31,7 @@ Azure Administrator Cheat Sheet
 * Azure Lab 07 – Manage Azure Storage 5 min https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
 * Dojo section 2 and 5 100%
 * Dojo all above pass 87-95 %
-* Dojo section based 2 and 6 the area for improvment.
+* Dojo section based 2 and 5 the area for improvment. (Did 1 also, one time)
 * Ms practice assessment a bunch of times all above 90 %
 * AZ-104 Microsoft Azure Administrator Sample Exam Questions
 * Exam Readiness Zone
