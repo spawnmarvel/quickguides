@@ -24,6 +24,11 @@ Azure Administrator Cheat Sheet
 
 3. 
 * Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
+* Az lab azcopy SAS https://follow-e-lo.com/2023/04/10/az-lab-azcopy/
+* Az lab domain, dns zone, private dnz https://follow-e-lo.com/2023/04/14/az-lab-domain-dns/
+* Az lab Back up Azure file shares in the Azure portal – Azure Backup https://follow-e-lo.com/2023/04/12/az-lab-back-up-azure-file-shares-in-the-azure-portal-azure-backup-microsoft-learn/
+* Az lab Create and manage a Windows virtual machine that has multiple NICs https://follow-e-lo.com/2023/04/10/az-lab-create-and-manage-a-windows-virtual-machine-that-has-multiple-nics/
+* Azure Lab 07 – Manage Azure Storage 5 min https://follow-e-lo.com/2023/02/26/azure-lab-07-manage-azure-storage-5-min/
 * Dojo section 2 and 5 100%
 * Dojo all above pass 87-95 %
 * Dojo section based 2 and 6 the area for improvment.
