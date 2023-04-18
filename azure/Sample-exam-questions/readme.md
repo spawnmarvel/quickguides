@@ -971,6 +971,7 @@ Solution: You create a PowerShell script that runs the New-AzureADMSInvitation c
 Does this meet the goal?
 
 A. Yes
+
 B. No
 
 <details>
