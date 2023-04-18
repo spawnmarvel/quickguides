@@ -42,7 +42,7 @@ Azure Administrator Cheat Sheet
 * Youtube, 40 more practice questions with good explanations (parts 1-4)
 * * Write on paper the quick guide 3 times https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
 * THIS IS SPARTA
-![Sparta ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/sparta.jpg)
+* ![Sparta ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/sparta.jpg)
 * * 2 ? 19042023
 
 And that's ok
