@@ -59,6 +59,11 @@ Watch these Youtube follow alongs for 40 more practice questions with good expla
 * https://www.youtube.com/watch?v=FxUfoqCLEcE
 
 
+AZ-104 Exam (parts 1-33) questions 
+
+https://www.youtube.com/playlist?list=PLA_CqAntXBh4DPIYCcplBWLjT3AYl1822
+
+
 AZ-104 Microsoft Azure Administrator Associate Certification SUPER Study Cram
 
 Watch this cram video which will cement in the concepts
