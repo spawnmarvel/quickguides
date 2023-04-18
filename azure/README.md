@@ -40,7 +40,6 @@ Azure Administrator Cheat Sheet
 * Did some reading on bulk user, powershell, nic on vm and move, traffic manager role and custom app domain.
 * Youtube, 40 more practice questions with good explanations (parts 1-4)
 * * Write on paper the quick guide 3 times https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
-* AZ-104 Exam (parts 1-33) questions 
 * * 2 ? 19042023
 
 And that's ok
@@ -70,11 +69,6 @@ https://github.com/spawnmarvel/quickguides/tree/main/azure/Sample-exam-questions
 Watch these Youtube follow alongs for 40 more practice questions with good explanations (parts 1-4) questions 40
 
 * https://www.youtube.com/watch?v=FxUfoqCLEcE
-
-
-AZ-104 Exam (parts 1-33) questions 
-
-https://www.youtube.com/playlist?list=PLA_CqAntXBh4DPIYCcplBWLjT3AYl1822
 
 
 AZ-104 Microsoft Azure Administrator Associate Certification SUPER Study Cram
