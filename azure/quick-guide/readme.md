@@ -30,6 +30,9 @@ Most questions will be on Virtual network and Storage
 2. From Cost analysis blade, filter the view by tag
 3. Download the usage report
 
+
+![Cost tag ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/cost-tag.jpg)
+
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
 
 
