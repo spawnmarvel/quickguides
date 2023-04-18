@@ -227,5 +227,17 @@ https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=po
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview
 
 
+
+### Create a site-to-site VPN connection in the Azure portal
+
+This tutorial shows you how to use the Azure portal to create a site-to-site VPN gateway connection between your on-premises network and a virtual network (VNet). You can also create this configuration using Azure PowerShell or Azure CLI.
+
+1. Deploy a gateway subnet
+2. Deploy a VPN gateway
+3. Deploy a local network gateway
+4. Deploy a VPN Connection
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal?toc=%2Fazure%2Fvirtual-network%2Ftoc.json
+
 18.04.2023
 
