@@ -216,11 +216,12 @@ https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=po
 
 ### Azure Network Watcher
 
-1. Diagnose network traffic filtering problems to or from a VM, Use IP flow verify
-2. Diagnose network routing problems from a VM, next hop
-3. Diagnose outbound connections from a VM, Connection monitor also provides the minimum, average, and maximum latency observed over time. 
-4. Capture packets to and from a VM, packet capture
-5. The effective security rules for a network interface are a combination of all security rules applied to the network interface, and the subnet the network interface is in.
-6. Network Monitoring Logs, The NSG flow log capability allows you to log the source and destination IP address, port, protocol, and whether traffic was allowed or denied by an NSG.
+1. IP flow verify. Diagnose network traffic filtering problems to or from a VM
+2. Next hop. Diagnose network routing problems from a VM
+3. Connection troubleshoot. Test a connection at a point in time.
+3. Connection monitor. Diagnose outbound connections from a VM, monitor the connection over time, connection monitor also provides the minimum, average, and maximum latency observed over time. 
+4. Packet capture. Capture packets to and from a VM.
+5. Effective security rules for a network interface are a combination of all security rules applied to the network interface, and the subnet the network interface is in.
+6. NSG flow log. Network Monitoring Logs, The NSG flow log capability allows you to log the source and destination IP address, port, protocol, and whether traffic was allowed or denied by an NSG.
 
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview
