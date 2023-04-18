@@ -225,3 +225,7 @@ https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=po
 6. NSG flow log. Network Monitoring Logs, The NSG flow log capability allows you to log the source and destination IP address, port, protocol, and whether traffic was allowed or denied by an NSG.
 
 https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview
+
+
+18.04.2023
+
