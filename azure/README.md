@@ -8,26 +8,30 @@ Azure Administrator Cheat Sheet
 
 ## Path
 
-Work mostly VM and some labs, no read for 3 months and jump to exam.
+* Work mostly VM and some labs, no read for 3 months and jump to exam.
 * 1 554 30062021
 
-Scott Duffy Microsoft Azure Administrator
-Work mostly VM, function app, logic app, mointor. All labs one time.
-Dojo all above pass 70-80%
-Ms practice assessment a bunch of times all above 90 %
-Created this cheat sheet
+* Scott Duffy Microsoft Azure Administrator
+* Work mostly VM, function app, logic app, mointor. All labs one time.
+* Dojo all above pass 70-80%
+* Ms practice assessment a bunch of times all above 90 %
+* Created this cheat sheet
 * 1 670 05042023
 
-Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
-Dojo all above pass 87-95 %
-Dojo section based 2 and 6 the area for improvment.
-Ms practice assessment a bunch of times all above 90 %
-AZ-104 Microsoft Azure Administrator Sample Exam Questions
-Exam Readiness Zone
-IT exam questions
-Updated this cheat sheet with details, add an extra for Implement and manage storage
-Did some reading on bulk user, powershell, nic on vm and move, traffic manager role and custom app domain.
-Youtube, 40 more practice questions with good explanations (parts 1-4)
+* Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
+* Dojo section 2 and 5 100%
+* Dojo all above pass 87-95 %
+* Dojo section based 2 and 6 the area for improvment.
+* Ms practice assessment a bunch of times all above 90 %
+* AZ-104 Microsoft Azure Administrator Sample Exam Questions
+* Exam Readiness Zone
+* IT exam questions
+* Updated this cheat sheet with details, add an extra for Implement and manage storage
+* Did some reading on bulk user, powershell, nic on vm and move, traffic manager role and custom app domain.
+* Youtube, 40 more practice questions with good explanations (parts 1-4)
+* https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
+* * Write on paper the quick guide 3 times
+* AZ-104 Exam (parts 1-33) questions 
 * 2 ? 19042023
 
 And that's ok
