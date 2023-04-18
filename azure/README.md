@@ -10,10 +10,12 @@ Azure Administrator Cheat Sheet
 
 1. 
 * Work mostly VM and some labs, no read for 3 months and jump to exam.
+* Created this https://github.com/spawnmarvel/azure-arm-104
 * * 1 554 30062021
 
 2. 
 * Scott Duffy Microsoft Azure Administrator
+* Some more work here https://github.com/spawnmarvel/azure-arm-104
 * Work mostly VM, function app, logic app, mointor. All labs one time.
 * Dojo all above pass 70-80%
 * Ms practice assessment a bunch of times all above 90 %
