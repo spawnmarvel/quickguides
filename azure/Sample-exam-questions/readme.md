@@ -12,7 +12,7 @@ AZ-104 Microsoft Azure Administrator Sample Exam Questions
 
 https://learn.microsoft.com/en-us/certifications/resources/az-104-sample-questions
 
-Hm, this was removed between 05.04-15-04.2023
+Hm, this link was removed between 05.04-15-04.2023
 
 ## Questions
 
