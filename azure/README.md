@@ -23,6 +23,7 @@ Azure Administrator Cheat Sheet
 * * 1 670 05042023
 
 3. 
+* Exam started with case study, caught me off guard! And some the stress came.
 * Focus improvment: Implement and manage storage and Monitor and maintain Azure resources
 * Az lab azcopy SAS https://follow-e-lo.com/2023/04/10/az-lab-azcopy/
 * Az lab domain, dns zone, private dnz https://follow-e-lo.com/2023/04/14/az-lab-domain-dns/
