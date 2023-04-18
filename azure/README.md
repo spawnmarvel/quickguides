@@ -39,8 +39,7 @@ Azure Administrator Cheat Sheet
 * Updated this cheat sheet with details, add an extra for Implement and manage storage
 * Did some reading on bulk user, powershell, nic on vm and move, traffic manager role and custom app domain.
 * Youtube, 40 more practice questions with good explanations (parts 1-4)
-* https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
-* * Write on paper the quick guide 3 times
+* * Write on paper the quick guide 3 times https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
 * AZ-104 Exam (parts 1-33) questions 
 * * 2 ? 19042023
 
