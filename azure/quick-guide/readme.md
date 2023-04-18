@@ -31,7 +31,7 @@ Most questions will be on Virtual network and Storage
 3. Download the usage report
 
 
-![Cost tag ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/cost-tag.jpg)
+![Cost tag ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/cost-tag2.jpg)
 
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
 
