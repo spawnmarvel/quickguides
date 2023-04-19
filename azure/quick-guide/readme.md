@@ -239,5 +239,28 @@ This tutorial shows you how to use the Azure portal to create a site-to-site VPN
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal?toc=%2Fazure%2Fvirtual-network%2Ftoc.json
 
+
+
+### Redeploy Windows virtual machine to new Azure node / Can't connect to your virtual machine?
+
+If you have been facing difficulties troubleshooting Remote Desktop (RDP) connection or application access to Windows-based Azure virtual machine (VM), redeploying the VM may help.
+
+When you redeploy a VM, Azure will shut down the VM, move the VM to a new node within the Azure infrastructure, and then power it back on, retaining all your configuration options and associated resources.
+
+![redeploy + reapply ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/redeploy-reapply.jpg)
+
+https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/redeploy-to-new-node-windows
+
+
+### Reapply Windows virtual machine / Virtual machine in a failed state?
+
+
+This article provides steps to resolve issues in which a Microsoft Azure virtual machine (VM) is stuck in a failed state.
+
+![redeploy + reapply ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/redeploy-reapply.jpg)
+
+https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/vm-stuck-in-failed-state?tabs=portal
+
+
 18.04.2023
 
