@@ -262,5 +262,11 @@ This article provides steps to resolve issues in which a Microsoft Azure virtual
 https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/vm-stuck-in-failed-state?tabs=portal
 
 
+### Move virtual machine
+
+
+![move vm ](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/move-vm.jpg)
+
+
 18.04.2023
 
