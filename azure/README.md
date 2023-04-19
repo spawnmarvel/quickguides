@@ -47,8 +47,6 @@ Azure Administrator Cheat Sheet
 
 ![Score](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/score.jpg)
 
-And that's ok
-
 
 ## Practice
 
