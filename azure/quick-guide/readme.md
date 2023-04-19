@@ -219,8 +219,8 @@ https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=po
 1. IP flow verify. Diagnose network traffic filtering problems to or from a VM
 2. Next hop. Diagnose network routing problems from a VM
 3. Connection troubleshoot. Test a connection at a point in time.
-3. Connection monitor. Diagnose outbound connections from a VM, monitor the connection over time, connection monitor also provides the minimum, average, and maximum latency observed over time. 
-4. Packet capture. Capture packets to and from a VM.
+3. Connection monitor. Diagnose outbound connections from a VM, monitor the connection over time, connection monitor also provides the minimum, average, and maximum latency observed over time.  https://learn.microsoft.com/en-us/azure/network-watcher/connection-monitor-overview
+4. Packet capture. Capture packets to and from a VM. (Up to 5 hours ) https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-packet-capture-manage-portal
 5. Effective security rules for a network interface are a combination of all security rules applied to the network interface, and the subnet the network interface is in.
 6. NSG flow log. Network Monitoring Logs, The NSG flow log capability allows you to log the source and destination IP address, port, protocol, and whether traffic was allowed or denied by an NSG.
 
