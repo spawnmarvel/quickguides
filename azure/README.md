@@ -43,7 +43,9 @@ Azure Administrator Cheat Sheet
 * * Write on paper the quick guide 3 times https://github.com/spawnmarvel/quickguides/tree/main/azure/quick-guide
 * THIS IS SPARTA
 * ![Sparta ](https://github.com/spawnmarvel/quickguides/blob/main/azure/images/sparta.jpg)
-* * 2 ? 19042023
+* * 2 770 19042023
+
+![Score](https://github.com/spawnmarvel/quickguides/blob/main/azure/quick-guide/score.jpg)
 
 And that's ok
 
