@@ -362,7 +362,7 @@ A pem encoded certificate is already a “cert”, and the .cert file extension 
 
 * * If the content is on binary format, .cer*, meaning the cert content does not start with ----BEGIN CERTIFICATE-----
 * * Import the .cer* to a local MMC (add signers also for verification). Then export it in MMC to format Base64 encoded. (.cer can be Base64 encoded or binary )
-
+* * Then you can cp the txt content to wherever
 * 2.1 When all CA's are imported in MMC, the personal should be valid. (If you cannot find the cert in mmc personal, import it direct on personal tab
 )
 * 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use just for openssl.
