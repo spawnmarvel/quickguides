@@ -314,6 +314,8 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 * https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625722(v=ws.10)
 * 1.1 The certreq command can be used [...] create a new request from an .inf file
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
+* Update:13.06.2023
+* * Certificate Authority must be a public certificate, not internal certificate.
 
 ```cmd
 certreq –new request.inf certificate.req
