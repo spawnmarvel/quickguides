@@ -30,6 +30,7 @@ TLS
 4. Client and server exchange information over encrypted TLS connection
 
 
+![TLS](https://github.com/spawnmarvel/quickguides/blob/main/security/tls.jpg)
 
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
