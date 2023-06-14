@@ -1,6 +1,6 @@
 # General security
 
-## RFC 6125 ... Identity within Internet Public Key Infrastructure Using X.509 (PKIX) [...]
+## RFC 6125 Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)
 
 Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)
 
@@ -78,6 +78,11 @@ Example with AMQPS and client/server (shovel) configured with X.509 running mTls
 
 https://github.com/spawnmarvel/quickguides/tree/main/amqp
 
+
+![Chain](https://github.com/spawnmarvel/quickguides/blob/main/security/chain.jpg)
+
+https://www.rabbitmq.com/ssl.html#peer-verification
+
 ## Device authentication concepts in IoT Central
 
 Devices authenticate with the IoT Central application by using either a shared access signature (SAS) token or an X.509 certificate. X.509 certificates are recommended in production environments.
@@ -147,7 +152,7 @@ Symmetric key authentication requires significant owner responsibility to secure
 
 If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
 
-Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. Azure IoT supports SAS token-based symmetric key connections. **Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication.** If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
+Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. Azure IoT supports SAS token-based symmetric key connections. :lock: **Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication.** If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
 
 Pros for symmetric key
 
