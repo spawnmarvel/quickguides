@@ -206,5 +206,13 @@ There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tok
 * or use a shared access key.
 
 
-
 https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
+
+
+## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
+
+https://follow-e-lo.com/2023/04/25/create-an-azure-service-principal-with-azure-powershell/
+
+## Use a Windows VM system-assigned managed identity to access Azure Storage via a SAS credential
+
+https://follow-e-lo.com/2022/08/13/5min-tutorial-use-a-windows-vm-system-assigned-managed-identity-to-access-azure-storage/
