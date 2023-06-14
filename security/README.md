@@ -33,6 +33,18 @@ TLS
 
 ![TLS](https://github.com/spawnmarvel/quickguides/blob/main/security/tls.jpg)
 
+In mTLS, however, both the client and server have a certificate, and both sides authenticate using their public/private key pair.
+
+1. Client connects to server
+2. Server presents its TLS certificate
+3. Client verifies the server's certificate
+4. Client presents its TLS certificate
+5. Server verifies the client's certificate
+6. Server grants access
+7. Client and server exchange information over encrypted TLS connection
+
+![mTLS](https://github.com/spawnmarvel/quickguides/blob/main/security/mtls.jpg)
+
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 
