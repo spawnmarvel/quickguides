@@ -6,12 +6,6 @@ Representation and Verification of Domain-Based Application Service Identity wit
 
 https://datatracker.ietf.org/doc/html/rfc6125
 
-## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
-
-Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
-
-https://github.com/spawnmarvel/quickguides/tree/main/amqp
-
 ## What is mutual TLS (mTLS)?
 
 Mutual TLS (mTLS) is a type of authentication in which the two parties in a connection authenticate each other using the TLS protocol.
@@ -78,3 +72,21 @@ But on a smaller scale, mTLS is highly useful and quite practical for individual
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 
+## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
+
+Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
+
+https://github.com/spawnmarvel/quickguides/tree/main/amqp
+
+## Device authentication concepts in IoT Central
+
+Devices authenticate with the IoT Central application by using either a shared access signature (SAS) token or an X.509 certificate. X.509 certificates are recommended in production environments.
+
+### X.509 enrollment group
+
+In a production environment, using X.509 certificates is the recommended device authentication mechanism for IoT Central. To learn more, see Device Authentication using X.509 CA Certificates.
+
+An X.509 enrollment group contains a root or intermediate X.509 certificate. Devices can authenticate if they have a valid leaf certificate that's derived from the root or intermediate certificate.
+
+
+https://learn.microsoft.com/en-us/azure/iot-central/core/concepts-device-authentication
