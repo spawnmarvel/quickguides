@@ -165,5 +165,46 @@ Cons for symmetric key
 * Symmetric keys make it easy to follow poor security practices. A common tendency with symmetric keys is to hard code the unencrypted keys on devices. While this practice is convenient, it leaves the keys vulnerable. You can mitigate some risk by securely storing the symmetric key on the device. However, :lock: :key: **if your priority is ultimately security rather than convenience, use X.509 certificates or TPM for authentication.**
 
 
-
 https://microsoft.github.io/PartnerResources/azure/iot/assets/07ImplementSecurity
+
+## Security best practices for IoT solutions
+
+You can divide security in an IoT solution into the following three areas:
+
+* Device security: Securing the IoT device while it's deployed in the wild.
+* Connection security: Ensuring all data transmitted between the IoT device and IoT Hub is confidential and tamper-proof.
+* Cloud security: Providing a means to secure data while it moves through, and is stored in the cloud.
+
+Connection security
+
+* Use X.509 certificates to authenticate your devices to IoT Hub: IoT Hub supports both X509 certificate-based authentication and security tokens as methods for a device to authenticate with your IoT hub. If possible, use :lock: :key: X509-based authentication in production environments as it provides greater security.
+* Use Transport Layer Security (TLS) 1.2 to secure connections from devices: IoT Hub uses TLS to secure connections from IoT devices and services. 
+* Ensure you have a way to update the TLS root certificate on your devices: TLS root certificates are long-lived, but they still may expire or be revoked.
+* Consider using Azure Private Link: Azure Private Link lets you connect your devices to a private endpoint on your VNet, enabling you to block access to your IoT hub's public device-facing endpoints.
+
+https://learn.microsoft.com/en-us/azure/iot/iot-security-best-practices
+
+## Authenticating a device to IoT Hub
+
+Supported X.509 certificates
+
+* You can use any :lock: :key: X.509 certificate to authenticate a device with IoT Hub by uploading either a certificate thumbprint or a certificate authority (CA) to Azure IoT Hub.
+
+Enforcing X.509 authentication
+
+* For additional security, an IoT hub can be configured to not allow SAS authentication for devices and modules, leaving X.509 as the only accepted authentication option.
+
+```
+az resource update -n <iothubName> -g <resourceGroupName> --resource-type Microsoft.Devices/IotHubs --set properties.disableDeviceSAS=true properties.disableModuleSAS=true
+```
+
+Use SAS tokens as a device
+
+There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tokens: 
+
+* use a symmetric device key from the identity registry
+* or use a shared access key.
+
+
+
+https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
