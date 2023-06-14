@@ -88,5 +88,77 @@ In a production environment, using X.509 certificates is the recommended device 
 
 An X.509 enrollment group contains a root or intermediate X.509 certificate. Devices can authenticate if they have a valid leaf certificate that's derived from the root or intermediate certificate.
 
+## SAS enrollment group
+
+A SAS enrollment group contains group-level SAS keys. Devices can authenticate if they have a valid SAS token that's derived from a group-level SAS key.
 
 https://learn.microsoft.com/en-us/azure/iot-central/core/concepts-device-authentication
+
+## AZ-220 Implement Security (5-10%)¶
+
+### Quick Reference: Key Concepts and Terminology¶
+
+Three widely used authentication types are X.509 certificates, Trusted Platform Modules (TPM), and symmetric keys.
+
+X.509 certificate - A type of digital identity you can use for authentication. The X.509 certificate standard is documented in IETF RFC 5280. 
+
+In Azure IoT, there are two ways to authenticate certificates:
+
+* Thumbprint. A thumbprint algorithm is run on a certificate to generate a hexadecimal string. The generated string is a unique identifer for the certificate.
+* CA authentication based on a full chain. A certificate chain is a hierarchical list of all certificates needed to authenticate an end-entity (EE) certificate. To authenticate an EE certificate, it’s necessary to authenticate each certificate in the chain including a trusted root CA.
+
+Pros for X.509
+
+* X.509 is the most secure authentication type supported in Azure IoT.
+* X.509 allows a high level of control for purposes of certificate management.
+* Many vendors are available to provide X.509 based authentication solutions.
+
+Cons for X.509
+
+* Many customers may need to rely on external vendors for their certificates.
+* Certificate management can be costly and adds to total solution cost.
+* Certificate life-cycle management can be difficult if logistics are not well thought out.
+
+Trusted Platform Module (TPM) - A standard for securely generating and storing cryptographic keys, also known as ISO/IEC 11889. TPM also refers to a virtual or physical I/O device that interacts with modules that implement the standard.
+
+There are two key differences between TPMs and symmetric keys:
+
+* TPM chips can also store X.509 certificates.
+* TPM attestation in DPS uses the TPM endorsement key (EK), a form of asymmetric authentication. With asymmetric authentication, a public key is used for encryption, and a separate private key is used for decryption. In contrast, symmetric keys use symmetric authentication, where the private key is used for both encryption and decryption.
+
+Pros for TPM
+
+* TPMs are included as standard hardware on many Windows devices, with built-in support for the operating system.
+* TPM attestation is easier to secure than shared access signature (SAS) token-based symmetric key attestation.
+* You can easily expire and renew, or roll, device credentials. DPS automatically rolls the IoT Hub credentials whenever a TPM device is due for reprovisioning.
+
+Cons for TPM
+
+* TPMs are complex and can be difficult to use.
+* Application development with TPMs is difficult unless you have a physical TPM or a quality emulator.
+* You may have to redesign the board of your device to include a TPM in the hardware.
+* If you roll the EK on a TPM, it destroys the identity of the TPM and creates a new one. Although the physical chip stays the same, it has a new identity in your IoT solution.
+
+Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. 
+
+Azure IoT supports SAS token-based symmetric key connections. 
+
+Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication. 
+
+If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
+
+Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. Azure IoT supports SAS token-based symmetric key connections. ** Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication. ** If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
+
+Pros for symmetric key
+
+* Using symmetric keys is the simplest, lowest cost way to get started with authentication.
+* Using symmetric keys streamlines your process because there’s nothing extra to generate.
+
+Cons for symmetric key
+
+* Symmetric keys take a significant degree of effort to secure the keys. The same key is shared between device and cloud, which means the key must be protected in two places. In contrast, the challenge with TPM and X.509 * certificates is proving possession of the public key without revealing the private key.
+* Symmetric keys make it easy to follow poor security practices. A common tendency with symmetric keys is to hard code the unencrypted keys on devices. While this practice is convenient, it leaves the keys vulnerable. You can mitigate some risk by securely storing the symmetric key on the device. However, ** if your priority is ultimately security rather than convenience, use X.509 certificates or TPM for authentication. **
+
+
+
+https://microsoft.github.io/PartnerResources/azure/iot/assets/07ImplementSecurity
