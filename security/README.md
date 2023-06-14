@@ -70,6 +70,9 @@ For everyday purposes, one-way authentication provides sufficient protection. Th
 
 TLS, accomplishes these goals.
 
+## Zero trust
+
+But on a smaller scale, mTLS is highly useful and quite practical for individual organizations, especially when those organizations employ a Zero Trust approach to network security.
 
 
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
