@@ -99,9 +99,9 @@ A SAS enrollment group contains group-level SAS keys. Devices can authenticate i
 
 https://learn.microsoft.com/en-us/azure/iot-central/core/concepts-device-authentication
 
-## AZ-220 Implement Security (5-10%)¶
+## AZ-220 Implement Security (5-10%)
 
-### Quick Reference: Key Concepts and Terminology¶
+### Quick Reference: Key Concepts and Terminology
 
 Three widely used authentication types are X.509 certificates, Trusted Platform Modules (TPM), and symmetric keys.
 
