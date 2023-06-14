@@ -1,6 +1,6 @@
 # General security
 
-## RFC 6125 .. Identity within Internet Public Key Infrastructure Using X.509 (PKIX) [...]
+## RFC 6125 ... Identity within Internet Public Key Infrastructure Using X.509 (PKIX) [...]
 
 Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)
 
@@ -19,7 +19,8 @@ Mutual TLS (mTLS) is a type of authentication in which the two parties in a conn
 mTLS is often used in a Zero Trust security framework* to verify users, devices, and servers within an organization. It can also help keep APIs secure.
 
 
-TLS works using a technique called public key cryptography, which relies on a pair of keys — a public key and a private key. Anything encrypted with the public key can be decrypted only with the private key.
+* TLS works using a technique called public key cryptography, which relies on a pair of keys — a public key and a private key. 
+* Anything encrypted with the public key can be decrypted only with the private key.
 
 Therefore, a server that decrypts a message that was encrypted with the public key proves that it possesses the private key. Anyone can view the public key by looking at the domain's or server's TLS certificate.
 
