@@ -147,7 +147,7 @@ Symmetric key authentication requires significant owner responsibility to secure
 
 If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
 
-Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. Azure IoT supports SAS token-based symmetric key connections. ** Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication. ** If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
+Symmetric key - The same key is used to encrypt and decrypt messages. As a result, the same key is known to both the device and the service that authenticates it. Azure IoT supports SAS token-based symmetric key connections. **Symmetric key authentication requires significant owner responsibility to secure the keys and achieve an equal level of security with X.509 authentication.** If you use symmetric keys, the recommended practice is to protect the keys by using a hardware security module (HSM).
 
 Pros for symmetric key
 
@@ -157,7 +157,7 @@ Pros for symmetric key
 Cons for symmetric key
 
 * Symmetric keys take a significant degree of effort to secure the keys. The same key is shared between device and cloud, which means the key must be protected in two places. In contrast, the challenge with TPM and X.509 * certificates is proving possession of the public key without revealing the private key.
-* Symmetric keys make it easy to follow poor security practices. A common tendency with symmetric keys is to hard code the unencrypted keys on devices. While this practice is convenient, it leaves the keys vulnerable. You can mitigate some risk by securely storing the symmetric key on the device. However, ** if your priority is ultimately security rather than convenience, use X.509 certificates or TPM for authentication. **
+* Symmetric keys make it easy to follow poor security practices. A common tendency with symmetric keys is to hard code the unencrypted keys on devices. While this practice is convenient, it leaves the keys vulnerable. You can mitigate some risk by securely storing the symmetric key on the device. However, **if your priority is ultimately security rather than convenience, use X.509 certificates or TPM for authentication.**
 
 
 
