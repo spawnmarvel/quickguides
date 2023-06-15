@@ -260,15 +260,17 @@ The certreq command can be used to request certificates from a certification aut
 | Subject | Several apps rely on the subject information in a certificate. | Subject = CN=computer1.contoso.com
 | KeySpec | Determines if the key can be used for signatures, for Exchange (encryption), or for both. | KeySpec = 1
 | KeyLength | Defines the length of the public and private key. | KeyLength = 2048
-| Exportable | If set to TRUE, the private key can be exported with the certificate. | Exportable = TRUE.
-| MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. | MachineKeySet = true
-
-| KeyUsage | Defines what the certificate key should be used for. | Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.
-| ProviderName | The provider name is the display name of the CSP.| If you don't know the provider name of the CSP you are using, run certutil –csplist from a command line. ProviderName = Microsoft RSA SChannel Cryptographic Provider
+| Exportable | If set to TRUE, the private key can be exported with the certificate. | Exportable = TRUE
+| MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. | MachineKeySet = TRUE
+| SMIME | If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. (Secure Multipurpose Internet Mail) | SMIME = FALSE
+| PrivateKeyArchive ||
+| UserProtected ||
+| UseExistingKeySet | This parameter is used to specify that an existing key pair should be used in building a certificate request | UseExistingKeySet = FALSE
+| ProviderName | The provider name is the display name of the CSP.| If you don't know the provider name of the CSP you are using, run certutil –csplist from a command line. | ProviderName = Microsoft RSA SChannel Cryptographic Provider
 | ProviderType | The provider type is used to select specific providers based on specific algorithm capability such as RSA Full. | ProviderType = 12
 | RequestType | Determines the standard that is used to generate and send the certificate request. PKCS10 -- 1, PKCS7 -- 2  | RequestType = PKCS10
-| SMIME | If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. (Secure Multipurpose Internet Mail) | SMIME = FALSE
-| UseExistingKeySet | This parameter is used to specify that an existing key pair should be used in building a certificate request | UseExistingKeySet = FALSE
+| KeyUsage | Defines what the certificate key should be used for. | Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. | For example, KeyUsage = 0xa0.
+
 
 
 https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
