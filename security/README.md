@@ -216,6 +216,36 @@ https://www.techtarget.com/searchsecurity/definition/Transport-Layer-Security-TL
 
 ## Choosing a key algorithm
 
+RSA
+
+RSA-based signature schemes enjoy wide compatibility across multiple platforms by virtue of their age. If you need to support clients using legacy operating systems, protocols, firmware or other technology stacks, RSA is a common choice.
+
+ECDSA
+
+While asymmetric keys based on elliptic curves are relatively newer than their RSA counterparts, they are still supported in many of the most common technology stacks released over the last decade. They are especially popular because they can achieve similar levels of security strength to RSA keys using smaller key sizes. Applications that use ECDSA keys store and transmit less data over the wire.
+
+Mixed chains
+
+### Decision-making guide
+
+You can use this simple guide to help you choose an appropriate signing algorithm for your CA key:
+
+1. Choose an algorithm family
+* If you are creating a subordinate CA chaining up to an existing root CA, use the same family as the root.
+* If you are creating a new root CA but need to work with legacy systems that don't support ECDSA, use one of the RSA signing algorithms.
+* Otherwise, use one of the Elliptic curve signing algorithms.
+
+2. (RSA only) Choose a signature algorithm
+* If you expect to work with older libraries or frameworks that don't support PSS, use one of the RSA_SIGN_PKCS1 algorithms.
+* Otherwise, use one of the RSA_SIGN_PSS algorithms.
+
+3. Choose a key size
+
+For a new root CA or a subordinate CA that is expected to have a lifetime in the order of years, we recommend that you use the largest key size available for that algorithm family.
+* For RSA, the largest supported key size is 4096 bits.
+* For ECDSA, the largest supported key size is 384 bits.
+For subordinate CAs with a shorter lifetime, it is sufficient to use smaller key sizes, such as 2048 bits for RSA or 256 bits for ECDSA.
+
 https://cloud.google.com/certificate-authority-service/docs/choosing-key-algorithm
 
 # Extra:
