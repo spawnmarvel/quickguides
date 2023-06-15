@@ -269,11 +269,63 @@ The certreq command can be used to request certificates from a certification aut
 | ProviderName | The provider name is the display name of the CSP. If you don't know the provider name of the CSP you are using, run certutil –csplist from a command line. | ProviderName = Microsoft RSA SChannel Cryptographic Provider
 | ProviderType | The provider type is used to select specific providers based on specific algorithm capability such as RSA Full. | ProviderType = 12
 | RequestType | Determines the standard that is used to generate and send the certificate request. PKCS10 -- 1, PKCS7 -- 2  | RequestType = PKCS10
-| KeyUsage | Defines what the certificate key should be used for. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. | For example, KeyUsage = 0xa0.
+| KeyUsage | Defines what the certificate key should be used for. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. | For example, KeyUsage = 0xa0
 
 
 
 https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
+
+## Entrust
+
+```bash
+Save the following file as request.inf on your server editing the subject according to the comment:
+
+;----------------- request.inf -----------------
+
+[Version]
+Signature="$Windows NT$"
+
+[NewRequest]
+;Change to your,country code, company name and common name
+Subject = "C=US, O=Example Co, CN=something.example.com"
+
+KeySpec = 1
+KeyLength = 2048
+Exportable = TRUE
+MachineKeySet = TRUE
+SMIME = False
+PrivateKeyArchive = FALSE
+UserProtected = FALSE
+UseExistingKeySet = FALSE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+
+[EnhancedKeyUsageExtension]
+OID=1.3.6.1.5.5.7.3.1 ; this is for Server Authentication / Token Signing
+
+
+[Version]
+Signature= "$Windows NT$"
+[NewRequest]
+Subject= "CN=server.domain.com"
+KeySpec = 1
+KeyLength = 2048
+Exportable = FALSE
+MachineKeySet = TRUE
+SMIME = FALSE
+PrivateKeyArchive = FALSE
+UserProtected = FALSE
+UseExistingKeySet = FALSE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+
+```
+
+https://www.entrust.com/knowledgebase/ssl/csr-generation-and-installation-using-certreq-command-windows
 
 # Extra:
 
