@@ -273,7 +273,7 @@ KeyUsage = 0xa0
 | KeySpec | Determines if the key can be used for signatures, for Exchange (encryption), or for both. | KeySpec = AT_KEYEXCHANGE
 | KeyUsage | Defines what the certificate key should be used for. | Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.
 | MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. | MachineKeySet = true
-|||
+| ProviderName | The provider name is the display name of the CSP.| If you don't know the provider name of the CSP you are using, run certutil –csplist from a command line. ProviderName = Microsoft RSA SChannel Cryptographic Provider
 |||
 |||
 
