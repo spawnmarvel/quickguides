@@ -246,7 +246,39 @@ For a new root CA or a subordinate CA that is expected to have a lifetime in the
 * For ECDSA, the largest supported key size is 384 bits.
 For subordinate CAs with a shorter lifetime, it is sufficient to use smaller key sizes, such as 2048 bits for RSA or 256 bits for ECDSA.
 
+
 https://cloud.google.com/certificate-authority-service/docs/choosing-key-algorithm
+
+## certreq
+
+The certreq command can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
+
+
+```
+Subject= "CN"
+KeyLength = 2048
+Exportable = TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+
+```
+
+| Key | Description | Example
+| --- | ----------- | ----
+| Subject | Several apps rely on the subject information in a certificate. | Subject = CN=computer1.contoso.com
+| Exportable | If set to TRUE, the private key can be exported with the certificate. | Exportable = TRUE.
+| KeyLength | Defines the length of the public and private key. | KeyLength = 2048
+| KeySpec | Determines if the key can be used for signatures, for Exchange (encryption), or for both. | KeySpec = AT_KEYEXCHANGE
+| KeyUsage | Defines what the certificate key should be used for. | Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.
+| MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. | MachineKeySet = true
+|||
+|||
+|||
+
+
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 
 # Extra:
 
