@@ -329,6 +329,53 @@ KeyUsage = 0xa0
 
 https://www.entrust.com/knowledgebase/ssl/csr-generation-and-installation-using-certreq-command-windows
 
+## Request a Client Server Authentication
+
+```bash
+;----------------- request.inf -----------------
+  [Version]
+  
+  Signature="$Windows NT$"
+
+  [NewRequest]
+   
+  Subject = "CN=XX-UNIT-EXAMPLE.ads.iu.edu" 
+  ;
+  ;replace XX-UNIT-EXAMPLE in this line with workstation name, follow UITS naming conventions
+  ;
+  KeySpec = 1
+  KeyLength = 2048
+  Exportable = TRUE
+  FriendlyName = "IU Client Server Authentication (Offline request)" 
+  ;
+  ;friendly name for request
+  ;
+  MachineKeySet = TRUE
+  SMIME = False
+  PrivateKeyArchive = FALSE
+  UserProtected = FALSE
+  UseExistingKeySet = FALSE
+  ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+  ProviderType = 12
+  RequestType = PKCS10
+  KeyUsage = 0xa0
+ 
+  [EnhancedKeyUsageExtension]
+  
+  OID=1.3.6.1.5.5.7.3.2; Client authentication
+  OID=1.3.6.1.5.5.7.3.1; Server authentication
+
+  [Extensions]
+  
+  2.5.29.17 = "{text}dns=XX-UNIT-EXAMPLE.ads.iu.edu" 
+  ;
+  ;replace XX-UNIT-EXAMPLE in this line with workstation name, follow UITS naming conventions
+  ;
+  ;-----------------------------------------------
+```
+
+https://kb.iu.edu/d/beyk
+
 # Extra:
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
