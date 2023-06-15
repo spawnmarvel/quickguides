@@ -230,16 +230,16 @@ Mixed chains
 
 You can use this simple guide to help you choose an appropriate signing algorithm for your CA key:
 
-1. Choose an algorithm family
+1 Choose an algorithm family
 * If you are creating a subordinate CA chaining up to an existing root CA, use the same family as the root.
 * If you are creating a new root CA but need to work with legacy systems that don't support ECDSA, use one of the RSA signing algorithms.
 * Otherwise, use one of the Elliptic curve signing algorithms.
 
-2. (RSA only) Choose a signature algorithm
+2 (RSA only) Choose a signature algorithm
 * If you expect to work with older libraries or frameworks that don't support PSS, use one of the RSA_SIGN_PKCS1 algorithms.
 * Otherwise, use one of the RSA_SIGN_PSS algorithms.
 
-3. Choose a key size
+3 Choose a key size
 
 For a new root CA or a subordinate CA that is expected to have a lifetime in the order of years, we recommend that you use the largest key size available for that algorithm family.
 * For RSA, the largest supported key size is 4096 bits.
