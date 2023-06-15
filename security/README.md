@@ -376,6 +376,7 @@ https://www.entrust.com/knowledgebase/ssl/csr-generation-and-installation-using-
 
 https://kb.iu.edu/d/beyk
 
+
 # Extra:
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
