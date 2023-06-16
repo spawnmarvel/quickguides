@@ -389,3 +389,25 @@ https://follow-e-lo.com/2022/08/13/5min-tutorial-use-a-windows-vm-system-assigne
 
 
 ## More links to read and OSI
+
+
+Connect To RabbitMQ From A Different Machine Or Network (bitnami)
+https://docs.bitnami.com/google-templates/infrastructure/rabbitmq/administration/connect-remotely/
+
+How to Protect Secrets When Using GitHub Actions?
+https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
+
+How to use GitHub Actions securely
+https://mattermost.com/blog/how-to-use-github-actions-securely/
+
+Configure the Microsoft Security DevOps GitHub action
+https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action
+
+GitHub Actions Security Best Practices
+https://blog.gitguardian.com/github-actions-security-cheat-sheet/
+
+Authentication, Authorisation, Access Control AMQP
+https://www.rabbitmq.com/access-control.html
+
+Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
+https://learn.microsoft.com/en-us/certifications/exams/sc-900/
