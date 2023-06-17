@@ -526,7 +526,7 @@ https://mattermost.com/blog/how-to-use-github-actions-securely/
 * * You should make use of the ‘permission’ key in your workflows to configure the minimum required permissions for a workflow or job. This will allow fine-grained control over the privileges of your GitHub Actions.
 * Use specific action version tags
 
-```
+```yaml
  - name: Checkout repository
    uses: actions/checkout@v3
 ```
