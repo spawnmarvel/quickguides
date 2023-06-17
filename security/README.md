@@ -522,6 +522,15 @@ https://mattermost.com/blog/how-to-use-github-actions-securely/
 
 ## GitHub Actions Security Best Practices
 
+* Set minimum scope for credentials, the GITHUB_TOKEN should always be granted the minimum required permissions to execute a workflow/job.
+* * You should make use of the ‘permission’ key in your workflows to configure the minimum required permissions for a workflow or job. This will allow fine-grained control over the privileges of your GitHub Actions.
+* Use specific action version tags
+
+```
+ - name: Checkout repository
+   uses: actions/checkout@v3
+```
+
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
 
 
