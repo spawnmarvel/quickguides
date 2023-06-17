@@ -337,6 +337,16 @@ https://github.com/spawnmarvel/quickguides/tree/main/amqp
 https://www.rabbitmq.com/ssl.html#peer-verification
 
 
+## Shovls
+
+Connecting brokers with the Shovel plugin is conceptually similar to connecting them with Federation. However, the plugin works at a lower level.
+
+Whereas federation aims to provide opinionated distribution of exchanges and queues, the shovel simply consumes messages from a queue on one broker, and forwards them to an exchange on another.
+
+Typically you would use the shovel to link brokers across the internet when you need more control than federation provides.
+
+https://www.rabbitmq.com/distributed.html
+
 ## AMQP, RabbitMQ From A Different Machine Or Network (bitnami)
 
 Connect To RabbitMQ From A Different Machine Or Network (bitnami)
