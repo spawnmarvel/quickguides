@@ -223,7 +223,7 @@ https://learn.microsoft.com/en-us/windows-server/administration/windows-commands
 
 https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509keystorageflags?view=net-7.0
 
-## Entrust
+## Entrust X.509
 
 ```bash
 Save the following file as request.inf on your server editing the subject according to the comment:
