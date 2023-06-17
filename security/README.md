@@ -424,12 +424,12 @@ https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#
 
 # CI/CD Github Actions 
 
-Implement CI/CD with GitHub – Deploy Azure Functions
+## Implement CI/CD with GitHub – Deploy Azure Functions
 
 https://follow-e-lo.com/2023/06/13/implement-ci-cd-with-github-deploy-azure-functions/
 
 
-Configure the Microsoft Security DevOps GitHub action
+## Configure the Microsoft Security DevOps GitHub action
 
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action
 
@@ -452,16 +452,54 @@ When you enable one or more security and analysis features for existing reposito
 
 ![Github detect](https://github.com/spawnmarvel/quickguides/blob/main/security/github_detect.jpg)
 
+When you open the mail you can drill down to where the issue is located at.
+
+
 https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization
 
-How to Protect Secrets When Using GitHub Actions?
+## How to Protect Secrets When Using GitHub Actions?
+
+GitHub Actions are a new breed of FaaS. This new service allows anyone to write and execute code in the form of a script run by the GitHub platform. 
+
+But one thing most developers and SREs miss when working with GitHub actions is to protecting the secrets leading to data leaks.
+
+GitHub Actions are a powerful tool that allows you to automate your workflow.
+
+* Say NO to Plain Text Secrets
+* * Direct hard-coding secrets such as database username and password in the .yml file lead to sensitive data exposure, which is a security concern.
+
+The problem with using plain text secrets directly in the GitHub actions is that these secrets are checked into your code. If someone gets a hold of your code, that person has access to your secrets.
+
+With this in mind, using environment variables (GitHub Secrets) to store your secrets seems wiser. This way, you can use the same secrets in your CI server, local machine, and deployment scripts. But what exactly is a GitHub secret?
+
+* "Secret" is a data type in GitHub actions used to store sensitive data that you do not want to include in your GitHub action's source code. 
+* Secrets are encrypted using a libsodium sealed box to keep them secure.
+
+```bash
+
+${{ secrets.SECRET_NAME }}
+
+```
+
+How to Create & Use GitHub Secrets?
+
+Before diving into how to create secrets, you must know that there are three types of secrets in GitHub: Repository, Environment & Organization.
+
+Repository Secrets
+* Repository Secrets are visible to everyone with access to the repository and are used to store sensitive information like deployment keys.
+* To create a repository secret, navigate to the settings tab of your repository and click on Secrets < Actions < New repository secret. Enter the name & value of the secret and click on Add button.
+
+![Github secret](https://github.com/spawnmarvel/quickguides/blob/main/security/github_secret.jpg)
+
 https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
 
-How to use GitHub Actions securely
+## How to use GitHub Actions securely
+
 https://mattermost.com/blog/how-to-use-github-actions-securely/
 
 
-GitHub Actions Security Best Practices
+## GitHub Actions Security Best Practices
+
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
 
 
