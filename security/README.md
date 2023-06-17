@@ -72,33 +72,6 @@ But on a smaller scale, mTLS is highly useful and quite practical for individual
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 
-## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
-
-Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
-
-https://github.com/spawnmarvel/quickguides/tree/main/amqp
-
-
-![Chain](https://github.com/spawnmarvel/quickguides/blob/main/security/chain.jpg)
-
-https://www.rabbitmq.com/ssl.html#peer-verification
-
-## Device authentication concepts in IoT Central
-
-Devices authenticate with the IoT Central application by using either a shared access signature (SAS) token or an X.509 certificate. X.509 certificates are recommended in production environments.
-
-### X.509 enrollment group
-
-In a production environment, using X.509 certificates is the recommended device authentication mechanism for IoT Central. To learn more, see Device Authentication using X.509 CA Certificates.
-
-An X.509 enrollment group contains a root or intermediate X.509 certificate. Devices can authenticate if they have a valid leaf certificate that's derived from the root or intermediate certificate.
-
-## SAS enrollment group
-
-A SAS enrollment group contains group-level SAS keys. Devices can authenticate if they have a valid SAS token that's derived from a group-level SAS key.
-
-https://learn.microsoft.com/en-us/azure/iot-central/core/concepts-device-authentication
-
 ## AZ-220 Implement Security (5-10%)
 
 ### Quick Reference: Key Concepts and Terminology
@@ -167,52 +140,6 @@ Cons for symmetric key
 
 https://microsoft.github.io/PartnerResources/azure/iot/assets/07ImplementSecurity
 
-## Security best practices for IoT solutions
-
-You can divide security in an IoT solution into the following three areas:
-
-* Device security: Securing the IoT device while it's deployed in the wild.
-* Connection security: Ensuring all data transmitted between the IoT device and IoT Hub is confidential and tamper-proof.
-* Cloud security: Providing a means to secure data while it moves through, and is stored in the cloud.
-
-Connection security
-
-* Use X.509 certificates to authenticate your devices to IoT Hub: IoT Hub supports both X509 certificate-based authentication and security tokens as methods for a device to authenticate with your IoT hub. If possible, use :lock: :key: X509-based authentication in production environments as it provides greater security.
-* Use Transport Layer Security (TLS) 1.2 to secure connections from devices: IoT Hub uses TLS to secure connections from IoT devices and services. 
-* Ensure you have a way to update the TLS root certificate on your devices: TLS root certificates are long-lived, but they still may expire or be revoked.
-* Consider using Azure Private Link: Azure Private Link lets you connect your devices to a private endpoint on your VNet, enabling you to block access to your IoT hub's public device-facing endpoints.
-
-https://learn.microsoft.com/en-us/azure/iot/iot-security-best-practices
-
-## Authenticating a device to IoT Hub
-
-Supported X.509 certificates
-
-* You can use any :lock: :key: X.509 certificate to authenticate a device with IoT Hub by uploading either a certificate thumbprint or a certificate authority (CA) to Azure IoT Hub.
-
-Enforcing X.509 authentication
-
-* For additional security, an IoT hub can be configured to not allow SAS authentication for devices and modules, leaving X.509 as the only accepted authentication option.
-
-```
-az resource update -n <iothubName> -g <resourceGroupName> --resource-type Microsoft.Devices/IotHubs --set properties.disableDeviceSAS=true properties.disableModuleSAS=true
-```
-
-Use SAS tokens as a device
-
-There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tokens: 
-
-* use a symmetric device key from the identity registry
-* or use a shared access key.
-
-
-https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
-
-
-
-## Transport Layer Security (TLS)
-
-https://www.techtarget.com/searchsecurity/definition/Transport-Layer-Security-TLS
 
 ## Choosing a key algorithm
 
@@ -376,6 +303,78 @@ https://www.entrust.com/knowledgebase/ssl/csr-generation-and-installation-using-
 
 https://kb.iu.edu/d/beyk
 
+
+
+
+## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
+
+Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
+
+https://github.com/spawnmarvel/quickguides/tree/main/amqp
+
+
+![Chain](https://github.com/spawnmarvel/quickguides/blob/main/security/chain.jpg)
+
+https://www.rabbitmq.com/ssl.html#peer-verification
+
+
+## Security best practices for IoT solutions
+
+You can divide security in an IoT solution into the following three areas:
+
+* Device security: Securing the IoT device while it's deployed in the wild.
+* Connection security: Ensuring all data transmitted between the IoT device and IoT Hub is confidential and tamper-proof.
+* Cloud security: Providing a means to secure data while it moves through, and is stored in the cloud.
+
+Connection security
+
+* Use X.509 certificates to authenticate your devices to IoT Hub: IoT Hub supports both X509 certificate-based authentication and security tokens as methods for a device to authenticate with your IoT hub. If possible, use :lock: :key: X509-based authentication in production environments as it provides greater security.
+* Use Transport Layer Security (TLS) 1.2 to secure connections from devices: IoT Hub uses TLS to secure connections from IoT devices and services. 
+* Ensure you have a way to update the TLS root certificate on your devices: TLS root certificates are long-lived, but they still may expire or be revoked.
+* Consider using Azure Private Link: Azure Private Link lets you connect your devices to a private endpoint on your VNet, enabling you to block access to your IoT hub's public device-facing endpoints.
+
+https://learn.microsoft.com/en-us/azure/iot/iot-security-best-practices
+
+## Device authentication concepts in IoT Central
+
+Devices authenticate with the IoT Central application by using either a shared access signature (SAS) token or an X.509 certificate. X.509 certificates are recommended in production environments.
+
+### X.509 enrollment group
+
+In a production environment, using X.509 certificates is the recommended device authentication mechanism for IoT Central. To learn more, see Device Authentication using X.509 CA Certificates.
+
+An X.509 enrollment group contains a root or intermediate X.509 certificate. Devices can authenticate if they have a valid leaf certificate that's derived from the root or intermediate certificate.
+
+## SAS enrollment group
+
+A SAS enrollment group contains group-level SAS keys. Devices can authenticate if they have a valid SAS token that's derived from a group-level SAS key.
+
+https://learn.microsoft.com/en-us/azure/iot-central/core/concepts-device-authentication
+
+
+## Authenticating a device to IoT Hub
+
+Supported X.509 certificates
+
+* You can use any :lock: :key: X.509 certificate to authenticate a device with IoT Hub by uploading either a certificate thumbprint or a certificate authority (CA) to Azure IoT Hub.
+
+Enforcing X.509 authentication
+
+* For additional security, an IoT hub can be configured to not allow SAS authentication for devices and modules, leaving X.509 as the only accepted authentication option.
+
+```
+az resource update -n <iothubName> -g <resourceGroupName> --resource-type Microsoft.Devices/IotHubs --set properties.disableDeviceSAS=true properties.disableModuleSAS=true
+```
+
+Use SAS tokens as a device
+
+There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tokens: 
+
+* use a symmetric device key from the identity registry
+* or use a shared access key.
+
+
+https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
 
 # Extra:
 
