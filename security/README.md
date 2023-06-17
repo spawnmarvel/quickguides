@@ -437,7 +437,7 @@ Managing security and analysis settings for your organization
 
 In the "Security" section of the sidebar, click  Code security and analysis.
 
-![Security overview](https://github.com/spawnmarvel/quickguides/blob/main/security/github_security_overview.jpg)
+![Github enable](https://github.com/spawnmarvel/quickguides/blob/main/security/github_enable.jpg)
 
 You can enable or disable features for all repositories. The impact of your changes on repositories in your organization is determined by their visibility:
 
@@ -456,6 +456,8 @@ When you enable one or more security and analysis features for existing reposito
 
 When you open the mail you can drill down to where the issue is located at.
 
+
+![Security overview](https://github.com/spawnmarvel/quickguides/blob/main/security/github_security_overview.jpg)
 
 https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization
 
