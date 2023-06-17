@@ -325,7 +325,7 @@ https://kb.iu.edu/d/beyk
 
 
 
-## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
+## AMQP Advanced Message Queuing Protocol
 
 Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
 
