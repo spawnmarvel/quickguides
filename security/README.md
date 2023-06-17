@@ -181,6 +181,25 @@ https://cloud.google.com/certificate-authority-service/docs/choosing-key-algorit
 The certreq command can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
 
 
+```cmd
+# Open command prompt and make sure you have the full admin rights on the server to do this step
+# certreq -new
+
+certreq –new request.inf certificate.req
+
+
+# When your certificate is issued you'll typically receive a file called certificate.crt
+# Save it on the server and from the same directory run:
+# The –accept parameter links the previously generated private key with the issued certificate and removes 
+# the pending certificate request from the system where the certificate is requested (if there is a matching request).
+# To manually accept a certificate
+
+certreq -accept certificate.crt
+
+# This will install the cert in the Windows certificate store and it will be available in IIS , MMC , Exchange , 
+# LDAP/Active Directory , Terminal Services and those products that make use of the Windows certificate store.
+```
+
 
 | Key | Description | Example
 | --- | ----------- | ----
