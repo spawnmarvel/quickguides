@@ -525,11 +525,17 @@ https://mattermost.com/blog/how-to-use-github-actions-securely/
 * Set minimum scope for credentials, the GITHUB_TOKEN should always be granted the minimum required permissions to execute a workflow/job.
 * * You should make use of the ‘permission’ key in your workflows to configure the minimum required permissions for a workflow or job. This will allow fine-grained control over the privileges of your GitHub Actions.
 * Use specific action version tags
+* * Typically, when people make their own workflows on GitHub, they use Actions made by someone else. Almost all workflows begin with a step like the one below:
 
 ```yaml
  - name: Checkout repository
    uses: actions/checkout@v3
 ```
+
+* * The important part to consider is how it checks out your code. That line that starts with “uses” means that there’s some work going on behind the scenes to get the code from your GitHub repo to the server that is running your workflow. For the “actions/checkout” action, that behind-the-scenes stuff lives in its own repo. 
+* * No one has the time to watch for updates on every third-party action they use, but luckily GitHub gives us a way to prevent updates from altering the actions we use. Rather than running an action with a tag from the repo, you can use a commit hash.
+* Don’t use plain-text secrets
+* Don’t reference values that you don’t control, GitHub allows you to use ${{}} brackets to reference secrets and other values from your GitHub environment.
 
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
 
