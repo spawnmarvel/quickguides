@@ -325,7 +325,7 @@ https://kb.iu.edu/d/beyk
 
 
 
-## AMQP Advanced Message Queuing Protocol
+# AMQP Advanced Message Queuing Protocol
 
 Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
 
@@ -364,7 +364,7 @@ Authentication, Authorisation, Access Control AMQP
 https://www.rabbitmq.com/access-control.html
 
 
-## Security best practices for IoT solutions
+# Security best practices for IoT solutions
 
 You can divide security in an IoT solution into the following three areas:
 
@@ -544,7 +544,7 @@ https://mattermost.com/blog/how-to-use-github-actions-securely/
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
 
 
-## Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
+# Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
 
 https://learn.microsoft.com/en-us/certifications/exams/sc-900/
 
