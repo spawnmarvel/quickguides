@@ -450,6 +450,7 @@ You can enable or disable features for all repositories. The impact of your chan
 
 When you enable one or more security and analysis features for existing repositories, you will see any results displayed on GitHub within minutes
 
+![Github detect](https://github.com/spawnmarvel/quickguides/blob/main/security/github_detect.jpg)
 
 https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization
 
