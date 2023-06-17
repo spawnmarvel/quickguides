@@ -337,7 +337,7 @@ https://github.com/spawnmarvel/quickguides/tree/main/amqp
 https://www.rabbitmq.com/ssl.html#peer-verification
 
 
-## Shovls
+## AMQP Shovels
 
 Connecting brokers with the Shovel plugin is conceptually similar to connecting them with Federation. However, the plugin works at a lower level.
 
