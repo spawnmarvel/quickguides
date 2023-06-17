@@ -424,6 +424,12 @@ https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#
 
 # CI/CD Github Actions TODO
 
+Implement CI/CD with GitHub – Deploy Azure Functions
+
+https://follow-e-lo.com/2023/06/13/implement-ci-cd-with-github-deploy-azure-functions/
+
+
+
 How to Protect Secrets When Using GitHub Actions?
 https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
 
