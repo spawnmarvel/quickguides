@@ -491,6 +491,16 @@ Repository Secrets
 
 ![Github secret](https://github.com/spawnmarvel/quickguides/blob/main/security/github_secret.jpg)
 
+Environment Secrets
+* Environment secrets are tied to repository-level secrets, but these are linked to specific examples such as dev, staging, or prod. These types of secrets are useful when you have multiple testing environments, each of which has different resources.
+* To create an environment secret, navigate to the settings tab of the repository and click on Environments < Choose Environment < Environment Secrets < Add Secret. Enter the name & value of the secret and click Add secret.
+
+Organization Secrets
+* Organization Secrets are visible to members of the organization and are used to store sensitive information like API keys. You can also limit the repositories that can access those secrets.
+* To create an organization secret, navigate to the main page of the organization (for example, https://github.com/Mergifyio) and click on Settings < Secrets < Actions < New organization secret. Enter the secret details and click on Add secret button.
+
+Note: You must have Admin level privileges to create an organization secret.
+
 https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
 
 ## How to use GitHub Actions securely
