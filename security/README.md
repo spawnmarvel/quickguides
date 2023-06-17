@@ -422,13 +422,28 @@ There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tok
 
 https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
 
-# CI/CD Github Actions TODO
+# CI/CD Github Actions 
 
 Implement CI/CD with GitHub – Deploy Azure Functions
 
 https://follow-e-lo.com/2023/06/13/implement-ci-cd-with-github-deploy-azure-functions/
 
 
+Configure the Microsoft Security DevOps GitHub action
+
+https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action
+
+Managing security and analysis settings for your organization
+
+In the "Security" section of the sidebar, click  Code security and analysis.
+
+You can enable or disable features for all repositories. The impact of your changes on repositories in your organization is determined by their visibility:
+
+
+When you enable one or more security and analysis features for existing repositories, you will see any results displayed on GitHub within minutes
+
+
+https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-security-and-analysis-settings-for-your-organization
 
 How to Protect Secrets When Using GitHub Actions?
 https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
@@ -436,8 +451,6 @@ https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
 How to use GitHub Actions securely
 https://mattermost.com/blog/how-to-use-github-actions-securely/
 
-Configure the Microsoft Security DevOps GitHub action
-https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action
 
 GitHub Actions Security Best Practices
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
