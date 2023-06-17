@@ -437,6 +437,8 @@ Managing security and analysis settings for your organization
 
 In the "Security" section of the sidebar, click  Code security and analysis.
 
+![Security overview](https://github.com/spawnmarvel/quickguides/blob/main/security/security_overview.jpg)
+
 You can enable or disable features for all repositories. The impact of your changes on repositories in your organization is determined by their visibility:
 
 * Private vulnerability reporting - Your changes affect public repositories only.
