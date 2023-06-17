@@ -6,6 +6,13 @@ Representation and Verification of Domain-Based Application Service Identity wit
 
 https://datatracker.ietf.org/doc/html/rfc6125
 
+
+## Public Key Infrastructure (PKI) In a Nutshell
+
+* Public key infrastructure is technology used to prove one’s identity by 3rd party
+* To declare trust to a Certificate authority (CA), you must install the CA certificate in folder called trusted root certification authority in windows for example.
+* Now after you declare that you trust these CAs, anyone who has a valid certificate obtained by one of your CAs will be trusted on your machine
+
 ## What is mutual TLS (mTLS)?
 
 Mutual TLS (mTLS) is a type of authentication in which the two parties in a connection authenticate each other using the TLS protocol.
