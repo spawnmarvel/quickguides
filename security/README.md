@@ -439,6 +439,14 @@ In the "Security" section of the sidebar, click  Code security and analysis.
 
 You can enable or disable features for all repositories. The impact of your changes on repositories in your organization is determined by their visibility:
 
+* Private vulnerability reporting - Your changes affect public repositories only.
+* Dependency graph - Your changes affect only private repositories because the feature is always enabled for public repositories.
+* Dependabot alerts - Your changes affect all repositories.
+* Dependabot security updates - Your changes affect all repositories.
+* Secret scanning - Your changes affect public repositories and public npm packages these repositories may depend on. This option controls whether or not secret scanning alerts for users are enabled. Secret scanning alerts for partners always runs on all public repositories.
+* Code scanning - Your changes affect public repositories
+
+![Code security and analysis](https://github.com/spawnmarvel/quickguides/blob/main/security/git_hub_code_security_and_analysis.jpg)
 
 When you enable one or more security and analysis features for existing repositories, you will see any results displayed on GitHub within minutes
 
