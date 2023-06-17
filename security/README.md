@@ -337,6 +337,18 @@ https://github.com/spawnmarvel/quickguides/tree/main/amqp
 https://www.rabbitmq.com/ssl.html#peer-verification
 
 
+## AMQP, RabbitMQ From A Different Machine Or Network (bitnami)
+
+Connect To RabbitMQ From A Different Machine Or Network (bitnami)
+https://docs.bitnami.com/google-templates/infrastructure/rabbitmq/administration/connect-remotely/
+
+## Authentication, Authorisation, Access Control AMQP
+
+Authentication, Authorisation, Access Control AMQP
+
+https://www.rabbitmq.com/access-control.html
+
+
 ## Security best practices for IoT solutions
 
 You can divide security in an IoT solution into the following three areas:
@@ -395,22 +407,7 @@ There are two ways to obtain DeviceConnect permissions with IoT Hub with SAS tok
 
 https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
 
-# Extra:
-
-## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
-
-https://follow-e-lo.com/2023/04/25/create-an-azure-service-principal-with-azure-powershell/
-
-## Use a Windows VM system-assigned managed identity to access Azure Storage via a SAS credential
-
-https://follow-e-lo.com/2022/08/13/5min-tutorial-use-a-windows-vm-system-assigned-managed-identity-to-access-azure-storage/
-
-
-## More links to read and OSI
-
-
-Connect To RabbitMQ From A Different Machine Or Network (bitnami)
-https://docs.bitnami.com/google-templates/infrastructure/rabbitmq/administration/connect-remotely/
+# CI/CD Github Actions TODO
 
 How to Protect Secrets When Using GitHub Actions?
 https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
@@ -424,8 +421,18 @@ https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action
 GitHub Actions Security Best Practices
 https://blog.gitguardian.com/github-actions-security-cheat-sheet/
 
-Authentication, Authorisation, Access Control AMQP
-https://www.rabbitmq.com/access-control.html
 
-Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
+## Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
+
 https://learn.microsoft.com/en-us/certifications/exams/sc-900/
+
+
+# Extra:
+
+## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
+
+https://follow-e-lo.com/2023/04/25/create-an-azure-service-principal-with-azure-powershell/
+
+## Use a Windows VM system-assigned managed identity to access Azure Storage via a SAS credential
+
+https://follow-e-lo.com/2022/08/13/5min-tutorial-use-a-windows-vm-system-assigned-managed-identity-to-access-azure-storage/
