@@ -340,6 +340,21 @@ https://www.rabbitmq.com/ssl.html#peer-verification
 ## AMQP, RabbitMQ From A Different Machine Or Network (bitnami)
 
 Connect To RabbitMQ From A Different Machine Or Network (bitnami)
+
+The recommended way for connecting two instances deployed in different networks is by using VPC network peering. 
+
+* Virtual Private Clouds (VPCs), even if those instances belong to different projects or are hosted in different regions. 
+* This feature, known as VPC Network Peering, can result in better security (as services do not need to be exposed on public IP addresses) and performance (due to use of private, rather than public, networks and IP addresses).
+
+If you must make it accessible over a public IP address, we recommend restricting access to a trusted list of source IP addresses and ports using firewall rules. 
+
+To do so, follow the instructions below.
+
+* Option 1: Peer both virtual networks to secure the connections between the two instances.
+* Option 2: Create an SSH tunnel to connect the application using the public IP address. 
+* Option 3: Make the server publicly accessible and restrict access to a trusted list of source IP addresses using firewall rules.
+
+
 https://docs.bitnami.com/google-templates/infrastructure/rabbitmq/administration/connect-remotely/
 
 ## Authentication, Authorisation, Access Control AMQP
