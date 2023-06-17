@@ -505,6 +505,19 @@ https://blog.mergify.com/how-to-protect-secrets-when-using-github-actions/
 
 ## How to use GitHub Actions securely
 
+A combined source control solution with CI/CD pipelines is a powerful capability, as organizations can manage their application lifecycle processes from within a single solution. But at the same time, organizations should watch out for potential security risks and threats if the solution’s implementation doesn’t have security as the core focus.
+
+Securing your software development and application release chain entails several different mechanisms and scenarios to keep under control. This article focuses on five ways to use GitHub Actions securely:
+
+1. Use trusted code
+* One of the most vital features of GitHub source control is the built-in secure code scanning tool, based on CodeQL and Dependabot. Code scanning is available for public and private repositories in a GitHub Enterprise Advanced Security licensed scenario.
+2. Self-hosted runners versus public-hosted runners
+3. Understand the pull_request trigger and the vulnerabilities it creates
+4. Understand the risks coming with script injections and how to prevent them
+5. Efficiently managing secrets and authentication (OpenID Connect)
+
+
+
 https://mattermost.com/blog/how-to-use-github-actions-securely/
 
 
