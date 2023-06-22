@@ -75,7 +75,6 @@ TLS, accomplishes these goals.
 
 But on a smaller scale, mTLS is highly useful and quite practical for individual organizations, especially when those organizations employ a Zero Trust approach to network security.
 
-
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 
@@ -567,6 +566,17 @@ https://learn.microsoft.com/en-us/certifications/exams/sc-900/
 
 
 # Extra:
+
+##  Cogent Aveva Secure plant to cloud
+
+With the DataHub IoT Gateway you never need Internet access on the plant network. 
+
+Using the DataHub within a DMZ means no inbound firewall ports on either the plant network or the cloud.
+
+The DataHub on the plant network provides an outbound connection to the DMZ, and the DataHub on the DMZ uses an outbound MQTT connection to send data to the cloud.
+
+https://www.aveva.com/en/products/datahub-iot-gateway/
+
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
 
