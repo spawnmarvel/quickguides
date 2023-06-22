@@ -577,6 +577,13 @@ The DataHub on the plant network provides an outbound connection to the DMZ, and
 
 https://www.aveva.com/en/products/datahub-iot-gateway/
 
+## DATAHUB IOT GATEWAY
+
+The DataHub® IoT Gateway™ streams real-time OPC UA and OPC DA industrial data directly into Manufacturing Execution Systems (MES), device clouds, and Big Data analytics platforms.
+
+
+https://cogentdatahub.com/products/datahub-iot-gateway/
+
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
 
