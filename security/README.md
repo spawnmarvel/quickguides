@@ -78,6 +78,21 @@ But on a smaller scale, mTLS is highly useful and quite practical for individual
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 
+## Azure best practices for network security
+
+| Practise           | Description
+| ------------------ | --------------------------------------------
+| Use strong network controls | You can connect Azure virtual machines (VMs) and appliances to other networked devices by placing them on Azure virtual networks
+| Logically segment subnets   | Azure virtual networks are similar to LANs on your on-premises network. The idea behind an Azure virtual network is that you create a network, based on a single private IP address space, on which you can place all your Azure virtual machines.
+| Adopt a Zero Trust approach |
+| Control routing behavior | You can configure the next-hop address to reach specific destinations.
+| Use virtual network appliances | Network security groups and user-defined routing can provide a certain measure of network security at the network and transport layers of the OSI model. But in some situations, you want or need to enable security at high levels of the stack.
+| Deploy perimeter networks for security zones | A perimeter network (also known as a DMZ) is a physical or logical network segment that provides an extra layer of security between your assets and the internet. Specialized network access control devices on the edge of a perimeter network allow only desired traffic into your virtual network.
+| Avoid exposure to the internet with dedicated WAN links | Site-to-site VPN. It's a trusted, reliable, and established technology, but the connection takes place over the internet. Bandwidth is constrained to a maximum of about 1.25 Gbps. Site-to-site VPN is a desirable option in some scenarios. <br/>Azure ExpressRoute. We recommend that you use ExpressRoute for your cross-premises connectivity. ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection facilitated by a connectivity provider. 
+
+
+https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices
+
 ## AZ-220 Implement Security (5-10%)
 
 ### Quick Reference: Key Concepts and Terminology
@@ -389,6 +404,13 @@ To do so, follow the instructions below.
 
 https://docs.bitnami.com/google-templates/infrastructure/rabbitmq/administration/connect-remotely/
 
+## How to connect to remote RabbitMQ Server behind a corporation proxy
+
+RabbitMQ client libraries need to be able to resolve hostnames and TCP connectivity to the target host(s), so if a SOCKS proxy configuration provides those things, there really isn't much else to configure.
+
+
+https://groups.google.com/g/rabbitmq-users/c/b2zrs3FKiLo?pli=1
+
 ## Authentication, Authorisation, Access Control AMQP
 
 Authentication, Authorisation, Access Control AMQP
@@ -599,6 +621,40 @@ The DataHub® IoT Gateway™ streams real-time OPC UA and OPC DA industrial data
 
 
 https://cogentdatahub.com/products/datahub-iot-gateway/
+
+
+## Manually install IBM WebSphere Application Server Network Deployment traditional on Azure Virtual Machines
+
+* Create a custom virtual network and create the VMs within the network.
+* Install WebSphere Application Server Network Deployment traditional on the VMs by using the graphical interface manually.
+* Configure a WAS cluster by using the Profile Management Tool.
+* Configure a PostgreSQL datasource connection in the cluster.
+* Deploy and run a Java EE application in the cluster.
+* Expose the application to the public internet via Azure Application Gateway.
+* Validate the successful configuration.
+
+https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-websphere-to-azure-vm-manually
+
+# How to build a DMZ server in Azure
+
+In general a web-server running in Azure could be protect with an Azure Application Gateway with WAF:
+
+https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview
+
+
+
+Azure routes traffic between Azure, on-premises, and Internet resources. Azure automatically creates a route table for each subnet within an Azure virtual network and adds system default routes to the table.
+
+You can a DMZ in Azure Cloud within your subscription or tenant. The concept of a DMZ or perimeter network is not new; DMZ is a layered network security approach to minimize the attack footprint of an application.
+
+Best Practices
+
+* Segment- Multiple Azure Networks within a single vNET with large IP Address space.
+* Control- Create multiple NSGs, associate FrontEnd NSG and Backend NSG with untrusted and trusted network respectively to control to and from Azure.
+* Enforce – Enforce user-defined rules to allow only desired TCP & UDP traffic to the vNET, Use Virtual Network Appliance and Perimeter Networks at all times for Enterprise Azure deployment. 
+* * Disable RDP at the VM level and allow RDP at the FrontEnd NSG. Use a jump box in the DMZ to access workloads.
+
+https://araihan.wordpress.com/2018/10/03/build-dmz-in-azure-cloud/
 
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
