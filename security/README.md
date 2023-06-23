@@ -182,6 +182,22 @@ For subordinate CAs with a shorter lifetime, it is sufficient to use smaller key
 
 https://cloud.google.com/certificate-authority-service/docs/choosing-key-algorithm
 
+
+## MMC Create CSR and Key with Microsoft Management Console (MMC)
+
+
+“Certificate Enrollment Requests” is where the private portion of your key is stored after generating a CSR while waiting for a CA’s response.
+
+1. The contents of this file will be sent to your CA when you order an SSL Certificate. 
+2. If you look under the “Certificate Enrollment Requests” node, you will see an object corresponding to the CSR awaiting the CA’s response.
+3. When the CA returns a response, it can be imported by right clicking on the “Personal” node and selecting All Tasks -> Import. 
+5. The enrollment request will disappear from “Certificate Enrollment Requests” and be replaced by an entry in the “Personal” node corresponding to your newly signed certificate. 
+6. It is now available for use by software on your system, or available to be exported by right clicking the certificate and choosing
+
+
+
+https://www.ssltrust.com.au/help/setup-guides/microsoft-certificates-mmc
+
 ## certreq
 
 The certreq command can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
