@@ -89,6 +89,8 @@ https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 | Use virtual network appliances | Network security groups and user-defined routing can provide a certain measure of network security at the network and transport layers of the OSI model. But in some situations, you want or need to enable security at high levels of the stack.
 | Deploy perimeter networks for security zones | A perimeter network (also known as a DMZ) is a physical or logical network segment that provides an extra layer of security between your assets and the internet. Specialized network access control devices on the edge of a perimeter network allow only desired traffic into your virtual network.
 | Avoid exposure to the internet with dedicated WAN links | Site-to-site VPN. It's a trusted, reliable, and established technology, but the connection takes place over the internet. Bandwidth is constrained to a maximum of about 1.25 Gbps. Site-to-site VPN is a desirable option in some scenarios. <br/>Azure ExpressRoute. We recommend that you use ExpressRoute for your cross-premises connectivity. ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection facilitated by a connectivity provider. 
+| Disable RDP/SSH Access to virtual machines | Bastion, Jump server, Point-to-site VPN,  site-to-site VPN, ExpressRoute.
+| Secure your critical Azure service resources to only your virtual networks | Improved security for your Azure service resources: With Azure Private Link<br>Privately access Azure service resources on the Azure platform<br/>Access from On-premises and peered networks<br/>Protection against data leakage<br/>
 
 
 https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices
