@@ -95,6 +95,24 @@ https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
 https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices
 
+## DMZ network
+
+In computer security, a :bridge_at_night:DMZ network (sometimes referred to as a “demilitarized zone”) functions as a subnetwork containing an organization's exposed, outward-facing services. It acts as the exposed point to an untrusted network, commonly the internet.
+
+The goal of a :bridge_at_night:DMZ is to add an extra layer of security to an organization's local area network. A protected and monitored network node that faces outside the internal network can access what is exposed in the :bridge_at_night:DMZ, while the rest of the organization's network is safe behind a firewall.
+
+When implemented properly, a :bridge_at_night:DMZ network gives organizations extra protection in detecting and mitigating security breaches before they reach the internal network, where valuable assets are stored.
+
+https://www.barracuda.com/support/glossary/dmz-network
+
+## Implement a secure hybrid network
+
+This reference architecture shows a secure hybrid network that extends an on-premises network to Azure. The architecture implements a perimeter network, also called a :bridge_at_night:DMZ, between the on-premises network and an Azure virtual network. All inbound and outbound traffic passes through Azure Firewall.
+
+![Azure DMZ ](https://github.com/spawnmarvel/quickguides/tree/main/security/azure-dmz.jpg)
+
+https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?tabs=portal
+
 ## AZ-220 Implement Security (5-10%)
 
 ### Quick Reference: Key Concepts and Terminology
