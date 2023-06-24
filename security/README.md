@@ -103,6 +103,8 @@ The goal of a :bridge_at_night:DMZ is to add an extra layer of security to an or
 
 When implemented properly, a :bridge_at_night:DMZ network gives organizations extra protection in detecting and mitigating security breaches before they reach the internal network, where valuable assets are stored.
 
+![DMZ ](https://github.com/spawnmarvel/quickguides/blob/main/security/dmz.jpg)
+
 https://www.barracuda.com/support/glossary/dmz-network
 
 ## Implement a secure hybrid network
