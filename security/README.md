@@ -101,20 +101,20 @@ https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-pract
 
 Three widely used authentication types are X.509 certificates, Trusted Platform Modules (TPM), and symmetric keys.
 
-X.509 certificate - A type of digital identity you can use for authentication. The X.509 certificate standard is documented in IETF RFC 5280. 
+:lock: :key: X.509 certificate - A type of digital identity you can use for authentication. The :lock: :key: X.509 certificate standard is documented in IETF RFC 5280. 
 
 In Azure IoT, there are two ways to authenticate certificates:
 
 * Thumbprint. A thumbprint algorithm is run on a certificate to generate a hexadecimal string. The generated string is a unique identifer for the certificate.
 * :lock: :key: CA authentication based on a full chain. A certificate chain is a hierarchical list of all certificates needed to authenticate an end-entity (EE) certificate. To authenticate an EE certificate, it’s necessary to authenticate each certificate in the chain including a trusted root CA.
 
-Pros for X.509
+Pros for :lock: :key: X.509
 
-* X.509 is the most secure authentication type supported in Azure IoT.
-* X.509 allows a high level of control for purposes of certificate management.
+* :lock: :key: X.509 is the most secure authentication type supported in Azure IoT.
+* :lock: :key: X.509 allows a high level of control for purposes of certificate management.
 * Many vendors are available to provide X.509 based authentication solutions.
 
-Cons for X.509
+Cons for :lock: :key: X.509
 
 * Many customers may need to rely on external vendors for their certificates.
 * Certificate management can be costly and adds to total solution cost.
@@ -124,7 +124,7 @@ Trusted Platform Module (TPM) - A standard for securely generating and storing c
 
 There are two key differences between TPMs and symmetric keys:
 
-* TPM chips can also store X.509 certificates.
+* TPM chips can also store :lock: :key: X.509 certificates.
 * TPM attestation in DPS uses the TPM endorsement key (EK), a form of asymmetric authentication. With asymmetric authentication, a public key is used for encryption, and a separate private key is used for decryption. In contrast, symmetric keys use symmetric authentication, where the private key is used for both encryption and decryption.
 
 Pros for TPM
@@ -364,7 +364,7 @@ https://kb.iu.edu/d/beyk
 
 
 
-# AMQP Advanced Message Queuing Protocol
+# AMQP Advanced Message Queuing Protocol mTLS
 
 Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
 
@@ -418,6 +418,14 @@ https://groups.google.com/g/rabbitmq-users/c/b2zrs3FKiLo?pli=1
 Authentication, Authorisation, Access Control AMQP
 
 https://www.rabbitmq.com/access-control.html
+
+## How To Set Up SSL/TLS Client (Mutual) Authentication Between An IBM WebSphere Application Server And The IBM Web Server Plug-in
+
+SSL/TLS Client authentication (AKA Mutual authentication) is similar to regular, server authentication except that the server requests a certificate from the client to verify the client is who they claim to be. The certificate must be an :lock: :key: X.509 certificate and signed by a certificate authority (CA) trusted by the server.
+
+Ultimately, SSL/TLS Client/Mutual authentication provides a more secure method for the server to verify the client's identity. This can be useful with IBM WebSphere Application Server (WAS) when a Web Server is configured on a remote machine in front of WAS. When the Web Server is located on a remote machine, communications between WAS and the Web Server Plug-in might occur over the Internet, which exposes the data. Enabling SSL/TLS Client/Mutual authentication will not only encrypt the data like the standard, Server authentication; but it will also provide a higher level of verification of the client entity to ensure the client can be trusted.
+
+https://www.ibm.com/support/pages/how-set-ssltls-client-mutual-authentication-between-ibm-websphere-application-server-and-ibm-web-server-plug
 
 
 # Security best practices for IoT solutions
