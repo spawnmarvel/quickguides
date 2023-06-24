@@ -386,7 +386,7 @@ https://kb.iu.edu/d/beyk
 
 # AMQP Advanced Message Queuing Protocol mTLS
 
-Example with AMQPS and client/server (shovel) configured with X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
+Example with AMQPS and client/server (shovel) configured with :lock: :key:X.509 running mTls(Tls), and information about the AMQP approved as an open standard.
 
 https://github.com/spawnmarvel/quickguides/tree/main/amqp
 
