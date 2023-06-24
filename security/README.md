@@ -647,7 +647,7 @@ https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview
 
 Azure routes traffic between Azure, on-premises, and Internet resources. Azure automatically creates a route table for each subnet within an Azure virtual network and adds system default routes to the table.
 
-You can a :bridge_at_night:dmz in Azure Cloud within your subscription or tenant. The concept of a :bridge_at_night:dmz or perimeter network is not new; :bridge_at_night:dmz is a layered network security approach to minimize the attack footprint of an application.
+You can build :bridge_at_night:dmz in Azure Cloud within your subscription or tenant. The concept of a :bridge_at_night:dmz or perimeter network is not new; :bridge_at_night:dmz is a layered network security approach to minimize the attack footprint of an application.
 
 Best Practices
 
