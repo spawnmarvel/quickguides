@@ -87,7 +87,7 @@ https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 | Adopt a Zero Trust approach |
 | Control routing behavior | You can configure the next-hop address to reach specific destinations.
 | Use virtual network appliances | Network security groups and user-defined routing can provide a certain measure of network security at the network and transport layers of the OSI model. But in some situations, you want or need to enable security at high levels of the stack.
-| Deploy perimeter networks for security zones | A perimeter network (also known as a :church:dmz) is a physical or logical network segment that provides an extra layer of security between your assets and the internet. Specialized network access control devices on the edge of a perimeter network allow only desired traffic into your virtual network.
+| Deploy perimeter networks for security zones | A perimeter network (also known as a :bridge_at_night:dmz) is a physical or logical network segment that provides an extra layer of security between your assets and the internet. Specialized network access control devices on the edge of a perimeter network allow only desired traffic into your virtual network.
 | Avoid exposure to the internet with dedicated WAN links | Site-to-site VPN. It's a trusted, reliable, and established technology, but the connection takes place over the internet. Bandwidth is constrained to a maximum of about 1.25 Gbps. Site-to-site VPN is a desirable option in some scenarios. <br/>Azure ExpressRoute. We recommend that you use ExpressRoute for your cross-premises connectivity. ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection facilitated by a connectivity provider. 
 | Disable RDP/SSH Access to virtual machines | Bastion, Jump server, Point-to-site VPN,  site-to-site VPN, ExpressRoute.
 | Secure your critical Azure service resources to only your virtual networks | Improved security for your Azure service resources: With Azure Private Link<br>Privately access Azure service resources on the Azure platform<br/>Access from On-premises and peered networks<br/>Protection against data leakage<br/>
@@ -611,9 +611,9 @@ https://learn.microsoft.com/en-us/certifications/exams/sc-900/
 
 With the DataHub IoT Gateway you never need Internet access on the plant network. 
 
-Using the DataHub within a :church:dmz means no inbound firewall ports on either the plant network or the cloud.
+Using the DataHub within a :bridge_at_night:dmz means no inbound firewall ports on either the plant network or the cloud.
 
-The DataHub on the plant network provides an outbound connection to the :church:dmz, and the DataHub on the :church:dmz uses an outbound MQTT connection to send data to the cloud.
+The DataHub on the plant network provides an outbound connection to the :bridge_at_night:dmz, and the DataHub on the :bridge_at_night:dmz uses an outbound MQTT connection to send data to the cloud.
 
 https://www.aveva.com/en/products/datahub-iot-gateway/
 
@@ -637,7 +637,7 @@ https://cogentdatahub.com/products/datahub-iot-gateway/
 
 https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-websphere-to-azure-vm-manually
 
-# How to build a :church:dmz server in Azure
+# How to build a :bridge_at_night:dmz server in Azure
 
 In general a web-server running in Azure could be protect with an Azure Application Gateway with WAF:
 
@@ -647,16 +647,16 @@ https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview
 
 Azure routes traffic between Azure, on-premises, and Internet resources. Azure automatically creates a route table for each subnet within an Azure virtual network and adds system default routes to the table.
 
-You can a :church:dmz in Azure Cloud within your subscription or tenant. The concept of a :church:dmz or perimeter network is not new; :church:dmz is a layered network security approach to minimize the attack footprint of an application.
+You can a :bridge_at_night:dmz in Azure Cloud within your subscription or tenant. The concept of a :bridge_at_night:dmz or perimeter network is not new; :bridge_at_night:dmz is a layered network security approach to minimize the attack footprint of an application.
 
 Best Practices
 
 * Segment- Multiple Azure Networks within a single vNET with large IP Address space.
 * Control- Create multiple NSGs, associate FrontEnd NSG and Backend NSG with untrusted and trusted network respectively to control to and from Azure.
 * Enforce – Enforce user-defined rules to allow only desired TCP & UDP traffic to the vNET, Use Virtual Network Appliance and Perimeter Networks at all times for Enterprise Azure deployment. 
-* * Disable RDP at the VM level and allow RDP at the FrontEnd NSG. Use a jump box in the :church:dmz to access workloads.
+* * Disable RDP at the VM level and allow RDP at the FrontEnd NSG. Use a jump box in the :bridge_at_night:dmz to access workloads.
 
-https://araihan.wordpress.com/2018/10/03/build-:church:dmz-in-azure-cloud/
+https://araihan.wordpress.com/2018/10/03/build-:bridge_at_night:dmz-in-azure-cloud/
 
 
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
