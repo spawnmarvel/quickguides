@@ -109,7 +109,7 @@ https://www.barracuda.com/support/glossary/dmz-network
 
 This reference architecture shows a secure hybrid network that extends an on-premises network to Azure. The architecture implements a perimeter network, also called a :bridge_at_night:DMZ, between the on-premises network and an Azure virtual network. All inbound and outbound traffic passes through Azure Firewall.
 
-![Azure DMZ ](https://github.com/spawnmarvel/quickguides/tree/main/security/azure-dmz.jpg)
+![Azure DMZ ](https://github.com/spawnmarvel/quickguides/blob/main/security/azure-dmz.jpg)
 
 https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?tabs=portal
 
