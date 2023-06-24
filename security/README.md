@@ -656,9 +656,6 @@ Best Practices
 * Enforce – Enforce user-defined rules to allow only desired TCP & UDP traffic to the vNET, Use Virtual Network Appliance and Perimeter Networks at all times for Enterprise Azure deployment. 
 * * Disable RDP at the VM level and allow RDP at the FrontEnd NSG. Use a jump box in the :bridge_at_night:dmz to access workloads.
 
-https://araihan.wordpress.com/2018/10/03/build-:bridge_at_night:dmz-in-azure-cloud/
-
-
 ## Create an Azure service principal with Azure PowerShell (SPN) key vault RBAC
 
 https://follow-e-lo.com/2023/04/25/create-an-azure-service-principal-with-azure-powershell/
