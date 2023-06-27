@@ -383,6 +383,21 @@ https://kb.iu.edu/d/beyk
 
 
 
+## Request my SSL certificate example
+
+Choose
+
+![Chain](https://github.com/spawnmarvel/quickguides/blob/main/security/request_ssl.jpg)
+
+Paste
+
+![Chain](https://github.com/spawnmarvel/quickguides/blob/main/security/request_ssl_paste.jpg)
+
+
+
+https://uk.godaddy.com/help/request-my-ssl-certificate-562
+
+
 
 # AMQP Advanced Message Queuing Protocol mTLS
 
