@@ -667,6 +667,29 @@ The DataHub® IoT Gateway™ streams real-time OPC UA and OPC DA industrial data
 
 https://cogentdatahub.com/products/datahub-iot-gateway/
 
+## Cogent Documentation 3.12.3.1. Azure IoT Hub
+
+
+Because MQTT is a messaging protocol, not a data communications protocol, it does not specify a particular format for making a connection or the data payload. Thus, each MQTT implementation can be different with its own, unique connection characteristics.
+
+Our Standard MQTT option provides a generic way to configure a connection to any MQTT broker. In addition, we offer the following pre-configured options to facilitate connecting to Azure [...]
+
+* IoT Hub Name
+* Device Name
+* Tell IoT Hub to treat messages as JSON text instead of binary.
+* Subscribe to cloud-to-device events
+
+Azure IoT Hub does not allow a client application to subscribe to a topic. That is the way Azure is designed. It was never intended to be a general-purpose MQTT broker. The only way to get data from Azure via MQTT is through a mechanism called “Cloud-to-device events”. There is a setting in the DataHub configuration for that. You need to generate the events from the Azure portal. The Azure documentation can provide more information:
+https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messaging
+
+* CA Certificates
+* * DataHub software supports CA certificates for SSL, in either PEM or PFX format. To use a CA certificate you need to do the following in your Azure IoT Hub configuration : [...]
+* Azure IoT Password Creation
+* * The Azure IoT password is an SAS token. To generate the SAS token:
+
+
+https://cogentdatahub.com/library/documentation/
+
 
 ## Manually install IBM WebSphere Application Server Network Deployment traditional on Azure Virtual Machines
 
