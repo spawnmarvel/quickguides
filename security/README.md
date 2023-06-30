@@ -445,6 +445,16 @@ https://github.com/spawnmarvel/quickguides/tree/main/amqp
 https://www.rabbitmq.com/ssl.html#peer-verification
 
 
+## Exchange events between consumers and producers that use different protocols: AMQP, Kafka, and HTTPS
+
+Azure Event Hubs supports three protocols for consumers and producers: AMQP, Kafka, and HTTPS. 
+Each one of these protocols has its own way of representing a message, so naturally the following question arises: 
+1. if an application sends events to an Event Hub with one protocol and consumes them with a different protocol, what do the various parts and values of the event look like when they arrive at the consumer? 
+
+This article discusses best practices for both producer and consumer to ensure that the values within an event are correctly interpreted by the consuming application.
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-exchange-events-different-protocols
+
 ## AMQP Shovels
 
 Connecting brokers with the Shovel plugin is conceptually similar to connecting them with Federation. However, the plugin works at a lower level.
