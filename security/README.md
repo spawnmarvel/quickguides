@@ -1,4 +1,4 @@
-# ChatGTP
+# ChatGPT
 
 When it comes to secure data transfer over the internet, there are several best practices you can follow to protect your data. Here are some key recommendations:
 
