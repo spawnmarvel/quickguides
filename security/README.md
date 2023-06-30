@@ -25,6 +25,12 @@ When it comes to secure data transfer over the internet, there are several best 
 
 Remember, security is an ongoing process, and it is essential to stay updated with the latest security practices and emerging threats. Consider consulting with cybersecurity professionals to ensure you are following the most up-to-date and appropriate security measures for your specific use case
 
+# Vicuna extra
+
+Use a VPN: Consider using a virtual private network (VPN) to encrypt and secure the data as it travels over the internet.
+Use access controls: Use access controls such as user authentication and authorization to ensure that only authorized individuals can access the data.
+Use a reputable service provider: Choose a reputable service provider with a track record of security and data protection.
+
 
 # General security PKI
 
