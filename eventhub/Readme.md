@@ -39,6 +39,16 @@ Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
 
+Event Hub Consumer Telegraf Plugin InfluxDB
+
+https://www.influxdata.com/integration/event-hub-consumer/
+
+Install Telegraf
+
+https://docs.influxdata.com/telegraf/v1.21/introduction/installation/
+
+
+
 How to integrate Service Bus with RabbitMQ
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
