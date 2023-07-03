@@ -28,7 +28,8 @@ https://learn.microsoft.com/en-us/training/browse/?filter-products=event&product
 
 * Azure Event Hubs connects events from any source to your software systems. This acts as a buffer to provide modular solutions that avoid overwhelming your system during traffic spikes, while still enabling near real-time data pipelines. 
 * Event Hubs is fast to set up and designed to allow you to focus on drawing insights from data instead of managing infrastructure.
-* Able to process millions of events per second with low latency, Event Hubs is a modern big data message and event ingestion service that can be seamlessly integrated with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grids, along with outside services like Apache Spark.
+* Able to process millions of events per second with low latency.
+* Event Hubs is a modern big data message and event ingestion service that can be seamlessly integrated with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grids, along with outside services like Apache Spark.
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
