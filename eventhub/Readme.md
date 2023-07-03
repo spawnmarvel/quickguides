@@ -24,7 +24,7 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-
 https://learn.microsoft.com/en-us/training/browse/?filter-products=event&products=azure-event-hubs
 
 
-## Introduction to Event Hubs
+## Introduction to Event Hubs (is a fully managed platform-as-a-service)
 
 * Azure Event Hubs connects events from any source to your software systems. This acts as a buffer to provide modular solutions that avoid overwhelming your system during traffic spikes, while still enabling near real-time data pipelines. 
 * Event Hubs is fast to set up and designed to allow you to focus on drawing insights from data instead of managing infrastructure.
@@ -36,6 +36,23 @@ Introduction
 * You can think of Event Hubs as an event ingestor and a front door for event pipelines. 
 
 As an example use-case scenario, consider a home security company that monitors 100,000 homes. Each home has various sensors – such as a motion-detectors, door/window open sensors, and glass break detectors. These devices report back to a common server. 
+
+What is Event Hubs
+
+* Event Hubs is one of three types of message broker available on Azure.
+* Message brokers logically and temporally decouple event producers from event consumers. Decoupling creates an event pipeline that is more modular. So that it scales more easily.
+
+Temporal Decoupling
+
+* The temporal decoupling provided by message brokers means that the event producer and event consumers don’t need to run concurrently. 
+* Temporal decoupling can provide a stronger guarantee that messages are received and it means that producers aren't blocked while consumers are processing data.
+* Load Balancing and Load Leveling, multiple concurrent consumers, potentially making it simpler to achieve load balancing.
+
+
+
+
+
+
 
 
 
