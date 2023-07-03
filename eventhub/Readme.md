@@ -33,6 +33,12 @@ https://learn.microsoft.com/en-us/training/browse/?filter-products=event&product
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
+
+Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
+
+https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
+
+
 How to integrate Service Bus with RabbitMQ
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
@@ -51,11 +57,6 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-exchange-events-di
 Azure Event Hubs—A big data streaming platform and event ingestion service
 
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
-
-
-Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
-
-https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
 
 
