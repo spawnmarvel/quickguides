@@ -17,7 +17,7 @@ Azure offers three services that assist with delivering events or messages throu
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-services
 
 
-##
+## Azure Event Hubs *
 
 ![MS Learn ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/mslearn.jpg)
 
