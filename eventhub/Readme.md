@@ -1,6 +1,6 @@
 # AMQP, Event Grid, Event Hubs and Service Bus
 
-## Choose between Azure messaging services - Event Grid, Event Hubs, and Service Bus
+## Choose between Azure messaging services - Event Grid, Event Hubs, and Service Bus TODO
 
 Azure offers three services that assist with delivering events or messages throughout a solution. These services are:
 
@@ -63,12 +63,17 @@ When is Event Hubs a suitable solution?
 
 ### If Event Hubs isn't the perfect fit for your problem, Azure provides other messaging services. Including:
 
+Azure Service Bus, which uses a pull model, similarly to Event Hubs, but is designed for the delivery of mission-critical commands for which a delivery guarantee is required.
+
+Azure Event Grid, which uses a push rather than pull model. A push model follows a publisher-subscriber pattern. In this pattern, a source (such as a mobile app) triggers an event that is pushed to all subscribers, or is discarded if no subscribers exist.
 
 
 
 
+https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/3-how-event-hubs-works
 
 
+How Event Hubs works TODO
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
