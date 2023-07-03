@@ -48,6 +48,20 @@ Temporal Decoupling
 * Temporal decoupling can provide a stronger guarantee that messages are received and it means that producers aren't blocked while consumers are processing data.
 * Load Balancing and Load Leveling, multiple concurrent consumers, potentially making it simpler to achieve load balancing.
 
+Event Hubs is a versatile service
+
+* Event Hubs is compatible with a wide variety of languages and tools. Data can be read and processed using languages such as Python and Go, and it’s compatible with common protocols.
+
+When is Event Hubs a suitable solution?
+
+* Ingesting high volumes of messages quickly and reliably
+* Suitable for receiving data from thousands, or more, event publishers simultaneously and ensuring the data is stored in a non-volatile state.
+* It supports connection mechanisms like Advanced Message Queuing Protocol (AMQP) and WebSockets to support low-bandwidth and low-latency message delivery
+* There are scenarios where other message brokers are more suitable than Event Hubs. Event Hubs can enable near real-time responses to messages. However, due to its asynchronous nature, Event Hubs isn't always the best choice if the event creators are critically dependent on specific actions taking place in a specific window of time.
+* Event Hubs is also not the best choice when delivery of all information is absolutely business critical. Event Hubs can guarantee at least once delivery to its singular Capture consumer. But, if your application has multiple groups that consume the same messages. Then your client application is responsible for connecting to and consuming the events while they're still in the cache. The cache lifetime is configurable, and defaults to 24 hours, but if some downtime prevents your consumer applications from running, you may miss those events.
+
+
+### If Event Hubs isn't the perfect fit for your problem, Azure provides other messaging services. Including:
 
 
 
