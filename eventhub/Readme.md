@@ -31,6 +31,14 @@ https://learn.microsoft.com/en-us/training/browse/?filter-products=event&product
 * Able to process millions of events per second with low latency.
 * Event Hubs is a modern big data message and event ingestion service that can be seamlessly integrated with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grids, along with outside services like Apache Spark.
 
+Introduction
+
+* You can think of Event Hubs as an event ingestor and a front door for event pipelines. 
+
+As an example use-case scenario, consider a home security company that monitors 100,000 homes. Each home has various sensors – such as a motion-detectors, door/window open sensors, and glass break detectors. These devices report back to a common server. 
+
+
+
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
 
