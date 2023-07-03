@@ -19,6 +19,8 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-
 
 ##
 
+[MS Learn ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/mslearn.jpg)
+
 https://learn.microsoft.com/en-us/training/browse/?filter-products=event&products=azure-event-hubs
 
 
