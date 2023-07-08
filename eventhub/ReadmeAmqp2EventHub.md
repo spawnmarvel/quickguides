@@ -37,8 +37,8 @@ The following plugins have been enabled:
 
 
 Connecting RabbitMQ to Azure Service Bus
-* SAS
-* policy01-send
+* Add SAS Policy, Manage
+* rabbitmq-shovel01
 * Primary Connection String
 
 Connection String to AMQP
