@@ -106,8 +106,23 @@ amqps://send-event-amqps:<SharedAccessKey>@<your-namespace>.servicebus.windows.n
 
 We must convert it, there is a tool for it, https://red-mushroom-0f7446a0f.azurestaticapps.net/, but it seems like the signs that must be changed is in the SAS: / to % for RabbitMQ.
 
+hmmmmmm...
+
+![Shovel error ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel_error.jpg)
 
 
+
+Troubleshoot connectivity issues - Azure Event Hubs
+
+https://learn.microsoft.com/en-us/azure/event-hubs/troubleshooting-guide
+
+Event Hubs Namespace
+
+Firewall
+
+Add IP ranges to allow access from the internet or your on-premises networks. 
+
+![Requests ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/requests.jpg)
 
 
 ## 1 Event consumers
