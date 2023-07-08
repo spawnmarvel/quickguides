@@ -16,6 +16,9 @@ Here's a few scenarios in which we can make use of these capabilities:
 * Third-Party Integration: A third party uses RabbitMQ as a broker, and wants to send their data to us, but they are outside our organization. We can provide them with SAS Key giving them access to a limited set of Azure Service Bus queues where they can forward their messages to.
 
 
+Version:
+RabbitMQ 3.10.7, Erlang 25.0
+
 Adding a new Azure Service Bus Namespace
 
 * rabbitmq01
