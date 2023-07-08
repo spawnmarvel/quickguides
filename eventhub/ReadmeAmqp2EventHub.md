@@ -134,8 +134,31 @@ rabbitmq-plugins enable rabbitmq_amqp1_0
 2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_management_agent
 
 
+https://github.com/rabbitmq/rabbitmq-amqp1.0
+
+Add this content to the "rabbitmq.conf" file that you have created following the above instruction:
+
+amqp1_0.default_user  = guest
+amqp1_0.default_vhost = /
+amqp1_0.protocol_strict_mode = false
 
 
+Furthermore, connecting messaging brokers from different vendors is tricky. It typically requires application-level bridging to move messages from one system to another and to translate between their proprietary message formats. It's a common requirement; for example, when you must provide a new unified interface to older disparate systems, or integrate IT systems following a merger. AMQP allows for interconnecting connecting brokers directly, for instance using routers like Apache Qpid Dispatch Router or broker-native "shovels" like the one of RabbitMQ.
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
+
+
+## How to integrate Service Bus with RabbitMQ
+
+
+Here's a few scenarios in which we can make use of these capabilities:
+
+* Edge Setups: We have an edge setup where we're sending messages to RabbitMQ, but we want to forward those messages to Azure Service Bus for further processing, so we can use many of the Azure Big Data capabilities.
+* Hybrid Cloud: Your company just acquired a third party that uses RabbitMQ for their messaging needs. They are on a different cloud. While they transition to Azure you can already start sharing data by bridging RabbitMQ with  Azure Service Bus.
+* Third-Party Integration: A third party uses RabbitMQ as a broker, and wants to send their data to us, but they are outside our organization. We can provide them with SAS Key giving them access to a limited set of Azure Service Bus queues where they can forward their messages to.
+
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
 
 
 TODO
