@@ -19,11 +19,15 @@ Here's a few scenarios in which we can make use of these capabilities:
 Version:
 RabbitMQ 3.10.7, Erlang 25.0
 
+![Rmq version ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/rabbitmqversion.jpg)
+
 Adding a new Azure Service Bus Namespace
 
 * rabbitmq01
 * basic
 * public endpoint
+
+### Test Service Bus with RabbitMQ
 
 Creating our Azure Service Bus Queue
 * from-rabbitmq01
@@ -36,6 +40,17 @@ Enabling the RabbitMQ Shovel Plugin
 The following plugins have been enabled:
 * rabbitmq_shovel
 * rabbitmq_shovel_management
+
+```log
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0> Server startup complete; 6 plugins started.
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_shovel_management
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_shovel
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_amqp1_0
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_management
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_web_dispatch
+2023-07-08 18:49:58.048000+02:00 [info] <0.576.0>  * rabbitmq_management_agent
+
+```
 
 Created queue
 * telemetry01
@@ -67,6 +82,14 @@ Service bus requests is success
 
 ![Servicebus requests 01 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests01.jpg)
 
+
+
+Restart RabbitMQ:
+
+```log
+
+
+```
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
 
