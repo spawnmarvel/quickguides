@@ -46,7 +46,7 @@ Connection String to AMQP
 
 Shovel
 
-![Shovel ](https://github.com/spawnmarvel/azure-automation/blob/main/images/shovel.jpg)
+![Shovel ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
