@@ -185,6 +185,7 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 * Latest RabbitMQ and Erlang
 * disable rabbitmq_amqp1_0
 * TLS version in ServiceBus and RabbitMQ
+* Is the result from https://red-mushroom-0f7446a0f.azurestaticapps.net/ broken?
 
 
 ## Extra
