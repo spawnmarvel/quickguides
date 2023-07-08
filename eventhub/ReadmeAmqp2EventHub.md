@@ -74,9 +74,6 @@ Shovel status
 
 ![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel_status.jpg)
 
-Shovel error
-
-![Shovel error ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel_error.jpg)
 
 Service bus requests is success
 
@@ -87,6 +84,78 @@ Service bus requests is success
 Restart RabbitMQ:
 
 ```log
+
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0> Server startup complete; 6 plugins started.
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_shovel_management
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_shovel
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_amqp1_0
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_management
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_web_dispatch
+2023-07-08 19:08:56.406000+02:00 [info] <0.578.0>  * rabbitmq_management_agent
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>     supervisor: {<0.742.0>,amqp10_client_connection_sup}
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>     errorContext: start_error
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>     reason: {badmatch,{error,closed}}
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>     offender: [{pid,undefined},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {id,reader},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {mfargs,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                    {amqp10_client_frame_reader,start_link,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                        [<0.742.0>,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                         #{address => "rabbitmq01.servicebus.windows.net",
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                           hostname => <<"rabbitmq01.servicebus.windows.net">>,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                           notify => <0.688.0>,notify_when_closed => <0.688.0>,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                           notify_when_opened => <0.688.0>,port => 5671,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                           sasl =>
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                               {plain,<<"rabbitmq-shovel01">>,
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                                   <<"TEXT-HERE-TEXT-HERE">>},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                           tls_opts => {secure_port,[]}}]}},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {restart_type,transient},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {significant,false},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {shutdown,5000},
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0>                {child_type,worker}]
+2023-07-08 19:09:56.385000+02:00 [error] <0.742.0> 
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** State machine <0.744.0> terminating
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** When server state  = {undefined,undefined}
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** Reason for termination = error:{badmatch,{error,closed}}
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** Callback modules = [amqp10_client_frame_reader]
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** Callback mode = undefined
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> ** Stacktrace =
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> **  [{amqp10_client_frame_reader,init,1,
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0>                                  [{file,"amqp10_client_frame_reader.erl"},
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0>                                   {line,109}]},
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0>      {gen_statem,init_it,6,[{file,"gen_statem.erl"},{line,1001}]},
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0>      {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]
+2023-07-08 19:09:56.386000+02:00 [error] <0.744.0> 
+2023-07-08 19:09:56.386000+02:00 [error] <0.688.0> Shovel 'rmq-2-sb' could not connect to destination
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>     supervisor: {<0.687.0>,rabbit_shovel_dyn_worker_sup}
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>     errorContext: child_terminated
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>     reason: shutdown
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>     offender: [{pid,<0.688.0>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                {id,{<<"/">>,<<"rmq-2-sb">>}},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                {mfargs,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                    {rabbit_shovel_worker,start_link,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                        [dynamic,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                         {<<"/">>,<<"rmq-2-sb">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                         [{<<"dest-uri">>,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                           [{encrypted,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                                <<"TEXT-HERE-TEXT-HERE">>}]},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"src-uri">>,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                           [{encrypted,
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                                <<"TEXT-HERE-TEXT-HERE">>}]},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"ack-mode">>,<<"on-confirm">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"dest-add-forward-headers">>,false},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"dest-address">>,<<"from-rabbitmq01">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"dest-protocol">>,<<"amqp10">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"reconnect-delay">>,30},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"src-delete-after">>,<<"never">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"src-protocol">>,<<"amqp091">>},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                          {<<"src-queue">>,<<"telemetry01">>}]]}},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                {restart_type,{permanent,30}},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                {shutdown,4294967295},
+2023-07-08 19:09:56.387000+02:00 [error] <0.687.0>                {child_type,worker}]
+2023-07-08 19:09:56.452000+02:00 [warning] <0.818.0> Description: "Authenticity is not established by certificate path validation"
+2023-07-08 19:09:56.452000+02:00 [warning] <0.818.0>      Reason: "Option {verify, verify_peer} and cacertfile/cacerts is missing"
+2023-07-08 19:09:56.452000+02:00 [warning] <0.818.0> 
+
 
 
 ```
