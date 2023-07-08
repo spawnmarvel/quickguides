@@ -38,6 +38,11 @@ Create an event hub:
 
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
+Create an Event Hubs namespace: amqps2azure
+
+![Event Hub ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/eventhubnamespace.jpg)
+
+Create an event hub: event-amqps-telemetry01
 
 ![Event Hub ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/eventhub.jpg)
 
