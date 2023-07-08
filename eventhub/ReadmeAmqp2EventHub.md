@@ -80,6 +80,9 @@ Service bus requests is success
 ![Servicebus requests 01 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests01.jpg)
 
 
+TNC
+* Test-NetConnection -ComputerName rabbitmq01.servicebus.windows.net -Port 5671 = True
+* Test-NetConnection -ComputerName rabbitmq01.servicebus.windows.net -Port 443 = True
 
 Restart RabbitMQ:
 
@@ -178,6 +181,10 @@ Furthermore, connecting messaging brokers from different vendors is tricky. It t
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
 
 
+## TODO
+* Latest RabbitMQ and Erlang
+* disable rabbitmq_amqp1_0
+
 
 ## Extra
 
@@ -198,6 +205,8 @@ Add this content to the "rabbitmq.conf" file that you have created following the
 amqp1_0.default_user  = guest
 amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
+
+
 
 
 
