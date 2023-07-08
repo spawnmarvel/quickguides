@@ -78,11 +78,6 @@ How Event Hubs works TODO
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
 
-Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
-
-https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
-
-
 Event Hub Consumer Telegraf Plugin InfluxDB
 
 https://www.influxdata.com/integration/event-hub-consumer/
