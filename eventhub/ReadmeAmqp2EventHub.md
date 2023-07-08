@@ -17,8 +17,6 @@ Version, RabbitMQ 3.10.7, Erlang 25.0
 [...]
 2023-07-08 15:11:27.703000+02:00 [info] <0.694.0> started TCP listener on [::]:5672
 2023-07-08 15:11:27.704000+02:00 [info] <0.712.0> started TCP listener on 0.0.0.0:5672
-2023-07-08 15:11:27.705000+02:00 [info] <0.732.0> started TLS (SSL) listener on [::]:5671
-2023-07-08 15:11:27.706000+02:00 [info] <0.752.0> started TLS (SSL) listener on 0.0.0.0:5671
 2023-07-08 15:11:27.803000+02:00 [info] <0.567.0> Server startup complete; 5 plugins started.
 2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_shovel_management
 2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_shovel
@@ -123,6 +121,10 @@ Firewall
 Add IP ranges to allow access from the internet or your on-premises networks. 
 
 ![Requests ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/requests.jpg)
+
+TODO
+
+Update RabbitMQ and Erlang to same version or latest.
 
 
 ## 1 Event consumers
