@@ -83,8 +83,9 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability
 
 A shared access signature (SAS) provides secure delegated access to resources.
 
+Go to the event hub, event-amqps-telemetry01 , and in the left panel click on Shared Access Policies.
 
-
+![SAS ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sas.jpg)
 
 ## 1 Event consumers
 
