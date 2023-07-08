@@ -209,6 +209,21 @@ amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
 
 
+badmatch
+5> [X,Y] = {4,5}.
+** exception error: no match of right hand side value {4,5}
+Badmatch errors happen whenever pattern matching fails. This most likely means you're trying to do impossible pattern matches (such as above), trying to bind a variable for the second time, or just anything that isn't equal on both sides of the = operator (which is pretty much what makes rebinding a variable fail!). Note that this error sometimes happens because the programmer believes that a variable of the form _MyVar is the same as _. Variables with an underscore are normal variables, except the compiler won't complain if they're not used. It is not possible to bind them more than once.
+
+https://learnyousomeerlang.com/errors-and-exceptions
+
+
+{badmatch,V}, Evaluation of a match expression failed. The value V did not match.
+
+
+https://www.erlang.org/doc/reference_manual/errors.html
+
+
+
 
 
 
