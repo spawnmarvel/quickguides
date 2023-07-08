@@ -8,6 +8,19 @@ https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-f
 
 Version, RabbitMQ 3.10.7, Erlang 25.0
 
+```log
+2023-07-08 15:11:27.703000+02:00 [info] <0.694.0> started TCP listener on [::]:5672
+2023-07-08 15:11:27.704000+02:00 [info] <0.712.0> started TCP listener on 0.0.0.0:5672
+2023-07-08 15:11:27.705000+02:00 [info] <0.732.0> started TLS (SSL) listener on [::]:5671
+2023-07-08 15:11:27.706000+02:00 [info] <0.752.0> started TLS (SSL) listener on 0.0.0.0:5671
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0> Server startup complete; 5 plugins started.
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_shovel_management
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_shovel
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_management
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_web_dispatch
+2023-07-08 15:11:27.803000+02:00 [info] <0.567.0>  * rabbitmq_management_agent
+```
+
 Topology
 
 ![Topology ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/topology.jpg)
@@ -62,6 +75,13 @@ Partitions
 * Event Hubs organizes sequences of events sent to an event hub into one or more partitions. As newer events arrive, they're added to the end of this sequence.
 
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability
+
+
+### Create a Shared Access Signature for Event Hubs
+
+A shared access signature (SAS) provides secure delegated access to resources.
+
+
 
 
 ## 1 Event consumers
