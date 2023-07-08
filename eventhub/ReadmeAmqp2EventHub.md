@@ -208,6 +208,7 @@ amqp1_0.default_user  = guest
 amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
 
+Reason for termination = error:{badmatch,{error,closed}}
 
 badmatch
 5> [X,Y] = {4,5}.
