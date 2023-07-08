@@ -19,7 +19,7 @@ Case:
 Queue:
 * telemetry01
 
-Example json
+Example json:
 
 ```json
 {
@@ -29,6 +29,8 @@ Example json
 }
 
 ```
+Send data using shovel plugin,  AMQP 1.0 protocol supported both by RabbitMQ and Event Hubs.
+
 
 ## 1 Event consumers
 
