@@ -35,6 +35,11 @@ The following plugins have been enabled:
 * rabbitmq_shovel
 * rabbitmq_shovel_management
 
+Created queue
+* telemetry01
+
+![Queue ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queue.jpg)
+
 
 Connecting RabbitMQ to Azure Service Bus
 * Add SAS Policy, Manage
@@ -47,6 +52,14 @@ Connection String to AMQP
 Shovel
 
 ![Shovel ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel.jpg)
+
+Shovel status
+
+![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel_status.jpg)
+
+Shovel error
+
+![Shovel error ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel_error.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
