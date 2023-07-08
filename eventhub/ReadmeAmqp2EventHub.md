@@ -10,7 +10,7 @@ Version, RabbitMQ 3.10.7, Erlang 25.0
 
 Topology
 
-![Topology ](https://github.com/spawnmarvel/quickguides/tree/main/eventhub/images/topology)
+![Topology ](https://github.com/spawnmarvel/quickguides/tree/main/eventhub/images/topology.jpg)
 
 ## 1 Event consumers
 
