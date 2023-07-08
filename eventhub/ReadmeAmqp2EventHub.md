@@ -160,6 +160,14 @@ Restart RabbitMQ:
 
 ```
 
+Rabbitmq.conf
+
+```log
+amqp1_0.default_user  = guest
+amqp1_0.default_vhost = /
+amqp1_0.protocol_strict_mode = false
+```
+
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
 
 
