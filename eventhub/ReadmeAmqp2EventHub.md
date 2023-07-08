@@ -9,6 +9,8 @@ https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-f
 Version, RabbitMQ 3.10.7, Erlang 25.0
 
 ```log
+2023-07-08 15:11:26.125000+02:00 [info] <0.219.0>  Starting RabbitMQ 3.10.7 on Erlang 25.0 [jit]
+[...]
 2023-07-08 15:11:27.703000+02:00 [info] <0.694.0> started TCP listener on [::]:5672
 2023-07-08 15:11:27.704000+02:00 [info] <0.712.0> started TCP listener on 0.0.0.0:5672
 2023-07-08 15:11:27.705000+02:00 [info] <0.732.0> started TLS (SSL) listener on [::]:5671
