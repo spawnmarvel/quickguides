@@ -184,6 +184,7 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 ## TODO
 * Latest RabbitMQ and Erlang
 * disable rabbitmq_amqp1_0
+* TLS version in ServiceBus and RabbitMQ
 
 
 ## Extra
