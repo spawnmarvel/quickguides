@@ -125,7 +125,14 @@ Add IP ranges to allow access from the internet or your on-premises networks.
 
 rabbitmq-plugins enable rabbitmq_amqp1_0
 
-2023-07-08 17:37:06.501000+02:00 [info] <0.1190.0> Plugins changed; enabled [rabbitmq_amqp1_0]
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0> Server startup complete; 6 plugins started.
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_shovel_management
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_shovel
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_amqp1_0
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_management
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_web_dispatch
+2023-07-08 17:40:47.236000+02:00 [info] <0.572.0>  * rabbitmq_management_agent
+
 
 
 
