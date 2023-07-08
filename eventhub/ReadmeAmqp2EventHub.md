@@ -4,6 +4,8 @@
 
 https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
+Great tutorial, thanks Microsoft and Alvaro Videla Godoy.
+
 ## 1 AMQP to Azure Event Hub 
 
 Version, RabbitMQ 3.10.7, Erlang 25.0
@@ -86,6 +88,10 @@ A shared access signature (SAS) provides secure delegated access to resources.
 Go to the event hub, event-amqps-telemetry01 , and in the left panel click on Shared Access Policies.
 
 ![SAS ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sas.jpg)
+
+### Connecting RabbitMQ to Event Hubs
+
+
 
 ## 1 Event consumers
 
