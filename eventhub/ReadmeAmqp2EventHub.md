@@ -39,6 +39,9 @@ Create an event hub:
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
 
+![Event Hub ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/eventhub.jpg)
+
+
 Scaling with Event Hubs
 
 There are two factors which influence scaling with Event Hubs.
