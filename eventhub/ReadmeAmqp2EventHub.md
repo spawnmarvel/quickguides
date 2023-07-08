@@ -36,8 +36,19 @@ Connecting RabbitMQ to Azure Service Bus
 Connection String to AMQP
 * https://red-mushroom-0f7446a0f.azurestaticapps.net/
 
-## Extra
 
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
+
+
+## Advanced Message Queueing Protocol (AMQP) 1.0 support in Service Bus
+
+Furthermore, connecting messaging brokers from different vendors is tricky. It typically requires application-level bridging to move messages from one system to another and to translate between their proprietary message formats. It's a common requirement; for example, when you must provide a new unified interface to older disparate systems, or integrate IT systems following a merger. AMQP allows for interconnecting connecting brokers directly, for instance using routers like Apache Qpid Dispatch Router or broker-native "shovels" like the one of RabbitMQ.
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
+
+
+
+## Extra
 
 Troubleshoot connectivity issues - Azure Event Hubs
 
@@ -57,10 +68,6 @@ amqp1_0.default_user  = guest
 amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
 
-
-Furthermore, connecting messaging brokers from different vendors is tricky. It typically requires application-level bridging to move messages from one system to another and to translate between their proprietary message formats. It's a common requirement; for example, when you must provide a new unified interface to older disparate systems, or integrate IT systems following a merger. AMQP allows for interconnecting connecting brokers directly, for instance using routers like Apache Qpid Dispatch Router or broker-native "shovels" like the one of RabbitMQ.
-
-https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
 
 
 
