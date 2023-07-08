@@ -28,6 +28,8 @@ Adding a new Azure Service Bus Namespace
 Creating our Azure Service Bus Queue
 * from-rabbitmq01
 
+![Service bus queue ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusqueue.jpg)
+
 Enabling the RabbitMQ Shovel Plugin
 * rabbitmq-plugins enable rabbitmq_shovel_management
 
@@ -42,7 +44,7 @@ Created queue
 
 
 Connecting RabbitMQ to Azure Service Bus
-* Add SAS Policy, Manage
+* Add SAS Policy, Manage now, tested with just send also.
 * rabbitmq-shovel01
 * Primary Connection String
 
