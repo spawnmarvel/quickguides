@@ -39,5 +39,22 @@ Create an event hub:
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
 
+Scaling with Event Hubs
+
+There are two factors which influence scaling with Event Hubs.
+* Throughput units (standard tier) or processing units (premium tier)
+* Partitions
+
+The throughput capacity of Event Hubs is controlled by throughput units. Throughput units are pre-purchased units of capacity. A single throughput unit lets you:
+* Ingress: Up to 1 MB per second or 1000 events per second (whichever comes first).
+* Egress: Up to 2 MB per second or 4096 events per second.
+
+
+Partitions
+* Event Hubs organizes sequences of events sent to an event hub into one or more partitions. As newer events arrive, they're added to the end of this sequence.
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability
+
+
 ## 1 Event consumers
 
