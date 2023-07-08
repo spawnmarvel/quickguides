@@ -18,20 +18,25 @@ Here's a few scenarios in which we can make use of these capabilities:
 
 Adding a new Azure Service Bus Namespace
 
-* amqp2servicebus
+* rabbitmq01
 * basic
 * public endpoint
 
 Creating our Azure Service Bus Queue
-* get-telemetry01
+* from-rabbitmq01
 
 Enabling the RabbitMQ Shovel Plugin
 * rabbitmq-plugins enable rabbitmq_shovel_management
+
+The following plugins have been enabled:
+* rabbitmq_shovel
+* rabbitmq_shovel_management
 
 
 Connecting RabbitMQ to Azure Service Bus
 * SAS
 * policy01-send
+* Primary Connection String
 
 Connection String to AMQP
 * https://red-mushroom-0f7446a0f.azurestaticapps.net/
