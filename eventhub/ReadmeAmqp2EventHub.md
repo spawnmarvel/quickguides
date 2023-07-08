@@ -1,6 +1,8 @@
 # AMQP to Azure Event Hub 
 
-Following this: Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
+Following this:
+
+Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
 https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
@@ -90,6 +92,21 @@ Go to the event hub, event-amqps-telemetry01 , and in the left panel click on Sh
 ![SAS ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sas.jpg)
 
 ### Connecting RabbitMQ to Event Hubs
+
+Once the SAS key has been created, select it, and copy to the clipboard the one called Connection string-primary key.
+
+
+```cmd
+# Connection string 
+Endpoint=sb://<your-namespace.servicebus.windows.net/;SharedAccessKeyName=send-event-amqps;SharedAccessKey=<SharedAccessKey>=;EntityPath=event-amqps-telemetry01
+
+# RabbitMQ shovel format
+amqps://send-event-amqps:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
+```
+
+We must convert it.
+
+
 
 
 
