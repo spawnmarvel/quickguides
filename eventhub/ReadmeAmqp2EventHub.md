@@ -104,7 +104,7 @@ Endpoint=sb://<your-namespace.servicebus.windows.net/;SharedAccessKeyName=send-e
 amqps://send-event-amqps:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
 ```
 
-We must convert it.
+We must convert it, there is a tool for it, but it seems like the signs that must be changed is in the SAS for, / to % for RabbitMQ.
 
 
 
