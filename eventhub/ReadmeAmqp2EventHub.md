@@ -8,7 +8,7 @@ https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-f
 ## 1 AMQP to Azure Event Hub 
 
 
-## " How to integrate Service Bus with RabbitMQ
+## How to integrate Service Bus with RabbitMQ
 
 
 Here's a few scenarios in which we can make use of these capabilities:
