@@ -6,5 +6,11 @@ https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-f
 
 ## 1 AMQP to Azure Event Hub 
 
+Version, RabbitMQ 3.10.7, Erlang 25.0
+
+Topology
+
+![Topology ](https://github.com/spawnmarvel/quickguides/tree/main/eventhub/images/topology)
+
 ## 1 Event consumers
 
