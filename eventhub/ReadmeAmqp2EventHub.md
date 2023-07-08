@@ -12,5 +12,23 @@ Topology
 
 ![Topology ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/topology.jpg)
 
+Case:
+* Imagine you have sensor data that’s being sent to RabbitMQ from various IoT devices. These devices capture temperature and humidity readings. 
+* Getting the data out of RabbitMQ and into Azure. Using Azure Event Hubs, you can bridge RabbitMQ.
+
+Queue:
+* telemetry01
+
+Example json
+
+```json
+{
+    "Timestamp": <Timestamp>, 
+    "Temperature": <Temperature>, 
+    "Humidity": <Humidity>
+}
+
+```
+
 ## 1 Event consumers
 
