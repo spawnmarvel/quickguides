@@ -6,7 +6,7 @@ Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
 https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
-Great tutorial, thanks Microsoft and Alvaro Videla Godoy.
+Great tutorial, thanks Microsoft and Alvaro Videla Godoy. (Published Mar 29 2023 03:08 AM )
 
 ## 1 AMQP to Azure Event Hub 
 
@@ -121,6 +121,15 @@ Firewall
 Add IP ranges to allow access from the internet or your on-premises networks. 
 
 ![Requests ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/requests.jpg)
+
+
+rabbitmq-plugins enable rabbitmq_amqp1_0
+
+2023-07-08 17:37:06.501000+02:00 [info] <0.1190.0> Plugins changed; enabled [rabbitmq_amqp1_0]
+
+
+
+
 
 TODO
 
