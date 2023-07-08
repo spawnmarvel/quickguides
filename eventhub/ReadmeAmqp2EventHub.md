@@ -16,7 +16,7 @@ Case:
 * Imagine you have sensor data that’s being sent to RabbitMQ from various IoT devices. These devices capture temperature and humidity readings. 
 * Getting the data out of RabbitMQ and into Azure. Using Azure Event Hubs, you can bridge RabbitMQ.
 
-Queue:
+Queue example:
 * telemetry01
 
 Example json:
@@ -30,6 +30,13 @@ Example json:
 
 ```
 Send data using shovel plugin,  AMQP 1.0 protocol supported both by RabbitMQ and Event Hubs.
+
+Create an event hub:
+* Create a resource group
+* Create Event Hubs namespace
+* Create event hub
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
 
 ## 1 Event consumers
