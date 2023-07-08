@@ -65,7 +65,7 @@ Shovel error
 
 Service bus requests is success
 
-![Servicebus requests ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests.jpg)
+![Servicebus requests 01 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests10.jpg)
 
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
