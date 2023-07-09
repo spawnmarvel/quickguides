@@ -252,7 +252,44 @@ Forward messages is true, all that is published to queue01 goes to queue01a.
 ![Queue 01 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queue01.jpg)
 
 
+## Test 06
 
+
+
+amqp1_0.default_user  = guest
+amqp1_0.default_vhost = /
+amqp1_0.protocol_strict_mode = false
+
+https://github.com/rabbitmq/rabbitmq-amqp1.0
+
+Configure connection string to use AMQP 1.0
+Append your connection string with ;TransportType=Amqp to instruct the client to make its connection to Service Bus using AMQP 1.0. For example,
+
+Endpoint=sb://[namespace].servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[SAS key];TransportType=Amqp
+
+Where namespace and SAS key are obtained from the Azure portal when you create a Service Bus namespace. 
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-dotnet
+
+
+Namespace
+* rmqsb456
+* Tls 1.2
+* Public
+
+Queue
+* from-amqp06
+
+RabbitMQ queue
+* from-amqp06
+
+Policy
+* policy-06
+
+Primary Connection String
+* convert
+
+same even when added &transporttype=amqp
 
 ## Extra
 
