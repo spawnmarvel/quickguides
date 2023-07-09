@@ -182,10 +182,11 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 
 
 ## TODO
-* Latest RabbitMQ and Erlang
-* disable rabbitmq_amqp1_0
-* TLS version in ServiceBus and RabbitMQ
-* Is the result from https://red-mushroom-0f7446a0f.azurestaticapps.net/ broken?
+* Same queue name in RabbitMQ and Service Bus = 
+* Latest RabbitMQ and Erlang = 
+* disable rabbitmq_amqp1_0 = 
+* TLS version in ServiceBus and RabbitMQ = 
+* Is the result from https://red-mushroom-0f7446a0f.azurestaticapps.net/ broken? = 
 
 
 ## Extra
@@ -200,6 +201,32 @@ Firewall
 
 Add IP ranges to allow access from the internet or your on-premises networks. 
 
+
+Azure ServiceBus can be used with the AMQP 1.0 protocol. Since version 3.7 RabbitMQ supports shovels where either the source or destination (or both) uses AMQP 1.0. Hence it is possible to connect the two systems together using shovels. In this brief tutorial we are going to shovel a message from a RabbitMQ queue to a queue in Azure ServiceBus (SB).
+
+Sessions, To use sessions the group-id property needs to be set apropriately. E.g:
+
+```log
+{destination,
+   [{protocol, amqp10},
+    {uris, ["amqps://TheUser:Some%2FString=@shoveltest.servicebus.windows.net:5671?versions=tlsv1.0,tlsv1.1,tlsv1.2"]},
+    {target_address, <<"aqueue1">>}
+    {properties, [{group_id, <<"some-group">>}]},
+```
+Partitions, To use a partition the x-opt-partition-key property needs to be set apropriately. E.g:
+
+```log
+{destination,
+   [{protocol, amqp10},
+    {uris, ["amqps://TheUser:Some%2FString=@shoveltest.servicebus.windows.net:5671?versions=tlsv1.0,tlsv1.1,tlsv1.2"]},
+    {target_address, <<"aqueue1">>}
+    {message_annotations, [{"x-opt-partition-key", 12345}]},  
+```
+https://gist.github.com/kjnilsson/159c643fb34604f8ea20be336109261b
+
+
+RabbitMQ server
+
 https://github.com/rabbitmq/rabbitmq-amqp1.0
 
 Add this content to the "rabbitmq.conf" file that you have created following the above instruction:
@@ -207,6 +234,8 @@ Add this content to the "rabbitmq.conf" file that you have created following the
 amqp1_0.default_user  = guest
 amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
+
+Moved to https://github.com/rabbitmq/rabbitmq-server and AMQP 1.0 is supported.
 
 
 
@@ -230,11 +259,16 @@ Azure Service Bus AMQP Exception
 * Yes, you can use SAS with AMQP. Policy name instead of username, and URL encoded key instead password. 
 * The URL encoding is required to handle any non-alphanumeric characters in key value as +, /, or =.
 
+
 The URL format is:
 
 ```log
 amqps://<policyname>:<urlencoded(key)>@<namespace>.servicebus.windows.net
 ```
+
+Make sure your queue does not have partitioning enabled. ServiceBus does not support AMQP with partitioned queues, however queues are created with partitioning enabled by default.
+
+I had this exact same error, and re-creating the queue with "Enable Partitioning" unchecked solved it for me.
 
 
 https://stackoverflow.com/questions/27692070/azure-service-bus-amqp-exception/28056479#28056479
