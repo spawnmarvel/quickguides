@@ -225,6 +225,34 @@ Make shovel
 
 ![Servicebus requests 05 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests05.jpg)
 
+Test with TLS version in URI
+* amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671/?sasl=plain
+* https://gist.github.com/kjnilsson/159c643fb34604f8ea20be336109261b
+* amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671=versions=tlsv1.0,tlsv1.1,tlsv1.2
+* * Validation failed, malformed_uri
+* amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671=versions=tlsv1.2
+* * Validation failed, malformed_uri
+* amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671/?sasl=plain&=versions=tlsv1.2
+
+This URI can now be used to configure the shovel URI together with the queue name as either the source or destination assuming the SB queue is not configured to use sessions or partitions.
+
+```log
+2023-07-09 11:32:40.033000+02:00 [error] <0.3174.0>     supervisor: {<0.3174.0>,amqp10_client_connection_sup}
+2023-07-09 11:32:40.033000+02:00 [error] <0.3174.0>     errorContext: start_error
+2023-07-09 11:32:40.033000+02:00 [error] <0.3174.0>     reason: {badmatch,{error,closed}}
+
+```
+
+Simple shovel:
+
+![Simple shovel ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/simpleshovel.jpg)
+
+Forward messages is true, all that is published to queue01 goes to queue01a.
+
+
+
+
+
 ## Extra
 
 Troubleshoot connectivity issues - Azure Event Hubs
