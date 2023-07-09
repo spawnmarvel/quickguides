@@ -249,6 +249,7 @@ Simple shovel:
 
 Forward messages is true, all that is published to queue01 goes to queue01a.
 
+![Queue 01 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queue01.jpg)
 
 
 
