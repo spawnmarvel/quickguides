@@ -189,6 +189,42 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 * Is the result from https://red-mushroom-0f7446a0f.azurestaticapps.net/ broken? = 
 
 
+## Test 05
+
+Namespace
+* amqptest05.servicebus.windows.net
+
+Queue
+* from-amqp05
+* Enable partitioning, default unchecked
+
+Policy
+* send-policy05
+
+RabbitMQ
+* Queue, from-amqp05
+
+Primary connection string
+* Get it from SAS
+
+Url Encoding
+* https://www.w3schools.com/tags/ref_urlencode.ASP#:~:text=URL%20Encoding%20(Percent%20Encoding)&text=URL%20encoding%20replaces%20unsafe%20ASCII,(%2B)%20sign%20or%20with%20%20
+* SAS only had one special char now, +
+* Verify it in Url Encoding
+* + = %2B
+
+Make shovel
+* amqp 0.9.1
+* rmq-test05
+* from-amqp05
+* amqp 1.0
+* URI, converted SAS, amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671/?sasl=plain
+* Address from-amqp05
+* Recconnect delay, 20 s
+
+
+![Servicebus requests 05 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/servicebusrequests05.jpg)
+
 ## Extra
 
 Troubleshoot connectivity issues - Azure Event Hubs
