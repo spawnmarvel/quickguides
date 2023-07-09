@@ -208,6 +208,10 @@ amqp1_0.default_user  = guest
 amqp1_0.default_vhost = /
 amqp1_0.protocol_strict_mode = false
 
+
+
+## Troubleshoot
+
 Reason for termination = error:{badmatch,{error,closed}}
 
 badmatch
@@ -217,12 +221,23 @@ Badmatch errors happen whenever pattern matching fails. This most likely means y
 
 https://learnyousomeerlang.com/errors-and-exceptions
 
-
 {badmatch,V}, Evaluation of a match expression failed. The value V did not match.
-
 
 https://www.erlang.org/doc/reference_manual/errors.html
 
+
+Azure Service Bus AMQP Exception
+* Yes, you can use SAS with AMQP. Policy name instead of username, and URL encoded key instead password. 
+* The URL encoding is required to handle any non-alphanumeric characters in key value as +, /, or =.
+
+The URL format is:
+
+```log
+amqps://<policyname>:<urlencoded(key)>@<namespace>.servicebus.windows.net
+```
+
+
+https://stackoverflow.com/questions/27692070/azure-service-bus-amqp-exception/28056479#28056479
 
 
 
