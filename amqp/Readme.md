@@ -900,7 +900,7 @@ rabbitmq-plugins list
 
 ![Shovel amqp 10 ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelamqp10.jpg)
 
-Get definition
+Get definition after make it in UI
 
 http://localhost:15672/api/shovels
 
