@@ -852,9 +852,9 @@ rabbitmqctl delete_queue AZQueueData
 
 # 15 Dynamic shovel using CLI tools
 
-Using CLI Tools
+Using CLI Tools Declaring a Dynamic Shovel
 
-https://www.rabbitmq.com/shovel-dynamic.html
+https://www.rabbitmq.com/shovel-dynamic.html#declaring
 
 ```cmd
 # localhost queue01 and queue02
@@ -883,6 +883,14 @@ rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"",
    
 ```
 
+AMQP 1.0 Shovel Definition Reference
+
+AMQP 1.0 source and destination properties have some differences from their AMQP 0-9-1 counterparts.
+
+https://www.rabbitmq.com/shovel-dynamic.html#amqp10-reference
+
+
+
 AMQP 1.0 enable (already enabled if not run:)
 ```cmd
 rabbitmq-plugins list
@@ -892,7 +900,17 @@ rabbitmq-plugins list
 
 ![Shovel amqp 10 ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelamqp10.jpg)
 
+Get definition
+
+http://localhost:15672/api/shovels
+
+[{"node":"rabbit@BER-0803","timestamp":"2023-07-11 20:49:06","name":"shovel","vhost":"/","type":"dynamic","state":"running","src_uri":"amqp://","src_protocol":"amqp091","dest_protocol":"amqp10","dest_uri":"amqp://localhost:5672","src_queue":"queue01","dest_address":"queue02","blocked_status":"running"}]
+
+| Key | Description
+| --- | -----------
+|dest-address | not dest-queue The AMQP 1.0 link address. Mandatory.
+
 ```cmd
 # localhost queue01 and queue02, src heartbeat=10&connection_timeout=10000 and AMQP 1.0
-rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp1.0"", ""dest-uri"": ""amqp://localhost?heartbeat=10&connection_timeout=10000"", ""dest-queue"": ""queue02""}"
+rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp10"", ""dest-uri"": ""amqp://localhost"", ""dest-address"": ""queue02""}"
    
