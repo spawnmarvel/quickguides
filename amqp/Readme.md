@@ -933,8 +933,14 @@ Note we restricted the tls versions it should attempt to use as well as URI enco
 
 This URI can now be used to configure the shovel URI together with the queue name as either the source or destination assuming the SB queue is not configured to use sessions or partitions.
 
+Sessions and Partitions
+
+To use SB sessions and partitions with the shovel some additional configuration is required. The current best way to do so is by using the static shovel configuration to add the required properties and/or message annotations.
+
+https://www.rabbitmq.com/shovel-static.html
 
 
-Sevice bus TODO
+
+Sevice bus
 
    
