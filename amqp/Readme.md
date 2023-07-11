@@ -913,4 +913,27 @@ http://localhost:15672/api/shovels
 ```cmd
 # localhost queue01 and queue02, src heartbeat=10&connection_timeout=10000 and AMQP 1.0
 rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp10"", ""dest-uri"": ""amqp://localhost"", ""dest-address"": ""queue02""}"
+
+AMQP 1.0 support for RabbitMQ
+
+https://github.com/rabbitmq/rabbitmq-server/tree/main/deps/rabbitmq_amqp1_0
+
+Shovelling a message from RabbitMQ to Azure ServiceBus
+
+https://gist.github.com/kjnilsson/159c643fb34604f8ea20be336109261b
+
+First get the SB connection string from the Microsoft Azure portal. Typically it will look something like:
+* Endpoint=sb://shoveltest.servicebus.windows.net/;SharedAccessKeyName=TheUser;SharedAccessKey=Some/String=;EntityPath=aqueue1
+
+Given this we can translate the connection string into an amqp URI as follows:
+* amqps://TheUser:Some%2FString=@shoveltest.servicebus.windows.net:5671=versions=tlsv1.0,tlsv1.1,tlsv1.2
+
+Note we restricted the tls versions it should attempt to use as well as URI encoded the UserName and Password as Azure kindly include a lot of forward slashes into these.
+
+This URI can now be used to configure the shovel URI together with the queue name as either the source or destination assuming the SB queue is not configured to use sessions or partitions.
+
+
+
+Sevice bus TODO
+
    
