@@ -862,11 +862,14 @@ rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"",
    
 ```
 Management
+
 ![Dynamic shovel ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/dynamicshovel.jpg)
 
 Status
+
 ![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelstatus.jpg)
 
 Add msg to queue01, it is moved to queue02
+
 ![Shovel move ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelmove.jpg)
 
