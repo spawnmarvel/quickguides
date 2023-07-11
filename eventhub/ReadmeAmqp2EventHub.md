@@ -558,6 +558,12 @@ The following plugins have been configured:
 
 ```
 
+TODO
+
+Read this
+https://github.com/rabbitmq/rabbitmq-server/tree/main/deps/rabbitmq_amqp1_0
+Enable TLS
+Test again.
 
 ## Troubleshoot
 
