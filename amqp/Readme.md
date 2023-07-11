@@ -861,3 +861,5 @@ https://www.rabbitmq.com/shovel-dynamic.html
 rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp091"", ""dest-uri"": ""amqp://localhost"", ""dest-queue"": ""queue02""}"
    
 ```
+
+[!Dynamic shovel] (https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/dynamicshovel.jpg)
