@@ -861,5 +861,12 @@ https://www.rabbitmq.com/shovel-dynamic.html
 rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp091"", ""dest-uri"": ""amqp://localhost"", ""dest-queue"": ""queue02""}"
    
 ```
-
+Management
 ![Dynamic shovel ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/dynamicshovel.jpg)
+
+Status
+![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelstatus.jpg)
+
+Add msg to queue01, it is moved to queue02
+![Shovel move ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelmove.jpg)
+
