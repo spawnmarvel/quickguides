@@ -850,7 +850,7 @@ rabbitmqctl delete_queue AZQueueData
 
 ```
 
-# 15 Dynamic shovel using CLI tools
+## 15 Dynamic shovel using CLI tools
 
 Using CLI Tools Declaring a Dynamic Shovel
 
