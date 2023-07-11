@@ -849,3 +849,15 @@ rabbitmqctl list_permissions
 rabbitmqctl delete_queue AZQueueData
 
 ```
+
+# 15 Dynamic shovel using CLI tools
+
+Using CLI Tools
+
+https://www.rabbitmq.com/shovel-dynamic.html
+
+```cmd
+# localhost queue01 and queue02
+rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp091"", ""dest-uri"": ""amqp://localhost"", ""dest-queue"": ""queue02""}"
+   
+```
