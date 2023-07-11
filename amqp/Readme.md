@@ -913,6 +913,7 @@ http://localhost:15672/api/shovels
 ```cmd
 # localhost queue01 and queue02, src heartbeat=10&connection_timeout=10000 and AMQP 1.0
 rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp10"", ""dest-uri"": ""amqp://localhost"", ""dest-address"": ""queue02""}"
+```
 
 AMQP 1.0 support for RabbitMQ
 
