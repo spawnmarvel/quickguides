@@ -862,4 +862,4 @@ rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"",
    
 ```
 
-[!Dynamic shovel] (https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/dynamicshovel.jpg)
+![Dynamic shovel] (https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/dynamicshovel.jpg)
