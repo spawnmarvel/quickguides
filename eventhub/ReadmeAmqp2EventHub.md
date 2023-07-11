@@ -476,6 +476,7 @@ Shovel status is starting, never goes to running
 
 Log from RabbitMQ:
 
+```log
 2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     supervisor: {<0.3627.0>,amqp10_client_connection_sup}
 2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     errorContext: start_error
 2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     reason: {options,incompatible,[{verify,verify_peer},{cacerts,undefined}]}
@@ -499,9 +500,63 @@ Log from RabbitMQ:
 2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {child_type,worker}]
 2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0> 
 2023-07-11 10:44:41.043000+02:00 [error] <0.3610.0> Shovel 'shovel_01' could not connect to destination
-
+```
 
 [...]
+
+Test same but set sasl=plain, to sasl=true
+```log
+2023-07-11 11:03:39.526000+02:00 [error] <0.8648.0>     supervisor: {<0.8648.0>,amqp10_client_connection_sup}
+2023-07-11 11:03:39.526000+02:00 [error] <0.8648.0>     errorContext: start_error
+2023-07-11 11:03:39.526000+02:00 [error] <0.8648.0>     reason: {options,incompatible,[{verify,verify_peer},{cacerts,undefined}]}
+[...]
+2023-07-11 11:03:39.526000+02:00 [error] <0.8629.0> Shovel 'shovel_02' could not connect to destination
+
+```
+
+### Test 9 service bus with
+Using same as above, but now set source to AMQP 1.0, same as destination.
+* shovel_03
+* Source AMQP 1.0
+* Address from-rabbitmq01
+* URI Primary Connection String from above generator
+* Address, from-rabbitmq01
+* Reconnect delay, 30s
+* Add shovel
+
+Shovel status is starting, never goes to running
+
+Log from RabbitMQ:
+```log
+2023-07-11 11:08:18.155000+02:00 [info] <0.8999.0> accepting AMQP connection <0.8999.0> (127.0.0.1:59170 -> 127.0.0.1:5672)
+2023-07-11 11:08:18.155000+02:00 [error] <0.8999.0> closing AMQP connection <0.8999.0> (127.0.0.1:59170 -> 127.0.0.1:5672):
+2023-07-11 11:08:18.155000+02:00 [error] <0.8999.0> amqp1_0_plugin_not_enabled
+2023-07-11 11:08:18.155000+02:00 [warning] <0.8994.0> Unsupported protocol version: 0 0.9.1
+2023-07-11 11:08:18.155000+02:00 [warning] <0.8995.0> AMQP 1.0 connection socket was closed, connection state: 'expecting_frame_header'
+2023-07-11 11:08:18.156000+02:00 [error] <0.8992.0> Shovel 'shovel_03' could not connect to source
+
+```
+Enable AMQP 1.0
+PS C:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>
+.\rabbitmq-plugins list
+.\rabbitmq-plugins enable rabbitmq_amqp1_0
+The following plugins have been configured:
+  rabbitmq_amqp1_0
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_shovel
+  rabbitmq_shovel_management
+  rabbitmq_web_dispatch
+
+
+```log
+2023-07-11 11:14:58.438000+02:00 [error] <0.9613.0>     supervisor: {<0.9613.0>,amqp10_client_connection_sup}
+2023-07-11 11:14:58.438000+02:00 [error] <0.9613.0>     errorContext: start_error
+2023-07-11 11:14:58.438000+02:00 [error] <0.9613.0>     reason: {options,incompatible,[{verify,verify_peer},{cacerts,undefined}]}
+[...]
+2023-07-11 11:14:58.438000+02:00 [error] <0.9582.0> Shovel 'shovel_03' could not connect to destination
+
+```
 
 
 ## Troubleshoot
