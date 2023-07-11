@@ -873,10 +873,26 @@ Add msg to queue01, it is moved to queue02
 
 ![Shovel move ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelmove.jpg)
 
+URI Query Parameters
+
+https://www.rabbitmq.com/uri-query-parameters.html
+
+```cmd
+# localhost queue01 and queue02, src heartbeat=10&connection_timeout=10000
+rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp091"", ""dest-uri"": ""amqp://localhost?heartbeat=10&connection_timeout=10000"", ""dest-queue"": ""queue02""}"
+   
+```
+
 AMQP 1.0 enable (already enabled if not run:)
 ```cmd
 rabbitmq-plugins list
 [E*] rabbitmq_amqp1_0                  3.12.1
 
-
 ```
+
+![Shovel amqp 10 ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelamqp10.jpg)
+
+```cmd
+# localhost queue01 and queue02, src heartbeat=10&connection_timeout=10000 and AMQP 1.0
+rabbitmqctl.bat set_parameter shovel my-shovel  "{""src-protocol"": ""amqp091"", ""src-uri"":""amqp://localhost"", ""src-queue"": ""queue01"", ""dest-protocol"": ""amqp1.0"", ""dest-uri"": ""amqp://localhost?heartbeat=10&connection_timeout=10000"", ""dest-queue"": ""queue02""}"
+   
