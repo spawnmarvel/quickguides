@@ -873,3 +873,10 @@ Add msg to queue01, it is moved to queue02
 
 ![Shovel move ](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/5_shovel/shovelmove.jpg)
 
+AMQP 1.0 enable (already enabled if not run:)
+```cmd
+rabbitmq-plugins list
+[E*] rabbitmq_amqp1_0                  3.12.1
+
+
+```
