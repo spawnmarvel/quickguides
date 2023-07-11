@@ -218,7 +218,7 @@ Make shovel
 * rmq-test05
 * from-amqp05
 * amqp 1.0
-* URI, converted SAS, amqps://send-policy05:SAS-KEY@amqptest05.servicebus.windows.net:5671/?sasl=plain
+* URI, converted SAS, from Connection String from above generator
 * Address from-amqp05
 * Recconnect delay, 20 s
 
@@ -339,6 +339,169 @@ amqp1_0.protocol_strict_mode = false
 
 Moved to https://github.com/rabbitmq/rabbitmq-server and AMQP 1.0 is supported.
 
+
+### Test 7 Event hub
+
+Install RMQ and Erlang:
+* otp_win64_26.0.exe
+* Set ERLANG_HOME
+* Set RABBITMQ environment vars
+* rabbitmq-server-3.12.1.exe
+* rabbitmq-plugins enable rabbitmq_management
+* rabbitmq-plugins enable rabbitmq_shovel_management
+* RabbitMQ 3.12.1,Erlang 26.0
+* advance.config = [].
+* rabbitmq.conf = simple
+
+Quickstart: Create an event hub using Azure CLI
+
+```bash
+# Create a resource group
+rgName="Rg-ampq-eh-089"
+region="uksouth"
+az group create --name $rgName --location $region
+
+"properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": {
+    "Hello": "World"
+# Create an Event Hubs namespace
+namespaceName="ns-rmq-2-eh"
+az eventhubs namespace create --name $namespaceName --resource-group $rgName -l $region
+
+ "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "Rg-ampq-eh-089",
+  "serviceBusEndpoint": "https://ns-rmq-2-eh.servicebus.windows.net:443/",
+  "sku": {
+    "capacity": 1,
+    "name": "Standard",
+    "tier": "Standard"
+
+# Endpoint is https:443
+
+# Create an event hub
+eventhubName="ehn-from-rmq"
+az eventhubs eventhub create --name $eventhubName --resource-group $rgName --namespace-name $namespaceName
+
+ "location": "uksouth",
+  "messageRetentionInDays": 7,
+  "name": "ehn-from-rmq",
+  "partitionCount": 4,
+  "partitionIds": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "resourceGroup": "Rg-ampq-eh-089",
+  "retentionDescription": {
+    "cleanupPolicy": "Delete",
+    "retentionTimeInHours": 168
+  },
+  "status": "Active",
+
+
+```
+Create policy for send
+* policy-02
+* Copy Connection string-primary key
+* Convert it, https://red-mushroom-0f7446a0f.azurestaticapps.net/
+
+RabbitMQ
+* Queue ehn-from-rmq
+
+Shovel
+* shovel-07
+* Source queue
+* * ehn-from-rmq
+* Destination AMQP 1.0
+* uri
+* address
+* Reconnect delay 45 s
+
+```log
+2023-07-11 10:01:57.638000+02:00 [error] <0.2006.0>     supervisor: {<0.2006.0>,amqp10_client_connection_sup}
+2023-07-11 10:01:57.638000+02:00 [error] <0.2006.0>     errorContext: start_error
+2023-07-11 10:01:57.638000+02:00 [error] <0.2006.0>     reason: {options,incompatible,[{verify,verify_peer},{cacerts,undefined}]}
+[...]
+2023-07-11 10:09:27.788000+02:00 [error] <0.2476.0> Shovel 'shovel-07' could not connect to destination
+
+
+```
+
+### Test 8 Service bus
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
+
+Adding a new Azure Service Bus Namespace
+* Rg-amqp-sb-007
+* Service bus
+* Use rabbitmq07 for Namespace name
+* TLS 1.2, default
+* Connectivity, Public access, default
+
+Creating our Azure Service Bus Queue
+* from-rabbitmq01
+
+Enabling the RabbitMQ Shovel Plugin
+* Done
+
+Connecting RabbitMQ to Azure Service Bus
+* from-rabbitmq01 (rabbitmq07/from-rabbitmq01) | Shared access policies
+* policy-07, send
+
+Convert string
+* Primary Connection String
+* https://red-mushroom-0f7446a0f.azurestaticapps.net/
+
+RabbitMQ
+* Created queue, with same name as Azure Service Bus Queue
+* from-rabbitmq01
+* /, from-rabbitmq01, classic, features D
+
+Now open the RabbitMQ management plugin in our browsers
+* Name shovel_07
+* Source AMQP 0.9.1
+* URI, default
+* Queue, from-rabbitmq01
+* Destination, AMQP 1.0
+* URI Primary Connection String from above generator
+* Address, from-rabbitmq01
+* Reconnect delay, 30s
+* Add shovel
+
+Shovel status is starting, never goes to running
+
+Log from RabbitMQ:
+
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     supervisor: {<0.3627.0>,amqp10_client_connection_sup}
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     errorContext: start_error
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     reason: {options,incompatible,[{verify,verify_peer},{cacerts,undefined}]}
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>     offender: [{pid,undefined},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {id,reader},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {mfargs,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                    {amqp10_client_frame_reader,start_link,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                        [<0.3627.0>,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                         #{notify => <0.3610.0>,port => 5671,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           address => "rabbitmq07.servicebus.windows.net",
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           sasl =>
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                               {plain,<<"policy-07">>,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                                   <<"TOKEN WAS HERE">>},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           hostname => <<"rabbitmq07.servicebus.windows.net">>,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           notify_when_opened => <0.3610.0>,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           notify_when_closed => <0.3610.0>,
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                           tls_opts => {secure_port,[]}}]}},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {restart_type,transient},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {significant,false},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {shutdown,5000},
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0>                {child_type,worker}]
+2023-07-11 10:44:41.042000+02:00 [error] <0.3627.0> 
+2023-07-11 10:44:41.043000+02:00 [error] <0.3610.0> Shovel 'shovel_01' could not connect to destination
+
+
+[...]
 
 
 ## Troubleshoot
