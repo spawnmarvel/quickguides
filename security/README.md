@@ -148,6 +148,23 @@ This reference architecture shows a secure hybrid network that extends an on-pre
 
 https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?tabs=portal
 
+## ExpressRoute or Virtual Network VPN
+
+Three hybrid connectivity solutions currently to connect a customer’s premises to Azure.
+
+Virtual Network Point-to-site
+
+A point-to-site VPN also allows you to create a secure connection from your Windows-based computer to your virtual network without having to deploy any special software. Microsoft provide you with VPN policies that you can download into your computer and use Windows’ built in VPN client. You can securely connect to the virtual network just the way you use VPN clients to connect to your company’s corporate network. Since Microsoft use standard Secure Sockets Tunneling Protocol (SSTP), you will be able to securely connect to Azure from anywhere. This capability enables you to quickly setup connectivity to Azure for prototyping, development, testing and simulation purposes. You can use the same setup and configuration to work with some site-to-site connectivity options.
+
+Virtual Network Site-to-site
+
+A site-to-site VPN allows you to create a secure connection between your on-premises site and your virtual network. Microsoft use industry standard IPsec VPN in Azure. So Microsoft are interoperable with most VPN devices. You can refer to a list of known compatible devices and sample configurations in the Azure website. You can use this service to connect up to 10 on-premises sites and virtual networks to each other securely. Once a site-to-site VPN is setup you have IP level connectivity between your premises and virtual networks in Azure. This enables you to build truly hybrid applications in Azure. Use this service in cases where your cross-premises connectivity throughput is nominal (~ 100 Mbps).
+ExpressRoute
+
+ExpressRoute lets you create private connections between Azure datacenters and infrastructure that’s on your premises or in a co-location environment. ExpressRoute connections do not go over the public Internet, and offer more reliability, faster speeds, lower latencies and higher security than typical connections over the Internet. With ExpressRoute, you can establish connections to Azure at an ExpressRoute location (Exchange Provider facility) or directly connect to Azure from your existing WAN network (such as a MPLS VPN) provided by a network service provider.
+
+https://azure.microsoft.com/en-us/blog/expressroute-or-virtual-network-vpn-whats-right-for-me/
+
 ## AZ-220 Implement Security (5-10%)
 
 ### Quick Reference: Key Concepts and Terminology
