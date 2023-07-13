@@ -1,3 +1,18 @@
+# ISA95, Enterprise-Control System Integration
+
+To create a standard that will define the interface between control functions and other enterprise functions based upon the Purdue Reference Model for CIM (hierarchical form) as published by ISA. The interface initially considered is the interface between levels 3 and 4 of that model. 
+
+https://www.isa.org/standards-and-publications/isa-standards/isa-standards-committees/isa95
+
+ANSI/ISA-95, or ISA-95 as it is more commonly referred, is an international standard from the International Society of Automation for developing an automated interface between enterprise and control systems. This standard has been developed for global manufacturers. It was developed to be applied in all industries, and in all sorts of processes, like batch processes, continuous and repetitive processes.
+
+The objectives of ISA-95 are to provide consistent terminology that is a foundation for supplier and manufacturer communications, provide consistent information models, and to provide consistent operations models which is a foundation for clarifying application functionality and how information is to be used.
+
+There are 5 parts of the ISA-95 standard.
+
+https://en.wikipedia.org/wiki/ANSI/ISA-95
+
+
 # ChatGPT
 
 When it comes to secure data transfer over the internet, there are several best practices you can follow to protect your data. Here are some key recommendations:
