@@ -13,6 +13,11 @@ There are 5 parts of the ISA-95 standard.
 https://en.wikipedia.org/wiki/ANSI/ISA-95
 
 
+ICS Security: The Purdue Model
+
+https://claroty.com/blog/ics-security-the-purdue-model#:~:text=What%20is%20the%20Purdue%20Model,faster%20and%20less%20error%2Dprone.
+
+
 # ChatGPT
 
 When it comes to secure data transfer over the internet, there are several best practices you can follow to protect your data. Here are some key recommendations:
