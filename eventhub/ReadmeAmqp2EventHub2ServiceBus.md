@@ -6,7 +6,7 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 
 # AMQP to Azure Event Hub or Service Bus
 
-## 1 AMQP to Azure Event Hub 
+## Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
 Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
