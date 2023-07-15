@@ -123,6 +123,9 @@ amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?
 2023-07-15 19:31:27.467000+02:00 [error] <0.20164.0>     reason: {tls_alert,{unknown_ca,"TLS client: In state certify at ssl_handshake.erl:2109 generated CLIENT ALERT: Fatal - Unknown CA\n"}}
 
 ```
+
+TODO: Need to know what root certificate Azure Service Bus uses, since above gives Unknown CA.
+
 Now create a dynamic shovel
 
 ![Shovel ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel.jpg)
@@ -131,7 +134,22 @@ Shovel status
 
 ![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovelstatus.jpg)
 
+Post two messages
 
+```json
+{
+    "Timestamp": "2020-01-01T01:00:00Z", 
+    "Temperature": 19, 
+    "Humidity": 50
+}
+
+{
+    "Timestamp": "2020-01-01T02:00:00Z", 
+    "Temperature": 20, 
+    "Humidity": 49
+}
+
+```
 
 
 
