@@ -45,6 +45,13 @@ ASB Namespace
 
 ![Namespace ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg)
 
+Add a new root policy (important step!)
+
+![Root policy ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/root.jpg)
+
+
+
+
 
 
 
