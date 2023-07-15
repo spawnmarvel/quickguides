@@ -34,7 +34,11 @@ https://github.com/spawnmarvel/test/blob/main/it_works.jpg
 
 ### Test Azure Service Bus or Azure Event hub with RabbitMQ
 
-Note, it does not matter if you use Azure Service Bus or Azure Event hub, bot uses the same foundation for connectivity in both tutorials.
+Note, it does not matter if you use Azure Service Bus or Azure Event hub, bot uses the same foundation for connectivity in both tutorials and they start the same way.
+
+Ok lets do this for Azure Service Bus.
+
+
 
 
 
