@@ -41,6 +41,7 @@ Ok lets do this for Azure Service Bus, date 15.07.2023.
 Version RabbitMQ 3.12.1, Erlang 26.0
 
 
+ASB Namespace
 
 ![Namespace ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg)
 
