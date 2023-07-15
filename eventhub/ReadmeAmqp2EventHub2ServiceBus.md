@@ -82,7 +82,8 @@ Endpoint=sb://<your-namespace>.servicebus.windows.net/;SharedAccessKeyName=eh-rm
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
 ```
 
-``log
+Result when you make the shovel as in the tutorials:
+```log
 {error,{options,incompatible,
                 [{verify,verify_peer},{cacerts,undefined}]}}
 ```
