@@ -117,6 +117,11 @@ amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:
 To:
 ```log
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
+
+# if we use verify=verify_peer
+
+2023-07-15 19:31:27.467000+02:00 [error] <0.20164.0>     reason: {tls_alert,{unknown_ca,"TLS client: In state certify at ssl_handshake.erl:2109 generated CLIENT ALERT: Fatal - Unknown CA\n"}}
+
 ```
 Now create a dynamic shovel
 
