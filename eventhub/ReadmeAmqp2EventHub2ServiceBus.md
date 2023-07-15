@@ -167,9 +167,15 @@ Go to Service Bus explorer and view messages
 ![Success ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/success.jpg)
 
 
+## Troubleshoot
+1. Check if Erlang or RabbitMQ has had any updates
+2. Check if Azure Service Bus has had any updates
+3. https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-faq#what-ports-do-i-need-to-open-on-the-firewall--
 
-
-
+What ports do I need to open on the firewall?
+You can use the following protocols with Azure Service Bus to send and receive messages:
+* Advanced Message Queuing Protocol 1.0 (AMQP). AMQP	5671, 5672	AMQP with TLS See https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide
+* Hypertext Transfer Protocol 1.1 with TLS (HTTPS), HTTPS	443, This port is used for the HTTP/REST API and for AMQP-over-WebSockets
 
 
 
