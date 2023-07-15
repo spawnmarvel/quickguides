@@ -38,8 +38,9 @@ Note, it does not matter if you use Azure Service Bus or Azure Event hub, bot us
 
 Ok lets do this for Azure Service Bus, date 15.07.2023.
 
-Version RabbitMQ 3.12.1, Erlang 26.0
+## Steps
 
+Version RabbitMQ 3.12.1, Erlang 26.0
 
 ASB Namespace
 
