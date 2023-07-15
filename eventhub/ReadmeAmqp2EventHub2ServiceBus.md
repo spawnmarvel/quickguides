@@ -42,7 +42,7 @@ Ok lets do this for Azure Service Bus, but some important notes first.
 * Version RabbitMQ 3.12.1, Erlang 26.0
 * Azure Service Bus tier tested, Basic.
 
-![Namespace]https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg
+![Namespace ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg)
 
 
 
