@@ -36,11 +36,11 @@ https://github.com/spawnmarvel/test/blob/main/it_works.jpg
 
 Note, it does not matter if you use Azure Service Bus or Azure Event hub, bot uses the same foundation for connectivity in both tutorials and they start the same way.
 
-Ok lets do this for Azure Service Bus, but some important notes first.
+Ok lets do this for Azure Service Bus, date 15.07.2023.
 
-* Date 15.07.2023
-* Version RabbitMQ 3.12.1, Erlang 26.0
-* Azure Service Bus tier tested, Basic.
+Version RabbitMQ 3.12.1, Erlang 26.0
+
+
 
 ![Namespace ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg)
 
