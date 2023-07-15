@@ -46,9 +46,21 @@ ASB Namespace
 
 ![Namespace ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/namespace.jpg)
 
-Add a new root policy with send access (important step!)
+Add a new root policy SAS with send access (important step!, not in the tutorials)
 
 ![Root policy ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/root.jpg)
+
+Add a new entitie
+* Leave default properties, or alter them.
+* Enable partitioning, uncheck
+* Enable dead lettering on message expiration, uncheck
+
+![Queue ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queue.jpg)
+
+Add a new policy SAS on the queue with send access (same as in both tutorials)
+
+![Sub policy ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/subroot.jpg)
+
 
 
 
