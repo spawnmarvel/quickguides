@@ -124,7 +124,7 @@ Now create a dynamic shovel
 
 Shovel status
 
-![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/status.jpg)
+![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovelstatus.jpg)
 
 
 
