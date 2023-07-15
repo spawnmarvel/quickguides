@@ -159,6 +159,8 @@ Rate RabbitMQ
 
 Azure Service Bus
 
+![Bus Message ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/busmessage.jpg)
+
 
 
 
