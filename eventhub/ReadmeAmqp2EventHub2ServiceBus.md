@@ -28,6 +28,8 @@ https://stackoverflow.com/questions/76652187/rabbitmq-shovel-to-azure-event-hub-
 
 ## Test repos verified result
 
+Shovel status running and messages transported to Azure Service Bus
+
 https://github.com/spawnmarvel/test/blob/main/it_works.jpg
 
 ### Test Azure Service Bus or Azure Event hub with RabbitMQ
