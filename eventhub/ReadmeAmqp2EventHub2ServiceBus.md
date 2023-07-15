@@ -118,6 +118,15 @@ To:
 ```log
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 ```
+Now create a dynamic shovel
+
+![Shovel ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/shovel.jpg)
+
+Shovel status
+
+![Shovel status ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/status.jpg)
+
+
 
 
 
