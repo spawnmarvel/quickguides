@@ -4,7 +4,7 @@ AMQP allows for interconnecting connecting brokers directly, for instance using 
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
 
-# AMQP to Azure Event Hub and Service Bus
+# AMQP to Azure Event Hub or Service Bus
 
 ## 1 AMQP to Azure Event Hub 
 
@@ -12,8 +12,7 @@ Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
 https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/importing-data-from-rabbitmq-into-azure-data-explorer-via-event/ba-p/3777688
 
-## 2 Service Bus with RabbitMQ
-
+## 2 How to integrate Service Bus with RabbitMQ
 
 Here's a few scenarios in which we can make use of these capabilities:
 
