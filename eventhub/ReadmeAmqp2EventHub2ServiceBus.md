@@ -65,6 +65,72 @@ RabbitMQ queue
 
 ![Queue amqp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queueamqp.jpg)
 
+Go back to policy on entitie queue, click on it to see the Primary Connection String. We're going to use it to let RabbitMQ talk to Azure Service Bus
+
+"Before you can use that connection string, you'll need to convert it to RabbitMQ's AMQP connection format. So go to the connection string converter tool and paste your connection string in the form, click convert. You'll get a connection string that's RabbitMQ ready."
+
+https://red-mushroom-0f7446a0f.azurestaticapps.net/
+
+"Your connection string looks something like this:"
+
+```log
+Endpoint=sb://<your-namespace>.servicebus.windows.net/;SharedAccessKeyName=eh-rmq-bridge;SharedAccessKey=<SharedAccessKey>;EntityPath=event-hubs-kusto-eh
+```
+"But RabbitMQ Shovel expects a connection string in the AMQP protocol format:"
+
+```log
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
+```
+
+``log
+{error,{options,incompatible,
+                [{verify,verify_peer},{cacerts,undefined}]}}
+```
+The above will not work due to, it has been many updates to RabbitMQ and Erlang.
+
+https://www.erlang.org/blog/otp-26-highlights/
+
+[...] "Erlang/OTP 26 Highlights May 16, 2023 [...] Erlang/OTP 26 Highlights In OTP 26, the default value for the verify option is now verify_peer instead of verify_none. Host verification requires trusted CA certificates to be supplied using one of the options cacerts or cacertsfile. Therefore, a connection attempt with an empty option list will fail in OTP 26"
+
+[...] "The default value for the cacerts option is undefined, which is not compatible with the {verify,verify_peer} option. To make the connection succeed, the recommended way is to use the cacerts option to supply CA certificates to be used for verifying."
+
+So....with that in mind and RabbitMQ URI Query Parameters https://www.rabbitmq.com/uri-query-parameters.html we need to change:
+
+First download MS certificate, we need it in the shovel to trust Azure Service Bus:
+
+https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list
+
+DigiCert Global Root CA, DigiCertGlobalRootCA.crt.
+Convert it to pem with open ssl
+
+```cmd
+openssl x509 -inform DER -in path:\to\DigiCertGlobalRootCA.crt -out path:\to\ DigiCertGlobalRootCA.pem -text
+```
+
+From:
+
+```log
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
+```
+
+To:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
