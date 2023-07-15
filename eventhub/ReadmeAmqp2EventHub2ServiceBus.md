@@ -115,6 +115,9 @@ amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:
 ```
 
 To:
+```log
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
+```
 
 
 
