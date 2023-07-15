@@ -162,6 +162,10 @@ Azure Service Bus
 ![Bus Messages ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/busmessages.jpg)
 
 
+Go to Service Bus explorer and view messages
+
+![Success ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/success.jpg)
+
 
 
 
