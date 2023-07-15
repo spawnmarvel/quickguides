@@ -61,6 +61,11 @@ Add a new policy SAS on the queue with send access (same as in both tutorials)
 
 ![Sub policy ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/subroot.jpg)
 
+RabbitMQ queue
+
+![Queue amqp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/queueamqp.jpg)
+
+
 
 
 
