@@ -4,6 +4,10 @@ AMQP allows for interconnecting connecting brokers directly, for instance using 
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-overview
 
+## Note
+
+All names here for resources, addresses, URI, queues and more may change since I am doing this research on different days.
+
 # AMQP to Azure Event Hub or Service Bus
 
 ## 1 Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
@@ -40,7 +44,7 @@ Ok lets do this for Azure Service Bus, date 15.07.2023.
 
 ## Steps
 
-This is for test, it is best to use VPN / ExpressRoute or use a Private access with a private link.
+:warning: :warning: This is for test, it is best to use VPN / ExpressRoute or use a Private access with a private link.
 But we are testing scenario mentioned above:
 
 * Third-Party Integration: A third party uses RabbitMQ as a broker, and wants to send their data to us, but they are outside our organization. We can provide them with SAS Key giving them access to a limited set of Azure Service Bus queues where they can forward their messages to.
