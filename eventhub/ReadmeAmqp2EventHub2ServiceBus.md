@@ -179,6 +179,31 @@ You can use the following protocols with Azure Service Bus to send and receive m
 
 
 
+## Further enhance the security. ref verify=verify_peer Fatal - Unknown CA
+
+So the certificate is not for a service bus, maybe it is a general certificate with reference to CN, let's check the certificate.
+
+Found this nice script from jstangroome.
+
+https://gist.github.com/jstangroome/5945820
+
+If we run it with: Azure Portal->Service Bus Namespace->Host name: xxxxxxxxx.servicebus.windows.net port 443:
+
+```ps1
+$ComputerName = "xxxxxxxxx.servicebus.windows.net"
+$Port = 443
+
+# We get back
+.\Get-remotesslcertificate.ps1
+CN=servicebus.windows.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+
+```
+
+
+
+
+
+
 
 
 
