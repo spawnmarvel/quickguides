@@ -232,6 +232,10 @@ Subject Alternative Name
 DNS Name=*.servicebus.windows.net
 DNS Name=servicebus.windows.net
 ```
+Where do we get that certificate.....
+
+https://stackoverflow.com/questions/35621212/the-x-509-certificate-cn-servicebus-windows-net-azure-service-bus-queue
+
 
 
 
