@@ -206,6 +206,28 @@ So I do not think verify=verify_peer will work since, https://www.rabbitmq.com/s
 
 It could work if the ASB certificate was obtainable and had SAN of *.servicebus.windows.net for example.
 
+Found this nice script from notesbytom
+
+https://gist.github.com/notesbytom/2850d97fa5038053f8580730b8ee6e05
+
+```ps1
+# modified
+
+$fqdn = "your.fqdn.com" 
+$port = 443
+
+$tcpsocket = New-Object Net.Sockets.TcpClient($fqdn, $port)
+$tcpstream = $tcpsocket.GetStream()
+$sslStream = New-Object Net.Security.SslStream($tcpstream, $false)
+$sslStream.AuthenticateAsClient($fqdn)
+$certinfo = New-Object security.cryptography.x509certificates.x509certificate2($sslStream.RemoteCertificate)
+# look at $tcpsocket.Client.RemoteEndPoint to see Server IP the client is using for connection
+$certinfo | fl
+$certinfo.Extensions | where {$_.Oid.FriendlyName -like 'subject alt*'} | ` foreach { $_.Oid.FriendlyName; $_.Format($true) }
+$tcpsocket.Close() # Dispose() missing from older .NET, use Close()
+
+```
+
 
 
 
