@@ -274,16 +274,11 @@ Remember two SAS policy's with Send access.
 
 Convert the ASB endpoint using above mentioned tool and:
 
-From:
-
+Append:
 ```log
-amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
+&versions=tlsv1.2
 ```
-
-To:
-```log
-amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none&versions=tlsv1.2
-```
+Now we enforce TLS 1.2
 
 It works perfect:
 
