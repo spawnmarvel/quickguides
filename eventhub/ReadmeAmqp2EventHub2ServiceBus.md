@@ -310,6 +310,16 @@ $webRequest = [Net.WebRequest]::Create("https://xxxxxxx.servicebus.windows.net")
 ```
 ![Cert ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/cert.jpg)
 
+Root CA and intermediate
+
+![Cert root ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/certroot.jpg)
+
+Now use that cert in the URI
+
+```log
+cacertfile=path:/to/folder/downloaded.pem&verify=verify_peer
+```
+
 Server Name Indication, SNI
 
 https://www.rabbitmq.com/ssl.html#erlang-client
