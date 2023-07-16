@@ -255,10 +255,8 @@ Subject Alternative Name
 DNS Name=*.servicebus.windows.net
 DNS Name=servicebus.windows.net
 ```
-Where do we get that certificate.....
+Where do we get that certificate.....How to obtain wildcard certificate for Azure Service Bus?
 
-How to obtain wildcard certificate for Azure Service Bus?
-https://stackoverflow.com/questions/76698663/how-to-obtain-wildcard-certificate-for-azure-service-bus
 
 Ok, let's try to add tls version first.
 
