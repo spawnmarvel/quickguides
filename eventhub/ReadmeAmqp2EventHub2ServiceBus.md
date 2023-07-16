@@ -6,7 +6,7 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-o
 
 # AMQP to Azure Event Hub or Service Bus
 
-## Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
+## 1 Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
 Importing Data from RabbitMQ into Azure Data Explorer via Event Hubs
 
@@ -270,7 +270,20 @@ https://gist.github.com/kjnilsson/159c643fb34604f8ea20be336109261b
 
 ```
 
+Remember two SAS policy's with Send access.
 
+Convert the ASB endpoint using above mentioned tool and:
+
+From:
+
+```log
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5671/?sasl=plain
+```
+
+To:
+```log
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none&versions=tlsv1.2
+```
 
 
 
