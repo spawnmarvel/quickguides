@@ -71,6 +71,18 @@ Go back to policy on entitie queue, click on it to see the Primary Connection St
 
 https://red-mushroom-0f7446a0f.azurestaticapps.net/
 
+
+URL Encoding
+
+https://www.w3schools.com/tags/ref_urlencode.ASP
+
+```log
++ becomes %2B
+= becomes %3D
+/ becomes %2F
+etc
+```
+
 "Your connection string looks something like this:"
 
 ```log
@@ -236,6 +248,22 @@ Where do we get that certificate.....
 
 How to obtain wildcard certificate for Azure Service Bus?
 https://stackoverflow.com/questions/76698663/how-to-obtain-wildcard-certificate-for-azure-service-bus
+
+Ok, let's try to add tls version first.
+
+
+Found this gist from kjnilsson
+
+Azure ServiceBus can be used with the AMQP 1.0 protocol. Since version 3.7 RabbitMQ supports shovels where either the source or destination (or both) uses AMQP 1.0.
+
+https://gist.github.com/kjnilsson/159c643fb34604f8ea20be336109261b
+
+```log
+[...]versions=tlsv1.0,tlsv1.1,tlsv1.2
+
+```
+
+
 
 
 
