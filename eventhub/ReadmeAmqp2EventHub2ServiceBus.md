@@ -285,6 +285,10 @@ To:
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none&versions=tlsv1.2
 ```
 
+It works perfect:
+
+![TLS URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tlsuri.jpg)
+
 
 
 
