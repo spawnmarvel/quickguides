@@ -255,7 +255,7 @@ Subject Alternative Name
 DNS Name=*.servicebus.windows.net
 DNS Name=servicebus.windows.net
 ```
-Where do we get that certificate.....How to obtain wildcard certificate for Azure Service Bus?
+Where do we get that certificate.....How to obtain wildcard certificate for Azure Service Bus?, look down to section: NOTE:Obtain certificate
 
 
 Ok, let's try to add tls version first.
@@ -289,6 +289,26 @@ It works perfect:
 Send a message to ASB
 
 ![TLS asv ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tlsasb.jpg)
+
+
+NOTE:Obtain certificate
+
+https://stackoverflow.com/questions/22233702/how-to-download-the-ssl-certificate-from-a-website-using-powershell
+
+```ps1
+# powershell 5.1
+
+$webRequest = [Net.WebRequest]::Create("https://www.google.no/")
+try { $webRequest.GetResponse() } catch {}
+$cert = $webRequest.ServicePoint.Certificate
+$bytes = $cert.Export([Security.Cryptography.X509Certificates.X509ContentType]::Cert)
+set-content -value $bytes -encoding byte -path "c:\temp\downloaded.cer"
+
+# edit to correct url
+$webRequest = [Net.WebRequest]::Create("https://xxxxxxx.servicebus.windows.net")
+
+```
+![Cert ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/cert.jpg)
 
 Server Name Indication, SNI
 
