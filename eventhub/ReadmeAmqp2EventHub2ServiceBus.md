@@ -202,7 +202,7 @@ You can use the following protocols with Azure Service Bus to send and receive m
 
 
 
-## Further enhance the security. ref verify=verify_peer Fatal - Unknown CA
+## Further enhance the security. ref verify=verify_peer Fatal - Unknown CA, TLS 1.2 and SNI
 
 So the certificate is not for a service bus, maybe it is a general certificate with reference to CN, let's check the certificate.
 
@@ -291,6 +291,19 @@ It works perfect:
 Send a message to ASB
 
 ![TLS asv ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tlsasb.jpg)
+
+Server Name Indication, SNI
+
+https://www.rabbitmq.com/ssl.html#erlang-client
+
+* server_name_indication - set this option to the host name of the server to which a TLS connection will be made to enable "Server Name Indication" verification of the certificate presented by the server. 
+* This ensures that the server certificate's CN= value will be verified during TLS connection establishment. 
+* You can override this behavior by setting server_name_indication to a different host name or to the special value disable to disable this verification. 
+* Note that, by default, SNI is not enabled. This default will change in a future RabbitMQ Erlang client release.
+
+```log
+&server_name_indication=hostname
+```
 
 
 
