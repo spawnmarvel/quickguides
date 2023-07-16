@@ -286,7 +286,7 @@ It works perfect:
 
 Send a message to ASB
 
-![TLS asv ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tlasb.jpg)
+![TLS asv ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tlsasb.jpg)
 
 
 
