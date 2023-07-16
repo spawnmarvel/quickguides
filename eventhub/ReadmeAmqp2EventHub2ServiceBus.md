@@ -226,6 +226,11 @@ $certinfo | fl
 $certinfo.Extensions | where {$_.Oid.FriendlyName -like 'subject alt*'} | ` foreach { $_.Oid.FriendlyName; $_.Format($true) }
 $tcpsocket.Close() # Dispose() missing from older .NET, use Close()
 
+Subject      : CN=servicebus.windows.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+[...]
+Subject Alternative Name
+DNS Name=*.servicebus.windows.net
+DNS Name=servicebus.windows.net
 ```
 
 
