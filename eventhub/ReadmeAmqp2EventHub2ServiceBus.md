@@ -391,7 +391,7 @@ cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_i
 
 ```
 
-![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/uri.jpg)
+![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaluri.jpg)
 
 
 
