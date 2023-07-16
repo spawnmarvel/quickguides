@@ -1,6 +1,6 @@
 # AMQP, Event Grid, Event Hubs and Service Bus
 
-## Choose between Azure messaging services - Event Grid, Event Hubs, and Service Bus TODO
+## Choose between Azure messaging services - Event Grid, Event Hubs, and Service Bus
 
 Azure offers three services that assist with delivering events or messages throughout a solution. These services are:
 
