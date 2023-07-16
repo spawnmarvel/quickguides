@@ -384,6 +384,15 @@ cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_i
 ```
 ![SNI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sni.jpg)
 
+Lets add the TLS parameter
+
+```log
+cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net&versions=tlsv1.2
+
+```
+
+![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/uri.jpg)
+
 
 
 
