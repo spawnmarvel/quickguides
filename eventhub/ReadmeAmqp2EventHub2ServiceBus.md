@@ -234,7 +234,11 @@ DNS Name=servicebus.windows.net
 ```
 Where do we get that certificate.....
 
-https://stackoverflow.com/questions/35621212/the-x-509-certificate-cn-servicebus-windows-net-azure-service-bus-queue
+How to obtain wildcard certificate for Azure Service Bus?
+https://stackoverflow.com/questions/76698663/how-to-obtain-wildcard-certificate-for-azure-service-bus
+
+
+
 
 
 
