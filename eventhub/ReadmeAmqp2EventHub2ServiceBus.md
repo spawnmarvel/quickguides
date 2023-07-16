@@ -382,7 +382,7 @@ Server Name Indication, SNI, set to DNS Name=servicebus.windows.net
 cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net
 
 ```
-
+![SNI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sni.jpg)
 
 
 
