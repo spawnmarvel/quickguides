@@ -333,11 +333,6 @@ unable to load certificate
 Then the certificate is already in PEM format, you can just open it.
 ```
 
-```log
-cacertfile=path:/to/folder/ca.bundle&verify=verify_peer
-```
-
-Server Name Indication, SNI
 
 https://www.rabbitmq.com/ssl.html#erlang-client
 
@@ -350,6 +345,43 @@ https://www.rabbitmq.com/ssl.html#erlang-client
 &server_name_indication=hostname
 ```
 
+
+No create the bundle with just the root.
+
+
+```log
+cacertfile=path:/to/folder/ca.bundle&verify=verify_peer
+```
+
+Result
+```log
+2023-07-16 20:09:45.372000+02:00 [error] <0.25782.0>     errorContext: start_error
+2023-07-16 20:09:45.372000+02:00 [error] <0.25782.0>     reason: {tls_alert,
+2023-07-16 20:09:45.372000+02:00 [error] <0.25782.0>                 {handshake_failure,
+2023-07-16 20:09:45.372000+02:00 [error] <0.25782.0>                     "TLS client: In state certify at ssl_handshake.erl:2111 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
+
+```
+Add the 2616326057 content to the bundle.
+
+
+Server Name Indication, SNI test FQDN
+
+```log
+cacertfile=path:/to/folder/ca.bundle&verify=verify_peer&server_name_indication=xxxxx.servicebus.windows.net
+```
+
+```log
+2023-07-16 20:33:45.615000+02:00 [error] <0.5122.0>     exception exit: {tls_alert,
+2023-07-16 20:33:45.615000+02:00 [error] <0.5122.0>                         {handshake_failure,
+2023-07-16 20:33:45.615000+02:00 [error] <0.5122.0>                             "TLS client: In state certify at ssl_handshake.erl:2111 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
+
+```
+Server Name Indication, SNI, set to DNS Name=servicebus.windows.net
+
+```log
+cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net
+
+```
 
 
 
