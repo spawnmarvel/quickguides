@@ -196,8 +196,15 @@ $Port = 443
 # We get back
 .\Get-remotesslcertificate.ps1
 CN=servicebus.windows.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US
-
 ```
+
+So I do not think verify=verify_peer will work since, https://www.rabbitmq.com/ssl.html#peer-verification-configuration
+* When the ssl_options.verify option is set to verify_peer, the client does send us a certificate, the node must perform peer verification. 
+* When set to verify_none, peer verification will be disabled and certificate exchange won't be performed.
+* When peer verification is enabled, it is common for clients to also check whether the hostname of the server they are connecting to matches one of two fields in the server certificate: the SAN (Subject Alternative Name) or CN (Common Name). 
+* When wildcard certificates are used, the hostname is matched against a pattern. If there is no match, peer verification will also be failed by the client. 
+
+It could work if the ASB certificate was obtainable and had SAN of *.servicebus.windows.net for example.
 
 
 
