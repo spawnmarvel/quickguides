@@ -346,7 +346,7 @@ https://www.rabbitmq.com/ssl.html#erlang-client
 ```
 
 
-No create the bundle with just the root.
+Now create the bundle with just the root.
 
 
 ```log
@@ -361,7 +361,7 @@ Result
 2023-07-16 20:09:45.372000+02:00 [error] <0.25782.0>                     "TLS client: In state certify at ssl_handshake.erl:2111 generated CLIENT ALERT: Fatal - Handshake Failure\n {bad_cert,hostname_check_failed}"}}
 
 ```
-Add the 2616326057 content to the bundle.
+Add the 2616326057 content to the bundle. (Maybe we dont need this, could set depth also)
 
 
 Server Name Indication, SNI test FQDN
@@ -384,14 +384,14 @@ cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_i
 ```
 ![SNI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/sni.jpg)
 
-Lets add the TLS parameter
+Lets add the TLS parameter and heartbeat
 
 ```log
-cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net&versions=tlsv1.2
+cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net&versions=tlsv1.2&heartbeat=15
 
 ```
 
-![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaluri.jpg)
+![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaleuri1.jpg)
 
 
 
