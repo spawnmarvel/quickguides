@@ -40,6 +40,8 @@ Ok lets do this for Azure Service Bus, date 15.07.2023.
 
 ## Steps
 
+![Topology ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/toplogy.jpg)
+
 Version RabbitMQ 3.12.1, Erlang 26.0
 
 ASB Namespace
