@@ -314,10 +314,27 @@ Root CA and intermediate
 
 ![Cert root ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/certroot.jpg)
 
-Now use that cert in the URI
+Now go to Azure Cert store and download both and create ca.bundle file of the two.
+
+https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list
+
+* DigiCertGlobalRootG2.crt
+* 2616326057.crt (Microsoft Azure TLS Issuing CA 05)
+
+Look above to the open ssl cmd, if you get
+
+```cmd
+openssl x509 -inform DER -in path:\to\2616326057.crt -out path:\to\2616326057.pem -text
+
+unable to load certificate
+4076:error:0D0680A8:asn1 encoding routines:asn1_check_tlen:wrong tag:crypto\asn1\tasn_dec.c:1149:
+4076:error:0D07803A:asn1 encoding routines:asn1_item_embed_d2i:nested asn1 error:crypto\asn1\tasn_dec.c:309:Type=X509
+
+Then the certificate is already in PEM format, you can just open it.
+```
 
 ```log
-cacertfile=path:/to/folder/downloaded.pem&verify=verify_peer
+cacertfile=path:/to/folder/ca.bundle&verify=verify_peer
 ```
 
 Server Name Indication, SNI
