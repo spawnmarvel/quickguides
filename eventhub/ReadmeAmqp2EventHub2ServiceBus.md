@@ -139,7 +139,7 @@ amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:
 
 To:
 ```log
-amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
+amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 
 # if we use verify=verify_peer
 
@@ -389,6 +389,11 @@ Lets add the TLS parameter and heartbeat
 ```log
 cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net&versions=tlsv1.2&heartbeat=15
 
+```
+
+Finale URI
+```log
+amqps://<SasSubPolicy>:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=c:/RabbitMQBaseFolder/cert/ca.bundle&verify=verify_peer&server_name_indication=servicebus.windows.net&versions=tlsv1.2&heartbeat=15
 ```
 
 ![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaleuri1.jpg)
