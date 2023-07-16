@@ -187,7 +187,7 @@ Found this nice script from jstangroome.
 
 https://gist.github.com/jstangroome/5945820
 
-If we run it with: Azure Portal->Service Bus Namespace->Host name: xxxxxxxxx.servicebus.windows.net port 443:
+If we run it with (hostname): Azure Portal->Service Bus Namespace->Host name: xxxxxxxxx.servicebus.windows.net port 443:
 
 ```ps1
 $ComputerName = "xxxxxxxxx.servicebus.windows.net"
