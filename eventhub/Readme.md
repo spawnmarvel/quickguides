@@ -63,6 +63,10 @@ Azure Event Grid, which uses a push rather than pull model. A push model follows
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/3-how-event-hubs-works
 
+#### When to use Event Hubs
+
+https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/4-when-to-use-event-hubs
+
 
 ## What is Azure Service Bus? (As Service Bus is a platform-as-a-service (PaaS))
 
