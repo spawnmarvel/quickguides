@@ -68,12 +68,10 @@ Azure Service Bus, which uses a pull model, similarly to Event Hubs, but is desi
 Azure Event Grid, which uses a push rather than pull model. A push model follows a publisher-subscriber pattern. In this pattern, a source (such as a mobile app) triggers an event that is pushed to all subscribers, or is discarded if no subscribers exist.
 
 
-
-
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/3-how-event-hubs-works
 
 
-How Event Hubs works TODO
+How Event Hubs works
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
 
@@ -86,6 +84,44 @@ Install Telegraf
 
 https://docs.influxdata.com/telegraf/v1.21/introduction/installation/
 
+
+Azure Event Hubs—A big data streaming platform and event ingestion service
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
+
+
+## What is Azure Service Bus? (As Service Bus is a platform-as-a-service (PaaS))
+
+* Azure Service Bus is a fully managed enterprise message broker with message queues and publish-subscribe topics (in a namespace). Service Bus is used to decouple applications and services from each other, providing the following benefits:
+* * Load-balancing work across competing workers
+* * Safely routing and transferring data and control across service and application boundaries
+* * Coordinating transactional work that requires a high-degree of reliability
+
+### Overview
+
+* Data is transferred between different applications and services using messages.
+* JSON, XML, Apache Avro, Plain Text.
+* Messaging, decouple applications, load balancing, topics and subscription, transactions
+* If you're familiar with other message brokers like Apache ActiveMQ, Service Bus concepts are similar to what you know.
+* Message sessions. Implement high-scale coordination of workflows and multiplexed transfers that require strict message ordering or message deferral.
+
+
+If you're familiar with other message brokers like Apache ActiveMQ, Service Bus concepts are similar to what you know. 
+
+As Service Bus is a platform-as-a-service (PaaS) offering, a key difference is that you don't need to worry about the following actions. Azure takes care of those chores for you.
+* Worrying about hardware failures
+* Keeping the operating systems or the products patched
+* Placing logs and managing disk space
+* Handling backups
+* Failing over to a reserve machine 
+
+### Concepts
+
+* Messages are sent to and received from queues. Queues store messages until the receiving application is available to receive and process them.
+* Messages in queues are ordered and timestamped on arrival. Once the broker accepts the message, the message is always held durably in triple-redundant storage, spread across availability zones if the namespace is zone-enabled. * Service Bus keeps messages in memory or volatile storage until they've been reported by the client as accepted.
+
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
 
 
 How to integrate Service Bus with RabbitMQ
@@ -101,11 +137,6 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/network-security
 Exchange events between consumers and producers that use different protocols: AMQP, Kafka, and HTTPS
 
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-exchange-events-different-protocols
-
-
-Azure Event Hubs—A big data streaming platform and event ingestion service
-
-https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
 
 
 
