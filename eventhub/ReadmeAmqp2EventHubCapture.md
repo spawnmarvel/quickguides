@@ -67,3 +67,7 @@ Post some messages on format:
 Consumed
 
 ![Consumed ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/consumed2.jpg)
+
+And captured yes
+
+![Captured ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capturedyes.jpg)
