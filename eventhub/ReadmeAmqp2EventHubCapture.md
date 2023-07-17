@@ -38,7 +38,7 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
 https://gist.github.com/spawnmarvel
 
-
+Example URI
 ```log
 amqps://<SUB-SAS-POLICY>:<SAS-TOKEN>@xxxxxxxxx.servicebus.windows.net:5671/?cacertfile=path:/to/cert/ca.bundle&verify=verify_none
 ```
