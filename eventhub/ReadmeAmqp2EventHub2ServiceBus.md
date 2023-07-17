@@ -142,6 +142,14 @@ amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:
 To:
 ```log
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
+```
+
+### Note Url encode Python
+
+https://gist.github.com/spawnmarvel/15d124a63030c5743c50895926d1e221
+
+
+```log
 
 # if we use verify=verify_peer
 
