@@ -17,13 +17,6 @@ Azure offers three services that assist with delivering events or messages throu
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-services
 
 
-## Azure Event Hubs *
-
-![MS Learn ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/mslearn.jpg)
-
-https://learn.microsoft.com/en-us/training/browse/?filter-products=event&products=azure-event-hubs
-
-
 ## Introduction to Event Hubs (is a fully managed platform-as-a-service)
 
 * Azure Event Hubs connects events from any source to your software systems. This acts as a buffer to provide modular solutions that avoid overwhelming your system during traffic spikes, while still enabling near real-time data pipelines. 
@@ -69,25 +62,6 @@ Azure Event Grid, which uses a push rather than pull model. A push model follows
 
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/3-how-event-hubs-works
-
-
-How Event Hubs works
-
-https://learn.microsoft.com/en-us/training/modules/intro-to-event-hubs/
-
-
-Event Hub Consumer Telegraf Plugin InfluxDB
-
-https://www.influxdata.com/integration/event-hub-consumer/
-
-Install Telegraf
-
-https://docs.influxdata.com/telegraf/v1.21/introduction/installation/
-
-
-Azure Event Hubs—A big data streaming platform and event ingestion service
-
-https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
 
 
 ## What is Azure Service Bus? (As Service Bus is a platform-as-a-service (PaaS))
