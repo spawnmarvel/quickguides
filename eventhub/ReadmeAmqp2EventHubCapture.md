@@ -45,3 +45,7 @@ amqps://<SUB-SAS-POLICY>:<SAS-TOKEN>@xxxxxxxxx.servicebus.windows.net:5671/?cace
 * Add Shovel
 
 https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHub2ServiceBus.md
+
+### Capture format
+
+![Capture ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capture.jpg)
