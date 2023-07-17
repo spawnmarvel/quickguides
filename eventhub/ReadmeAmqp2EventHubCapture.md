@@ -49,3 +49,15 @@ https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHu
 ### Capture format
 
 ![Capture ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capture.jpg)
+
+### Post message
+
+```json
+{
+    "Timestamp": "2023-07-17T18:58:00Z", 
+    "value": 19, 
+    "Name": "Tag1"
+}
+```
+
+![Post ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/post.jpg)
