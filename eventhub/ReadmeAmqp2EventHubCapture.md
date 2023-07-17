@@ -31,4 +31,8 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
 ### Configure AMQP RabbitMQ Shovel to Azure Event Hub:
 
+* SAS root
+* SAS sub
+* URI (+ certificate)
+
 https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHub2ServiceBus.md
