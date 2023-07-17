@@ -52,6 +52,8 @@ https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHu
 
 ### Post message
 
+Post some messages on format:
+
 ```json
 {
     "Timestamp": "2023-07-17T18:58:00Z", 
@@ -61,3 +63,7 @@ https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHu
 ```
 
 ![Post ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/post.jpg)
+
+Consumed
+
+![Consumed ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/consumed.jpg)
