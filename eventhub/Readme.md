@@ -54,7 +54,7 @@ When is Event Hubs a suitable solution?
 * Event Hubs is also not the best choice when delivery of all information is absolutely business critical. Event Hubs can guarantee at least once delivery to its singular Capture consumer. But, if your application has multiple groups that consume the same messages. Then your client application is responsible for connecting to and consuming the events while they're still in the cache. The cache lifetime is configurable, and defaults to 24 hours, but if some downtime prevents your consumer applications from running, you may miss those events.
 
 
-### If Event Hubs isn't the perfect fit for your problem, Azure provides other messaging services. Including:
+#### If Event Hubs isn't the perfect fit for your problem, Azure provides other messaging services. Including:
 
 Azure Service Bus, which uses a pull model, similarly to Event Hubs, but is designed for the delivery of mission-critical commands for which a delivery guarantee is required.
 
@@ -115,24 +115,3 @@ Namespaces
 * Service Bus is serverless messaging.
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
-
-
-How to integrate Service Bus with RabbitMQ
-
-https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integrate-with-rabbitmq
-
-
-Network security for Azure Service Bus
-
-https://learn.microsoft.com/en-us/azure/service-bus-messaging/network-security
-
-
-Exchange events between consumers and producers that use different protocols: AMQP, Kafka, and HTTPS
-
-https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-exchange-events-different-protocols
-
-
-
-Service Bus pricing
-
-https://azure.microsoft.com/en-us/pricing/details/service-bus/
