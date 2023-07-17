@@ -66,4 +66,4 @@ Post some messages on format:
 
 Consumed
 
-![Consumed ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/consumed.jpg)
+![Consumed ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/consumed2.jpg)
