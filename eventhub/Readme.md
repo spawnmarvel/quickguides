@@ -94,9 +94,25 @@ As Service Bus is a platform-as-a-service (PaaS) offering, a key difference is t
 Queue
 
 * Messages are sent to and received from queues. Queues store messages until the receiving application is available to receive and process them.
-* Messages in queues are ordered and timestamped on arrival. Once the broker accepts the message, the message is always held durably in triple-redundant storage, spread across availability zones if the namespace is zone-enabled. * Service Bus keeps messages in memory or volatile storage until they've been reported by the client as accepted.
+* Messages in queues are ordered and timestamped on arrival. Once the broker accepts the message, the message is always held durably in triple-redundant storage, spread across availability zones if the namespace is zone-enabled.
+* Service Bus keeps messages in memory or volatile storage until they've been reported by the client as accepted.
 
 Note: For a comparison of Service Bus queues with Storage queues, see https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted
+
+Topics
+
+* While a queue is often used for point-to-point communication
+* Topics are useful in publish/subscribe scenarios.
+* * A subscriber to a topic can receive a copy of each message sent to that topic. Subscriptions are named entities.
+* * A subscription rule has a filter to define a condition for the message to be copied into the subscription and an optional action that can modify message metadata.
+
+Namespaces
+
+* A namespace is a container for all messaging components (queues and topics).
+* A namespace can be compared to a server in the terminology of other brokers, but the concepts aren't directly equivalent. 
+* A Service Bus namespace is your own capacity slice of a large cluster made up of dozens of all-active virtual machines. 
+* It may optionally span three Azure availability zones. So, you get all the availability and robustness benefits of running the message broker at enormous scale. And, you don't need to worry about underlying complexities.
+* Service Bus is serverless messaging.
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
 
