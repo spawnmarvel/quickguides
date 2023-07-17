@@ -144,7 +144,7 @@ To:
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 ```
 
-### Note Url encode Python
+### Note Url encode Python helper
 
 https://gist.github.com/spawnmarvel/15d124a63030c5743c50895926d1e221
 
