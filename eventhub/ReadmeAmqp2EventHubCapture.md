@@ -33,6 +33,15 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
 * SAS root
 * SAS sub
+* AMQP queue
 * URI (+ certificate)
+
+https://gist.github.com/spawnmarvel
+
+
+```log
+amqps://<SUB-SAS-POLICY>:<SAS-TOKEN>@xxxxxxxxx.servicebus.windows.net:5671/?cacertfile=path:/to/cert/ca.bundle&verify=verify_none
+```
+* Add Shovel
 
 https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHub2ServiceBus.md
