@@ -30,6 +30,8 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-integr
 
 https://stackoverflow.com/questions/76652187/rabbitmq-shovel-to-azure-event-hub-or-service-bus
 
+https://github.com/MicrosoftDocs/azure-docs/issues/112061
+
 ## Test repos verified result
 
 Shovel status running and messages transported to Azure Service Bus and Azure Event Hub
