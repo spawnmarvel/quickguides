@@ -91,9 +91,12 @@ As Service Bus is a platform-as-a-service (PaaS) offering, a key difference is t
 
 ### Concepts
 
+Queue
+
 * Messages are sent to and received from queues. Queues store messages until the receiving application is available to receive and process them.
 * Messages in queues are ordered and timestamped on arrival. Once the broker accepts the message, the message is always held durably in triple-redundant storage, spread across availability zones if the namespace is zone-enabled. * Service Bus keeps messages in memory or volatile storage until they've been reported by the client as accepted.
 
+Note: For a comparison of Service Bus queues with Storage queues, see https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
 
