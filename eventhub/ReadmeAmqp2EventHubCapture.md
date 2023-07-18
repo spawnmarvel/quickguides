@@ -105,6 +105,10 @@ I would recommend you adjust the Event Hubs Capture to write to Parquet files in
 
 ## Parquet format
 
+Make st account with Hierarchical Namespace
+
+![St account ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/staccount.jpg)
+
 Enable capture with parquet format
 
 ![Parquet ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/parquet.jpg)
