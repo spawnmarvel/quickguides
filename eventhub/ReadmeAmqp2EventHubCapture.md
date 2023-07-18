@@ -109,6 +109,10 @@ Enable capture with parquet format
 
 ![Parquet ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/parquet.jpg)
 
+New Stream Analytics
+
+![New job ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capture001.jpg)
+
 * Send one message to get the format, UTC now = 22:14, Norway time + 2h
 
 ```json
