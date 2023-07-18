@@ -143,4 +143,14 @@ Connect the hub to the job
 
 ![Connectr hub ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/connecthub.jpg)
 
+Data is coming, but it seems to be duplications, hm... its 01.04 now Zzzzz
 
+![Connectr hub rep ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/connecthubrep.jpg)
+
+Capture Event Hub without duplication
+
+https://learn.microsoft.com/en-us/answers/questions/1029461/capture-event-hub-without-duplication
+
+Event Hub -- how to prevent duplicate handling when consumers scale out
+
+https://stackoverflow.com/questions/70141202/event-hub-how-to-prevent-duplicate-handling-when-consumers-scale-out
