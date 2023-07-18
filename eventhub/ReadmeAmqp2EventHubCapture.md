@@ -110,7 +110,8 @@ Make st account with Hierarchical Namespace
 ![St account ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/staccount.jpg)
 
 Make a hub with with no capture.
-When the hub os done, Enable capture with parquet format
+
+When the hub is done, Enable capture with parquet format
 
 ![Parquet ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/parquet.jpg)
 
