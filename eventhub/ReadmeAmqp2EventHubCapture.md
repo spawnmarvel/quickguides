@@ -19,7 +19,7 @@ How Event Hubs Capture is charged
 
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
-## Test
+## Test capture
 
 ### Create Event Hubs Namespace:
 
@@ -71,3 +71,12 @@ Consumed
 And captured yes
 
 ![Captured ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capturedyes.jpg)
+
+## Capturing window
+
+* Event Hubs Capture enables you to set up a window to control capturing. This window is a minimum size and time configuration with a "first wins policy," meaning that the first trigger encountered causes a capture operation.
+
+```log
+{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}
+```
+
