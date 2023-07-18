@@ -139,3 +139,8 @@ New Stream Analytics
 }
 ```
 
+Connect the hub to the job
+
+![Connectr hub ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/connecthub.jpg)
+
+
