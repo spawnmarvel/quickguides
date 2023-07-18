@@ -119,12 +119,22 @@ New Stream Analytics
 
 ![New job ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capture001.jpg)
 
-* Send one message to get the format, UTC now = 22:14, Norway time + 2h
+* Send some messages to get the format, UTC now = 22:47, Norway time + 2h
 
 ```json
 {
-    "Timestamp": "2023-07-18T22:14:00Z", 
+    "Timestamp": "2023-07-18T22:47:00Z", 
+    "value": 190, 
+    "Name": "Tag1"
+}
+{
+    "Timestamp": "2023-07-18T22:48:00Z", 
     "value": 19, 
+    "Name": "Tag1"
+}
+{
+    "Timestamp": "2023-07-18T22:49:00Z", 
+    "value": 189, 
     "Name": "Tag1"
 }
 ```
