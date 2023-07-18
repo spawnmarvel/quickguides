@@ -87,6 +87,12 @@ And captured yes
 ```log
 https://mystorageaccount.blob.core.windows.net/mycontainer/mynamespace/myeventhub/0/2023/07/17/17/27/57.avro
 ```
+
+Content avro format:
+```json
+Objavro.codecnullavro.schema�{"type":"record","name":"EventData","namespace":"Microsoft.ServiceBus.Messaging","fields":[
+    {"name":"SequenceNumber","type":"long"},{"name":"Offset","type":"string"},{"name":"EnqueuedTimeUtc","type":"string"},{"name":"SystemProperties","type":{"type":"map","values":["long","double","string","bytes"]}},{"name":"Properties","type":{"type":"map","values":["long","double","string","bytes","null"]}},{"name":"Body","type":["null","bytes"]}]} {Data here}
+```
 Note: If your Azure storage blob is temporarily unavailable, Event Hubs Capture will retain your data for the data retention period configured on your event hub and back fill the data once your storage account is available again.
 
 https://stackoverflow.com/questions/73992965/how-to-read-avro-files-captured-by-azure-event-hubs-from-synapse-sql-serverless
