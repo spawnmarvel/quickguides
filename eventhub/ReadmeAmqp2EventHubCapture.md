@@ -52,7 +52,9 @@ https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHu
 
 ### Post message
 
-Post some messages on format:
+Post some messages on format (UTC):
+
+* Used 2023-07-17T18:58:00Z to 2023-07-17T19:01:00Z
 
 ```json
 {
@@ -80,3 +82,8 @@ And captured yes
 {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}
 ```
 
+* The date values are padded with zeroes; an example filename might be:
+
+```log
+https://mystorageaccount.blob.core.windows.net/mycontainer/mynamespace/myeventhub/0/2023/07/17/17/27/57.avro
+```
