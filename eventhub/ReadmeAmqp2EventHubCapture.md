@@ -87,3 +87,8 @@ And captured yes
 ```log
 https://mystorageaccount.blob.core.windows.net/mycontainer/mynamespace/myeventhub/0/2023/07/17/17/27/57.avro
 ```
+Note: If your Azure storage blob is temporarily unavailable, Event Hubs Capture will retain your data for the data retention period configured on your event hub and back fill the data once your storage account is available again.
+
+https://stackoverflow.com/questions/73992965/how-to-read-avro-files-captured-by-azure-event-hubs-from-synapse-sql-serverless
+
+I would recommend you adjust the Event Hubs Capture to write to Parquet files in ADLS Gen2. Then you can query it in Synapse Serverless SQL easily.
