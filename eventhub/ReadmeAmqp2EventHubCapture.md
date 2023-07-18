@@ -98,3 +98,15 @@ Note: If your Azure storage blob is temporarily unavailable, Event Hubs Capture 
 https://stackoverflow.com/questions/73992965/how-to-read-avro-files-captured-by-azure-event-hubs-from-synapse-sql-serverless
 
 I would recommend you adjust the Event Hubs Capture to write to Parquet files in ADLS Gen2. Then you can query it in Synapse Serverless SQL easily.
+
+## Parquet format
+
+* Send one message to get the format, UTC now = 17:25, Norway time + 2h
+
+```json
+{
+    "Timestamp": "2023-07-18T17:25:00Z", 
+    "value": 19, 
+    "Name": "Tag1"
+}
+```
