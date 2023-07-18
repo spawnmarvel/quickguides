@@ -52,13 +52,13 @@ https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2EventHu
 
 ### Post message
 
-Post some messages on format (UTC):
+Post one message on format (UTC):
 
 * Used 2023-07-17T18:58:00Z to 2023-07-17T19:01:00Z
 
 ```json
 {
-    "Timestamp": "2023-07-17T18:58:00Z", 
+    "Timestamp": "2023-07-17T18:58:00Z",  
     "value": 19, 
     "Name": "Tag1"
 }
@@ -99,14 +99,23 @@ https://stackoverflow.com/questions/73992965/how-to-read-avro-files-captured-by-
 
 I would recommend you adjust the Event Hubs Capture to write to Parquet files in ADLS Gen2. Then you can query it in Synapse Serverless SQL easily.
 
+
+
+
+
 ## Parquet format
 
-* Send one message to get the format, UTC now = 17:25, Norway time + 2h
+Enable capture with parquet format
+
+![Parquet ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/parquet.jpg)
+
+* Send one message to get the format, UTC now = 22:14, Norway time + 2h
 
 ```json
 {
-    "Timestamp": "2023-07-18T17:25:00Z", 
+    "Timestamp": "2023-07-18T22:14:00Z", 
     "value": 19, 
     "Name": "Tag1"
 }
 ```
+
