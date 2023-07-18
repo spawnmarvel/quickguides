@@ -154,3 +154,5 @@ https://learn.microsoft.com/en-us/answers/questions/1029461/capture-event-hub-wi
 Event Hub -- how to prevent duplicate handling when consumers scale out
 
 https://stackoverflow.com/questions/70141202/event-hub-how-to-prevent-duplicate-handling-when-consumers-scale-out
+
+Use Service Bus
