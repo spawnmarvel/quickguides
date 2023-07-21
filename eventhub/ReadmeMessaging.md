@@ -85,6 +85,8 @@ Use Queue storage if you:
 
 ## Choose Azure Event Grid
 
+What is Azure Event Grid?
+
 Many applications use a publish-subscribe model to notify distributed components that something happened, or that some object changed.
 The publisher does not need to know aything about the subscriber.
 
@@ -93,4 +95,95 @@ Azure Event Grid is a fully managed event routing service running on top of Azur
 Event Grid supports most Azure services as a publisher or subscriber and can be used with third-party services. It provides a dynamically scalable, low-cost, messaging system that allows publishers to notify subscribers about a status change. The following illustration shows Azure Event Grid receiving messages from multiple sources and distributing them to event handlers based on subscription.
 
 ![Event grid ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/eventgrid.jpg)
+
+
+What is an event?
+
+```json
+[
+  {
+    "topic": string,
+    "subject": string,
+    "id": string,
+    "eventType": string,
+    "eventTime": string,
+    "data":{
+      object-unique-to-each-publisher
+    },
+    "dataVersion": string,
+    "metadataVersion": string
+  }
+]
+```
+
+What is an event source?
+* Event sources are responsible for sending events to Event Grid. Each event source is related to one or more event types.
+* An event publisher is the user or organization that decides to send events to Event Grid (example applications)
+
+What is an event topic?
+* Event topics categorize events into groups. Topics are represented by a public endpoint and are where the event source sends events to.
+* System topics are built-in topics provided by Azure services.
+* Custom topics are application and third-party topics.
+
+What is an event subscription?
+* Event Subscriptions define which events on a topic an event handler wants to receive.
+
+What is an event handler?
+* An event handler (sometimes referred to as an event "subscriber") is any component (application or resource) that can receive events from Event Grid.
+
+Types of event sources
+* [...]
+* Service Bus: Service bus can generate events to Event Grid when there are active messages with no active listeners.
+* For the full list of Azure services that support system topics, see https://learn.microsoft.com/en-us/azure/event-grid/system-topics
+
+Custom topics
+* Custom events can be generated using the REST API, or with the Azure SDK on Java, GO, .NET, Node, Python, and Ruby.
+
+Event handlers
+* Azure Functions
+* Azure Logic apps
+* Webhooks
+* Event Hubs
+* Service Bus
+* Storage Queue
+* Power Automate
+
+Should you use Event Grid?
+* Simplicity: It's straightforward to connect sources to subscribers in Event Grid.
+* Advanced filtering: Subscriptions have close control over the events they receive from a topic.
+* Fan-out: You can subscribe to an unlimited number of endpoints to the same events and topics.
+* Reliability: Event Grid retries event delivery for up to 24 hours for each subscription.
+* Pay-per-event: Pay only for the number of events that you transmit.
+
+## Chooose Azure Event Hubs
+
+What is Azure Event Hubs?
+
+Event Hubs is an intermediary for the publish-subscribe communication pattern. Unlike Event Grid, however, it's optimized for extremely high throughput, a large number of publishers, security, and resiliency.
+
+Event Hubs has support for pipelining event streams to other Azure services. Using it with Azure Stream Analytics, for instance, allows complex analysis of data in near real time.
+
+Whereas Event Grid fits perfectly into the publish-subscribe pattern in that it simply manages subscriptions and routes communications to those subscribers, Event Hubs performs quite a few extra services. These extra services make it look more like a service bus or message queue, than a simple event broadcaster.
+
+Partitions
+* As Event Hubs receives communications, it divides them into partitions. Partitions are buffers into which the communications are saved. 
+
+Capture
+* Event Hubs can send all your events immediately to Azure Data Lake or Azure Blob storage for inexpensive, permanent persistence.
+
+Authentication
+* All publishers are authenticated and issued a token. This means Event Hubs can accept events from external devices and mobile apps, without worrying that fraudulent data from prankers could ruin our analysis.
+
+Which service should I choose?
+* You need to support authenticating a large number of publishers.
+* You need to save a stream of events to Data Lake or Blob storage.
+* You need aggregation or analytics on your event stream.
+* You need reliable messaging or resiliency.
+
+
+
+
+
+
+
 
