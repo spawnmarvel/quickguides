@@ -23,5 +23,6 @@ Events are lighter weight than messages, and are most often used for broadcast c
 * Events are more likely to be used for broadcasts and are often ephemeral. This means a communication might not be handled by any receiver if none is currently subscribing. 
 * Messages are more likely to be used where the distributed application requires a guarantee that the communication will be processed.
 
-For each communication, consider the following question: ** Does the sending component expect the communication to be processed in a particular way by the destination component? **
+For each communication, consider the following question: **Does the sending component expect the communication to be processed in a particular way by the destination component?**
 
+If the answer is yes, choose to use a message. If the answer is no, you may be able to use events.
