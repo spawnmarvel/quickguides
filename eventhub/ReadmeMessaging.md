@@ -41,10 +41,46 @@ Azure Service Bus Topics
 * Azure Service Bus topics are like queues, but can have multiple subscribers.
 * When a message is sent to a topic instead of a queue, multiple components can be triggered to do their work. 
 
-Benefits of queues in general
-* Increased reliability
-* * Queues are used by distributed applications as a temporary storage location for messages pending delivery to a destination component.
-* Message delivery guarantees
-* * At-Least-Once Delivery: In this approach, each message is guaranteed delivery to at least one of the components that retrieve messages from the queue. (Smal change of dulicate, if time-oyt-expires, before worker processed)
-* * At-Most-Once Delivery: In this approach, each message isn't guaranteed for delivery, and there's a small chance that it may not arrive. (automatic duplicate detection.)
-* * First-In-First-Out (FIFO): In most messaging systems, messages usually leave the queue in the same order in which they were added.
+### Benefits of queues in general
+
+Increased reliability
+
+* Queues are used by distributed applications as a temporary storage location for messages pending delivery to a destination component.
+
+Message delivery guarantees
+
+* At-Least-Once Delivery: In this approach, each message is guaranteed delivery to at least one of the components that retrieve messages from the queue. (Smal change of dulicate, if time-oyt-expires, before worker processed)
+* At-Most-Once Delivery: In this approach, each message isn't guaranteed for delivery, and there's a small chance that it may not arrive. (automatic duplicate detection.)
+* First-In-First-Out (FIFO): In most messaging systems, messages usually leave the queue in the same order in which they were added.
+
+Transactional support
+
+* Some closely related groups of messages may cause problems when delivery fails for one message in the group. (credit card ananlogy)
+* Make sure all messages get processed, or none of them are processed.
+
+### Which service should I choose?
+
+Use Service Bus topics if you:
+* Need multiple receivers to handle each message
+
+Use Service Bus queues if you:
+* Need an At-Most-Once delivery guarantee.
+* Need a FIFO guarantee.
+* Need to group messages into transactions.
+* Want to receive messages without polling the queue.
+* Need to provide a role-based access model to the queues.
+* Need to handle messages larger than 64 KB but less than 100 MB. The maximum message size supported by the standard tier is 256 KB and the premium tier is 100 MB.
+* Queue size won't grow larger than 1 TB. The maximum queue size for the standard tier is 80 GB and for the premium tier, it's 1 TB.
+* Want to publish and consume batches of messages.
+
+Queue storage isn't quite as feature rich, but if you don't need any of those features, it can be a simpler choice. In addition, it's the best solution if your app has any of the following requirements.
+
+Use Queue storage if you:
+* Need an audit trail of all messages that pass through the queue.
+* Expect the queue to exceed 1 TB in size.
+* Want to track progress for processing a message inside of the queue.
+* Use a queue to organize messages and gracefully handle unpredictable surges in demand.
+* Use Storage queues when you want a simple and easy-to-code queue system. For more advanced needs, use Service Bus queues.
+
+
+https://learn.microsoft.com/en-us/training/modules/choose-a-messaging-model-in-azure-to-connect-your-services/4-choose-event-grid
