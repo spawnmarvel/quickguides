@@ -87,3 +87,10 @@ Use Queue storage if you:
 
 Many applications use a publish-subscribe model to notify distributed components that something happened, or that some object changed.
 The publisher does not need to know aything about the subscriber.
+
+Azure Event Grid is a fully managed event routing service running on top of Azure Service Fabric. Event Grid distributes events from different sources.
+
+Event Grid supports most Azure services as a publisher or subscriber and can be used with third-party services. It provides a dynamically scalable, low-cost, messaging system that allows publishers to notify subscribers about a status change. The following illustration shows Azure Event Grid receiving messages from multiple sources and distributing them to event handlers based on subscription.
+
+![Event grid ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/eventgrid.jpg)
+
