@@ -6,12 +6,12 @@ https://learn.microsoft.com/en-us/training/modules/choose-a-messaging-model-in-a
 
 ## Choose whether to use messages or events
 
-What is a message?
+What is a message? :email:
 * A message contains raw data, produced by one component and consumed by another component.
 * A message contains the data itself, not just a reference to that data.
 * The sending component expects the destination component to process the message content in a certain way.
 
-What is an event?
+What is an event?📢 :loudspeaker:
 Events are lighter weight than messages, and are most often used for broadcast communications. The components sending the event are known as publishers, and receivers are known as subscribers.
 * An event is a lightweight notification that indicates that something happened.
 * The event may be sent to multiple receivers, or to none at all.
@@ -83,4 +83,7 @@ Use Queue storage if you:
 * Use Storage queues when you want a simple and easy-to-code queue system. For more advanced needs, use Service Bus queues.
 
 
-https://learn.microsoft.com/en-us/training/modules/choose-a-messaging-model-in-azure-to-connect-your-services/4-choose-event-grid
+## Choose Azure Event Grid
+
+Many applications use a publish-subscribe model to notify distributed components that something happened, or that some object changed.
+The publisher does not need to know aything about the subscriber.
