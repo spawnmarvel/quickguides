@@ -6,12 +6,12 @@ https://learn.microsoft.com/en-us/training/modules/choose-a-messaging-model-in-a
 
 ## Choose whether to use messages or events
 
-What is a message? :email:
+What is a message? :email: :thumbsup:
 * A message contains raw data, produced by one component and consumed by another component.
 * A message contains the data itself, not just a reference to that data.
 * The sending component expects the destination component to process the message content in a certain way.
 
-What is an event? :loudspeaker:
+What is an event? :loudspeaker: :sunrise_over_mountains:
 Events are lighter weight than messages, and are most often used for broadcast communications. The components sending the event are known as publishers, and receivers are known as subscribers.
 * An event is a lightweight notification that indicates that something happened.
 * The event may be sent to multiple receivers, or to none at all.
