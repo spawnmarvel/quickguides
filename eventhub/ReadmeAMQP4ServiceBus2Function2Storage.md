@@ -121,8 +121,22 @@ https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-service
 
 Complete the message in a queue, The operation completes a message in a queue.
 
+Lets update the logic app
+
 ![Complete step ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/completestep.jpg)
 
+Lets send 5 new mesages (it could be a jump in sequence, not doing all at the same time)
 
+Time 00 to 04 min
+```json
+{
+    "Timestamp": "2023-07-21T22:00:00Z", 
+    "Value": 21, 
+    "Name": "Tag2"
+}
+```
+All completed
+
+![Bus 11 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/bus11.jpg)
 
 https://learn.microsoft.com/en-us/connectors/servicebus/
