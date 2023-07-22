@@ -11,8 +11,11 @@ Azure offers three services that assist with delivering events or messages throu
 | Service   | Purpose | Type | When to use | Info
 | ---------- | ------- | ---- | -----------| ----
 | Event Grid | Reactive programming | Event distribution(discrete) | React to status changes | Dynamically scalable<br/>Low cost <br/>Serverless<br>At least once delivery of an event
-| Event Hubs | Big data pipeline | Event streaming (series) | Telemetry and distributed data streaming
-| Service Bus | High-value entrerprise messaging | Messages | Order processing and finacial transactions
+| Event Hubs | Big data pipeline | Event streaming (series) | Telemetry and distributed data streaming | Low latency <br/>Can receive and process millions of events per second<br/>At least once delivery of an event
+| Service Bus | High-value entrerprise messaging | Messages | Order processing and finacial transactions | Reliable asynchronous message delivery (enterprise messaging as a service) that requires polling<br/>Advanced messaging features like first-in and first-out (FIFO), batching/sessions, transactions, dead-lettering, temporal control, routing and filtering, and duplicate detection<br/>At least once delivery of a message<br/>Optional ordered delivery of messages
+
+
+* Event Grid isn't a data pipeline, and doesn't deliver the actual object that was updated.
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-services
 
