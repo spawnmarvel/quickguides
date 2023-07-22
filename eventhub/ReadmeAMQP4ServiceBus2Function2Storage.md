@@ -137,6 +137,6 @@ Time 00 to 04 min
 ```
 All completed
 
-![Bus 11 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/bus11.jpg)
+![Yea ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/yea.jpg)
 
 https://learn.microsoft.com/en-us/connectors/servicebus/
