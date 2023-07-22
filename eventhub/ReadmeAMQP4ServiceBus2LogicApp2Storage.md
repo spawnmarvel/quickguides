@@ -2,6 +2,12 @@
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
 
+## Service Bus access control with Shared Access Signatures
+
+Best practices when using SAS
+
+https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-sas#best-practices-when-using-sas
+
 ## Scenario
 
 AMQP->Service Bus->Logic App->File Storage   
