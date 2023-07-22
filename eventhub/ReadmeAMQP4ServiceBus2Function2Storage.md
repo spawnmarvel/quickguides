@@ -97,4 +97,10 @@ Messages in File Storage
 
 ![Fs ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/fs.jpg)
 
+View message
+
+![Tag1 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tag1.jpg)
+
+
+
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
