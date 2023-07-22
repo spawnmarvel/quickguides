@@ -59,7 +59,6 @@ Step 4: Stateful logic app, recurrence each min, Get messages from a queue, for 
 
 ![logicapp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicapp.jpg)
 
-
 App
 
 ![Logic app app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappapp.jpg)
@@ -69,6 +68,8 @@ Auth
 ![logicappauth ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappauth.jpg)
 
 Post messages to RabbitMQ:
+
+Steps: https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2ServiceBus.md
 
 ```json
 {
