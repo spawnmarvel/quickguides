@@ -185,9 +185,25 @@ Which service should I choose?
 
 Error handling, designing for idempotency and managing retry behavior are a few of the critical measures you can take to ensure Event Hubs triggered functions are resilient and capable of handling large volumes of data.
 
-Streaming benefits and challenges
+Azure Event Hubs is commonly used for event streaming and big data scenarios.
 
-Azure Event Hubs is commonly used for event streaming and big data scenarios
+Streaming benefits and challenges:
+* Azure Event Hubs is commonly used for event streaming and big data scenarios.
+* Missing inherent dead-letter support: A dead-letter channel is not a native feature in Event Hubs or Kafka.
+* A unit of work is a partition: In a traditional message broker, a unit of work is a single message. In a streaming solution, a partition is often considered the unit of work.
+* No server-side filtering: One of the reasons Event Hubs is capable of tremendous scale and throughput is due to the low overhead on the service itself.
+* Every reader must read all data: Since server-side filtering is unavailable, a consumer sequentially reads all the data in a partition. This includes data that may not be relevant or could even be malformed.
+
+Idempotency
+* One of the core tenets of Azure Event Hubs is the concept of at-least once delivery. This approach ensures that events will always be delivered. It also means that events can be received more than once, even repeatedly, by consumers such as a function.
+
+Note: Your function must be idempotent so that the outcome of processing the same event multiple times is the same as processing it once.
+
+Duplicate events
+* Checkpointing
+* Duplicate events published: There are many techniques that could alleviate the possibility of the same event being published to a stream, however, it's still the responsibility of the consumer to idempotently handle duplicates.
+* Missing acknowledgments
+
 
 
 https://learn.microsoft.com/en-us/azure/architecture/serverless/event-hubs-functions/resilient-design
