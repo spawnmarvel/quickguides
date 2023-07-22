@@ -55,7 +55,7 @@ Step 2 - Get connection authentication requirements
 Step 3: Option 2 - Add a Service Bus action
 
 Step 4: Stateful logic app, recurrence each min, Get messages from a queue, for each create a file with the sequence number
-* Using managed identity or access keys and service bus namespace endpoint connection string SAS Manage (crea SAS on queue also)
+* Using managed identity and access keys (service bus namespace endpoint connection string SAS Manage (create SAS on queue also), not used here, if remember correctly))
 
 ![logicapp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicapp.jpg)
 
@@ -63,6 +63,26 @@ Auth
 
 
 ![logicappauth ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappauth.jpg)
-Post
+
+Post messages to RabbitMQ:
+
+```json
+{
+    "Timestamp": "2023-07-21T21:01:00Z", 
+    "Value": 19, 
+    "Name": "Tag1"
+}
+{
+    "Timestamp": "2023-07-21T21:02:00Z", 
+    "Value": 20, 
+    "Name": "Tag1"
+}
+{
+    "Timestamp": "2023-07-21T21:03:00Z", 
+    "Value": 21, 
+    "Name": "Tag1"
+}
+
+```
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
