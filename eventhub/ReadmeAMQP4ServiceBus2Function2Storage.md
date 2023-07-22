@@ -116,3 +116,13 @@ File Storage
 ![File 10 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/file10.jpg)
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
+
+## Connect to Azure Service Bus to send and receive messages. You can perform actions such as send to queue, send to topic, receive from queue, receive from subscription, etc.
+
+Complete the message in a queue
+
+![Complete step ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/completestep.jpg)
+
+
+
+https://learn.microsoft.com/en-us/connectors/servicebus/
