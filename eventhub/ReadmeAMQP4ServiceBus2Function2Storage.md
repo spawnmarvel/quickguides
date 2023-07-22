@@ -99,7 +99,7 @@ Logic app
 
 Messages in File Storage
 
-![Fs ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/fs.jpg)
+![Fs ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/fs1.jpg)
 
 View message
 
