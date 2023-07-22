@@ -61,9 +61,10 @@ Step 4: Stateful logic app, recurrence each min, Get messages from a queue, for 
 
 
 App
-![Logic app app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappapp.jpg)
-Auth
 
+![Logic app app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappapp.jpg)
+
+Auth
 
 ![logicappauth ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappauth.jpg)
 
