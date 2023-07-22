@@ -125,7 +125,7 @@ Lets update the logic app
 
 ![Complete step ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/completestep.jpg)
 
-Lets send 5 new mesages (it could be a jump in sequence, not doing all at the same time)
+Lets send 4 new mesages (it could be a jump in sequence, not doing all at the same time)
 
 Time 00 to 04 min
 ```json
