@@ -105,8 +105,14 @@ View message
 
 ![Tag1 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tag11.jpg)
 
-Send some more messages with min 04 to 10 and veiw last message
+Send some more messages with min 04 to 10 and view last message, total is 10.
 
+Bus, all msg still in queue, not completed
 
+![Bus 10 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/bus10.jpg)
+
+File Storage
+
+![File 10 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/file10.jpg)
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
