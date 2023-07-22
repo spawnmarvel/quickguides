@@ -95,5 +95,6 @@ Logic app
 
 Messages in File Storage
 
+![Fs ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/fs.jpg)
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
