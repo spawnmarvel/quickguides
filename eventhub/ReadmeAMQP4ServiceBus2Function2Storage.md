@@ -59,6 +59,9 @@ Step 4: Stateful logic app, recurrence each min, Get messages from a queue, for 
 
 ![logicapp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicapp.jpg)
 
+
+App
+![Logic app app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappapp.jpg)
 Auth
 
 
@@ -100,6 +103,8 @@ Messages in File Storage
 View message
 
 ![Tag1 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/tag1.jpg)
+
+Send some more messages with min 04 to 10 and veiw last message
 
 
 
