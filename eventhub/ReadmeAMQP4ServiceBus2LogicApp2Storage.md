@@ -6,6 +6,19 @@ https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-service
 
 Best practices when using SAS
 
+Each Service Bus namespace and each Service Bus entity has a Shared Access Authorization policy made up of rules.
+
+For each authorization policy rule, you decide on three pieces of information: name, scope, and rights.
+* 'Send' - Confers the right to send messages to the entity
+* 'Listen' - Confers the right to receive (queue, subscriptions) and all related message handling
+* 'Manage' - Confers the right to manage the topology of the namespace, including creating and deleting entities
+* An authorization rule is assigned a Primary Key and a Secondary Key
+* RootManageSharedAccessKey (treat this rule like an administrative root account and don't use it in your application)
+
+Regenerating keys
+* It's recommended that you periodically regenerate the keys used in the Shared Access Authorization Policy. The primary and secondary key slots exist so that you can rotate keys gradually.
+
+
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-sas#best-practices-when-using-sas
 
 ## Scenario
