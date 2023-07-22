@@ -157,3 +157,8 @@ https://learn.microsoft.com/en-us/azure/cosmos-db/introduction
 ## Process and create Azure Cosmos DB documents using Azure Logic Apps
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-cosmos-db?tabs=consumption
+
+
+## Scenario
+
+AMQP->Service Bus->Logic App->Cosmos DB  
