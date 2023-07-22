@@ -49,7 +49,7 @@ Increased reliability
 
 Message delivery guarantees
 
-* At-Least-Once Delivery: In this approach, each message is guaranteed delivery to at least one of the components that retrieve messages from the queue. (Smal change of dulicate, if time-oyt-expires, before worker processed)
+* At-Least-Once Delivery: In this approach, each message is guaranteed delivery to at least one of the components that retrieve messages from the queue. (Small change of dulicate, if time-out-expires, before worker processed)
 * At-Most-Once Delivery: In this approach, each message isn't guaranteed for delivery, and there's a small chance that it may not arrive. (automatic duplicate detection.)
 * First-In-First-Out (FIFO): In most messaging systems, messages usually leave the queue in the same order in which they were added.
 
@@ -181,9 +181,13 @@ Which service should I choose?
 * You need reliable messaging or resiliency.
 
 
+# Resilient Event Hubs and Functions design
+
+Error handling, designing for idempotency and managing retry behavior are a few of the critical measures you can take to ensure Event Hubs triggered functions are resilient and capable of handling large volumes of data.
+
+Streaming benefits and challenges
+
+Azure Event Hubs is commonly used for event streaming and big data scenarios
 
 
-
-
-
-
+https://learn.microsoft.com/en-us/azure/architecture/serverless/event-hubs-functions/resilient-design

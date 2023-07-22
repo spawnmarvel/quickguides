@@ -8,9 +8,9 @@ Azure offers three services that assist with delivering events or messages throu
 * Azure Event Hubs
 * Azure Service Bus
 
-| Service   | Purpose | Type | When to use
-| ---------- | ------- | ---- | -----------
-| Event Grid | Reactive programming | Event distribution(discrete) | React to status changes
+| Service   | Purpose | Type | When to use | Info
+| ---------- | ------- | ---- | -----------| ----
+| Event Grid | Reactive programming | Event distribution(discrete) | React to status changes | Dynamically scalable<br/>Low cost <br/>Serverless<br>At least once delivery of an event
 | Event Hubs | Big data pipeline | Event streaming (series) | Telemetry and distributed data streaming
 | Service Bus | High-value entrerprise messaging | Messages | Order processing and finacial transactions
 
