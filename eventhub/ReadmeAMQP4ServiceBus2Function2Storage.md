@@ -1,6 +1,6 @@
-# Azure Functions scenarios
+# Connect to Azure Service Bus from workflows in Azure Logic Apps
 
-https://learn.microsoft.com/en-us/azure/azure-functions/functions-scenarios?pivots=programming-language-csharp#real-time-stream-and-event-processing
+https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
 
 ## Scenario
 
@@ -47,14 +47,22 @@ For the Service Bus managed connector, the maximum message size is limited to 1 
 
 ## Steps
 
-Step 1 - Check access to Service Bus namespace
+Step 1 - Check access to Service Bus namespace, create it and the queue, connect it to RabbitMQ.
 Step 2 - Get connection authentication requirements
 * Get connection string for Service Bus namespace
 * Get endpoint URL for Service Bus namespace
 * Get fully qualified name for Service Bus namespace
 Step 3: Option 2 - Add a Service Bus action
 
+Step 4: Stateful logic app, recurrence each min, Get messages from a queue, for each create a file with the sequence number
+* Using managed identity or access keys and service bus namespace endpoint connection string SAS Manage (crea SAS on queue also)
 
 ![logicapp ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicapp.jpg)
+
+Auth
+
+
+![logicappauth ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappauth.jpg)
+Post
 
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
