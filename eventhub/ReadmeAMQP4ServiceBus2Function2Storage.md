@@ -85,4 +85,15 @@ Post messages to RabbitMQ:
 
 ```
 
+Messages in Service Bus
+
+![Capture bus ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/capturebus.jpg)
+
+Logic app
+
+![Logic app run ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicapprun.jpg)
+
+Messages in File Storage
+
+
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
