@@ -145,3 +145,15 @@ https://learn.microsoft.com/en-us/connectors/servicebus/
 Resources
 
 ![Resources ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/resources.jpg)
+
+
+## Welcome to Azure Cosmos DB
+
+APPLIES TO:  NoSQL  MongoDB  Cassandra  Gremlin  Table  PostgreSQL
+Azure Cosmos DB is a fully managed NoSQL and relational database for modern app development. Azure Cosmos DB offers single-digit millisecond response times, automatic and instant scalability, along with guaranteed speed at any scale. Business continuity is assured with SLA-backed availability and enterprise-grade security.
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/introduction
+
+## Process and create Azure Cosmos DB documents using Azure Logic Apps
+
+https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-cosmos-db?tabs=consumption
