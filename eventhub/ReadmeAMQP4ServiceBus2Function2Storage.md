@@ -140,3 +140,7 @@ All completed
 ![Yea ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/yea3.jpg)
 
 https://learn.microsoft.com/en-us/connectors/servicebus/
+
+Resources
+
+![Resources ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/resources.jpg)
