@@ -430,6 +430,18 @@ amqps://<SasSubPolicy>:<SharedAccessKey>@<your-namespace>.servicebus.windows.net
 
 ![Final URI ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaleuri1.jpg)
 
+* c:/RabbitMQBaseFolder/cert/ca.bundle
+* verify=verify_peer
+* server_name_indication=servicebus.windows.net
+* versions=tlsv1.2
+
+During peer verification TLS connection client (or server) traverses the chain of certificates presented by the peer and if a trusted certificate is found, considers the peer trusted.
+
+verify - set this option to verify_peer to enable X509 certificate chain verification. The depth option configures certificate verification depth. 
+
+server_name_indication - set this option to the host name of the server to which a TLS connection will be made to enable "Server Name Indication" verification of the certificate presented by the server. This ensures that the server certificate's CN= value will be verified during TLS connection establishment.
+
+
 Post last messages, this was fun!
 
 ![Final ASB ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaleasb.jpg)
