@@ -122,6 +122,42 @@ For the Service Bus managed connector, the maximum message size is limited to 1 
 
 Service Bus Messaging, premium tier: up to 100MB, Standard tier up to 256 kb ref https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging
 
+### Size side note
+
+Example message is 101 kb with 856 matches to tag1
+
+```json
+{
+ 	"Tag1": [
+
+ 		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+```
+
+Or 1 small
+
+```json
+{
+    "Timestamp": "2023-07-21T21:01:00Z", 
+    "Value": 19, 
+    "Name": "Tag1",
+    "Quality": "GOOD"
+}
+```
+
+https://github.com/spawnmarvel/quickguides/blob/main/eventhub/message.json
+
+
 [...]
 
 ## Steps
