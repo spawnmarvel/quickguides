@@ -21,6 +21,11 @@ Regenerating keys
 
 https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-sas#best-practices-when-using-sas
 
+
+## Note
+
+All names here for resources, addresses, URI, queues and more may change since I am doing this research on different days.
+
 ## Scenario
 
 AMQP->Service Bus->Logic App->File Storage   
