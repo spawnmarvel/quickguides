@@ -46,6 +46,22 @@ https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messag
 
 https://learn.microsoft.com/en-us/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/
 
+## MS learn Logic Apps
+
+* A business process or workflow is a sequence of tasks that produce a specific outcome.
+* Azure Logic Apps is a cloud service that automates the execution of your business processes.
+* The components let you connect to hundreds of external services.
+* The goal of Azure Logic Apps in one word, we'd choose integration. 
+
+How Azure Logic Apps works
+* A connector is a component that provides an interface to an external service. 
+* Workflows are built from different types of tasks. 
+* Azure Logic Apps uses the terms trigger, action, and control action for these concepts. These operations are the building blocks of Azure Logic Apps.
+
+![Learn logic app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/learnlogicapp.jpg)
+
+https://learn.microsoft.com/en-us/training/modules/intro-to-logic-apps/1-introduction
+
 ## Connect to Azure Service Bus from workflows in Azure Logic Apps
 
 Applies to: Azure Logic Apps (Consumption + Standard)
