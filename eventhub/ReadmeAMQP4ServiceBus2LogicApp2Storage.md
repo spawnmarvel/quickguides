@@ -87,8 +87,17 @@ Guidance summary
 
 ![Learn logic app guide ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappguide.jpg)
 
-
 https://learn.microsoft.com/en-us/training/modules/intro-to-logic-apps/1-introduction
+
+### Logic Apps Standard Performance Benchmark - Burst workloads
+
+Execution Elapsed Time
+
+The chart below represents the total time take to process a batch of 40k and 100k messages, respectively, when using a WS1, WS2 and WS3 app service plan:
+
+![Benchmark ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/benchmark.jpg)
+
+https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-standard-performance-benchmark-burst-workloads/ba-p/3317930
 
 ## Connect to Azure Service Bus from workflows in Azure Logic Apps
 
