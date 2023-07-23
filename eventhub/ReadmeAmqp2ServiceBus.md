@@ -66,8 +66,10 @@ Ok lets do this for Azure Service Bus, date 15.07.2023.
 
 ## Steps
 
-:warning: :warning: This is for test, it is best to use VPN / ExpressRoute or use a Private access with a private link.
-But we are testing scenario mentioned above:
+:warning: This is for test, it is best to use VPN / ExpressRoute or use a Private access with a private link if possible.
+Always follow the governance policy for security.
+
+Here we are testing scenario mentioned above:
 
 * Third-Party Integration: A third party uses RabbitMQ as a broker, and wants to send their data to us, but they are outside our organization. We can provide them with SAS Key giving them access to a limited set of Azure Service Bus queues where they can forward their messages to.
 
