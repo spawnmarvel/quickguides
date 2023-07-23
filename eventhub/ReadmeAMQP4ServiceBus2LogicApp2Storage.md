@@ -118,7 +118,9 @@ Large message support
 
 Large message support is available only for Standard workflows when you use the Service Bus built-in connector operations. For example, you can receive and large messages using the built-in triggers and actions respectively.
 
-For the Service Bus managed connector, the maximum message size is limited to 1 MB, even when you use a premium tier Service Bus namespace.
+For the Service Bus managed connector, the maximum message size is limited to 1 MB, even when you use a premium tier Service Bus namespace, ref https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-servicebus?tabs=consumption
+
+Service Bus Messaging, premium tier: up to 100MB, Standard tier up to 256 kb ref https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging
 
 [...]
 

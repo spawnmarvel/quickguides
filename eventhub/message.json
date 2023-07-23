@@ -1,0 +1,5136 @@
+ {
+ 	"Students": [
+
+ 		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+		{
+ 			"Name": "Tag1",
+ 			"Time": "2023-07-21T21:01:00Z", 
+            "Value": 19, 
+			"Quality": "GOOD"
+ 		},
+ 		
+ 	]
+ }
