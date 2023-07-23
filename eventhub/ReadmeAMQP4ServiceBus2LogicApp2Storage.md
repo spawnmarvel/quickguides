@@ -60,6 +60,30 @@ How Azure Logic Apps works
 
 ![Learn logic app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/learnlogicapp.jpg)
 
+A trigger is an event that occurs when a specific set of conditions is satisfied. Triggers activate automatically when conditions are met. For example, when a timer expires or data becomes available.
+
+An action is an operation that executes a task in your business process. Actions run when a trigger activates or another action completes.
+
+Control actions are special actions built-in to Azure Logic Apps that provides these control constructs:
+
+* Condition statements controlled by a Boolean expression.
+* Switch statements.
+* For each and until loops.
+* Unconditional branch instructions.
+
+### When to use Azure Logic Apps
+
+Decision criteria
+* The cases where Azure Logic Apps might not be the best option typically involve real-time requirements, complex business rules, or use of nonstandard services. Here's some discussion of each of these factors.
+
+| Factor      | Description                                            | Note
+| ----------- | ------------------------------------------------------ | ---- 
+| Integration | Azure Logic Apps works well when you need to get multiple applications and systems to work together. That's what they were designed to do. | If you're building an app with no external connections, Azure Logic Apps is probably not the best option.
+| Performance | Execution engine scales your apps automatically. Azure Logic Apps can process large data-sets in parallel to let you achieve high throughput. However, they don't guarantee super-fast activation or enforce real-time constraints on execution time. | If you're looking for low subsecond response time, then Azure Logic Apps may not be the best fit.
+| Conditionals | Azure Logic Apps provides control constructs like Boolean expressions, switch statements, and loops so your apps can make decisions based on your data. | There are two reasons you might prefer not to. First, it's often easier to write conditional logic in code rather than using the workflow designer. Second, embedded business rules aren't easily sharable with your other apps. 
+| Connectors | Is whether there are prebuilt connectors for all the services you need to access.| If so, then you're ready to go. 
+
+
 https://learn.microsoft.com/en-us/training/modules/intro-to-logic-apps/1-introduction
 
 ## Connect to Azure Service Bus from workflows in Azure Logic Apps
