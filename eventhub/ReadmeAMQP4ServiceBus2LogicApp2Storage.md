@@ -142,6 +142,7 @@ Example message size message.json is 101 kb with 856 matches to tag1, https://gi
             "Value": 19, 
 			"Quality": "GOOD"
  		},
+        [...] x 856 total is 101 kb
 ```
 
 Or 1 small
