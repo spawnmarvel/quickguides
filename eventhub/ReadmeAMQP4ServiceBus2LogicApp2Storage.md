@@ -83,6 +83,10 @@ Decision criteria
 | Conditionals | Azure Logic Apps provides control constructs like Boolean expressions, switch statements, and loops so your apps can make decisions based on your data. | There are two reasons you might prefer not to. First, it's often easier to write conditional logic in code rather than using the workflow designer. Second, embedded business rules aren't easily sharable with your other apps. 
 | Connectors | Is whether there are prebuilt connectors for all the services you need to access.| If so, then you're ready to go. 
 
+Guidance summary
+
+![Learn logic app guide ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappguide.jpg)
+
 
 https://learn.microsoft.com/en-us/training/modules/intro-to-logic-apps/1-introduction
 
