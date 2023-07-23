@@ -124,7 +124,7 @@ Service Bus Messaging, premium tier: up to 100MB, Standard tier up to 256 kb ref
 
 ### Size side note
 
-Example message is 101 kb with 856 matches to tag1
+Example message size message.json is 101 kb with 856 matches to tag1, https://github.com/spawnmarvel/quickguides/blob/main/eventhub/message.json
 
 ```json
 {
@@ -154,8 +154,6 @@ Or 1 small
     "Quality": "GOOD"
 }
 ```
-
-https://github.com/spawnmarvel/quickguides/blob/main/eventhub/message.json
 
 
 [...]
