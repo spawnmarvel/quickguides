@@ -256,6 +256,16 @@ All completed
 
 ![Yea ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/yea3.jpg)
 
+### General known issues and limitations
+
+* Infinite loops
+* * Use caution when you select both a trigger and action that have the same connector type and use them to work with the same entity, such as a queue or topic subscription.
+* * * For example, suppose your workflow uses a Service Bus trigger that returns a newly received message in a queue and follows that trigger with a Service Bus action that sends a message back to the same queue. This pattern can create an infinite loop, causing an unending workflow.
+* Limit on saved sessions in connector cache
+* * Limit on saved sessions in connector cache
+* Long-polling triggers
+* * For the Azure Service Bus managed connector, all triggers are long-polling. This trigger type processes all the messages and then waits 30 seconds for more messages to appear in the queue or topic subscription. If no messages appear in 30 seconds, the trigger run is skipped. Otherwise, the trigger continues reading messages until the queue or topic subscription is empty. The next trigger poll is based on the recurrence interval specified in the trigger's properties.
+
 https://learn.microsoft.com/en-us/connectors/servicebus/
 
 Resources
