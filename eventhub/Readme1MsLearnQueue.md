@@ -63,8 +63,6 @@ Advanced features
 
 ### Compliance with standards and protocols
 
-The primary wire protocol for Service Bus is Advanced Messaging Queueing Protocol (AMQP) 1.0, an open ISO/IEC standard. 
-
 The primary wire protocol for Service Bus is Advanced Messaging Queueing Protocol (AMQP) 1.0, an open ISO/IEC standard. It allows customers to write applications that work against Service Bus and on-premises brokers such as ActiveMQ or RabbitMQ. The AMQP protocol guide provides detailed information in case you want to build such an abstraction.
 
 AMQP 1.0 in Azure Service Bus and Event Hubs protocol guide https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide
