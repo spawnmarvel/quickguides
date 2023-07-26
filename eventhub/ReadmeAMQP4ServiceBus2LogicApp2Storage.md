@@ -101,6 +101,8 @@ https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-app
 
 ## Connect to Azure Service Bus from workflows in Azure Logic Apps
 
+![Learn logic create ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/learnlogicappcreate.jpg)
+
 Applies to: Azure Logic Apps (Consumption + Standard)
 
 * [...]
