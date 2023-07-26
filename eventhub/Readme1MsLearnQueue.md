@@ -10,7 +10,7 @@ Azure supports two types of queue mechanisms: Service Bus queues and Storage que
 * Storage queues are part of the Azure Storage infrastructure. They allow you to store large numbers of messages. You access messages from anywhere in the world via authenticated calls using HTTP or HTTPS. 
 
 
-## Choose a message queue solution
+## Choose a message queue solution AZ-305
 
 ### Consider using Service Bus queues
 
@@ -29,6 +29,8 @@ Azure supports two types of queue mechanisms: Service Bus queues and Storage que
 * Require server side logs of all of the transactions
 
 ## Explorer Azure Service Bus
+
+Service Bus tiers
 
 | Premium                               | Standard
 | ------------------------------------- | -----------------------
