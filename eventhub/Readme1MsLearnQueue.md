@@ -1,4 +1,6 @@
-# Discover Azure message queues AZ-305
+# AZ-305 Microsoft Azure Architect Design Prerequisites
+
+## Discover Azure message queues
 
 https://learn.microsoft.com/en-us/training/modules/discover-azure-message-queue/
 
