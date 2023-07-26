@@ -40,4 +40,9 @@ Service Bus tiers
 | Ability to scale workload up and down | N/A
 | Message size up to 100 MB             | Message size up to 256 KB
 
+Advanced features
+
+![Advanced ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/advanced.jpg)
+
+
 ## TODO
