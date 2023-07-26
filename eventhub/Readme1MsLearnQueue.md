@@ -30,4 +30,12 @@ Azure supports two types of queue mechanisms: Service Bus queues and Storage que
 
 ## Explorer Azure Service Bus
 
+| Premium                               | Standard
+| ------------------------------------- | -----------------------
+| High throughput                       | Variable throughput
+| Predictable performance               | Variable latency
+| Fixed pricing                         | Pay as you go variable pricing
+| Ability to scale workload up and down | N/A
+| Message size up to 100 MB             | Message size up to 256 KB
+
 ## TODO
