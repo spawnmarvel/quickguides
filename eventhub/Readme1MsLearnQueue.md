@@ -68,6 +68,30 @@ The primary wire protocol for Service Bus is Advanced Messaging Queueing Protoco
 AMQP 1.0 in Azure Service Bus and Event Hubs protocol guide https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide
 
 
+## Discover Service Bus queues, topics, and subscriptions
+
+Queues
+* Queues offer First In, First Out (FIFO) message delivery to one or more competing consumers.
+
+Receive modes:
+
+Receive and delete
+* Service Bus receives the request from the consumer, it marks the message as consumed and returns it to the consumer application. This mode is the simplest model. It works best for scenarios in which the application can tolerate not processing a message if a failure occurs.
+
+Peek lock
+1. Finds the next message to be consumed, locks it to prevent other consumers from receiving it, and then, return the message to the application.
+2. After the application finishes processing the message, it requests the Service Bus service to complete the second stage of the receive process. Then, the service marks the message as consumed.
+
+Topics and subscriptions
+* A queue allows processing of a message by a single consumer
+* Topics and subscriptions provide a one-to-many form of communication in a publish and subscribe pattern.
+
+Rules and actions
+*  In many scenarios, messages that have specific characteristics must be processed in different ways. To enable this processing, you can configure subscriptions to find messages that have desired properties and then perform certain modifications to those properties.
+* While Service Bus subscriptions see all messages sent to the topic, you can only copy a subset of those messages to the virtual subscription queue. This filtering is accomplished using subscription filters. Such modifications are called filter actions. When a subscription is created, you can supply a filter expression that operates on the properties of the message. The properties can be both the system properties (for example, Label) and custom application properties (for example, StoreName.) The SQL filter expression is optional in this case. Without a SQL filter expression, any filter action defined on a subscription is performed on all the messages for that subscription.
+
+## Explore Service Bus message payloads and serialization
+
 
 
 ## TODO
