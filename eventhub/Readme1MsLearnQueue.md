@@ -44,5 +44,20 @@ Advanced features
 
 ![Advanced ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/advanced1.jpg)
 
+| Feature           | Description
+| ----------------- | ---------------------------------------------------
+| Message sessions  | Create FIFO guarantee, enable sessions
+| Autoforwarding    | Chains queue/topic to another queue/topic in same ns
+| DLQ               | Service Bus supports a dead-letter queue (DLQ). A DLQ holds messages that can't be delivered to any receiver. Service Bus lets you remove messages from the DLQ and inspect them.
+| Scheduled delivery| You can submit messages to a queue or topic for delayed processing. You can schedule a job to become available for processing by a system at a certain time.
+| Message deferral  | A queue or subscription client can defer retrieval of a message until a later time. The message remains in the queue or subscription, but it's set aside.
+| Batching          | Client-side batching enables a queue or topic client to delay sending a message for a certain period of time.
+| Transactions      | A transaction groups two or more operations together into an execution scope. Service Bus supports grouping operations against a single messaging entity within the scope of a single transaction. A message entity can be a queue, topic, or subscription.
+| Filtering and actions | Subscribers can define which messages they want to receive from a topic. These messages are specified in the form of one or more named subscription rules.
+| Autodelete on idle | Autodelete on idle enables you to specify an idle interval after which a queue is automatically deleted. The minimum duration is 5 minutes.
+| Duplicate detection | An error could cause the client to have a doubt about the outcome of a send operation. Duplicate detection enables the sender to resend the same message, or for the queue or topic to discard any duplicate copies.
+| Security protocols | Service Bus supports security protocols such as Shared Access Signatures (SAS), Role Based Access Control (RBAC) and Managed identities for Azure resources.
+| Geo-disaster recovery | Regions or datacenters experience downtime, Geo-disaster recovery enables data processing to continue operating in a different region or datacenter.
+| Security           | Service Bus supports standard AMQP 1.0 and HTTP/REST protocols.
 
 ## TODO
