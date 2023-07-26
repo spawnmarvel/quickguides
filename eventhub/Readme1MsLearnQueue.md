@@ -1,4 +1,4 @@
-# Discover Azure message queues
+# Discover Azure message queues AZ-305
 
 https://learn.microsoft.com/en-us/training/modules/discover-azure-message-queue/
 
@@ -10,7 +10,7 @@ Azure supports two types of queue mechanisms: Service Bus queues and Storage que
 * Storage queues are part of the Azure Storage infrastructure. They allow you to store large numbers of messages. You access messages from anywhere in the world via authenticated calls using HTTP or HTTPS. 
 
 
-## Choose a message queue solution AZ-305
+## Choose a message queue solution
 
 ### Consider using Service Bus queues
 
@@ -42,7 +42,7 @@ Service Bus tiers
 
 Advanced features
 
-![Advanced ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/advanced.jpg)
+![Advanced ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/advanced1.jpg)
 
 
 ## TODO
