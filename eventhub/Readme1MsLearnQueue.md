@@ -135,4 +135,3 @@ Azure Queue Storage is a service for storing large numbers of messages.
 
 ![Knowledge ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/az305bus.jpg)
 
-## TODO
