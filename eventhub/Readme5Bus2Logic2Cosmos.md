@@ -5,6 +5,15 @@ Resources
 
 ![Resources cosmos ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/resourcescosmos.jpg)
 
+
+https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-cosmos-db?tabs=consumption
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/resource-model
+
+https://learn.microsoft.com/en-us/azure/connectors/built-in
+
+https://learn.microsoft.com/en-us/connectors/servicebus/
+
 ## Steps
 
 Service Bus information
