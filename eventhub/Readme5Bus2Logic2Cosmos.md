@@ -14,7 +14,7 @@ Cosmos DB
 * Db Historian
 * Container tags
 
-Cosmos db was create here with teh follwoing schema:
+Cosmos db was create here with the following schema:
 
 Database id Historian, container tags, Partition key /type (could also add hierarchical partition key with system)
 
