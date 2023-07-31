@@ -32,3 +32,10 @@ Overview
 Logic App
 
 ![Logic app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappcosmos.jpg)
+
+Issues on the path
+
+When posting a message to ASB woring connection string format was used,.i.e ************ and not the actual string
+
+![Bad con str ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/badconstr.jpg)
+
