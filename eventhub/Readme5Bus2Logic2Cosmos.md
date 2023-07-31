@@ -1,5 +1,10 @@
 # Azure Service Bus with Logic App connector to Cosmos DB
 
+
+Resources
+
+![Resources cosmos ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/resourcescosmos.jpg)
+
 ## Steps
 
 Service Bus information
@@ -110,3 +115,4 @@ Two messages in the queue
 The OK message has arrived and the error message is still in the queue, ref time out DLQ
 
 ![Send 2 yes ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/send2yes.jpg)
+
