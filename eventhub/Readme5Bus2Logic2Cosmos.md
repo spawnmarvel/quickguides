@@ -14,6 +14,17 @@ Cosmos DB
 * Db Historian
 * Container tags
 
+Cosmos db was create here with teh follwoing schema:
+
+Database id Historian, container tags, Partition key /type (could also add hierarchical partition key with system)
+
+TAG-12 type=analog, system=12
+
+TAG-13 type=analog, system=13
+
+https://follow-e-lo.com/2023/07/30/azure-cosmos-db-101/
+
+
 Logic APP
 * Operating System Windows
 * App Service Plan ASP-Rgcosmosdb089-b0b1 (WS1: 1)
@@ -25,6 +36,21 @@ Logic APP
 * * * Create (or update) item in the db Historian, container id tags, with item = Message Content 3
 * * * After Complete the message in the queue 4
 
+
+Data
+
+```json
+{
+    "id": "16",
+    "type": "analog",
+    "name": "TAG-12",
+    "quality": "GOOD",
+    "value" : 99.35,
+    "ts": "2023-07-31T-12:11:00.245Z"
+}
+
+
+```
 Overview
 
 ![Cosmos view ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/cosmosview.jpg)
