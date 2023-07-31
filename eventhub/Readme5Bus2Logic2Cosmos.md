@@ -35,7 +35,10 @@ Logic App
 
 Issues on the path
 
-When posting a message to ASB woring connection string format was used,.i.e ************ and not the actual string
+When posting a message to ASB wrong connection string format was used,.i.e ************ and not the actual string
 
 ![Bad con str ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/badconstr.jpg)
 
+When posting a message to ASB public ip of cosmos db was not added to FW, (and did not configure private endpoint), add pub ip
+
+![Pub ip ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/pubip.jpg)
