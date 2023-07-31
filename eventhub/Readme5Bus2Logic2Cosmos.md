@@ -65,7 +65,7 @@ When posting a message to ASB wrong connection string format was used,.i.e *****
 
 ![Bad con str ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/badconstr.jpg)
 
-When posting a message to ASB public ip of cosmos db was not added to FW, (and did not configure private endpoint), add pub ip
+When posting a message to ASB public ip of cosmos db was not added to FW, (and did not configure private endpoint), added pub ip for test
 
 ![Pub ip ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/pubip.jpg)
 
