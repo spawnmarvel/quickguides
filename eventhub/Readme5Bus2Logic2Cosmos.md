@@ -28,3 +28,7 @@ Logic APP
 Overview
 
 ![Cosmos view ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/cosmosview.jpg)
+
+Logic App
+
+![Logic app ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/logicappcosmos.jpg)
