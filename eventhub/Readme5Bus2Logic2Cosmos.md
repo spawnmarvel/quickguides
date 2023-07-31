@@ -102,6 +102,9 @@ Send a new OK message
     "ts": "2023-07-31T-12:11:00.245Z"
 }
 ```
+
+Two messages in the queue
+
 ![Send 2 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/send2.jpg)
 
 The OK message has arrived and the error message is still in the queue, ref time out DLQ
