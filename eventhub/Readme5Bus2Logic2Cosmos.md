@@ -42,3 +42,7 @@ When posting a message to ASB wrong connection string format was used,.i.e *****
 When posting a message to ASB public ip of cosmos db was not added to FW, (and did not configure private endpoint), add pub ip
 
 ![Pub ip ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/pubip.jpg)
+
+Result when the above was fixed
+
+![Result ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/result.jpg)
