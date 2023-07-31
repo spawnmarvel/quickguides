@@ -72,3 +72,32 @@ When posting a message to ASB public ip of cosmos db was not added to FW, (and d
 Result when the above was fixed
 
 ![Result ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/result.jpg)
+
+
+Test corrupt json
+
+```json
+{
+    "wrong_id_filed": "17",
+    "type": "analog",
+    "name": "TAG-12",
+    "quality": "GOOD",
+    "value" : 99.35,
+    "ts": "2023-07-31T-12:11:00.245Z"
+}
+```
+It fails on insert, correct and it does not complete the message, it will be moved to DLQ.
+
+![Failed ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/failed.jpg)
+
+Send a new OK message
+
+```json
+{
+    "id": "17",
+    "type": "analog",
+    "name": "TAG-12",
+    "quality": "GOOD",
+    "value" : 99.35,
+    "ts": "2023-07-31T-12:11:00.245Z"
+}
