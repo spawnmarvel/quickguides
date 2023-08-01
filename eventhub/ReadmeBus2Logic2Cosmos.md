@@ -11,6 +11,8 @@ API for NoSQL
 * It offers the best end-to-end experience as we have full control over the interface, service, and the SDK client libraries. 
 * Any new feature that is rolled out to Azure Cosmos DB is first available on API for NoSQL accounts.
 
+![API ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/api.jpg)
+
 https://learn.microsoft.com/en-us/azure/cosmos-db/choose-api
 
 Process and create Azure Cosmos DB documents using Azure Logic Apps
