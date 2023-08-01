@@ -1,4 +1,4 @@
-# Azure Service Bus with Logic App connector to Cosmos DB
+# Azure Service Bus with Logic App connector to Cosmos DB NoSQL
 
 
 Resources
@@ -6,13 +6,44 @@ Resources
 ![Resources cosmos ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/resourcescosmos.jpg)
 
 
+API for NoSQL
+* The Azure Cosmos DB API for NoSQL stores data in document format. 
+* It offers the best end-to-end experience as we have full control over the interface, service, and the SDK client libraries. 
+* Any new feature that is rolled out to Azure Cosmos DB is first available on API for NoSQL accounts.
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/choose-api
+
+Process and create Azure Cosmos DB documents using Azure Logic Apps
+
 https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-cosmos-db?tabs=consumption
+
+Databases, containers, and items in Azure Cosmos DB
 
 https://learn.microsoft.com/en-us/azure/cosmos-db/resource-model
 
+Built-in connectors in Azure Logic Apps
+
 https://learn.microsoft.com/en-us/azure/connectors/built-in
 
+Service Bus
+
 https://learn.microsoft.com/en-us/connectors/servicebus/
+
+## APPLIES TO:  NoSQL  MongoDB  Gremlin
+
+Azure Synapse Link for Azure Cosmos DB is a cloud-native hybrid transactional and analytical processing (HTAP) capability that enables near real time analytics over operational data in Azure Cosmos DB. 
+
+Azure Synapse Link creates a tight seamless integration between Azure Cosmos DB and Azure Synapse Analytics.
+
+Limitations
+* Azure Synapse Link for Azure Cosmos DB is supported for NoSQL and MongoDB APIs.
+* Enabling Azure Synapse Link on existing Azure Cosmos DB containers is only supported for API for NoSQL accounts. 
+* Azure Synapse Link can be enabled on new containers for both API for NoSQL and MongoDB accounts.
+* [...]
+
+![Synapse ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/synapse.jpg)
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link
 
 ## Steps
 
