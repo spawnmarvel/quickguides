@@ -47,6 +47,14 @@ Limitations
 
 https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link
 
+
+What is Azure Synapse Analytics?
+
+![Synapse 2 ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/synapse2.jpg)
+
+https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is
+
+
 ## Steps
 
 Service Bus information
