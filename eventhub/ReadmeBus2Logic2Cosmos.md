@@ -86,6 +86,7 @@ Logic APP
 * Create a new statful workflow 3
 * Logic
 * * Recurrence each min 1
+* * *   Note, check docs for using Event Grid "When a resource event occurs" ref https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-to-event-grid-integration-example
 * * Get messages from a queue 2
 * * for each message 
 * * * Create (or update) item in the db Historian, container id tags, with item = Message Content 3
