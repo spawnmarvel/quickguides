@@ -29,3 +29,5 @@ https://github.com/spawnmarvel/azure-automation/blob/main/azure-extra-linux-vm/R
 
 ## Database Mysql (Azure Flexible Server MySql)
 
+Simple topology
+
