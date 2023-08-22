@@ -13,3 +13,9 @@ https://www.zabbix.com/documentation/6.0/en/manual/installation/requirements/bes
 
 ## Tunning
 
+## Zabbix agent 2
+
+## Script agent
+
+## Python Agent
+
