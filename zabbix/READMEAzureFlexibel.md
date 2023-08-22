@@ -89,3 +89,7 @@ https://www.zabbix.com/documentation/6.0/en/manual/installation/frontend
 Connect to Azure Database for MySQL - Flexible Server with encrypted connections
 
 https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl
+
+Private Link for Azure Database for MySQL - Flexible Server (Preview)
+
+https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-networking-private-link
