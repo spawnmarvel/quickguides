@@ -48,6 +48,9 @@ mysql> grant all privileges on zabbix.* to zabbix@localhost-IP-address-DNS;
 mysql> set global log_bin_trust_function_creators = 1;
 mysql> quit;
 
+# Test user, you can also check all tables with HeidiSQL with the superuser for example
+mysql -u zabbix@hostname -h hostname.mysql.database.azure.com -P 3309 --password=A-PASSWORD
+
 # On Zabbix server host import initial schema and data to MySQL. You will be prompted to enter your newly created password.
 # Local host
 # zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
@@ -80,3 +83,9 @@ The default URL for Zabbix UI when using Apache web server is http://host/zabbix
 ## Configure Web Interface
 
 https://www.zabbix.com/documentation/6.0/en/manual/installation/frontend
+
+## Secure Azure for MySQL Flexibel Server
+
+Connect to Azure Database for MySQL - Flexible Server with encrypted connections
+
+https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl
