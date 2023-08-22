@@ -8,7 +8,7 @@ https://www.zabbix.com/manuals
 
 * The more physical memory you have, the faster the database (and therefore Zabbix) works.
 * CPU, Zabbix and especially Zabbix database may require significant CPU resources depending on number of monitored parameters and chosen database engine.
-* 
+
 Examples of hardware configuration
 The table provides examples of hardware configuration, assuming a Linux/BSD/Unix platform.
 
@@ -20,9 +20,6 @@ These are size and hardware configuration examples to start with. Each Zabbix in
 2 Example with Amazon general purpose EC2 instances, using ARM64 or x86_64 architecture, a proper instance type like Compute/Memory/Storage optimised should be selected during Zabbix installation evaluation and testing before installing in its production environment.
 
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements
-
-
-
 
 ## Linux
 
