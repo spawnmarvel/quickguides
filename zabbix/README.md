@@ -25,9 +25,22 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 https://github.com/spawnmarvel/azure-automation/blob/main/azure-extra-linux-vm/README.md
 
+Price example
+
+
+![Linux](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/linux.jpg)
+
 ## Database Mysql
 
+Price example
+
+![Linux](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/linux.jpg)
+
 ## Database Mysql (Azure Flexible Server MySql)
+
+Price example
+
+![Paas](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/paas.jpg)
 
 Simple topology
 

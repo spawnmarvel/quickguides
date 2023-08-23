@@ -20,7 +20,7 @@ https://www.zabbix.com/documentation/6.0/en/manual/installation/requirements/bes
 
 ## Tunning
 
-## Zabbix agent 2
+## Zabbix agents
 
 Templates
 
@@ -37,4 +37,16 @@ Templates
 ## Script agent
 
 ## Python Agent
+
+## Trigger action
+
+IP must be whitelisted
+
+Administration->Media types-> Email
+* SMTP server, mailhost.company.com
+* SMTP server port, 25
+* SMTP helo, company.com
+* SMTP email, HEADER ALERT <alert-message@company.com>
+
+
 
