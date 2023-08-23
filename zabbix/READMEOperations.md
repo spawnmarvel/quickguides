@@ -5,7 +5,7 @@
 
 https://github.com/spawnmarvel/quickguides/blob/main/security/README.md
 
-Setting up SSL for Zabbix frontend
+Setting up SSL for Zabbix frontend Apache
 
 Enabling Zabbix on root directory of URL
 
@@ -25,6 +25,7 @@ https://www.zabbix.com/documentation/6.0/en/manual/installation/requirements/bes
 Templates
 
 * Windows by Zabbix Agent (clone and add 2 or gt to modify)
+* zabbix_agent2-6.0.0-windows-amd64-openssl.msi
 * * Items 32
 * * Discovery rules
 * * * Mounted filesystem discovery, interval 1h
