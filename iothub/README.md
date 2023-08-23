@@ -25,6 +25,8 @@ After making your entries, press the Reconfigure button to add that configuratio
 CA Certificates
 DataHub software supports CA certificates for SSL, in either PEM or PFX format. To use a CA certificate you need to do the following in your Azure IoT Hub configuration.
 
+[...] SAS token, which you can paste verbatim into the DataHub configuration Password field.
+
 3.12.3.4. Sparkplug
 
 https://cogentdatahub.com/library/documentation/
