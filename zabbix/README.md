@@ -23,16 +23,12 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 ## Linux VM
 
+How to Linux
+
 https://github.com/spawnmarvel/azure-automation/blob/main/azure-extra-linux-vm/README.md
 
-Price example
+Price example (could have 1 VM with App and one with Database)
 
-
-![Linux](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/linux.jpg)
-
-## Database Mysql VM
-
-Price example
 
 ![Linux](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/linux.jpg)
 
