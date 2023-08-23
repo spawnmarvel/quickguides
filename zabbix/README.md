@@ -52,5 +52,5 @@ Price example
 
 Simple topology
 
-![Topology](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/topology.jpg)
+![Topology](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/topology1.jpg)
 
