@@ -21,7 +21,7 @@ These are size and hardware configuration examples to start with. Each Zabbix in
 
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
-## Linux
+## Linux VM
 
 https://github.com/spawnmarvel/azure-automation/blob/main/azure-extra-linux-vm/README.md
 
@@ -30,7 +30,7 @@ Price example
 
 ![Linux](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/linux.jpg)
 
-## Database Mysql
+## Database Mysql VM
 
 Price example
 
@@ -42,5 +42,15 @@ Price example
 
 ![Paas](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/paas.jpg)
 
+## Container
+
+Price example
+
+![Container](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/container.jpg)
+
+## App Service for Overview
+
 Simple topology
+
+![Topology](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/topology.jpg)
 
