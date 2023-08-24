@@ -52,7 +52,13 @@ https://cogentdatahub.com/library/documentation/
 
 ## Setup and test
 
+Cogent install all
+
 ![Cogent features ](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogent.jpg)
+
+Simulator
+
+![Cogent simulator ](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/simulator.jpg)
 
 ## 
 
