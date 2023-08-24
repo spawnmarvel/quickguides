@@ -1,6 +1,12 @@
 # Iot hub Azure
 
+Azure IoT Hub is a managed service hosted in the cloud that acts as a central message hub for communication between an IoT application and its attached devices.
+
 https://learn.microsoft.com/en-us/azure/iot-hub/
+
+Azure IoT Central is an IoT application platform (aPaaS) that simplifies the creation of IoT solutions. Azure IoT Central provides a ready-to-use UX and API surface built to connect, manage, and operate fleets of devices at scale. Learn how to use IoT Central with our quickstarts, tutorials, and REST API documentation.
+
+https://learn.microsoft.com/en-us/azure/iot-central/
 
 ## Cogent
 
@@ -36,7 +42,7 @@ https://cogentdatahub.com/library/documentation/
 https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview
 
 
-
 ## Setup and test
 
-##
+## 
+
