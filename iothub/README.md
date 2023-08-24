@@ -22,6 +22,10 @@ Cloud offering:
 * https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview
 
 
+Secure OT to IT networking: https://cogentdatahub.com/connect/secure-ot-it/
+
+
+
 ## Docs
 
 3.12. MQTT Client
