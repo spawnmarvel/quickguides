@@ -14,6 +14,12 @@ https://cogentdatahub.com/
 
 CogentDataHub_x64-10.0.2-230302-Windows.exe
 
+Cloud offering:
+•	Azure Marketplace: https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview 
+•	Connect to any MQTT Broker: https://cogentdatahub.com/products/datahub-iot-gateway/ 
+•	In-plant broker: https://cogentdatahub.com/products/datahub-smart-mqtt-broker/ 
+
+
 ## Docs
 
 3.12. MQTT Client
