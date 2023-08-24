@@ -19,6 +19,7 @@ Cloud offering:
 * Azure Marketplace: https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview 
 * Connect to any MQTT Broker: https://cogentdatahub.com/products/datahub-iot-gateway/ 
 * In-plant broker: https://cogentdatahub.com/products/datahub-smart-mqtt-broker/ 
+* https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview
 
 
 ## Docs
@@ -43,10 +44,6 @@ DataHub software supports CA certificates for SSL, in either PEM or PFX format. 
 3.12.3.4. Sparkplug
 
 https://cogentdatahub.com/library/documentation/
-
-## Cogent Marketplace Azure
-
-https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/cogentreal-timesystemsinc1581352149215.skkynetdatahub?tab=Overview
 
 
 ## Setup and test
