@@ -52,5 +52,7 @@ https://cogentdatahub.com/library/documentation/
 
 ## Setup and test
 
+![Cogent features ](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogent.jpg)
+
 ## 
 
