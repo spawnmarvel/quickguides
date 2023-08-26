@@ -1,8 +1,10 @@
-# Iot hub Azure
+# Azure IoT Hub
 
 Azure IoT Hub is a managed service hosted in the cloud that acts as a central message hub for communication between an IoT application and its attached devices.
 
 https://learn.microsoft.com/en-us/azure/iot-hub/
+
+# Azure Iot Central
 
 Azure IoT Central is an IoT application platform (aPaaS) that simplifies the creation of IoT solutions. Azure IoT Central provides a ready-to-use UX and API surface built to connect, manage, and operate fleets of devices at scale. Learn how to use IoT Central with our quickstarts, tutorials, and REST API documentation.
 
