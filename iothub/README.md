@@ -57,12 +57,13 @@ Video Tutorial: OPC to Azure IoT Hub with Cogent DataHub V9
 
 https://blog.softwaretoolbox.com/video-tutorial-datahub-v9-azure-iot-hub
 
-
 Download the current release of the Azure IoT Explorer from:
 
 https://github.com/Azure/azure-iot-explorer/releases
 
 Azure.IoT.Explorer.Preview.0.15.9.msi
+
+![Azure Iot Explorer](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/hubconnect.jpg)
 
 
 ## Cogent Docs
