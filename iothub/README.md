@@ -24,6 +24,16 @@ Cloud offering:
 
 Secure OT to IT networking: https://cogentdatahub.com/connect/secure-ot-it/
 
+## Softwaretoolboc
+
+https://github.com/Azure/azure-iot-sdk-csharp/releases
+
+Download the current release of the Azure IoT Explorer from:
+
+https://github.com/Azure/azure-iot-explorer/releases
+
+Azure.IoT.Explorer.Preview.0.15.9.msi
+
 
 
 ## Docs
@@ -59,6 +69,24 @@ Cogent install all
 Simulator
 
 ![Cogent simulator ](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/simulator.jpg)
+
+Azure IoT hUB
+Free
+* Device-to-cloud messages
+* Cloud-to-device commands
+* IoT Edge
+* Device twin
+* Daily message limit up to 8000
+* Message size 0.5 KB
+Public Access
+Permission model Shared access policy + RBAC
+Device-to-cloud partitions, default 2
+* The number of partitions relates the device-to-cloud messages to the number of simultaneous readers of these messages. Most IoT hubs only need 4 partions.
+Enable Device Update for IoT Hub (not in free tier)
+Enable Defender for IoT, $0.001 per device per month (not in free tier)
+
+Add a device to the IoT hub
+* device01
 
 ## 
 
