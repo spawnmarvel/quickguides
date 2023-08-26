@@ -51,7 +51,10 @@ Secure OT to IT networking: https://cogentdatahub.com/connect/secure-ot-it/
 
 ## Softwaretoolboc
 
-https://github.com/Azure/azure-iot-sdk-csharp/releases
+Video Tutorial: OPC to Azure IoT Hub with Cogent DataHub V9
+
+https://blog.softwaretoolbox.com/video-tutorial-datahub-v9-azure-iot-hub
+
 
 Download the current release of the Azure IoT Explorer from:
 
@@ -60,8 +63,7 @@ https://github.com/Azure/azure-iot-explorer/releases
 Azure.IoT.Explorer.Preview.0.15.9.msi
 
 
-
-## Docs
+## Cogent Docs
 
 3.12. MQTT Client
 
