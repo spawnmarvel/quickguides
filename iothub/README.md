@@ -65,6 +65,26 @@ Azure.IoT.Explorer.Preview.0.15.9.msi
 
 ![Azure Iot Explorer](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/hubconnect.jpg)
 
+##  Change the path the Cogent DataHub uses to store the configuration files. 
+
+https://support.softwaretoolbox.com/app/answers/detail/a_id/3659
+
+By default the Cogent DataHub will store the configuration files at the location below.
+
+"C:\Users\[USERNAME]\AppData\Roaming\Cogent DataHub"
+
+* Stop Cogent
+* Create a shortcut to CogentDataHub.exe
+* Right-click and go to the Properties of the shortcut.
+* Change the Target to include the "-H home_path".  Example: "C:\Program Files (x86)\Cogent\Cogent DataHub\CogentDataHub.exe" -H "C:\CogentBase\Cogent DataHub"
+
+Target path used for version CogentDataHub_x64-10.0.2-230302-Windows.exe:
+* Target was: "C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -P
+* Target new: "C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -H "C:\CogentBase\Cogent DataHub"
+* Cogent created:
+
+![Config](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/config.jpg)
+
 ## How in the world do I run DataHub as a service?”
 
 https://blog.softwaretoolbox.com/cogent-datahub-as-windows-service
