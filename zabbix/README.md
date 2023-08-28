@@ -53,7 +53,10 @@ History analysis affects performance of Zabbix. But not so much!
 |                                 | Slow    | Fast
 |---------------------------------| ------- |------
 | DB Size                         | Large   | Fits into memory
-| Low level detection |Update freq, 30s, 15m, 30m | Update freq, 1h, 1d, 7d
+| Low level detection             | Update freq, 30s, 15m, 30m | Update freq, 1h, 1d, 7d
+| Trigger expressions             | min(), max(), avg() | last(), nodata()
+| Data collection                 | Polling (SNMP, agent-less, passive agent) | Trapping (active agents)
+| Data types                      | Text, string | Numeric
 
 Zabbix server configuration file, zabbix_server.conf:
 
