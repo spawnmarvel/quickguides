@@ -81,12 +81,11 @@ By default the Cogent DataHub will store the configuration files at the location
 Target path used for version CogentDataHub_x64-10.0.2-230302-Windows.exe:
 * Target was: "C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -P
 * Target new: "C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -H "C:\CogentBase\Cogent DataHub"
-* Cogent created:
+* Cogent created all new files
+* Config file for all configuration changes: Cogent DataHub.cfg
 
 ![Config](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/config.jpg)
 
-Config file for all configuration changes:
-Cogent DataHub.cfg
 
 ## How in the world do I run DataHub as a service?”
 
