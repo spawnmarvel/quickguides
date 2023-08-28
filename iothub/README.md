@@ -87,9 +87,13 @@ Target path used for version CogentDataHub_x64-10.0.2-230302-Windows.exe:
 ![Config](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/config.jpg)
 
 
-## How in the world do I run DataHub as a service?”
+## How in the world do I run DataHub as a service?” and remote config.
 
 https://blog.softwaretoolbox.com/cogent-datahub-as-windows-service
+
+Open Service Manger and change path to for example above mentioned.
+
+![Service](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/Service.jpg)
 
 
 ## Cogent Docs
