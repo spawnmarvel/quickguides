@@ -48,6 +48,10 @@ https://learn.microsoft.com/en-us/azure/container-instances/
 A container group is a collection of containers that get scheduled on the same host machine. 
 The containers in a container group share a lifecycle, resources, local network, and storage volumes. It's similar in concept to a pod in Kubernetes
 
+For example, in a group with two container instances each requesting 1 CPU, one of your containers might run a workload that requires more CPUs to run than the other.
+
+In this scenario, you could set a resource limit of up to 2 CPUs for the container instance. This configuration allows the container instance to use up to 2 CPUs if available.
+
 https://learn.microsoft.com/en-us/azure/container-instances/container-instances-container-groups
 
 Price example
