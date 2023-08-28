@@ -93,7 +93,7 @@ https://blog.softwaretoolbox.com/cogent-datahub-as-windows-service
 
 Open Service Manger and change path to for example above mentioned.
 
-![Service](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/Service.jpg)
+![Service](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/service.jpg)
 
 
 ## Cogent Docs
