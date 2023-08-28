@@ -10,6 +10,12 @@ Azure IoT Central is an IoT application platform (aPaaS) that simplifies the cre
 
 https://learn.microsoft.com/en-us/azure/iot-central/
 
+## IoT Explorer
+
+Azure.IoT.Explorer.Preview.0.15.9.msi
+
+![Azure Iot Explorer](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/hubconnect.jpg)
+
 
 ## Quickstart: Send telemetry from a device to an IoT hub and monitor it with the Azure CLI
 
