@@ -24,7 +24,46 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 ## Security
 
+https://www.zabbix.com/documentation/current/en/manual/installation/requirements/best_practices
+
 ## Tuning
+
+[...]
+
+How to measure performance
+
+Number of values processed per second (NVPS)
+* Update frequency greatly affects NVPS.
+
+Zabbix is able to deliver 2 million of values per minute or around 30.000 of values per second
+
+What affects performance?
+* Type of items, value types, SNMPv3, number of triggers and complexity of triggers.
+* Housekeeper settings and thus size of the database
+* Number of users working with the WEB interface
+* Choose update frequency and duration of storage carefully
+
+History analysis affects performance of Zabbix. But not so much!
+|                                 | Slow    | Fast
+|---------------------------------| ------- |------
+| DB Size                         | Large   | Fits into memory
+| Low level detection |Update freq, 30s, 15m, 30m | Update freq, 1h, 1d, 7d
+
+Zabbix server configuration file, zabbix_server.conf:
+
+```log
+StartPollers=80
+StartPingers=10
+StartPollersUnreachable=80
+StartIPMIPollers=10
+StartTrappers=20
+StartDBSyncers=6
+```
+Should be done before, but How to know when it is time to apply partitioning?
+* Trigger “Zabbix housekeeper processes more than 75% busy” is in problem state for hours or days
+* The performance of housekeeper is dropping
+
+https://www.initmax.cz/wp-content/uploads/2022/06/zabbix_performance_tuning_6.0.pdf
 
 
 ## Linux VM
