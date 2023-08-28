@@ -34,11 +34,15 @@ Price example (could have 1 VM with App and one with Database)
 
 ## Database Mysql (Azure Flexible Server MySql)
 
+https://learn.microsoft.com/en-us/azure/mysql/
+
 Price example
 
 ![Paas](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/paas.jpg)
 
 ## Container
+
+https://learn.microsoft.com/en-us/azure/container-instances/
 
 Price example
 
