@@ -65,6 +65,10 @@ Azure.IoT.Explorer.Preview.0.15.9.msi
 
 ![Azure Iot Explorer](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/hubconnect.jpg)
 
+## How in the world do I run DataHub as a service?”
+
+https://blog.softwaretoolbox.com/cogent-datahub-as-windows-service
+
 
 ## Cogent Docs
 
@@ -88,6 +92,8 @@ DataHub software supports CA certificates for SSL, in either PEM or PFX format. 
 3.12.3.4. Sparkplug
 
 https://cogentdatahub.com/library/documentation/
+
+
 
 
 
