@@ -21,6 +21,12 @@ These are size and hardware configuration examples to start with. Each Zabbix in
 
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
+
+## Security
+
+## Tuning
+
+
 ## Linux VM
 
 How to Linux
