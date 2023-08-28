@@ -93,6 +93,11 @@ https://blog.softwaretoolbox.com/cogent-datahub-as-windows-service
 
 Open Service Manger and change path to for example above mentioned.
 
+* Run as administrator
+* Install or uninstall it
+* Do some changes in the Gui, verify -H path
+* Install or uninstall it
+
 ![Service](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/service.jpg)
 
 
