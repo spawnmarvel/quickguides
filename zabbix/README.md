@@ -24,6 +24,12 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 ## Security
 
+Setting up SSL for Zabbix frontend Apache
+
+Enabling Zabbix on root directory of URL
+
+Enabling HTTP Strict Transport Security (HSTS) on the web server
+
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements/best_practices
 
 ## Tuning
@@ -65,6 +71,35 @@ Should be done before, but How to know when it is time to apply partitioning?
 
 https://www.initmax.cz/wp-content/uploads/2022/06/zabbix_performance_tuning_6.0.pdf
 
+
+## Zabbix agents
+
+Templates
+
+* Windows by Zabbix Agent (clone and add 2 or gt to modify)
+* zabbix_agent2-6.0.0-windows-amd64-openssl.msi
+* * Items 32
+* * Discovery rules
+* * * Mounted filesystem discovery, interval 1h
+* * * Physical disks discovery, interval 1h
+* * * Windows services discovery, interval 1h
+
+* Website certificate by Zabbix Agent (clone and add 2 or gt to modify)
+* IIS by Zabbix agent
+
+## Script agent
+
+## Python Agent
+
+## Trigger action
+
+IP must be whitelisted
+
+Administration->Media types-> Email
+* SMTP server, mailhost.company.com
+* SMTP server port, 25
+* SMTP helo, company.com
+* SMTP email, HEADER ALERT <alert-message@company.com>
 
 ## Linux VM
 
