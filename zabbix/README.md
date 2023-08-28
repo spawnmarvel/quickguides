@@ -58,6 +58,20 @@ History analysis affects performance of Zabbix. But not so much!
 | Data collection                 | Polling (SNMP, agent-less, passive agent) | Trapping (active agents)
 | Data types                      | Text, string | Numeric
 
+Common problems of initial setup
+* Default database settings
+* * Tune database for the best performance (https://github.com/hermanekt/Zabbix_MYSQL_tunned_for_40k)
+* Not optimal configuration of Zabbix Server
+* * Tune Zabbix Server configuration (Monitoring > Dashboard > Zabbix server health)
+* Housekeeper settings do not match hardware spec
+* * (Use partitions in DB) 
+* Use of default templates
+* * Make your own smarter templates
+* Use of older releases
+* * Always use the latest one!
+
+[...]
+
 Zabbix server configuration file, zabbix_server.conf:
 
 ```log
