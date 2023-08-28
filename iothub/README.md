@@ -94,6 +94,11 @@ DataHub software supports CA certificates for SSL, in either PEM or PFX format. 
 https://cogentdatahub.com/library/documentation/
 
 
+## Features
+
+![Cogent features ](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/features.jpg)
+
+
 
 
 
