@@ -70,3 +70,5 @@ sudo ufw app list
 sudo ufw allow Apache
 ```
 
+Configure frontend
+![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix.jpg)
