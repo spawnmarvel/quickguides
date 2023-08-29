@@ -88,6 +88,25 @@ Should be done before, but How to know when it is time to apply partitioning?
 
 https://www.initmax.cz/wp-content/uploads/2022/06/zabbix_performance_tuning_6.0.pdf
 
+## Zabbix Agent: Active vs. Passive
+
+* Passive, it means that the poller (internal server process) connects to the agent on port 10050/TCP and polls for a certain value (e.g., host CPU load).
+* In the active mode, all data processing is performed on the agent, without the interference of pollers, trapper port  10051/TCP.
+
+Topology benefits
+* It could be that customer does not want incoming connections, but incoming connections, have to use active checks.
+*  Then ca not use remote commands, but that is better to do on the trapper host anyway and just have an alert in managament.
+
+Now, onto the most important part, namely configuring the agent in the active or the passive modes. 
+The default setting is passive, meaning that even the default Zabbix server host has all of the Zabbix agent item types configured as passive.
+
+Passive checks
+* Parameter Server, It is a comma-separated list of IP addresses and DNS names from which the agent will accept incoming connections. The Zabbix server connects to this agent and polls the data.
+
+Active checks
+* ServerActive variable, This is the list of IP addresses and DNS names of your Zabbix servers or proxies to which the agent will connect once every two minutes to request the configuration. After it receives the configuration, it starts the requested monitoring and pushes the collected data.
+
+https://blog.zabbix.com/zabbix-agent-active-vs-passive/9207/
 
 ## Zabbix agents
 
