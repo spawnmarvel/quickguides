@@ -3,11 +3,7 @@ import json
 import logging
 
 
-logging.basicConfig(filename="log.log",
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.DEBUG)
+logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
 
 class ApiWorker():
 
@@ -31,19 +27,18 @@ class ApiWorker():
         except FileNotFoundError as ex:
             logging.info(ex)
 
-
     def connect_zabbix(self):
         logging.info("Connection to zabbix, trying to get token")
         try:
             r = requests.post(self.url,
-                          json={
-                              "jsonrpc": "2.0",
-                              "method": "user.login",
-                              "params": {
-                                  "user": self.user,
-                                  "password": self.cred},
-                              "id": 1
-                          })
+                              json={
+                                  "jsonrpc": "2.0",
+                                  "method": "user.login",
+                                  "params": {
+                                      "user": self.user,
+                                      "password": self.cred},
+                                  "id": 1
+                              })
 
             # print(json.dumps(r.json(), indent=4, sort_keys=True))
             self.authtoken = r.json()["result"]
@@ -52,7 +47,6 @@ class ApiWorker():
             logging.error(ex)
         return self.authtoken
 
-    
 
 if __name__ == "__main__":
     worker = ApiWorker()
