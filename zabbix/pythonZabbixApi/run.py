@@ -6,17 +6,11 @@ UNAME = None
 PWORD = None
 AUTHTOKEN = None
 
-#
-
-
 def read_vault():
     try:
         with open("keyvault.json") as fi:
             data_tmp = json.load(fi)
             data = data_tmp["keyvault"]
-            print(data)
-            print(type(data))
-            print(len(data))
     except FileNotFoundError as ex:
         logging.info(ex)
 
