@@ -5,6 +5,11 @@ import logging
 
 logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
 
+# https://www.zabbix.com/documentation/current/en/manual/api
+# The Zabbix API is an HTTP-based API, and it is shipped as a part of the web frontend. It uses the JSON-RPC 2.0 protocol, which means two things:
+# The API consists of a set of separate methods.
+# Requests and responses between the clients and the API are encoded using the JSON format.
+
 class ApiWorker():
 
     def __init__(self):
