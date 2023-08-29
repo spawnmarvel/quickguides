@@ -2,17 +2,26 @@ import requests
 import json
 import logging
 
-UNAME = "Admin"
-PWORD = "zabbix"
+UNAME = None
+PWORD = None
 AUTHTOKEN = None
-TEMPLATEID = None
-TEMPLATENAMETOUPDATE = None
-# this must be set on run and you must create it in zabbix first
-TEMPLATENAMECHECK = "Goodtech IP21 SHA"
+
 #
 
+
+def read_vault():
+    try:
+        with open("keyvault.json") as fi:
+            data_tmp = json.load(fi)
+            data = data_tmp["keyvault"]
+            print(data)
+            print(type(data))
+            print(len(data))
+    except FileNotFoundError as ex:
+        logging.info(ex)
+
 def connect_zabbix(url_zabbix):
-    logging.info("Connection to IMS OC, get token")
+    logging.info("Connection to zabbix, get token")
     
     global UNAME
     global PWORD
@@ -31,3 +40,11 @@ def connect_zabbix(url_zabbix):
     AUTHTOKEN = r.json()["result"]
     logging.info(AUTHTOKEN)
     return AUTHTOKEN
+
+def main():
+    read_vault()
+
+
+if __name__ == "__main__":
+    main()
+   
