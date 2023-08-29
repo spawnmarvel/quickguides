@@ -24,7 +24,10 @@ Install DB, MariaDB in this case
 
 ```bash
 sudo apt install mariadb-server
-# remove sudo apt purge mariadb-server
+# To uninstall sudo apt purge mariadb-server
+
+# Make it start at system boot.
+sudo systemctl enable --now mariadb
 
 sudo mysql_secure_installation
 
@@ -69,6 +72,9 @@ sudo ufw status
 sudo ufw app list
 sudo ufw allow Apache
 ```
+NSG for HTTP
+![NSG](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/NSG.jpg)
 
 Configure frontend
+
 ![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix2.jpg)
