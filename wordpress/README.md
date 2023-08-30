@@ -21,8 +21,19 @@ Application passwords allow authentication via non-interactive systems, such as 
 
 Run the code
 
-![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/python.jpg)
+![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/result.jpg)
 
 ## REST API Handbook
+
+
+Create post
+* POST /wp/v2/posts
+https://developer.wordpress.org/rest-api/reference/posts/#create-a-post
+
+Create page
+* POST /wp/v2/pages
+https://developer.wordpress.org/rest-api/reference/pages/#create-a-page
+
+
 
 https://developer.wordpress.org/rest-api/

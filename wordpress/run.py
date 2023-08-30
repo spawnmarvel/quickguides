@@ -33,9 +33,10 @@ class ApiWorker():
     
     def make_post_and_send(self):
         data = {
-            'title': 'Title for Post',
-            'content': 'This is the content of my new post.\nThis is a new line\n This is a link https://follow-e-lo.com/',
-            'status': 'publish'  # Use 'draft' to save the post as a draft
+            "title": "Title for Post 2",
+            "content": "This is the content of my new post.\nThis is a new line\n This is a link https://follow-e-lo.com/\n\n Produced by: " + str(self.user) + "",
+            "status": "publish"  # Use "draft" to save the post as a draft
+
               }
         try:
             # Send the HTTP request
