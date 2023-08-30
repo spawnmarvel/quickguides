@@ -15,3 +15,6 @@ Application passwords allow authentication via non-interactive systems, such as 
 * Add string: bgebyuPythonApp4189WorkerVGEYVEYUEVGNBYEGBEGNUIYGxokpocq
 * You get a new password back
 
+Run the code
+
+! [Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/python.jpg)
