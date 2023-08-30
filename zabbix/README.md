@@ -38,6 +38,10 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 https://www.reddit.com/r/zabbix/comments/srp2fx/setup_cert_encryption_on_zabbix_agent/?rdt=50737
 
+First, generate a PSK
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
+
 
 ## Tuning
 
