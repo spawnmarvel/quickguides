@@ -14,7 +14,7 @@ url = 'https://follow-e-lo.com/wp-json/wp/v2/posts'
 username = 'pythonWorker'
 
 # The application password you generated
-password = 'soem 789 key yaes'
+password = 'This was revoked'
 
 # The post data
 data = {
