@@ -88,6 +88,12 @@ Should be done before, but How to know when it is time to apply partitioning?
 
 https://www.initmax.cz/wp-content/uploads/2022/06/zabbix_performance_tuning_6.0.pdf
 
+SO
+
+"If it's up to 10 minutes, you can probably ignore that and tune the trigger to be less sensitive. If it's more, it is a general Zabbix DB performance issue."
+
+https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-than-75-busy
+
 ## Zabbix Agent: Active vs. Passive
 
 * Passive, it means that the poller (internal server process) connects to the agent on port 10050/TCP and polls for a certain value (e.g., host CPU load).
@@ -136,7 +142,9 @@ https://www.zabbix.com/documentation/current/en/manual/concepts/sender
 
 Select it and download it.
 
-Example https://www.zabbix.com/download_agents?version=6.0+LTS&release=6.0.21&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=Archive&show_legacy=0
+Example 
+
+https://www.zabbix.com/download_agents?version=6.0+LTS&release=6.0.21&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=Archive&show_legacy=0
 
 zabbix_agent-6.0.21-windows-amd64-openssl.zip
 
