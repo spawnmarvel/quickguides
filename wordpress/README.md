@@ -12,7 +12,7 @@ https://follow-e-lo.com/
 * Role contributor
 * Application Passwords
 Application passwords allow authentication via non-interactive systems, such as XML-RPC or the REST API, without providing your actual password. Application passwords can be easily revoked. They cannot be used for traditional logins to your website. 
-* Add string: bgebyuPythonApp4189WorkerVGEYVEYUEVGNBYEGBEGNUIYGxokpocq
+* Add string: XXXXXXXXXXXXXXXX
 * You get a new password back
 
 Run the code
