@@ -32,6 +32,13 @@ Enabling HTTP Strict Transport Security (HSTS) on the web server
 
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements/best_practices
 
+## Encryption
+
+"PSK is an efficient way, and to be honest you get the same effect, [...] (like, cert management is a hustle compared to psk)."
+
+https://www.reddit.com/r/zabbix/comments/srp2fx/setup_cert_encryption_on_zabbix_agent/?rdt=50737
+
+
 ## Tuning
 
 [...]
