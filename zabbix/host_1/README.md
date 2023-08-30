@@ -19,7 +19,11 @@ sudo apt update
 # b Install Zabbix server, frontend, agent 
 sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 
+
 ```
+![MySQL](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/mysql_support.jpg)
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
+
 Install DB, MariaDB in this case
 
 ```bash
