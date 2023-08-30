@@ -9,7 +9,7 @@ https://blog.finxter.com/how-to-publish-a-wordpress-post-using-python/
 https://follow-e-lo.com/
 
 * New user
-* Role contributor
+* Role author
 * Application Passwords
 Application passwords allow authentication via non-interactive systems, such as XML-RPC or the REST API, without providing your actual password. Application passwords can be easily revoked. They cannot be used for traditional logins to your website. 
 * Add string: XXXXXXXXXXXXXXXX
