@@ -2,7 +2,7 @@
 
 ## Install Ubuntu
 
-## WordPress Python Integration
+## WordPress Python Integration, no plugin
 
 https://blog.finxter.com/how-to-publish-a-wordpress-post-using-python/
 
