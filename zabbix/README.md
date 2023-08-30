@@ -136,6 +136,21 @@ Templates
 * Website certificate by Zabbix Agent (clone and add 2 or gt to modify)
 * IIS by Zabbix agent
 
+### Check Zabbix agent version on Zabbix host
+```bash
+# Status
+sudo service zabbix-agent status
+cd /var/log/zabbix
+tail -f zabbix_agentd.log
+
+# Configuration
+cd /etc/zabbix
+# Version
+zabbix.agentd -V
+
+
+```
+
 ## Zabbix sender
 
 zabbix_sender -z zabbix -s "Linux DB3" -k db.connections -o 43
