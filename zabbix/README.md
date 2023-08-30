@@ -123,6 +123,26 @@ Templates
 * Website certificate by Zabbix Agent (clone and add 2 or gt to modify)
 * IIS by Zabbix agent
 
+## Zabbix sender
+
+zabbix_sender -z zabbix -s "Linux DB3" -k db.connections -o 43
+where:
+* z - Zabbix server host (IP address can be used as well)
+* s - technical name of monitored host (as registered in Zabbix frontend)
+* k - item key
+* o - value to send
+
+https://www.zabbix.com/documentation/current/en/manual/concepts/sender
+
+Select it and download it.
+
+Example https://www.zabbix.com/download_agents?version=6.0+LTS&release=6.0.21&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=Archive&show_legacy=0
+
+zabbix_agent-6.0.21-windows-amd64-openssl.zip
+
+![Sender ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/sender.jpg)
+
+
 ## Script agent
 
 ## Python Agent
