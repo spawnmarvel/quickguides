@@ -14,7 +14,7 @@ url = 'https://follow-e-lo.com/wp-json/wp/v2/posts'
 username = 'pythonWorker'
 
 # The application password you generated
-password = 'This was revoked'
+cred = 'This was revoked'
 
 # The post data
 data = {
@@ -24,7 +24,7 @@ data = {
 }
 
 # Send the HTTP request
-response = requests.post(url, auth=(username, password), json=data)
+response = requests.post(url, auth=(username, cred), json=data)
 
 # Check the response
 if response.status_code == 201:
