@@ -1,5 +1,9 @@
 ## Wordpress
 
+How to Programmatically Create Dozens of Wordpress Pages to Catalogue Thousands of Documents
+
+https://python.plainenglish.io/how-to-programmatically-create-dozens-of-wordpress-pages-to-catalogue-thousands-of-documents-f3f531fdff84
+
 ## Install Ubuntu
 
 ## WordPress Python Integration, no plugin
