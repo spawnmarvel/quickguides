@@ -1,5 +1,14 @@
 # Docker
 
+## Install Docker on Ubuntu
+
+### Install using the apt repository 
+
+
+https://docs.docker.com/engine/install/ubuntu/
+
+
+
 Install Docker on Azure Virtual Machine
 
 https://medium.com/hardwareandro/install-docker-on-azure-virtual-machine-github-docker-hub-azure-deploy-pipeline-part-1-4b1e73dd0d7
