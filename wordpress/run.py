@@ -1,33 +1,56 @@
 import requests
 import base64
 import json
-username = "pythonWorker"
-password = "PythonApp4189Worker"
+import logging
+
 
 import requests
 import json
 
-# The URL for the API endpoint
-url = 'https://follow-e-lo.com/wp-json/wp/v2/posts'
+logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
 
-# Your WordPress username
-username = 'pythonWorker'
 
-# The application password you generated
-cred = 'This was revoked'
+class ApiWorker():
+    
+    def __init__(self):
+        self.url = None
+        self.user = None
+        self.cred = None
+        self.read_vault()
+        
 
-# The post data
-data = {
-    'title': 'My New Post Python Steinar',
-    'content': 'This is the content of my new post.',
-    'status': 'publish'  # Use 'draft' to save the post as a draft
-}
+    def read_vault(self):
+        try:
+            with open("keyvault.json") as fi:
+                data_tmp = json.load(fi)
+                data = data_tmp["keyvault"]
+                rv = data[0]
+                self.url = rv["url"]
+                self.user = rv["user"]
+                self.cred = rv["cred"]
+        except FileNotFoundError as ex:
+            logging.info(ex)
+    
+    def make_post_and_send(self):
+        data = {
+            'title': 'Title for Post',
+            'content': 'This is the content of my new post.\nThis is a new line\n This is a link https://follow-e-lo.com/',
+            'status': 'publish'  # Use 'draft' to save the post as a draft
+              }
+        try:
+            # Send the HTTP request
+            response = requests.post(self.url, auth=(self.user, self.cred), json=data)
+            # Check the response
+            if response.status_code == 201:
+                logging.info("Post created successfully")
+            else:
+                logging.error("Failed to create post: " + response.text)
+        except Exception as ex:
+            logging.error(ex)
 
-# Send the HTTP request
-response = requests.post(url, auth=(username, cred), json=data)
 
-# Check the response
-if response.status_code == 201:
-    print('Post created successfully')
-else:
-    print('Failed to create post: ' + response.text)
+
+
+if __name__ == "__main__":
+    worker = ApiWorker()
+    worker.make_post_and_send()
