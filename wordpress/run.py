@@ -83,18 +83,18 @@ class ApiWorker():
 
     def read_template_make_post_html(self):
         data_template = None
-        with open("templatepost.html", "r") as fi:
-            lines = fi.read().replace('\n', '')
-            data_template = lines
-        data = {
-            "title": "Title for Post 5",
-            "content": data_template,
-            "tags": 1, # the id of the tag
-            "status": "publish"  # Use "draft" to save the post as a draft
-
-              }
         try:
-            # Send the HTTP request
+            with open("templatepost.html", "r") as fi:
+                lines = fi.read().replace('\n', '')
+                data_template = lines
+            data = {
+                "title": "Title for Post 5",
+                "content": data_template,
+                "tags": 1, # the id of the tag
+                "status": "publish"  # Use "draft" to save the post as a draft
+
+                  }
+                # Send the HTTP request
             response = requests.post(self.urlpost, auth=(self.user, self.cred), json=data)
             # Check the response
             if response.status_code == 201:
