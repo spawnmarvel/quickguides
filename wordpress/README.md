@@ -12,6 +12,7 @@ https://blog.finxter.com/how-to-publish-a-wordpress-post-using-python/
 
 https://follow-e-lo.com/
 
+* The application password feature requires HTTPS
 * New user
 * Role author
 * Application Passwords
