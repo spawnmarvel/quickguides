@@ -20,18 +20,22 @@ Application passwords allow authentication via non-interactive systems, such as 
 * Add string: XXXXXXXXXXXXXXXX
 
 
-![Wp pass create](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/apppass.jpg)
+![Wp pass create](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/apppass.jpg)
 
 * You get a new password back
 
 Run the code for create page
 
-![Python page](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/resultpage.jpg)
+![Python page](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/resultpage.jpg)
 
 Run the code for create post
 
-![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/result1.jpg)
+![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/result1.jpg)
 
+
+With syb html template, no body or html tag
+
+![With HTML template](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/withtemplate.jpg)
 
 ## REST API Handbook
 
