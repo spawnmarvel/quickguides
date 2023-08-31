@@ -28,12 +28,7 @@ Run the code for create page
 
 ![Python page](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/resultpage.jpg)
 
-Run the code for create post
-
-![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/result1.jpg)
-
-
-With sub html template, no body or html tag
+Run the code for create post with sub html template, no body or html tag
 
 ![With HTML template](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/images/withtemplate.jpg)
 
