@@ -23,9 +23,14 @@ Application passwords allow authentication via non-interactive systems, such as 
 
 * You get a new password back
 
-Run the code
+Run the code for create page
+
+![Python page](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/resultpage.jpg)
+
+Run the code for create post
 
 ![Python post](https://github.com/spawnmarvel/quickguides/blob/main/wordpress/result1.jpg)
+
 
 ## REST API Handbook
 

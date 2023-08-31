@@ -13,7 +13,8 @@ logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs
 class ApiWorker():
     
     def __init__(self):
-        self.url = None
+        self.urlpost = None
+        self.urlpage = None
         self.user = None
         self.cred = None
         self.read_vault()
@@ -25,7 +26,8 @@ class ApiWorker():
                 data_tmp = json.load(fi)
                 data = data_tmp["keyvault"]
                 rv = data[0]
-                self.url = rv["url"]
+                self.urlpost = rv["urlpost"]
+                self.urlpage = rv["urlpage"]
                 self.user = rv["user"]
                 self.cred = rv["cred"]
         except FileNotFoundError as ex:
@@ -40,7 +42,7 @@ class ApiWorker():
               }
         try:
             # Send the HTTP request
-            response = requests.post(self.url, auth=(self.user, self.cred), json=data)
+            response = requests.post(self.urlpost, auth=(self.user, self.cred), json=data)
             # Check the response
             if response.status_code == 201:
                 logging.info("Post created successfully")
@@ -69,7 +71,7 @@ class ApiWorker():
               }
         try:
             # Send the HTTP request
-            response = requests.post(self.url, auth=(self.user, self.cred), json=data)
+            response = requests.post(self.urlpost, auth=(self.user, self.cred), json=data)
             # Check the response
             if response.status_code == 201:
                 logging.info("Post created successfully")
@@ -79,8 +81,28 @@ class ApiWorker():
             logging.error(ex)
 
 
+    def make_page_and_send(self):
+        data = {
+            "title": "Title for Page 2",
+            "content": "This is the content of my new post.\nThis is a new line\n This is a link https://follow-e-lo.com/\n\n Produced by: " + str(self.user) + "",
+            "status": "publish"  # Use "draft" to save the post as a draft
+
+              }
+        try:
+            # Send the HTTP request
+            response = requests.post(self.urlpage, auth=(self.user, self.cred), json=data)
+            # Check the response
+            if response.status_code == 201:
+                logging.info("Page created successfully")
+            else:
+                logging.error("Failed to create page: " + response.text)
+        except Exception as ex:
+            logging.error(ex)
+
 
 
 if __name__ == "__main__":
     worker = ApiWorker()
-    worker.make_post_and_send_html()
+    # worker.make_post_and_send()
+    # worker.make_post_and_send_html()
+    worker.make_page_and_send()
