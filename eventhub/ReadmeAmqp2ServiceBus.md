@@ -452,7 +452,7 @@ Post last messages, this was fun!
 
 A reasonably complete shovel configuration between an AMQP 1.0 source and an AMQP 0.9.1 destination might look like this:
 
-```json
+```log
 {rabbitmq_shovel,
  [ {shovels, [ {my_first_shovel,
                 [ {source,
@@ -488,7 +488,7 @@ A reasonably complete shovel configuration between an AMQP 1.0 source and an AMQ
 
 A more extensive shovel configuration between an AMQP 0.9.1 Source and an AMQP 1.0 destination might look like this:
 
-```json
+```log
 {rabbitmq_shovel,
  [{shovels, [{my_first_shovel,
               {source,
