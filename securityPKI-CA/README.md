@@ -37,3 +37,20 @@ openssl.cnf https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/
 
 ![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders.jpg)
 
+Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory
+
+```cmd
+# Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory
+
+# Generate the key
+openssl req -x509 -config c:\testca\openssl.cnf -newkey rsa:2048 -days 720 -out c:\testca\ca_certificate.pem -outform PEM -subj /CN=SocratesIncCa/ -nodes
+
+# Generate certificate
+openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer -outform DER
+
+# This is all that is needed to generate a test Certificate Authority. 
+# The root certificate is in ca_certificate.pem and is also in ca_certificate.cer. 
+# These two files contain the same information, but in different formats, PEM and DER. Most software uses the former but some tools require the latter.
+```
+
+
