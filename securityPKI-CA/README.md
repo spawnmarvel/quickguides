@@ -33,7 +33,7 @@ echo > index.txt # remove the content from the file "Echo is on"
 ```
 Parameters for Root CA Configuration File https://pki-tutorial.readthedocs.io/en/latest/simple/root-ca.conf.html
 
-openssl.cnf
+openssl.cnf https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/openssl.cnf
 
 ![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders.jpg)
 
