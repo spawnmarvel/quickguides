@@ -31,4 +31,5 @@ echo 01 > serial # should have content 01
 echo > index.txt # remove the content from the file "Echo is on"
 
 ```
+![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders.jpg)
 
