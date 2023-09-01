@@ -8,7 +8,7 @@ https://www.rabbitmq.com/ssl.html#manual-certificate-generation
 ## Certificate Authority
 
 Tested with
-```cmd
+```bash
 c:\Program Files\OpenSSL-Win64\bin>openssl version
 OpenSSL 1.1.1m  14 Dec 2021
 ```
@@ -18,7 +18,7 @@ Make a new path since v 1 is using default path
 * C:\Program Files\OpenSSL-Win64-3\OpenSSL-Win64
 * The OpenSSL binaries (/bin) directory
 
-```cmd
+```bash
 c:\Program Files\OpenSSL-Win64-3\OpenSSL-Win64\bin>openssl version
 OpenSSL 3.1.2 1 Aug 2023 (Library: OpenSSL 3.1.2 1 Aug 2023)
 
@@ -39,9 +39,8 @@ openssl.cnf https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/
 
 Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory
 
-```cmd
-# Next we need to generate the key and certificates that our test Certificate Authority will use. Still within the testca directory
-
+```bash
+# 2 Key and certificate
 # Generate the key
 openssl req -x509 -config c:\testca\openssl.cnf -newkey rsa:2048 -days 720 -out c:\testca\ca_certificate.pem -outform PEM -subj /CN=SocratesIncCa/ -nodes
 
