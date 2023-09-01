@@ -54,4 +54,6 @@ openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer 
 ```
 ![Folders 2 ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders2.jpg)
 
+Having set up our Certificate Authority, we can now generate private keys and certificates for the clients and the servers. 
 
+![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root.jpg)
