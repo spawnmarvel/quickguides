@@ -71,6 +71,16 @@ Open Service Manger and change path to for example above mentioned.
 
 The MQTT Client option lets you configure the DataHub program as an MQTT client to any number of MQTT brokers, with pre-configured connections for Azure IoT Hub, Google IoT, and AWS IoT Core.
 
+Example localhost:
+
+Client MQTT
+![Cogent client](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentclient.jpg)
+
+Broker MQTT
+
+Data:
+
+
 
 3.12.3.1. Azure IoT Hub
 
