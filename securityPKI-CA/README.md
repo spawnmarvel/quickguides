@@ -56,4 +56,40 @@ openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer 
 
 Having set up our Certificate Authority, we can now generate private keys and certificates for the clients and the servers. 
 
+Root certificate
+
 ![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root.jpg)
+
+Server
+
+```bash
+cd c:\testca
+mkdir server
+cd server
+
+# Generating RSA private key
+openssl genrsa -out c:\testca\server\private_key.pem 2048
+
+# Generating request
+openssl req -new -key c:\testca\server\private_key.pem -out c:\testca\server\req.pem -outform PEM -subj /CN=BER-0803 -nodes
+
+# Generating certificate for a server, it can only have the server role
+openssl ca -config c:\testca\openssl.cnf -in c:\testca\server\req.pem -out c:\testca\server\server_certificate.pem -notext -batch -extensions server_ca_extensions
+
+# Using configuration from c:\testca\openssl.cnf
+# Check that the request matches the signature
+# Signature ok
+# The Subject's Distinguished Name is as follows
+# commonName            :ASN.1 12:'BER-0803'
+# Certificate is to be certified until Aug 31 22:36:30 2033 GMT (3652 days)
+
+# Write out database with 1 new entries
+# Database updated
+
+# Make cer file also
+openssl x509 -in c:\testca\server\server_certificate.pem -out c:\testca\server\server_certificate.cer -outform DER
+
+```
+Server certificate
+
+![Server ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/server.jpg)
