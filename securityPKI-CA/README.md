@@ -105,7 +105,7 @@ ssl_options.keyfile    = C:\testca\server\private_key.pem
 
 ![RabbitMQ ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/rabbitmq.jpg)
 
-![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders3.jpg)
+![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folder3.jpg)
 
 
 
