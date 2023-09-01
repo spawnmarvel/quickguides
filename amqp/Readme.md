@@ -72,7 +72,22 @@ Certificates in the Context of Transport Layer Security (TLS)
 
 https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
 
+## Basic concepts of RabbitMQ:
 
+* Producer: A producer is the one who sends messages to a queue based on the queue name.
+* Queue: A Queue is a sequential data structure that is a medium through which messages are transferred and stored.
+* Consumer: A consumer is the one who subscribes to and receives messages from the broker and uses that message for other defined operations.
+* Exchange: An exchange is an entry point for the broker because it takes messages from a publisher and routes those messages to the appropriate queue.
+* Broker: It is a message broker which provides storage for data produced. The data is meant to be consumed or received by another application that connects to the broker with the given parameters or connection strings.
+* Channel: Channels offer a lightweight connection to a broker via a shared TCP connection.
+
+Key Features of RabbitMQ
+
+Some of the main features of RabbitMQ are listed below:
+* Distributed Deployment: Users can deploy RabbitMQ as clusters for high availability and throughput as well. The clusters are federated across multiple availability zones and regions to be available every time.
+* Tools and Plugins: RabbitMQ offers a plethora of tools and plugins for continuous integration, operational metrics, and integration to other enterprise systems. 
+* Enterprise and Cloud Ready: RabbitMQ is lightweight and easy to deploy on the public as well as private clouds using pluggable authentication authorization.
+* Asynchronous Messaging: RabbitMQ supports multiple messaging protocols, message queuing, delivery acknowledgment, routing to queues, and different exchange types.
 
 ## AMQP Shovel MTLS URI with SNI and RFC-6125
 
