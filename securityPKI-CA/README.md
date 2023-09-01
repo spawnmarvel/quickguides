@@ -93,3 +93,19 @@ openssl x509 -in c:\testca\server\server_certificate.pem -out c:\testca\server\s
 Server certificate
 
 ![Server ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/server.jpg)
+
+Example with using the certificate in RabbitMQ
+
+```log
+listeners.ssl.default = 5671
+ssl_options.cacertfile = C:\testca\ca_certificate.pem
+ssl_options.certfile   = C:\testca\server\server_certificate.pem
+ssl_options.keyfile    = C:\testca\server\private_key.pem
+```
+
+![RabbitMQ ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/rabbitmq.jpg)
+
+![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders3.jpg)
+
+
+
