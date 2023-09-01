@@ -82,6 +82,7 @@ Client MQTT pull
 ![Cogent client pull](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentclientpull.jpg)
 
 Broker MQTT
+* Not require autentication
 
 ![Cogent broker](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentbroker.jpg)
 
