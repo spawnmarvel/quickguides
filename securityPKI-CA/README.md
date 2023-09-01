@@ -1,7 +1,7 @@
 
 # Certificate Authority
 
-The below tutorial is translate to windows
+The below tutorial is translated to windows and cmd is used.
 
 https://www.rabbitmq.com/ssl.html#manual-certificate-generation
 
