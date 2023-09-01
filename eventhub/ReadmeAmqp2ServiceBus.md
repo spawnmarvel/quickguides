@@ -446,6 +446,95 @@ Post last messages, this was fun!
 
 ![Final ASB ](https://github.com/spawnmarvel/quickguides/blob/main/eventhub/images/finaleasb.jpg)
 
+## Static Shovel
+
+### Example Configuration (1.0 Source - 0.9.1 Destination)
+
+A reasonably complete shovel configuration between an AMQP 1.0 source and an AMQP 0.9.1 destination might look like this:
+
+```json
+{rabbitmq_shovel,
+ [ {shovels, [ {my_first_shovel,
+                [ {source,
+                   [ {protocol, amqp10},
+                     {uris, [ "amqp://fred:secret@host1.domain/my_vhost",
+                            ]},
+                     {source_address, <<"my-source">>},
+                     {prefetch_count, 10}
+                   ]},
+                  {destination,
+                     [ {protocol, amqp091},
+                       {uris, ["amqp://"]},
+                       {declarations, [ {'exchange.declare',
+                                         [ {exchange, <<"my_direct">>},
+                                           {type, <<"direct">>},
+                                           durable
+                                         ]}
+                                      ]},
+                       {publish_properties, [ {delivery_mode, 2} ]},
+                       {add_forward_headers, true},
+                       {publish_fields, [ {exchange, <<"my_direct">>},
+                                          {routing_key, <<"from_shovel">>}
+                                        ]}
+                     ]},
+                  {ack_mode, on_confirm},
+                  {reconnect_delay, 5}
+                ]}
+             ]}
+ ]}
+```
+
+## Example Configuration (0.9.1 Source — 1.0 Destination)
+
+A more extensive shovel configuration between an AMQP 0.9.1 Source and an AMQP 1.0 destination might look like this:
+
+```json
+{rabbitmq_shovel,
+ [{shovels, [{my_first_shovel,
+              {source,
+               [{protocol, amqp091},
+                {uris, ["amqp://fred:secret@host1.domain/my_vhost",
+                        "amqp://john:secret@host2.domain/my_vhost"]},
+                {declarations, [{'exchange.declare',
+                                   [{exchange, <<"my_fanout">>},
+                                    {type, <<"fanout">>},
+                                    durable]},
+                                {'queue.declare',
+                                   [{arguments,
+                                      [{<<"x-message-ttl">>, long, 60000}]}]},
+                                {'queue.bind',
+                                   [{exchange, <<"my_fanout">>},
+                                    {queue,    <<>>}
+                                    ]}
+                               ]},
+                {queue, <<>>},
+                {prefetch_count, 10}
+               ]},
+              {destination,
+               [{protocol, amqp10},
+                %% Note: for plain text SASL authentication, use
+                % {uris, ["amqp://user:pass@host:5672?sasl=plain"]},
+                %% Note: this relies on default user credentials
+                %%       which has remote access restrictions, see
+                %%       https://www.rabbitmq.com/access-control.html to learn more
+                {uris, ["amqp://host:5672"]},
+                {properties, [{user_id, <<"my-user">>}]},
+                {application_properties, [{<<"my-prop">>, <<"my-prop-value">>}]},
+                {add_forward_headers, true},
+                {target_address, <<"destination-queue">>}
+               ]},
+              {ack_mode, on_confirm},
+              {reconnect_delay, 5}
+             }]}
+ ]}
+}
+````
+
+https://www.rabbitmq.com/shovel-static.html
+
+
+
+
 
 
 
