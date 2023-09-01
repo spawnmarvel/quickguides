@@ -73,15 +73,21 @@ The MQTT Client option lets you configure the DataHub program as an MQTT client 
 
 Example localhost:
 
-Client MQTT
+Client MQTT push
 
-![Cogent client](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentclient.jpg)
+![Cogent client push](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentclient.jpg)
+
+Client MQTT pull
+
+![Cogent client pull](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentclientpull.jpg)
 
 Broker MQTT
 
 ![Cogent broker](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/cogentbroker.jpg)
 
 Data:
+
+![Result](https://github.com/spawnmarvel/quickguides/blob/main/iothub/images/result.jpg)
 
 
 
