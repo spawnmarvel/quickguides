@@ -49,7 +49,9 @@ openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer 
 
 # This is all that is needed to generate a test Certificate Authority. 
 # The root certificate is in ca_certificate.pem and is also in ca_certificate.cer. 
-# These two files contain the same information, but in different formats, PEM and DER. Most software uses the former but some tools require the latter.
+# These two files contain the same information, but in different formats, PEM and DER. 
+# Most software uses the former but some tools require the latter.
 ```
+![Folders 2 ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folders2.jpg)
 
 
