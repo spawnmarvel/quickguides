@@ -145,4 +145,6 @@ openssl ca -config c:\testca\openssl.cnf -in c:\testca\client\req.pem -out c:\te
 # Make cer file also
 openssl x509 -in c:\testca\client\client_certificate.pem -out c:\testca\client\client_certificate.cer -outform DER
 ```
+Client certificate
 
+![Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/client.jpg)
