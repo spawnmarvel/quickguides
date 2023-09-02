@@ -42,7 +42,7 @@ Next we need to generate the key and certificates that our test Certificate Auth
 ```bash
 # 2 Key and certificate
 # Generate the key
-openssl req -x509 -config c:\testca\openssl.cnf -newkey rsa:2048 -days 720 -out c:\testca\ca_certificate.pem -outform PEM -subj /CN=SocratesIncCa/ -nodes
+openssl req -x509 -config c:\testca\openssl.cnf -newkey rsa:2048 -days 3652 -out c:\testca\ca_certificate.pem -outform PEM -subj /CN=SocratesIncCa/ -nodes
 
 # Generate certificate
 openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer -outform DER
