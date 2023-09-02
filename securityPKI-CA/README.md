@@ -193,6 +193,44 @@ V	330901095710Z		05	unknown	/CN=NOR-0705
 V	330901101056Z		06	unknown	/CN=NOR-0706
 
 ```
+Changes in the openssl2.cnf
+From https://access.redhat.com/solutions/28965
+
+Below extended key attributes have to be used in the certificate, As per RFC 3280, section "extended key usage"
+* TLS WWW server authentication
+* TLS WWW client authentication
+* Signing of downloadable executable code
+* E-mail protection
+
+```log
+
+[ req ]
+default_bits = 2048
+default_keyfile = "C:\\testca\\private\\ca_private_key.pem"
+default_md = sha256
+prompt = yes
+distinguished_name = root_ca_distinguished_name
+# x509_extensions = root_ca_extensions
+# https://access.redhat.com/solutions/28965
+x509_extensions = v3_ca # The extentions to add to the self signed cert
+req_extensions  = v3_req
+x509_extensions = usr_cert
+
+[ usr_cert ]
+basicConstraints = CA:false
+nsCertType = client, server, email
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth, clientAuth, codeSigning, emailProtection
+nsComment = "OpenSSL Generated Certificate"
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+
+[ v3_req ]
+extendedKeyUsage = serverAuth, clientAuth, codeSigning, emailProtection
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+```
+
 
 ```bash
 # Make a new server folder server 2
@@ -217,6 +255,7 @@ openssl ca -config c:\testca\openssl2.cnf -in c:\testca\server2\req.pem -out c:\
 
 # Write out database with 1 new entries
 # Database updated
+
 # Make cer file also
 openssl x509 -in c:\testca\server2\server2_certificate.pem -out c:\testca\server2\server2_certificate.cer -outform DER
 
