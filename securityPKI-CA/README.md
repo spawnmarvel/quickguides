@@ -165,6 +165,9 @@ All steps were done with openssl ca -config c:\testca\openssl.cnf
 
 ## Server and client auth in one certificate
 
+With reference to RabbitMQ.
+If we are to have RabbitMQ as a server and also use the shovel function, then we are a server and a client.
+
 Now lets create a new config file to use
 * c:\testca\openssl2.cnf
 * Copy all the content from c:\testca\openssl.cnf, we use that as a base
