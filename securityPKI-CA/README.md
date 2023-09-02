@@ -56,9 +56,9 @@ openssl x509 -in c:\testca\ca_certificate.pem -out c:\testca\ca_certificate.cer 
 
 Having set up our Certificate Authority, we can now generate private keys and certificates for the clients and the servers. 
 
-Root certificate
+Root certificate after inmporting to MMC-> certificates
 
-![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root.jpg)
+![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root2.jpg)
 
 Server
 
