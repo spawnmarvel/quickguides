@@ -58,7 +58,7 @@ Having set up our Certificate Authority, we can now generate private keys and ce
 
 Root certificate after inmporting to MMC-> certificates
 
-![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root2.jpg)
+![Root ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/root.jpg)
 
 Server
 
