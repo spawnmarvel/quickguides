@@ -148,3 +148,5 @@ openssl x509 -in c:\testca\client\client_certificate.pem -out c:\testca\client\c
 Client certificate
 
 ![Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/client.jpg)
+
+![Folder Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folderclient.jpg)
