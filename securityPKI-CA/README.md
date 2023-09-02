@@ -263,3 +263,5 @@ openssl x509 -in c:\testca\server2\server2_certificate.pem -out c:\testca\server
 All purposes
 
 ![All ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allpurpose2.jpg)
+
+![All files ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allfiles.jpg)

@@ -1,0 +1,72 @@
+[ ca ]
+default_ca = testca
+
+[ testca ]
+certificate = "C:\\testca\\ca_certificate.pem"
+database = "C:\\testca\\index.txt"
+new_certs_dir = "C:\\testca\\certs"
+private_key = "C:\\testca\\private\\ca_private_key.pem"
+serial = "C:\\testca\\serial"
+
+default_crl_days = 7
+default_days = 3652
+default_md = sha256
+
+policy = testca_policy
+x509_extensions = certificate_extensions
+
+[ testca_policy ]
+commonName = supplied
+stateOrProvinceName = optional
+countryName = optional
+emailAddress = optional
+organizationName = optional
+organizationalUnitName = optional
+domainComponent = optional
+
+[ certificate_extensions ]
+basicConstraints = CA:false
+
+[ req ]
+default_bits = 2048
+default_keyfile = "C:\\testca\\private\\ca_private_key.pem"
+default_md = sha256
+prompt = yes
+distinguished_name = root_ca_distinguished_name
+# x509_extensions = root_ca_extensions
+# https://access.redhat.com/solutions/28965
+x509_extensions = v3_ca # The extentions to add to the self signed cert
+req_extensions  = v3_req
+x509_extensions = usr_cert
+
+[ usr_cert ]
+basicConstraints = CA:false
+nsCertType = client, server, email
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth, clientAuth, codeSigning, emailProtection
+nsComment = "OpenSSL Generated Certificate"
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+
+[ v3_req ]
+extendedKeyUsage = serverAuth, clientAuth, codeSigning, emailProtection
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+
+
+[ root_ca_distinguished_name ]
+commonName = BER-0803
+
+[ root_ca_extensions ]
+basicConstraints = CA:true
+keyUsage = keyCertSign, cRLSign
+
+[ client_ca_extensions ]
+basicConstraints = CA:false
+keyUsage = digitalSignature,keyEncipherment
+extendedKeyUsage = 1.3.6.1.5.5.7.3.2
+
+[ server_ca_extensions ]
+basicConstraints = CA:false
+keyUsage = digitalSignature,keyEncipherment
+extendedKeyUsage = 1.3.6.1.5.5.7.3.1
