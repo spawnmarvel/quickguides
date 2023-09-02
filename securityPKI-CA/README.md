@@ -264,4 +264,6 @@ All purposes
 
 ![All ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allpurpose2.jpg)
 
+All files
+
 ![All files ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allfiles.jpg)
