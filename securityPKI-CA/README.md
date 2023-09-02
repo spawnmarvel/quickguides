@@ -151,4 +151,45 @@ Client certificate
 
 The we can use in a client application only (App request, code, shovel etc.)
 
+All steps were done with openssl ca -config c:\testca\openssl.cnf
+
 ![Folder Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folderclient.jpg)
+
+## Server and client auth in one certificate
+
+Now lets create a new config file to use
+* c:\testca\openssl2.cnf
+* Copy all the content from c:\testca\openssl.cnf, we use that as a base
+
+Test it first
+```bash
+# Make a new client folder client 2
+cd c:\testca
+mkdir client2
+
+# Generating RSA private key
+openssl genrsa -out c:\testca\client2\private_key.pem 2048
+
+# Generating request
+openssl req -new -key c:\testca\client2\private_key.pem -out c:\testca\client2\req.pem -outform PEM -subj /CN=NOR-0706 -nodes
+
+# Only client extension using new config openssl2.cnf
+openssl ca -config c:\testca\openssl2.cnf -in c:\testca\client2\req.pem -out c:\testca\client2\client_certificate.pem -notext -batch -extensions client_ca_extensions
+
+# Using configuration from c:\testca\openssl2.cnf
+# Check that the request matches the signature
+# Signature ok
+# The Subject's Distinguished Name is as follows
+# commonName            :ASN.1 12:'NOR-0706'
+# Certificate is to be certified until Sep  1 10:10:56 2033 GMT (3652 days)
+
+# Write out database with 1 new entries
+# Database updated
+```
+The same databases (index.txt) is updated, good.
+```log
+V	330901094633Z		04	unknown	/CN=BER-0803
+V	330901095710Z		05	unknown	/CN=NOR-0705
+V	330901101056Z		06	unknown	/CN=NOR-0706
+
+```

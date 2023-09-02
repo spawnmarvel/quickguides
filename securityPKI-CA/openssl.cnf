@@ -1,3 +1,11 @@
+# Simple Root CA
+
+# The [default] section contains global constants that can be referred to from
+# the entire configuration file. It may also hold settings pertaining to more
+# than one openssl command.
+
+# https://pki-tutorial.readthedocs.io/en/latest/simple/root-ca.conf.html
+
 [ ca ]
 default_ca = testca
 
@@ -9,7 +17,7 @@ private_key = "C:\\testca\\private\\ca_private_key.pem"
 serial = "C:\\testca\\serial"
 
 default_crl_days = 7
-default_days = 1825
+default_days = 3652
 default_md = sha256
 
 policy = testca_policy
@@ -51,4 +59,3 @@ extendedKeyUsage = 1.3.6.1.5.5.7.3.2
 basicConstraints = CA:false
 keyUsage = digitalSignature,keyEncipherment
 extendedKeyUsage = 1.3.6.1.5.5.7.3.1
-
