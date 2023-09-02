@@ -275,6 +275,15 @@ All purposes
 
 ![All ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allpurpose2.jpg)
 
+Example with using the certificate in RabbitMQ
+
+```log
+listeners.ssl.default = 5671
+ssl_options.cacertfile = C:\testca\ca_certificate.pem
+ssl_options.certfile   = C:\testca\server2\server2_certificate.pem
+ssl_options.keyfile    = C:\testca\server2\private_key.pem
+```
+
 All files
 
 ![All files ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allfiles.jpg)
