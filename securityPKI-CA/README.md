@@ -221,3 +221,6 @@ openssl ca -config c:\testca\openssl2.cnf -in c:\testca\server2\req.pem -out c:\
 openssl x509 -in c:\testca\server2\server2_certificate.pem -out c:\testca\server2\server2_certificate.cer -outform DER
 
 ```
+All purposes
+
+![All ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allpurpose.jpg)
