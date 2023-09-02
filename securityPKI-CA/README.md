@@ -111,7 +111,38 @@ ssl_options.keyfile    = C:\testca\server\private_key.pem
 
 ![RabbitMQ ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/rabbitmq.jpg)
 
+RabbitMQ broker uses certificates and private keys in the PEM format. 
+
+Some client libraries use the PEM format, others will require conversion to a different format (e.g. PKCS#12).
+
 ![Folders ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folder3.jpg)
 
+Client
 
+```bash
+cd c:\testca
+mkdir client
+
+# Generating RSA private key
+openssl genrsa -out c:\testca\client\private_key.pem 2048
+
+# Generating request
+openssl req -new -key c:\testca\client\private_key.pem -out c:\testca\client\req.pem -outform PEM -subj /CN=NOR-0705 -nodes
+
+# Only client extension
+openssl ca -config c:\testca\openssl.cnf -in c:\testca\client\req.pem -out c:\testca\client\client_certificate.pem -notext -batch -extensions client_ca_extensions
+
+# Using configuration from c:\testca\openssl.cnf
+# Check that the request matches the signature
+# Signature ok
+# The Subject's Distinguished Name is as follows
+# commonName            :ASN.1 12:'NOR-0705'
+# Certificate is to be certified until Sep  1 09:57:10 2033 GMT (3652 days)
+
+# Write out database with 1 new entries
+# Database updated
+
+# Make cer file also
+openssl x509 -in c:\testca\client\client_certificate.pem -out c:\testca\client\client_certificate.cer -outform DER
+```
 
