@@ -149,4 +149,6 @@ Client certificate
 
 ![Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/client.jpg)
 
+The we can use in a client application only (App request, code, shovel etc.)
+
 ![Folder Client ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/folderclient.jpg)
