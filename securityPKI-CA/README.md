@@ -193,3 +193,31 @@ V	330901095710Z		05	unknown	/CN=NOR-0705
 V	330901101056Z		06	unknown	/CN=NOR-0706
 
 ```
+
+```bash
+# Make a new server folder server 2
+cd c:\testca
+mkdir server2
+
+# Generating RSA private key
+openssl genrsa -out c:\testca\server2\private_key.pem 2048
+
+# Generating request
+openssl req -new -key c:\testca\server2\private_key.pem -out c:\testca\server2\req.pem -outform PEM -subj /CN=SWE-0810 -nodes
+
+# Server and client extension using new config openssl2.cnf
+openssl ca -config c:\testca\openssl2.cnf -in c:\testca\server2\req.pem -out c:\testca\server2\server2_certificate.pem -notext -batch
+
+# Using configuration from c:\testca\openssl2.cnf
+# Check that the request matches the signature
+# Signature ok
+# The Subject's Distinguished Name is as follows
+# commonName            :ASN.1 12:'SWE-0810'
+# Certificate is to be certified until Sep  1 10:21:26 2033 GMT (3652 days)
+
+# Write out database with 1 new entries
+# Database updated
+# Make cer file also
+openssl x509 -in c:\testca\server2\server2_certificate.pem -out c:\testca\server2\server2_certificate.cer -outform DER
+
+```
