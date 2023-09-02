@@ -9,7 +9,15 @@ https://www.rabbitmq.com/ssl.html#manual-certificate-generation
 
 https://www.tecmint.com/generate-csr-certificate-signing-request-in-linux/
 
-## Make Certificate Authority
+## Make Certificate Authority SocatesIncCA
+
+Ref https://pki-tutorial.readthedocs.io/en/latest/simple/index.html#overview
+
+"We assume an organisation named SocratesIncCaInc, controlling the domain socrates.org. The organisation runs a small PKI to secure its email and intranet traffic."
+"To construct the PKI, we first create the Simple Root CA and its CA certificate. We then use the root CA to create the Simple Signing CA. 
+"Once the CAs are in place, we issue TLS-server certificate's to servers and clients or server/client purpose"
+
+![Simple PKI ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/simplepki.jpg)
 
 Tested with
 ```bash
