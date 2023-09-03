@@ -313,3 +313,28 @@ ssl_options.keyfile    = C:\testca\server2\private_key.pem
 All files
 
 ![All files ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/allfiles.jpg)
+
+## Converting Using OpenSSL
+
+https://stackoverflow.com/questions/13732826/convert-pem-to-crt-and-key
+
+```bash
+
+cd c:\testca
+mkdir server2
+
+# We have the pem from above
+c:\testca\server2\server2_certificate.pem 
+
+# Make cer file also
+openssl x509 -in c:\testca\server2\server2_certificate.pem -out c:\testca\server2\server2_certificate.cer -outform DER
+
+# Convert PEM to CRT (.CRT file)
+openssl x509 -outform der -in c:\testca\server2\server2_certificate.pem -out c:\testca\server2\server2_certificate.crt
+
+```
+
+Cannot read the file due to base encoding?
+* CP the conntent of the .pem file to a crt file
+
+![Pem to crt ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/crt.jpg)
