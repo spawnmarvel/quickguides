@@ -43,6 +43,14 @@ First, generate a PSK
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
+# History and trends
+
+The general strong advice is to keep history for the smallest possible number of days and that way not to overload the database with lots of historical values.
+
+Instead of keeping a long history, you can keep longer data of trends. For example, you could keep history for 14 days and trends for 5 years
+
+https://www.zabbix.com/documentation/4.0/en/manual/config/items/history_and_trends
+
 ## Tuning
 
 [...]
