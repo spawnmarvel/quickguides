@@ -59,6 +59,22 @@ Permissions
 | Hosts        | +    | +     | + 
 [...]
 
+User roles are configured in the Users -> User roles section by Super admin users.
+
+Access to hosts
+Access to any host and template data in Zabbix is granted to user groups on the host/template group level only.
+
+That means that an individual user cannot be directly granted access to a host (or host group). It can only be granted access to a host by being part of a user group that is granted access to the host group that contains the host.
+
+User groups
+* User groups allow to group users both for organizational purposes and for assigning permissions to data. Permissions to viewing and configuring data of host groups and template groups are assigned to user groups, not individual users.
+
+
+1. Put host in a group (Interface monitoring)
+2. Create a user group, ProblemReader
+3. Add Interface monitoring to ProblemReader permission
+4. Add a user, type user, add that user to the ProblemReader group
+
 https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
 
 
