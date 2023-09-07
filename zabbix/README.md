@@ -71,9 +71,9 @@ User groups
 
 
 1. Put host's in a group (Interface monitoring)
-2. Create a user group, ProblemReader
-3. Add Interface monitoring to ProblemReader permission Read
-4. Add a user, type user, add that user to the ProblemReader group
+2. Create a user group, Problem readers
+3. Add Interface monitoring to Problem readers permission Read
+4. Add a user, type user, add that user to the Problem readers group
 
 https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
 
