@@ -70,9 +70,9 @@ User groups
 * User groups allow to group users both for organizational purposes and for assigning permissions to data. Permissions to viewing and configuring data of host groups and template groups are assigned to user groups, not individual users.
 
 
-1. Put host in a group (Interface monitoring)
+1. Put host's in a group (Interface monitoring)
 2. Create a user group, ProblemReader
-3. Add Interface monitoring to ProblemReader permission
+3. Add Interface monitoring to ProblemReader permission Read
 4. Add a user, type user, add that user to the ProblemReader group
 
 https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
