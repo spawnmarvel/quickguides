@@ -43,7 +43,7 @@ First, generate a PSK
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-## Users and groups (12)
+## Users and groups (7 Configuration, 12) Users and groups
 
 Configuring a user
 
