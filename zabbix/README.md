@@ -43,9 +43,33 @@ First, generate a PSK
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-## Users and groups
+## Users and groups (12)
 
-User roles
+Configuring a user
+
+Permissions
+* User - has limited access rights to menu sections (see below) and no access to any resources by default. Any permissions to host or template groups must be explicitly assigned;
+* Admin - has incomplete access rights to menu sections (see below). The user has no access to any host groups by default. Any permissions to host or template groups must be explicitly given;
+* Super admin - has access to all menu sections. The user has a read-write access to all host and template groups. Permissions cannot be revoked by denying access to specific groups.
+
+| Menu section | User | Admin | Super Admin
+| ------------ | ---- | ----- | ----------
+| Dashboards   | +    | +     | +
+| Problems     | +    | +     | + 
+[...]
+
+https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
+
+
+## Web interface, Users (18, 8)
+
+
+1. User Groups
+
+
+https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/user_groups
+
+2. User roles
 
 Super admin role
 * 
