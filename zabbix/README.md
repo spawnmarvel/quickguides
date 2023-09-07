@@ -56,6 +56,7 @@ Permissions
 | ------------ | ---- | ----- | ----------
 | Dashboards   | +    | +     | +
 | Problems     | +    | +     | + 
+| Hosts        | +    | +     | + 
 [...]
 
 https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
