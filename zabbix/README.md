@@ -78,39 +78,10 @@ User groups
 https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups/permissions
 
 
-## Web interface, Users (18, 8)
+## Web interface, Users (18,2 Frontend section 8 Users)
 
 
-1. User Groups
-
-
-https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/user_groups
-
-2. User roles
-
-Super admin role
-* 
-Admin role
-* 
-User role
-* 
-Guest role
-* 
-
-https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/user_roles
-
-Users and user groups
-
-https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups
-
-Configurering a user
-* 
-
-Permissions
-* 
-
-User groups
-*
+https://www.zabbix.com/documentation/current/en/manual/web_interface
 
 
 ## History and trends
