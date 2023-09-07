@@ -43,7 +43,36 @@ First, generate a PSK
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-# History and trends
+## Users and groups
+
+User roles
+
+Super admin role
+* 
+Admin role
+* 
+User role
+* 
+Guest role
+* 
+
+https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/user_roles
+
+Users and user groups
+
+https://www.zabbix.com/documentation/current/en/manual/config/users_and_usergroups
+
+Configurering a user
+* 
+
+Permissions
+* 
+
+User groups
+*
+
+
+## History and trends
 
 The general strong advice is to keep history for the smallest possible number of days and that way not to overload the database with lots of historical values.
 
