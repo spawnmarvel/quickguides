@@ -24,6 +24,11 @@ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 ![MySQL](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/mysql_support.jpg)
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
+Install the MySQl database service
+* apt update
+* apt install install the MySQl database service
+https://techexpert.tips/zabbix/zabbix-https-installation/
+
 Install DB, MariaDB in this case
 
 ```bash
