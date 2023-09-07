@@ -26,6 +26,13 @@ https://www.zabbix.com/documentation/current/en/manual/installation/requirements
 
 Setting up SSL for Zabbix frontend Apache
 
+Other than setting your web frontend URL within Zabbix to https://, ignore zabbix for this task.
+
+Treat it as enabling SSL for apache.
+
+https://www.reddit.com/r/zabbix/comments/10atj1t/how_to_configure_ssl_on_ubuntu/?rdt=62317
+
+
 Enabling Zabbix on root directory of URL
 
 Enabling HTTP Strict Transport Security (HSTS) on the web server
