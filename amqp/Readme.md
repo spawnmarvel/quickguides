@@ -812,6 +812,20 @@ https://www.erlang.org/doc/man/ssl.html
 * {ssl_upgrade_error, ...} This is a generic error that could have many causes. Make sure you are using the recommended version of Erlang.
 * {ssl_upgrade_error,"record overflow"} = server response is record oveflow, client is amqp, set amqps
 
+
+### Blocked connections at destination or source
+* If you have a blocked connection under connetions, check the node over view for limits and paramters
+* Low on RAM or disk
+* The shovel will still be in a running state, but not data will be sent.
+* Check if you need to adjust
+* disk_free_limit.absolute or vm_memory_high_watermark.absolute, it will block all incoming of a limit is reached
+
+It is sometimes desirable for clients to receive a notification when their connection gets blocked due to the broker running low on resources (memory or disk).
+
+https://www.rabbitmq.com/connection-blocked.html
+
+
+
 ### Getting Help and Providing Feedback
 * If you have questions about the contents of this guide or any other topic related to RabbitMQ, don't hesitate to ask them on the RabbitMQ mailing list.
 * https://groups.google.com/g/rabbitmq-users
