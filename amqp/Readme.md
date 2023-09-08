@@ -816,7 +816,7 @@ https://www.erlang.org/doc/man/ssl.html
 ### Blocked connections at destination or source
 * If you have a blocked connection under connetions, check the node over view for limits and paramters
 * Low on RAM or disk
-* The shovel will still be in a running state, but not data will be sent.
+* The shovel will still be in a running state, but not data will be sent (connection to target host was refused (ECONNREFUSED))
 * Check if you need to adjust
 * disk_free_limit.absolute or vm_memory_high_watermark.absolute, it will block all incoming of a limit is reached
 
