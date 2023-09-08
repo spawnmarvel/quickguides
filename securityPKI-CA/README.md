@@ -325,3 +325,7 @@ Cannot read the file due to base encoding?
 
 
 ![Export ](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/export.jpg)
+
+## subjectAltName and CAcert CSR parser
+
+http://wiki.cacert.org/FAQ/subjectAltName
