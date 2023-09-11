@@ -19,6 +19,15 @@ https://university.hivemq.com/mqtt-311-professional
 * On top of TCP
 * Minimal overhead
 * Simple
+* Binary and built for machine
+* Efficent, smallets packt = 2 bytes
+* Bi-directional
+* Data-agnostic, protocol does not care about format, xml, json, txt
+* Scaleable
+* Built on push communication
+* Suitable for constranied devices (low resources)
+
+
 
 
 
