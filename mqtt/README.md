@@ -26,6 +26,9 @@ https://university.hivemq.com/mqtt-311-professional
 * Scaleable
 * Built on push communication
 * Suitable for constranied devices (low resources)
+* IP->TCP->MQTT
+* Persistent, heartbeat, TLS
+* 
 
 
 

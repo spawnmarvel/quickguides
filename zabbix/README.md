@@ -30,6 +30,13 @@ Other than setting your web frontend URL within Zabbix to https://, ignore zabbi
 
 Treat it as enabling SSL for apache.
 
+```bash
+# 1
+# 2
+# 3
+# 4
+```
+
 https://www.reddit.com/r/zabbix/comments/10atj1t/how_to_configure_ssl_on_ubuntu/?rdt=62317
 
 
