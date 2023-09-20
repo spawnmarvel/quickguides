@@ -20,8 +20,8 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Create subnets for servers
 * Create subnets for gateway
 * Create virtual network gateway
-* Create Self-sign root & client certificate
-* Configure Point-to-Site Connection
+* Create self-sign root & client certificate
+* Configure point-to-site Connection
 * Testing VPN connection
 
 https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
