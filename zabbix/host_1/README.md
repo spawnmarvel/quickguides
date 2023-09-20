@@ -37,6 +37,8 @@ sudo systemctl enable --now mariadb
 
 sudo mysql_secure_installation
 
+n, y, , y,y,y,y
+
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
 
