@@ -93,7 +93,11 @@ Solution
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
 
+![View all ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/viewall.jpg)
+
 ![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site.jpg)
+
+
 
 
 
