@@ -115,8 +115,14 @@ Now we have finished with configuration. As next step, we need to test the conne
 * Log in to Azure portal from machine and go to VPN gateway config page.
 * In that page, click on Point-to-site configuration
 * After that, click on Download VPN client
+* Run VpnClientSetupAmd64.exe
 
 ![Install vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/installvpn.jpg)
+
+After that, we can see new connection under VPN page.
+
+![Home ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/home.jpg)
+
 
 Links
 
