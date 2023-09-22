@@ -192,6 +192,13 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-s
 
 ## Monitor ingress and more
 
+Gateway SKUs by tunnel, connection, and throughput (just the one we are testing)
+
+![Throughput ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/throughput.jpg)
+
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+
 * Install RabbitMQ on a VM
 * Connect to shovel from on-premises to Azure VM running RabbitMQ
 * Send a bunch of data
