@@ -102,10 +102,21 @@ Copy only the following section as one continuous line Example:
 
 Success on save
 
+Note: The client certificate is already installed.
+
+
 ![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site2.jpg)
 
 
 * Testing VPN connection
+
+Now we have finished with configuration. As next step, we need to test the connection. To do that log in to the same pc where we generate certificates. If you going to use different PC, first you need to import root cert & client certificate we exported.
+
+* Log in to Azure portal from machine and go to VPN gateway config page.
+* In that page, click on Point-to-site configuration
+* After that, click on Download VPN client
+
+![Install vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/installvpn.jpg)
 
 Links
 
