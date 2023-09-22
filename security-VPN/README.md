@@ -24,6 +24,13 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Configure point-to-site Connection
 * Testing VPN connection
 
+* Create resource group
+* Create vnet
+* Create subnets for servers
+* Create subnets for gateway
+
+
+
 https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
 
 
