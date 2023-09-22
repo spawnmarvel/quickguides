@@ -49,6 +49,11 @@ Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Si
 
 * Create virtual network gateways
 
+![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/gateway.jpg)
+
+* Create self-sign root & client certificate
+* Configure point-to-site Connection
+* Testing VPN connection
 
 Links
 
