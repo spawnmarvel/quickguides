@@ -169,7 +169,9 @@ Then run ip config to verify ip allocation from VPN address pool.¨
 
 ![Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/ip.jpg)
 
-In VPN gateway page also, I can see one connection is made.
+In VPN gateway page also, I can see one connection is made, vpnuks01 | Point-to-site configuration
+
+![p2s ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/p2s.jpg)
 
 Links
 
