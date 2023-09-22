@@ -127,6 +127,13 @@ Click on connect to VPN. Then it will open up this new window. Click on Connect 
 
 ![Azure vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/azurevpn.jpg)
 
+Ok....
+
+![Error] ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/error.jpg)
+
+
+https://learn.microsoft.com/en-us/answers/questions/1311355/a-certificate-could-not-be-found-that-can-be-used
+
 
 Links
 
