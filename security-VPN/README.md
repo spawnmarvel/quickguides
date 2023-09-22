@@ -105,7 +105,7 @@ Success on save
 Note: The client certificate is already installed.
 
 
-![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site2.jpg)
+![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site3.jpg)
 
 
 * Testing VPN connection
