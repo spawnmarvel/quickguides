@@ -10,6 +10,7 @@ Azure supports three types of Point-to-site VPN options:
 
 * Auto-reconnect is a function of the client being used. Windows supports auto-reconnect by configuring the Always On VPN client feature.
 
+![Vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vpn.jpg)
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 
