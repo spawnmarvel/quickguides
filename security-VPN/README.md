@@ -155,6 +155,7 @@ Success, now import root in Azure.
 * Import root a machine pc
 * Export from user cert as pfx with key
 * Import client client_exported.pfx and use password (same as on export)
+* Remove VPN client and xxCm, download again, install
 
 ![Certs ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/certs.jpg)
 
