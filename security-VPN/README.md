@@ -176,7 +176,7 @@ In VPN gateway page also, I can see one connection is made, vpnuks01 | Point-to-
 We can also monitor data, connections and more
 
 
-![Monitor ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/monitor.jpg)
+![Monitor ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/monitor2.jpg)
 
 
 Links
