@@ -83,6 +83,10 @@ In new window type IP address range for VPN address pool. In this demo I will be
 In same window there is place to define root certificate. Under root certificate name type the cert name and under public certificate data, paste the root certificate data ( you can open cert in notepad to get data).
 * Then click on Save to complete the process.
 
+Azure portal error: Failed to save the VPN gateway, and the data is invalid
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
+
 ![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site.jpg)
 
 
