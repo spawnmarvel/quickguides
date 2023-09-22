@@ -205,3 +205,17 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateway
 * NSG private ip, flow logs and traffic
 * [...], best practice
 
+
+## Highly Available cross-premises
+
+To provide better availability for your cross premises connections, there are a few options available:
+
+* Multiple on-premises VPN devices
+* Active-active Azure VPN gateway
+* Combination of both
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-highlyavailable
+
+Connection resiliency
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
