@@ -150,6 +150,8 @@ New-SelfSignedCertificate -Type Custom -DnsName REBELCLIENT -KeySpec Signature -
 ```
 ![Rebel ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/rebel.jpg)
 
+Success, now import root in Azure.
+
 https://learn.microsoft.com/en-us/answers/questions/1311355/a-certificate-could-not-be-found-that-can-be-used
 
 
