@@ -188,3 +188,11 @@ https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-
 Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
+
+## Monitor ingress and more
+
+* Install RabbitMQ on a VM
+* Connect to shovel from on-premises to Azure VM running RabbitMQ
+* Send a bunch of data
+
