@@ -54,7 +54,29 @@ In here vpnuks01 is the is the gateway name, vnet-uks-central is the vnet, and a
 ![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/gateway.jpg)
 
 * Create self-sign root & client certificate
+
+Now we need the root certificate from the computer and a client certificate, it can be found in "Manage Computer Certificates" or you must make one with powershell / openssl.
+
+Now we have certs in place. But we need to export these so we can upload it to Azure.
+
+To export root certificate,
+* Right click on root cert inside certificate mmc.
+* Click on Export
+* In private key page, select not to export private key
+* Select Base-64 encoded X.509 as export file format.
+* Complete the wizard and save the cert in pc.
+
+NOTE: Note – Only root cert will use in Azure VPN, client certificate can install on other computers which need P2S connections.
+
 * Configure point-to-site Connection
+
+Next step of this configuration is to configure the point-to-site connection. In here we will define client ip address pool as well. It is for VPN clients.
+* Click on newly created VPN gateway connection.
+* Then in new window click on Point-to-site configuration
+
+![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point.jpg)
+
+
 * Testing VPN connection
 
 Links
