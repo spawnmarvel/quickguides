@@ -173,6 +173,12 @@ In VPN gateway page also, I can see one connection is made, vpnuks01 | Point-to-
 
 ![p2s ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/p2s.jpg)
 
+We can also monitor data, connections and more
+
+
+![Monitor ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/monitor.jpg)
+
+
 Links
 
 Step-By-Step: Creating an Azure Point-to-Site VPN
