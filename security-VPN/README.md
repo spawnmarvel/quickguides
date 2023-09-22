@@ -26,10 +26,10 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 
 * Create resource group
 * Create vnet
-* Create subnets for servers
-* Create subnets for gateway
+* Create subnets for servers, subnets 02 DMZ, 03 Vm's
+* Create subnets for gateway, gateway subnet, edit to 1
 
-
+![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vnet.jpg)
 
 https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
 
