@@ -90,10 +90,17 @@ Cause
 
 Solution
 * Make sure that the data in the certificate does not contain invalid characters, such as line breaks (carriage returns). The entire value should be one long line. The following text is a sample of the certificate:
+* You may need to modify your view in the text editor to 'Show Symbol/Show all characters' to see the carriage returns and line feeds.
+
+![View all ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/viewall.jpg)
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
 
-![View all ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/viewall.jpg)
+Copy only the following section as one continuous line Example:
+
+![Marked line ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/markedline.jpg)
+
+
 
 ![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site.jpg)
 
