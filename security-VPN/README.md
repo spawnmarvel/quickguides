@@ -202,4 +202,6 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateway
 * Install RabbitMQ on a VM
 * Connect to shovel from on-premises to Azure VM running RabbitMQ
 * Send a bunch of data
+* NSG, flow logs and traffic
+* [...], best practice
 
