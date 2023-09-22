@@ -156,6 +156,8 @@ Success, now import root in Azure.
 * Export from user cert as pfx with key
 * Import client client_exported.pfx and use password (same as on export)
 
+![Certs ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/certs.jpg)
+
 https://learn.microsoft.com/en-us/answers/questions/1311355/a-certificate-could-not-be-found-that-can-be-used
 
 And success
