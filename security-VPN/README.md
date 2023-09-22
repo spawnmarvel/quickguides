@@ -74,7 +74,16 @@ Next step of this configuration is to configure the point-to-site connection. In
 * Click on newly created VPN gateway connection.
 * Then in new window click on Point-to-site configuration
 
-![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point.jpg)
+![Point ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point.jpg)
+
+In new window type IP address range for VPN address pool. In this demo I will be using 172.16.25.0/24. 
+* For tunnel type use both SSTP & IKEv2. Linux and other mobile clients by default use IKEv2 to connect. Windows also use IKEv2 first and then try SSTP. 
+* For authentication type use Azure Certificates.
+
+In same window there is place to define root certificate. Under root certificate name type the cert name and under public certificate data, paste the root certificate data ( you can open cert in notepad to get data).
+
+![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site.jpg)
+
 
 
 * Testing VPN connection
