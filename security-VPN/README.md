@@ -125,7 +125,7 @@ After that, we can see new connection under VPN page.
 
 Click on connect to VPN. Then it will open up this new window. Click on Connect in there.
 
-![Azure vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/azurepn.jpg)
+![Azure vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/azurevpn.jpg)
 
 
 Links
