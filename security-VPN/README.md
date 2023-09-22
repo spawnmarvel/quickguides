@@ -85,6 +85,12 @@ In same window there is place to define root certificate. Under root certificate
 
 Azure portal error: Failed to save the VPN gateway, and the data is invalid
 
+Cause
+* This problem might occur if the root certificate public key that you uploaded contains an invalid character, such as a space.
+
+Solution
+* Make sure that the data in the certificate does not contain invalid characters, such as line breaks (carriage returns). The entire value should be one long line. The following text is a sample of the certificate:
+
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
 
 ![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site.jpg)
