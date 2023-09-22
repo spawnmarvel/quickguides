@@ -165,6 +165,11 @@ And success
 
 ![Connected ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/connected.jpg)
 
+Then run ip config to verify ip allocation from VPN address pool.¨
+
+![Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/ip.jpg)
+
+In VPN gateway page also, I can see one connection is made.
 
 Links
 
