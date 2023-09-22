@@ -24,6 +24,8 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Configure point-to-site Connection
 * Testing VPN connection
 
+## Steps
+
 * Create resource group
 * Create vnet
 * Create subnets for servers, subnets 02 DMZ, 03 Vm's
