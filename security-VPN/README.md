@@ -31,8 +31,20 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Create subnets for servers, subnets 02 DMZ, 03 Vm's
 * Create subnets for gateway, gateway subnet, edit to 1
 
+https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq
+
+We recommend that you use the following address ranges, which are enumerated in RFC 1918. The IETF has set aside these ranges for private, non-routable address spaces.
+
+* 10.0.0.0 to 10.255.255.255 (10/8 prefix)
+* 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
+* 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
+
 ![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vnet.jpg)
 
 https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
 
+Now we have all the things needed to create new VN gateway. 
 
+Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs in a similar way that you set up and connect to a remote branch office. The connectivity is secure and uses the industry-standard protocols Internet Protocol Security (IPsec) and Internet Key Exchange (IKE).
+
+* Create virtual network gateways
