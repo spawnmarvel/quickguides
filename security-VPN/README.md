@@ -131,9 +131,24 @@ Ok....
 
 ![Error ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/error.jpg)
 
-Try next certificate
+Try next certificate, then one generated on machine.
 * Upload root to Azure
+* C:\Users\YourUserName\AppData\Roaming\Microsoft\Network\Connections\Cm set xCm
+* VPN, select it and remove
 
+NA
+
+Try REBEL
+
+```ps1
+$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+-Subject "CN=REBELROOT" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+
+New-SelfSignedCertificate -Type Custom -DnsName REBELCLIENT -KeySpec Signature -Subject "CN=REBELCLIENT" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+```
+![Rebel ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/rebel.jpg)
 
 https://learn.microsoft.com/en-us/answers/questions/1311355/a-certificate-could-not-be-found-that-can-be-used
 
