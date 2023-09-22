@@ -42,10 +42,20 @@ https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq
 
 ![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vnet.jpg)
 
-https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
 
 Now we have all the things needed to create new VN gateway. 
 
 Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs in a similar way that you set up and connect to a remote branch office. The connectivity is secure and uses the industry-standard protocols Internet Protocol Security (IPsec) and Internet Key Exchange (IKE).
 
 * Create virtual network gateways
+
+
+Links
+
+Step-By-Step: Creating an Azure Point-to-Site VPN
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
+
+Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
