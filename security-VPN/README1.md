@@ -116,8 +116,10 @@ Next step of this configuration is to configure the point-to-site connection. In
 
 ```log
 Open the certificate with a text editor, such as Notepad. 
-When copying the certificate data, make sure that you copy the text as one continuous line without carriage returns or line feeds. 
-You may need to modify your view in the text editor to 'Show Symbol/Show all characters' to see the carriage returns and line feeds. 
+When copying the certificate data, make sure that you copy the text as one continuous
+line without carriage returns or line feeds. 
+You may need to modify your view in the text editor 
+to 'Show Symbol/Show all characters' to see the carriage returns and line feeds. 
 Copy only the following section as one continuous line:
 
 ```
