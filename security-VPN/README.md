@@ -167,7 +167,7 @@ Now we have finished with configuration. As next step, we need to test the conne
 * After that, click on Download VPN client
 
 Note: If you have some issues, view troubleshoot links above and:
-* Delete or rename: C:\Users\jekl\AppData\Roaming\Microsoft\Network\Connections\Cm folder
+* Delete or rename: C:\Users\USERNAME\AppData\Roaming\Microsoft\Network\Connections\Cm folder
 * Go to VPN and remove the VPN
 * Trying again with correct certificate and download the VPN client again
 
@@ -259,7 +259,7 @@ And it is avaliable with shell
 
 And in the portal
 
-![Portal ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/portal.jpg)
+![Portal ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/portal.png)
 
 
 
