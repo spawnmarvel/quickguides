@@ -246,7 +246,9 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vpn-faq
 
 
 Converting from mbits to MBs.
+
 Num mbits / 8.388
+
 100 / 8.38 = 11.93
 
 ![Basic ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/basic.jpg)
