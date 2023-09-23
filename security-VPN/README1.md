@@ -128,6 +128,7 @@ Next step of this configuration is to configure the point-to-site connection. In
 * Linux and other mobile clients by default use IKEv2 to connect. 
 * Windows also use IKEv2 first and then try SSTP. 
 * For authentication type use Azure Certificates.
+* Upload the root certificate on format mentioned below.
 
 
 ```log
@@ -147,6 +148,10 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-s
 Troubleshooting: Azure point-to-site connection problems
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
+
+The Point-to-site configuration
+
+
 
 
 
