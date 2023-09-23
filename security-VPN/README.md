@@ -142,11 +142,11 @@ Try REBEL
 
 ```ps1
 $cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
--Subject "CN=REBELROOT" -KeyExportPolicy Exportable `
+-Subject "CN=Ca-vpn-root" -KeyExportPolicy Exportable `
 -HashAlgorithm sha256 -KeyLength 2048 `
 -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
 
-New-SelfSignedCertificate -Type Custom -DnsName REBELCLIENT -KeySpec Signature -Subject "CN=REBELCLIENT" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+New-SelfSignedCertificate -Type Custom -DnsName REBELCLIENT -KeySpec Signature -Subject "CN=Vpn-client" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
 ```
 ![Rebel ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/rebel.jpg)
 
@@ -190,32 +190,4 @@ Configure server settings for P2S VPN Gateway connections - certificate authenti
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
 
 
-## Monitor ingress and more with AMQP Shovel on-premises to Azure
 
-Gateway SKUs by tunnel, connection, and throughput (just the one we are testing)
-
-![Throughput ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/throughput.jpg)
-
-
-https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
-
-* Install RabbitMQ on a VM
-* Connect to shovel from on-premises to Azure VM running RabbitMQ
-* Send a bunch of data
-* NSG private ip, flow logs and traffic
-* [...], best practice
-
-
-## Highly Available cross-premises
-
-To provide better availability for your cross premises connections, there are a few options available:
-
-* Multiple on-premises VPN devices
-* Active-active Azure VPN gateway
-* Combination of both
-
-https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-highlyavailable
-
-Connection resiliency
-
-https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
