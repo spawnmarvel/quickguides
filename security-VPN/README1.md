@@ -173,9 +173,14 @@ Note: If you have some issues, view troubleshoot links above and:
 
 ![Connected ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/connected.jpg)
 
-Then run ip config to verify ip allocation from VPN address pool.
+Then run ip config to verify ip allocation from VPN address pool, used for gateway.
 
 ![Ipconfig ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/ipconfig.jpg)
+
+This can also be verified on the Virtual network gateway.
+
+![Azure Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/azureip.jpg)
+
 
 
 
