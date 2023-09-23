@@ -253,6 +253,10 @@ Num mbits / 8.388
 
 ![Basic ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/basic.jpg)
 
+And it is avaliable
+
+![Bash ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/bash_show.jpg)
+
 
 
 
