@@ -30,8 +30,8 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 
 * Create resource group
 * Create vnet
-* Create subnets for servers, subnetvm 02
-* Create subnets for gateway, gateway subnet, subnetgatew 01
+* Create subnets for servers, Vms03, Dmzs02
+* Create subnets for gateway, GatewaySubnet
 
 We recommend that you use the following address ranges, which are enumerated in RFC 1918. The IETF has set aside these ranges for private, non-routable address spaces.
 
