@@ -55,6 +55,38 @@ Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and
 
 ![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
+## Create self-sign root & client certificate
+
+If your organization using internal CA, you always can use it to generate relevant certificates for this exercise. 
+
+If you do not have internal CA, we still can use self-sign certs to do the job (make one with powershell / openssl).
+
+Root and client certificate
+
+```ps1
+$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+-Subject "CN=Your-name-root-01" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+
+New-SelfSignedCertificate -Type Custom -DnsName Your-name-client -KeySpec Signature -Subject "CN=Your-name-client" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+```
+
+To export root certificate,
+
+* Right click on root cert inside certificate mmc.
+* Click on Export
+* In private key page, select not to export private key
+* Base-64 encode X.509 (.cer)
+
+To export client certificate,
+
+* Use same method to export as root cert
+* But this time under private key page, select option to export private key.
+* Define password for the pfx file and complete the wizard.
+
+![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
+
 ## Links
 
 Step-By-Step: Creating an Azure Point-to-Site VPN
