@@ -102,6 +102,8 @@ To export client certificate,
 * But this time under private key page, select option to export private key.
 * Define password for the pfx file and complete the wizard.
 
+The certificates are stored or insert by ps1 to location Manage user certificates (copy them also to Manage computer certifcates, personal and trusted root)
+
 ![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
 
 
@@ -113,6 +115,14 @@ Next step of this configuration is to configure the point-to-site connection. In
 
 * Click on newly created VPN gateway connection.
 * Then in new window click on Point-to-site configuration
+
+* In new window type IP address range for VPN address pool. 
+* In this demo I will be using 172.16.25.0/24. 
+* For tunnel type use both SSTP & IKEv2. 
+* Linux and other mobile clients by default use IKEv2 to connect. 
+* Windows also use IKEv2 first and then try SSTP. 
+* For authentication type use Azure Certificates.
+
 
 ```log
 Open the certificate with a text editor, such as Notepad. 
