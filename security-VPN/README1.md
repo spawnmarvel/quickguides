@@ -51,7 +51,9 @@ The connectivity is secure and uses the industry-standard protocols Internet Pro
 
 ## 2 Create virtual network gateways
 
-vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
+Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
+
+![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
 ## Links
 
