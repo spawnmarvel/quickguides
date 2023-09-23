@@ -102,9 +102,13 @@ To export client certificate,
 * But this time under private key page, select option to export private key.
 * Define password for the pfx file and complete the wizard.
 
-The certificates are stored or insert by ps1 to location Manage user certificates (copy them also to Manage computer certifcates, personal and trusted root)
+The certificates are stored or inserted by ps1 to location Manage user certificates (copy them also to Manage computer certifcates, personal and trusted root)
 
 ![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
+
+Install pfx
+
+![Pfx ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/pfx.jpg)
 
 
 Note – Only root cert will use in Azure VPN, client certificate can install on other computers which need P2S connections.
