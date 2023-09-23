@@ -16,6 +16,14 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 
 ## Step-By-Step: Creating an Azure Point-to-Site VPN
 
+Step-By-Step: Creating an Azure Point-to-Site VPN
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
+
+Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
 * Create resource group
 * Create vnet
 * Create subnets for servers
@@ -87,12 +95,4 @@ To export client certificate,
 
 ![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
 
-## Links
 
-Step-By-Step: Creating an Azure Point-to-Site VPN
-
-https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
-
-Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
-
-https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
