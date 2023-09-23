@@ -24,3 +24,29 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Create self-sign root & client certificate
 * Configure point-to-site Connection
 * Testing VPN connection
+
+
+## 1 Create resources
+
+* Create resource group
+* Create vnet
+* Create subnets for servers, subnets 02 DMZ, 03 Vm's
+* Create subnets for gateway, gateway subnet, edit to 1
+
+We recommend that you use the following address ranges, which are enumerated in RFC 1918. The IETF has set aside these ranges for private, non-routable address spaces.
+
+* 10.0.0.0 to 10.255.255.255 (10/8 prefix)
+* 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
+* 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
+
+https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq
+
+## Links
+
+Step-By-Step: Creating an Azure Point-to-Site VPN
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
+
+Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
