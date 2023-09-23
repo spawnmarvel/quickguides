@@ -61,7 +61,7 @@ The connectivity is secure and uses the industry-standard protocols Internet Pro
 
 Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
 
-This can take sometime, 0-20 min.
+This can take sometime, A VPN gateway can take 45 minutes or more to create.
 
 ![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
@@ -208,6 +208,41 @@ Test rdp with VPN and without VPN.
 Now go to monitoring->metrics on the vpn and view bandwith (added type and cost also)
 
 ![Metric2 ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/metric2.jpg)
+
+
+## Basic tier
+
+No. The Basic SKU is not available in the portal. You can create a Basic SKU VPN gateway using Azure CLI or PowerShell.
+
+```bash
+# Request a public IP address
+az network public-ip create \
+  -n VNet1GWIP \
+  -g TestRG1 \
+  --allocation-method Dynamic
+
+# Create the VPN gateway
+
+az network vnet-gateway create \
+  -n VNet1GW \
+  -l eastus \
+  --public-ip-address VNet1GWIP \
+  -g TestRG1 \
+  --vnet VNet1 \
+  --gateway-type Vpn \
+  --sku Basic \
+  --vpn-type RouteBased \
+  --no-wait
+
+# View the VPN gateway
+
+az network vnet-gateway show \
+  -n VNet1GW \
+  -g TestRG1
+
+```
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vpn-faq
 
 
 
