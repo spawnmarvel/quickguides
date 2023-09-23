@@ -41,13 +41,17 @@ We recommend that you use the following address ranges, which are enumerated in 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq
 
-![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/vnet.jpg)
+![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/vnet2.jpg)
 
 Now we have all the things needed to create new VN gateway. 
 
 Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs in a similar way that you set up and connect to a remote branch office. 
 
 The connectivity is secure and uses the industry-standard protocols Internet Protocol Security (IPsec) and Internet Key Exchange (IKE).
+
+## 2 Create virtual network gateways
+
+vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
 
 ## Links
 
