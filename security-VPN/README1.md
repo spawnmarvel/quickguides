@@ -63,9 +63,18 @@ Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and
 
 ![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
-## Create self-sign root & client certificate
+## 3 Create self-sign root & client certificate
 
 If your organization using internal CA, you always can use it to generate relevant certificates for this exercise. 
+
+* Each client computer that you connect to a VNet with a point-to-site connection must have a client certificate installed. 
+* You generate it from the root certificate and install it on each client computer. 
+* If you don't install a valid client certificate, authentication will fail when the client tries to connect to the VNet.
+* You can either generate a unique certificate for each client, or you can use the same certificate for multiple clients. 
+* The advantage to generating unique client certificates is the ability to revoke a single certificate.
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
 
 If you do not have internal CA, we still can use self-sign certs to do the job (make one with powershell / openssl).
 
@@ -94,5 +103,33 @@ To export client certificate,
 * Define password for the pfx file and complete the wizard.
 
 ![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
+
+
+Note – Only root cert will use in Azure VPN, client certificate can install on other computers which need P2S connections.
+
+## 4 Configure point-to-site Connection
+
+Next step of this configuration is to configure the point-to-site connection. In here we will define client ip address pool as well. It is for VPN clients.
+
+* Click on newly created VPN gateway connection.
+* Then in new window click on Point-to-site configuration
+
+```log
+Open the certificate with a text editor, such as Notepad. 
+When copying the certificate data, make sure that you copy the text as one continuous line without carriage returns or line feeds. 
+You may need to modify your view in the text editor to 'Show Symbol/Show all characters' to see the carriage returns and line feeds. 
+Copy only the following section as one continuous line:
+
+```
+![Copy ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/copy.jpg)
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
+
+Troubleshooting: Azure point-to-site connection problems
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
+
+
 
 
