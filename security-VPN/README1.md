@@ -61,6 +61,8 @@ The connectivity is secure and uses the industry-standard protocols Internet Pro
 
 Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
 
+This can take sometime, 0-20 min.
+
 ![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
 ## 3 Create self-sign root & client certificate
