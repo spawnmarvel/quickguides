@@ -10,11 +10,19 @@ Azure supports three types of Point-to-site VPN options:
 
 * Auto-reconnect is a function of the client being used. Windows supports auto-reconnect by configuring the Always On VPN client feature.
 
-![Vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vpn.jpg)
+![Vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/vpn.jpg)
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 
 ## Step-By-Step: Creating an Azure Point-to-Site VPN
+
+Step-By-Step: Creating an Azure Point-to-Site VPN
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
+
+Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
 
 * Create resource group
 * Create vnet
@@ -25,12 +33,13 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/work-remotely-support
 * Configure point-to-site Connection
 * Testing VPN connection
 
-## Steps
+
+## 1 Create resources
 
 * Create resource group
 * Create vnet
-* Create subnets for servers, subnets 02 DMZ, 03 Vm's
-* Create subnets for gateway, gateway subnet, edit to 1
+* Create subnets for servers, Vms03, Dmzs02
+* Create subnets for gateway, GatewaySubnet
 
 We recommend that you use the following address ranges, which are enumerated in RFC 1918. The IETF has set aside these ranges for private, non-routable address spaces.
 
@@ -40,154 +49,146 @@ We recommend that you use the following address ranges, which are enumerated in 
 
 https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq
 
-![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/vnet.jpg)
-
+![Vnet ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/vnet2.jpg)
 
 Now we have all the things needed to create new VN gateway. 
 
-Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs in a similar way that you set up and connect to a remote branch office. The connectivity is secure and uses the industry-standard protocols Internet Protocol Security (IPsec) and Internet Key Exchange (IKE).
+Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs in a similar way that you set up and connect to a remote branch office. 
 
-* Create virtual network gateways
+The connectivity is secure and uses the industry-standard protocols Internet Protocol Security (IPsec) and Internet Key Exchange (IKE).
 
-In here vpnuks01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
+## 2 Create virtual network gateways
 
-![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/gateway.jpg)
+Vpn-uks-2-onprem01 is the is the gateway name, vnet-uks-central is the vnet, and a puplic ip is created.
 
-* Create self-sign root & client certificate
+This can take sometime, 0-20 min.
 
-Now we need the root certificate from the computer and a client certificate, it can be found in "Manage Computer Certificates" or you must make one with powershell / openssl.
+![Gateway ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/gateway.jpg)
 
-Now we have certs in place. But we need to export these so we can upload it to Azure.
+## 3 Create self-sign root & client certificate
+
+If your organization using internal CA, you always can use it to generate relevant certificates for this exercise. 
+
+* Each client computer that you connect to a VNet with a point-to-site connection must have a client certificate installed. 
+* You generate it from the root certificate and install it on each client computer. 
+* If you don't install a valid client certificate, authentication will fail when the client tries to connect to the VNet.
+* You can either generate a unique certificate for each client, or you can use the same certificate for multiple clients. 
+* The advantage to generating unique client certificates is the ability to revoke a single certificate.
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
+
+If you do not have internal CA, we still can use self-sign certs to do the job (make one with powershell / openssl).
+
+Root and client certificate
+
+```ps1
+$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+-Subject "CN=Your-name-root-01" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+
+New-SelfSignedCertificate -Type Custom -DnsName Your-name-client -KeySpec Signature -Subject "CN=Your-name-client" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+```
 
 To export root certificate,
+
 * Right click on root cert inside certificate mmc.
 * Click on Export
 * In private key page, select not to export private key
-* Select Base-64 encoded X.509 as export file format.
-* Complete the wizard and save the cert in pc.
+* Base-64 encode X.509 (.cer)
 
-NOTE: Note – Only root cert will use in Azure VPN, client certificate can install on other computers which need P2S connections.
+To export client certificate,
 
-* Configure point-to-site Connection
+* Use same method to export as root cert
+* But this time under private key page, select option to export private key.
+* Define password for the pfx file and complete the wizard.
+
+The certificates are stored or inserted by ps1 to location Manage user certificates (copy them also to Manage computer certifcates, personal and trusted root)
+
+![Certificates ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/certificates.jpg)
+
+Install pfx
+
+![Pfx ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/pfx.jpg)
+
+
+Note – Only root cert will use in Azure VPN, client certificate can install on other computers which need P2S connections.
+
+## 4 Configure point-to-site Connection
 
 Next step of this configuration is to configure the point-to-site connection. In here we will define client ip address pool as well. It is for VPN clients.
+
 * Click on newly created VPN gateway connection.
 * Then in new window click on Point-to-site configuration
 
-![Point ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point.jpg)
-
-In new window type IP address range for VPN address pool. In this demo I will be using 172.16.25.0/24. 
-* For tunnel type use both SSTP & IKEv2. Linux and other mobile clients by default use IKEv2 to connect. Windows also use IKEv2 first and then try SSTP. 
+* In new window type IP address range for VPN address pool. 
+* In this demo I will be using 172.16.25.0/24. 
+* For tunnel type use both SSTP & IKEv2. 
+* Linux and other mobile clients by default use IKEv2 to connect. 
+* Windows also use IKEv2 first and then try SSTP. 
 * For authentication type use Azure Certificates.
 
 In same window there is place to define root certificate. Under root certificate name type the cert name and under public certificate data, paste the root certificate data ( you can open cert in notepad to get data).
-* Then click on Save to complete the process.
 
-Azure portal error: Failed to save the VPN gateway, and the data is invalid
+Note : when you paste certificate data, do not copy -----BEGIN CERTIFICATE----- & -----END CERTIFICATE----- text.
 
-Cause
-* This problem might occur if the root certificate public key that you uploaded contains an invalid character, such as a space.
+* Upload the root certificate on format mentioned below.
 
-Solution
-* Make sure that the data in the certificate does not contain invalid characters, such as line breaks (carriage returns). The entire value should be one long line. The following text is a sample of the certificate:
-* You may need to modify your view in the text editor to 'Show Symbol/Show all characters' to see the carriage returns and line feeds.
 
-![View all ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/viewall.jpg)
+```log
+Open the certificate with a text editor, such as Notepad. 
+When copying the certificate data, make sure that you copy the text as one continuous
+line without carriage returns or line feeds. 
+You may need to modify your view in the text editor 
+to 'Show Symbol/Show all characters' to see the carriage returns and line feeds. 
+Copy only the following section as one continuous line:
+
+```
+![Copy ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/copy.jpg)
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
+
+
+Troubleshooting: Azure point-to-site connection problems
 
 https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems
 
-Copy only the following section as one continuous line Example:
+The Point-to-site configuration
 
-![Marked line ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/markedline.jpg)
+![Point2site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/point2site.jpg)
 
-Success on save
-
-Note: The client certificate is already installed.
-
-
-![Point-2-site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/point2site3.jpg)
-
-
-* Testing VPN connection
+## 5 Testing VPN connection
 
 Now we have finished with configuration. As next step, we need to test the connection. To do that log in to the same pc where we generate certificates. If you going to use different PC, first you need to import root cert & client certificate we exported.
 
 * Log in to Azure portal from machine and go to VPN gateway config page.
 * In that page, click on Point-to-site configuration
 * After that, click on Download VPN client
-* Run VpnClientSetupAmd64.exe
 
-![Install vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/installvpn.jpg)
+Note: If you have some issues, view troubleshoot links above and:
+* Delete or rename: C:\Users\jekl\AppData\Roaming\Microsoft\Network\Connections\Cm folder
+* Go to VPN and remove the VPN
+* Trying again with correct certificate and download the VPN client again
 
-After that, we can see new connection under VPN page.
+![Connected ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/connected.jpg)
 
-![Home ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/home.jpg)
+Then run ip config to verify ip allocation from VPN address pool, used for gateway.
 
-Click on connect to VPN. Then it will open up this new window. Click on Connect in there.
+![Ipconfig ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/ipconfig.jpg)
 
-![Azure vpn ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/azurevpn.jpg)
+This can also be verified on the Virtual network gateway.
 
-Ok....
+![Azure Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/azureip.jpg)
 
-![Error ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/error.jpg)
+Now go to monitoring->metrics on the vpn and view PS2 Connection count.
 
-Try next certificate, then one generated on machine.
-* Upload root to Azure
-* C:\Users\YourUserName\AppData\Roaming\Microsoft\Network\Connections\Cm set xCm
-* VPN, select it and remove
-
-NA
-
-Try REBEL
-
-```ps1
-$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
--Subject "CN=Ca-vpn-root" -KeyExportPolicy Exportable `
--HashAlgorithm sha256 -KeyLength 2048 `
--CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
-
-New-SelfSignedCertificate -Type Custom -DnsName REBELCLIENT -KeySpec Signature -Subject "CN=Vpn-client" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
-```
-![Rebel ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/rebel.jpg)
-
-Success, now import root in Azure.
-* Export from user cert, no key, Base-64 encoded X.509(.cer)
-* Import root a machine pc
-* Export from user cert as pfx with key
-* Import client client_exported.pfx and use password (same as on export)
-* Remove VPN client and xxCm, download again, install
-
-![Certs ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/certs.jpg)
-
-https://learn.microsoft.com/en-us/answers/questions/1311355/a-certificate-could-not-be-found-that-can-be-used
-
-And success
-
-![Connected ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/connected.jpg)
-
-Then run ip config to verify ip allocation from VPN address pool.¨
-
-![Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/ip.jpg)
-
-In VPN gateway page also, I can see one connection is made, vpnuks01 | Point-to-site configuration
-
-![p2s ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/p2s.jpg)
-
-We can also monitor data, connections and more
+![Metrics ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/metrics.jpg)
 
 
-![Monitor ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images/monitor2.jpg)
 
 
-Links
 
-Step-By-Step: Creating an Azure Point-to-Site VPN
-
-https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264
-
-Configure server settings for P2S VPN Gateway connections - certificate authentication - Azure portal
-
-https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal
 
 
 
