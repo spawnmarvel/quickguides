@@ -151,6 +151,8 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn
 
 The Point-to-site configuration
 
+![Point2site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/point2site.jpg)
+
 
 
 
