@@ -205,6 +205,13 @@ Test rdp with VPN and without VPN.
 
 ![Success ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/success.jpg)
 
+Now go to monitoring->metrics on the vpn and view bandwith (added type and cost also)
+
+![Metric2 ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/metric2.jpg)
+
+
+
+
 
 
 
