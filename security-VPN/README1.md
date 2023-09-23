@@ -128,6 +128,11 @@ Next step of this configuration is to configure the point-to-site connection. In
 * Linux and other mobile clients by default use IKEv2 to connect. 
 * Windows also use IKEv2 first and then try SSTP. 
 * For authentication type use Azure Certificates.
+
+In same window there is place to define root certificate. Under root certificate name type the cert name and under public certificate data, paste the root certificate data ( you can open cert in notepad to get data).
+
+Note : when you paste certificate data, do not copy -----BEGIN CERTIFICATE----- & -----END CERTIFICATE----- text.
+
 * Upload the root certificate on format mentioned below.
 
 
@@ -152,6 +157,21 @@ https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot-vpn
 The Point-to-site configuration
 
 ![Point2site ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/point2site.jpg)
+
+## 5 Testing VPN connection
+
+Now we have finished with configuration. As next step, we need to test the connection. To do that log in to the same pc where we generate certificates. If you going to use different PC, first you need to import root cert & client certificate we exported.
+
+* Log in to Azure portal from machine and go to VPN gateway config page.
+* In that page, click on Point-to-site configuration
+* After that, click on Download VPN client
+
+Note: If you have some issues, view troubleshoot links above and:
+* Delete or rename: C:\Users\jekl\AppData\Roaming\Microsoft\Network\Connections\Cm folder
+* Go to VPN and remove the VPN
+* Trying again with correct certificate and download the VPN client again
+
+![Connected ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/connected.jpg)
 
 
 
