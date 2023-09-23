@@ -185,6 +185,34 @@ Now go to monitoring->metrics on the vpn and view PS2 Connection count.
 
 ![Metrics ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/metrics.jpg)
 
+## Connect to a VM in Azure
+
+* Create a windows vm
+* Public inbound ports, None (It will just be given a private IP from the subnet)
+* Vnet, vnet-uks-central
+* Subnet, Vms03 (192.168.3.0/24)
+* Nic, Basic
+
+NSG is default
+* in, 65000 AllowVnetInBound
+* in, 65001 AllowAzureLoadBalancerInBound
+* in, 65500 DenyAllInBound
+* out, 65000 AllowVnetOutBound
+* out, 65001 AllowInternetOutBound
+* out, 65500 DenyAllOutBound
+
+Test rdp with VPN and without VPN.
+
+![Success ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/success.jpg)
+
+
+
+
+
+
+
+
+
 
 
 
