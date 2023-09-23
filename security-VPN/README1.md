@@ -181,6 +181,11 @@ This can also be verified on the Virtual network gateway.
 
 ![Azure Ip ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/azureip.jpg)
 
+Now go to monitoring->metrics on the vpn and view PS2 Connection count.
+
+![Metrics ](https://github.com/spawnmarvel/quickguides/blob/main/security-VPN/images2/metrics.jpg)
+
+
 
 
 
