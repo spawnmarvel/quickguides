@@ -135,7 +135,7 @@ class ApiWorker():
             with open("templatepostproduct.html", "r") as fi:
                 lines = fi.read().replace('\n', '')
                 data_template = lines
-            names = ["Oracle", "800xA", "Azure", "AWS", "FileZilla", "AI Engine", "Wordpress"]
+            names = ["700Xa", "750Xa"]
             for n in names:
                 print(n)
                 data = {
@@ -216,6 +216,6 @@ if __name__ == "__main__":
     # worker.make_page_and_send()
     #  worker.get_all_categories()
     # worker.read_template_make_post_html_customer()
-    # worker.read_template_make_post_html_product()
-    worker.read_template_make_post_html_project()
+    worker.read_template_make_post_html_product()
+    # worker.read_template_make_post_html_project()
    
