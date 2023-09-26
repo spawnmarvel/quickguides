@@ -6,6 +6,7 @@ import logging
 
 import requests
 import json
+import random
 
 logging.basicConfig(filename="log.log", filemode="a", format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
                     datefmt="%Y-%m-%d %H:%M:%S", level=logging.DEBUG)
@@ -154,6 +155,39 @@ class ApiWorker():
         except Exception as ex:
             logging.error(ex)
 
+    def read_template_make_post_html_project(self):
+        data_template = None
+        category = self.get_all_categories()
+        products_id = category["Projects"]
+        li = []
+        for x in range(0,200):
+            ran = random.randint(9000,9999)
+            li.append(str(ran))
+        try:
+            with open("templatepostproject.html", "r") as fi:
+                lines = fi.read().replace('\n', '')
+                data_template = lines
+            
+            for l in li:
+                # print(l)
+                name = l + " Project"
+                data = {
+                "title": name,
+                "content": data_template,
+                "tags": 1,  # the id of the tag
+                "categories": products_id,
+                "status": "publish"  # Use "draft" to save the post as a draft
+                 }
+                # Send the HTTP request
+                response = requests.post(self.urlpost, auth=(self.user, self.cred), json=data)
+                # Check the response
+                if response.status_code == 201:
+                    logging.info("Post created successfully")
+                else:
+                    logging.error("Failed to create post: " + response.text)
+        except Exception as ex:
+            logging.error(ex)
+
     def make_page_and_send(self):
         data = {
             "title": "Houston Inc",
@@ -182,5 +216,6 @@ if __name__ == "__main__":
     # worker.make_page_and_send()
     #  worker.get_all_categories()
     # worker.read_template_make_post_html_customer()
-    worker.read_template_make_post_html_product()
+    # worker.read_template_make_post_html_product()
+    worker.read_template_make_post_html_project()
    
