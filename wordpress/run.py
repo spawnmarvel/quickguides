@@ -102,10 +102,10 @@ class ApiWorker():
         category = self.get_all_categories()
         customer_id = category["Customers"]
         try:
-            with open("templatepost.html", "r") as fi:
+            with open("templatepostcustomer.html", "r") as fi:
                 lines = fi.read().replace('\n', '')
                 data_template = lines
-            names = ["EEinoco", "EEwing Oil", "EEDoxxon", "EEDRINCO", "EEDunder Mifflin", "EEDupiter Mining Corporation", "EEDagruato", "EEDrmacham", "EEDnitech" , "EEDontoso", "EEDetacortex", "EEDekall"]
+            names = ["qinoco", "qwing Oil"] # "RDoxxon", "RDRINCO", "Runder Mifflin", "Rupiter Mining Corporation", "Ragruato", "Rrmacham", "Rnitech" , "Rontoso", "Retacortex", "Rekall"]
             for n in names:
                 print(n)
                 data = {
@@ -113,6 +113,35 @@ class ApiWorker():
                 "content": data_template,
                 "tags": 1,  # the id of the tag
                 "categories": customer_id,
+                "status": "publish"  # Use "draft" to save the post as a draft
+                 }
+                # Send the HTTP request
+                response = requests.post(self.urlpost, auth=(self.user, self.cred), json=data)
+                # Check the response
+                if response.status_code == 201:
+                    logging.info("Post created successfully")
+                else:
+                    logging.error("Failed to create post: " + response.text)
+        except Exception as ex:
+            logging.error(ex)
+
+
+    def read_template_make_post_html_product(self):
+        data_template = None
+        category = self.get_all_categories()
+        products_id = category["Products"]
+        try:
+            with open("templatepostproduct.html", "r") as fi:
+                lines = fi.read().replace('\n', '')
+                data_template = lines
+            names = ["Oracle", "800xA", "Azure", "AWS", "FileZilla", "AI Engine", "Wordpress"]
+            for n in names:
+                print(n)
+                data = {
+                "title": n,
+                "content": data_template,
+                "tags": 1,  # the id of the tag
+                "categories": products_id,
                 "status": "publish"  # Use "draft" to save the post as a draft
                  }
                 # Send the HTTP request
@@ -152,5 +181,6 @@ if __name__ == "__main__":
     # worker.make_post_and_send_html()
     # worker.make_page_and_send()
     #  worker.get_all_categories()
-    worker.read_template_make_post_html_customer()
+    # worker.read_template_make_post_html_customer()
+    worker.read_template_make_post_html_product()
    
