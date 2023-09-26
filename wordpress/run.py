@@ -105,8 +105,7 @@ class ApiWorker():
             with open("templatepost.html", "r") as fi:
                 lines = fi.read().replace('\n', '')
                 data_template = lines
-            names = ["Dinoco", "Ewing Oil", "Roxxon", "ORINCO", "Dunder Mifflin", "Jupiter Mining Corporation", "Tagruato", "Armacham", "Initech" , "Contoso", "Metacortex", "Rekall"
-                     , "Panda Modem","Uplink Corporation", "Umbrella Corporation", "Aeromass" ]
+            names = ["EEinoco", "EEwing Oil", "EEDoxxon", "EEDRINCO", "EEDunder Mifflin", "EEDupiter Mining Corporation", "EEDagruato", "EEDrmacham", "EEDnitech" , "EEDontoso", "EEDetacortex", "EEDekall"]
             for n in names:
                 print(n)
                 data = {
