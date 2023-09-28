@@ -111,15 +111,22 @@ class ApiWorker():
             # get max posts 100
             # response = requests.get("https://mellowthinking.com/wp-json/wp/v2/posts?per_page=100", auth=(self.user, self.cred))
 
-             # get max posts 100 in category customer
-            response = requests.get("https://mellowthinking.com/wp-json/wp/v2/posts?per_page=100&categories=21", auth=(self.user, self.cred))
+            # get max posts 100 in category customer
+            # response = requests.get("https://mellowthinking.com/wp-json/wp/v2/posts?per_page=100&categories=21", auth=(self.user, self.cred))
+
+            # get posts 10 in category customer
+            response = requests.get("https://mellowthinking.com/wp-json/wp/v2/posts?per_page=10&categories=21", auth=(self.user, self.cred))
             tmp_li = response.json()
             print(tmp_li)
             # we get default 10
             print(str(len(tmp_li)))
             dict_of_post = {}
             for t in tmp_li:
-                print(t["id"], t["title"]["rendered"])
+                post_id = t["id"]
+                post_title = t["title"]["rendered"]
+                print(post_id, post_title)
+                if post_title.lower() == "aa wind 53246":
+                    print("we already have:", post_title)
 
         except Exception as ex:
             logging.error(ex)
