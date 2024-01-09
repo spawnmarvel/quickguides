@@ -174,6 +174,7 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 
 * When did it start
 * How long does it take, what was it before?
+* How is general performance?
 * Did the DB performance decline also?
 * Did the DB grow?
 * What is the DB size, should be flat after some time.
@@ -182,6 +183,9 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 * Use less min, avg, max more last and nodata.
 * For history use smallets days possible, not default 90, 45, 14 or even 7.
 * Better to keep trend for longer times, example, history 14 days, trends 1 year.
+* Check administration and queue?
+* Check general and houskeeping settings?
+
 
 ## Zabbix Agent: Active vs. Passive
 
