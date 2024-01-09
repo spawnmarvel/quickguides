@@ -177,15 +177,17 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 * How is general performance?
 * Did the DB performance decline also?
 * Did the DB grow?
-* What is the DB size, should be flat after some time.
+* What is the DB size, should be flat after some time?
+* Check administration and queue?
+* Check general and houskeeping settings?
+* Has there been changes lately to templates or hosts?
+* Num of users?
 * What is num of Startpoller?
 * Can you reduce new values per second`?
 * Use less min, avg, max more last and nodata.
 * For history use smallets days possible, not default 90, 45, 14 or even 7.
 * Better to keep trend for longer times, example, history 14 days, trends 1 year.
-* Check administration and queue?
-* Check general and houskeeping settings?
-
+* Can we live with this?
 
 ## Zabbix Agent: Active vs. Passive
 
