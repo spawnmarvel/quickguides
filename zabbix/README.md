@@ -184,6 +184,7 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 * Has there been changes lately to templates or hosts?
 * Num of users?
 * What is num of Startpoller?
+* Has new values per seconds increased?
 * Can you reduce new values per second`?
 * Use less min, avg, max more last and nodata.
 * For history use smallets days possible, not default 90, 45, 14 or even 7.
