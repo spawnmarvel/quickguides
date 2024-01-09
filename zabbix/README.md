@@ -172,7 +172,7 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 
 ## Tuning, what to check.
 
-* When did it start
+* When did it start (around new year or short time after? Wait a week)
 * How long does it take, what was it before?
 * How is general performance?
 * Did the DB performance decline also?
