@@ -104,6 +104,8 @@ The general strong advice is to keep history for the smallest possible number of
 
 Instead of keeping a long history, you can keep longer data of trends. For example, you could keep history for 14 days and trends for 5 years
 
+Whereas history keeps each collected value, trends keep averaged information on hourly basis and therefore are less resource-hungry.
+
 https://www.zabbix.com/documentation/4.0/en/manual/config/items/history_and_trends
 
 ## Tuning
@@ -167,6 +169,19 @@ SO
 "If it's up to 10 minutes, you can probably ignore that and tune the trigger to be less sensitive. If it's more, it is a general Zabbix DB performance issue."
 
 https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-than-75-busy
+
+## Tuning, what to check.
+
+* When did it start
+* How long does it take, what was it before?
+* Did the DB performance decline also?
+* Did the DB grow?
+* What is the DB size, should be flat after some time.
+* What is num of Startpoller?
+* Can you reduce new values per second`?
+* Use less min, avg, max more last and nodata.
+* For history use smallets days possible, not default 90, 45, 14 or even 7.
+* Better to keep trend for longer times, example, history 14 days, trends 1 year.
 
 ## Zabbix Agent: Active vs. Passive
 

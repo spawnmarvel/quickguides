@@ -302,5 +302,5 @@ if __name__ == "__main__":
     # worker.read_template_make_post_html_project()
     # worker.make_post_html_customer_header()
     # worker.get_all_posts()
-    worker.create_category()
+    # worker.create_category()
    
