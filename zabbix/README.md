@@ -178,6 +178,7 @@ https://stackoverflow.com/questions/40040509/zabbix-housekeeper-processes-more-t
 * Did the DB performance decline also?
 * Did the DB grow?
 * What is the DB size, should be flat after some time?
+* tail -f zabbix and zabbix agent logs
 * Check administration and queue?
 * Check general and houskeeping settings?
 * Has there been changes lately to templates or hosts?
