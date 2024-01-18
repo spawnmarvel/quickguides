@@ -83,6 +83,9 @@ sudo systemctl restart apache2
 
 https://www.reddit.com/r/zabbix/comments/10atj1t/how_to_configure_ssl_on_ubuntu/?rdt=62317
 
+
+Extra linux vm public or private cert, since public CAs cannot issue certificates for .local domains. 
+
 ```bash
 sudo apt update
 
@@ -121,6 +124,38 @@ openssl x509 -signkey mysite.local.key -in mysite.local.csr -req -days 365 -out 
 https://github.com/spawnmarvel/azure-automation/blob/main/azure-extra-linux-vm/ubuntu_csr.sh
 
 
+Follow e-lo public cert and domain
+
+```bash
+
+openssl req -new -newkey rsa:2048 -nodes -keyout yourdomain.key -out yourdomain.csr
+
+# Replace yourdomain with the domain name you’re securing. For example, if your domain name is coolexample.com, you would type coolexample.key and coolexample.csr.
+
+# Open the CSR in a text editor and copy all of the text.
+
+# Paste the full CSR into the SSL enrollment form in your account.
+
+# backup files first
+
+<VirtualHost 192.168.0.1:443>
+    DocumentRoot /var/www/html2
+    ServerName www.yourdomain.com
+        SSLEngine on
+        SSLCertificateFile /path/to/your_domain_name.crt
+        SSLCertificateKeyFile /path/to/your_private.key
+        SSLCertificateChainFile /path/to/DigiCertCA.crt
+    </VirtualHost>
+
+# Now test it
+
+apachectl configtest
+
+apachectl stop
+apachectl start
+```
+
+https://follow-e-lo.com/2023/11/02/apache-generate-csr-certificate-signing-request/
 
 Enabling Zabbix on root directory of URL
 
