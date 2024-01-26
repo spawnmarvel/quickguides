@@ -163,6 +163,84 @@ Enabling HTTP Strict Transport Security (HSTS) on the web server
 
 https://www.zabbix.com/documentation/current/en/manual/installation/requirements/best_practices
 
+
+Example with local domain on apache for wordpress:
+
+mydomain.private.local
+
+```bash
+
+/etc/apache2/sites-enabled
+
+wordpress.conf
+
+sudo cp wordpress.conf wordpress.conf_bck
+
+ls
+
+wordpress.conf  wordpress.conf_bck
+
+cd
+
+sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /etc/ssl/private/mydomain.private.local.key -out /etc/ssl/certs/mydomain.private.local.crt
+
+# [...]
+Common Name (e.g. server FQDN or YOUR name) []:mydomain.private.local
+
+pwd
+/etc/ssl/certs
+openssl x509 -in mydomain.private.local.crt -text -noout
+
+sudo nano  wordpress.conf
+```
+edit conf
+
+```yml
+<VirtualHost *:80>
+ServerAdmin admin@example.com
+DocumentRoot /var/www/html/wordpress
+ServerName 172.xx.x.xx
+ServerAlias mydomain.private.local
+Redirect / https://172.xx.x.xx
+
+  <Directory var/www/html/wordpress>
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+   </Directory>
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:443>
+   ServerName 172.xx.x.xx
+   DocumentRoot /var/www/html/wordpress
+
+   <Directory /var/www/html/wordpress/>
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+   </Directory>
+
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/mydomain.private.local.crt
+   SSLCertificateKeyFile /etc/ssl/private/mydomain.private.local.key
+</VirtualHost>
+```
+check it
+
+```bash
+sudo apache2ctl configtest
+
+sudo service apache2 restart
+
+sudo service apache2 status
+
+# visit
+https://mydomain.private.local
+
+```
+
 ## Encryption
 
 "PSK is an efficient way, and to be honest you get the same effect, [...] (like, cert management is a hustle compared to psk)."
