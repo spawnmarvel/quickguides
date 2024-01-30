@@ -459,6 +459,86 @@ zabbix_agent-6.0.21-windows-amd64-openssl.zip
 ![Sender ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/sender.jpg)
 
 
+## Troubleshoot
+
+### Houskeeping is above in tuning
+
+### Connection to Zabbix server "localhost" timed out: Possible reasons:
+
+- 1. Incorrect server IP/DNS in the "zabbix.conf.php".
+- 2. Firewall is blocking TCP connection.
+- Connection timed out
+
+Steps
+
+```bash
+sudo service zabbix-server status
+sudo service zabbix-agent status
+sudo service apache2 status
+
+# conf
+cd /etc/zabbix/
+ls
+zabbix_server.conf zabbix_agentd.conf apache.conf
+
+ls -l
+# not files are changed
+-rw-r--r-- 1 root     root  1789 Jun 22  2022 apache.conf
+drwxr-xr-x 2 www-data root  4096 Aug  7 18:12 web
+-rw-r--r-- 1 root     root 18155 May 26  2023 zabbix_agentd.conf
+-rw------- 1 root     root 17012 Jan 12  2023 zabbix_agentd.conf.old
+drwxr-xr-x 2 root     root  4096 Sep 21  2022 zabbix_agentd.d
+-rw------- 1 root     root 25989 Jun  7  2023 zabbix_server.conf
+-rw------- 1 root     root 25931 Sep 23  2022 zabbix_server.conf.default
+
+Cat zabbix_agentd.conf
+# This is commnented out by default, we usually dont change it, it just works default.
+# # ListenPort=10051
+# logs
+cd /var/logs/zabbix
+
+sudo tail -f zabbix_server.log
+
+# 1357:20240130:133326.485 failed to accept an incoming connection: connection rejected, getpername() faild: [107] Transport endpoint is not connected.
+
+
+# check telnet local host
+telnet localhost 10050
+
+telnet localhost 10051
+# there should be an issue here
+
+# tnc from remote host to zabbix 10051 works
+
+sudo netstat -tulpn | grep ':10051'
+
+sudo netstat -tulpn | grep ':10050'
+
+# Restart vm did not fix it.
+
+# Fix
+
+sudo tail -f zabbix_server.log
+
+# 1357:20240130:133326.485 failed to accept an incoming connection: connection rejected, getpername() faild: [107] Transport endpoint is not connected.
+
+# it is the order of restart that fixes it.
+
+sudo service zabbix-server stop
+sudo service zabbix-agent stop
+
+sudo service zabbix-server start
+sudo service zabbix-agent start
+
+# or
+
+systemctl stop zabbix-server.service
+systemctl stop zabbix-agent.service
+
+systemctl start zabbix-server.service
+systemctl start zabbix-agent.service
+```
+
 ## Script agent
 
 ## Python Agent
