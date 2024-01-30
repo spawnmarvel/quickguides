@@ -261,16 +261,16 @@ cat default-ssl.conf
                 ServerName vm01.domain.com
                 ServerAlias alias.domain.com
                 DocumentRoot /var/www/html
-				SSLEngine on
-                SSLCertificateFile      /etc/ssl/certs/alias.pem
-                SSLCertificateKeyFile /etc/ssl/private/alias.pem.key
-				 <FilesMatch "\.(cgi|shtml|phtml|php)$">
-                                SSLOptions +StdEnvVars
-                </FilesMatch>
-                <Directory /usr/lib/cgi-bin>
-                                SSLOptions +StdEnvVars
-                </Directory>
-				Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+			SSLEngine on
+        SSLCertificateFile      /etc/ssl/certs/alias.pem
+        SSLCertificateKeyFile /etc/ssl/private/alias.pem.key
+				<FilesMatch "\.(cgi|shtml|phtml|php)$">
+            SSLOptions +StdEnvVars
+        </FilesMatch>
+          <Directory /usr/lib/cgi-bin>
+              SSLOptions +StdEnvVars
+          </Directory>
+	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
  </VirtualHost>
 </IfModule>
 ```
