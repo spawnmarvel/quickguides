@@ -240,6 +240,40 @@ sudo service apache2 status
 https://mydomain.private.local
 
 ```
+default-ssl.conf
+
+```bash
+# apache2
+
+cd /etc/apache2/sites-enabled
+
+000-default.conf  default-ssl.conf
+
+cat default-ssl.conf
+
+<IfModule mod_ssl.c>
+  <VirtualHost *:8443>
+   Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+   </VirtualHost>
+    <VirtualHost _default_:443>
+      ServerAdmin webmaster@localhost
+                # FQDN
+                ServerName vm01.domain.com
+                ServerAlias alias.domain.com
+                DocumentRoot /var/www/html
+				SSLEngine on
+                SSLCertificateFile      /etc/ssl/certs/alias.pem
+                SSLCertificateKeyFile /etc/ssl/private/alias.pem.key
+				 <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                                SSLOptions +StdEnvVars
+                </FilesMatch>
+                <Directory /usr/lib/cgi-bin>
+                                SSLOptions +StdEnvVars
+                </Directory>
+				Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+ </VirtualHost>
+</IfModule>
+```
 
 ## Encryption
 
