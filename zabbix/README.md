@@ -568,11 +568,11 @@ sudo service zabbix-agent start
 
 # or
 
-systemctl stop zabbix-server.service
-systemctl stop zabbix-agent.service
+sudo systemctl stop zabbix-server.service
+sudo systemctl stop zabbix-agent.service
 
-systemctl start zabbix-server.service
-systemctl start zabbix-agent.service
+sudo systemctl start zabbix-server.service
+sudo systemctl start zabbix-agent.service
 
 
 ```
