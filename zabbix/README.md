@@ -574,7 +574,11 @@ sudo systemctl stop zabbix-agent.service
 sudo systemctl start zabbix-server.service
 sudo systemctl start zabbix-agent.service
 
-# give it 2-3 min?
+# give it 2-3 min? Better.
+
+# Check vm metrics Inbound Flows Max
+# The server is flooded, high peaks when it fails.
+# DDOS attack....
 
 ```
 What is this?
