@@ -580,6 +580,14 @@ sudo systemctl start zabbix-agent.service
 # The server is flooded, high peaks when it fails.
 # DDOS attack....
 
+# many?
+sudo ss -tulpn | grep :10051
+# few?
+sudo ss -tulpn | grep :10050
+
+
+netstat
+
 ```
 What is this?
 
@@ -608,6 +616,94 @@ After I found this post, I have checked with my team, and they have confirmed th
 When they fixed the DNS, the utilization of the trapper data collector fell to 0%, and Zabbix resumed to work properly.
 
 https://github.com/phothet/zabbix/issues/11
+
+
+Zabbix server is not running: the iformation may not be current
+
+
+```bash
+netstat -tulpn
+
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:12563         0.0.0.0:*               LISTEN      -
+tcp      951      0 0.0.0.0:10051           0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:10050           0.0.0.0:*               LISTEN      -
+
+
+cd /etc/zabbix
+sudo cat zabbix_server.conf
+
+
+############ ADVANCED PARAMETERS ################
+
+### Option: StartPollers
+#       Number of pre-forked instances of pollers.
+#
+# Mandatory: no
+# Range: 0-1000
+# Default:
+# StartPollers=20
+StartPollers=30
+
+cd /etc/zabbix
+sudo cp zabbix_server.conf zabbix_server.conf_bck
+
+sudo nano zabbiz_server.conf
+
+sudo systemctl stop zabbix-server.service
+sudo systemctl start zabbix-server.service
+
+### Option: CacheSize
+#       Size of configuration cache, in bytes.
+#       Shared memory size for storing host, item and trigger data.
+#
+# Mandatory: no
+# Range: 128K-64G
+# Default:
+CacheSize=64M
+
+### Option: Timeout
+#       Specifies how long we wait for agent, SNMP device or external check (in seconds).
+#
+# Mandatory: no
+# Range: 1-30
+# Default:
+# Timeout=3
+# Timeout=15
+Timeout=20
+
+
+# turns out...... it was a host that was sending much data.
+# Host logs
+2024/01/11 00:49:27.024498 Detected performance counter with negative denominator the second time after retry, giving up...
+2024/01/11 00:49:28.024616 Detected performance counter with negative denominator the second time after retry, giving up...
+2024/01/11 00:49:29.025564 Detected performance counter with negative denominator the second time after retry, giving up...
+2024/01/11 00:49:30.026362 Detected performance counter with negative denominator the second time after retry, giving up...
+
+# Checked:
+# Traffic distrubution IP21:Checked Top 20 IPs with respect to network traffic flow count
+# NSG hits: Checked: view analytics for NSG and NSG rules across your envornment units in Flows
+# Total traffic
+
+# Stopped Zabbix agent2 on the host.
+```
+
+Here is the content of the zabbix.conf.php :
+
+$ZBX_SERVER = 'localhost';
+
+should reference the IP address of the Zabbix Server (not localhost).
+
+
+https://www.zabbix.com/forum/zabbix-help/406713-the-connection-to-zabbix-server-localhost-failed
+
+
+https://www.zabbix.com/forum/zabbix-troubleshooting-and-problems/52313-zabbix-server-is-not-running-the-iformation-may-not-be-current
+
+
+This may be a conntrack issue or some other OS configuration issue, or it may be a symptom of a lossy network. It's going to be hard for the Linkerd team to be more helpful, though.
+
+https://github.com/linkerd/linkerd2/issues/7266
 
 ## Script agent
 
