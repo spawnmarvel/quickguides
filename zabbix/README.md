@@ -574,6 +574,7 @@ sudo systemctl stop zabbix-agent.service
 sudo systemctl start zabbix-server.service
 sudo systemctl start zabbix-agent.service
 
+# give it 2-3 min?
 
 ```
 What is this?
