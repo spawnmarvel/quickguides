@@ -571,7 +571,36 @@ systemctl stop zabbix-agent.service
 
 systemctl start zabbix-server.service
 systemctl start zabbix-agent.service
+
+
 ```
+What is this?
+
+failed to accept an incoming connection: connection rejected, getpeername() failed: [107] Transport endpoint is not connected
+
+* We upgraded to the latest available version of zabbix and added an additional proxy server to better manage the load, this seems to have solved the issue for now.
+* I had the same problem, turned out the firewall was doing content filtering on port 10051 and 10050.
+https://www.zabbix.com/forum/zabbix-troubleshooting-and-problems/426772-zabbix-proxy-getpeername-failed-107-transport-endpoint-is-not-connected
+
+
+* This error indicates that there was a problem accepting the inbound connection (i.e from an external client). 
+https://github.com/linkerd/linkerd2/issues/7266
+
+
+
+I had the same problem.
+
+The Zabbix just stopped to work, and I found the same log on the Zabbix.
+
+"failed to accept an incoming connection: connection rejected, getpeername() failed: [107] Transport endpoint is not connected"
+
+The utilization of the trapper data collector was in 100% also.
+
+After I found this post, I have checked with my team, and they have confirmed that our DNS was down.
+
+When they fixed the DNS, the utilization of the trapper data collector fell to 0%, and Zabbix resumed to work properly.
+
+https://github.com/phothet/zabbix/issues/11
 
 ## Script agent
 
