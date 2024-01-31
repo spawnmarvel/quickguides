@@ -531,7 +531,7 @@ Cat zabbix_agentd.conf
 # This is commnented out by default, we usually dont change it, it just works default.
 # # ListenPort=10051
 # logs
-cd /var/logs/zabbix
+cd /var/log/zabbix
 
 sudo tail -f zabbix_server.log
 
@@ -679,13 +679,20 @@ Timeout=20
 2024/01/11 00:49:28.024616 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:29.025564 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:30.026362 Detected performance counter with negative denominator the second time after retry, giving up...
+2024/01/31 21:14:01.207744 [101] cannot receive data from [ZABBIX-IP21:10051]: Cannot read message: 'read tcp HOST-IP21:64868->ZABBIX-IP21:10051: i/o timeout'
+2024/01/31 21:14:01.207744 [101] active check configuration update from host [HOST-IP21-FQDN] started to fail
 
 # Checked:
 # Traffic distrubution IP21:Checked Top 20 IPs with respect to network traffic flow count
 # NSG hits: Checked: view analytics for NSG and NSG rules across your envornment units in Flows
 # Total traffic
 
-# Stopped Zabbix agent2 on the host.
+# Stopped Zabbix agent2 on the host..
+# Better for 1.5 hours
+# turns out...... it was a  one more host that was sending much data.
+# Stopped Zabbix agent2 on the other host..
+# better for 2 hours an counting.....se after the night.
+
 ```
 
 Here is the content of the zabbix.conf.php :
