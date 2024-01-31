@@ -499,6 +499,8 @@ zabbix_agent-6.0.21-windows-amd64-openssl.zip
 
 ### Connection to Zabbix server "localhost" timed out: Possible reasons:
 
+Os was upgraded?
+
 - 1. Incorrect server IP/DNS in the "zabbix.conf.php".
 - 2. Firewall is blocking TCP connection.
 - Connection timed out
