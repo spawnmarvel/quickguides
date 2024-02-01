@@ -692,6 +692,8 @@ Timeout=20
 # turns out...... it was a  one more host that was sending much data.
 # Stopped Zabbix agent2 on the other host..
 # better for 2 hours an counting.....se after the night.
+# It looks good in the morning (+ 7h) the last stopped agent was even started up again, and it seems stabil.
+# Maybe just agent hang and in need of a restart?
 
 ```
 
