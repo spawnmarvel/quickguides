@@ -674,13 +674,13 @@ Timeout=20
 
 
 # turns out...... it was a host that was sending much data.
-# Host logs
+# Host logs, is it a lot of logs, rolling every second? Or not?
 2024/01/11 00:49:27.024498 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:28.024616 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:29.025564 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:30.026362 Detected performance counter with negative denominator the second time after retry, giving up...
-2024/01/31 21:14:01.207744 [101] cannot receive data from [ZABBIX-IP21:10051]: Cannot read message: 'read tcp HOST-IP21:64868->ZABBIX-IP21:10051: i/o timeout'
-2024/01/31 21:14:01.207744 [101] active check configuration update from host [HOST-IP21-FQDN] started to fail
+2024/01/11 00:49:27.024499 [101] cannot receive data from [ZABBIX-IP21:10051]: Cannot read message: 'read tcp HOST-IP21:64868->ZABBIX-IP21:10051: i/o timeout'
+2024/01/11 00:49:27.024500 [101] active check configuration update from host [HOST-IP21-FQDN] started to fail
 
 # Checked:
 # Traffic distrubution IP21:Checked Top 20 IPs with respect to network traffic flow count
