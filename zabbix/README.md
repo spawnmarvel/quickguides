@@ -683,6 +683,7 @@ Timeout=20
 2024/01/11 00:49:27.024500 [101] active check configuration update from host [HOST-IP21-FQDN] started to fail
 
 # Checked:
+# Network Watcher | Traffic Analytics
 # Traffic distrubution IP21:Checked Top 20 IPs with respect to network traffic flow count
 # NSG hits: Checked: view analytics for NSG and NSG rules across your envornment units in Flows
 # Total traffic
