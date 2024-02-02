@@ -499,10 +499,8 @@ zabbix_agent-6.0.21-windows-amd64-openssl.zip
 
 ### Connection to Zabbix server "localhost" timed out: Possible reasons:
 
-Os was upgraded?
-
-- 1. Incorrect server IP/DNS in the "zabbix.conf.php".
-- 2. Firewall is blocking TCP connection.
+1. Incorrect server IP/DNS in the "zabbix.conf.php".
+2. Firewall is blocking TCP connection.
 - Connection timed out
 
 Steps
@@ -690,6 +688,7 @@ Timeout=20
 # better for 2 hours an counting.....se after the night.
 # It looks good in the morning (+ 7h) the last stopped agent was even started up again, and it seems stabil.
 # Maybe just agent hang and in need of a restart, looks ok after starting it again.
+# Os was upgraded some days before, kernel but that did not influence it.
 # The agent was crazy, maybe update the agent version.
 
 ```
