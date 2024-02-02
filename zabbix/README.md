@@ -610,7 +610,7 @@ When they fixed the DNS, the utilization of the trapper data collector fell to 0
 https://github.com/phothet/zabbix/issues/11
 
 
-Zabbix server is not running: the inormation may not be current
+Zabbix server is not running: the information may not be current
 
 
 ```bash
@@ -683,7 +683,7 @@ Timeout=20
 
 # Stopped Zabbix agent2 on the host..
 # Better for 1.5 hours
-# turns out...... it was a  one more host that was sending much data.
+# turns out...... it was also one more host that was sending much data.
 # Stopped Zabbix agent2 on the other host..
 # better for 2 hours an counting.....se after the night.
 # It looks good in the morning (+ 7h) the last stopped agent was even started up again, and it seems stabil.
