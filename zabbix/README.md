@@ -558,7 +558,7 @@ sudo tail -f zabbix_server.log
 
 # 1357:20240130:133326.485 failed to accept an incoming connection: connection rejected, getpername() faild: [107] Transport endpoint is not connected.
 
-# it is the order of restart that fixes it.
+# it is the order of restart that fixes it for some time, but look further down for the root cause.
 
 sudo service zabbix-server stop
 sudo service zabbix-agent stop
@@ -593,12 +593,6 @@ What is this?
 
 failed to accept an incoming connection: connection rejected, getpeername() failed: [107] Transport endpoint is not connected
 
-* We upgraded to the latest available version of zabbix and added an additional proxy server to better manage the load, this seems to have solved the issue for now.
-* I had the same problem, turned out the firewall was doing content filtering on port 10051 and 10050.
-https://www.zabbix.com/forum/zabbix-troubleshooting-and-problems/426772-zabbix-proxy-getpeername-failed-107-transport-endpoint-is-not-connected
-
-
-* This error indicates that there was a problem accepting the inbound connection (i.e from an external client). 
 https://github.com/linkerd/linkerd2/issues/7266
 
 
@@ -618,7 +612,7 @@ When they fixed the DNS, the utilization of the trapper data collector fell to 0
 https://github.com/phothet/zabbix/issues/11
 
 
-Zabbix server is not running: the iformation may not be current
+Zabbix server is not running: the inormation may not be current
 
 
 ```bash
@@ -674,13 +668,14 @@ Timeout=20
 
 
 # turns out...... it was a host that was sending much data.
-# Host logs, is it a lot of logs, rolling every second? Or not?
+
+# Host logs, is is pilling up and doing to much.
 2024/01/11 00:49:27.024498 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:28.024616 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:29.025564 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:30.026362 Detected performance counter with negative denominator the second time after retry, giving up...
 2024/01/11 00:49:27.024499 [101] cannot receive data from [ZABBIX-IP21:10051]: Cannot read message: 'read tcp HOST-IP21:64868->ZABBIX-IP21:10051: i/o timeout'
-2024/01/11 00:49:27.024500 [101] active check configuration update from host [HOST-IP21-FQDN] started to fail
+2024/01/11 00:49:27.024500 [101] active check configuration update from host [HOST-IP-FQDN] started to fail
 
 # Checked:
 # Network Watcher | Traffic Analytics
@@ -694,26 +689,11 @@ Timeout=20
 # Stopped Zabbix agent2 on the other host..
 # better for 2 hours an counting.....se after the night.
 # It looks good in the morning (+ 7h) the last stopped agent was even started up again, and it seems stabil.
-# Maybe just agent hang and in need of a restart?
+# Maybe just agent hang and in need of a restart, looks ok after starting it again.
+# The agent was crazy, maybe update the agent version.
 
 ```
 
-Here is the content of the zabbix.conf.php :
-
-$ZBX_SERVER = 'localhost';
-
-should reference the IP address of the Zabbix Server (not localhost).
-
-
-https://www.zabbix.com/forum/zabbix-help/406713-the-connection-to-zabbix-server-localhost-failed
-
-
-https://www.zabbix.com/forum/zabbix-troubleshooting-and-problems/52313-zabbix-server-is-not-running-the-iformation-may-not-be-current
-
-
-This may be a conntrack issue or some other OS configuration issue, or it may be a symptom of a lossy network. It's going to be hard for the Linkerd team to be more helpful, though.
-
-https://github.com/linkerd/linkerd2/issues/7266
 
 ## Script agent
 
