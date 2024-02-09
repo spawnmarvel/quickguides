@@ -693,6 +693,29 @@ Timeout=20
 
 ```
 
+###  Value cache effectiveness
+
+
+If any of the cache usages go above 80% then consider adjusting the Zabbix servers CacheSize setting.
+
+The CacheSize setting is in the zabbix_server.conf file. The default is 8M. You can change this from 128K to 64GB. 
+
+You will need to adjust this as you manage more hosts, especially if they have many triggers, calculated items, dependent items and other host related statistics and properties stored in the cache.
+
+
+Value cache effectiveness (dashboard Zabbix Server Health)
+
+
+The two important values shown in this graph are related to hits and misses. 
+
+A Hit is when a value was retrieved from memory. A miss happens when the data is not currently in memory, but needs to be retrieved from the database first. 
+
+Aim to have as few misses as possible by increasing the CacheSize setting if necessary, or by reducing the amount of items and triggers you are processing for a host.
+
+
+![Connection lost ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/connection_lost.jpg)
+
+https://sbcode.net/zabbix/zabbix-server-health/
 
 ## Script agent
 
