@@ -713,6 +713,8 @@ A Hit is when a value was retrieved from memory. A miss happens when the data is
 Aim to have as few misses as possible by increasing the CacheSize setting if necessary, or by reducing the amount of items and triggers you are processing for a host.
 
 
+But the miss after 45 min after agent log: cannot receive data from cannot read message 'read tcp i/o timeout'
+
 ![Connection lost ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/connection_lost.jpg)
 
 https://sbcode.net/zabbix/zabbix-server-health/
