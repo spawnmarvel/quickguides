@@ -719,6 +719,14 @@ But the miss after 45 min after agent log: cannot receive data from cannot read 
 
 https://sbcode.net/zabbix/zabbix-server-health/
 
+
+Fix?
+
+Workarround:
+"Downgrade" to the classic zabbix agent. Perfomance counters works right.
+
+https://support.zabbix.com/browse/ZBX-21661
+
 ## Script agent
 
 ## Python Agent
