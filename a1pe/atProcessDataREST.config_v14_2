@@ -41,6 +41,7 @@
            True  - Use Process Data Service if configured (generally used when IP21 is on a remote machine, WAN)           
         -->
 		<UseProcessDataService>False</UseProcessDataService>
+        <!--jekl, https://esupport.aspentech.com/S_Article?id=000098211 -->
 		<!-- Set to "True" if KPI Hierarchies should be shown in A1PE menus
            False - Do not show KPI Hierarchy
            True  - Show KPI Hierarchy
