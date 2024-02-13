@@ -251,7 +251,7 @@
    ************************************************************ -->
 	<MetaDataOptions>
 		<!-- aspenONE Core Scheduler User Credentials -->
-		<ServerCredentials>YWRtaW46YWRtaW4=</ServerCredentials>
+		<ServerCredentials>some-ramdom-string-jekl</ServerCredentials>
 		<!-- aspenONE Search Server -->
 		<SearchServer>localhost</SearchServer>
 		<!-- aspenONE Search Port -->
