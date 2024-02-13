@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchOptions>
+	<!-- ************************************************************
+   REST: REST options
+
+   Options for the Aspen Process Data REST service
+   ************************************************************ -->
+	<REST>
+		<!-- Default data source: If no data source passed to the service, then use this data source
+           Specify ADSA data source name here -->
+		<DefaultDataSource>localhost</DefaultDataSource>
+		<!-- Default APRM data source: default is local APRM or first in ADSA list if not specified here -->
+		<APRM_DefaultDataSource></APRM_DefaultDataSource>
+		<!-- Default Alert data source: default is same as IP21 unless list is specified (see AlertDataSources ), then same as default if in list OR first in list -->
+		<Alert_DefaultDataSource></Alert_DefaultDataSource>
+		<!-- Benefit Monitoring options
+           Data Source = If configured, this will show a single data source in the menu,
+                         otherwise all IP21 data sources that contain Benefit records will be shown
+           Update Rate = Default rate at which the display will update (in seconds, default is 1 minute)
+           Time Period = Default time period that will be displayed for the Benefit plot (in hours, default is 1 day)
+      -->
+		<BenefitMonitoring_DataSource></BenefitMonitoring_DataSource>
+		<BenefitMonitoring_UpdateRate>60</BenefitMonitoring_UpdateRate>
+		<BenefitMonitoring_TimePeriod>24</BenefitMonitoring_TimePeriod>
+		<!-- Directory for A1PE files 
+           If not defined, then root is where application data is stored.
+           Generally C:\ProgramData\AspenTech\A1PE
+        -->
+		<A1PE_Root_Directory>C:\ProgramData\AspenTech\A1PE</A1PE_Root_Directory>
+		<!-- Directory for Export files 
+           If not defined, then default to: C:\inetpub\wwwroot\AspenTech\ProcessExplorer\WebControls\Export\
+           Root may not be C, depending on where web site is installed
+        -->
+		<Export_Directory></Export_Directory>
+		<!-- Directory for Data Cleansing files 
+           If not defined, then default to: C:\ProgramData\AspenTech\ProcessData\DataCleansing\
+        -->
+		<DataCleansing_Directory></DataCleansing_Directory>
+		<!-- Specify if the REST service should use "Process Data Service" if configured
+           False - Do not use if configured
+           True  - Use Process Data Service if configured (generally used when IP21 is on a remote machine, WAN)           
+        -->
+		<UseProcessDataService>False</UseProcessDataService>
+		<!-- Set to "True" if KPI Hierarchies should be shown in A1PE menus
+           False - Do not show KPI Hierarchy
+           True  - Show KPI Hierarchy
+        -->
+		<ShowKPIHierarchy>False</ShowKPIHierarchy>
+		<!-- Set to "True" if Benefit Monitoring should be shown in A1PE menus
+           False - Do not show Benefit Monitoring
+           True  - Show Benefit Monitoring
+        -->
+		<ShowBenefitMonitoring>False</ShowBenefitMonitoring>
+		<!-- Is the web site configured for HTTPS?
+              False: Use http when issuing request
+              True:  Use https when issuing request
+              NotSet: Only valid for IP21Admin and IP21Manager. Will use A1PE setting from call
+           When the REST service makes calls to other web sites, these flags determine which URL to use (http or https)
+              REST:  When calling http(s)://localhost/ProcessData/
+              ProcessExplorer: When calling http(s)://localhost/ProcessExplorer/
+              Search: When calling http(s)://localhost/aspenOne/
+              SearchEngine: When calling http(s)://localhost:8080/AspenCoreSearch/
+        -->
+		<Is_REST_Secure>False</Is_REST_Secure>
+		<Is_ProcessExplorer_Secure>False</Is_ProcessExplorer_Secure>
+		<Is_Search_Secure>False</Is_Search_Secure>
+		<Is_SearchEngine_Secure>False</Is_SearchEngine_Secure>
+		<Is_IP21Admin_Secure>NotSet</Is_IP21Admin_Secure>
+		<Is_IP21Manager_Secure>NotSet</Is_IP21Manager_Secure>
+		<!-- Identify which task the REST service should connect to on the IP21 system.
+           This will be the same for ALL IP21 remote data sources accessed via the InfoPlus.21 API (not WCF)
+           1 = TSK_ORIG_SERVER (default)
+           2 = TSK_ADMIN_SERVER
+           3 = TSK_APEX_SERVER
+           4 = TSK_EXCEL_SERVER
+           5 = TSK_DEFAULT_SERVER
+        -->
+		<IP21_APIServerVersion>1</IP21_APIServerVersion>
+		<!-- Maximum number of comments to request on each call, this is the number
+           in the IP21 request.
+        -->
+		<Comments_MaxRequest>500</Comments_MaxRequest>
+		<!-- Maximum number of OEE events to process in a single request.
+           Value must be greater than or equal to 1000 (default minimum) and less than 100,000.
+           Events are requested in groups of 1000 up to the maximum number of events to process.
+           The number represents the number processed. The resulting events returned may be less based on
+           filter criteria or invalid events.
+        -->
+		<OEE_MaxEventsProcessed>5000</OEE_MaxEventsProcessed>
+		<!-- mMDM Workspace
+           Workspace used when retrieving KPI information via REST service
+           Default if not configured is: Default_Database
+        -->
+		<mMDM_Workspace>Default_Database</mMDM_Workspace>
+		<!-- Maximum number of data points to process when computing GvA results.
+           This is for Product or Rate tag values.
+        -->
+		<GvA_MaxValues>100000</GvA_MaxValues>
+		<!-- ECU: Data Cleansing
+           Maximum number of time ranges to return to a1pe for plotting
+              All the ranges will be used in the export, but too many time ranges will cause
+              performance issues in a client
+              Valid value for MaxTimeRanges: 10 to 1000
+           Percentage of time NOT covered by a time range for which the value is considered good
+              For example if 1 minute samples, then if a time range covers more than 18 seconds
+              of the sample, then it is considered bad
+           Maximum number of allowed samples is: 1,576,800
+              This represents 3 tags with a 1 minute sampling for 1 year
+              1 year of 1 minute samples = 60 * 24 * 365 = 525,600
+              3 tags for 1 year = 3 * 525,600 = 1,576,800
+        -->
+		<ECU_MaxTimeRanges>500</ECU_MaxTimeRanges>
+		<ECU_PercentageGood>70</ECU_PercentageGood>
+		<!-- Folder/File Access Check:
+           If the folders and files in the Public area have windows
+           security configured to limit access for some users,
+           then these flags can be set to True to perform an additional check
+           to avoid returning the configured folders and/or files to the menu.
+      -->
+		<ForceFolderAccessCheck>False</ForceFolderAccessCheck>
+		<ForceFileAccessCheck>False</ForceFileAccessCheck>
+		<!-- Maximum number of events to retrieve for AACM queries -->
+		<AACM_MaxEvents>10000</AACM_MaxEvents>
+		<!-- Default AACM data source: default is first AACM data source in ADSA list if not specified here -->
+		<AACM_DefaultDataSource></AACM_DefaultDataSource>
+	</REST>
+	<!-- ************************************************************
+   Cache: Trigger cache refresh
+
+   Options to define how often to trigger the refresh the cache.
+   ************************************************************ -->
+	<CacheRefresh>
+		<!-- Rate (days) at which the refresh should be called. Default is every day -->
+		<TriggerRate>1</TriggerRate>
+		<!-- Time (hours) after midnight to trigger refresh. Refresh is done, at most, once a day -->
+		<TriggerTime>2</TriggerTime>
+	</CacheRefresh>
+	<!-- ************************************************************
+   TagCount: Skip Folders during Search
+
+   Skip any tag that is contained in the following IP21 Folders.
+   This reduces the number of tags that can be searched.
+   ************************************************************ -->
+	<SkipFolders>
+		<Folder>Disallow_all</Folder>
+	</SkipFolders>
+	<!-- ************************************************************
+   MetaData: Unnamed Attributes
+
+   Unnamed Attributes to skip when getting meta data.
+   Some of the attributes we skip are already retrieved for the standard attributes (like Type and Units)
+   ************************************************************ -->
+	<SkipAttributes>
+		<Attribute>NAME</Attribute>
+		<Attribute>DSCR</Attribute>
+		<Attribute>DESCRIPTION</Attribute>
+		<Attribute>IP_DESCRIPTION</Attribute>
+		<Attribute>MAP_DESCRIPTION</Attribute>
+		<Attribute>TYPE</Attribute>
+		<Attribute>MAP_TYPE</Attribute>
+		<Attribute>TAG_TYPE</Attribute>
+		<Attribute>AREA</Attribute>
+		<Attribute>MAP_AREA</Attribute>
+		<Attribute>IP_PLANT_AREA</Attribute>
+		<Attribute>UNITS</Attribute>
+		<Attribute>MAP_UNITS</Attribute>
+		<Attribute>IP_ENG_UNITS</Attribute>
+	</SkipAttributes>
+	<!-- ************************************************************
+   MetaData: Skipping Attribute Values
+
+   Strings to skip when looking for attributes to return.
+   For example "GOOD" is a very general string and we do not want to search for tags based on GOOD
+   We do not return any attribute that has the following values.
+   ************************************************************ -->
+	<SkipStrings>
+		<String>Good</String>
+		<String>OK</String>
+		<String>No</String>
+		<String>ON</String>
+		<String>Yes</String>
+	</SkipStrings>
+	<!-- ************************************************************
+   TagValueSummary: Options
+
+   Default values for the Tag Values call
+   ************************************************************ -->
+	<TagValueOptions>
+		<!-- Default interval for tag statistics in minutes -->
+		<Interval>30</Interval>
+	</TagValueOptions>
+	<!-- ************************************************************
+   Types of Tags
+
+   This is only used for IP21 databases that have not been upgraded
+   to contain the MAP_TagType entries in the map records.
+   This maps the definition record to its type.
+   This is only valid for IP21.
+   The type will be retrieved from MAP_Type if the definition 
+   record is not one of the following.
+   ************************************************************ -->
+	<Types>
+		<Type name="IP_CalcDef">General</Type>
+		<Type name="KpiDef">KPI</Type>
+		<Type name="Q_XBAR21Def">SPC</Type>
+		<Type name="Q_XBARCDef">SPC</Type>
+		<Type name="Q_XBARCSDef">SPC</Type>
+		<Type name="Q_XBARDef">SPC</Type>
+		<Type name="Q_XBARS21Def">SPC</Type>
+		<Type name="Q_XBARSDef">SPC</Type>
+		<Type name="BatchKpiDef">KPI</Type>
+		<Type name="BatchProfileDef">Profile</Type>
+		<Type name="Q_BatchXBARDef">SPC</Type>
+	</Types>
+	<!-- ************************************************************
+   LocaleInfo: Options
+
+   This is the list of locale settings passed back to the client
+   when the "LocaleInfo" method is invoked.
+   Potential values can be found in "WinNLS.h"
+   Passed to the Windows SDK call "GetLocaleInfo"
+   ************************************************************ -->
+	<LocaleInfo>
+		<!-- short date format string -->
+		<LCType>LOCALE_SSHORTDATE</LCType>
+		<!-- date separator -->
+		<LCType>LOCALE_SDATE</LCType>
+		<!-- time format string -->
+		<LCType>LOCALE_STIMEFORMAT</LCType>
+		<!-- time separator -->
+		<LCType>LOCALE_STIME</LCType>
+		<!-- leading zeros for decimal -->
+		<LCType>LOCALE_ILZERO</LCType>
+		<!-- thousand separator -->
+		<LCType>LOCALE_STHOUSAND</LCType>
+		<!-- decimal separator -->
+		<LCType>LOCALE_SDECIMAL</LCType>
+		<!-- negative sign -->
+		<LCType>LOCALE_SNEGATIVESIGN</LCType>
+		<!-- number of fractional digits -->
+		<LCType>LOCALE_IDIGITS</LCType>
+		<!-- digit grouping -->
+		<LCType>LOCALE_SGROUPING</LCType>
+		<!-- list separator -->
+		<LCType>LOCALE_SLIST</LCType>
+	</LocaleInfo>
+	<!-- ************************************************************
+   MetaData: Options
+
+   Options for scanning tag and file metadata to search
+   ************************************************************ -->
+	<MetaDataOptions>
+		<!-- aspenONE Core Scheduler User Credentials -->
+		<ServerCredentials>YWRtaW46YWRtaW4=</ServerCredentials>
+		<!-- aspenONE Search Server -->
+		<SearchServer>localhost</SearchServer>
+		<!-- aspenONE Search Port -->
+		<SearchPort>8080</SearchPort>
+		<!-- aspenONE job receiver for tag and file metadata -->
+		<Job>ItemReceiver1</Job>
+		<RequestTimeout>30000</RequestTimeout>
+		<!-- aspenONE Scheduler requestTimeout -->
+		<ExtractorTimeout>3600000</ExtractorTimeout>
+		<!-- How long to wait before request resent after failure -->
+		<WaitOnRetry>30000</WaitOnRetry>
+		<!-- Maximum number of retries before failing the publish -->
+		<MaxNumberOfRetries>100</MaxNumberOfRetries>
+		<!-- Number of items to include per batch -->
+		<ChunkSize>1000</ChunkSize>
+		<!-- Number of times to retry delete query to see if need to delete items -->
+		<DeleteRetry>3</DeleteRetry>
+		<!-- Patterns used for determining Quantity Type -->
+		<CostPatterns>US$,EU$,$,€,£,¥</CostPatterns>
+		<TimePatterns>min,hr,sec,s,day,week,month,h</TimePatterns>
+		<LengthPatterns>ft,cm,m,in</LengthPatterns>
+		<MassPatterns>g,kg,lb,t</MassPatterns>
+		<ForcePatterns>lb,N,kgf</ForcePatterns>
+		<VolumePatterns>bbl,gal,l,cc,cm3</VolumePatterns>
+		<PressurePatterns>atm,bar,psi,pa,hg,h2o,torr</PressurePatterns>
+		<FlowPatterns>gpm,cfm,cfh,cmh,cms,cfs</FlowPatterns>
+		<TempPatterns>degrees,F,R,K,C</TempPatterns>
+		<PercentPatterns>%,percent</PercentPatterns>
+		<SquarePatterns>2,sq</SquarePatterns>
+	</MetaDataOptions>
+	<!-- ************************************************************
+   AlertDataSources:
+   Configure valid Alert data sources
+      
+      Add this to the AlertDataSources section for every alert data source supported
+      <DataSource>DataSourceName</DataSource>
+   ************************************************************ -->
+	<AlertDataSources>
+	</AlertDataSources>
+	<!-- ************************************************************
+   SCM:
+   Configure production schedule database names
+   ************************************************************ -->
+	<SCM>
+		<Table_PRODSCH>GvA_ProdSched</Table_PRODSCH>
+		<Column_MODEL>MODEL</Column_MODEL>
+		<Column_STARTTIME>STARTIME</Column_STARTTIME>
+		<Column_ENDTIME>ENDTIME</Column_ENDTIME>
+		<Column_TARGET>TARGET</Column_TARGET>
+		<Column_FAC>FAC</Column_FAC>
+		<Column_PERLEV>PERLEV</Column_PERLEV>
+		<Column_PATTR1>PATTR1</Column_PATTR1>
+		<Column_PATTR2>PATTR2</Column_PATTR2>
+		<Column_PATTR3>PATTR3</Column_PATTR3>
+		<Column_PATTR4>PATTR4</Column_PATTR4>
+		<Column_PATTR5>PATTR5</Column_PATTR5>
+		<Table_ModelParam>GvA_ModelParam</Table_ModelParam>
+		<Column_ParamName>ParamName</Column_ParamName>
+		<Column_ParamValue>ParamValue</Column_ParamValue>
+	</SCM>
+	<!-- ************************************************************
+   PublishDataSources:
+
+      Configure data sources which will have tags published even
+      though security information may not be retrieved (V8.0 or older IP21).
+
+      "TagOnly" attribute indicates only the tag name will be published. 
+      No other meta data (like description) will be published.
+      Default is tag name only, unless value is "False"
+      
+      Add this to the PublishDataSources section for every data source to be published
+      <DataSource TagOnly="True">DataSourceName</DataSource>
+   ************************************************************ -->
+	<PublishDataSources>
+	</PublishDataSources>
+</SearchOptions>
