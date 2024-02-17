@@ -95,4 +95,18 @@ openssl storeutl -noout -text -certs c:\RabbitmqBaseFolder\cert\ca.bundle
 ```
 
 ```log
+0: Certificate
+Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2
+Validity
+            Not Before: Aug  1 12:00:00 2013 GMT
+            Not After : Jan 15 12:00:00 2038 GMT
+1: Certificate
+Issuer: C=US, O=Microsoft Corporation, CN=Microsoft RSA Root Certificate Authority 2017
+        Validity
+            Not Before: Jan 17 20:22:49 2020 GMT
+            Not After : Jun 27 20:22:49 2024 GMT
+[...]
+Total found: 2
 ```
+
+export from mmx as pfx
