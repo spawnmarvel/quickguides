@@ -74,14 +74,14 @@ openssl x509 -noout -subject -in public.crt.pem
 
 ## Automate the above
 
-````cmd
+```cmd
 # make request
 certreq –new request.inf certificate.req
 
 # The –accept parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there's a matching request).
 certreq -accept certnew.cer
 
-``
+```
 
 openssl view bundle ca.bundle, he openssl storeutl app was added in OpenSSL 1.1.1.
 ```bash
