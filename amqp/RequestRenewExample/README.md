@@ -2,6 +2,10 @@
 
 ## Continue from manual steps in the main readme.md
 
+certreq -new
+
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
+
 ```cmd
 certreq –new request.inf certificate.req
 ```
@@ -66,4 +70,29 @@ openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
 ```cmd
 openssl x509 -noout -subject -in public.crt.pem
+```
+
+## Automate the above
+
+````cmd
+# make request
+certreq –new request.inf certificate.req
+
+# The –accept parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there's a matching request).
+certreq -accept certnew.cer
+
+``
+
+openssl view bundle ca.bundle, he openssl storeutl app was added in OpenSSL 1.1.1.
+```bash
+
+c:\Program Files\OpenSSL-Win64-3\OpenSSL-Win64\bin>openssl version
+OpenSSL 3.1.2 1 Aug 2023 (Library: OpenSSL 3.1.2 1 Aug 2023)
+
+# C:\RabbitmqBaseFolder\cert
+openssl storeutl -noout -text -certs c:\RabbitmqBaseFolder\cert\ca.bundle
+
+```
+
+```log
 ```
