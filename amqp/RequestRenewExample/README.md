@@ -2,6 +2,10 @@
 
 ## Continue from manual steps in the main readme.md
 
+```cmd
+certreq –new request.inf certificate.req
+```
+
 <details><summary>Convert pem to other formats or follow below</summary>
 <p>
 https://www.misterpki.com/convert-pem-to-other-formats/
