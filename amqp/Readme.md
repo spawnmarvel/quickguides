@@ -331,6 +331,7 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 * https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
 * Update:13.06.2023
 * * Certificate Authority must be a public certificate, not internal certificate.
+```
 
 ```cmd
 certreq –new request.inf certificate.req
