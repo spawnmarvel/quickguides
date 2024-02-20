@@ -86,7 +86,7 @@ certreq -accept certnew.cer
 
 ```
 
-openssl view bundle ca.bundle, he openssl storeutl app was added in OpenSSL 1.1.1.
+openssl view bundle ca.bundle, the openssl storeutl app was added in OpenSSL 1.1.1.
 ```bash
 
 c:\Program Files\OpenSSL-Win64-3\OpenSSL-Win64\bin>openssl version
