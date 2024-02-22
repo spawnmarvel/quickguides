@@ -107,6 +107,16 @@ Some of the main features of RabbitMQ are listed below:
 * * Thus it is possible to create an encrypted TLS connection without having to verify certificates. Client libraries usually support both modes of operation.
 * * When peer verification is enabled, it is common for clients to also check whether the hostname of the server they are connecting to matches one of two fields in the server certificate: the SAN (Subject Alternative Name) or CN (Common Name).
 
+Note: You can have advanced.config with verify_peer and rabbitmq.config with verify_none.
+The shovel in advanced is outgoing and the settings in rabbitmq is ingoing.
+If your client is remote (.net app) and you want to connect to rabbitmq, use FQDN not IP, else you will get:
+
+
+```log
+2024-02-22 10:25:10.120000+01:00 [error] <0.1017.0>             "TLS server: In state connection received CLIENT ALERT: Fatal - Bad Certificate\n"}}}
+```
+https://www.rabbitmq.com/docs/uri-query-parameters
+
 ## SSL
 * https://www.rabbitmq.com/ssl.html#peer-verification
 * * How Peer Verification Works
@@ -721,16 +731,6 @@ They will be merged with the TLS parameters from the URI (the latter will take p
 
 https://github.com/spawnmarvel/quickguides/blob/main/amqp/x509/mtls_x509.jpg
 
-
-Note: You can have advanced.config with verify_peer and rabbitmq.config with verify_none.
-The shovel in advanced is outgoing and the settings in rabbitmq is ingoing.
-If your client is remote (.net app) and you want to connect to rabbitmq, use FQDN not IP, else you will get:
-
-
-```log
-2024-02-22 10:25:10.120000+01:00 [error] <0.1017.0>             "TLS server: In state connection received CLIENT ALERT: Fatal - Bad Certificate\n"}}}
-```
-https://www.rabbitmq.com/docs/uri-query-parameters
 
 ### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal does authorization.
 
