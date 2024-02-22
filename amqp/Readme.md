@@ -109,7 +109,7 @@ Some of the main features of RabbitMQ are listed below:
 
 Note: You can have advanced.config with verify_peer and rabbitmq.config with verify_none.
 The shovel in advanced is outgoing and the settings in rabbitmq is ingoing.
-If your client is remote (.net app) and you want to connect to rabbitmq, use FQDN not IP, else you will get:
+If your client is remote (.net app) and you want to connect to rabbitmq, use FQDN not IP since FQDN is in the subject, else you will get:
 
 
 ```log
