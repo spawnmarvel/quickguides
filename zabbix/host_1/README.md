@@ -12,25 +12,69 @@ sudo apt update
 sudo apt upgrade -y
 
 # 2 a  Install and configure Zabbix for your platform
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
-sudo dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+sudo wget wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
+
+# view it
+ls
+
+# unpack it
+sudo dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
+
+# update it
 sudo apt update
 
 # b Install Zabbix server, frontend, agent 
 sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 
 
+# chekc packages
+sudo dpkg --list
+
+# remove it, if needed
+sudo apt --purge remove zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+
 ```
 ![MySQL](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/mysql_support.jpg)
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-Install DB, MariaDB in this case
+Install DB, MariaDB in this case on.
 
 ```bash
-sudo apt install mariadb-server mariadb-client
 
-# To uninstall sudo apt purge mariadb-server
+# some mysql things is installed with zabbix.
+
+# mysql server is not
+dpkg --get-selections | grep mysql
+
+libmysqlclient21:amd64                          install
+mysql-client                                    install
+mysql-client-8.0                                install
+mysql-client-core-8.0                           install
+mysql-common                                    install
+php-mysql                                       install
+php7.4-mysql                                    install
+zabbix-server-mysql                             install
+
+# install it
+
+sudo apt install mysql-server
+# sudo apt install mysql-client
+
+# now it is
+dpkg --get-selections | grep mysql
+
+libmysqlclient21:amd64                          install
+mysql-client                                    install
+mysql-client-8.0                                install
+mysql-client-core-8.0                           install
+mysql-common                                    install
+mysql-server                                    install
+mysql-server-8.0                                install
+mysql-server-core-8.0                           install
+php-mysql                                       install
+php7.4-mysql                                    install
+zabbix-server-mysql                             install
 
 # Make it start at system boot.
 sudo systemctl enable --now mariadb
@@ -44,7 +88,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubunt
 
 ```bash
 # c Create initial database
-mysql -uroot -p
+sudo mysql -uroot -p
 # or sudo mysql
 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
