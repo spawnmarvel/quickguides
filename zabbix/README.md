@@ -692,6 +692,9 @@ Timeout=20
 # The agent was crazy, maybe update the agent version.
 
 ```
+## Zabbix forum
+
+https://www.zabbix.com/forum/zabbix-help/479547-sudden-peaks-in-inbound-flows-to-zabbix-from-agents-halting-zabbix
 
 ###  Value cache effectiveness
 
