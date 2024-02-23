@@ -1,5 +1,8 @@
 # Zabbix
 
+## Visuals
+
+
 ## Documenation always LTS
 
 https://www.zabbix.com/manuals
@@ -138,7 +141,7 @@ openssl req -new -newkey rsa:2048 -nodes -keyout yourdomain.key -out yourdomain.
 
 # backup files first
 
-<VirtualHost 192.168.0.1:443>
+<VirtualHost 172.xx.x.xx:443>
     DocumentRoot /var/www/html2
     ServerName www.yourdomain.com
         SSLEngine on
