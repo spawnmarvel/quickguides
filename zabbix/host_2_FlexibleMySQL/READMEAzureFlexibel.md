@@ -44,7 +44,7 @@ mysql -uroot -p
 # password
 mysql> create database zabbix character set utf8mb4 collate utf8mb4_bin;
 mysql> create user 'zabbix'@'%' identified by 'A-PASSWORD';
-mysql> grant all privileges on zabbix.* to zabbix@localhost-IP-address-DNS;
+mysql> grant all privileges on zabbix.* to 'zabbix'@'%';
 mysql> set global log_bin_trust_function_creators = 1;
 mysql> quit;
 

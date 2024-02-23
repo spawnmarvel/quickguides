@@ -77,11 +77,11 @@ php7.4-mysql                                    install
 zabbix-server-mysql                             install
 
 # Make it start at system boot.
-sudo systemctl enable --now mariadb
+sudo systemctl enable --now mysql
 
 sudo mysql_secure_installation
 
-n, y, , y,y,y,y
+n, y,y,y,y,y
 
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
@@ -89,25 +89,47 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubunt
 ```bash
 # c Create initial database
 sudo mysql -uroot -p
-# or sudo mysql
+
+# or, no pass
+sudo mysql
 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
-create user zabbix@localhost identified by 'A-PASSWORD';
-grant all privileges on zabbix.* to zabbix@localhost;
+# create user zabbix@localhost identified by 'A-PASSWORD';
+# grant all privileges on zabbix.* to zabbix@localhost;
+create user 'zabbix'@'%' identified by 'A-PASSWORD';
+grant all privileges on zabbix.* to 'zabbix'@'%';
+FLUSH PRIVILEGES;
 set global log_bin_trust_function_creators = 1;
 quit;
 
 # On Zabbix server host import initial schema and data. You will be prompted to enter your newly created password.
+# This will take 1-3 minuttes.
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 
 # Disable log_bin_trust_function_creators option after importing database schema.
 mysql -uroot -p
-# or sudo mysql
+
+# or, no pass
+sudo mysql
+
 set global log_bin_trust_function_creators = 0;
 quit;
 
+
+# show databases
+sudo mysql
+mysql> show databases;
+# zabbix
+
+# show users
+mysql> select user from mysql.user;
+
+# connect with user
+mysql -u zabbix -p zabbix -h localhost
+
 # d. Configure the database for Zabbix server
 # Edit file /etc/zabbix/zabbix_server.conf, DBPassword=A-PASSWORD
+cd /etc/zabbix
 sudo cp zabbix_server.conf zabbix_server.conf.bck
 sudo nano zabbix_server.conf
 
@@ -121,6 +143,8 @@ The default URL for Zabbix UI when using Apache web server is http://host/zabbix
 
 # Allow inbound NSG, HTTP
 sudo ufw status
+# Status: inactive
+
 sudo ufw app list
 sudo ufw allow Apache
 ```
