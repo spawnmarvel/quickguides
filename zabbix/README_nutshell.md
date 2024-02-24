@@ -35,7 +35,7 @@ zabbix_sender -h
 
 # zabbix_sender is used to send data to your Zabbix server and can be called from either the command line 
 # or from a scripting language capable of running shell commands.
-# Example
+# Example -z zabbix host, -s monitored host, .k key, -o value
 zabbix_sender -z 127.0.0.1 -s "HOSTNAME" -k interface2 -o 10
 
 # On Zabbix, you need to create a host and add a Zabbix Trapper item to receive and process the zabbix_sender message.
