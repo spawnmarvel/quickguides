@@ -33,7 +33,8 @@ sudo apt install zabbix-sender
 # help
 zabbix_sender -h
 
-# zabbix_sender is used to send data to your Zabbix server and can be called from either the command line or from a scripting language capable of running shell commands.
+# zabbix_sender is used to send data to your Zabbix server and can be called from either the command line 
+# or from a scripting language capable of running shell commands.
 # Example
 zabbix_sender -z 127.0.0.1 -s "HOSTNAME" -k interface2 -o 10
 
@@ -45,6 +46,20 @@ zabbix_sender -z 127.0.0.1 -s "HOSTNAME" -k interface2 -o 10
 
 ## Windows agent passive
 
+If you use the Zabbix agent in the passive mode, it means that the poller (internal server process) connects to the agent on port 10050/TCP and polls for a certain value (e.g., host CPU load). 
+
+The poller waits until the agent on the host responds with the value. Then the server gets the value back, and the connection closes.
+
+https://blog.zabbix.com/zabbix-agent-active-vs-passive/9207/
+
 ## Windows agent active
+
+In the active mode, all data processing is performed on the agent, without the interference of pollers. 
+
+However, the agent must know what metrics should be monitored, and that is why the agent connects to the trapper port 10051/TCP of the server once every two minutes (by default). 
+
+The agent requests the information about the items, and then performs the monitoring on the host and pushes the data to the server via the same TCP port.
+
+https://blog.zabbix.com/zabbix-agent-active-vs-passive/9207/
 
 ## Tuning
