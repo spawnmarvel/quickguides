@@ -8,6 +8,9 @@ https://follow-e-lo.com/2024/02/23/zabbix-in-a-nutshell/
 
 View visuals repos.
 
+https://github.com/spawnmarvel/quickguides/blob/main/zabbix/host_1/README.md
+
+
 ## Trigger dependency
 
 
