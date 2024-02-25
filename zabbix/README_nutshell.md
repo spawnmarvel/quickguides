@@ -40,6 +40,15 @@ zabbix_sender -z 127.0.0.1 -s "HOSTNAME" -k interface2 -o 10
 
 # On Zabbix, you need to create a host and add a Zabbix Trapper item to receive and process the zabbix_sender message.
 
+
+# Test
+sudo nano alert.sh
+
+#!/bin/bash
+zabbix_sender -z 192.168.3.5 -s "VM28" -k interface1 -o 10
+zabbix_sender -z 192.168.3.5 -s "VM28" -k interface2 -o 10
+zabbix_sender -z 192.168.3.5 -s "VM28" -k interface1 -o 8
+zabbix_sender -z 192.168.3.5 -s "VM28" -k interface2 -o 8
 ```
 
 ## Template Windows by Zabbix Agent
