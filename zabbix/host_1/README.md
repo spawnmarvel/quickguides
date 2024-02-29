@@ -291,6 +291,11 @@ zabbix_server (Zabbix) 6.0.27
 Revision c5fe8f4d2d2 26 February 2024, compilation time: Feb 26 2024 09:44:31
 
 ```
+Before
+
+![Minor upgrade ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/minor_upgrade-1.jpg)
+
+After
 
 ![Minor upgrade ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/minor_upgrade.jpg)
 
