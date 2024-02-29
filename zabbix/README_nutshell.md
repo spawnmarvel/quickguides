@@ -8,7 +8,11 @@ https://follow-e-lo.com/2024/02/23/zabbix-in-a-nutshell/
 
 View visuals repos.
 
+The below link includes minor zabbix upgrades also with sudo apt update -y, sudo apt upgrade -y
+
 https://github.com/spawnmarvel/quickguides/blob/main/zabbix/host_1/README.md
+
+
 
 
 ## Trigger dependency
