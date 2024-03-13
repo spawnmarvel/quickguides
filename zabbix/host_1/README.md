@@ -95,7 +95,7 @@ sudo mysql -uroot -p
 sudo mysql
 
 # exit mysql
-exit;
+quit;
 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
 # create user zabbix@localhost identified by 'A-PASSWORD';
@@ -122,11 +122,14 @@ quit;
 
 # show databases
 sudo mysql
-mysql> show databases;
+
+# mysql>
+show databases;
 # zabbix
 
 # show users
-mysql> select user from mysql.user;
+# mysql> 
+select user from mysql.user;
 
 # connect with user
 mysql -u zabbix -p zabbix -h localhost
@@ -159,65 +162,6 @@ Configure frontend
 
 ![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix2.jpg)
 
-
-
-## Zabbix 6.0.26. © 2001–2024, Zabbix SIA
-
-Current version installed, Direct upgrade to Zabbix 6.4.x is possible from Zabbix 6.2.x, 6.0.x [...]
-
-## Upgrade major
-
-```bash
-
-# 1 Stop Zabbix processes
-service zabbix-server stop
-
-# 2 Back up the existing Zabbix database
-
-# 3 Back up configuration files, PHP files and Zabbix binaries
-# Configuration files:
-mkdir /opt/zabbix-backup/
-cp /etc/zabbix/zabbix_server.conf /opt/zabbix-backup/
-cp /etc/apache2/conf-enabled/zabbix.conf /opt/zabbix-backup/
-
-#PHP files and Zabbix binaries:
-cp -R /usr/share/zabbix/ /opt/zabbix-backup/
-cp -R /usr/share/zabbix-* /opt/zabbix-backup/
-
-# 4 Update repository configuration package
-
-# Then install the new repository configuration package.
-
-# On Ubuntu 20.04 run:
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb
-sudo dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb
-
-# Update the repository information.
-sudo apt-get update
-
-# 5 Upgrade Zabbix components
-sudo apt-get install --only-upgrade zabbix-server-mysql zabbix-frontend-php zabbix-agent
-
-#!!!!!! Upgrading Zabbix agent 2 with the apt install zabbix-agent2 command could lead to an error. For more information, see
-https://www.zabbix.com/documentation/6.0/en/manual/installation/known_issues#upgrading-zabbix-agent-2-6.0.5-or-older
-
-# Then, to upgrade the web frontend with Apache correctly, also run:
-apt-get install zabbix-apache-conf
-
-# 6 Review component configuration parameters
-# Make sure to review Upgrade notes to check if any changes in the configuration parameters are required.
-
-# 7 Start Zabbix processes
-service zabbix-server start
-service zabbix-proxy start
-service zabbix-agent start
-service zabbix-agent2 start
-
-# 8 Clear web browser cookies and cache
-```
-https://www.zabbix.com/documentation/current/en/manual/installation/upgrade
-
-https://www.zabbix.com/documentation/6.0/en/manual/installation/upgrade/packages/debian_ubuntu
 
 ## Upgrade minor
 
@@ -304,3 +248,63 @@ After
 ![Minor upgrade ](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/minor_upgrade.jpg)
 
 https://www.zabbix.com/documentation/6.0/en/manual/installation/upgrade/packages/debian_ubuntu
+
+
+## Zabbix 6.0.26. © 2001–2024, Zabbix SIA
+
+Current version installed, Direct upgrade to Zabbix 6.4.x is possible from Zabbix 6.2.x, 6.0.x [...]
+
+## Upgrade major
+
+```bash
+
+# 1 Stop Zabbix processes
+service zabbix-server stop
+
+# 2 Back up the existing Zabbix database
+
+# 3 Back up configuration files, PHP files and Zabbix binaries
+# Configuration files:
+mkdir /opt/zabbix-backup/
+cp /etc/zabbix/zabbix_server.conf /opt/zabbix-backup/
+cp /etc/apache2/conf-enabled/zabbix.conf /opt/zabbix-backup/
+
+#PHP files and Zabbix binaries:
+cp -R /usr/share/zabbix/ /opt/zabbix-backup/
+cp -R /usr/share/zabbix-* /opt/zabbix-backup/
+
+# 4 Update repository configuration package
+
+# Then install the new repository configuration package.
+
+# On Ubuntu 20.04 run:
+wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb
+sudo dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb
+
+# Update the repository information.
+sudo apt-get update
+
+# 5 Upgrade Zabbix components
+sudo apt-get install --only-upgrade zabbix-server-mysql zabbix-frontend-php zabbix-agent
+
+#!!!!!! Upgrading Zabbix agent 2 with the apt install zabbix-agent2 command could lead to an error. For more information, see
+https://www.zabbix.com/documentation/6.0/en/manual/installation/known_issues#upgrading-zabbix-agent-2-6.0.5-or-older
+
+# Then, to upgrade the web frontend with Apache correctly, also run:
+apt-get install zabbix-apache-conf
+
+# 6 Review component configuration parameters
+# Make sure to review Upgrade notes to check if any changes in the configuration parameters are required.
+
+# 7 Start Zabbix processes
+service zabbix-server start
+service zabbix-proxy start
+service zabbix-agent start
+service zabbix-agent2 start
+
+# 8 Clear web browser cookies and cache
+```
+https://www.zabbix.com/documentation/current/en/manual/installation/upgrade
+
+https://www.zabbix.com/documentation/6.0/en/manual/installation/upgrade/packages/debian_ubuntu
+
