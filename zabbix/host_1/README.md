@@ -4,7 +4,7 @@
 
 https://www.zabbix.com/download?zabbix=6.0&os_distribution=ubuntu&os_version=22.04&components=server_frontend_agent&db=mysql&ws=apache
 
-## Install
+## Install Zabbix
 
 ```bash
 
@@ -39,7 +39,8 @@ sudo apt --purge remove zabbix-server-mysql zabbix-frontend-php zabbix-apache-co
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-Install DB, MySql in this case on.
+## Install Mysql
+
 
 ```bash
 
@@ -86,6 +87,8 @@ n, y,y,y,y,y
 
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
+
+## Continue Zabbix Install
 
 ```bash
 # c Create initial database
@@ -158,7 +161,7 @@ sudo ufw allow Apache
 NSG for HTTP
 ![NSG](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/NSG.jpg)
 
-Configure frontend
+## Configure frontend
 
 ![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix2.jpg)
 
