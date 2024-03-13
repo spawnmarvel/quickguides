@@ -88,7 +88,7 @@ n, y,y,y,y,y
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
 
-## Continue Zabbix Install
+## Configure Zabbix
 
 ```bash
 # c Create initial database
