@@ -250,7 +250,7 @@ After
 https://www.zabbix.com/documentation/6.0/en/manual/installation/upgrade/packages/debian_ubuntu
 
 
-## Zabbix 6.0.26. © 2001–2024, Zabbix SIA
+## Zabbix 6.0.27. © 2001–2024, Zabbix SIA
 
 Current version installed, Direct upgrade to Zabbix 6.4.x is possible from Zabbix 6.2.x, 6.0.x [...]
 
