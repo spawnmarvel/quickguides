@@ -185,7 +185,7 @@ sudo apt install --only-upgrade 'zabbix-agent.*'
 sudo apt install --only-upgrade 'zabbix-agent2.*'
 ```
 
-Here we upgraded all packages on Linux
+Here we upgraded all packages on Linux, including all zabbix*
 
 ```bash
 # what do we have?
