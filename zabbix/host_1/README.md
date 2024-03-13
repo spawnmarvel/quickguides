@@ -172,6 +172,22 @@ Upgrade between minor versions
 It is possible to upgrade minor versions of 6.0.x (for example, from 6.0.1 to 6.0.3). It is easy.
 
 ```bash
+# To upgrade Zabbix minor version please run:
+sudo apt install --only-upgrade 'zabbix.*'
+
+# To upgrade Zabbix server minor version please run:
+sudo apt install --only-upgrade 'zabbix-server.*'
+
+# To upgrade Zabbix agent minor version please run:
+sudo apt install --only-upgrade 'zabbix-agent.*'
+
+# or, for Zabbix agent 2:
+sudo apt install --only-upgrade 'zabbix-agent2.*'
+```
+
+Here we upgraded all packages on Linux
+
+```bash
 # what do we have?
 ls -l
 total 4
