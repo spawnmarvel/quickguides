@@ -39,7 +39,7 @@ sudo apt --purge remove zabbix-server-mysql zabbix-frontend-php zabbix-apache-co
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-zabbix-to-securely-monitor-remote-servers-on-ubuntu-20-04
 
 
-Install DB, MariaDB in this case on.
+Install DB, MySql in this case on.
 
 ```bash
 
