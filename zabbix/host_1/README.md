@@ -163,7 +163,7 @@ Configure frontend
 ![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix2.jpg)
 
 
-## Upgrade minor
+## Upgrade minor from 6.0.26 to 6.0.27
 
 Upgrade between minor versions
 It is possible to upgrade minor versions of 6.0.x (for example, from 6.0.1 to 6.0.3). It is easy.
