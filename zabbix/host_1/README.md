@@ -16,6 +16,7 @@ sudo wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/z
 
 # view it
 ls
+zabbix-release_6.0-4+ubuntu22.04_all.deb
 
 # unpack it
 sudo dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
@@ -92,6 +93,9 @@ sudo mysql -uroot -p
 
 # or, no pass
 sudo mysql
+
+# exit mysql
+exit;
 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
 # create user zabbix@localhost identified by 'A-PASSWORD';
