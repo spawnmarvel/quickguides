@@ -12,7 +12,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # 2 a  Install and configure Zabbix for your platform
-sudo wget wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
+sudo wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
 
 # view it
 ls

@@ -24,9 +24,9 @@ Test with bash
 
 ```bash
 
-# since we downloaded the repos in install, we have it
+# since we download
 # installed
-# sudo wget wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
+# sudo wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
 
 # unzip'ed
 # sudo dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
