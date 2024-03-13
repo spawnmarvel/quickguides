@@ -21,7 +21,7 @@ zabbix-release_6.0-4+ubuntu22.04_all.deb
 # unpack it
 sudo dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
 
-# update it
+# UPDATE IT
 sudo apt update
 
 # b Install Zabbix server, frontend, agent 
