@@ -19,6 +19,8 @@ https://follow-e-lo.com/2024/03/17/zabbix-api/
 
 https://www.zabbix.com/documentation/current/en/manual/api/reference
 
+## No dependencies: import urllib.request
+
 ## def connect_zabbix(self):
 
 "method": "user.login"
