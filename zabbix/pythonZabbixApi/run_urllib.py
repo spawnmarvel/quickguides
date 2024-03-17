@@ -2,7 +2,7 @@ import urllib.request
 import json
 import logging
 
-logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
+logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
 
 # https://www.zabbix.com/documentation/current/en/manual/api
 # The Zabbix API is an HTTP-based API, and it is shipped as a part of the web frontend. It uses the JSON-RPC 2.0 protocol, which means two things:
@@ -33,9 +33,9 @@ class ApiWorker():
             logging.info(ex)
 
     def connect_zabbix(self):
-        logging.info("Connection to zabbix, trying to get token")
+        logging.info("Connecting to zabbix, trying to get token")
         try:
-            logging.info(self.url)
+            logging.debug(self.url)
            
             # headers
             headers = {'Content-type': 'application/json'}
@@ -121,7 +121,7 @@ class ApiWorker():
             with urllib.request.urlopen(req) as f:
                 result = f.read()
                 rv = result.decode()
-                logging.debug(rv)
+                logging.info(rv)
                 json_object = json.loads(rv)
 
         except Exception as ex:

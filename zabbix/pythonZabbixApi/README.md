@@ -11,6 +11,26 @@ The Zabbix API is an HTTP-based API, and it is shipped as a part of the web fron
 * The API consists of a set of separate methods.
 * Requests and responses between the clients and the API are encoded using the JSON format.
 
-##
+## Visuals
+
+https://follow-e-lo.com/2024/03/17/zabbix-api/
+
+## Method reference
+
+https://www.zabbix.com/documentation/current/en/manual/api/reference
+
+## def connect_zabbix(self):
+
+"method": "user.login"
+
+
+## def get_all_hosts(self):
+
+"method": "host.get"
+
+
+
+
+
 
 https://www.zabbix.com/documentation/current/en/manual/api
