@@ -2,7 +2,7 @@ import urllib.request
 import json
 import logging
 
-logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
+logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s - %(thread)d - %(process)d - %(filename)s - %(lineno)d - %(funcName)20s() %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
 
 # https://www.zabbix.com/documentation/current/en/manual/api
 # The Zabbix API is an HTTP-based API, and it is shipped as a part of the web frontend. It uses the JSON-RPC 2.0 protocol, which means two things:
@@ -19,6 +19,7 @@ class ApiWorker():
         self.authtoken = None
         self.read_vault()
         self.connect_zabbix()
+        self.host_list = self.get_all_hosts()
 
     def read_vault(self):
         try:
@@ -122,7 +123,7 @@ class ApiWorker():
             with urllib.request.urlopen(req) as f:
                 result = f.read()
                 rv = result.decode()
-                logging.info(rv)
+                logging.debug(rv)
                 json_dict = json.loads(rv)
                 logging.debug(type(json_dict))
 
@@ -133,25 +134,32 @@ class ApiWorker():
                         logging.debug(v)
                         logging.debug(type(v))
                         for l in v:
-                            logging.info(l)
+                            logging.debug(l)
                             logging.debug(type(l))
                             host_list.append(l)
                 logging.info(all_keys)
             logging.info(host_list)
+            logging.info("Hosts list populated")
             return host_list
         except Exception as ex:
             logging.error(ex)
 
     def update_host(self, hostname):
         # init list
-        li = self.get_all_hosts()
+        li = self.host_list
         logging.info("Case sensitive, VM28 is not vm28 or Vm28")
+        logging.info("Searching for " + str(hostname))
+        found = False
         try:
             for l in li:
                 if l["host"] == str(hostname):
                     logging.info(str(hostname) + ". Found, can be updated")
-                else:
-                    logging.info(str(hostname) + ". Not found")
+                    found = True
+                    break
+            if not found:
+                logging.info(str(hostname) + ". Not found.")
+                    
+        
         except Exception as ex:
             logging.error(ex)
 
@@ -190,8 +198,9 @@ class ApiWorker():
 
 if __name__ == "__main__":
     logging.info("#### Started ####")
+    logging.info("#### No third party dependencies, default Python ####")
     worker = ApiWorker()
-    worker.get_all_hosts()
+    # worker.get_all_hosts()
     worker.update_host("vm89")
     worker.update_host("VM28")
     # worker.get_host_groups()
