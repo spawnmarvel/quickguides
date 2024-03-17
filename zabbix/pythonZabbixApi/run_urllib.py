@@ -39,6 +39,7 @@ class ApiWorker():
            
             # headers
             headers = {'Content-type': 'application/json'}
+            logging.info(headers)
             # post data
             post_data = {"jsonrpc": "2.0", "method": "user.login","params": {
                                       "user": self.user,
@@ -59,7 +60,75 @@ class ApiWorker():
         except Exception as ex:
             logging.error(ex)
         return self.authtoken
+    
+
+    def new_get_hosts(self):
+        # https://www.zabbix.com/documentation/current/en/manual/api
+        # auth is the old way, but always returns
+        # 2024-03-17 20:33:22,576 root DEBUG {"jsonrpc":"2.0","error":{"code":-32602,"message":"Invalid params.","data":"Not authorized."},"id":1}
+        # fix
+        # https://www.zabbix.com/forum/zabbix-troubleshooting-and-problems/465800-python-api-modules-not-working-with-6-4
+        # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+        # to the apache config solved the problem.
+        # It seems Apache by default does not pass the Authorization header.
+        logging.info("Trying to get host")
+        try:
+            # post data
+            post_data = {"jsonrpc": "2.0", "method": "host.get","params": {
+                                      "output": [
+                                          "hostid",
+                                          "host"
+                                          ],
+                                          "selectIntrefaces": [
+                                              "interfaceid",
+                                              "ip"
+                                          ]
+            },
+            "id":1
+            }
+            post_json = json.dumps(post_data).encode("utf-8")
+            req = urllib.request.Request(self.url, post_json)
+            req.add_header('Content-type','application/json')
+            logging.debug(self.authtoken)
+            req.add_header('Authorization', str(self.authtoken))
+            with urllib.request.urlopen(req) as f:
+                result = f.read()
+                rv = result.decode()
+                logging.debug(rv)
+                json_object = json.loads(rv)
+
+        except Exception as ex:
+            logging.error(ex)
+
+    def get_all_hosts(self):
+        # https://www.zabbix.com/documentation/current/en/manual/api
+        logging.info("Trying to get host")
+        try:
+            # post data
+            post_data = {"jsonrpc": "2.0", "method": "host.get","params": {
+                                      "output": [
+                                          "hostid",
+                                          "host"
+                                          ]},
+                                          "auth":self.authtoken,
+            "id":2
+            }
+            post_json = json.dumps(post_data).encode("utf-8")
+            req = urllib.request.Request(self.url, post_json)
+            req.add_header('Content-type','application/json')
+            logging.debug(self.authtoken)
+            req.add_header('Authorization', str(self.authtoken))
+            with urllib.request.urlopen(req) as f:
+                result = f.read()
+                rv = result.decode()
+                logging.debug(rv)
+                json_object = json.loads(rv)
+
+        except Exception as ex:
+            logging.error(ex)
+
 
 if __name__ == "__main__":
-    logging.info("Started")
+    logging.info("#### Started ####")
     worker = ApiWorker()
+    worker.get_all_hosts()
