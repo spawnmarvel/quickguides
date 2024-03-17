@@ -2,7 +2,7 @@ import urllib.request
 import json
 import logging
 
-logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
+logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.DEBUG)
 
 # https://www.zabbix.com/documentation/current/en/manual/api
 # The Zabbix API is an HTTP-based API, and it is shipped as a part of the web frontend. It uses the JSON-RPC 2.0 protocol, which means two things:
@@ -101,8 +101,9 @@ class ApiWorker():
             logging.error(ex)
 
     def get_all_hosts(self):
-        # https://www.zabbix.com/documentation/current/en/manual/api
-        logging.info("Trying to get host")
+        # https://www.zabbix.com/documentation/current/en/manual/api/reference/host/get
+        logging.info("Trying to get hosts")
+        host_list = []
         try:
             # post data
             post_data = {"jsonrpc": "2.0", "method": "host.get","params": {
@@ -122,7 +123,66 @@ class ApiWorker():
                 result = f.read()
                 rv = result.decode()
                 logging.info(rv)
-                json_object = json.loads(rv)
+                json_dict = json.loads(rv)
+                logging.debug(type(json_dict))
+
+                all_keys = "All keys; "
+                for k, v in json_dict.items():
+                    all_keys = all_keys + "; " + str(k)
+                    if k == "result":
+                        logging.debug(v)
+                        logging.debug(type(v))
+                        for l in v:
+                            logging.info(l)
+                            logging.debug(type(l))
+                            host_list.append(l)
+                logging.info(all_keys)
+            logging.info(host_list)
+            return host_list
+        except Exception as ex:
+            logging.error(ex)
+
+    def update_host(self, hostname):
+        # init list
+        li = self.get_all_hosts()
+        logging.info("Case sensitive, VM28 is not vm28 or Vm28")
+        try:
+            for l in li:
+                if l["host"] == str(hostname):
+                    logging.info(str(hostname) + ". Found, can be updated")
+                else:
+                    logging.info(str(hostname) + ". Not found")
+        except Exception as ex:
+            logging.error(ex)
+
+
+
+
+    def get_host_groups(self):
+        # https://www.zabbix.com/documentation/current/en/manual/api/reference/hostgroup/get
+        logging.info("Trying to get host groups")
+        try:
+            # post data
+            post_data = {"jsonrpc": "2.0", "method": "hostgroup.get","params": {
+                                      "output": 
+                                          "extend"
+                                          },
+                                          "auth":self.authtoken,
+            "id":2
+            }
+            post_json = json.dumps(post_data).encode("utf-8")
+            req = urllib.request.Request(self.url, post_json)
+            req.add_header('Content-type','application/json')
+            logging.debug(self.authtoken)
+            req.add_header('Authorization', str(self.authtoken))
+            with urllib.request.urlopen(req) as f:
+                result = f.read()
+                rv = result.decode()
+                logging.info(rv)
+                # json_dict = json.loads(rv)
+                
+           
+                
 
         except Exception as ex:
             logging.error(ex)
@@ -132,3 +192,6 @@ if __name__ == "__main__":
     logging.info("#### Started ####")
     worker = ApiWorker()
     worker.get_all_hosts()
+    worker.update_host("vm89")
+    worker.update_host("VM28")
+    # worker.get_host_groups()

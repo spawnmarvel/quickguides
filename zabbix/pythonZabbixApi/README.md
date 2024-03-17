@@ -28,6 +28,8 @@ https://www.zabbix.com/documentation/current/en/manual/api/reference
 
 "method": "host.get"
 
+## def update_host(self, hostname):
+
 
 
 
