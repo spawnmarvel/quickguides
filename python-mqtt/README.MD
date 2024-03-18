@@ -71,7 +71,7 @@ In a nutshell, topic filter can be thought of as a selector for topics that the 
 
 For instance, if a message is published to the topic “town/house/kitchen”, all the subscriptions with the following topic filters would match:
 
-* #
+* .#
 * town/#
 * town/house/#
 * +/house/kitchen
