@@ -288,6 +288,8 @@ Publish
 
 RabbitMQ subscribe to all
 * myhome.livingroom.#
+* myhome.livingroom.temperature.#
+* myhome.livingroom.temperature.sensor1.
 
 
 **run_sub_sensor1.py**
