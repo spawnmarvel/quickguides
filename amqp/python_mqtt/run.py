@@ -47,3 +47,13 @@ while True:
 # start and send data every 10 sec.
 # view message header
 # delivery_mode:	2, headers:	x-mqtt-publish-qos:	1
+
+
+# https://www.rabbitmq.com/docs/mqtt
+# rabbitmq-plugins enable rabbitmq_mqtt
+
+# rabbitmq.conf
+# mqtt.listeners.tcp.default = 1883
+# mqtt.listeners.ssl.default = 8883
+# mqtt.ssl_cert_login = true
+# mqtt.allow_anonymous = true
