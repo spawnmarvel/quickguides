@@ -228,3 +228,60 @@ For instance, if you have three sensors in your living room, create topics like
 instead of using a generic topic like myhome/livingroom.
 
 https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
+
+## paho-mqtt 2.0.0
+
+This document describes the source code for the Eclipse Paho MQTT Python client library, which implements versions 5.0, 3.1.1, and 3.1 of the MQTT protocol.
+
+* This code provides a client class which enables applications to connect to an MQTT broker to publish messages
+* and to subscribe to topics and receive published messages. 
+* It also provides some helper functions to make publishing one off messages to an MQTT server very straightforward.
+* TLDR Known limitations
+
+https://pypi.org/project/paho-mqtt/
+
+## Topic level separator and wildcards
+
+
+The MQTT protocol specification defines slash ("/") as topic level separator whereas AMQP 0-9-1 defines a dot (".") as topic level separator. This plugin translates patterns under the hood to bridge the two.
+
+For example, MQTT topic cities/london becomes AMQP 0.9.1 topic cities.london and vice versa. Therefore, when an MQTT client publishes a message with topic cities/london, if an AMQP 0.9.1 client wants to receive that message, it should create a binding from its queue to the topic exchange with binding key cities.london.
+
+Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.london, if an MQTT client wants to receive that message, it should create an MQTT subscription with topic filter cities/london.
+
+| MQTT          | AMQP 0.9.1    | Description |
+| ------------- | ------------- | ------------- |
+| / (slash)     | . (dot)       | topic level separator
+| + (plus)      | * (asterisk)  | single-level wildcard (match a single word)
+| # (hash)      | # (hash)      | multi-level wildcard (match zero or more words)
+
+
+https://www.rabbitmq.com/docs/mqtt
+
+## Mini mqtt project
+
+Lets assume the three sensors from below and test some concepts with Python and RabbitMQ.
+
+* myhome/livingroom/temperature
+* myhome/livingroom/brightness
+* myhome/livingroom/humidity 
+
+Json example:
+```json
+{
+    
+    "keyvault": [
+        {
+            "mqtthost": "localhost",
+            "mqttuser": "username-rmq",
+            "mqttpass": "pass-rmq"
+        }
+    ]
+}
+```
+
+
+**run_pub_sensor1.py**
+
+**run_sub_sensor1.py**
+
