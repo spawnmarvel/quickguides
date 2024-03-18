@@ -286,7 +286,7 @@ run_pub_sensor1.py
 Publish
 * myhome/livingroom/temperature/sensor1
 
-RabbitMQ subscribe to all
+RabbitMQ subscribe
 * myhome.livingroom.#
 * myhome.livingroom.temperature.#
 * myhome.livingroom.temperature.sensor1.
