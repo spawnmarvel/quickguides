@@ -45,3 +45,29 @@ mqtt.allow_anonymous = true
 # [...]
 
 ```
+
+## Visuals
+
+
+https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
+
+## MQTT Topic Tree & Topic Matching: Challenges and Best Practices Explained
+
+* MQTT is a publish/subscribe protocol where devices act as MQTT Clients and exchange messages over an MQTT Broker. 
+* MQTT Clients send their data in the PUBLISH control packets to the specific topic. 
+* The topic is separate from the packet’s payload, which allows the broker to avoid analyzing the packet’s payload. 
+* The broker delivers the published message to every client subscribed with a matching topic filter.
+
+The main difference is that topic is used for publishing and cannot contain wildcard characters whereas the topic filter can.
+
+* The wildcard characters are used to aggregate multiple streams of data into one and are thus used on the subscriber’s side
+* It is possible to create a topic filter without wildcard characters, then it would only match at most one topic. That case is often referred to as an exact subscription. 
+
+In a nutshell, topic filter can be thought of as a selector for topics that the PUBLISH packets are sent to. The broker must be able to find the matching subscriptions for each published message.
+
+
+
+
+
+
+https://www.hivemq.com/blog/mqtt-topic-tree-matching-challenges-best-practices-explained/#:~:text=MQTT%20is%20a%20publish%2Fsubscribe,avoid%20analyzing%20the%20packet's%20payload
