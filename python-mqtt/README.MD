@@ -51,7 +51,7 @@ mqtt.allow_anonymous = true
 
 https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
 
-## MQTT Topic Tree & Topic Matching: Challenges and Best Practices Explained
+## HiveMQ-MQTT Topic Tree & Topic Matching: Challenges and Best Practices Explained
 
 * MQTT is a publish/subscribe protocol where devices act as MQTT Clients and exchange messages over an MQTT Broker. 
 * MQTT Clients send their data in the PUBLISH control packets to the specific topic. 
@@ -65,6 +65,38 @@ The main difference is that topic is used for publishing and cannot contain wild
 
 In a nutshell, topic filter can be thought of as a selector for topics that the PUBLISH packets are sent to. The broker must be able to find the matching subscriptions for each published message.
 
+## HiveMQ-MQTT Wildcard Topic Matching Challenge Explained
+
+* Since there are many use cases for wildcards, let’s examine the technical challenge of capitalizing on wildcard subscriptions.
+
+For instance, if a message is published to the topic “town/house/kitchen”, all the subscriptions with the following topic filters would match:
+
+* #
+* town/#
+* town/house/#
+* +/house/kitchen
+* town/+/kitchen
+* town/house/+
+* +/+/kitchen
+* town/+/+
+* +/+/+
+* town/house/kitchen
+* …
+
+The broker must also check the map for all these topic filters. In production workloads, the broker has to find the matching subscriptions for published messages thousands of times per second, so it needs a specialized data structure for a fast lookup.
+
+## HiveMQ-The Topic Tree
+
+The Topic Tree is a data structure used to solve the challenges posed by the above wildcard topic matching problem.
+
+We start at the root of the topic tree and proceed through its levels using the topic segments to select the next node. 
+
+* If the current node has wildcard subscriptions (with # or +),  they are added to the matching subscriptions. 
+* Once there are no more segments to match in the topic and there are non-wildcard subscriptions in the current node, there are exact subscriptions for this topic.
+* The broker can continue delivering the published message to the subscribed clients once it has found all matching subscriptions.
+* This way of storing the subscriptions also reduces memory usage because topic levels shared across multiple subscriptions are only stored once.
+
+## HiveMQ-Best Practices
 
 
 
