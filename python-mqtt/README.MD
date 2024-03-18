@@ -281,7 +281,14 @@ Json example:
 ```
 
 
-**run_pub_sensor1.py**
+run_pub_sensor1.py
+
+Publish
+* myhome/livingroom/temperature/sensor1
+
+RabbitMQ subscribe to all
+* myhome.livingroom.#
+
 
 **run_sub_sensor1.py**
 

@@ -10,7 +10,7 @@ logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s - %(thr
 MQTTHOST = None 
 MQTTUSER = None  
 MQTTPASS = None
-MQTTTOPIC = "myhome.livingroom.temperature.sensor1.status" 
+MQTTTOPIC = "myhome/livingroom/temperature/sensor1" 
 
 
 
@@ -64,6 +64,7 @@ while True:
     for x in range(100):
         logging.info(MQTTTOPIC)
         message = "test data " + str(x)
+        logging.info("Sending ;" + str(message))
         (rc, mid) = mqttc.publish(MQTTTOPIC, str(message), qos=1)
         logging.info("loop " + str(x))
         time.sleep(10)
