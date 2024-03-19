@@ -25,6 +25,43 @@ RabbitMQ supports most MQTT 5.0 features including the following:
 * Retained messages with the limitations described in section Retained Messages and Stores
 * MQTT over a WebSocket via the RabbitMQ Web MQTT Plugin
 
+
+## Limitations
+
+### Mapping MQTT to the AMQP 0.9.1 model
+
+### Queue Types
+
+### Queue Properties and Arguments
+
+### Topic level separator and wildcards
+
+The MQTT protocol specification defines slash ("/") as topic level separator whereas AMQP 0-9-1 defines a dot (".") as topic level separator. This plugin translates patterns under the hood to bridge the two.
+
+For example, MQTT topic cities/london becomes AMQP 0.9.1 topic cities.london and vice versa. Therefore, when an MQTT client publishes a message with topic cities/london, if an AMQP 0.9.1 client wants to receive that message, it should create a binding from its queue to the topic exchange with binding key cities.london.
+
+Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.london, if an MQTT client wants to receive that message, it should create an MQTT subscription with topic filter cities/london.
+
+| MQTT          | AMQP 0.9.1    | Description |
+| ------------- | ------------- | ------------- |
+| / (slash)     | . (dot)       | topic level separator
+| + (plus)      | * (asterisk)  | single-level wildcard (match a single word)
+| # (hash)      | # (hash)      | multi-level wildcard (match zero or more words)
+
+### Using Quorum Queues
+
+### MQTT QoS 0 queue type
+
+The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
+
+* Feature flag rabbit_mqtt_qos0_queue is enabled.
+* The MQTT client subscribes with QoS 0.
+* The MQTT 5.0 client connects with a Session Expiry Interval of 0, or the MQTT 3.1.1 client connects with CleanSession set to 1.
+
+
+### Overload protection
+
+
 ## Minimal rabbitmq.conf
 
 ```bash
@@ -240,20 +277,6 @@ This document describes the source code for the Eclipse Paho MQTT Python client 
 
 https://pypi.org/project/paho-mqtt/
 
-## Topic level separator and wildcards
-
-
-The MQTT protocol specification defines slash ("/") as topic level separator whereas AMQP 0-9-1 defines a dot (".") as topic level separator. This plugin translates patterns under the hood to bridge the two.
-
-For example, MQTT topic cities/london becomes AMQP 0.9.1 topic cities.london and vice versa. Therefore, when an MQTT client publishes a message with topic cities/london, if an AMQP 0.9.1 client wants to receive that message, it should create a binding from its queue to the topic exchange with binding key cities.london.
-
-Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.london, if an MQTT client wants to receive that message, it should create an MQTT subscription with topic filter cities/london.
-
-| MQTT          | AMQP 0.9.1    | Description |
-| ------------- | ------------- | ------------- |
-| / (slash)     | . (dot)       | topic level separator
-| + (plus)      | * (asterisk)  | single-level wildcard (match a single word)
-| # (hash)      | # (hash)      | multi-level wildcard (match zero or more words)
 
 
 https://www.rabbitmq.com/docs/mqtt
@@ -294,11 +317,3 @@ RabbitMQ subscribe
 
 **run_sub_sensor1.py**
 
-
-## MQTT QoS 0 queue type
-
-The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
-
-* Feature flag rabbit_mqtt_qos0_queue is enabled.
-* The MQTT client subscribes with QoS 0.
-* The MQTT 5.0 client connects with a Session Expiry Interval of 0, or the MQTT 3.1.1 client connects with CleanSession set to 1.
