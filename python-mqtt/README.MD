@@ -294,3 +294,11 @@ RabbitMQ subscribe
 
 **run_sub_sensor1.py**
 
+
+## MQTT QoS 0 queue type
+
+The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
+
+* Feature flag rabbit_mqtt_qos0_queue is enabled.
+* The MQTT client subscribes with QoS 0.
+* The MQTT 5.0 client connects with a Session Expiry Interval of 0, or the MQTT 3.1.1 client connects with CleanSession set to 1.
