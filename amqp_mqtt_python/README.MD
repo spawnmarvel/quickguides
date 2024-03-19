@@ -48,6 +48,9 @@ Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.lond
 | + (plus)      | * (asterisk)  | single-level wildcard (match a single word)
 | # (hash)      | # (hash)      | multi-level wildcard (match zero or more words)
 
+* MQTT topics that have dots in them won't work as expected and are to be avoided
+* the same goes for AMQP 0-9-1 routing and binding keys that contains slashes.
+
 ### Using Quorum Queues
 
 ### MQTT QoS 0 queue type
