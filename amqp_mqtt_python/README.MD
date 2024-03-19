@@ -65,6 +65,8 @@ The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions ar
 ### Overload protection
 
 
+https://www.rabbitmq.com/docs/mqtt
+
 ## Minimal rabbitmq.conf
 
 ```bash
