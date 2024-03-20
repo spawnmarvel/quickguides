@@ -324,6 +324,9 @@ View visuals
 https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
 
 * We get a random queue and a connection.
+* We use a binding on a normal queue
+
+![A consumer?] (https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
 
 
 
