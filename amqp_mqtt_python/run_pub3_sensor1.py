@@ -71,6 +71,7 @@ class MqttPublisher():
 
     def connect_mqtt(self):
         self.read_vault()
+        # https://stackoverflow.com/questions/77984857/paho-mqtt-unsupported-callback-api-version-error
         client = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION2,self.client_id)
         client.username_pw_set(self.mqtt_user, self.mqtt_pass)
         client.on_connect = self.on_connect
