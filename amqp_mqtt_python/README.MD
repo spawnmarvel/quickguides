@@ -346,6 +346,7 @@ We only send messages to a topic (MQTTTOPIC = "myhome/livingroom/temperature/sen
 
 ![One queue](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/one_queue.jpg)
 
+Some funny code, must check it.
 
 **run_sub_sensor1.py**
 
