@@ -323,11 +323,28 @@ View visuals
 
 https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
 
-* We get a random queue and a connection.
+* We get a random queue (mqtt-subscription) and a connection.
 * We use a binding on a normal queue
 
 ![A consumer?](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
 
+
+If we comment out the last line.
+
+```py
+# The callback for when the client receives a CONNACK response from the server.
+def on_connect(client, userdata, flags, reason_code, properties):
+    global MQTTTOPIC
+    print(f"Connected with result code {reason_code}")
+    # Subscribing in on_connect() means that if we lose the connection and
+    # reconnect then subscriptions will be renewed.
+    # client.subscribe(MQTTTOPIC)
+
+```
+
+We only send messages to a topic (MQTTTOPIC = "myhome/livingroom/temperature/sensor1" ) and our house queue get them, since it uses bind myhome.livingroom.temperature.#
+
+![One queue](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/one_queue.jpg)
 
 
 **run_sub_sensor1.py**
