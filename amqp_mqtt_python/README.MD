@@ -319,6 +319,13 @@ RabbitMQ subscribe
 * myhome.livingroom.temperature.#
 * myhome.livingroom.temperature.sensor1.
 
+View visuals
+
+https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
+
+* We get a random queue and a connection.
+
+
 
 **run_sub_sensor1.py**
 
