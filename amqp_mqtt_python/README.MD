@@ -329,7 +329,7 @@ https://follow-e-lo.com/2023/11/22/amqp-mqtt-rabbitmq-configuration-with-python/
 ![A consumer?](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
 
 
-If we comment out the last line.
+If we comment out the last line. (# client.subscribe(MQTTTOPIC))
 
 ```py
 # The callback for when the client receives a CONNACK response from the server.
