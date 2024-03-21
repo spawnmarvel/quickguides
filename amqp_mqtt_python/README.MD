@@ -311,7 +311,7 @@ We publish to
 
 * myhome/livingroom/temperature/sensor1
 
-We deffine 3 queues with amq.topic and routing key.
+We define 3 queues with amq.topic and routing key.
 
 * myhome.livingroom.#
 * myhome.livingroom.temperature.#
@@ -322,7 +322,9 @@ and start the run_pub_sensor1.py
 ![3 queues](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/3_queues.jpg)
 
 
-run_pub_sensor1.py change
+run_pub_sensor1.py test.
+
+If the publsiher is not subscrbing to a topic,but only pushing:
 
 ```py
 
@@ -334,7 +336,7 @@ run_pub_sensor1.py change
             # this is for subscriber
             # we should always subscribe from on_connect callback to be sure
             # our subscribed is persisted across reconnections.
-            client.subscribe("$SYS/#")
+            # client.subscribe("$SYS/#")
             # client.subscribe(self.mqtt_topic)
         else:
             logging.info("Failed to connect, return code " + str(rc))
@@ -344,7 +346,7 @@ run_pub_sensor1.py change
 
 If we now send data, we are just pushing to a topic
 
-![No cosumer](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_consume.jpg)
+![No subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_subscribe.jpg)
 
 
 We are making a client id that is used in the client.subscribe(), if we use the method again
