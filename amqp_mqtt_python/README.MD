@@ -309,7 +309,7 @@ Json example:
 ```
 
 
-run_pub3_sensor1.py
+run_pub_sensor1.py
 
 Publish
 * myhome/livingroom/temperature/sensor1
@@ -317,9 +317,10 @@ Publish
 RabbitMQ queue subscribe
 * myhome.livingroom.#
 * myhome.livingroom.temperature.#
-* myhome.livingroom.temperature.sensor1.
+* myhome.livingroom.temperature.sensor1.#
 
 
+![Reconnct](https://user-images.githubusercontent.com/110724391/184472398-c590b47c-e1f2-41f8-87e6-2a1f68e8850d.png)[(Youtube)](https://www.youtube.com/watch?v=3HIr0imLgxM)
 
 https://www.emqx.com/en/blog/how-to-use-mqtt-in-python#prepare-an-mqtt-broker
 
