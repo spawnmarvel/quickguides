@@ -331,6 +331,14 @@ RabbitMQ
 ![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
 
 
+After stopping
+
+run_pub_sensor1.py
+
+
+```py
+
+```
 
 
 **run_sub_sensor1.py**
