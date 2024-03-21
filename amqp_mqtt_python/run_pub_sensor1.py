@@ -77,7 +77,7 @@ class MqttPublisher():
         logging.info("On publish " + str(rc))
     
     
-    # This is ned for subscriber only
+    # This is need for subscriber only
     #def on_message(self,client, userdata, msg):
     #    logging.info(f'Received `{msg.payload.decode()}` from `{msg.topic}` topic')
 

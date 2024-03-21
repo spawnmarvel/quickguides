@@ -362,3 +362,31 @@ If we now send data, we are just pushing to a topic
 
 **run_sub_sensor1.py**
 
+
+
+## Sparkplug Support
+
+```bash
+
+# [...]
+
+ssl_options.cacertfile = C:\testca\ca_certificate.pem
+ssl_options.certfile   = C:\testca\server3\server3_certificate.pem
+ssl_options.keyfile    = C:\testca\server3\private_key.pem
+ssl_options.verify     = verify_none
+ssl_options.fail_if_no_peer_cert = false
+
+mqtt.listeners.tcp.default = 1883
+mqtt.listeners.ssl.default = 8883
+mqtt.ssl_cert_login = true
+mqtt.allow_anonymous = true
+
+mqtt.sparkplug = true
+
+# [...]
+
+```
+
+
+
+https://www.rabbitmq.com/docs/mqtt#sparkplug-support
