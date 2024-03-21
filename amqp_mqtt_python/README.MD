@@ -352,10 +352,13 @@ If we inspect the message, it is not persistent, then it must be 2.
 
 ![No persistent](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/not_persistent.jpg)
 
-
+We will dig into that later, but lest try to subscribe to a topic, with a subscriber.
 
 ## Mini mqtt project subscribe
 
+Lets start the subscriber
+
+![Start subsriber](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_sub.jpg)
 
 
 ## Sparkplug Support

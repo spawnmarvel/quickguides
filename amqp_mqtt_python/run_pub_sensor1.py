@@ -4,7 +4,7 @@ import json
 import random
 import logging
 
-logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s - %(thread)d - %(process)d - %(filename)s - %(lineno)d - %(funcName)20s() %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
+logging.basicConfig(filename="log_publisher.log", filemode="a",format="%(asctime)s - %(thread)d - %(process)d - %(filename)s - %(lineno)d - %(funcName)20s() %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
 
 # https://pypi.org/project/paho-mqtt/#client
 # PUBLISHER EXAMPLE
@@ -47,7 +47,7 @@ class MqttPublisher():
             # this is for subscriber
             # we should always subscribe from on_connect callback to be sure
             # our subscribed is persisted across reconnections.
-            # client.subscribe("$SYS/#")
+            client.subscribe("$SYS/#")
             # client.subscribe(self.mqtt_topic)
         else:
             logging.info("Failed to connect, return code " + str(rc))
@@ -148,6 +148,6 @@ class MqttPublisher():
 
 
 if __name__ == '__main__':
-    logging.info("##### Start ######")
+    logging.info("##### Start Publisher ######")
     pub = MqttPublisher()
     pub.run()
