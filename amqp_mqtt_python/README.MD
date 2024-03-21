@@ -336,10 +336,29 @@ After stopping run_pub_sensor1.py
 ![Pub stop](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_stop.jpg)
 
 
+run_pub_sensor1.py change
+
 ```py
+
+ def on_connect(self, client, userdata, flags, rc, duck_properties):
+        logging.info("On connect " + str(client) + ". " + str(flags) + ". " + str(rc))
+        if rc == 0 and client.is_connected():
+            logging.info("Connected to Mqtt broker!")
+            # https://pypi.org/project/paho-mqtt/#client
+            # this is for subscriber
+            # we should always subscribe from on_connect callback to be sure
+            # our subscribed is persisted across reconnections.
+            # client.subscribe("$SYS/#")
+            # client.subscribe(self.mqtt_topic)
+        else:
+            logging.info("Failed to connect, return code " + str(rc))
+
 
 ```
 
+If we now send data, we are just pushing to a topic
+
+![No cosumer](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_consume.jpg)
 
 **run_sub_sensor1.py**
 

@@ -41,7 +41,12 @@ class MqttPublisher():
         logging.info("On connect " + str(client) + ". " + str(flags) + ". " + str(rc))
         if rc == 0 and client.is_connected():
             logging.info("Connected to Mqtt broker!")
-            client.subscribe(self.mqtt_topic)
+            # https://pypi.org/project/paho-mqtt/#client
+            # this is for subscriber
+            # we should always subscribe from on_connect callback to be sure
+            # our subscribed is persisted across reconnections.
+            # client.subscribe("$SYS/#")
+            # client.subscribe(self.mqtt_topic)
         else:
             logging.info("Failed to connect, return code " + str(rc))
 
