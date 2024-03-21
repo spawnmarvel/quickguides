@@ -344,7 +344,7 @@ If the publisher is not subscribing to a topic,but only pushing:
 
 ```
 
-If we now send data, we are just pushing to a topic
+If we now send data, we are just pushing to a topic, we do not get the auto queue with application id.
 
 ![No subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_subscribe.jpg)
 
