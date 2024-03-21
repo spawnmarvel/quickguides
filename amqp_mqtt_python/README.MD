@@ -328,7 +328,7 @@ https://www.emqx.com/en/blog/how-to-use-mqtt-in-python#prepare-an-mqtt-broker
 
 RabbitMQ
 
-![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
+![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume1.jpg)
 
 
 After stopping
