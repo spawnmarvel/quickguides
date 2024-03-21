@@ -6,6 +6,8 @@ import logging
 
 logging.basicConfig(filename="log.log", filemode="a",format="%(asctime)s - %(thread)d - %(process)d - %(filename)s - %(lineno)d - %(funcName)20s() %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
 
+# https://pypi.org/project/paho-mqtt/#client
+# PUBLISHER EXAMPLE
 
 class MqttPublisher():
     
