@@ -364,7 +364,11 @@ Lets start the publisher.
 
 ![Start publisher](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_publ.jpg)
 
+(I removed the, self.simulate_wait())
+
 And check that messages is incoming to queues and subscriber.
+
+![Pub sub](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_sub.jpg)
 
 ## Sparkplug Support
 

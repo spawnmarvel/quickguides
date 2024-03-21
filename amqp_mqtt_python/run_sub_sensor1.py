@@ -80,7 +80,7 @@ class MqttPublisher():
     
     # This is need for subscriber only
     def on_message(self,client, userdata, msg):
-        logging.info("Received " + str(msg.payload.decode()) + " from " + str(msg.topic) + "topic")
+        logging.info("Received " + str(msg.payload.decode()) + " from " + str(msg.topic) + " . topic")
 
 
     def connect_mqtt(self):
