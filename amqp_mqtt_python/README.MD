@@ -387,6 +387,4 @@ mqtt.sparkplug = true
 
 ```
 
-
-
 https://www.rabbitmq.com/docs/mqtt#sparkplug-support
