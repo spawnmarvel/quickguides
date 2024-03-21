@@ -406,6 +406,19 @@ RabbitMQ supports most MQTT 5.0 features including the following:
 
 ## Limitations
 
+The following MQTT features are unsupported:
+
+* QoS 2 (exactly once)
+* Shared subscriptions
+* A Will Message that is both delayed and retained is not retained.
+
+### How the MQTT plugin works
+
+RabbitMQ MQTT plugin targets MQTT 3.1, 3.1.1, and 5.0 supporting a broad range of MQTT clients. 
+
+It also makes it possible for MQTT clients to interoperate with AMQP 0-9-1, AMQP 1.0
+
+
 ### Mapping MQTT to the AMQP 0.9.1 model
 
 ### Queue Types
