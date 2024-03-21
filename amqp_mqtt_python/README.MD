@@ -331,9 +331,9 @@ RabbitMQ
 ![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume1.jpg)
 
 
-After stopping
+After stopping run_pub_sensor1.py
 
-run_pub_sensor1.py
+![Pub stop](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_stop.jpg)
 
 
 ```py
