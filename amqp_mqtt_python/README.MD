@@ -288,11 +288,9 @@ https://www.rabbitmq.com/docs/mqtt
 
 ## Mini mqtt project
 
-Lets assume the three sensors from below and test some concepts with Python and RabbitMQ.
+Lets assume the one sensors from below and test some concepts with Python and RabbitMQ.
 
 * myhome/livingroom/temperature
-* myhome/livingroom/brightness
-* myhome/livingroom/humidity 
 
 Json example:
 ```json
