@@ -356,10 +356,15 @@ We will dig into that later, but lest try to subscribe to a topic, with a subscr
 
 ## Mini mqtt project subscribe
 
-Lets start the subscriber
+Lets start the subscriber.
 
 ![Start subsriber](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_sub.jpg)
 
+Lets start the publisher.
+
+![Start publisher](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_pub.jpg)
+
+And check that messages is incoming to queues and subscriber.
 
 ## Sparkplug Support
 

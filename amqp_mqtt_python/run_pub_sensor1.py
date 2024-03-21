@@ -118,7 +118,7 @@ class MqttPublisher():
             msg = json.dumps(msg_dict)
             if not client.is_connected():
                 logging.error("publish: MQTT client is not connected!")
-                self.simulate_wait()
+                # self.simulate_wait()
                 continue
             result = client.publish(self.mqtt_topic, msg)
             # result: [0, 1]
@@ -128,7 +128,7 @@ class MqttPublisher():
             else:
                  logging.info("Failed to send " + str(msg + ". To topic " + str(self.mqtt_topic)))
             msg_count += 1
-            self.simulate_wait()
+            # self.simulate_wait()
 
 
     def run(self):
