@@ -348,7 +348,7 @@ If we now send data, we are just pushing to a topic, we do not get the auto queu
 
 ![No subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_subscribe.jpg)
 
-If we insepct the message, it is not persistent, then it must be 2.
+If we inspect the message, it is not persistent, then it must be 2.
 
 ![No persistent](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/not_persistent.jpg)
 
