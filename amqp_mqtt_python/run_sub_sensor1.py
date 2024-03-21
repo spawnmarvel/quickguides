@@ -70,13 +70,9 @@ class MqttPublisher():
                     con = True
                 else:
                     logging.info("Reconnct failed, attempt " + str(count))
-        logging.info("Reconnct failed, and used max attempts " + str(self.reconnect_try) )
+        logging.info("Reconnct failed, and used max attempts " + str(self.reconnect_try))
         self.exit_flag = True
 
-    
-    def on_publish(self, client, userdata,flags, rc, duck_properties):
-        logging.info("On publish " + str(rc))
-    
     
     # This is need for subscriber only
     def on_message(self,client, userdata, msg):
@@ -93,8 +89,6 @@ class MqttPublisher():
                 client = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION2,self.client_id)
                 client.username_pw_set(self.mqtt_user, self.mqtt_pass)
                 client.on_connect = self.on_connect
-                # for subscriber only
-                # client.on_message = self.on_message
                 client.connect("localhost", 1883, keepalive=120)
                 client.on_disconnect = self.on_disconnect
                 client.on_message = self.on_message
