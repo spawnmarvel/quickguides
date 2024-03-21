@@ -286,7 +286,7 @@ https://pypi.org/project/paho-mqtt/
 
 https://www.rabbitmq.com/docs/mqtt
 
-## Mini mqtt project
+## Mini mqtt project publish
 
 Lets assume the one sensors from below and test some concepts with Python and RabbitMQ.
 
@@ -321,10 +321,10 @@ and start the run_pub_sensor1.py
 
 ![3 queues](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/3_queues.jpg)
 
+We get data on all 3 queues.
 
-run_pub_sensor1.py test.
 
-If the publsiher is not subscrbing to a topic,but only pushing:
+If the publisher is not subscribing to a topic,but only pushing:
 
 ```py
 
@@ -349,20 +349,9 @@ If we now send data, we are just pushing to a topic
 ![No subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_subscribe.jpg)
 
 
-We are making a client id that is used in the client.subscribe(), if we use the method again
-
-```py
-# Generate a Client ID with the publish prefix.
-        ran = random.randint(0, 10000)
-        self.client_id = "publish-" + str(ran)
-```
-
-We get a queue with id
-
-![Publisher subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_subscribe.jpg)
 
 
-**run_sub_sensor1.py**
+## Mini mqtt project subscribe
 
 
 
