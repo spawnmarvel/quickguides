@@ -328,16 +328,22 @@ After stopping run_pub_sensor1.py
 ![Pub stop](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_stop.jpg)
 
 
-Publish
+## Mini mqtt project 2
+
+
+We still publish to
+
 * myhome/livingroom/temperature/sensor1
 
-RabbitMQ queue subscribe
+We denfine 3 queues witk amq.topic and routing key.
+
 * myhome.livingroom.#
 * myhome.livingroom.temperature.#
 * myhome.livingroom.temperature.sensor1.#
 
-Lets define 3 queue 
+and start the run_pub_sensor1.py
 
+![3 queues](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/3_queues.jpg)
 
 
 run_pub_sensor1.py change
