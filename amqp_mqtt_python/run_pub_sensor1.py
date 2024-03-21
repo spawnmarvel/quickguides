@@ -66,7 +66,10 @@ class MqttPublisher():
         self.exit_flag = True
 
     
-
+    def on_publish(self, client, userdata,flags, rc, duck_properties):
+        logging.info("On publish " + str(rc))
+    
+    
     # This is ned for subscriber only
     #def on_message(self,client, userdata, msg):
     #    logging.info(f'Received `{msg.payload.decode()}` from `{msg.topic}` topic')
@@ -86,6 +89,7 @@ class MqttPublisher():
                 # client.on_message = self.on_message
                 client.connect("localhost", 1883, keepalive=120)
                 client.on_disconnect = self.on_disconnect
+                client.on_publish = self.on_publish
                 con_status = True
                 self.simulate_wait()
                 return client
