@@ -307,33 +307,11 @@ Json example:
 ```
 
 
-run_pub_sensor1.py
-
-Start RabbitMQ after the app
-
-![Reconnct](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/reconnect.jpg)
-
-https://www.emqx.com/en/blog/how-to-use-mqtt-in-python#prepare-an-mqtt-broker
-
-
-RabbitMQ
-
-![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume1.jpg)
-
-
-After stopping run_pub_sensor1.py
-
-![Pub stop](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_stop.jpg)
-
-
-## Mini mqtt project 2
-
-
-We still publish to
+We publish to
 
 * myhome/livingroom/temperature/sensor1
 
-We denfine 3 queues witk amq.topic and routing key.
+We deffine 3 queues with amq.topic and routing key.
 
 * myhome.livingroom.#
 * myhome.livingroom.temperature.#
