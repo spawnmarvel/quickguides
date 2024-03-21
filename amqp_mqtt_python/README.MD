@@ -28,11 +28,19 @@ RabbitMQ supports most MQTT 5.0 features including the following:
 
 ## Limitations
 
+Covered after mini project below
+
 ### Mapping MQTT to the AMQP 0.9.1 model
+
+Covered after mini project below
 
 ### Queue Types
 
+Covered after mini project below
+
 ### Queue Properties and Arguments
+
+Covered after mini project below
 
 ### Topic level separator and wildcards
 
@@ -53,6 +61,8 @@ Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.lond
 
 ### Using Quorum Queues
 
+Covered after mini project below
+
 ### MQTT QoS 0 queue type
 
 The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
@@ -63,6 +73,8 @@ The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions ar
 
 
 ### Overload protection
+
+Covered after mini project below
 
 
 https://www.rabbitmq.com/docs/mqtt
@@ -369,6 +381,68 @@ Lets start the publisher.
 And check that messages is incoming to queues and subscriber.
 
 ![Pub sub](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_sub.jpg)
+
+At this point RabbitMQ was just a broker between pub and sub.
+
+We also stored all messages in the 3 queues.
+
+# Get to know what rabbitmq can do
+
+## Supported MQTT features
+
+RabbitMQ supports most MQTT 5.0 features including the following:
+
+* QoS 0 (at most once) and QoS 1 (at least once) publish & subscribe
+* TLS, OAuth 2.0
+* Clean and non-clean sessions
+* Message Expiry Interval
+* Subscription Identifier and Subscription Options
+* Will messages including Will Delay Interval
+* Request / Response including interoperability with other protocols such as AMQP 0.9.1 and AMQP 1.0
+* Topic Alias
+* Retained messages with the limitations described in section Retained Messages and Stores
+* MQTT over a WebSocket via the RabbitMQ Web MQTT Plugin
+
+
+## Limitations
+
+### Mapping MQTT to the AMQP 0.9.1 model
+
+### Queue Types
+
+### Queue Properties and Arguments
+
+### Topic level separator and wildcards
+
+
+For example, MQTT topic cities/london becomes AMQP 0.9.1 topic cities.london and vice versa. Therefore, when an MQTT client publishes a message with topic cities/london, if an AMQP 0.9.1 client wants to receive that message, it should create a binding from its queue to the topic exchange with binding key cities.london.
+
+Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.london, if an MQTT client wants to receive that message, it should create an MQTT subscription with topic filter cities/london.
+
+| MQTT          | AMQP 0.9.1    | Description |
+| ------------- | ------------- | ------------- |
+| / (slash)     | . (dot)       | topic level separator
+| + (plus)      | * (asterisk)  | single-level wildcard (match a single word)
+| # (hash)      | # (hash)      | multi-level wildcard (match zero or more words)
+
+* MQTT topics that have dots in them won't work as expected and are to be avoided
+* the same goes for AMQP 0-9-1 routing and binding keys that contains slashes.
+
+### Using Quorum Queues
+
+### MQTT QoS 0 queue type
+
+The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
+
+* Feature flag rabbit_mqtt_qos0_queue is enabled.
+* The MQTT client subscribes with QoS 0.
+* The MQTT 5.0 client connects with a Session Expiry Interval of 0, or the MQTT 3.1.1 client connects with CleanSession set to 1.
+
+
+### Overload protection
+
+
+https://www.rabbitmq.com/docs/mqtt
 
 ## Sparkplug Support
 
