@@ -362,7 +362,7 @@ Lets start the subscriber.
 
 Lets start the publisher.
 
-![Start publisher](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_pub.jpg)
+![Start publisher](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/start_publ.jpg)
 
 And check that messages is incoming to queues and subscriber.
 
