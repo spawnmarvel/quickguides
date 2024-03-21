@@ -319,12 +319,16 @@ RabbitMQ queue subscribe
 * myhome.livingroom.temperature.#
 * myhome.livingroom.temperature.sensor1.#
 
+Start RabbitMQ after the app
 
 ![Reconnct](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/reconnect.jpg)
 
 https://www.emqx.com/en/blog/how-to-use-mqtt-in-python#prepare-an-mqtt-broker
 
 
+RabbitMQ
+
+![Consume](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/consume.jpg)
 
 
 
