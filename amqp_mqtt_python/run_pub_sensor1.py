@@ -47,7 +47,7 @@ class MqttPublisher():
             # this is for subscriber
             # we should always subscribe from on_connect callback to be sure
             # our subscribed is persisted across reconnections.
-            # client.subscribe("$SYS/#")
+            client.subscribe("$SYS/#")
             # client.subscribe(self.mqtt_topic)
         else:
             logging.info("Failed to connect, return code " + str(rc))
@@ -78,8 +78,8 @@ class MqttPublisher():
     
     
     # This is need for subscriber only
-    #def on_message(self,client, userdata, msg):
-    #    logging.info(f'Received `{msg.payload.decode()}` from `{msg.topic}` topic')
+    def on_message(self,client, userdata, msg):
+        logging.info("Received " + str(msg.payload.decode()) + " from " + str(msg.topic) + "topic")
 
 
     def connect_mqtt(self):

@@ -311,14 +311,6 @@ Json example:
 
 run_pub_sensor1.py
 
-Publish
-* myhome/livingroom/temperature/sensor1
-
-RabbitMQ queue subscribe
-* myhome.livingroom.#
-* myhome.livingroom.temperature.#
-* myhome.livingroom.temperature.sensor1.#
-
 Start RabbitMQ after the app
 
 ![Reconnct](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/reconnect.jpg)
@@ -336,6 +328,18 @@ After stopping run_pub_sensor1.py
 ![Pub stop](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_stop.jpg)
 
 
+Publish
+* myhome/livingroom/temperature/sensor1
+
+RabbitMQ queue subscribe
+* myhome.livingroom.#
+* myhome.livingroom.temperature.#
+* myhome.livingroom.temperature.sensor1.#
+
+Lets define 3 queue 
+
+
+
 run_pub_sensor1.py change
 
 ```py
@@ -348,7 +352,7 @@ run_pub_sensor1.py change
             # this is for subscriber
             # we should always subscribe from on_connect callback to be sure
             # our subscribed is persisted across reconnections.
-            # client.subscribe("$SYS/#")
+            client.subscribe("$SYS/#")
             # client.subscribe(self.mqtt_topic)
         else:
             logging.info("Failed to connect, return code " + str(rc))
@@ -359,6 +363,20 @@ run_pub_sensor1.py change
 If we now send data, we are just pushing to a topic
 
 ![No cosumer](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/no_consume.jpg)
+
+
+We are making a client id that is used in the client.subscribe(), if we use the method again
+
+```py
+# Generate a Client ID with the publish prefix.
+        ran = random.randint(0, 10000)
+        self.client_id = "publish-" + str(ran)
+```
+
+We get a queue with id
+
+![Publisher subscribe](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/pub_subscribe.jpg)
+
 
 **run_sub_sensor1.py**
 
