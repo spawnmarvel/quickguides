@@ -10,6 +10,12 @@ https://www.rabbitmq.com/docs/mqtt
 rabbitmq-plugins enable rabbitmq_mqtt
 ```
 
+## Serving Millions of Clients with Native MQTT
+
+Covered after mini project below
+
+https://www.rabbitmq.com/blog/2023/03/21/native-mqtt
+
 ## Supported MQTT features
 
 RabbitMQ supports most MQTT 5.0 features including the following:
@@ -387,6 +393,39 @@ At this point RabbitMQ was just a broker between pub and sub.
 We also stored all messages in the 3 queues.
 
 # Get to know what rabbitmq can do
+
+## Serving Millions of Clients with Native MQTT
+
+* MQTT plugin parses MQTT messages and sends them directly to queues.
+* Native MQTT turns RabbitMQ into an MQTT broker opening the door for a broader set of IoT use cases.
+* Native MQTT ships in RabbitMQ 3.12.
+
+## New MQTT QoS 0 Queue Type
+
+* Native MQTT ships with a new RabbitMQ queue type called rabbit_mqtt_qos0_queue. 
+* To have the MQTT plugin create queues of that new queue type, the 3.12 feature flag with the same name rabbit_mqtt_qos0_queue must be enabled.
+
+In all RabbitMQ versions, the MQTT plugin creates a dedicated queue per MQTT subscriber, 0, 1 or 2 queues.
+
+* There are 0 queues for an MQTT connection if the MQTT client never sends a SUBSCRIBE packet. The MQTT client is only publishing messages.
+* There is 1 queue for an MQTT connection if the MQTT client creates one or multiple subscriptions with the same Quality of Service (QoS) level.
+* There are 2 queues for an MQTT connection if the MQTT client creates one or multiple subscriptions with both QoS 0 (at most once) and QoS 1 (at least once).
+
+Queue naming pattern mqtt-subscription-<MQTT client ID>qos[0|1] where <MQTT client ID> is the MQTT client identifier and [0|1] is either 0 for a QoS 0 subscription or 1 for a QoS 1 subscription.
+
+
+Figure 3 shows an MQTT subscriber that connects with CleanSession=1 and subscribes with QoS 0. Clean session means that the MQTT session lasts only as long as the network connection between client and server. 
+
+When the session ends, all session state in the server is deleted, which implies the queue gets auto deleted.
+
+As seen in Figure 3, each classic queue results in two additional Erlang processes: one supervisor process, and one worker process.
+
+
+
+![QoS 0 Queue Type](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/qos0_queue.jpg)
+
+
+https://www.rabbitmq.com/blog/2023/03/21/native-mqtt
 
 ## Supported MQTT features
 
