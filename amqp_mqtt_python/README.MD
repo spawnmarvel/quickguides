@@ -212,6 +212,11 @@ In all RabbitMQ versions, the MQTT plugin creates a dedicated queue per MQTT sub
 # client.subscribe(self.mqtt_topic)
 ```
 * There is 1 queue for an MQTT connection if the MQTT client creates one or multiple subscriptions with the same Quality of Service (QoS) level.
+
+```bash
+# client.subscribe("$SYS/#")
+client.subscribe(self.mqtt_topic)
+```
 * There are 2 queues for an MQTT connection if the MQTT client creates one or multiple subscriptions with both QoS 0 (at most once) and QoS 1 (at least once).
 
 Queue naming pattern mqtt-subscription-<MQTT client ID>qos[0|1] where <MQTT client ID> is the MQTT client identifier and [0|1] is either 0 for a QoS 0 subscription or 1 for a QoS 1 subscription.
