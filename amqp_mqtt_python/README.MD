@@ -394,7 +394,7 @@ We also stored all messages in the 3 queues.
 
 # Get to know what rabbitmq can do
 
-## Serving Millions of Clients with Native MQTT
+## Serving Millions of Clients with Native MQTT blog
 
 * MQTT plugin parses MQTT messages and sends them directly to queues.
 * Native MQTT turns RabbitMQ into an MQTT broker opening the door for a broader set of IoT use cases.
