@@ -402,6 +402,11 @@ We also stored all messages in the 3 queues.
 
 ## New MQTT QoS 0 Queue Type
 
+
+![Before mqtt to amqp](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/before.jpg)
+
+
+
 * Native MQTT ships with a new RabbitMQ queue type called rabbit_mqtt_qos0_queue. 
 * To have the MQTT plugin create queues of that new queue type, the 3.12 feature flag with the same name rabbit_mqtt_qos0_queue must be enabled.
 
