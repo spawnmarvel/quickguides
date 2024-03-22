@@ -206,6 +206,11 @@ We also stored all messages in the 3 queues.
 In all RabbitMQ versions, the MQTT plugin creates a dedicated queue per MQTT subscriber, 0, 1 or 2 queues.
 
 * There are 0 queues for an MQTT connection if the MQTT client never sends a SUBSCRIBE packet. The MQTT client is only publishing messages.
+
+```bash
+# client.subscribe("$SYS/#")
+# client.subscribe(self.mqtt_topic)
+```
 * There is 1 queue for an MQTT connection if the MQTT client creates one or multiple subscriptions with the same Quality of Service (QoS) level.
 * There are 2 queues for an MQTT connection if the MQTT client creates one or multiple subscriptions with both QoS 0 (at most once) and QoS 1 (at least once).
 
