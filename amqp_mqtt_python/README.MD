@@ -221,6 +221,7 @@ client.subscribe(self.mqtt_topic)
 
 Queue naming pattern mqtt-subscription-<MQTT client ID>qos[0|1] where <MQTT client ID> is the MQTT client identifier and [0|1] is either 0 for a QoS 0 subscription or 1 for a QoS 1 subscription.
 
+![Queue naming](https://github.com/spawnmarvel/quickguides/blob/main/amqp_mqtt_python/images/queue_naming.jpg)
 
 Figure 3 shows an MQTT subscriber that connects with CleanSession=1 and subscribes with QoS 0. Clean session means that the MQTT session lasts only as long as the network connection between client and server. 
 
