@@ -10,7 +10,7 @@ https://www.rabbitmq.com/docs/mqtt
 rabbitmq-plugins enable rabbitmq_mqtt
 ```
 
-## Serving Millions of Clients with Native MQTT
+## Serving Millions of Clients with Native MQTT (RabbitMQ 3.12. >)
 
 Covered after mini project below
 
