@@ -14,6 +14,10 @@ rabbitmq-plugins enable rabbitmq_mqtt
 
 Covered after mini project below
 
+Native MQTT turns RabbitMQ into an MQTT broker opening the door for a broader set of IoT use cases.
+
+Native MQTT ships in RabbitMQ 3.12.
+
 https://www.rabbitmq.com/blog/2023/03/21/native-mqtt
 
 ## Supported MQTT features
