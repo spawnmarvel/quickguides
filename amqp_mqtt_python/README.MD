@@ -481,3 +481,20 @@ mqtt.sparkplug = true
 ```
 
 https://www.rabbitmq.com/docs/mqtt#sparkplug-support
+
+
+## Rabbitmq MQTT / Persistent queue
+
+Example:
+1. Create a queue Q1 (e.g. via your AMQP 0.9.1 client or via the Management UI).
+2. Bind Q1 to the topic exchange called "amq.topic" (that exchange is already created by RabbitMQ) with routing key for example "mytopic".
+3. Create an MQTT connection which publishes with QoS 1 to topic "mytopic".
+4. Optionally, disconnect your MQTT publishing connection.
+5. Depending on whether your AMQP 0.9.1 client is already connected or not, make sure it connects and consumes from queue Q1. The message should then arrive in your AMQP consuming app.
+
+The important part here is that Q1 (not created by the MQTT plugin) must exist at the point in time your MQTT connection is publishing such that the message will be routed to Q1.
+(Whether Q1 is a classic queue or quorum queue does not really matter for the purpose of this test. Of course, if you want high availability and message safety, use a quorum queue.)
+
+
+
+https://groups.google.com/g/rabbitmq-users/c/Gq4Gxh2rgVg?pli=1
