@@ -32,22 +32,6 @@ RabbitMQ supports most MQTT 5.0 features including the following:
 * MQTT over a WebSocket via the RabbitMQ Web MQTT Plugin
 
 
-## Limitations
-
-Covered after mini project below
-
-### Mapping MQTT to the AMQP 0.9.1 model
-
-Covered after mini project below
-
-### Queue Types
-
-Covered after mini project below
-
-### Queue Properties and Arguments
-
-Covered after mini project below
-
 ### Topic level separator and wildcards
 
 The MQTT protocol specification defines slash ("/") as topic level separator whereas AMQP 0-9-1 defines a dot (".") as topic level separator. This plugin translates patterns under the hood to bridge the two.
@@ -64,23 +48,6 @@ Vice versa, when an AMQP 0.9.1 client publishes a message with topic cities.lond
 
 * MQTT topics that have dots in them won't work as expected and are to be avoided
 * the same goes for AMQP 0-9-1 routing and binding keys that contains slashes.
-
-### Using Quorum Queues
-
-Covered after mini project below
-
-### MQTT QoS 0 queue type
-
-The MQTT plugin creates an MQTT QoS 0 queue if the following three conditions are met:
-
-* Feature flag rabbit_mqtt_qos0_queue is enabled.
-* The MQTT client subscribes with QoS 0.
-* The MQTT 5.0 client connects with a Session Expiry Interval of 0, or the MQTT 3.1.1 client connects with CleanSession set to 1.
-
-
-### Overload protection
-
-Covered after mini project below
 
 
 https://www.rabbitmq.com/docs/mqtt
