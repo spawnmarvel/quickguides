@@ -166,7 +166,7 @@ NSG for HTTP
 ![Frontend](https://github.com/spawnmarvel/quickguides/blob/main/zabbix/images/singlezabbix2.jpg)
 
 
-## Upgrade minor from 6.0.26 to 6.0.27
+## Upgrade minor from 6.0.26 to 6.0.27. Port 443 to repo.zabbix.com
 
 Upgrade between minor versions
 It is possible to upgrade minor versions of 6.0.x (for example, from 6.0.1 to 6.0.3). It is easy.
