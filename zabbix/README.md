@@ -44,6 +44,8 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 # Step 2 — Configuring Apache to Use SSL
 # Creating an Apache Configuration Snippet with Strong Encryption Settings
 # sudo nano /etc/apache2/conf-available/ssl-params.conf
+# HTTP Strict Transport Security, or HSTS, can do that in config
+
 # Next, you’ll modify /etc/apache2/sites-available/default-ssl.conf
 sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak
 
