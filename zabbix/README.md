@@ -39,6 +39,10 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 ```bash
 
+# from clean install with http
+http://server_domain_or_IP
+# to
+
 # Step 1 — Creating the SSL Certificate
 
 # Step 2 — Configuring Apache to Use SSL
@@ -104,6 +108,9 @@ sudo a2ensite default-ssl
 
 # Check to make sure that there are no syntax errors in your files with a test:
 sudo apache2ctl configtest
+
+# If your output has Syntax OK in it
+sudo systemctl restart apache2
 
 # Step 5 — Testing Encryption
 https://server_domain_or_IP
