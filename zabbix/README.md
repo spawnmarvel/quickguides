@@ -39,6 +39,30 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 ```bash
 
+# Step 1 — Creating the SSL Certificate
+
+# Step 2 — Configuring Apache to Use SSL
+
+# Step 3 — Adjusting the Firewall
+
+# Step 4 — Enabling the Changes in Apache
+
+# Enable mod_ssl, the Apache SSL module, and mod_headers, which is needed by some of the settings in the SSL snippet, with the a2enmod command
+sudo a2enmod ssl
+# sudo a2enmod headers
+
+# Next, enable your SSL Virtual Host with the a2ensite command:
+sudo a2ensite default-ssl
+
+# You’ll also need to enable your ssl-params.conf file, to read in the values you set:
+# sudo a2enconf ssl-params
+
+# Check to make sure that there are no syntax errors in your files with a test:
+sudo apache2ctl configtest
+
+# Step 5 — Testing Encryption
+https://server_domain_or_IP
+
 ```
 
 ```bash
