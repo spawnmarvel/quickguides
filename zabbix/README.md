@@ -33,6 +33,14 @@ Other than setting your web frontend URL within Zabbix to https://, ignore zabbi
 
 Treat it as enabling SSL for apache.
 
+Digital Ocean
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
+
+```bash
+
+```
+
 ```bash
 
 # I installed SSL on Zabbix 6 on Ubuntu 20.04.6 LTS by doing the following:
