@@ -42,8 +42,51 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 # Step 1 — Creating the SSL Certificate
 
 # Step 2 — Configuring Apache to Use SSL
+# Creating an Apache Configuration Snippet with Strong Encryption Settings
+# sudo nano /etc/apache2/conf-available/ssl-params.conf
+# Next, you’ll modify /etc/apache2/sites-available/default-ssl.conf
+sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak
+
+sudo nano /etc/apache2/sites-available/default-ssl.conf
+
+<IfModule mod_ssl.c>
+        <VirtualHost _default_:443>
+                ServerAdmin your_email@example.com
+                ServerName server_domain_or_IP
+
+                DocumentRoot /var/www/html
+
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+                SSLEngine on
+
+                SSLCertificateFile      /etc/ssl/certs/apache-selfsigned.crt
+                SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+
+                <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                                SSLOptions +StdEnvVars
+                </FilesMatch>
+                <Directory /usr/lib/cgi-bin>
+                                SSLOptions +StdEnvVars
+                </Directory>
+
+        </VirtualHost>
+</IfModule>
+
+# To adjust the unencrypted Virtual Host file to redirect all traffic to be SSL encrypted, open the /etc/apache2/sites-available/000-default.conf file:
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+<VirtualHost *:80>
+        . . .
+
+        Redirect "/" "https://your_domain_or_IP/"
+
+        . . .
+</VirtualHost>
 
 # Step 3 — Adjusting the Firewall
+# If you have the ufw firewall enabled, as recommended by the prerequisite guides, you might need to adjust the settings to allow for SSL traffic.
 
 # Step 4 — Enabling the Changes in Apache
 
