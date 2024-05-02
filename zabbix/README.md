@@ -44,6 +44,12 @@ http://server_domain_or_IP
 # to
 
 # Step 1 — Creating the SSL Certificate
+openssl version
+OpenSSL 1.1.1f  31 Mar 2020
+
+openssl req -new -newkey rsa:2048 -nodes -keyout server01.domain.net.key -out server01.domain.net.csr
+
+# CN = server01.domain.net
 
 # Step 2 — Configuring Apache to Use SSL
 # Creating an Apache Configuration Snippet with Strong Encryption Settings
@@ -58,7 +64,7 @@ sudo nano /etc/apache2/sites-available/default-ssl.conf
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
                 ServerAdmin your_email@example.com
-                ServerName server_domain_or_IP
+                ServerName server01.domain.net
 
                 DocumentRoot /var/www/html
 
