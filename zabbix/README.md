@@ -33,7 +33,7 @@ Other than setting your web frontend URL within Zabbix to https://, ignore zabbi
 
 Treat it as enabling SSL for apache.
 
-Digital Ocean
+Digital Ocean start
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
 
@@ -86,17 +86,6 @@ sudo nano /etc/apache2/sites-available/default-ssl.conf
         </VirtualHost>
 </IfModule>
 
-# To adjust the unencrypted Virtual Host file to redirect all traffic to be SSL encrypted, open the /etc/apache2/sites-available/000-default.conf file:
-sudo nano /etc/apache2/sites-available/000-default.conf
-
-<VirtualHost *:80>
-        . . .
-
-        Redirect "/" "https://your_domain_or_IP/"
-
-        . . .
-</VirtualHost>
-
 # Step 3 — Adjusting the Firewall
 # If you have the ufw firewall enabled, as recommended by the prerequisite guides, you might need to adjust the settings to allow for SSL traffic.
 
@@ -119,9 +108,40 @@ sudo apache2ctl configtest
 sudo systemctl restart apache2
 
 # Step 5 — Testing Encryption
-https://server_domain_or_IP
+# https://server_domain_or_IP
+
+# when https works
+
+# To adjust the unencrypted Virtual Host file to redirect all traffic to be SSL encrypted, open the /etc/apache2/sites-available/000-default.conf file:
+cd /etc/apache2/sites-available
+
+sudo cp 000-default.conf 000-default.conf.bak
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+<VirtualHost *:80>
+        . . .
+
+        Redirect "/" "https://your_domain_or_IP/"
+
+        . . .
+</VirtualHost>
+
+
+# Check to make sure that there are no syntax errors in your files with a test:
+sudo apache2ctl configtest
+
+# If your output has Syntax OK in it
+sudo systemctl restart apache2
+
+
+# http://server_domain_or_IP should redirect to https://server_domain_or_IP
 
 ```
+
+Digital Ocean end
+
+Next
 
 ```bash
 
