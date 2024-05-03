@@ -122,7 +122,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 <VirtualHost *:80>
         . . .
 
-        Redirect "/" "https://your_domain_or_IP/"
+        Redirect "/" "https://server01.domain.net/zabbix"
 
         . . .
 </VirtualHost>
