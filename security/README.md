@@ -51,6 +51,9 @@ Use a VPN: Consider using a virtual private network (VPN) to encrypt and secure 
 Use access controls: Use access controls such as user authentication and authorization to ensure that only authorized individuals can access the data.
 Use a reputable service provider: Choose a reputable service provider with a track record of security and data protection.
 
+# API security
+
+![TLS](https://github.com/spawnmarvel/quickguides/blob/main/security/api.jpg)
 
 # General security PKI
 
