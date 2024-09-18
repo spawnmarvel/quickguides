@@ -50,7 +50,8 @@ https://developer.wordpress.org/rest-api/
 ## Create a tag database with MySql
 
 * Userbase : 250
-* Make a tag db and set restiction on tags
+* Make a tag db and set restriction on tags
+* Used for make an organized chaos with tags
 
 Example tags for customer and product:
 
