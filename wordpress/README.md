@@ -46,3 +46,58 @@ https://developer.wordpress.org/rest-api/reference/pages/#create-a-page
 
 
 https://developer.wordpress.org/rest-api/
+
+## Create a tag database with MySql
+
+* Userbase : 250
+* Make a tag db and set restiction on tags
+
+Example
+
+| Entity              | Tag 1:segment |  Tag 2: Supplier |
+| -------------       | ------------- | -------------    |
+| Customer Oil Inc    | oil           |                  |
+| Customer Gas Inc    | gas           |                  |
+| Customer Food Inc   | food          |                  |
+| Product MonitorLane |               | softlane         | 
+| Product GasMonitor  |               | limasolutions    |
+| Product WasherSink  |               | limasolutions    |
+
+Misc:
+* Install
+* Configure
+* Troubleshoot
+* OPC, OPCAE
+* MEC
+* License
+
+MySQL row:
+
+| Id       |  Tag           | Description  |
+| -------- | -------------  | ------------ |
+| AutoInc  | oil            | All customers that produces oil  |
+| AutoInc  | gas            | All customers that produces gas  |
+| AutoInc  | food           | All customers that produces food |
+| AutoInc  | softlane       | Supplier  |
+| AutoInc  | limasolutions  | Supplier  |
+| AutoInc  | Install        | Install   |
+| AutoInc  | configure      | Configure |
+| AutoInc  | troubleshoot   | How to troubleshoot and support   |
+| AutoInc  | opc            | Open platform communication       |
+| AutoInc  | opcae          | Open platform communication Alarm  and events |
+| AutoInc  | mec            | Mechanical engineering   |
+| AutoInc  | license        | License description   |
+
+
+
+
+
+
+*** MySql: Chapter 5 Connector/Python Coding Examples***
+
+https://dev.mysql.com/doc/connector-python/en/connector-python-examples.html
+
+
+*** Deploying a Flask Application via the Apache Server ***
+
+https://www.opensourceforu.com/2023/03/deploying-a-flask-application-via-the-apache-server/
