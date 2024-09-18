@@ -52,7 +52,7 @@ https://developer.wordpress.org/rest-api/
 * Userbase : 250
 * Make a tag db and set restiction on tags
 
-Example
+Example tags for customer and product:
 
 | Entity              | Tag 1:segment |  Tag 2: Supplier |
 | -------------       | ------------- | -------------    |
@@ -63,7 +63,8 @@ Example
 | Product GasMonitor  |               | limasolutions    |
 | Product WasherSink  |               | limasolutions    |
 
-Misc:
+Misc tags:
+
 * Install
 * Configure
 * Troubleshoot
