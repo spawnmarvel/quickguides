@@ -55,7 +55,7 @@ https://developer.wordpress.org/rest-api/
 
 Example tags for customer and product:
 
-| Entity              | Tag 1:segment |  Tag 2: Supplier |
+| Entity              | Tag 1:Segment |  Tag 2: Supplier |
 | -------------       | ------------- | -------------    |
 | Customer Oil Inc    | oil           |                  |
 | Customer Gas Inc    | gas           |                  |
@@ -69,9 +69,11 @@ Misc tags:
 * Install
 * Configure
 * Troubleshoot
-* OPC, OPCAE
+* OPC
+* OPCAE
 * MEC
 * License
+* MQTT
 
 MySQL row:
 
@@ -89,6 +91,7 @@ MySQL row:
 | AutoInc  | opcae          | Open platform communication Alarm  and events |
 | AutoInc  | mec            | Mechanical engineering   |
 | AutoInc  | license        | License description   |
+| AutoInc  | mqtt           | Message Queuing Telemetry Transport   |
 
 
 
