@@ -1,5 +1,7 @@
--- RITM3447673 TRB - TWEL-prosjekt - Tagvedlikehold
--- Ny softag- gjennomsnittseffekt forrige døgn (MW) x 24 timer (h)
+
+-- Source tag avg y day (MW) x 24  (h) = MWh
+-- Run the script after midnight and run it once a day
+
 local val real;
 local ts_midnight	timestamp;
 local ts_next_day	timestamp;
