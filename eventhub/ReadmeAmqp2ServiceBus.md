@@ -166,7 +166,8 @@ To:
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 ```
 
-Shovel update tls, not mtls (and nothing to do with AEH or ASB, just plain shovel stuff):
+---- This is just a place holder for the shovel application format after Erlang 26 --
+Shovel update tls 04.10.2024, not mtls (and nothing to do with AEH or ASB, just plain shovel stuff):
 
 * Windows OS: Client app (running shovel) AMQP and Erlang > 26, (VERIFY_PEER by default)
 * Windows OS: Server app AMQP and Erlang <=> 26 with tls enabled
@@ -182,6 +183,8 @@ Shovel:
 ```log
 amqps://user:password@xx.xx.xx.xx:5671?cacertfile=path:\\to\\folder\\serverca.pem&verify=verify_none
 ```
+
+---- This is just a place holder for the shovel application format after Erlang 26 --
 
 ###  (Note Url encode Python helper)
 
