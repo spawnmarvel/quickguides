@@ -166,6 +166,23 @@ To:
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 ```
 
+Shovel update tls, not mtls (and nothing to do with AEH or ASB, just plain shovel stuff):
+
+* Windows OS: Client app (running shovel) AMQP and Erlang > 26, (VERIFY_PEER by default)
+* Windows OS: Server app AMQP and Erlang <=> 26 with tls enabled
+* Copy the root cert from server app to client app on serverca.pem format
+* Build the shovel string
+
+You will have to use this format for the shovel or client at least.
+You can also check with true and add SNI:
+
+verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2
+
+Shovel:
+```log
+amqps://user:password@xx.xx.xx.xx:5671?cacertfile=path:\\to\\folder\\serverca.pem&verify=verify_none
+```
+
 ###  (Note Url encode Python helper)
 
 (https://gist.github.com/spawnmarvel/15d124a63030c5743c50895926d1e221)
