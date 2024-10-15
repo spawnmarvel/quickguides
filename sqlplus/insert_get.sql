@@ -17,7 +17,7 @@ write 'Opc; '||opc||'; Tag: '||tagname;
 --slå av io_processing på record
 --SET EXPAND_REPEAT = 1; --occurrence
 --INSERT INTO my_get_rec_03(IO_TAGNAME, "IO_VALUE_RECORD&&FLD", IO_DATA_TYPE, IO_DATA_PROCESSING)
---values (opc, tagname, 'Real', 'ON');
+--values (opc, tagname, 'Default', 'ON');
 c = c +1;
 
 End
