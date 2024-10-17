@@ -1,3 +1,4 @@
+-- ·         Minimize the number of Aspen InfoPlus.21 database accesses
 -- Each database transaction, whether read or write, locks the entire Aspen InfoPlus.21 database for the duration of the transaction.  This means that while a query accesses the database, other queries (and indeed all other Aspen InfoPlus.21 applications) have to wait.
 
 -- Consider the following query:
