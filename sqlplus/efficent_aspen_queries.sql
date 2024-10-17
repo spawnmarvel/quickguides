@@ -269,7 +269,7 @@ LoLo = ATCAI.IP_Low_Low_Limit;
 
  
 
---- By combining a select statement with a for loop, you can initialize the same four variables with only one read to the database as the following example shows:
+-- By combining a select statement with a for loop, you can initialize the same four variables with only one read to the database as the following example shows:
 
  
 
