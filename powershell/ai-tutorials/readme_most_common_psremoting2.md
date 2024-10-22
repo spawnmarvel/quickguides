@@ -109,3 +109,93 @@ This will run the `Get-Process` cmdlet on the remote computer and display the re
 ----------
 
 In this tutorial, you learned how to enable PSRemoting on a local computer and create a remote session to a remote computer. You also learned how to run commands on a remote computer using the `Invoke-Command` cmdlet. Finally, you learned how to disable PSRemoting on a local computer and configure the Windows Firewall to allow PowerShell Remoting.
+
+# Can PSRemoting be used the same way as ansible, please make a tutorial about it with examples.
+
+## **Using PSRemoting as a Configuration Management Tool**
+=====================================================
+
+While PSRemoting is not a full-fledged configuration management tool like Ansible, it can be used to manage and configure multiple Windows systems remotely. In this tutorial, we will explore how to use PSRemoting to manage and configure multiple Windows systems.
+
+**Prerequisites**
+-----------------
+
+* Windows PowerShell 2.0 or later
+* Windows operating system (Windows 7, Windows 8, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2016, Windows Server 2019)
+* PSRemoting enabled on all target systems
+
+**PSRemoting vs Ansible**
+-------------------------
+
+Here's a comparison of PSRemoting and Ansible:
+
+| Feature | PSRemoting | Ansible |
+| --- | --- | --- |
+| Platform Support | Windows only | Multi-platform |
+| Configuration Management | Limited | Advanced |
+| Automation | Limited | Advanced |
+| Inventory Management | No | Yes |
+| Playbook/Script Support | No | Yes |
+
+**Using PSRemoting for Configuration Management**
+----------------------------------------------
+
+While PSRemoting is not a full-fledged configuration management tool, it can be used to manage and configure multiple Windows systems remotely. Here are some examples:
+
+### Example 1: Running a Command on Multiple Systems
+
+To run a command on multiple systems, you can use the `Invoke-Command` cmdlet:
+```powershell
+$servers = @("server1", "server2", "server3")
+Invoke-Command -ComputerName $servers -ScriptBlock { Get-Process }
+```
+This will run the `Get-Process` cmdlet on each of the specified servers and display the results.
+
+### Example 2: Installing Software on Multiple Systems
+
+To install software on multiple systems, you can use the `Invoke-Command` cmdlet:
+```powershell
+$servers = @("server1", "server2", "server3")
+Invoke-Command -ComputerName $servers -ScriptBlock { Install-Package -Name "SoftwarePackage" }
+```
+This will install the specified software package on each of the specified servers.
+
+### Example 3: Configuring Firewall Rules on Multiple Systems
+
+To configure firewall rules on multiple systems, you can use the `Invoke-Command` cmdlet:
+```powershell
+$servers = @("server1", "server2", "server3")
+Invoke-Command -ComputerName $servers -ScriptBlock { New-NetFirewallRule -DisplayName "Allow Incoming Traffic" -Direction Inbound -Protocol TCP -LocalPort 80 }
+```
+This will create a new firewall rule on each of the specified servers to allow incoming traffic on port 80.
+
+**Using PSRemoting with PowerShell Scripts**
+------------------------------------------
+
+You can use PSRemoting with PowerShell scripts to automate tasks on multiple systems. Here's an example:
+```powershell
+# script.ps1
+param (
+    [string[]]$servers
+)
+
+Invoke-Command -ComputerName $servers -ScriptBlock {
+    # Install software
+    Install-Package -Name "SoftwarePackage"
+
+    # Configure firewall rules
+    New-NetFirewallRule -DisplayName "Allow Incoming Traffic" -Direction Inbound -Protocol TCP -LocalPort 80
+
+    # Restart the system
+    Restart-Computer -Force
+}
+
+# Run the script
+.\script.ps1 -servers @("server1", "server2", "server3")
+```
+This script will install software, configure firewall rules, and restart each of the specified servers.
+
+**Conclusion**
+----------
+
+In this tutorial, we explored how to use PSRemoting as a configuration management tool to manage and configure multiple Windows systems remotely. While PSRemoting is not a full-fledged configuration management tool like Ansible, it can be used to automate tasks on multiple systems. By using PSRemoting with PowerShell scripts, you can automate complex tasks and simplify your system administration tasks.
