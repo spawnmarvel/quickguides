@@ -1,0 +1,112 @@
+# Load the JSON content from a file
+$jsonPath = "C:\temp\json\config.json"
+
+# Read and parse the JSON file
+try {
+    $jsonContent = Get-Content -Path $jsonPath -Raw
+    $jsonData = $jsonContent | ConvertFrom-Json
+}
+catch {
+    Write-Error "Error reading or parsing JSON file: $_"
+    exit
+}
+
+# Access the 'main' object
+if (-not $jsonData.main) {
+    Write-Error "'main' property not found in JSON."
+    exit
+}
+
+$main = $jsonData.main
+
+# Display main details
+Write-Host "Main ID: $($main.id)"
+Write-Host "Main Value: $($main.value)"
+Write-Host "---------------------------"
+
+# Access the 'taglist' array
+if (-not $main.tags.taglist) {
+    Write-Error "'tags.taglist' property not found in JSON."
+    exit
+}
+
+$tags = $main.tags.taglist
+
+# Define action functions based on 'info' codes
+function ActionA {
+    Write-Host "Executing Action A: Handling info code 123456."
+    # Insert Action A logic here
+}
+
+function ActionB {
+    Write-Host "Executing Action B: Handling info code 456789."
+    # Insert Action B logic here
+}
+
+function ActionC {
+    Write-Host "Executing Action C: Handling info code 789012."
+    # Insert Action C logic here
+}
+
+# Iterate through each tag and perform actions based on 'info'
+foreach ($tag in $tags) {
+    Write-Host "Processing Tag: $($tag.value)"
+    Write-Host "Info Code: $($tag.info)"
+    
+    switch ($tag.info) {
+        "123456" {
+            ActionA
+        }
+        "456789" {
+            ActionB
+        }
+        "789012" {
+            ActionC
+        }
+        default {
+            Write-Host "No action defined for info code: $($tag.info)"
+        }
+    }
+    
+    Write-Host "---------------------------"
+}
+
+# Example Modifications:
+
+# 1. Add a new tag
+$newTag = @{
+    value = "tag5"
+    info  = "654321"
+}
+$main.tags.taglist += $newTag
+Write-Host "Added new tag: $($newTag.value) with info: $($newTag.info)"
+Write-Host "---------------------------"
+
+# 2. Remove a tag (e.g., tag2)
+$tagToRemove = "tag2"
+$main.tags.taglist = $main.tags.taglist | Where-Object { $_.value -ne $tagToRemove }
+Write-Host "Removed tag: $tagToRemove"
+Write-Host "---------------------------"
+
+# 3. Update a tag's info (e.g., tag1's info to '111111')
+$tagToUpdate = "tag1"
+$newInfo = "111111"
+foreach ($tag in $main.tags.taglist) {
+    if ($tag.value -eq $tagToUpdate) {
+        $tag.info = $newInfo
+        Write-Host "Updated $($tag.value)'s info to $newInfo"
+    }
+}
+Write-Host "---------------------------"
+
+# Display the updated taglist
+Write-Host "Updated Tag List:"
+$main.tags.taglist | ForEach-Object {
+    Write-Host "Tag Value: $($_.value), Tag Info: $($_.info)"
+}
+Write-Host "---------------------------"
+
+# Export the updated JSON to a new file
+$updatedJson = $jsonData | ConvertTo-Json -Depth 10
+$updatedJson | Out-File -FilePath "data_updated.json" -Encoding utf8
+Write-Host "Updated JSON has been saved to 'data_updated.json'."
