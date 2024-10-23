@@ -2,6 +2,12 @@
 
 ## No, **PS Remoting** is not exactly the same as **WinRM** (Windows Remote Management), but they are closely related.
 
+In essence, PS-Remoting is a specific application of WinRM that is tailored for PowerShell.
+
+Analogy:
+
+Imagine a car. The engine (WinRM) provides the power, but you need the steering wheel, pedals, and dashboard (PS-Remoting) to actually drive and control the car.
+
 ### **PS Remoting**:
 - **PS Remoting** (PowerShell Remoting) is a feature in PowerShell that allows you to run PowerShell commands on remote computers. It enables interactive management of remote systems using PowerShell cmdlets and scripts.
 - PS Remoting uses the **WSMan** (Web Services for Management) protocol, which is the underlying protocol that **WinRM** implements.
