@@ -57,6 +57,10 @@ openssl version
 ```
 * It should be OpenSSL 1.1.1m 14 Dec 2021
 
+* * Update 05.11.2024 not tested, https://www.sslshopper.com/ssl-converter.html
+* * Public key is embedded in the SSL certificate and Private key is stored on the server and kept secret.
+* * Only possible on linux? Seems so
+
 * 4.2 Run the following command to extract the private key:
 ```cmd
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
