@@ -279,6 +279,8 @@ Latest News, https://www.openssl.org/
 ```cmd
 # Path to bin, set this after
 ERLANG_HOME=C:\Program Files\erl-24.2 (i.e version)
+
+echo %ERLANG_HOME%
 ```
 
 * 2 Set RabbitMQ environments
