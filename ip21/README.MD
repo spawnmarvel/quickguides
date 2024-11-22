@@ -75,3 +75,13 @@ https://esupport.aspentech.com/S_Article?id=000017720
 ## How to change in Aspen Calc the Aspen InfoPlus.21 server name when server has been moved or renamed?
 
 How to change in Aspen Calc the Aspen InfoPlus.21 server name when server has been moved or renamed?
+
+## How to collect logging information for Aspen SQLplus applications and TSK_SQL_SERVER
+
+https://esupport.aspentech.com/S_Article?id=000065645
+
+## How to Use the Infoplus-21 Lock Metrics
+
+Infoplus.21 (IP.21) users may encounter database performance issues due to excessive locking. To identify and address these issues, IP.21 provides a utility called Lock Metrics that can be used to monitor database locks.
+
+https://esupport.aspentech.com/S_Article?id=000102341
