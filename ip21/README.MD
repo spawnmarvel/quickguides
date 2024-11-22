@@ -75,8 +75,3 @@ https://esupport.aspentech.com/S_Article?id=000017720
 ## How to change in Aspen Calc the Aspen InfoPlus.21 server name when server has been moved or renamed?
 
 How to change in Aspen Calc the Aspen InfoPlus.21 server name when server has been moved or renamed?
-
-
-## How do I change the computer name or nodename of the Aspen InfoPlus.21 server?
-
-https://esupport.aspentech.com/S_Article?id=000017668
