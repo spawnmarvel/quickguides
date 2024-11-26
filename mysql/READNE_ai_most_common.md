@@ -212,3 +212,224 @@ Note: This is just a basic tutorial and there are many more advanced topics in M
 **Conclusion**
 
 In this tutorial, you learned the basics of MySQL, including creating databases, tables, and indexes, as well as querying and manipulating data. You also learned more advanced topics such as joins, subqueries, and transactions. By completing the lab tasks, you gained hands-on experience with MySQL and are now ready to apply your knowledge in real-world scenarios.
+
+# Can you make me a tutorial in mysql with lab task for the most common scenarios with Data Normalization and Transactions (ACID Properties) ?
+
+## Absolutely! Let's craft a tutorial on MySQL focused on Data Normalization and Transactions (ACID Properties), complete with lab tasks to solidify your understanding.
+
+## MySQL Tutorial: Data Normalization and Transactions (ACID Properties)
+
+This tutorial is divided into two main sections: **Data Normalization** and **Transactions (ACID Properties)**. Each section will include explanations, examples, and lab tasks for you to practice.
+
+### Part 1: Data Normalization
+
+**Introduction:**
+
+Data Normalization is a database design technique used to organize tables in a manner that reduces redundancy and dependency. It involves dividing larger tables into smaller, more manageable tables and defining relationships between them. The goal is to isolate data so that any modification to a single piece of data only requires changing it in one place. Normal forms (1NF, 2NF, 3NF, and beyond) are a series of guidelines to help achieve this.
+
+**Common Normal Forms:**
+
+* **1NF (First Normal Form):**
+    * Eliminate repeating groups within tables.
+    * Create separate tables for each group of related data.
+    * Identify each set of related data with a primary key.
+* **2NF (Second Normal Form):**
+    * Be in 1NF.
+    * Remove partial dependencies of non-key attributes on the primary key (applies to composite keys).
+* **3NF (Third Normal Form):**
+    * Be in 2NF.
+    * Remove transitive dependencies (non-key attributes depending on other non-key attributes).
+
+**Example Scenario (Before Normalization):**
+
+Imagine a table called `Orders` with the following structure:
+
+| OrderID | CustomerName | CustomerAddress | ProductID | ProductName | Price | Quantity |
+|---------|--------------|-----------------|-----------|-------------|-------|----------|
+| 1       | John Doe     | 123 Main St     | P1        | Laptop      | 1000  | 1        |
+| 1       | John Doe     | 123 Main St     | P2        | Mouse       | 20    | 2        |
+| 2       | Jane Smith   | 456 Oak Ave     | P1        | Laptop      | 1000  | 1        |
+
+This table suffers from redundancy (Customer info repeated) and potential update anomalies.
+
+**Normalization Steps:**
+
+1. **1NF:** Create separate tables for Orders, Customers, and Products:
+
+    * **Customers:** (CustomerID, CustomerName, CustomerAddress)
+    * **Products:** (ProductID, ProductName, Price)
+    * **Orders:** (OrderID, CustomerID, ProductID, Quantity)
+
+2. **2NF:**  If there were partial dependencies (assuming OrderID, ProductID together form the primary key of Orders table), we'd address them. However, in this simplified example, 2NF is already met.
+
+3. **3NF:**  Ensure no transitive dependencies. Assuming we don't have non-key attributes depending on other non-key attributes, we're in 3NF.
+
+**Lab Tasks - Data Normalization:**
+
+**Task 1:**  Given the following unnormalized table for a library:
+
+| BookID | Title | Author | AuthorNationality | BorrowerID | BorrowerName | BorrowerAddress | BorrowDate | ReturnDate |
+|--------|-------|--------|-------------------|------------|--------------|-----------------|------------|------------|
+| 1      | Book1 | John A | USA               | B1         | Alex B       | 789 Pine St     | 2023-01-10 | 2023-01-20 |
+| 2      | Book2 | John A | USA               | B2         | Carol C      | 101 Elm St      | 2023-02-15 | 2023-02-25 |
+
+Normalize this table to 3NF. Write the SQL statements to create the tables with appropriate primary and foreign keys.
+
+**Task 2:** Design a database schema for a simple school system, starting with unnormalized data like this:
+
+| StudentID | StudentName | CourseID | CourseName | TeacherID | TeacherName | Grade |
+|-----------|-------------|----------|------------|-----------|-------------|-------|
+| S1        | Amy K       | C1       | Math       | T1        | Bob L       | A     |
+| S1        | Amy K       | C2       | Science    | T2        | Mary M      | B     |
+
+Normalize this to 3NF and provide the SQL statements for table creation.
+
+### Part 2: Transactions (ACID Properties)
+
+**Introduction:**
+
+Transactions are a sequence of operations performed as a single logical unit of work. ACID properties ensure the reliability and integrity of database transactions.
+
+**ACID Properties:**
+
+* **Atomicity:**  All operations in a transaction are treated as a single unit. Either all are executed, or none are. If any part fails, the entire transaction is rolled back.
+* **Consistency:**  A transaction brings the database from one valid state to another valid state, preserving database integrity.
+* **Isolation:**  Transactions are executed independently of each other. Concurrent transactions do not affect each other's outcome.
+* **Durability:**  Once a transaction is committed, the changes are permanent, even in case of system failures.
+
+**MySQL Transaction Commands:**
+
+* **START TRANSACTION:** Begins a new transaction.
+* **COMMIT:** Saves the changes made within a transaction permanently.
+* **ROLLBACK:** Reverses the changes made within a transaction if an error occurs or if `ROLLBACK` is explicitly called.
+
+**Example Scenario:**
+
+Suppose we need to transfer money between two bank accounts.
+
+```sql
+START TRANSACTION;
+
+UPDATE Accounts SET Balance = Balance - 100 WHERE AccountID = 1; -- Deduct 100 from Account 1
+UPDATE Accounts SET Balance = Balance + 100 WHERE AccountID = 2; -- Add 100 to Account 2
+
+COMMIT; -- Save the changes if both updates were successful
+```
+
+If any error occurs during the updates, we can rollback:
+
+```sql
+START TRANSACTION;
+
+UPDATE Accounts SET Balance = Balance - 100 WHERE AccountID = 1;
+
+-- Assume some error occurs here
+
+ROLLBACK; -- Reverse the deduction from Account 1
+```
+
+**Lab Tasks - Transactions (ACID Properties):**
+
+**Task 3:** Create a table `Products` with columns `ProductID`, `ProductName`, and `Stock`. Insert some sample data. Write a transaction to decrease the stock of a product by a certain quantity. If the resulting stock becomes negative, rollback the transaction; otherwise, commit.
+
+**Task 4:** Create a table `Employees` with columns `EmployeeID`, `EmployeeName`, and `Salary`. Write a transaction to increase the salary of all employees by 10%. Demonstrate rollback by reverting the changes after performing the update.
+
+**Solutions (Skeleton - you will need to fill in the details):**
+
+**Task 1 Solution (Skeleton):**
+
+```sql
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(255),
+    AuthorID INT,
+    -- Add Foreign Key constraint
+);
+
+CREATE TABLE Authors (
+    AuthorID INT PRIMARY KEY,
+    AuthorName VARCHAR(255),
+    AuthorNationality VARCHAR(255)
+);
+
+CREATE TABLE Borrowers (
+    BorrowerID INT PRIMARY KEY,
+    BorrowerName VARCHAR(255),
+    BorrowerAddress VARCHAR(255)
+);
+
+CREATE TABLE Borrowing (
+    BorrowID INT PRIMARY KEY AUTO_INCREMENT, -- Or use composite key of BookID, BorrowerID, BorrowDate
+    BookID INT,
+    BorrowerID INT,
+    BorrowDate DATE,
+    ReturnDate DATE,
+    -- Add Foreign Key constraints
+);
+```
+
+**Task 2 Solution (Skeleton):**
+
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(255)
+);
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(255)
+);
+
+CREATE TABLE Teachers (
+    TeacherID INT PRIMARY KEY,
+    TeacherName VARCHAR(255)
+);
+
+CREATE TABLE Enrollments (
+    EnrollmentID INT PRIMARY KEY AUTO_INCREMENT, -- Or composite key
+    StudentID INT,
+    CourseID INT,
+    TeacherID INT,
+    Grade VARCHAR(1),
+    -- Add Foreign Key constraints
+);
+```
+
+**Task 3 Solution (Skeleton):**
+
+```sql
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255),
+    Stock INT
+);
+
+-- Insert sample data
+
+START TRANSACTION;
+
+UPDATE Products SET Stock = Stock - [quantity] WHERE ProductID = [product_id];
+
+-- Check if Stock is negative, if yes ROLLBACK, else COMMIT
+```
+
+**Task 4 Solution (Skeleton):**
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(255),
+    Salary DECIMAL(10, 2)
+);
+
+-- Insert sample data
+
+START TRANSACTION;
+
+UPDATE Employees SET Salary = Salary * 1.1;
+
+-- COMMIT or ROLLBACK here depending on if you want to keep or revert the changes.
+```
+
+Let me know if you'd like more detailed solutions, further
