@@ -71,3 +71,4 @@ write 'exception'||error_line;
  
 end
 write 'end q; '||getdbtime;
+

@@ -58,6 +58,13 @@ redefinewizard.exe
 Now update description and definition details
 
 
+## How to use aspenONE Update Agent to Download and Install Patches
+
+* Run aspenONE Update Agent.exe as Administrator. Select Local Updates Only to install the patches you copied to the user machine.
+* Only applicable updates will be detected by the Update Agent. If no updates were found, either the machine already has the version or a newer version of the update installed, or the product to be updated is not installed on the machine.
+
+
+https://esupport.aspentech.com/S_Article?id=000064601
 
 ## How to move (or upgrade) an InfoPlus.21 database from one machine to another?
 
