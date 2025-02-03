@@ -24,3 +24,28 @@ End
 write 'Slå på io processing på get record....';
 write 'Satt inn :'||c||' rader';
 write repsize;
+
+
+-- how to use local getname char(60) as ref
+getname = "my_getrecods name"
+
+INSERT INTO orders(customer, product, quantity)
+
+VALUES ('V. B. PLC', 'P123', 10000.0);
+
+
+This example assumes that the record "orders" has repeat area fields customer, product and quantity. The INSERT finds the first free occurrence on orders and stores the data in that.
+
+SET EXPAND_REPEAT = 1;
+
+INSERT INTO orders(customer, product, quantity)
+
+SELECT substring(line from 1 for 10),
+
+       substring(line from 11 for 32),
+
+       substring (line from 43 for 20)
+
+FROM newcustomers.txt
+
+
