@@ -208,7 +208,7 @@ sudo ./network_monitor.sh -i 10 -d 50 -e 25
 
 ***monitor_network.sh***
 
-The script:
+The script information:
 
 Requires root privileges
 Monitors all network interfaces (except loopback)
