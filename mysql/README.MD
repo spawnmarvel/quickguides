@@ -26,7 +26,9 @@ Output MySql:
 https://github.com/influxdata/telegraf/blob/master/plugins/outputs/sql/README.md
 
 
-## Basic
+## Install MySql Ubuntu
+
+## Install Telegraf
 
 ## phpMyAdmin
 
@@ -34,11 +36,15 @@ How To Install and Secure phpMyAdmin on Ubuntu
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu
 
-## Advanced
+## Basic MySql
 
-## Backup and restore
+## Normalization
 
-## Tuning and performance
+## Advanced MySql
+
+## Backup and restore MySql
+
+## Tuning and performance MySql
 
 ## Azure Database for MySQL documentation
 
