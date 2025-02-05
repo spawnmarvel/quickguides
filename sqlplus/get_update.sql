@@ -27,4 +27,4 @@ from 'c:\temp\addtags\new_opc.txt') do
 	end
 end
 
--- fix this
+-- fix this view this tag_get_insert_file.sql
