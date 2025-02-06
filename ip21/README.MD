@@ -187,3 +187,10 @@ Infoplus.21 (IP.21) users may encounter database performance issues due to exces
 
 https://esupport.aspentech.com/S_Article?id=000102341
 
+
+## Can the Aspen InfoPlus.21 Task Service be stopped and restarted while Aspen InfoPlus.21 is running?
+
+Yes, 
+
+https://esupport.aspentech.com/S_Article?id=000077921
+
