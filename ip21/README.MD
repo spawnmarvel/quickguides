@@ -194,3 +194,11 @@ Yes,
 
 https://esupport.aspentech.com/S_Article?id=000077921
 
+## Clean restart
+
+* Stop the CIM-IO Manager Windows service
+* Delete IO-files, c:\program files\myttech\cim-io\io:
+* * SCAN_LIST
+* * SCANNER
+* * STORE_LIST
+* top the CIM-IO Manager Windows service
