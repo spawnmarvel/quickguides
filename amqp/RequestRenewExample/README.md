@@ -67,22 +67,22 @@ openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
 # enter the password used from the mmc export or create a new one.
 ```
 * 4.3 Run the following command to extract the certificate
-```cmd
+```bash
 openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
 # enter the same password (from 4.2)
 ```
 * 4.4 Run the following command to verify CN (must be hostname(.domain.something))
-```cmd
+```bash
 openssl x509 -noout -subject -in public.crt.pem
 ```
 
 * 4.5 Run the following command to verify end date (notAfter=Jan 27 10:36:48 2026 GMT)
-```cmd
+```bash
 openssl x509 -noout -enddate -in public.crt.pem
 ```
 
 * 4.6 Run the following command to verify serial (59000017Axxxxxxxxxxxxxxxxxxxxxxxxx)
-```cmd
+```bash
 openssl x509 -noout -serial -in public.crt.pem
 ```
 
