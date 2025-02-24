@@ -62,7 +62,7 @@ openssl version
 * * Only possible on linux? Seems so
 
 * 4.2 Run the following command to extract the private key:
-```cmd
+```bash
 openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
 # enter the password used from the mmc export or create a new one.
 ```
