@@ -26,6 +26,9 @@ https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 7. Once a script is started, it will continue running until the DataHub instance shuts down. To stop the script without shutting down the DataHub instance, press the Script Manager button to open the Script Application Manager.
 
 
+https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessingscripts
+
+
 
 
 
