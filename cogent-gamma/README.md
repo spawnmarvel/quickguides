@@ -55,7 +55,9 @@ tag-osho-03;
 
 
 ```
- 
+
+How to
+```txt```
 1. Create the OPC connection that you want to add items to.
 * Select "Manually Select Items" only in the "Item Selection"
 * section.  You do not need to configure any items.  Press
@@ -79,6 +81,8 @@ tag-osho-03;
 * You do not need to run this script each time a DataHub instance is
 * started.  The configuration produced by this script will be saved
 * in the DataHub configuration file permanently.
+
+```
 
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
