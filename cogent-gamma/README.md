@@ -72,6 +72,8 @@ To use this script, follow these steps:
 
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
+![Tags added](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tags_added.jpg)
+
 
 #### Update timestamp and set random tbd
 

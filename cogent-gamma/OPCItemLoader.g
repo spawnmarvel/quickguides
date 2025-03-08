@@ -72,7 +72,7 @@ require ("OPCSupport");
 
 class OPCItemLoader Application
 {
-    connection_name = "OPC000";
+    connection_name = "OPC123";
     // Change this to the connection name of the connection to edit
     file_name = "C:\\CogentBase\\2024\\scripts\\tags.txt";
     // Change this to the full path and file name containing  
