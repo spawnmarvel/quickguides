@@ -35,6 +35,10 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 
 ![Hello world](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/hello_world.jpg)
 
+#### Read tags from list
+
+![Read tags from list](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/read_tags_from_list.jpg)
+
 
 
 

@@ -37,7 +37,7 @@ method MyApp.samplemethod ()
 /* Write the 'main line' of the program here. */
 method MyApp.constructor ()
 {
-    princ("Hello world start.\n");
+    princ("Read tags from list start.\n");
     princ("version 1.12\n");
     // call method
     .samplemethod();
@@ -62,6 +62,18 @@ method MyApp.constructor ()
 	expr = read(fp);       // Read the file
     princ(expr, "\n");
     
+    
+    // edit down
+    local  i=0;
+    local line;
+    while ((line = read_line(fp)) !=_eof_)
+	{
+		// print all tags and do stuff, such add add to .AddOPCItem(line)
+        // https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
+        princ(line, "\n");
+    	  
+	}
+    // edit up
     
 	close(fp);                 // Close the file when done
     princ("Finished reading file.\n");
