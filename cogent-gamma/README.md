@@ -13,7 +13,7 @@ Or online
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
 
-## Chapter 3. Getting Started
+## Chapter 3. Getting Started (just error? Cogent is running for 1 h only, restart Cogent)
 
 
 1. To run an existing script for the first time, you will need to first add it to the list of scripts.
