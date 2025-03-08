@@ -2,7 +2,8 @@
    class */
 
 require ("Application");
-
+require ("WindowsSupport");
+require ("OPCSupport");
 /* Get the Gamma library functions and methods for ODBC and/or
  * Windows programming.  Uncomment either or both. */
 
@@ -19,12 +20,14 @@ require ("Application");
  */
 class MyApp Application
 {
+	connection_name = "OPC000";
+	opc_connection;
 }
 
 /* Use methods to create functions outside the 'main line'. */
-method MyApp.samplemethod ()
+method MyApp.sampleMethod ()
 {
-	princ("samplemethod");
+	princ("samplemethod \n");
 	local  i=0;
 	while (i < 5)
 	{
@@ -34,15 +37,22 @@ method MyApp.samplemethod ()
 	}
 }
 
-/* Write the 'main line' of the program here. */
-method MyApp.constructor ()
+method MyApp.addOPCItem (itemname, pointname)
 {
-    princ("Read tags from list start.\n");
-    princ("version 1.12\n");
-    // call method
-    .samplemethod();
-    
-    filename = "C:\\CogentBase\\2024\\scripts\\tags.txt"; // Change this to your file path
+	princ("add opc item \n");
+	.opc_connection.addItem(pointname, itemname, OPC_NODE_LEAF,
+			    .path_separator);
+}
+
+/* Use methods to create functions outside the 'main line'. */
+method MyApp.loadfileStartMain ()
+{
+	local opc = new OPCConnection();
+	opc.setServer(.connection_name);
+	.opc_connection = opc;
+	princ("loadfile start main \n");
+	
+	filename = "C:\\CogentBase\\2024\\scripts\\tags.txt"; // Change this to your file path
     // princ(filename); // correct
     
     // https://cogentdatahub.com/docs/index.html#re-read.html
@@ -63,21 +73,44 @@ method MyApp.constructor ()
     princ(expr, "\n");
     
     
-    // edit down
     local  i=0;
     local line;
     while ((line = read_line(fp)) !=_eof_)
 	{
-		// print all tags and do stuff, such add add to .AddOPCItem(line)
+		// all tags can be printed
+        //princ(line, "\n");
+        
+        // do stuff, such add add to .AddOPCItem(line)
         // https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
-        princ(line, "\n");
-    	  
+        //.addOPCItem.(line, line);
+    	i++;
 	}
-    // edit up
+	princ("Tags from file: ", i, "\n");
     
 	close(fp);                 // Close the file when done
     princ("Finished reading file.\n");
     // ok to here, reads the first tag
+}
+
+/* Write the 'main line' of the program here. */
+method MyApp.constructor ()
+{
+	princ(date(),"  -------------------Starting OPCItemloader -------------------------------\n");
+	princ("**** \n");
+    princ("Read tags from list start.\n");
+    princ("version 1.12\n");
+    
+    princ("Apply my config \n");
+    // call method
+    .sampleMethod();
+    .loadfileStartMain();
+    princ("Apply my config \n");
+    .opc_connection.applyConfig();
+    princ("Reload opc connection \n");
+    .opc_connection.reload(0);
+    princ("\n");
+    princ(date()," -----------------Finished OPCItemloader -------------------------------\n");
+    
     
    
     
