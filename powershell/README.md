@@ -7,7 +7,7 @@ Using the PowerShell ISE is the preferred way to work with the scripting languag
 #### ISE
 View modules use the ISE
 
-![Screenshot](https://github.com/spawnmarvel/powershell-cmd/blob/master/x_images/power_ise.jpg)
+![ISE ](https://github.com/spawnmarvel/quickguides/blob/main/powershell/x_images/power_ise.jpg)
 
 #### Get-ExecutionPolicy
 
