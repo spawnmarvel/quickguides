@@ -172,11 +172,22 @@ method TimedUpdate.doUpdate ()
 
 ```
 
+datahub_write
+
+https://cogentdatahub.com/docs/index.html#re-dhs-datahubwrite.html
+
 random
 
 https://cogentdatahub.com/docs/index.html#re-random.html
 
+added_time_value_and_quality
 
+
+![added time, value and quality](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/added_time_value_and_quality.jpg)
+
+
+
+#### TimedUpdate_quality_and_value_OPCItemLoaderList.g
 
 
 
