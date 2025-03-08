@@ -1,4 +1,7 @@
- 
+ // This script reads a set of OPC DA item names and point names from 
+ // a txt file and updates the Manually Selected Items configuration 
+ // for an OPC DA connection.  The txt file format:
+ //     OPC_ITEM_ID
 
 require ("Application");
 require ("WindowsSupport");
@@ -6,7 +9,7 @@ require ("OPCSupport");
 
 class OPCItemLoader Application
 {
-    connection_name = "OPC00012";
+    connection_name = "OPC02";
     // Change this to the connection name of the connection to edit
     file_name = "C:\\CogentBase\\2024\\scripts\\tags.txt"; // Change this to your file path
     // Change this to the full path and file name containing  
@@ -29,7 +32,7 @@ method OPCItemLoader.ReadCSVFile (filename)
            .AddOPCItem(line, line);
            i++;
         }
-        princ("Total tags " , i, "\n");
+        princ("Total tags " , i, " added \n");
         close (fptr);
     }
     else
@@ -50,6 +53,7 @@ method OPCItemLoader.LoadFromCSV(opc_conn_name, filename)
     local opc = new OPCConnection();
     opc.setServer(opc_conn_name);
     .opc_connection = opc;
+    princ(.opc_connection, "\n");
     .ReadCSVFile(filename);
     opc.applyConfig();  
 }
