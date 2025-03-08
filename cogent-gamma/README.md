@@ -46,6 +46,28 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
 
+#### Update timestamp and set random
+
+TimedUpdate.g
+
+TimedUpdate.g — periodically updates the timestamp on a set of DataHub points without changing their values.
+
+
+https://cogentdatahub.com/docs/index.html#re-dhs-timedupdate.html
+
+
+
+#### set_random or random
+
+random
+
+https://cogentdatahub.com/docs/index.html#re-random.html
+
+set_random
+
+https://cogentdatahub.com/docs/index.html#re-setrandom.html
+
+
 
 
 
