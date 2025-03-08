@@ -47,10 +47,11 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 To use this script, follow these steps:
  
 1. Create the OPC connection that you want to add items to.
- *    Select "Manually Select Items" only in the "Item Selection"
- *    section.  You do not need to configure any items.  Press
- *    OK to save the OPC configuration, the press Apply on the
- *    DataHub properties dialog.
+
+Select "Manually Select Items" only in the "Item Selection"
+section.  You do not need to configure any items.  Press
+OK to save the OPC configuration, the press Apply on the
+DataHub properties dialog.
 
 2. Open this script in the editor and change the parameters in the
  *    OPCItemLoader class definition.  These are documented below.
