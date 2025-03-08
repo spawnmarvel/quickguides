@@ -95,7 +95,7 @@ https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 ![Tags added](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tags_added.jpg)
 
 
-#### Update timestamp and set random tbd
+#### TimedUpdate.g
 
 TimedUpdate.g
 
@@ -106,15 +106,38 @@ https://cogentdatahub.com/docs/index.html#re-dhs-timedupdate.html
 
 
 
-#### set_random or random tbd
+#### TimedUpdate_quality_and_value.g
+
+TimedUpdate.g is modified with
+
+```txt
+
+current = datahub_read(point);
+		if (current[0])
+		{
+			// preserve the current value and quality,
+		        // but let the time change to the current
+		        // system clock time by not specifying 
+			// the time argument.  The "1" for the "force"
+		        // argument indicates that the DataHub 
+		        // instance should emit a change even if 
+		        // the settings would normally cause this 
+		        // change to be ignored.
+				datahub_write(point, current[0].value, 1,
+				      current[0].quality);
+		}
+
+
+// to
+
+
+
+```
 
 random
 
 https://cogentdatahub.com/docs/index.html#re-random.html
 
-set_random
-
-https://cogentdatahub.com/docs/index.html#re-setrandom.html
 
 
 
