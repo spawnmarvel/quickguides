@@ -37,7 +37,7 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 
 ![Remove domains](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/remove_domains.jpg)
 
-#### Hello worlda and calling methd
+#### Hello world and calling methd
 
 
 ![Hello world](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/hello_world.jpg)
@@ -45,6 +45,16 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 #### OPCItemLoader.g — reads a list of OPC DA tags from a CSV/TEXT file and configures DataHub points for them.
 
 To use this script, follow these steps:
+
+Tags.txt
+
+````txt
+tag-osho-01;
+tag-osho-02;
+tag-osho-03;
+
+
+```
  
 1. Create the OPC connection that you want to add items to.
 * Select "Manually Select Items" only in the "Item Selection"
