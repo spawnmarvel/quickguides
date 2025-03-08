@@ -29,6 +29,9 @@ https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessingscripts
 
 
+[Test edit and run](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gammma/images/test_edit_run.jpg)
+
+
 
 
 
