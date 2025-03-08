@@ -37,17 +37,38 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 
 ![Remove domains](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/remove_domains.jpg)
 
-#### Hello world
+#### Hello worlda and calling methd
+
 
 ![Hello world](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/hello_world.jpg)
 
-#### Read tags from list
+#### OPCItemLoader.g — reads a list of OPC DA tags from a CSV/TEXT file and configures DataHub points for them.
 
-![Read tags from list](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/read_tags_from_list.jpg)
-
-
-
-#### Read tags from list add item to method OPCItemLoader.AddOPCItem(itemname, pointname) tbd
+* To use this script, follow these steps:
+ * 
+ * 1) Create the OPC connection that you want to add items to.
+ *    Select "Manually Select Items" only in the "Item Selection"
+ *    section.  You do not need to configure any items.  Press
+ *    OK to save the OPC configuration, the press Apply on the
+ *    DataHub properties dialog.
+ * 2) Open this script in the editor and change the parameters in the
+ *    OPCItemLoader class definition.  These are documented below.
+ * 3) Close the OPC DataHub Properties window.
+ * 4) Run this script by pressing the run button in the toolbar of
+ *    the editor (the right-facing blue arrow).
+ * 5) Open the OPC DataHub properties dialog, open the OPC
+ *    configuration for your server and verify that the items were
+ *    added.
+ *
+ * If the script has problems, you should see error messages in the
+ * "Script Log" window.
+ *
+ * You must close the DataHub Properties window before running
+ * this script or the changes made by this script may be lost.
+ *
+ * You do not need to run this script each time a DataHub instance is
+ * started.  The configuration produced by this script will be saved
+ * in the DataHub configuration file permanently.
 
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
