@@ -41,7 +41,7 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 
 
 
-#### Read tags from list add to method OPCItemLoader.AddOPCItem(itemname, pointname)
+#### Read tags from list add item to method OPCItemLoader.AddOPCItem(itemname, pointname)
 
 https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 
