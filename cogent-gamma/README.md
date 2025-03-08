@@ -48,7 +48,7 @@ To use this script, follow these steps:
 
 Tags.txt
 
-````txt
+```txt
 tag-osho-01;
 tag-osho-02;
 tag-osho-03;
