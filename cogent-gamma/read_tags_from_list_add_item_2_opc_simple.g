@@ -3,6 +3,8 @@
  // for an OPC DA connection.  The txt file format:
  //     OPC_ITEM_ID
 
+ // https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
+
 require ("Application");
 require ("WindowsSupport");
 require ("OPCSupport");
