@@ -35,7 +35,7 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 ### Remove domains
 
 
-![Remove domains](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/remove domains.jpg)
+![Remove domains](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/remove_domains.jpg)
 
 #### Hello world
 
