@@ -57,7 +57,7 @@ tag-osho-03;
 ```
 
 How to
-```txt```
+```txt
 1. Create the OPC connection that you want to add items to.
 * Select "Manually Select Items" only in the "Item Selection"
 * section.  You do not need to configure any items.  Press
