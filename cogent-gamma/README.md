@@ -53,6 +53,12 @@ tag-osho-01;
 tag-osho-02;
 tag-osho-03;
 
+or
+
+tag-osho-01;tag-osho-011
+tag-osho-02;tag-osho-022
+tag-osho-03;tag-osho-033
+
 
 ```
 
