@@ -112,7 +112,14 @@ TimedUpdate.g is modified with
 
 ```txt
 
-current = datahub_read(point);
+
+/* This is the callback that runs when the timer fires */
+method TimedUpdate.doUpdate ()
+{
+	local	current;
+	with point in .points do
+	{
+		current = datahub_read(point);
 		if (current[0])
 		{
 			// preserve the current value and quality,
@@ -126,9 +133,40 @@ current = datahub_read(point);
 				datahub_write(point, current[0].value, 1,
 				      current[0].quality);
 		}
+	}
+}
 
 
 // to
+
+/* This is the callback that runs when the timer fires */
+method TimedUpdate.doUpdate ()
+{
+	local	current;
+	local	val;
+	
+	with point in .points do
+	{
+		current = datahub_read(point);
+		if (current[0])
+		{
+			val = random();
+			// updates the current value and quality,
+		        // and let the time change to the current
+		        // system clock time by not specifying 
+			// the time argument.  The "1" for the "force"
+		        // argument indicates that the DataHub 
+		        // instance should emit a change even if 
+		        // the settings would normally cause this 
+		        // change to be ignored.
+		        
+		        //https://cogentdatahub.com/docs/index.html#re-dhs-datahubwrite.html
+		        
+		        //datahub_write (pointname, value [, force, quality, timestamp])
+				datahub_write(point, val, 1, OPC_QUALITY_GOOD);
+		}
+	}
+}
 
 
 
