@@ -212,7 +212,7 @@ And updates the tags from OPCItemLoader.g — reads a list of OPC DA tags from a
 
 It uses a random value and 1 sec interval
 
-![Tag simulation](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tag_simulation.jps)
+![Tag simulation](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tag_simulation.jpg)
 
 
 
