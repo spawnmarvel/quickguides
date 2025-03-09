@@ -37,12 +37,12 @@ https://cogentdatahub.com/docs/index.html#dhs-gettingstarted.html#dhs-accessings
 
 ![Remove domains](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/remove_domains.jpg)
 
-#### Hello world and calling methd
+### Hello world and calling methd
 
 
 ![Hello world](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/hello_world.jpg)
 
-#### OPCItemLoader.g — reads a list of OPC DA tags from a CSV/TEXT file and configures DataHub points for them.
+### OPCItemLoader.g — reads a list of OPC DA tags from a CSV/TEXT file and configures DataHub points for them.
 
 To use this script, follow these steps:
 
@@ -53,7 +53,7 @@ tag-osho-01;
 tag-osho-02;
 tag-osho-03;
 
-or
+or (only tested with above)
 
 tag-osho-01;tag-osho-011
 tag-osho-02;tag-osho-022
@@ -95,7 +95,7 @@ https://cogentdatahub.com/docs/index.html#re-dhs-opcitemloaderg.html
 ![Tags added](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tags_added.jpg)
 
 
-#### TimedUpdate.g
+### TimedUpdate.g
 
 TimedUpdate.g
 
@@ -106,7 +106,7 @@ https://cogentdatahub.com/docs/index.html#re-dhs-timedupdate.html
 
 
 
-#### TimedUpdate_quality_and_value.g
+### TimedUpdate_quality_and_value.g
 
 TimedUpdate.g is modified with
 
@@ -187,7 +187,32 @@ added_time_value_and_quality
 
 
 
-#### TimedUpdate_quality_and_value_OPCItemLoaderList.g
+### TimedUpdate_quality_and_value_OPCItemLoaderList.g
+
+
+The script uses the same txt file:
+
+Tags.txt
+
+```txt
+tag-osho-01;
+tag-osho-02;
+tag-osho-03;
+
+or (only tested with above)
+
+tag-osho-01;tag-osho-011
+tag-osho-02;tag-osho-022
+tag-osho-03;tag-osho-033
+
+
+```
+
+And updates the tags from OPCItemLoader.g — reads a list of OPC DA tags from a CSV/TEXT file and configures DataHub points for them.
+
+It uses a random value and 1 sec interval
+
+![Tag simulation](https://github.com/spawnmarvel/quickguides/blob/main/cogent-gamma/images/tag_simulation.jps)
 
 
 

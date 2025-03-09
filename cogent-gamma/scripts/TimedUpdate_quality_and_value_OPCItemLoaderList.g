@@ -14,9 +14,43 @@ require ("Application");
 class TimedUpdate Application
 {
 	
-	points = [ "default:tag-osho-01", "default:tag-osho-02","default:tag-osho-03" ];
+	//points = [ "default:tag-osho-01", "default:tag-osho-02","default:tag-osho-03" ];
+	points = [];
 	updateSecs = 1;
+	file_name = "C:\\CogentBase\\2024\\scripts\\tags.txt";
 	
+	// if  Object TimedUpdate has no member named: file_is_8bit_ansi
+	// add the vars as class vars
+	
+	// Change this to the full path and file name containing  
+    // the item and point names
+    trim_spaces = t;
+    // set to nil to preserve leading and trailing spaces in item
+    // names
+    path_separator = ";";
+    // Characters used to split point names into tree components
+    file_is_8bit_ansi = t;
+    // Set to t if file uses 8-bit extended ANSI, nil if 7-bit ASCII
+    // or UTF-8
+	
+	
+}
+method TimedUpdate.Trim (str)
+{
+    local	i=0, j, len;
+    len = strlen(str);
+    while (i < len && (str[i] == ' ' || str[i] == '\t'))
+        i++;
+
+    j = len - 1;
+    while (j >= i && (str[j] == ' ' || str[j] == '\t'))
+        j--;
+	
+    if (j>=i)
+        str = substr(str, i, j-i+1);
+    else
+        str = "";
+    str;
 }
 
 /* This is the callback that runs when the timer fires */
@@ -48,15 +82,17 @@ method TimedUpdate.doUpdate ()
 	}
 }
 
-method TimedUpdate.readCSVFileAddPoints ()
+method TimedUpdate.readCSVFileAddPoints (filename)
 
 {
-	local 		file_name = "C:\\CogentBase\\2024\\scripts\\tags.txt";
+	
 	local		fptr = open (filename, "r", nil);
     local		line, i;
     local       counter_points;
-    counter_points = 2; // start at 0
+    counter_points = 0; // start at 0
     local ii = 0;
+    local point_builder;
+    point_builder = "";
     if (fptr)
     {
         while ((line = read_line(fptr)) != _eof_)
@@ -66,7 +102,7 @@ method TimedUpdate.readCSVFileAddPoints ()
                 
             if (line != "")
             {
-                line = list_to_array(string_split(line, ",",
+                line = list_to_array(string_split(line, ";",
 						  0, nil,
 						  nil, nil,
 						  "\\", nil));
@@ -77,13 +113,29 @@ method TimedUpdate.readCSVFileAddPoints ()
                         line[i] = .Trim(line[i]);
                     }
                 }
-                princ(line);
-				princ("\n");
-				ii++;
-				points[counter_points +1] = string("default:", line);
+                if (length(line) == 1) {
+					//princ(line[0]); //tag-osho-03; since  line = list_to_array(string_split(line, ";", and not ","
+					//princ("\n");
+					ii++;
+					// this works
+					//.points[counter_points] = string("default:tag-osho-04");
+					
+					
+					point_builder = string("default:", line[0]);
+					
+					//princ("Point builder: ", point_builder);
+				
+					.points[counter_points] = point_builder;
+					point_builder = "";
+					counter_points++;
+                }
+				
             }
+            //princ("\n");
+			//princ(length(.points));
+			//princ("\n");
         }
-         princ("Total tags " , ii, " added \n");
+         princ("Total tags updated (value, quality and time) " , ii, "\n");
         close (fptr);
     }
     else
@@ -99,6 +151,13 @@ method TimedUpdate.readCSVFileAddPoints ()
 method TimedUpdate.constructor ()
 {
 	princ(date(),"  ---- Starting TimedUpdate quality and value ----\n");
+	// start try to fill the arry
+	
+	.readCSVFileAddPoints(.file_name);
+	// end try to fill array
+	
+	
+	
 	// The .TimerEvery function will start counting when the
         // script starts running, so it will not be synchronized with
         // a particular time of day.
