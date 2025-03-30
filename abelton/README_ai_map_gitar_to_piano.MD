@@ -143,21 +143,21 @@ These refer to specific octaves of the note C on an 88-key piano keyboard.
 🎼 Each C note starts a new octave and is labeled accordingly:
 
 Note	Description	MIDI #	Frequency
-C1	Very low C (far left of piano)	24	~32.7 Hz
-C2	Low C	36	~65.4 Hz
-C3	Low-mid C	48	~130.8 Hz
-C4	Middle C 🎯	60	~261.6 Hz
-C5	One octave above middle C	72	~523.3 Hz
-C6	High C	84	~1046.5 Hz
-C7	Very high C	96	~2093 Hz
-C8	Highest C (top of piano)	108	~4186 Hz
+* C1	Very low C (far left of piano)	24	~32.7 Hz
+* C2	Low C	36	~65.4 Hz
+* C3	Low-mid C	48	~130.8 Hz
+* C4	Middle C 🎯	60	~261.6 Hz
+* C5	One octave above middle C	72	~523.3 Hz
+* C6	High C	84	~1046.5 Hz
+* C7	Very high C	96	~2093 Hz
+* C8	Highest C (top of piano)	108	~4186 Hz
 
 
 How This Relates to Guitar
 Guitar String	Open Note	Piano Equivalent
-6th (Low E)	E2	Very low E note
-5th (A)	A2	Below middle C
-4th (D)	D3	Below middle C
-3rd (G)	G3	Below middle C
-2nd (B)	B3	Just below middle C
-1st (High E)	E4	Middle C is C4, so E4 is just above
+* 6th (Low E)	E2	Very low E note
+* 5th (A)	A2	Below middle C
+* 4th (D)	D3	Below middle C
+* 3rd (G)	G3	Below middle C
+* 2nd (B)	B3	Just below middle C
+* 1st (High E)	E4	Middle C is C4, so E4 is just above
