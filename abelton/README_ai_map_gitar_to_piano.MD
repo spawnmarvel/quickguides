@@ -9,7 +9,7 @@
 * B
 * E, high
 
-Mapping the low E string of a guitar (6th string) from **fret 0 to fret 7** to **piano keys** involves understanding the relationship between guitar frets and musical notes, then finding those notes on the piano.
+Mapping the a string of a guitar (x th string) from **fret 0 to fret 7** to **piano keys** involves understanding the relationship between guitar frets and musical notes, then finding those notes on the piano.
 
 ---
 
@@ -35,13 +35,11 @@ Mapping the low E string of a guitar (6th string) from **fret 0 to fret 7** to *
 ---
 
 
-### 🎸  Guitar Basics Step 1: A String (5th string) (Frets 0 to 7)
+### 🎸 Guitar Basics Step: A String (5th string) (Frets 0 to 7)
 
-The A string is the **5th string** on the guitar, and when played open (fret 0), it sounds the note **A**. Each fret increases the pitch by a **semitone** (half step). So, the notes from fret 0 to fret 7 are:
-
-Now, we’ll map each of these notes to their corresponding piano keys. On a standard-tuned guitar, the open A string (fret 0) is **A2** (the A below middle C, which is C4 on the piano).
-
-So the mapping becomes:
+- The A string is the **5th string** on the guitar, and when played open (fret 0), it sounds the note **A**. 
+- Each fret increases the pitch by a **semitone** (half step). 
+- So, the notes from fret 0 to fret 7 are:
 
 ### ✅ Summary Table (Guitar Frets → Piano Notes)
 
