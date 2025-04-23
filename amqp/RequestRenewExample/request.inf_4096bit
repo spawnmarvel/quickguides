@@ -1,0 +1,105 @@
+[Version]
+Signature= "$Windows NT$"
+[NewRequest]
+Subject= "CN=hostname.domain.com"
+KeySpec = 1
+KeyLength = 4096
+Exportable = TRUE
+MachineKeySet = TRUE
+SMIME = FALSE
+PrivateKeyArchive = FALSE
+UserProtected = FALSE
+UseExistingKeySet = FALSE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=hostname.domain.com"
+
+
+[Version]
+[NewRequest]
+Subject = CN=<FQDN of computer you are creating the certificate>
+Exportable = TRUE
+KeyLength = 4096
+KeySpec = 1
+KeyUsage = 0xf0
+MachineKeySet = TRUE
+[RequestAttributes]
+CertificateTemplate=WebServer
+[Extensions]
+OID = 1.3.6.1.5.5.7.3.1
+OID = 1.3.6.1.5.5.7.3.2
+
+
+#############################
+
+[Version]
+Signature= "$Windows NT$"
+[NewRequest]
+Subject= "CN=hostname.domain.com"
+KeySpec = 1
+KeyLength = 4096
+Exportable = TRUE
+MachineKeySet = TRUE
+SMIME = FALSE
+PrivateKeyArchive = FALSE
+UserProtected = FALSE
+UseExistingKeySet = FALSE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=hostname.domain.com&"
+_continue_ = "dns=hostname&"
+_continue_ = "dns=alias1.domain.com&"
+
+check the above in ssl checker, you will see:
+Common Name (CN)	hostname.domain.com
+SANS	hostname.domain.com, hostname
+
+* Even if the server is not in domain and nslookup gives just hostname it resolves after importing all certs, root, inter and personal to mmc.
+
+
+
+https://www.rabbitmq.com/ssl.html
+
+When peer verification is enabled, it is common for clients to also check whether the hostname of the server they are connecting to matches one of two fields 
+in the server certificate: the SAN (Subject Alternative Name) or CN (Common Name).
+
+Peer verification is highly recommended in production environments. With careful consideration, disabling it can make sense in certain environments (e.g. development).
+
+Thus it is possible to create an encrypted TLS connection without having to verify certificates. Client libraries usually support both modes of operation.
+
+
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/98c4ce19-391c-49bc-bf5b-388a2f005ed9/inf-file-parameters-to-use-with-the-certutil-command-for-providertype-keyusage-and-other?forum=winserversecurity
+
+both Digital signature and Key encipherment.
+
+include Extended Key usage and include Server Authentication and Client Authentication. Not sure what parameter to use.
+
+Key usage must be 0xa0 (not 0x20). This INF should be enough:
+
+Subject = "CN=www.domain.com, OU=Web Development, O=Company name, C=US"
+KeySpec = 1
+KeyLength = 4096
+Exportable = TRUE
+MachineKeySet = TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+KeyUsage = 0xa0
+
+Just edit Subject entry as per your needs.
+
+https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx
+
+
+Microsoft Strong Cryptographic Provider supports only DES and 3DES symmetric algorithms, 
+while Microsoft RSA SChannel Cryptographic Provider additionally supports more secure AES128 and AES256 symmetric algorithms. 
+For HTTPS/SSL/TLS you should use Microsoft RSA SChannel Cryptographic Provider.
+
