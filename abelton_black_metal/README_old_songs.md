@@ -170,3 +170,120 @@ A possible chord accompaniment could be:
 
 These are just examples of how you might harmonise traditional Norse melodies using modal scales. The actual chords will vary depending on the specific melody and the interpreter's choices. For authentic traditional performances, it's best to consult arrangements by experts in Norse music or recordings by folk ensembles specialising in this repertoire.
 
+# Show gitar tabs for The D Dorian scale consists of the notes: D, E, F, G, A, B, C.
+
+Certainly! Below are guitar tabs for the D Dorian scale. The D Dorian scale consists of the notes D, E, F, G, A, B, and C. Dorian mode is a minor scale with a raised 6th, so D Dorian is essentially a D minor scale with a raised 6th (B natural instead of B flat).
+
+Here are several ways to play the D Dorian scale on the guitar across different positions.
+
+### Open Position
+
+```
+e|-----------------|
+B|-----------------|
+G|--------7-9------|
+D|---7-9-----------|
+A|-5---------------|
+E|-----------------|
+```
+
+### 6th String Root Position (D at the 5th fret)
+
+```
+e|--------|
+B|--------|
+G|--9-10--|
+D|--7-9---| 
+A|--5-7---|
+E|---5----|
+```
+
+### 5th String Root Position (D at the 10th fret)
+
+```
+e|-----15-17-|
+B|---15-17---|
+G|--14-16----|
+D|-12-14-----|
+A|-10-12-----|
+E|----10-----|
+```
+
+### 4th String Root Position (D at the 7th fret)
+
+```
+e|------|
+B|------|
+G|-9-10-|
+D|-7-9--|
+A|-5-7--|
+E|-----5|
+```
+
+### 3rd String Root Position (D at the 12th fret)
+
+```
+e|--17-19-|
+B|-17-19--|
+G|-15-17--|
+D|-14-16--|
+A|-12-14--|
+E|-------12|
+```
+
+### Box Pattern (Dorian Mode)
+
+The D Dorian scale can also be played using the Dorian mode box pattern. Here is the box pattern starting at the 5th fret on the 6th string.
+
+```
+e|--------15-17-18-|
+B|---15-17--------|
+G|--14-16----------|
+D|-12-14-----------|
+A|-10-12-----------|
+E|----10-----------|
+```
+
+### Full Fretboard Diagram
+
+Here is a full fretboard diagram highlighting the notes of the D Dorian scale.
+
+```
+e|-----17-19-|
+B|--15-17----|
+G|--14-16----|
+D|--12-14----|
+A|--10-12----|
+E|----10-----|
+```
+
+### Tabs with Note Names
+
+Here are the tabs with note names for better understanding.
+
+```
+e|--------17(C)-19(D)-------|
+B|---15(A)-17(B)------------|
+G|--14(G)-16(A)-------------|
+D|-12(E)-14(F)--------------|
+A|-10(C)-12(D)--------------|
+E|----10(D)----------------|
+```
+
+These tabs should help you play the D Dorian scale on the guitar. Practice these positions to become familiar with the sound and feel of the Dorian mode.
+
+# now give tabs for the top low strings on gitar
+
+Low E String (Low String)
+The low E string can be used to play the D Dorian scale starting from the open E note (which is the 6th note in the D Dorian scale).
+
+
+e|----------------------------------|
+B|----------------------------------|
+G|----------------------------------|
+D|----------------------------------|
+A|----------------------------------|
+E|----10(D)-12(E)-14(F)-15(G)-17(A)---|
+
+
+
