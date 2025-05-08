@@ -54,3 +54,119 @@ Finding top old Norse songs that are completely free of copyright is challenging
 3. **Performances and Arrangements**: Any modern performance, musical arrangement, or adaptation will have its own copyright. You will need permission from the performer or arranger for commercial use.
 
 For completely copyright-free use, you would need to either perform these works yourself or find very old public domain recordings.
+
+# what are the chordes for thoose songs?
+
+Traditional Old Norse songs and poems, such as those found in the Poetic Edda and Prose Edda, do not come with standardised chords as they were originally intended to be sung in a monophonic (single melody line) style, often accompanied by instruments like the lyre or lute. These ancient compositions do not have harmonised chords in the modern sense.
+
+However, modern interpreters and folk musicians have created harmonisations and chord progressions for these traditional texts. Since there is no single “correct” set of chords for these ancient songs, I'll provide a generic approach to harmonising a traditional Norse melody using modal scales commonly found in Norse music. One frequently used scale is the Dorian mode.
+
+Let's take a hypothetical traditional Norse melody and harmonise it using D Dorian mode. The D Dorian scale consists of the notes: D, E, F, G, A, B, C.
+
+### Example Harmonisation in D Dorian
+
+1. **D minor (i)**
+        - Notes: D F A
+        - Chord: Dm
+
+2.  **E diminished (ii°)**
+        - Notes: E G Bb
+        - Chord: Edim or E°
+
+3. **F major (III)**
+        - Notes: F A C
+        - Chord: F
+
+4. **G minor (iv)**
+        - Notes: G Bb D
+        - Chord: Gm
+
+5. **A minor (v)**
+        - Notes: A C E
+        - Chord: Am
+        
+6. **Bb major (VI)**
+        - Notes: Bb D F
+        - Chord: Bb
+
+7. **C major (VII)**
+        - Notes: C E G
+        - Chord: C
+
+### Sample Chord Progression
+
+A simple chord progression in D Dorian might be:
+
+**Dm - F - Gm - C**
+
+### Applying to a Hypothetical Melody
+
+Let’s say we have a simple melody line in D Dorian:
+
+```
+D  E  F  G  A  G  F  E  D
+```
+
+A possible chord accompaniment could be:
+
+```
+| Dm  | F   | Gm  | C  |
+| D   | E   | F   | G  | A  | G  | F  | E  | D  |
+```
+
+### Another Example in A Dorian
+
+The A Dorian scale consists of the notes: A, B, C, D, E, F#, G.
+
+1. **A minor (i)**
+        - Notes: A C E
+        - Chord: Am
+
+2.  **B minor (ii)**
+        - Notes: B D F#
+        - Chord: Bm
+
+3. **C major (III)**
+        - Notes: C E G
+        - Chord: C
+
+4. **D minor (iv)**
+        - Notes: D F A
+        - Chord: Dm
+
+5. **E minor (v)**
+        - Notes: E G B
+        - Chord Am
+
+6. **F# major (VI)**
+        - Notes: F# A# C#
+        - Chord: F#
+
+7. **G major (VII)**
+        - Notes: G B D
+        - Chord: G
+
+
+### Sample Chord Progression
+
+**Am - C - Dm - G**
+
+### Applying to a Hypothetical Melody
+
+For a melody line in A Dorian:
+
+```
+A  B  C  D  E  D  C  B  A
+```
+
+A possible chord accompaniment could be:
+
+```
+| Am  | C   | Dm  | G  |
+| A   | B   | C   | D  | E  | D  | C  | B  | A  |
+```
+
+### Conclusion
+
+These are just examples of how you might harmonise traditional Norse melodies using modal scales. The actual chords will vary depending on the specific melody and the interpreter's choices. For authentic traditional performances, it's best to consult arrangements by experts in Norse music or recordings by folk ensembles specialising in this repertoire.
+
