@@ -278,12 +278,18 @@ Low E String (Low String)
 The low E string can be used to play the D Dorian scale starting from the open E note (which is the 6th note in the D Dorian scale).
 
 
+### Low E String (Low String)
+
+The low E string can be used to play the D Dorian scale starting from the open E note (which is the 6th note in the D Dorian scale).
+
+```
 e|----------------------------------|
 B|----------------------------------|
 G|----------------------------------|
 D|----------------------------------|
 A|----------------------------------|
 E|----10(D)-12(E)-14(F)-15(G)-17(A)---|
+```
 
 
 
