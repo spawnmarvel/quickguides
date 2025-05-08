@@ -3,16 +3,36 @@
 ## How to
 
 * Learn or make song analog
-* Then program for digital using guitar/dist/amp, bass, drums and effects, pling/plong
+* Decide on analog guitar or digital
+* Then program for digital using guitar/dist/amp, bass, drums and effects, pling/plong/synth
+* Do some ambient also
 
-## Jotun
+## Abelton (see other folder for tips and tricks)
+
+Black metal
+
+* Min tracks = 4 (Gitar, bass, drums, pling/plong/synth, some vocal (looked room effect))
+* Max tracks = 4 (Gitar, bass, drums, pling/plong/synth, some vocal (looked room effect))
+
+Ambient
+
+* Example, 1 drum dong, each 4 steps, old big drum
+* Synth wave
+* Pling/plong/synth, example just 8 notes
+* Over and over again, but build up, slow 1-2 min, then main for 6-10 min
+
+## Youtube
+
+## Jotun (3-4 min)
 
 ```
 e|--------------------------------------------------------------------|
 B|--------------------------------------------------------------------|
 G|--------------------------------------------------------------------|
 D|--------------------------------------------------------------------|
-A|--2--2--2--3--1--2--2--2--3--1--2--2--2--3--1-----------------------|
-E|-0--0--0--------0--0--0--------0--0--0------------------------------|
+A|--2--2--2--3--1--2--2--2--3--1--2--2--2--3--1---3--3--2--2----------|
+E|-0--0--0--------0--0--0--------0--0--0--------3--3--2--2------------| x 8?
 
 ```
+
+## Ambient silence (10 min)
