@@ -23,6 +23,8 @@ Ambient
 
 ## Youtube
 
+* Use youtube to publish for now
+
 ## Jotun (3-4 min)
 
 Double Bass Drum Loop 120bpm https://www.youtube.com/watch?v=PixatMXUzg8
