@@ -170,7 +170,7 @@ A possible chord accompaniment could be:
 
 These are just examples of how you might harmonise traditional Norse melodies using modal scales. The actual chords will vary depending on the specific melody and the interpreter's choices. For authentic traditional performances, it's best to consult arrangements by experts in Norse music or recordings by folk ensembles specialising in this repertoire.
 
-# is there a sad scale on piano`?
+# Is there a sad scale on piano`?
 
 
 While there isn't a specific "sad scale" on the piano, certain scales and keys are often used to evoke sad or melancholic emotions in music. The emotional character of a piece of music is influenced by a combination of factors including scale, mode, harmony, melody, rhythm, and tempo. Here are some scales and modes commonly associated with sad or emotive music:
