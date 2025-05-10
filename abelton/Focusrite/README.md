@@ -17,15 +17,28 @@ https://getstarted.focusrite.com/en
 * Connect speakers or headphones to your Scarlett, then play the video.
 
 
-Video
+Steps
+
+* Install file Focusrite-Control-2.exe
+* C:\Program Files\Focusrite\Focusrite Control 2
+
+After restart it said need new driver
+
+* Install file focusrite_control_3.20.0.exe
+* C:\Program Files\Focusrite\Focusrite Control
+* New restart
+
+
+
+
 
 Setting Scarlett as your Default Audio Device - Windows
 
-https://www.youtube.com/watch?v=eJlvHa46kUo
 
-Get Focusrite-Control-2.exe, was it already installed? Nevermind it works.
 
-* C:\Program Files\Focusrite\Focusrite Control 2
+
+
+
 
 Yes, sound from gitar now
 
