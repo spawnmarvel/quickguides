@@ -91,9 +91,6 @@ https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
 
 ## Recording audio in Ableton Live
 
-* 00:00 - Introduction
-* 00:59 - Connect microphone and guitar 
-
 Connect jack gitar, set input to INST mode. (red light on INST)
 
 Open focusrite and set Line to INST mode
@@ -113,7 +110,20 @@ Open Abelton and verify settings
 
 ![Abelton verify](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/abelton_verify.jpg)
 
+Remove the two default midi track if they are not needed.
 
+You now have two audio tracks.
+
+![Two Audio](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/two_audio.jpg)
+
+Then go the arrangemnt view, and rename the audio track to your input type.
+
+![Arr view](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/arr_view.jpg)
+
+
+
+* 00:00 - Introduction
+* 00:59 - Connect microphone and guitar 
 * 01:23 - How to enable INST (Solo and 2i2)
 * 01:33 - How to enable INST (4i4, 8i6, 18i8, 18i20)
 * 01:47 - Set recording levels
