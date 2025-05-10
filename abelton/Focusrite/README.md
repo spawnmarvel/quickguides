@@ -109,6 +109,10 @@ Connect you headset on turn down monitor.
 ![Focusrite ready](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_212_ready.jpg)
 
 
+Open Abelton and verify settings
+
+![Abelton verify](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/abelton_verify.jpg)
+
 
 * 01:23 - How to enable INST (Solo and 2i2)
 * 01:33 - How to enable INST (4i4, 8i6, 18i8, 18i20)
