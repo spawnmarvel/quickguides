@@ -97,7 +97,13 @@ Open focusrite and set Line to INST mode
 
 ![Focusrite control](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_control.jpg)
 
-Now play a bit (there is no sound), but ensure that the halo is green (not red or yellow, adjust it).
+Now play a bit, but ensure that the halo is green (not red or yellow, adjust it).
+
+The sound was missing due to the input on focusrite was sensitive, just took it out and half way in perfect.
+
+(Check sound and speakers, now it is Speakers (2 - Focusrite USB Audio))
+
+Maybe change the input thing to one with gold?
 
 Press direct monitoring so the latency will be smooth, ref buffer size
 
@@ -124,6 +130,23 @@ Since we mapped the focusrite INST 1 to gitar, we we use input 1 on the audio tr
 
 ![Guitar_input_1_1](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_input_1_1.jpg)
 
+
+The sound was missing due to the input on focusrite was sensitive, just took it out and half way in perfect.
+
+(Check sound and speakers, now it is Speakers (2 - Focusrite USB Audio))
+
+Now when you have sound, adjust the moitor on focusrite, to zero, all the way to the left.
+
+
+Make a kick drum
+
+![drums_midiand gitar_example](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/drums_midi_and_gitar_example.jpg)
+
+
+Guitar record is here:
+
+
+![Guitar record](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_record.jpg)
 
 
 * 00:00 - Introduction
