@@ -159,6 +159,10 @@ Add effect is done before or after, byt you will only hear clean sound, unntil,y
 
 ![effect](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/effect.jpg)
 
+Effect on for practice or always on, set from off to in.
+
+![effect no record](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/effect_no_record.jpg)
+
 Now make shit!
 
 * 00:00 - Introduction
