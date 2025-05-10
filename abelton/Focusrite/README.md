@@ -57,6 +57,23 @@ Buffer size
 ![Buffer size](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/buffer_size.jpg)
 
 
+Low vs high buffer
+
+For start use a high buffer size 512.
+
+On Windows, the Buffer Size or Sample Rate in the Audio tab of Ableton Live's Preferences may appear greyed out. This usually means you need to adjust this setting in the interface's own control software.
+
+Have to use the Focusrite control interface I guess
+
+
+![Buffer low ws high](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/buffer_low_high.jpg)
+
+
+![Focus rite change buffer](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_change_buffer_size.jpg)
+
+
+https://support.focusrite.com/hc/en-gb/articles/208814065-How-to-Change-Sample-Rate-Buffer-Size-Settings-on-Windows
+
 
 https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
 
