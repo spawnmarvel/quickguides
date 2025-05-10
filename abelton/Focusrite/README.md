@@ -47,9 +47,16 @@ After you have sound from the headphones on focusrite and the jack for gitar is 
 
 Setting up your Scarlett in Ableton Live
 
+* Driver type, Asio
+* Audio device, Focusrite USB ASIO
+
 ![Focusrite audio input](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_audio_input.jpg)
 
-*  buffer size, read
+Buffer size
+
+![Buffer size](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/buffer_size.jpg)
+
+
 
 https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
 
