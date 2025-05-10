@@ -68,11 +68,12 @@ Have to use the Focusrite control interface I guess
 
 ![Buffer low ws high](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/buffer_low_high.jpg)
 
+Here we have changed it.
 
 ![Focus rite change buffer](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_change_buffer_size.jpg)
 
 
-https://support.focusrite.com/hc/en-gb/articles/208814065-How-to-Change-Sample-Rate-Buffer-Size-Settings-on-Windows
+On windows https://support.focusrite.com/hc/en-gb/articles/208814065-How-to-Change-Sample-Rate-Buffer-Size-Settings-on-Windows
 
 
 https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
