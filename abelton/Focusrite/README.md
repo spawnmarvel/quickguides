@@ -122,7 +122,7 @@ Then go the arrangemnt view, and rename the audio track to your input type.
 
 Since we mapped the focusrite INST 1 to gitar, we we use input 1 on the audio track we named Guitar Ibanez
 
-![Guitar_1_1](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_1_1.jpg)
+![Guitar_input_1_1](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_input_1_1.jpg)
 
 
 
