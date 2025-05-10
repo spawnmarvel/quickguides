@@ -151,6 +151,16 @@ Then press the main record.
 ![Guitar record](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_record.jpg)
 
 
+When you are done, you will get a record line.
+
+![record line](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/record_line.jpg)
+
+Add effect is done before or after, byt you will only hear clean sound, unntil,you record and do play back.
+
+![effect](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/effect.jpg)
+
+Now make shit!
+
 * 00:00 - Introduction
 * 00:59 - Connect microphone and guitar 
 * 01:23 - How to enable INST (Solo and 2i2)
