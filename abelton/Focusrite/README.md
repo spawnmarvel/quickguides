@@ -28,7 +28,15 @@ After restart it said need new driver
 * C:\Program Files\Focusrite\Focusrite Control
 * New restart
 
+Focusrite Scarlett 2i2 3rd Gen
 
+https://www.thomannmusic.no/focusrite_scarlett_2i2_3rd_gen.htm
+
+![Focurite 212](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_212.jpg)
+
+Then we have the interface for input and sound from gitar or INST 1
+
+![Focurite control](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_control.jpg)
 
 
 
