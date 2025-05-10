@@ -9,7 +9,7 @@
 
 ## Abelton (see other folder for tips and tricks)
 
-Black metal
+## Dark metal
 
 * Min tracks = 4 (Gitar, bass, drums, pling/plong/synth, some vocal (looked room effect))
 * Max tracks = 4 (Gitar, bass, drums, pling/plong/synth, some vocal (looked room effect))
