@@ -79,5 +79,49 @@ Now check abelton, to verify new buffer.
 
 ![Focusrite buffer ok](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_buffer_ok.jpg)
 
+
+* 00:00 - Introduction
+* 00:22 - USB Connection
+* 00:32 - Audio Settings
+* 01:23 - What Is Buffer Size
+
 https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
+
+
+
+## Recording audio in Ableton Live
+
+* 00:00 - Introduction
+* 00:59 - Connect microphone and guitar 
+
+Connect jack gitar, set input to INST mode. (red light on INST)
+
+Open focusrite and set Line to INST mode
+
+![Focusrite control](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_control.jpg)
+
+Now play a bit (there is no sound), but ensure that the halo is green (not red or yellow, adjust it).
+
+Press direct monitoring so the latency will be smooth, ref buffer size
+
+Connect you headset on turn down monitor.
+
+![Focusrite ready](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_212_ready.jpg)
+
+
+
+* 01:23 - How to enable INST (Solo and 2i2)
+* 01:33 - How to enable INST (4i4, 8i6, 18i8, 18i20)
+* 01:47 - Set recording levels
+* 02:00 - Direct monitor (Solo and 2i2)
+* 02:10 - Direct monitor (4i4, 8i6, 18i8, 18i20)
+* 02:18 - Set headphone and speaker levels 
+* 02:34 - Scarlett Solo headphone and speaker volume control
+* 02:46 - Ableton Live introduction
+* 03:27 - Set Scarlett as the input and output device
+* 04:22 - Set up tracks for recording vocals and guitar
+* 05:39 - Recording your guitar and vocal take
+* 06:42 - Basic mix of your recording
+
+https://www.youtube.com/watch?v=IoCTvI86DWI
 
