@@ -140,7 +140,7 @@ Now when you have sound, adjust the moitor on focusrite, to zero, all the way to
 
 Make a kick drum
 
-![drums_midiand gitar_example](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/drums_midi_and_gitar_example.jpg)
+![drums midi and gitar example](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/drums_midi_and_gitar_example.jpg)
 
 
 Guitar record is here:
