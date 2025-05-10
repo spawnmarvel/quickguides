@@ -143,7 +143,9 @@ Make a kick drum and play guitar
 ![drums midi and gitar example](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/drums_midi_and_gitar_example.jpg)
 
 
-Guitar record is here:
+Guitar record is here, press first on the guitar, then go to the top and press stop x 2 to get to the beginning.
+
+Then press the main record.
 
 
 ![Guitar record](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/guitar_record.jpg)
