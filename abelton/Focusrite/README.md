@@ -70,13 +70,14 @@ Have to use the Focusrite control interface I guess
 
 Here we have changed it.
 
-![Focus rite change buffer](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_change_buffer_size.jpg)
+![Focusrite change buffer](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_change_buffer_size.jpg)
 
 
 On windows https://support.focusrite.com/hc/en-gb/articles/208814065-How-to-Change-Sample-Rate-Buffer-Size-Settings-on-Windows
 
+Now check abelton, to verify new buffer.
+
+![Focusrite buffer ok](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/focusrite_buffer_ok.jpg)
 
 https://www.youtube.com/watch?v=NhOQ8gpAODY&t=96s
-
-
 
