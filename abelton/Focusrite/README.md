@@ -138,7 +138,7 @@ The sound was missing due to the input on focusrite was sensitive, just took it 
 Now when you have sound, adjust the moitor on focusrite, to zero, all the way to the left.
 
 
-Make a kick drum
+Make a kick drum and play guitar
 
 ![drums midi and gitar example](https://github.com/spawnmarvel/quickguides/blob/main/abelton/Focusrite/images/drums_midi_and_gitar_example.jpg)
 
