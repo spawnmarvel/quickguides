@@ -2,6 +2,8 @@
 
 Abelton (see other folder for tips and tricks or view this guide)
 
+- [Go to abelton sounds, packs and tips](#sound-pack-tips)
+
 ## Nuch
 
 adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant degree.
@@ -23,10 +25,6 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 * Pling/plong simple melody
 
 ## TBD
-
-### Goto
-
-- [Go to abelton sounds, packs and tips](#sound-pack-tips)
 
 ## Sound, pack and tips
 
