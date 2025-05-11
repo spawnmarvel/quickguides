@@ -26,6 +26,19 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 
 ## TBD
 
+## Piano chords
+
+Minor
+
+https://www.pianote.com/blog/all-piano-chords/#minor
+
+Major
+
+https://www.pianote.com/blog/all-piano-chords/#major
+
+
+
+
 ## Sound pack tips
 
 ## Abelton pack build and drop (free with account)
