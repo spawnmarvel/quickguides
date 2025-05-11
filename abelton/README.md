@@ -26,7 +26,7 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 
 ## TBD
 
-## Sound, pack and tips
+## Sound pack tips
 
 ## Abelton pack build and drop (free with account)
 
