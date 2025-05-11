@@ -19,7 +19,14 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 
 ## Abelton pack build and drop (free)
 
-![Build and drop]()
+Pack contents
+
+* 140+ Instrument Racks
+* 15 Drum Racks
+* 250+ audio loops and MIDI clips
+* 8 Effect Racks
+
+![Build and drop](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/build_drop.jpg)
 
 https://www.ableton.com/en/packs/build-and-drop/
 
