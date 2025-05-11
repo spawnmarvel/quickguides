@@ -19,7 +19,7 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 
 ## Abelton pack build and drop (free)
 
-Pack contents
+Pack contents (search for it by name)
 
 * 140+ Instrument Racks
 * 15 Drum Racks
@@ -29,6 +29,20 @@ Pack contents
 ![Build and drop](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/build_drop.jpg)
 
 https://www.ableton.com/en/packs/build-and-drop/
+
+##
+
+Pack contents (search for it by name)
+
+* 102 Instrument Racks – including bass, keys, leads, pads and effects, designed for Live’s native synths or multisampled from analog gear
+* 27 Drum Racks – from crisp drum machine rhythms to lo-fi samples, with tweakable Effect Racks 
+* 97 MIDI clips & 182 audio loops – premade kit patterns and audio loops and phrases to slice, rework and spark ideas of your own
+* 15 Effect Racks – creative chains set up for using the eight Macro controls to maximum effect. 
+* 5 demo sets – Live sets that showcase some the Pack’s creative potential
+
+![beat tools](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/beat_tools.jpg)
+
+https://www.ableton.com/en/packs/beat-tools/
 
 ## Born
 
