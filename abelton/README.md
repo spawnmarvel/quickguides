@@ -23,7 +23,12 @@ Abelton (see other folder for tips and tricks)
 
 ## Connect midi keyboard
 
-https://help.ableton.com/hc/en-us/articles/360011853159-MIDI-controllers-FAQ
+How to https://help.ableton.com/hc/en-us/articles/360011853159-MIDI-controllers-FAQ
+
+What we use https://www.akaipro.com/lpk25
+
+![Akai](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/akai.jpg)
+
 
 After you have done that, you can use it, press the red circle for the instrument you want to play.
 
