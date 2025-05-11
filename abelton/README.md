@@ -1,6 +1,24 @@
 # Abelton
 
-## Dark metal
+Abelton (see other folder for tips and tricks)
+
+## Umbrifer
+
+* Dark shade
+* Electro
+* Ritual drums, vikings see old old songs for example
+* See where it takes you
+
+## Youtube
+
+* Use youtube to publish for now
+
+## 1 Growing grass Ambient silence (10 min)
+
+* Ritul drum on the 4 of 4 x 4
+* Ambient buzz sound with fade
+* Pling/plong simple melody
+
 
 ## Pc keyboard to piano scale
 
