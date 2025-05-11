@@ -1,13 +1,35 @@
 # Umbrifer
 
+* Dark shade
+* Electro
+* Ritual drums, vikings see old old songs for example
+* See where it takes you
+
+## Abelton (see other folder for tips and tricks)
+
+## Youtube
+
+* Use youtube to publish for now
+
+## 1 Growing grass Ambient silence (10 min)
+
+* Ritul drum on the 4 of 4 x 4
+* Ambient buzz sound with fade
+* Pling/plong simple melody
+
+
+
+
+- [Go to fix in progress](#fix-in-progress)
+
+## Fix in progress
+
 ## How to
 
 * Learn or make song analog
 * Decide on analog guitar or digital
 * Then program for digital using guitar/dist/amp, bass, drums and effects, pling/plong/synth
 * Do some ambient also
-
-## Abelton (see other folder for tips and tricks)
 
 ## Dark metal
 
@@ -20,10 +42,6 @@ Ambient
 * Synth wave
 * Pling/plong/synth, example just 8 notes
 * Over and over again, but build up, slow 1-2 min, then main for 6-10 min
-
-## Youtube
-
-* Use youtube to publish for now
 
 ## Jotun (3-4 min)
 
@@ -51,7 +69,7 @@ A|--2--2--2--3--1--2--2--2--3--1--2--2--2--3--1--3--3--3--3--2--2--2--2-|
 E|-0--0--0--------0--0--0--------0--0--0---------3--3--3--2--2--2--2--2-| x 1?
 
 ```
-Ref
+Ref na
 
 ```
 e|-------------------------------------------------------------------------------------|
@@ -62,7 +80,7 @@ A|-7--7--7--7--7--7--7--7--7--7--7--7--10--10--9--9--7--7--7--7--7--7--7--7--7--
 E|-0--0--0--0--0--0--0--0--0--0--0--0--0---0---0--0--0--0--0--0--0--0--0--0--8--8--8--8|
 
 ```
-Bridge back to main walk
+Bridge back to main walk ja
 
 ```
 e|--------------------------------------------------------------------------------------------------|
@@ -74,4 +92,6 @@ E|-7--7--7--7--7--7--8---7--7--7--7--7--7--7--8---7--7--7--7--7--7--7--8---7--3-
 
 ```
 
-## Growing grass Ambient silence (10 min)
+## Other mysteies 
+
+Play with ableton, see what happens.

@@ -182,3 +182,5 @@ Now make shit!
 
 https://www.youtube.com/watch?v=IoCTvI86DWI
 
+## Effects and extra software
+
