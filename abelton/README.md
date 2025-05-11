@@ -34,6 +34,13 @@ After you have done that, you can use it, press the red circle for the instrumen
 
 ![select_midi_keyboard](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/select_midi_keyboard.jpg)
 
+## Track and arrangement
+
+Set all inputs to length 4
+
+![length](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/length.jpg)
+
+
 
 ## Extr Pc keyboard to piano scale
 
