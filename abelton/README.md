@@ -16,6 +16,17 @@ adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant de
 * Have 3 songs minimum
 * Think about spotify when more
 
+## Born
+
+* Ritul drum on the 4 of 4 x 4
+* Ambient buzz sound with fade
+* Pling/plong simple melody
+
+## TBD
+
+- [Go to abelton sounds, packs and tips](#sound-pack-tips)
+
+## Sound, pack and tips
 
 ## Abelton pack build and drop (free with account)
 
@@ -47,15 +58,6 @@ https://www.ableton.com/en/packs/beat-tools/
 ##  All free packs
 
 https://www.ableton.com/en/packs/#?item_type=free
-
-## Born
-
-* Ritul drum on the 4 of 4 x 4
-* Ambient buzz sound with fade
-* Pling/plong simple melody
-
-## TBD
-
 
 
 ## Connect midi keyboard
