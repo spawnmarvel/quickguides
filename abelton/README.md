@@ -2,9 +2,10 @@
 
 Abelton (see other folder for tips and tricks or view this guide)
 
-## Umbrifer
+## Nuch
 
-* Dark shade
+adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant degree.
+
 * Electro
 * Ritual drums, vikings see old old songs for example
 * See where it takes you
@@ -12,13 +13,18 @@ Abelton (see other folder for tips and tricks or view this guide)
 ## Youtube
 
 * Use youtube to publish for now
+* Have 3 songs minimum
+* Think about spotify when more
 
 
-## 1 Growing grass Ambient silence (10 min)
+## Born
 
 * Ritul drum on the 4 of 4 x 4
 * Ambient buzz sound with fade
 * Pling/plong simple melody
+
+## TBD
+
 
 
 ## Connect midi keyboard
