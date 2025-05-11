@@ -25,9 +25,9 @@ Abelton (see other folder for tips and tricks)
 
 https://help.ableton.com/hc/en-us/articles/360011853159-MIDI-controllers-FAQ
 
-After you have done that, you can use it
+After you have done that, you can use it, press the red circle for the instrument you want to play.
 
-select_midi_keyboard
+![select_midi_keyboard](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/select_midi_keyboard.jpg)
 
 
 ## Pc keyboard to piano scale
