@@ -558,13 +558,7 @@ https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-mod
 
 https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.3
 
-## Linux / BASH, Not a tutorial
-
-View the BASH Language quick reference also
-
-https://github.com/spawnmarvel/powershell-cmd/tree/master/x_quick_reference_pdf
-
-## CMD, Not a tutorial, view postfix .cmd files
+### robocopy (cmd)
 
 ### Robocopy (just file structure)
 ``` CMD
