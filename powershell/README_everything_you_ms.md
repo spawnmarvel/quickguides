@@ -1,7 +1,29 @@
 
-##
+# Powershell my own quickguide
 
+## Function logger
 
+```ps1
+
+# Function to append to the log file
+function Write-Log {
+    param(
+        [string]$Message
+    )
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $logEntry = "$timestamp - $Message"
+    $logEntry | Out-File -FilePath $logFile -Append
+    # For console also, ca be commented out
+    Write-Host $logEntry
+}
+
+# Example
+# Define the target directory and log file path
+$targetDirectory = "C:\Program Files\myapp\logs"
+
+Write-Log "Directory '$targetDirectory' does not exist. Script exited."
+
+```
 ## Everything you wanted to know about
 
 https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.5
