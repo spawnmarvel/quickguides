@@ -31,13 +31,6 @@ $targetDirectory = "C:\Program Files\myapp\logs"
 Write-Log "Directory '$targetDirectory' done."
 
 
-
-# Example
-# Define the target directory and log file path
-$targetDirectory = "C:\Program Files\myapp\logs"
-
-Write-Log "Directory '$targetDirectory' does not exist. Script exited."
-
 ```
 
 ## Everything you wanted to know about
