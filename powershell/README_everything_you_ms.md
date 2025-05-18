@@ -80,7 +80,7 @@ Write-Host $MyString.Length
 # But many methods
 $MyString | Get-Member
 
-# example replace
+# example replace method
 $MyString.Replace("my string", "a method")
 
 ```
