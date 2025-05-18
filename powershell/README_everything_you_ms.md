@@ -1,5 +1,5 @@
 
-# Powershell my own quickguide
+# Powershell quickguide
 
 
 ## The first quick quide
