@@ -33,7 +33,7 @@ Write-Log "Directory '$targetDirectory' done."
 
 ```
 
-### What is the pipeline?
+## What is the pipeline?
 
 At its core, the pipeline is just the | (pipe) character. You simply put it in between PowerShell commands and it takes the output of one command and feeds it as the input to the next.
 
