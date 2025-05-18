@@ -42,7 +42,7 @@ Write-Log "Directory '$targetDirectory' done."
 
 # To review the variables contained in memory by reviewing the contents of the PowerShell drive named Variable, use the following command:
 
-$MyCounter = 0
+$MyCounter = 10
 Get-ChildItem variable:
 
 # You can also review the variables in memory by using the Get-Variable cmdlet:
@@ -56,15 +56,37 @@ Get-Variable
 [DateTime]$date = "January 5, 2022 10:00AM"
 
 # You can review a variable’s type by appending the GetType() method to the name of the variable.
-$MyCounter = 0
+$MyCounter = 10
 $MyCounter.GetType()
 
 
+# Just as objects in Windows PowerShell have properties and methods, so do variables. 
+
+$MyCounter = 10
+$MyCounter.GetType()
+$MyCounter | Get-Member
 
 
 ```
 
-https://learn.microsoft.com/en-us/training/paths/use-variables-arrays-hash-tables-windows-powershell/?source=recommendations
+Use string variables and methods in Windows PowerShell scripts
+
+```ps1
+
+$MyString = "This is my string"
+# The string variable has only one property, Length. 
+Write-Host $MyString.Length
+
+# But many methods
+$MyString | Get-Member
+
+# example replace
+$MyString.Replace("my string", "a method")
+
+```
+
+
+https://learn.microsoft.com/en-us/training/modules/manage-variables-windows-powershell-scripts/
 
 ## What is the pipeline?
 
