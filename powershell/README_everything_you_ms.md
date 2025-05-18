@@ -33,6 +33,37 @@ Write-Log "Directory '$targetDirectory' done."
 
 ```
 
+### What is the pipeline?
+
+At its core, the pipeline is just the | (pipe) character. You simply put it in between PowerShell commands and it takes the output of one command and feeds it as the input to the next.
+
+For each
+```ps1
+$dir = "C:\temp2" 
+# get all files and folders
+$files = $dir | Get-ChildItem
+
+# Loop through each file
+foreach ($file in $files) {
+  # Check if the file is larger than 100MB
+  if ($file.Length -lt 100MB) {
+    # Display the file
+    write-host $file
+  }
+}
+
+```
+A nested pip does the same
+
+````ps1
+$dir = "C:\temp2" 
+
+$all = $dir | Get-ChildItem | Where-Object {$_.Length -lt 100MB}
+write-host $all
+
+```
+
+
 ## Everything you wanted to know about
 
 https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.5
