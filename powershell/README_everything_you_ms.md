@@ -1,6 +1,10 @@
 
 # Powershell quickguide
 
+## Browse all training tags powershell
+
+https://learn.microsoft.com/en-us/training/browse/?terms=powershell
+
 
 ## The first quick quide
 
