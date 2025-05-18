@@ -133,7 +133,7 @@ Get-Service | Where-Object {$_.Name -like "R*"}
 
 https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.5
 
-### Arrays
+### Use variables, arrays, arraylist and hash tables
 
 ```ps1
 # You also can create an array by using the output from a command
@@ -157,9 +157,38 @@ foreach ($file in $files){
 write-host $file.FullName
 }
 
-```
 
-### hashtables
+# To create an array list that's empty and ready to add items, use the following syntax:
+
+
+$computers=New-Object System.Collections.ArrayList
+
+$computers.Add("VM1")
+$computers.Add("VM2")
+Write-Host $computers
+
+# If you want to remove an item from an array list based on the index number, you use the RemoveAt() method. For example:
+$computers.RemoveAt(1)
+Write-Host $computers
+
+# By name
+$computers.Remove("VM1")
+
+# Call propertie count
+Write-Host $computers.Count
+Write-Host $computers
+
+# Define hash tables in Windows PowerShell Scripts
+# A hash table represents a similar concept to an array since it stores multiple items. However, unlike an array which uses an index number to identify each item, a hash table uses for this purpose a unique key. The key is a string that's a unique identifier for the item. Each key in a hash table is associated with a value.
+
+$ComputersTable = @{}
+# add
+$ComputersTable["VM1"] = "10.0.0.11"
+$ComputersTable["VM2"] = "10.0.0.12"
+# access items
+$ComputersTable["VM1"]
+
+```
 
 ### PSCustomobject
 
