@@ -35,8 +35,36 @@ function Write-Log {
 $targetDirectory = "C:\Program Files\myapp\logs"
 Write-Log "Directory '$targetDirectory' done."
 
+```
+## Manage variables in Windows PowerShell scripts
+
+```ps1
+
+# To review the variables contained in memory by reviewing the contents of the PowerShell drive named Variable, use the following command:
+
+$MyCounter = 0
+Get-ChildItem variable:
+
+# You can also review the variables in memory by using the Get-Variable cmdlet:
+Get-Variable
+
+# Variable names aren't case sensitive. The variables $USER and $user are interchangeable. 
+
+# All variables are assigned a type. The variable type determines the data that can be stored in it. In most cases, Windows PowerShell automatically determines the type of a variable during assignment of its value. 
+# Automatic assignment of the variable type works well most of the time. 
+[Int]$num2 = "5"
+[DateTime]$date = "January 5, 2022 10:00AM"
+
+# You can review a variable’s type by appending the GetType() method to the name of the variable.
+$MyCounter = 0
+$MyCounter.GetType()
+
+
+
 
 ```
+
+https://learn.microsoft.com/en-us/training/paths/use-variables-arrays-hash-tables-windows-powershell/?source=recommendations
 
 ## What is the pipeline?
 
