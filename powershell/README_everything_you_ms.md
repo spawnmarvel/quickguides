@@ -190,18 +190,21 @@ $ComputersTable["VM1"]
 
 ```
 
-### PSCustomobject
+## Automate administrative tasks by using PowerShell
 
-### String substitution
+### Discover commands in PowerShell
 
-### if/then/else
+### Connect commands into a pipeline
 
-### switch
+### Write your first PowerShell code
 
-### exceptions
+### Introduction to scripting in PowerShell
 
-### $null
+### Automate Azure tasks with Azure PowerShell
 
-### ShouldProcess
+https://learn.microsoft.com/en-us/training/paths/powershell/
 
-### Visualize parameter binding
+Next up Browse all training
+
+https://learn.microsoft.com/en-us/training/browse/?terms=powershell
+
