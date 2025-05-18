@@ -55,7 +55,7 @@ foreach ($file in $files) {
 ```
 A nested pip does the same
 
-````ps1
+```ps1
 $dir = "C:\temp2" 
 
 $all = $dir | Get-ChildItem | Where-Object {$_.Length -lt 100MB}
