@@ -1,6 +1,11 @@
 
 # Powershell my own quickguide
 
+
+## The first quick quide
+
+https://github.com/spawnmarvel/quickguides/blob/main/powershell/README.md
+
 ## Function logger
 
 ```ps1
@@ -61,6 +66,16 @@ $dir = "C:\temp2"
 $all = $dir | Get-ChildItem | Where-Object {$_.Length -lt 100MB}
 write-host $all
 
+```
+Finding process using more than 300 MB of memory
+
+```ps1
+Get-Process | Where-Object {$_.WorkingSet -gt 300mb}
+```
+
+Get the service status of services starting with R
+```ps1
+Get-Service | Where-Object {$_.Name -like "R*"}
 ```
 
 
