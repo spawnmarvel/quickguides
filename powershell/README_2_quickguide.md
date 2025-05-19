@@ -198,6 +198,54 @@ $ComputersTable["VM1"]
 
 ### Discover commands in PowerShell
 
+* Inspect commands to understand how to call them.
+* Understand what a command returns and customize what it returns.
+
+```ps1
+
+Get-Help -Name Get-Help
+
+Get-Help -Name Get-Service
+
+Get-Help -Name Get-ChildItem
+
+```
+
+* NAME: Provides the name of the command.
+* SYNTAX: Shows ways to call the command by using a combination of flags, and sometimes, allowed parameters.
+* ALIASES: Lists any aliases for a command. An alias is a different name for a command, and it can be used to invoke the command.
+* REMARKS: Provides information about what commands to run to get more help for this command.
+* PARAMETERS: Provides details about the parameter. It lists its type, a longer description, and acceptable values, if applicable.
+
+Filter the help response
+If you don't want to display the full help page, narrow the response by adding flags to your Get-Help command. Here are some flags you can use:
+
+* Full: Returns a detailed help page. It specifies information like parameters, inputs, and outputs that you don't get in the standard response.
+* Detailed: Returns a response that looks like the standard response, but it includes a section for parameters.
+* Examples: Returns only examples, if any exist.
+Online: Opens a web page for your command.
+* Parameter: Requires a parameter name as an argument. It lists a specific parameter's properties.
+
+
+```ps1
+
+Get-Help -Name Get-ChildItem -Examples
+
+# Example pip the result for all examples to a file, is better to read that way.
+Get-Help -Name Get-ChildItem -Examples | Out-File -FilePath .out.txt
+
+# Example 1: Get child items from a file system directory
+Get-ChildItem -Path C:\Test
+
+# Example 2: Get child items in the current directory and subdirectories
+Get-ChildItem -Path C:\Test\*.txt -Recurse -Force
+
+# Example 3 When using the -Include parameter, if you don't include an asterisk in the path the command returns no output. Here it returns .txt files only
+Get-ChildItem -Path C:\Test\ -Include *.txt
+```
+Next up https://learn.microsoft.com/en-us/training/modules/discover-commands/4-discover-objects
+
+
 ### Connect commands into a pipeline
 
 ### Write your first PowerShell code
