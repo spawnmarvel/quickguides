@@ -1,4 +1,4 @@
-# OpenSSL PKI
+# OpenSSL (default bash) PKI
 
 Creating a self-signed certificate using OpenSSL is a straightforward process. Below are the steps to generate a self-signed SSL/TLS certificate:
 
