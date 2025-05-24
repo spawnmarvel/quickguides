@@ -8,6 +8,44 @@ This is simple as it looks. Using the ‘New-SelfSignedCertificate’ cmdlet, yo
 ```ps1
 $Certificate=New-SelfSignedCertificate –Subject testing.com -CertStoreLocation Cert:\CurrentUser\My 
 ```
+To create the cert in the LocalMachine store instead of your current user store, just change the CertStoreLocation to Cert:\LocalMachine\My (and run PowerShell as Administrator). For example:
+
+```ps1
+
+# Must be running an elevated (Admin) PowerShell session!
+
+$cert = New-SelfSignedCertificate `
+  -Subject "CN=testing.com" `
+  -DnsName "testing.com","www.testing.com" `   # optional SANs
+  -CertStoreLocation "Cert:\LocalMachine\My" `
+  -KeyAlgorithm RSA `
+  -KeyLength 2048 `
+  -HashAlgorithm SHA256 `
+  -NotAfter (Get-Date).AddYears(1) `
+  -KeyExportPolicy Exportable
+
+# Output
+$cert | Format-List -Property Thumbprint, Subject, NotAfter, StoreLocation
+
+# 3) Verify your SANs:
+Get-ChildItem Cert:\LocalMachine\My\$($cert.Thumbprint) |
+  Get-ItemProperty -Name *
+  
+```
+
+
+Explanation of the key changes:
+
+* CertStoreLocation "Cert:\LocalMachine\My"
+* Places your new cert in the machine’s “Personal” store.
+* Run as Admin
+* Only an elevated session can write to LocalMachine.
+* DnsName
+* Sets the SANs (if you need any aliases beyond the CN).
+* KeyExportPolicy Exportable
+* So you can later export the private key if needed.
+
+After running that, you’ll find your “testing.com” certificate under Start → mmc → Certificates (Local Computer) → Personal → Certificates.
 
 ## Export Self-signed Certificate using PowerShell
 
