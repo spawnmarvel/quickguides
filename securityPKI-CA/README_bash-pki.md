@@ -98,6 +98,16 @@ What’s happening?
 
 ---
 
+View Subject alternative name
+
+```bash
+openssl x509 -in certificate.crt -noout -text \
+  | grep -A1 "Subject Alternative Name"
+
+```
+
+![openssl bash san](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/openssl_bash_san.jpg)
+
 ## 2  Using an OpenSSL config file
 
 1) Create a custom config (e.g. `openssl.cnf`):
