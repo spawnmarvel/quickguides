@@ -194,7 +194,7 @@ $ComputersTable["VM1"]
 
 ```
 
-## Automate administrative tasks by using PowerShell
+## Automate administrative tasks by using PowerShell MS Learn
 
 ### Discover commands in PowerShell
 
