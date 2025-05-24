@@ -66,7 +66,7 @@ After following these steps, you'll have a self-signed certificate (`certificate
 
 **Note:** Self-signed certificates will trigger security warnings in web browsers because they are not issued by a trusted CA. For production environments, it's recommended to obtain a certificate from a trusted CA.
 
-### DNS aliases (a.k.a. Subject Alternative Names)
+## DNS aliases (a.k.a. Subject Alternative Names)
 
 To include DNS aliases (a.k.a. Subject Alternative Names) in your self-signed cert, you need to tell OpenSSL about them—either via the CLI’s -addext flag (OpenSSL 1.1.1+) or by using an extra config section. Here are both methods:
 
