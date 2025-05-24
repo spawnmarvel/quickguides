@@ -52,6 +52,9 @@ openssl x509 -text -noout -in certificate.crt
 - `-noout`: Prevents the output of the encoded version of the certificate.
 - `-in certificate.crt`: Specifies the certificate file to verify.
 
+
+![openssl bash](https://github.com/spawnmarvel/quickguides/blob/main/securityPKI-CA/images/openssl_bash.jpg)
+
 ### Optional: Combine Private Key and Certificate
 If you want to combine the private key and certificate into a single file (often used in server configurations), you can do so with:
 
