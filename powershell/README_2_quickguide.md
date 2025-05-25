@@ -243,10 +243,31 @@ Get-ChildItem -Path C:\Test\*.txt -Recurse -Force
 # Example 3 When using the -Include parameter, if you don't include an asterisk in the path the command returns no output. Here it returns .txt files only
 Get-ChildItem -Path C:\Test\ -Include *.txt
 ```
-Next up https://learn.microsoft.com/en-us/training/modules/discover-commands/4-discover-objects
+
+Discover objects
+
+```ps1
+# Discover objects by using Get-Member
+$v = Get-Process -Name 'Sql*'
+
+# Get-members
+$v = Get-Process -Name 'Sql*' | Get-Member
+
+# List all members and types
+$v
+
+# Filter a Get-Member result by using Select-Object
+$v = Get-Process -Name 'Sql*' | Get-Member | Select-Object Name, MemberType
+
+# Get only methods
+$v = Get-Process -Name 'Sql*' | Get-Member | Select-Object Name, MemberType | Where-Object MemberType -eq 'Method'
+
+```
+
+### Connect commands into a pipeline TBD
 
 
-### Connect commands into a pipeline
+https://learn.microsoft.com/en-us/training/modules/connect-commands/
 
 ### Write your first PowerShell code
 
