@@ -264,7 +264,7 @@ $v = Get-Process -Name 'Sql*' | Get-Member | Select-Object Name, MemberType | Wh
 
 ```
 
-### Connect commands into a pipeline TBD
+### Connect commands into a pipeline
 
 In PowerShell, you run compiled commands, or cmdlets. By connecting these cmdlets, you can create powerful combined statements, or pipelines. You'll find such combined statements useful as you're looking to automate your workflows.
 
