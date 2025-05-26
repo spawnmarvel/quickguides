@@ -266,10 +266,159 @@ $v = Get-Process -Name 'Sql*' | Get-Member | Select-Object Name, MemberType | Wh
 
 ### Connect commands into a pipeline TBD
 
+In PowerShell, you run compiled commands, or cmdlets. By connecting these cmdlets, you can create powerful combined statements, or pipelines. You'll find such combined statements useful as you're looking to automate your workflows.
 
-https://learn.microsoft.com/en-us/training/modules/connect-commands/
+```ps1
 
-### Write your first PowerShell code
+# Note how you're using the pipe | and that by calling Get-Member, you are in fact creating a pipeline already.
+Get-Process | Get-Member
+
+
+```
+
+Select-Object
+
+```ps1
+
+# PowerShell automatically adds the command Out-Default.
+# The view generally doesn't contain all the properties of an object because it wouldn't display properly on screen,
+# You can override the default view by using Select-Object and choosing your own list of properties.
+# You can then send those properties to Format-Table or Format-List, to display the table however you like.
+
+# Consider the result of running Get-Process on the process vmms
+Get-Process vmms
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+     27    42.05      33.45       0.00    3584   0 vmms
+
+# Getting the full response
+Get-Process vmms | Format-List -Property *
+
+Name                       : vmms
+Id                         : 3584
+PriorityClass              :
+FileVersion                :
+HandleCount                : 585
+WorkingSet                 : 35074048
+[...]
+
+# Finding the real property name
+Get-Process vmms
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+     27    42.05      33.45       0.00    3584   0 vmms
+
+
+# To find out the real name for a specific property, you can use Get-Member
+Get-Process zsh | Get-Member -Name C*
+
+# You now get a list of all members with names that start with a C. Among them is CPU
+
+```
+
+Select-Object
+
+```ps1
+Get-Process vmms | Select-Object -Property Id, Name, CPU
+
+  Id Name CPU
+  -- ---- ---
+3584 vmms
+
+```
+
+Sort-Object
+
+```ps1
+# This example sorts by name, default ascending
+Get-Process | Sort-Object -Property Name
+
+# sort by many columns
+Get-Process | Sort-Object -Descending -Property Name, CPU
+
+# more powerfull expressions
+Get-Process | Where-Object CPU -gt 2 | Sort-Object CPU | Select-Object -First 3
+
+```
+Use formatting and filtering
+
+In a pipeline statement, filtering left means filtering for the results you want as early as possible. 
+
+You can think of the term left as early, because PowerShell statements run from left to right.
+
+```ps1
+
+# This statement first retrieves all of the processes on the machine. It ends up formatting the response so that only the Name property is listed. 
+# This statement doesn't follow the filtering left principle, because it operates on all the processes, attempts to format the response, and then filters at the end.
+# Bad... use oppostite of sql
+Get-Process | Select-Object Name | Where-Object Name -eq 'vmms'
+
+# It's better to filter first and then format
+Get-Process | Where-Object Name -eq 'vmms' | Select-Object Name
+
+```
+Formatting right, formatting as the last thing you do
+
+Whereas filtering left means to filter something as early as possible in a statement, formatting right means to format something as late as possible in the statement.
+
+* The formatting destroys the object with which you're dealing.
+
+```ps1
+
+# example
+Get-Process 'some process' | Select-Object Name, CPU | Get-Member
+
+# The type you get back is System.Diagnostics.Process.
+# What these types are, isn't important for this lesson. 
+# What's important to realize is that when you use any type of formatting command, your data is different.
+
+# Let's illustrate with an example:
+Get-Process | Where-Object Name -eq 'vmms' | Select-Object Name, id
+
+Name   Id
+----   --
+vmms 3584
+
+# Let's use formatting first and then Select-Object, to illustrate what might happen if you don't format last:
+Get-Process | Where-Object Name -eq 'vmms' | Format-Table Name, Id | Select-Object Name, Id
+
+Name Id
+---- --
+
+# It's empty, because Format-Table transformed the object containing your results by placing data into other properties. Your data isn't gone, only your properties. 
+
+
+```
+Formatting commands should be the last thing you use in your statement because they're meant for formatting things nicely for screen presentation. 
+
+```ps1
+
+"a string" | Get-Member
+Name                 MemberType            Definition
+ ----                 ----------            ----------
+ Clone                Method                System.Object Clone(), System.Object ICloneable.Clone()
+ CompareTo            Method                int CompareTo(System.Object value), int CompareTo(string strB), int IComparable.CompareTo(…
+
+
+"a string" | Get-Member | Format-List
+TypeName   : System.String
+ Name       : Clone
+ MemberType : Method
+ Definition : System.Object Clone(), System.Object ICloneable.Clone()
+
+ TypeName   : System.String
+ Name       : CompareTo
+ MemberType : Method
+ Definition : int CompareTo(System.Object value), int CompareTo(string strB), int IComparable.CompareTo(System.Object obj), int 
+              IComparable[string].CompareTo(string other)
+
+```
+
+### Write your first PowerShell code TBD
+
+https://learn.microsoft.com/en-us/training/modules/powershell-write-first/
 
 ### Introduction to scripting in PowerShell
 
