@@ -187,3 +187,4 @@ The most reliable way to check if a specific bit is on or off (set or clear) is 
 
 1,2,4,8,16,32,64,128,256,512,1024 for bit 0 to 10.
 
+![bit calculator](https://github.com/spawnmarvel/quickguides/blob/main/computer-science/bit_calculator.jpg)
