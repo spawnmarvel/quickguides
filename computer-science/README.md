@@ -180,3 +180,10 @@ print(f"Bit 9 (At Target Velocity): {is_bit_9_on}") # Output: True
 ```
 
 This method is efficient and commonly used in low-level programming and industrial control applications to interpret status words.
+
+### 32-bit status word 26148
+
+The most reliable way to check if a specific bit is on or off (set or clear) is using bitwise operations, specifically the bitwise AND (&) operator with a mask.
+
+1,2,4,8,16,32,64,128,256,512,1024 for bit 0 to 10.
+
