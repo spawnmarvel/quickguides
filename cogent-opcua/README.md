@@ -12,6 +12,15 @@ https://www.unified-automation.com/downloads/opc-ua-clients.html
 
 ## Cogent OPC UA
 
+* Cogent DataHub™ can act as both an OPC UA server and client program at the same time.
+* This OPC UA server and client support is fully integrated with all other DataHub features. You can use the DataHub to convert between OPC UA and OPC DA, etc...
+
+https://cogentdatahub.com/features/protocols/opc-ua/
+
+## Cogent datahub-configuration-videos
+
+https://cogentdatahub.com/library/videos/#datahub-configuration-videos
+
 ## CIMIO
 
 ## IP21
