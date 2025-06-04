@@ -140,6 +140,6 @@ ip21
 sqlplus
 pi
 aspen
-aspenconnect
-aspen
+aspen-connect
+aspen-cimio
 
