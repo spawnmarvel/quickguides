@@ -77,5 +77,3 @@ However, the agent must know what metrics should be monitored, and that is why t
 The agent requests the information about the items, and then performs the monitoring on the host and pushes the data to the server via the same TCP port.
 
 https://blog.zabbix.com/zabbix-agent-active-vs-passive/9207/
-
-## Tuning
