@@ -188,7 +188,7 @@ openssl s_client -connect 127.0.0.1:5671 -key C:\path\to\client.key.pem -cert C:
 
 ```
 
-### 3. **For Real AMQPS Servers (like RabbitMQ):**
+### **For Real AMQPS Servers (like RabbitMQ):**
 If you want to test your actual AMQPS broker (not just a simulated server), point the client to the real host:
 
 ```bash
