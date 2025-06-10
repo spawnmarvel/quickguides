@@ -127,3 +127,50 @@ Total found: 2
 ```
 
 export from mmx as pfx
+
+
+## You can generate the Certificate Signing Request (CSR) on a different host and then use the resulting certificate and private key on your app host for mTLS (mutual TLS)
+
+Yes, you can generate the CSR (and private key) on a different host, then transfer both the private key and the signed certificate to your app host for use with mTLS. Just make sure to keep the private key secure during the process.
+
+How it’s commonly done:
+
+
+1. Generate CSR and Private Key on Host A (Offline/Secure Host):
+   - You generate a private key and a CSR on a secure machine (Host A).
+   - The private key stays on Host A, and the CSR is sent to a Certificate Authority (CA) for signing.
+
+2. Get the Signed Certificate:
+   - The CA signs the CSR and returns a certificate.
+
+3. Move the Private Key and Certificate to the App Host (Host B):
+   - You securely copy both the private key and the signed certificate to the application host (Host B) where mTLS will be used.
+   - Make sure to protect the private key during transfer (e.g., use secure copy methods like `scp` or `rsync` over SSH, and set appropriate permissions after transfer).
+
+
+However, if you generate the CSR and private key on a different host, the Windows Certificate Manager on the app host will have no record of the original enrollment request. Therefore:
+
+- When you import the certificate and private key (as a PFX, for example) onto the app host, the "Certificate Enrollment Requests" entry will not match or be satisfied.
+- The pending enrollment request will remain in the certificate store as "orphaned."
+- This is harmless, but it can cause confusion or clutter.
+
+Best Practice:
+- You should delete/remove the unused "Certificate Enrollment Request" entry in the Windows Certificate Manager on the app host. This keeps the certificate store clean and avoids confusion.
+
+
+
+## Test mtls Validating Mutual TLS Authentication 
+
+### **Server Side**
+
+```cmd
+
+openssl s_server \
+  -accept 3000 \
+  -CAfile /root/mtls/certs/cacert.pem \
+  -cert /root/server_certs/server.cert.pem \
+  -key /root/server_certs/server.key.pem \
+  -state
+
+# - -accept 3000: Listen on port 3000.- -CAfile: The CA certificate(s) used to verify the client certificate.- -cert and -key: The server’s certificate and private key.- -state: Print detailed state information.
+```
