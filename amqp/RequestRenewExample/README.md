@@ -161,16 +161,84 @@ Best Practice:
 
 ## Test mtls Validating Mutual TLS Authentication 
 
+
+### For AMQPS (or similar, like RabbitMQ) with mTLS:
+
+### To summarize:
+
+- **AMQP**: Usually runs on port 5672 (unencrypted).
+- **AMQPS**: Runs on port 5671 (TLS-encrypted, often with mTLS).
+
+
+### 1. **Install OpenSSL for Windows**
+
+
 ### **Server Side**
 
-```cmd
+```bash
+openssl s_server -accept 5671 -CAfile C:\path\to\cacert.pem -cert C:\path\to\server.cert.pem -key C:\path\to\server.key.pem -state
 
-openssl s_server \
-  -accept 3000 \
-  -CAfile /root/mtls/certs/cacert.pem \
-  -cert /root/server_certs/server.cert.pem \
-  -key /root/server_certs/server.key.pem \
-  -state
-
-# - -accept 3000: Listen on port 3000.- -CAfile: The CA certificate(s) used to verify the client certificate.- -cert and -key: The server’s certificate and private key.- -state: Print detailed state information.
+# - -accept 3000: Listen on port 5671.- -CAfile: The CA certificate(s) used to verify the client certificate.- -cert and -key: The server’s certificate and private key.- -state: Print detailed state information.
 ```
+
+### **Client Side**
+
+```bash
+openssl s_client -connect 127.0.0.1:5671 -key C:\path\to\client.key.pem -cert C:\path\to\client.cert.pem -CAfile C:\path\to\cacert.pem -state
+
+```
+
+### 3. **For Real AMQPS Servers (like RabbitMQ):**
+If you want to test your actual AMQPS broker (not just a simulated server), point the client to the real host:
+
+```bash
+openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -cert C:\path\to\client.cert.pem -CAfile C:\path\to\cacert.pem -state
+```
+**Assumptions:**
+- your-broker-host is the remote AMQPS server.- The server is configured to require client certificates (mTLS).
+- The server's **trust store** contains the CA that signed your client certificate.
+- Your client certificate and private key are valid and match, and the cacert.pem you provide to your client contains the CA that signed the server's certificate.
+---
+
+## 1. **RabbitMQ Logging:**
+
+- **If the client cert is trusted by RabbitMQ (i.e., signed by a CA in RabbitMQ’s trust store):**
+  - **RabbitMQ logs a successful TLS handshake.**
+  - However, RabbitMQ expects a proper AMQP protocol handshake after the TLS handshake.
+  - Since OpenSSL s_client does not send AMQP frames, after the TLS handshake, RabbitMQ will log an error like:
+
+```log
+closing AMQP connection <0.x.x> (127.0.0.1:yyyy -> 127.0.0.1:5671):
+missed AMQP 0-9-1 protocol header
+
+```
+- But the TLS/mTLS authentication itself is successful.
+
+- **If the client cert is NOT trusted/invalid:**
+  - RabbitMQ logs a TLS handshake failure, e.g.:
+
+```log
+TLS handshake error: tls_alert_certificate_unknown
+
+```
+- No AMQP protocol error, as handshake didn’t complete.
+
+## 2. **OpenSSL s_client Output:**
+
+- **If mTLS handshake is successful:**
+
+```log
+Verify return code: 0 (ok)
+```
+and details about the server’s certificate.
+
+- **If handshake fails (e.g., cert not trusted):**
+  - You’ll see an SSL error, such as:
+
+```log
+140735206191936:error:14094410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:ssl/record/rec_layer_s3.c:1543:SSL alert number 40
+```
+
+No, running `openssl s_client -connect your-broker-host:5671 ...` to test the AMQPS/mTLS handshake will NOT disturb or interrupt current traffic on your RabbitMQ server.
+
+
