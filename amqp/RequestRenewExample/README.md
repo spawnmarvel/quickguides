@@ -178,7 +178,7 @@ Best Practice:
 ```bash
 openssl s_server -accept 5671 -CAfile C:\path\to\cacert.pem -cert C:\path\to\server.cert.pem -key C:\path\to\server.key.pem -state
 
-# - -accept 3000: Listen on port 5671.- -CAfile: The CA certificate(s) used to verify the client certificate.- -cert and -key: The server’s certificate and private key.- -state: Print detailed state information.
+# - -accept 5671: Listen on port 5671.- -CAfile: The CA certificate(s) used to verify the client certificate.- -cert and -key: The server’s certificate and private key.- -state: Print detailed state information.
 ```
 
 ### **Client Side**
