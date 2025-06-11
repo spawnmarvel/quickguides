@@ -242,3 +242,7 @@ and details about the server’s certificate.
 No, running `openssl s_client -connect your-broker-host:5671 ...` to test the AMQPS/mTLS handshake will NOT disturb or interrupt current traffic on your RabbitMQ server.
 
 
+
+Result after running commands
+
+
