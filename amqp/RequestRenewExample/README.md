@@ -255,6 +255,6 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 * On the client we used used a temp store with cert/ca and key file for test.
 * On the server AMQP we updated the bundle with new CA's 
 
-!(openssl s_client)[https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg]
+![openssl s_client](https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg)
 
 
