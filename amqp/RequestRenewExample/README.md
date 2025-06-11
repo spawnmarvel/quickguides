@@ -243,6 +243,8 @@ No, running `openssl s_client -connect your-broker-host:5671 ...` to test the AM
 
 
 
-Result after running commands
+Result after running commands, perfect
+
+!(openssl s_client)[https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg]
 
 
