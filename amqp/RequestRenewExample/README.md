@@ -245,6 +245,16 @@ No, running `openssl s_client -connect your-broker-host:5671 ...` to test the AM
 
 Result after running commands, perfect
 
+
+If you want to test your actual AMQPS broker (not just a simulated server), point the client to the real host:
+
+```bash
+openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -cert C:\path\to\client.cert.pem -CAfile C:\path\to\cacert.pem -state
+```
+
+* On the client we used used a temp store with cert/ca and key file for test.
+* On the server AMQP we updated the bundle with new CA's 
+
 !(openssl s_client)[https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg]
 
 
