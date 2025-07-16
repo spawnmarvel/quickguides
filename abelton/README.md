@@ -6,13 +6,22 @@ Abelton (see other folder for tips and tricks or view this guide)
 
 - [Go to abelton sounds, packs and tips](#sound-pack-tips)
 
-## Nuch folder\Born ongoing
+
+## Nuch folder\Broken Soul
+
+* BM, bpm 60 black metal drums
+* midi 1 505 drums
+* midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere
+* 
+
+
+## Nuch folder\Born ongoing (wait)
 
 * Ritul drum on the 4 of 4 x 4
 * Ambient buzz sound with fade
 * Pling/plong simple melody, use the indian flute with mini keyboard..
 
-## Nuch folder\Time
+## Nuch folder\Time (wait)
 
 * EDM
 * Happy memories
