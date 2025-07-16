@@ -10,7 +10,7 @@ Abelton (see other folder for tips and tricks or view this guide)
 
 * Ritul drum on the 4 of 4 x 4
 * Ambient buzz sound with fade
-* Pling/plong simple melody
+* Pling/plong simple melody, use the indian flute with mini keyboard..
 
 ## Nuch folder\tbd
 
