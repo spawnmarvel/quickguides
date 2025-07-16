@@ -4,21 +4,23 @@ Abelton (see other folder for tips and tricks or view this guide)
 
 - [Go to abelton sounds, packs and tips](#sound-pack-tips)
 
-## Born ongoing
+## Nuch folder\Born ongoing
 
 * Ritul drum on the 4 of 4 x 4
 * Ambient buzz sound with fade
 * Pling/plong simple melody
 
+## Nuch folder\tbd
 
 
-## TBD
-
-## Youtube for publish
+## Youtube
 
 * Use youtube to publish for now
 * Have 3 songs minimum
 * Think about spotify when more
+
+
+## TBD
 
 ## Piano chords
 
