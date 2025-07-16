@@ -46,13 +46,6 @@ https://www.ableton.com/en/shop/live/
 
 ## TBD
 
-## Metal Area mt-a
-
-
-![metal area](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/metalarea.jpg)
-
-https://mercuriall.com/cms/details_freestuff
-
 ## Piano chords
 
 Minor
