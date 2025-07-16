@@ -18,7 +18,7 @@ https://www.ableton.com/en/shop/live/
 
 ## Nuch folder\Broken Soul
 
-* BM, bpm 60 black metal drums
+* BM, bpm 120 black metal drums, but played over bpm 60 so we can do fast stuff
 * midi 1 505 drums on 4/4
 * * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
@@ -45,6 +45,12 @@ https://www.ableton.com/en/shop/live/
 
 
 ## TBD
+
+## Metal Area mt-a
+
+
+
+https://mercuriall.com/cms/details_freestuff
 
 ## Piano chords
 
