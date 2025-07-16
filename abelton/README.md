@@ -12,7 +12,7 @@ Abelton (see other folder for tips and tricks or view this guide)
 * BM, bpm 60 black metal drums
 * midi 1 505 drums
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere
-* 
+* Faster guitar? https://www.youtube.com/watch?v=3FlbtZawNTs Learn Live : Quantizing MIDI
 
 
 ## Nuch folder\Born ongoing (wait)
