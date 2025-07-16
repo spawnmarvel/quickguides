@@ -19,8 +19,8 @@ https://www.ableton.com/en/shop/live/
 ## Nuch folder\Broken Soul
 
 * BM, bpm 60 black metal drums
-* midi 1 505 drums
-* midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere
+* midi 1 505 drums on 4/4
+* midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
 
 
 ## Nuch folder\Born ongoing (wait)
