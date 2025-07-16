@@ -12,7 +12,11 @@ Abelton (see other folder for tips and tricks or view this guide)
 * Ambient buzz sound with fade
 * Pling/plong simple melody, use the indian flute with mini keyboard..
 
-## Nuch folder\tbd
+## Nuch folder\Time
+
+* EDM
+* Happy memories
+* Midi 4 use this as melody lead E, G, B, D, higher G , A
 
 
 ## Youtube
