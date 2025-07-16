@@ -4,29 +4,21 @@ Abelton (see other folder for tips and tricks or view this guide)
 
 - [Go to abelton sounds, packs and tips](#sound-pack-tips)
 
-## Nuch
-
-adverb. (surfing, slang, dated) Not much, hardly, barely, to an insignificant degree.
-
-* Electro
-* Ritual drums, vikings see old old songs for example
-* See where it takes you
-
-## Born
+## Born ongoing
 
 * Ritul drum on the 4 of 4 x 4
 * Ambient buzz sound with fade
 * Pling/plong simple melody
 
 
-## Youtube
+
+## TBD
+
+## Youtube for publish
 
 * Use youtube to publish for now
 * Have 3 songs minimum
 * Think about spotify when more
-
-
-## TBD
 
 ## Piano chords
 
