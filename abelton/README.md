@@ -6,6 +6,13 @@ Abelton (see other folder for tips and tricks or view this guide)
 
 - [Go to abelton sounds, packs and tips](#sound-pack-tips)
 
+## Upgrade from lite to intro
+
+lite, - Sounds & Packs: Small sound and loop library (~1500 sounds, varies by bundle)
+
+intro, - Sounds & Packs: Larger sound library than Lite (~5000+ sounds)
+
+https://www.ableton.com/en/shop/live/
 
 ## Nuch folder\Broken Soul
 
