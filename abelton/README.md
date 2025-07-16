@@ -12,6 +12,8 @@ lite, - Sounds & Packs: Small sound and loop library (~1500 sounds, varies by bu
 
 intro, - Sounds & Packs: Larger sound library than Lite (~5000+ sounds)
 
+* Essentials - 16 tracks and 5+ GB of sounds
+
 https://www.ableton.com/en/shop/live/
 
 ## Nuch folder\Broken Soul
@@ -19,7 +21,6 @@ https://www.ableton.com/en/shop/live/
 * BM, bpm 60 black metal drums
 * midi 1 505 drums
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere
-* Faster guitar? https://www.youtube.com/watch?v=3FlbtZawNTs Learn Live : Quantizing MIDI
 
 
 ## Nuch folder\Born ongoing (wait)
@@ -101,6 +102,8 @@ What we use https://www.akaipro.com/lpk25
 
 
 After you have done that, you can use it, press the red circle for the instrument you want to play.
+
+No sound, USB out and in?
 
 ![select_midi_keyboard](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/select_midi_keyboard.jpg)
 
