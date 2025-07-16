@@ -20,6 +20,7 @@ https://www.ableton.com/en/shop/live/
 
 * BM, bpm 60 black metal drums
 * midi 1 505 drums on 4/4
+* * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
 
 
