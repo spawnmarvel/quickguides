@@ -22,6 +22,8 @@ https://www.ableton.com/en/shop/live/
 
 * How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4tA
 
+* The NEW Ableton 12 Beginner Guide (in 22 Minutes) https://www.youtube.com/watch?v=WMg4Y4q6FQ0
+
 ## Youtube
 
 * Use youtube to publish for now
