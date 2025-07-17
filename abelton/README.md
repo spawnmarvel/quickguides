@@ -23,6 +23,8 @@ https://www.ableton.com/en/shop/live/
 * * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
 
+How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4tA
+
 
 ## Nuch folder\Born ongoing (wait)
 
@@ -77,6 +79,11 @@ MT-PowerDrumKit-Content.pdk
 
 ...into the VST-plugins folder of your DAW.
 
+## Necro heavy guitar
+
+How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4tA
+
+![necro guitar](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/necro_guitar.jpg)
 
 ## Abelton pack build and drop (free with account)
 
