@@ -77,20 +77,6 @@ MT-PowerDrumKit-Content.pdk
 
 ...into the VST-plugins folder of your DAW.
 
-## Piano chords
-
-Minor
-
-https://www.pianote.com/blog/all-piano-chords/#minor
-
-Major
-
-https://www.pianote.com/blog/all-piano-chords/#major
-
-
-
-
-## Sound pack tips
 
 ## Abelton pack build and drop (free with account)
 
@@ -145,14 +131,58 @@ Set all inputs to length 4
 
 ![length](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/length.jpg)
 
-## Record
-
-## Mastering
-
-## Extra Pc keyboard to piano scale
+## Pc keyboard to piano scale
 
 ![pc keys to piano](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/101_pc_keyboard.jpg)
 
+## Piano chords
+
+Minor
+
+https://www.pianote.com/blog/all-piano-chords/#minor
+
+Major
+
+https://www.pianote.com/blog/all-piano-chords/#major
+
+## Guitar power chords
+
+To play metal music on piano using guitar-based power chords, focus on root-fifth dyads and their inversions, often with added octaves for a fuller sound. Metal music relies on power chords, typically involving the root note and the fifth of the scale, sometimes doubled with an octave. You can translate these guitar shapes to the piano, experimenting with different inversions and rhythmic patterns to achieve a metal sound. 
+
+Playing Power Chords on Piano:
+
+Root and Fifth:
+* Identify the root note of the chord on the piano and then find its fifth (e.g., for a C power chord, play C and G). 
+
+Octaves:
+* Double the root note and/or the fifth in a higher or lower octave to create a fuller sound. 
+
+Inversions:
+* Experiment with placing the fifth in the bass (e.g., instead of C-G, play G-C-G). 
+
+Adding Metal Flair:
+* Distortion and Gain:
+* * While you can't truly replicate the distortion of a guitar amp, you can utilize piano effects like reverb, delay, and chorus to mimic that sound. 
+* Rhythmic Patterns:
+* * Use staccato notes, palm muting techniques, and fast-paced rhythmic patterns to capture the energy of metal music. 
+* Harmonization:
+* * Experiment with harmonizing the power chords with minor or diminished chords, or even use them to create melodies. 
+* Arpeggios:
+* * Break down the power chords into arpeggios to create a more intricate and flowing texture, similar to some metal guitar techniques. 
+* Octaves and Inversions:
+* * Adding octaves and inversions can make the power chords sound more powerful and full on the piano. 
+
+Example:
+* Instead of using just the notes C and G for a C power chord, you could play C, G, and C (one octave higher). 
+* For a heavier feel, try inverting the chord to G, C, G. You can also play these notes in a rhythmic pattern, adding octaves or other intervals to create a unique metal sound. 
+
+
+![piano chords power](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/chord.jpg)
+
+
+## Record
+
+## Mastering
 
 
 
