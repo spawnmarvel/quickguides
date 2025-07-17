@@ -61,7 +61,7 @@ After you have installed them goto:
 
 Cool amp sound
 
-![amp set](![Plugins loaded](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/plugins.jpg))
+![amp set](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/amp.jpg)
 
 Even more free stuff https://www.reddit.com/r/ableton/comments/gascpb/guitar_amp_in_live_10_lite/
 
