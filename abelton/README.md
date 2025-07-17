@@ -16,28 +16,11 @@ intro, - Sounds & Packs: Larger sound library than Lite (~5000+ sounds)
 
 https://www.ableton.com/en/shop/live/
 
-## Nuch folder\Broken Soul
+## Abelton tips
 
-* BM, bpm 120 black metal drums, but played over bpm 60 so we can do fast stuff
-* midi 1 505 drums on 4/4
-* * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
-* midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
+* 12 Life-Changing Ableton Tips https://www.youtube.com/watch?v=SZ3PTkgy2aA
 
-How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4tA
-
-
-## Nuch folder\Born ongoing (wait)
-
-* Ritul drum on the 4 of 4 x 4
-* Ambient buzz sound with fade
-* Pling/plong simple melody, use the indian flute with mini keyboard..
-
-## Nuch folder\Time (wait)
-
-* EDM
-* Happy memories
-* Midi 4 use this as melody lead E, G, B, D, higher G , A
-
+* How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4tA
 
 ## Youtube
 
@@ -199,6 +182,27 @@ https://tabs.ultimate-guitar.com/tab/metallica/enter-sandman-tabs-8595
 
 ![enter sandman](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/entersandman.jpg)
 
+
+## Nuch folder\Broken Soul
+
+* BM, bpm 120 black metal drums, but played over bpm 60 so we can do fast stuff
+* midi 1 505 drums on 4/4
+* * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
+* midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
+
+
+
+## Nuch folder\Born ongoing (wait)
+
+* Ritul drum on the 4 of 4 x 4
+* Ambient buzz sound with fade
+* Pling/plong simple melody, use the indian flute with mini keyboard..
+
+## Nuch folder\Time (wait)
+
+* EDM
+* Happy memories
+* Midi 4 use this as melody lead E, G, B, D, higher G , A
 
 ## Record
 
