@@ -59,10 +59,23 @@ After you have installed them goto:
 ![Plugins loaded](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/plugins.jpg)
 
 
+Cool amp sound
+
+![amp set](![Plugins loaded](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/plugins.jpg))
 
 Even more free stuff https://www.reddit.com/r/ableton/comments/gascpb/guitar_amp_in_live_10_lite/
 
 
+* Drums
+* https://www.powerdrumkit.com/download76187.php
+
+How to install ?
+Open the downloaded zip file and copy both files...
+
+MT-PowerDrumKit.dll
+MT-PowerDrumKit-Content.pdk
+
+...into the VST-plugins folder of your DAW.
 
 ## Piano chords
 
