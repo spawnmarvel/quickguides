@@ -180,6 +180,19 @@ Example:
 ![piano chords power](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/chord.jpg)
 
 
+## Example enter sandman
+
+Piano
+
+https://www.youtube.com/watch?v=E4PoPQfzJhU
+
+Guitar
+
+https://tabs.ultimate-guitar.com/tab/metallica/enter-sandman-tabs-8595
+
+![enter sandman](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/entersandman.jpg)
+
+
 ## Record
 
 ## Mastering
