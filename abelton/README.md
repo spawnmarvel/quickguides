@@ -44,7 +44,25 @@ https://www.ableton.com/en/shop/live/
 * Think about spotify when more
 
 
-## TBD
+## Free stuff
+
+* BOSS® Metal Zone MT-2™ modeling
+* https://mercuriall.com/cms/details_freestuff
+
+* For guitar amps, I recommend BlueCat Free Amp simulator, which comes in the following pack:
+* WIN x64 VST
+* https://www.bluecataudio.com/Products/Bundle_FreewarePack/
+
+After you have installed them goto:
+
+
+![Plugins loaded](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/plugins.jpg)
+
+
+
+Even more free stuff https://www.reddit.com/r/ableton/comments/gascpb/guitar_amp_in_live_10_lite/
+
+
 
 ## Piano chords
 
