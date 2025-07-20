@@ -207,6 +207,13 @@ Simulating guitar chugging (the percussive, palm-muted sound often heard in meta
 - Add velocity variation to each note for realism.
 
 
+
+- Fast attack clamps down on the initial transient, making the chug shorter and more controlled.
+- Fast release lets the compressor recover quickly so it’s ready for the next chug.
+- This creates that tight, punchy, “machine-gun” chug sound common in metal and rock.
+
+![chug](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/chug.jpg)
+
 ## Length of notes 1/32
 
 ![1-32](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/1-32.jpg)
