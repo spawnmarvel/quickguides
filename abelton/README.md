@@ -70,6 +70,14 @@ How to create metal in abelton live 12 https://www.youtube.com/watch?v=CbN4RCen4
 
 ![necro guitar](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/necro_guitar.jpg)
 
+## My software
+
+[...]
+
+XLN Addictive Drums 2 and Studio Rock ADPak
+
+https://id.focusritegroup.com/en/my-software
+
 ## Abelton pack build and drop (free with account)
 
 Pack contents (search for it by name)
@@ -184,7 +192,27 @@ https://tabs.ultimate-guitar.com/tab/metallica/enter-sandman-tabs-8595
 
 ![enter sandman](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/entersandman.jpg)
 
+
+## Simulate chugging
+
+Simulating guitar chugging (the percussive, palm-muted sound often heard in metal and rock) in Ableton Live is possible using a combination of MIDI programming, virtual instruments, effect processing, and creative sound design. Here’s how you can achieve a realistic guitar chug sound in Ableton:
+
+
+Simulating guitar chugging (the percussive, palm-muted sound often heard in metal and rock) in Ableton Live is possible using a combination of MIDI programming, virtual instruments, effect processing, and creative sound design. Here’s how you can achieve a realistic guitar chug sound in Ableton:
+
+1. Choosing a Guitar Plugin
+2. Programming the Chugs
+- Use short, staccato MIDI notes (usually on the low E or A string for metal chugs).
+- Palm-muted (P.M.) chugs are usually represented by very short note lengths (e.g., 1/32 or 1/16).
+- Add velocity variation to each note for realism.
+
+
+## Length of notes 1/32
+
+![1-32](https://github.com/spawnmarvel/quickguides/blob/main/abelton/101_images_ableton/1-32.jpg)
+
 # Songs TBD
+
 
 ## Nuch folder\Broken Soul
 
@@ -193,6 +221,10 @@ https://tabs.ultimate-guitar.com/tab/metallica/enter-sandman-tabs-8595
 * * drums example 60 BPM TRADITIONAL BLAST BEAT DRUM TRACK https://www.youtube.com/watch?v=Qpo-n-s3MQE&list=PLkuN6SZa8Vng8nOmaXsECkQVXTNW6JsKo
 * midi 2 Guitar electric and effect Basic Heavy Gutar Amp, Thrash, melodic atmpshere on 8/4
 
+## Nuch folder\Jotun
+
+* BM, like KING.
+* bpm 120 black metal drums, but played over bpm 60 so we can do fast stuff
 
 
 ## Nuch folder\Born ongoing (wait)
