@@ -79,3 +79,49 @@ After publishing, go to:
 Run it
 
 ![myapp run release exe](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/app_exe.jpg)
+
+## For app changes
+
+Just do the same steps again.
+
+```csharp
+// See https://aka.ms/new-console-template for more information
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // ... your code ...
+
+        Console.WriteLine("Hello OOP, nice to see you again");
+        // ... your code ...
+
+        Console.WriteLine("Press Enter to exit...");
+        Console.ReadLine();
+    }
+}
+
+```
+
+Test it, Start the app
+
+```bash
+dotnet run
+
+```
+Create a new release
+
+```bash
+dotnet publish -c Release -r win-x64
+
+```
+
+Navigate to folder and run it myapp.exe
+
+![myapp run release new](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/new_release.jpg)
+
+
+
+
