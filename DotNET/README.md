@@ -131,13 +131,64 @@ cd yourfolder
 
 dotnet new console -n myapp
 
+# see all aviliable apps
+dotnet new --list
+These templates matched your input: 
+
+Template Name                                 Short Name                  Language    Tags
+--------------------------------------------  --------------------------  ----------  ----------------------------------
+API Controller                                apicontroller               [C#]        Web/ASP.NET
+ASP.NET Core Empty                            web                         [C#],F#     Web/Empty
+ASP.NET Core gRPC Service                     grpc                        [C#]        Web/gRPC/API/Service
+ASP.NET Core Web API                          webapi                      [C#],F#     Web/Web API/API/Service
+ASP.NET Core Web API (native AOT)             webapiaot                   [C#]        Web/Web API/API/Service
+ASP.NET Core Web App (Model-View-Controller)  mvc                         [C#],F#     Web/MVC
+ASP.NET Core Web App (Razor Pages)            webapp,razor                [C#]        Web/MVC/Razor Pages
+Blazor Web App                                blazor                      [C#]        Web/Blazor/WebAssembly
+Blazor WebAssembly Standalone App             blazorwasm                  [C#]        Web/Blazor/WebAssembly/PWA
+Class                                         class                       [C#],VB     Common
+Class Library                                 classlib                    [C#],F#,VB  Common/Library
+Console App                                   console                     [C#],F#,VB  Common/Console
+dotnet gitignore file                         gitignore,.gitignore                    Config
+Dotnet local tool manifest file               tool-manifest                           Config
+EditorConfig file                             editorconfig,.editorconfig              Config
+Enum                                          enum                        [C#],VB     Common
+global.json file                              globaljson,global.json                  Config
+Interface                                     interface                   [C#],VB     Common
+MSBuild Directory.Build.props file            buildprops                              MSBuild/props
+MSBuild Directory.Build.targets file          buildtargets                            MSBuild/props
+MSBuild Directory.Packages.props file         packagesprops                           MSBuild/packages/props/CPM
+MSTest Playwright Test Project                mstest-playwright           [C#]        Test/MSTest/Playwright/Desktop/Web
+MSTest Test Class                             mstest-class                [C#],F#,VB  Test/MSTest
+MSTest Test Project                           mstest                      [C#],F#,VB  Test/MSTest/Desktop/Web
+MVC Controller                                mvccontroller               [C#]        Web/ASP.NET
+MVC ViewImports                               viewimports                 [C#]        Web/ASP.NET
+MVC ViewStart                                 viewstart                   [C#]        Web/ASP.NET
+NuGet Config                                  nugetconfig,nuget.config                Config
+NUnit 3 Test Item                             nunit-test                  [C#],F#,VB  Test/NUnit
+NUnit 3 Test Project                          nunit                       [C#],F#,VB  Test/NUnit/Desktop/Web
+NUnit Playwright Test Project                 nunit-playwright            [C#]        Test/NUnit/Playwright/Desktop/Web
+Protocol Buffer File                          proto                                   Web/gRPC
+Razor Class Library                           razorclasslib               [C#]        Web/Razor/Library
+Razor Component                               razorcomponent              [C#]        Web/ASP.NET
+Razor Page                                    page                        [C#]        Web/ASP.NET
+Razor View                                    view                        [C#]        Web/ASP.NET
+Record                                        record                      [C#]        Common
+Solution File                                 sln,solution                            Solution
+Struct                                        struct,structure            [C#],VB     Common
+Web Config                                    webconfig                               Config
+Windows Forms App                             winforms                    [C#],VB     Common/WinForms
+Windows Forms Class Library                   winformslib                 [C#],VB     Common/WinForms
+Windows Forms Control Library                 winformscontrollib          [C#],VB     Common/WinForms
+Worker Service                                worker                      [C#],F#     Common/Worker/Web
+WPF Application                               wpf                         [C#],VB     Common/WPF
+WPF Class Library                             wpflib                      [C#],VB     Common/WPF
+WPF Custom Control Library                    wpfcustomcontrollib         [C#],VB     Common/WPF
+WPF User Control Library                      wpfusercontrollib           [C#],VB     Common/WPF
+xUnit Test Project                            xunit                       [C#],F#,VB  Test/xUnit/Desktop/Web
+
 ```
 
-## **Common dotnet new Templates**
-| Template Name     | Command Example                        | Description                                |
-|-------------------|----------------------------------------|--------------------------------------------|
-| **console**       | dotnet new console -n MyApp          | Console app (the one you already used)     || **classlib**      | dotnet new classlib -n MyLib         | Class library project (DLL)                || **web**           | dotnet new web -n MyWebApp           | ASP.NET Core Web App (no MVC)              || **mvc**           | dotnet new mvc -n MyMvcApp           | ASP.NET Core MVC Web App                   || **webapi**        | dotnet new webapi -n MyApi           | ASP.NET Core Web API project               || **blazorserver**  | dotnet new blazorserver -n MyBlazor  | Blazor Server app                          || **blazorwasm**    | dotnet new blazorwasm -n MyBlazorWasm| Blazor WebAssembly app                     || **worker**        | dotnet new worker -n MyWorker         | Worker Service (background service)        || **wpf**           | dotnet new wpf -n MyWpfApp           | WPF Desktop app (Windows only)             || **winforms**      | dotnet new winforms -n MyWinForms    | WinForms Desktop app (Windows only)        || **mstest**        | dotnet new mstest -n MyTests         | MSTest unit test project                   || **xunit**         | dotnet new xunit -n MyTests          | xUnit unit test project                    || **nunit**         | dotnet new nunit -n MyTests          | NUnit unit test project                    || **classlib**      | dotnet new classlib -n MyLib         | .NET class library                         || **razorclasslib** | dotnet new razorclasslib -n MyRazorLib| Razor class library (for UI components)     |
----
 
 
 
