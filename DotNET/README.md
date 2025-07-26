@@ -127,6 +127,26 @@ Navigate to folder and run it myapp.exe
 ![myapp run release new](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/new_release.jpg)
 
 
+## Debug and release
+
+Debug Configuration
+
+- Purpose: Used during development and testing.
+- Optimization: Minimal or no code optimization, making debugging easier.
+- Debug Information: Includes full debugging information (symbols, variable names, line numbers).
+- Assertions: Debug assertions and extra diagnostic code are included.
+- Performance: Runs slower, but allows you to step through code and inspect variables.
+- File Size: Typically larger because of debug symbols and less optimization.
+
+Release Configuration
+
+- Purpose: Used for deploying the final product to users.
+- Optimization: Compiler applies optimizations to improve performance and reduce file size.
+- Debug Information: Minimal or no debug information; harder to debug.
+- Assertions: Debug assertions are removed.
+- Performance: Runs faster and is more efficient.
+- File Size: Smaller and optimized for distribution.
+
 ## Different apps
 
 ```bash
