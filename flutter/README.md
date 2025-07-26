@@ -103,6 +103,69 @@ Done, it open automatically
 
 ![101](https://github.com/spawnmarvel/quickguides/blob/main/flutter/images/101.jpg)
 
+Edit the App
+
+Open web_app folder in your favorite code editor (e.g., VS Code).- Open lib/main.dart- Change something! For example, replace the MyHomePage widget’s body with:
+
+```ini
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  final String title;
+  const MyHomePage({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(title),
+      ),
+      body: const Center(
+        child: Text(
+          'Hello, Flutter Web!',
+          style: TextStyle(fontSize: 32, color: Colors.blue),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+Run it again
+
+
+```ps1
+# q for quit
+
+flutter run -d edge
+```
+
+Done, it opens automatically
+
+![102](https://github.com/spawnmarvel/quickguides/blob/main/flutter/images/102.jpg)
+
+
 
 ## Start developing Web on Windows apps with Flutter
 
