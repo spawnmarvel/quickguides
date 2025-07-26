@@ -39,3 +39,39 @@ dotnet run
 ```
 
 ![myapp run](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/run.jpg)
+
+### **5. To create an **executable** from your C# project in Visual Studio Code, you need to **publish** your application using the .NET CLI. Here’s how you can do it**
+
+1. Navigate to your project’s root directory (where your .csproj file is located).
+
+
+For a **self-contained executable** (runs on machines without .NET installed):
+
+```bash
+dotnet publish -c Release -r win-x64 --self-contained true
+
+```
+
+-c Release builds in Release mode (optimized).- -r win-x64 targets Windows 64-bit. For Linux, use linux-x64; for macOS, use osx-x64.- --self-contained true creates an executable with all dependencies included.
+For a **framework-dependent executable** (requires .NET installed on the target machine):
+
+```bash
+dotnet publish -c Release -r win-x64
+
+```
+
+After publishing, go to:
+
+```bash
+
+./bin/Release/netX.Y/your-runtime/
+
+# For example, if you targeted win-x64, check:
+./bin/Release/net6.0/win-x64/publish/
+
+# You’ll find:
+# - MyApp.exe (on Windows)- MyApp (on Linux/macOS)
+```
+
+
+![myapp run release](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/release.jpg)
