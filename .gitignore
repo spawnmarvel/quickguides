@@ -143,3 +143,8 @@ aspen
 aspen-connect
 aspen-cimio
 
+# dotnet
+*.exe
+*.dll 
+*.pdb 
+

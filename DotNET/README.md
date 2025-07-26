@@ -75,3 +75,7 @@ After publishing, go to:
 
 
 ![myapp run release](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/release.jpg)
+
+Run it
+
+![myapp run release exe](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/app_exe.jpg)
