@@ -207,6 +207,92 @@ cd HelloWorldService
 ```
 
 
+**Step 2: Add the Windows Service NuGet Package**
+
+```bash
+dotnet add package Microsoft.Extensions.Hosting.WindowsServices
+```
+
+**Step 3: Update Program.cs for Windows Service**
+
+Open Program.cs and update it to include .UseWindowsService():
+
+```csharp
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+IHost host = Host.CreateDefaultBuilder(args)
+    .UseWindowsService()
+    .ConfigureServices(services =>
+    {
+        services.AddHostedService<Worker>();
+    })
+    .Build();
+
+host.Run();
+
+```
+**Step 4: Update Worker.cs to Log to a File**
+
+Replace the contents of Worker.cs with the following code:
+
+```csharp
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+
+public class Worker : BackgroundService
+{
+    private readonly string _filePath = @"C:\HelloWorldService\log.txt"; // Make sure this directory exists or create it in code
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        Directory.CreateDirectory(Path.GetDirectoryName(_filePath));
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            string message = $"Hello World at {DateTime.Now}";
+            await File.AppendAllTextAsync(_filePath, message + Environment.NewLine);
+            await Task.Delay(TimeSpan.FromSeconds(1.5), stoppingToken);
+        }
+    }
+}
+```
+**Step 5: Build and Publish the Service**
+
+
+```bash
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+Find the output in:  
+bin\Release\netX.Y\win-x64\publish\  (e.g. bin\Release\net8.0\win-x64\publish\)
+
+
+**Step 6: Install the Service**
+
+Open an Admin Command Prompt
+
+```cmd
+sc create HelloWorldService binPath= "C:\Path\To\Your\Publish\HelloWorldService.exe"
+
+sc start HelloWorldService
+
+```
+The service will now write “Hello World” to C:\HelloWorldService\log.txt every 1.5 seconds
+
+Stop and delete the service
+
+```cmd
+sc stop HelloWorldService
+sc delete HelloWorldService
+```
+
+
+
+
 
 
 
