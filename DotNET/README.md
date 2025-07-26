@@ -4,7 +4,11 @@
 ### **1. Install .NET SDK**
 - Download and install the [.NET SDK](https://dotnet.microsoft.com/download) for your operating system (Windows, macOS, or Linux).
 
-![install](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/install.jpg)
+Use a lts
+
+![lts](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/lst.jpg)
+
+
 
 ### **2. Install Visual Studio Code**
 - Download and install [Visual Studio Code](https://code.visualstudio.com/).
@@ -188,6 +192,20 @@ WPF User Control Library                      wpfusercontrollib           [C#],V
 xUnit Test Project                            xunit                       [C#],F#,VB  Test/xUnit/Desktop/Web
 
 ```
+
+## To create a Windows Service in .NET (Core or 5+), you typically use the **Worker Service** template.
+
+To create a Windows Service in .NET (Core or 5+), you typically use the **Worker Service** template. There is no template called "windowsservice" directly; instead, you use the worker template and then configure it to run as a Windows Service.
+
+### Windows service template
+
+**Step 1: Create the Worker Service Project**
+
+```bash
+dotnet new worker -n HelloWorldService
+cd HelloWorldService
+```
+
 
 
 
