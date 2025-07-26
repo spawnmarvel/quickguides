@@ -123,5 +123,21 @@ Navigate to folder and run it myapp.exe
 ![myapp run release new](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/new_release.jpg)
 
 
+## Different apps
+
+```bash
+
+cd yourfolder
+
+dotnet new console -n myapp
+
+```
+
+## **Common dotnet new Templates**
+| Template Name     | Command Example                        | Description                                |
+|-------------------|----------------------------------------|--------------------------------------------|
+| **console**       | dotnet new console -n MyApp          | Console app (the one you already used)     || **classlib**      | dotnet new classlib -n MyLib         | Class library project (DLL)                || **web**           | dotnet new web -n MyWebApp           | ASP.NET Core Web App (no MVC)              || **mvc**           | dotnet new mvc -n MyMvcApp           | ASP.NET Core MVC Web App                   || **webapi**        | dotnet new webapi -n MyApi           | ASP.NET Core Web API project               || **blazorserver**  | dotnet new blazorserver -n MyBlazor  | Blazor Server app                          || **blazorwasm**    | dotnet new blazorwasm -n MyBlazorWasm| Blazor WebAssembly app                     || **worker**        | dotnet new worker -n MyWorker         | Worker Service (background service)        || **wpf**           | dotnet new wpf -n MyWpfApp           | WPF Desktop app (Windows only)             || **winforms**      | dotnet new winforms -n MyWinForms    | WinForms Desktop app (Windows only)        || **mstest**        | dotnet new mstest -n MyTests         | MSTest unit test project                   || **xunit**         | dotnet new xunit -n MyTests          | xUnit unit test project                    || **nunit**         | dotnet new nunit -n MyTests          | NUnit unit test project                    || **classlib**      | dotnet new classlib -n MyLib         | .NET class library                         || **razorclasslib** | dotnet new razorclasslib -n MyRazorLib| Razor class library (for UI components)     |
+---
+
 
 
