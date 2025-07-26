@@ -4,9 +4,9 @@
 ### **1. Install .NET SDK**
 - Download and install the [.NET SDK](https://dotnet.microsoft.com/download) for your operating system (Windows, macOS, or Linux).
 
-Use a lts, less issues with features and more.
+Use a lts, less issues with features and more. Example .NET 8.0
 
-![lts](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/lst.png)
+![lts](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/lts.png)
 
 
 
