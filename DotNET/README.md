@@ -9,6 +9,9 @@
 ### **2. Install Visual Studio Code**
 - Download and install [Visual Studio Code](https://code.visualstudio.com/).
 
+![vsc_csharp](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/vsc_csharp.jpg)
+
+
 ### **3. Install the C# Extension**
 - Open Visual Studio Code.
 - Go to the Extensions view (Ctrl+Shift+X).
@@ -18,3 +21,11 @@
 - Open a terminal in VS Code.
 - Create a new project:  
 
+```bash
+cd yourfolder
+
+dotnet new console -n myapp
+
+```
+
+![myapp](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/myapp.jpg)
