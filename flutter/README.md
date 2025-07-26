@@ -99,7 +99,9 @@ Please choose one (or "q" to quit):
 flutter run -d edge
 ```
 
+Done, it open automatically
 
+![101](https://github.com/spawnmarvel/quickguides/blob/main/flutter/images/101.jpg)
 
 
 ## Start developing Web on Windows apps with Flutter
