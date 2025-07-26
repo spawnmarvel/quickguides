@@ -29,3 +29,13 @@ dotnet new console -n myapp
 ```
 
 ![myapp](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/myapp.jpg)
+
+
+Start the app
+
+```bash
+dotnet run
+
+```
+
+![myapp run](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/run.jpg)
