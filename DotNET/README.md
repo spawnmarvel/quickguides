@@ -225,13 +225,37 @@ To create a Windows Service in .NET (Core or 5+), you typically use the **Worker
 dotnet new worker -n HelloWorldService
 cd HelloWorldService
 ```
+NOTE! If you get an error on this cmd:
 
+```bash
+dotnet new worker -n HelloWorldService gives: The template "Worker Service" was created successfully.
+
+Determining projects to restore...
+C:\giti2025\quickguides\DotNET\HelloWorldService\HelloWorldService.csproj : error NU1100: Unable to resolve 'Microsoft.Extensions.Hosting (>= 8.0.1)' for 'net8.0'.
+
+# Add the Official NuGet Source
+dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+
+# Confirm the Source Was Added
+dotnet nuget list source
+
+# Navigate to your project directory (where your .csproj file is), then run:
+dotnet restore
+
+# If restore succeeds, proceed with:
+dotnet build
+dotnet run
+```
+
+![service 101](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_101.jpg)
 
 **Step 2: Add the Windows Service NuGet Package**
 
 ```bash
+# You might have already done this
 dotnet add package Microsoft.Extensions.Hosting.WindowsServices
 ```
+
 
 **Step 3: Update Program.cs for Windows Service**
 
