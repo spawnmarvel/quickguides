@@ -383,11 +383,27 @@ The service will now write “Hello World” to C:\MyService\log.txt every 20 se
 Stop and delete the service
 
 ```cmd
-sc stop MyService
-sc delete MyService
+sc stop MyService2
+sc delete MyService2
 ```
 
+## Tutorials for getting started with .NET
+
+Write your first code using C# (Get started with C#, Part 1) = 
+
+Create and run simple C# console applications (Get started with C#, Part 2) = 
+
+Add logic to C# console applications (Get started with C#, Part 3) = 
+
+Work with variable data in C# console applications (Get started with C#, Part 4) = 
+
+Create methods in C# console applications (Get started with C#, Part 5) = 
+
+Debug C# console applications (Get started with C#, Part 6) = 
+
+https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/?source=recommendations
 
 
+## Logging in C# and .NET
 
-
+https://learn.microsoft.com/en-us/dotnet/core/extensions/logging?tabs=command-line
