@@ -222,16 +222,16 @@ To create a Windows Service in .NET (Core or 5+), you typically use the **Worker
 **Step 1: Create the Worker Service Project**
 
 ```bash
-dotnet new worker -n HelloWorldService
-cd HelloWorldService
+dotnet new worker -n MyService
+cd MyService
 ```
 NOTE! If you get an error on this cmd:
 
 ```bash
-dotnet new worker -n HelloWorldService gives: The template "Worker Service" was created successfully.
+dotnet new worker -n MyService gives: The template "Worker Service" was created successfully.
 
 Determining projects to restore...
-C:\giti2025\quickguides\DotNET\HelloWorldService\HelloWorldService.csproj : error NU1100: Unable to resolve 'Microsoft.Extensions.Hosting (>= 8.0.1)' for 'net8.0'.
+C:\giti2025\quickguides\DotNET\MyService\MyService.csproj : error NU1100: Unable to resolve 'Microsoft.Extensions.Hosting (>= 8.0.1)' for 'net8.0'.
 
 # Add the Official NuGet Source
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
@@ -246,6 +246,7 @@ dotnet restore
 dotnet build
 dotnet run
 ```
+And it is running.
 
 ![service 101](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_101.jpg)
 
@@ -254,6 +255,13 @@ dotnet run
 ```bash
 # You might have already done this
 dotnet add package Microsoft.Extensions.Hosting.WindowsServices
+
+# Still error
+# In your .csproj, set:
+# <TargetFramework>net8.0</TargetFramework>
+# Remove any explicit reference to Microsoft.Extensions.Hosting version 9.x or higher.3. Install the **8.x** version of WindowsServices:
+# then run
+dotnet add package Microsoft.Extensions.Hosting.WindowsServices --version 8.0.1
 ```
 
 
@@ -290,7 +298,7 @@ using System.Threading.Tasks;
 
 public class Worker : BackgroundService
 {
-    private readonly string _filePath = @"C:\HelloWorldService\log.txt"; // Make sure this directory exists or create it in code
+    private readonly string _filePath = @"C:\MyService\log.txt"; // Make sure this directory exists or create it in code
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -304,6 +312,24 @@ public class Worker : BackgroundService
     }
 }
 ```
+
+**Step 4.1: Run it**
+```bash
+dotnet run
+Building...
+C:\giti2025\quickguides\DotNET\MyService\Worker.cs(16,35): warning CS8604: Possible null reference argument for parameter 'path' in 'DirectoryInfo Directory.CreateDirectory(string path)'. [C:\giti2025\quickguides\Dot
+NET\MyService\MyService.csproj]
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\giti2025\quickguides\DotNET\MyServic
+```
+And we have the file
+
+![service log](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_log.jpg)
+
 **Step 5: Build and Publish the Service**
 
 
@@ -320,18 +346,20 @@ bin\Release\netX.Y\win-x64\publish\  (e.g. bin\Release\net8.0\win-x64\publish\)
 Open an Admin Command Prompt
 
 ```cmd
-sc create HelloWorldService binPath= "C:\Path\To\Your\Publish\HelloWorldService.exe"
+sc create MyService binPath= "C:\Path\To\Your\Publish\MyService.exe"
 
-sc start HelloWorldService
+sc start MyService
 
 ```
-The service will now write “Hello World” to C:\HelloWorldService\log.txt every 1.5 seconds
+The service will now write “Hello World” to C:\MyService\log.txt every 20 seconds
+
+![service running](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_running.jpg)
 
 Stop and delete the service
 
 ```cmd
-sc stop HelloWorldService
-sc delete HelloWorldService
+sc stop MyService
+sc delete MyService
 ```
 
 
