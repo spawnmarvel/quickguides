@@ -362,7 +362,30 @@ sc stop MyService
 sc delete MyService
 ```
 
+***Make a packet of the service***
 
+1. Copy the folder in C:\giti2025\quickguides\DotNET\MyService\bin\Release\net8.0\win-x64\publish
+2. Rename the folder to MyService2 and paste it where you want to have it
+
+
+Open an Admin Command Prompt
+
+```cmd
+sc create MyService2 binPath= "C:\temp\MyService2\MyService.exe"
+
+sc start MyService2
+
+```
+The service will now write “Hello World” to C:\MyService\log.txt every 20 seconds
+
+![service running2](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_running2.jpg)
+
+Stop and delete the service
+
+```cmd
+sc stop MyService
+sc delete MyService
+```
 
 
 
