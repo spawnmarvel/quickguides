@@ -378,7 +378,7 @@ sc start MyService2
 ```
 The service will now write “Hello World” to C:\MyService\log.txt every 20 seconds
 
-![service running2](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_running2.jpg)
+![service running2](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/service_running_2.jpg)
 
 Stop and delete the service
 
