@@ -404,6 +404,142 @@ Debug C# console applications (Get started with C#, Part 6) =
 https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/?source=recommendations
 
 
-## Logging in C# and .NET
+## Logging in C# and .NET with NLog
 
-https://learn.microsoft.com/en-us/dotnet/core/extensions/logging?tabs=command-line
+1. Install NLog: Add the NLog NuGet package to your project.
+2. Configure NLog: Create an NLog.config file or configure it programmatically to define targets (e.g., file) and rules.
+
+
+```ini
+    <!-- NLog.config example -->
+    <?xml version="1.0" encoding="utf-8" ?>
+    <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+        <targets>
+            <target name="file" xsi:type="File"
+                    fileName="${basedir}/logs/${shortdate}.log"
+                    layout="${longdate} ${uppercase:${level}} ${message}" />
+        </targets>
+
+        <rules>
+            <logger name="*" minlevel="Info" writeTo="file" />
+        </rules>
+    </nlog>
+```
+Log in your code.
+
+```csharp
+    using NLog;
+
+    public class Application
+    {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        public void Run()
+        {
+            Logger.Info("Application started.");
+            // ...
+            Logger.Error("An error occurred!");
+            Logger.Debug("Debug message.");
+        }
+    }
+```
+
+Lets add this for our AmqpPublisher
+
+```bash
+mkdir AmqpPub
+cd .\AmqpPub\
+dotnet new console -n AmqpPublisher
+dotnet run
+Hello, World!
+
+# You can add the NLog.Extensions.Logging package to your .NET project in **two main ways**:
+dotnet add package NLog.Extensions.Logging
+
+# This will:
+# - Download the latest version of the package.
+# - Add the appropriate <PackageReference> to your .csproj file automatically.
+
+
+```
+
+Edit the csproj add a new
+
+```ini
+ <ItemGroup>
+     <None Update="nlog.config" CopyToOutputDirectory="Always" />
+ </ItemGroup>
+```
+
+Make the nlog.config
+
+```ini
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- XSD manual extracted from package NLog.Schema: https://www.nuget.org/packages/NLog.Schema-->
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      internalLogFile="c:\temp\console-example-internal.log"
+      internalLogLevel="Info" >
+
+  <!-- the targets to write to -->
+  <targets>
+    <target xsi:type="File" name="logfile"
+            fileName="${basedir}/log/console-example.log"
+            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
+
+    <target xsi:type="Console" name="logconsole"
+            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
+  </targets>
+
+  <!-- rules to map from logger name to target -->
+  <rules>
+    <logger name="*" minlevel="Trace" writeTo="logfile,logconsole" />
+  </rules>
+</nlog>
+```
+
+Edit the Program.cs
+
+
+
+```csharp
+using System;
+using NLog;
+using NLog.Extensions.Logging;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // ensure dir exists
+        Directory.CreateDirectory("log");
+        // create logger
+        var logger = LogManager.GetCurrentClassLogger();
+        //log
+        logger.Info("Hi");
+
+        Console.WriteLine("Hello, World!");
+        
+
+    }
+
+}
+
+```
+
+```bash
+dotnet run
+
+
+# or and 
+dotnet publish -c Release -r win-x64 --self-contained true
+
+```
+
+https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application
+
+https://nlog-project.org/
+
