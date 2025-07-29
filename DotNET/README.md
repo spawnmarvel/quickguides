@@ -9,6 +9,9 @@ cd yourfolder
 # new consoler app
 dotnet new console -n myapp
 
+# enter it
+cd myapp
+
 # run it
 dotnet run
 
