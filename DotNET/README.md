@@ -560,7 +560,7 @@ https://nlog-project.org/
 
 ## Tutorials for getting started with .NET
 
-Write your first code using C# (Get started with C#, Part 1) = 
+Write your first code using C# (Get started with C#, Part 1) = Perform basic operations on numbers in C#
 
 https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/?source=learn
 
