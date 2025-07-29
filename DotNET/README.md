@@ -29,6 +29,10 @@ dotnet nuget list source
 dotnet add package Microsoft.Extensions.Hosting.WindowsServices --version 8.0.1
 
 ```
+
+Do not open the full folder, but go open sub folder so you get intellisens.
+
+![Intellisens](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/intelli.png)
 ### **1. Install .NET SDK**
 - Download and install the [.NET SDK](https://dotnet.microsoft.com/download) for your operating system (Windows, macOS, or Linux).
 
