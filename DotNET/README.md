@@ -1,14 +1,37 @@
 # DotNet VSC
 
 
+## VSC quick commands
+
+```bash
+cd yourfolder
+
+# new consoler app
+dotnet new console -n myapp
+
+# run it
+dotnet run
+
+# done? Then publish it
+dotnet publish -c Release -r win-x64
+
+# Add the Official NuGet Source
+dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+
+# Confirm the Source was added
+dotnet nuget list source
+
+# add packet example
+
+dotnet add package Microsoft.Extensions.Hosting.WindowsServices --version 8.0.1
+
+```
 ### **1. Install .NET SDK**
 - Download and install the [.NET SDK](https://dotnet.microsoft.com/download) for your operating system (Windows, macOS, or Linux).
 
 Use a lts, less issues with features and more. Example .NET 8.0
 
 ![lts](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/lts.png)
-
-
 
 ### **2. Install Visual Studio Code**
 - Download and install [Visual Studio Code](https://code.visualstudio.com/).
@@ -387,23 +410,6 @@ sc stop MyService2
 sc delete MyService2
 ```
 
-## Tutorials for getting started with .NET
-
-Write your first code using C# (Get started with C#, Part 1) = 
-
-Create and run simple C# console applications (Get started with C#, Part 2) = 
-
-Add logic to C# console applications (Get started with C#, Part 3) = 
-
-Work with variable data in C# console applications (Get started with C#, Part 4) = 
-
-Create methods in C# console applications (Get started with C#, Part 5) = 
-
-Debug C# console applications (Get started with C#, Part 6) = 
-
-https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/?source=recommendations
-
-
 ## Logging in C# and .NET with NLog
 
 1. Install NLog: Add the NLog NuGet package to your project.
@@ -543,3 +549,22 @@ https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-app
 
 https://nlog-project.org/
 
+
+
+## Tutorials for getting started with .NET
+
+Write your first code using C# (Get started with C#, Part 1) = 
+
+https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/?source=learn
+
+Create and run simple C# console applications (Get started with C#, Part 2) = 
+
+Add logic to C# console applications (Get started with C#, Part 3) = 
+
+Work with variable data in C# console applications (Get started with C#, Part 4) = 
+
+Create methods in C# console applications (Get started with C#, Part 5) = 
+
+Debug C# console applications (Get started with C#, Part 6) = 
+
+https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/?source=recommendations
