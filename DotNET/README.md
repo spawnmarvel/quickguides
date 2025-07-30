@@ -30,6 +30,47 @@ dotnet add package Microsoft.Extensions.Hosting.WindowsServices --version 8.0.1
 
 ```
 
+## Top-level statements - programs without Main methods
+
+You don't have to explicitly include a Main method in a console application project. Instead, you can use the top-level statements feature to minimize the code you have to write.
+
+Top-level statements allow you to write executable code directly at the root of a file, eliminating the need for wrapping your code in a class or method. This means you can create programs without the ceremony of a Program class and a Main method. In this case, the compiler generates a Program class with an entry point method for the application. The name of the generated method isn't Main, it's an implementation detail that your code can't reference directly.
+
+Here's a Program.cs file that is a complete C# program:
+
+```csharp
+Console.WriteLine("Hello World!");
+```
+
+Top-level statements let you write simple programs for small utilities such as Azure Functions and GitHub Actions. They also make it simpler for new C# programmers to get started learning and writing code.
+
+For the single file containing top-level statements using directives must come first in that file, as in this example:
+
+Using:
+
+```csharp
+using System.Text;
+
+StringBuilder builder = new();
+builder.AppendLine("The following arguments are passed:");
+
+foreach (var arg in args)
+{
+    builder.AppendLine($"Argument={arg}");
+}
+
+Console.WriteLine(builder.ToString());
+
+return 0;
+
+
+```
+
+https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements
+
+
+## Install 
+
 Do not open the full folder, but go open sub folder so you get intellisens.
 
 ![Intellisens](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/intelli.jpg)

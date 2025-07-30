@@ -1,12 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System;
+using System.Threading.Tasks;
 using NLog;
 using NLog.Extensions.Logging;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         // ensure dir exists
         Directory.CreateDirectory("log");
@@ -16,14 +17,23 @@ class Program
         logger.Info("Hi");
 
         Console.WriteLine("Hello, World!");
+        Console.WriteLine("How many mesages to send to amqp, enter a number");
 
-
-        for (int i = 0; i < 50; i++)
+        // get amount of messages vfrom input
+        string? input = Console.ReadLine();
+        int number;
+        if (int.TryParse(input, out number))
         {
-            string rv = "Log num " + i;
-            logger.Info(rv);
+             Console.WriteLine("Number " + number);
 
         }
+        else
+        {
+            Console.WriteLine("Invalid number");
+        }        // publish to amqp
+        Console.WriteLine("Publish to AMQP");
+        var publisher = new PublishSend();
+        await publisher.SendMessagesAsync();
         // we wait
         Console.ReadLine();
 
