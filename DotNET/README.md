@@ -519,7 +519,7 @@ dotnet add package NLog.Extensions.Logging
 
 ```
 
-Edit the csproj add a new
+Edit the .csproj add a new
 
 ```ini
  <ItemGroup>
