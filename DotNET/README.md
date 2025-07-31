@@ -12,10 +12,14 @@ dotnet new console -n myapp
 # enter it
 cd myapp
 
-# run it
+# (optional) Just build/compile the code
+dotnet build
+
+# # Build (if needed) and run the app
 dotnet run
 
 # if done,  then publish it
+# Build for deployment, output in publish folder
 dotnet publish -c Release -r win-x64
 
 # Add the Official NuGet Source
