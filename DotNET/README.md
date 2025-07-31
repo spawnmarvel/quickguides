@@ -305,6 +305,96 @@ xUnit Test Project                            xunit                       [C#],F
 
 ```
 
+
+## Logging in C# and .NET with NLog
+
+1. Install NLog: Add the NLog NuGet package to your project.
+
+```bash
+mkdir AmqpPub
+cd .\AmqpPub\
+
+# You can add the NLog.Extensions.Logging package to your .NET project in **two main ways**:
+dotnet add package NLog.Extensions.Logging
+# This will:
+# - Download the latest version of the package.
+# - Add the appropriate <PackageReference> to your .csproj file automatically.
+
+```
+2. Configure NLog: Create an NLog.config file or configure it programmatically to define targets (e.g., file) and rules.
+
+
+```ini
+   <?xml version="1.0" encoding="utf-8" ?>
+<!-- XSD manual extracted from package NLog.Schema: https://www.nuget.org/packages/NLog.Schema-->
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      internalLogFile="console-example-internal.log"
+      internalLogLevel="Info" >
+
+  <!-- the targets to write to -->
+  <targets>
+    <target xsi:type="File" name="logfile"
+            fileName="${basedir}/log/console-example.log"
+            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
+
+    <target xsi:type="Console" name="logconsole"
+            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
+  </targets>
+
+  <!-- rules to map from logger name to target -->
+  <rules>
+    <logger name="*" minlevel="Trace" writeTo="logfile,logconsole" />
+  </rules>
+</nlog>
+```
+
+3. Edit the .csproj add a new
+
+```ini
+ <ItemGroup>
+     <None Update="nlog.config" CopyToOutputDirectory="Always" />
+ </ItemGroup>
+```
+4. Log in your code using classes
+
+```csharp
+    using NLog;
+
+    public class Application
+    {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        public void Run()
+        {
+            Logger.Info("Application started.");
+            // ...
+            Logger.Error("An error occurred!");
+            Logger.Debug("Debug message.");
+        }
+    }
+```
+
+4. Log in your code using Top-level statements - programs without Main methods
+
+```csharp
+using NLog;
+
+// Create a logger for this file (the top-level program)
+var logger = LogManager.GetCurrentClassLogger();
+
+logger.Info("Application started.");
+
+// ...
+logger.Error("An error occurred!");
+logger.Debug("Debug message.");
+```
+
+https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application
+
+https://nlog-project.org/
+
 ## To create a Windows Service in .NET (Core or 5+), you typically use the **Worker Service** template.
 
 To create a Windows Service in .NET (Core or 5+), you typically use the **Worker Service** template. There is no template called "windowsservice" directly; instead, you use the worker template and then configure it to run as a Windows Service.
@@ -480,96 +570,6 @@ Stop and delete the service
 sc stop MyService2
 sc delete MyService2
 ```
-
-## Logging in C# and .NET with NLog
-
-1. Install NLog: Add the NLog NuGet package to your project.
-
-```bash
-mkdir AmqpPub
-cd .\AmqpPub\
-
-# You can add the NLog.Extensions.Logging package to your .NET project in **two main ways**:
-dotnet add package NLog.Extensions.Logging
-# This will:
-# - Download the latest version of the package.
-# - Add the appropriate <PackageReference> to your .csproj file automatically.
-
-```
-2. Configure NLog: Create an NLog.config file or configure it programmatically to define targets (e.g., file) and rules.
-
-
-```ini
-   <?xml version="1.0" encoding="utf-8" ?>
-<!-- XSD manual extracted from package NLog.Schema: https://www.nuget.org/packages/NLog.Schema-->
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
-      autoReload="true"
-      internalLogFile="console-example-internal.log"
-      internalLogLevel="Info" >
-
-  <!-- the targets to write to -->
-  <targets>
-    <target xsi:type="File" name="logfile"
-            fileName="${basedir}/log/console-example.log"
-            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
-
-    <target xsi:type="Console" name="logconsole"
-            layout="${longdate} ; ${level} ; ${message} ${all-event-properties} ${exception:format=tostring}" />
-  </targets>
-
-  <!-- rules to map from logger name to target -->
-  <rules>
-    <logger name="*" minlevel="Trace" writeTo="logfile,logconsole" />
-  </rules>
-</nlog>
-```
-
-3. Edit the .csproj add a new
-
-```ini
- <ItemGroup>
-     <None Update="nlog.config" CopyToOutputDirectory="Always" />
- </ItemGroup>
-```
-4. Log in your code using classes
-
-```csharp
-    using NLog;
-
-    public class Application
-    {
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        public void Run()
-        {
-            Logger.Info("Application started.");
-            // ...
-            Logger.Error("An error occurred!");
-            Logger.Debug("Debug message.");
-        }
-    }
-```
-
-4. Log in your code using Top-level statements - programs without Main methods
-
-```csharp
-using NLog;
-
-// Create a logger for this file (the top-level program)
-var logger = LogManager.GetCurrentClassLogger();
-
-logger.Info("Application started.");
-
-// ...
-logger.Error("An error occurred!");
-logger.Debug("Debug message.");
-```
-
-https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application
-
-https://nlog-project.org/
-
 
 
 ## Tutorials for getting started with .NET
