@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmqpPublisher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4a4235aa1231830a399e6e0c080108c9c2105a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0078b76e3cedf06d15f346b53251b2f69abfa306")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmqpPublisher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmqpPublisher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

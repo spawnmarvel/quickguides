@@ -481,81 +481,28 @@ sc delete MyService2
 ## Logging in C# and .NET with NLog
 
 1. Install NLog: Add the NLog NuGet package to your project.
-2. Configure NLog: Create an NLog.config file or configure it programmatically to define targets (e.g., file) and rules.
-
-
-```ini
-    <!-- NLog.config example -->
-    <?xml version="1.0" encoding="utf-8" ?>
-    <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-        <targets>
-            <target name="file" xsi:type="File"
-                    fileName="${basedir}/logs/${shortdate}.log"
-                    layout="${longdate} ${uppercase:${level}} ${message}" />
-        </targets>
-
-        <rules>
-            <logger name="*" minlevel="Info" writeTo="file" />
-        </rules>
-    </nlog>
-```
-Log in your code.
-
-```csharp
-    using NLog;
-
-    public class Application
-    {
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        public void Run()
-        {
-            Logger.Info("Application started.");
-            // ...
-            Logger.Error("An error occurred!");
-            Logger.Debug("Debug message.");
-        }
-    }
-```
-
-Lets add this for our AmqpPublisher
 
 ```bash
 mkdir AmqpPub
 cd .\AmqpPub\
-dotnet new console -n AmqpPublisher
-dotnet run
-Hello, World!
 
 # You can add the NLog.Extensions.Logging package to your .NET project in **two main ways**:
 dotnet add package NLog.Extensions.Logging
-
 # This will:
 # - Download the latest version of the package.
 # - Add the appropriate <PackageReference> to your .csproj file automatically.
 
-
 ```
+2. Configure NLog: Create an NLog.config file or configure it programmatically to define targets (e.g., file) and rules.
 
-Edit the .csproj add a new
 
 ```ini
- <ItemGroup>
-     <None Update="nlog.config" CopyToOutputDirectory="Always" />
- </ItemGroup>
-```
-
-Make the nlog.config
-
-```ini
-<?xml version="1.0" encoding="utf-8" ?>
+   <?xml version="1.0" encoding="utf-8" ?>
 <!-- XSD manual extracted from package NLog.Schema: https://www.nuget.org/packages/NLog.Schema-->
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
       autoReload="true"
-      internalLogFile="c:\temp\console-example-internal.log"
+      internalLogFile="console-example-internal.log"
       internalLogLevel="Info" >
 
   <!-- the targets to write to -->
@@ -575,42 +522,45 @@ Make the nlog.config
 </nlog>
 ```
 
-Edit the Program.cs
+3. Edit the .csproj add a new
 
-
+```ini
+ <ItemGroup>
+     <None Update="nlog.config" CopyToOutputDirectory="Always" />
+ </ItemGroup>
+```
+4. Log in your code using classes
 
 ```csharp
-using System;
-using NLog;
-using NLog.Extensions.Logging;
+    using NLog;
 
-class Program
-{
-    static void Main(string[] args)
+    public class Application
     {
-        // ensure dir exists
-        Directory.CreateDirectory("log");
-        // create logger
-        var logger = LogManager.GetCurrentClassLogger();
-        //log
-        logger.Info("Hi");
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        Console.WriteLine("Hello, World!");
-        
-
+        public void Run()
+        {
+            Logger.Info("Application started.");
+            // ...
+            Logger.Error("An error occurred!");
+            Logger.Debug("Debug message.");
+        }
     }
-
-}
-
 ```
 
-```bash
-dotnet run
+4. Log in your code using Top-level statements - programs without Main methods
 
+```csharp
+using NLog;
 
-# or and 
-dotnet publish -c Release -r win-x64 --self-contained true
+// Create a logger for this file (the top-level program)
+var logger = LogManager.GetCurrentClassLogger();
 
+logger.Info("Application started.");
+
+// ...
+logger.Error("An error occurred!");
+logger.Debug("Debug message.");
 ```
 
 https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application
