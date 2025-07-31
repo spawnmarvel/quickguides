@@ -432,6 +432,8 @@ dotnet publish -c Release -r win-x64 --self-contained true
 Find the output in:  
 bin\Release\netX.Y\win-x64\publish\  (e.g. bin\Release\net8.0\win-x64\publish\)
 
+You can copy the Publish folder with content and rename it.
+
 
 **Step 6: Install the Service**
 
