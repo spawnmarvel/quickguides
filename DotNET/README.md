@@ -84,16 +84,17 @@ Only one top-level file.
 
 An application must have only one entry point. A project can have only one file with top-level statements.
 
-
-
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements
 
+## VSC tips intellisens
+
+Do not open the full folder with all projects, but go open sub folder for a particular project so you get intellisens.
+
+![Intellisens](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/intelli.jpg)
 
 ## Install 
 
-Do not open the full folder, but go open sub folder so you get intellisens.
 
-![Intellisens](https://github.com/spawnmarvel/quickguides/blob/main/DotNET/images/intelli.jpg)
 ### **1. Install .NET SDK**
 - Download and install the [.NET SDK](https://dotnet.microsoft.com/download) for your operating system (Windows, macOS, or Linux).
 
