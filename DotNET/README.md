@@ -466,7 +466,7 @@ IHost host = Host.CreateDefaultBuilder(args)
 host.Run();
 
 ```
-**Step 4: Update Worker.cs to Log to a File**
+**Step 4: Update Worker.cs to write to a File (not logging, just a test)**
 
 Replace the contents of Worker.cs with the following code:
 
