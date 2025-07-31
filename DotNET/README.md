@@ -636,3 +636,7 @@ Create methods in C# console applications (Get started with C#, Part 5) =
 Debug C# console applications (Get started with C#, Part 6) = 
 
 https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/?source=recommendations
+
+## RabbitMQ tutorial's
+
+https://www.rabbitmq.com/tutorials/tutorial-one-dotnet
