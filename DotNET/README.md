@@ -15,7 +15,7 @@ cd myapp
 # run it
 dotnet run
 
-# done? Then publish it
+# if done,  then publish it
 dotnet publish -c Release -r win-x64
 
 # Add the Official NuGet Source
@@ -29,6 +29,17 @@ dotnet nuget list source
 dotnet add package Microsoft.Extensions.Hosting.WindowsServices --version 8.0.1
 
 ```
+
+## **Summary Table**
+
+| Command         | Purpose                                        | Output Folder                             |
+|-----------------|------------------------------------------------|-------------------------------------------|
+| dotnet build    | Compile code for testing/debugging              | bin/Debug/net8.0/ (or bin/Release/net8.0/)|
+| dotnet run      | Build (if needed) and run for dev/testing       | Same as build                             |
+| dotnet publish  | Build and prep for deployment, all dependencies | bin/Release/net8.0/win-x64/publish/       |
+
+---
+
 
 ## Top-level statements - programs without Main methods
 
@@ -65,6 +76,11 @@ return 0;
 
 
 ```
+Only one top-level file. 
+
+An application must have only one entry point. A project can have only one file with top-level statements.
+
+
 
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements
 
