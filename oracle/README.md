@@ -57,9 +57,15 @@ XE =
   )
 
 ```
+Make sure the service OracleORADB21Home1TNSListner is running
 
 ## SQL developer
 
+Install Oracle SQL Developer Downloads Windows 64-bit with JDK 17 included
+
+https://www.oracle.com/database/sqldeveloper/technologies/download/
+
+![sql con](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sql_con.png)
 
 ## New Pluggable Database (PDB)
 
