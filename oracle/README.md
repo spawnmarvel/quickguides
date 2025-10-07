@@ -67,6 +67,10 @@ https://www.oracle.com/database/sqldeveloper/technologies/download/
 
 ![sql con](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sql_con.png)
 
+Connect with the password created for the 3 users on install, use SYSTEM to XE
+
+![connected](![sql con](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sql_con.png))
+
 ## New Pluggable Database (PDB)
 
 That's great news that you're connected\! Since you are using **Oracle Database Express Edition (XE) 21c**, the concepts of creating a "new database" are different due to its **Multitenant Architecture**.
