@@ -4,9 +4,33 @@ Install Oracle Database Express Edition (XE) Downloads on dmzwindows07
 
 https://www.oracle.com/database/technologies/xe-downloads.html
 
+This password will be used for SYS, SYSTEM and PDBADMIN accounts (stored elsewhere)
+
+Destination folder
+c:\app\imsdal\product\21c\
+
+Oracle home
+c:\app\imsdal\product\21c\dbhomeXE\
+
+Oracle base
+c:\app\imsdal\product\21c\
+
+Multitenant container database
+localhost:1521
+
+Pluggable database
+localhost:1521:XEPDB1
+
+EM Express URL
+http://localhost:5500/em
+
+## TNS stands for Transparent Network Substrate. tnsnames.ora
 
 
-## tnsnames.ora
+The tnsnames.ora file is a fundamental configuration file used by Oracle Net Services to connect to an Oracle Database.
+
+Essentially, it acts as a phone book or a directory service that translates a simple, user-friendly name (the TNS Alias or Service Name) into all the detailed connection information needed to reach the database listener on the network.
+
 
 ```ora
 # You can use any name here, this is your TNS Alias
@@ -28,7 +52,7 @@ XE =
       (SERVICE_NAME = XE)
     )
   )
-  
+
 ```
 
 ## SQL developer
