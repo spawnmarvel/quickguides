@@ -161,3 +161,8 @@ In SQL Developer, you can now create a final connection to your new database:
   * **Network Alias:** `MYPDB_ALIAS`
 
 You are now connected to an entirely new, isolated database environment\!
+
+## Change password for user
+
+
+## Create job and execute it
