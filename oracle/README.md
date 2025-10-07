@@ -7,22 +7,25 @@ https://www.oracle.com/database/technologies/xe-downloads.html
 This password will be used for SYS, SYSTEM and PDBADMIN accounts (stored elsewhere)
 
 Destination folder
-c:\app\imsdal\product\21c\
+* c:\app\imsdal\product\21c\
 
 Oracle home
-c:\app\imsdal\product\21c\dbhomeXE\
+* c:\app\imsdal\product\21c\dbhomeXE\
 
 Oracle base
-c:\app\imsdal\product\21c\
+* c:\app\imsdal\product\21c\
 
 Multitenant container database
-localhost:1521
+* localhost:1521
 
 Pluggable database
-localhost:1521:XEPDB1
+* localhost:1521:XEPDB1
 
 EM Express URL
-http://localhost:5500/em
+* http://localhost:5500/em
+
+
+![installed](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/installed.png)
 
 ## TNS stands for Transparent Network Substrate. tnsnames.ora
 
