@@ -69,7 +69,7 @@ https://www.oracle.com/database/sqldeveloper/technologies/download/
 
 Connect with the password created for the 3 users on install, use SYSTEM to XE
 
-![connected](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sql_con.png))
+![connected](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/connected.png)
 
 ## New Pluggable Database (PDB)
 
