@@ -114,6 +114,10 @@ The only field we Change in Cogent on OPCUAProsys is Load all items.
 
 ![Load all items](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/load_items.png)
 
+Then we can browse the values from OPC UA server
+
+![prosys and cogent values](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/prosys_and_cogent_values.png)
+
 ## Connect to InfluxDB
 
 https://cogentdatahub.com/products/historians/connect-influxdb/
