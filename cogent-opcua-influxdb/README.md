@@ -140,7 +140,7 @@ And select the tag
 
 
 
-## UaExpert
+## UaExpert TODO
 
 UaExpert is a full-featured OPC UA Client which is capable of several OPC UA Profiles and features.
 
@@ -148,4 +148,7 @@ uaexpert-bin-win64-x86_64-ucrt-v1.7.2.584.msi
 
 https://www.unified-automation.com/downloads/opc-ua-clients.html
 
-![opc ua expert](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/uaexpert.png)
+![opc ua expert](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/uaexpert.jpg)
+
+
+## Prosys to Cim-io server and set up Cim-io for OPC UA to IP21 TODO
