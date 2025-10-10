@@ -17,6 +17,7 @@ On Windows, run the installer executable prosys-opc-ua-simulation-server-windows
 
 C:\Program Files\ProsysOPC\Prosys OPC UA Simulation Server
 
+![installed](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/procosys.png)
 
 Uninstallation
 
