@@ -80,7 +80,6 @@ On Windows the application can be uninstalled through the Control Panel or the A
 
 https://prosysopc.com/products/opc-ua-simulation-server/evaluate/
 
-Lets open it an look at some tag values
 
 ![Tag values](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/tag_values.png)
 
@@ -105,9 +104,15 @@ Copy the prosys OPC UA Simulation Server US TCP url:
 
 opc.tcp://BER-0803.goodtech.local:53530/OPCUA/SimulationServer
 
-And past it into Cogent, test the connection.
+And past it into Cogent, Name it OPCUAProsys and test the connection.
 
 ![Connection success](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/connection_success.png)
+
+Now that we have connected, lets look at some tag values.
+
+The only field we Change in Cogent on OPCUAProsys is Load all items.
+
+![Load all items](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/load_items.png)
 
 ## Connect to InfluxDB
 
