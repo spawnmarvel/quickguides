@@ -80,6 +80,10 @@ On Windows the application can be uninstalled through the Control Panel or the A
 
 https://prosysopc.com/products/opc-ua-simulation-server/evaluate/
 
+Lets open it an look at some tag values
+
+![Tag values](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/tag_values.png)
+
 
 ## Prosys Support Forum
 
