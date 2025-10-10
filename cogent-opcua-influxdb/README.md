@@ -120,11 +120,21 @@ Then we can browse the values from OPC UA server
 
 ## Connect to InfluxDB
 
-https://cogentdatahub.com/products/historians/connect-influxdb/
+Follow this guide setp by step
 
-## Install influxdb localhost
+https://cogentdatahub.com/docs/#cdh-connectinginfluxdb.html
 
-https://docs.influxdata.com/influxdb/v2/install/?t=Windows
+After influx is running:
+
+Configure external historian
+
+![Influxdb configure](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/influxdb_conf.png)
+
+Start Chronograf also and select the tag
+
+![Chronograf](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/chronograf.png)
+
+
 
 ## UaExpert
 
