@@ -130,7 +130,11 @@ Configure external historian
 
 ![Influxdb configure](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/influxdb_conf.png)
 
-Start Chronograf also and select the tag
+Start Chronograf
+
+![Open browser](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/open_browser.png)
+
+And select the tag
 
 ![Chronograf](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/chronograf.png)
 
