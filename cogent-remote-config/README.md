@@ -1,9 +1,11 @@
 
 # Cogent install
 
-## Install and remote config
+## Install and remote config V11
 
-https://follow-e-lo.com/2024/06/23/how-to-tunnel-opc-da-outbound/
+* remotemika, linux100
+
+https://follow-e-lo.com/2025/09/22/cogent-install-v-11-remote-config/
 
 ## Remote Config and DataHub as a Windows Service
 
