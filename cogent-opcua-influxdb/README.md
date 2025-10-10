@@ -1,4 +1,4 @@
-# Cogent OPC UA InfluxDB
+# Prosys OPC UA sim, Cogent OPC UA client, OPC UA expert,  InfluxDB
 
 ## OPC DA Address vs. OPC UA Address
 
