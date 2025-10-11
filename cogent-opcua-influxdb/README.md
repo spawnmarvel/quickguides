@@ -252,7 +252,55 @@ In **Prosys OPC UA Simulator (Expert Mode)**:
 Then, ensure you select the **"None"** security policy in UaExpert when adding the server connection.
 
 
-
 https://www.unified-automation.com/products/development-tools/uaexpert.html?gad_source=1&gad_campaignid=19807579087&gclid=EAIaIQobChMI-4OLwIKckAMVLBiiAx3vPjbtEAAYASAAEgKfw_D_BwE
+
+### Export the OPC UA address
+
+So we need to get the adresse sapce we talked about the beginning, so we can use it and make tags.
+
+That's great that you've got the certificate issue sorted out!
+
+In **UaExpert**, the primary method to "export the OPC UA address" for an object or a set of objects is to use the built-in **XML Nodeset Export View**. This process exports the structure of the address space as an **OPC UA NodeSet XML file**.
+
+Here are the steps to export the address space for an object:
+
+---
+
+## Exporting the OPC UA Address Space to a NodeSet XML
+
+1.  **Add the Export View:**
+    * Go to the **Document** menu in UaExpert.
+    * Select **Add...**.
+    * In the "Add Document" dialog, choose **XML Nodeset Export View** from the document type dropdown menu.
+    * Click **Add Document**. A new tab named "XML Nodeset Export" will appear.
+
+2.  **Select the Namespace(s) to Export:**
+    * In the new **XML Nodeset Export** tab, you will see a list of **Namespaces** provided by your connected server (Prosys Simulator).
+    * OPC UA servers typically have multiple namespaces. Your custom/simulated objects will reside in a namespace that is *not* index 0 (which is the standard OPC UA namespace).
+    * **Check the box** next to the specific Namespace(s) that contain the object(s) you want to export. For the Prosys Simulator, this is usually one of the higher index namespaces.
+
+3.  **Export the NodeSet:**
+    * Click the **Export** button at the bottom of the "XML Nodeset Export" view.
+    * You will be prompted to select a save location and a file name for the **NodeSet XML file** (e.g., `MyProsysSimulation.xml`).
+
+### What is Exported?
+
+This XML file (**NodeSet2 XML**) contains the complete definition of the selected namespace, which includes the **Node IDs** for the objects, variables, data types, and methods, along with their hierarchical relationships (the address space structure).
+
+* **Node IDs** are the unique addresses used to identify an object (Node) in the OPC UA server.
+* **Exporting Node IDs is the standard way** to get a machine-readable "export of the address" in OPC UA.
+
+If you simply want to *copy the string address* of a single node (the **NodeId** or **BrowseName**):
+
+1.  In the **Address Space** window, select the object you are interested in.
+2.  In the **Attributes** window on the right, you can copy the values from the following fields:
+    * **NodeId:** This is the *unique address* for the node (e.g., `ns=3;i=1001` or `ns=3;s=MyObject.Temperature`). This is the most crucial identifier.
+    * **BrowseName:** This is the *hierarchical name* of the node (e.g., `2:Temperature`).
+
+The video below shows how to configure UaExpert, which is the client application you are successfully using.
+[UaExpert OPC UA Client](https://www.youtube.com/watch?v=-5rYJpgf_Vc)
+http://googleusercontent.com/youtube_content/0
+
+
 
 ## Prosys to Cim-io server and set up Cim-io for OPC UA to IP21 TODO
