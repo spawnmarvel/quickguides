@@ -194,7 +194,7 @@ Add server failed
 
 Expert mode
 
-![Expert mode](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/export_mode.png)
+![Expert mode](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/expert_mode.png)
 
 4.  **Trust the Certificate:**
     * **Right-click** on the UaExpert certificate in the rejected list.
