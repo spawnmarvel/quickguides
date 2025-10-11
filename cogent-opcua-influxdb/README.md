@@ -151,4 +151,18 @@ https://www.unified-automation.com/downloads/opc-ua-clients.html
 ![opc ua expert](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/uaexpert.jpg)
 
 
+UaExpert—A Full-Featured OPC UA Client
+
+UaExpert Common Framework
+
+* The basic framework of UaExpert includes general functionality like certificate handling, discovering UA Servers, connecting with UA Servers, browsing the information model, displaying attributes and references of particular UA Nodes.
+
+Lets connect to it:
+
+![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.jpg)
+
+
+
+https://www.unified-automation.com/products/development-tools/uaexpert.html?gad_source=1&gad_campaignid=19807579087&gclid=EAIaIQobChMI-4OLwIKckAMVLBiiAx3vPjbtEAAYASAAEgKfw_D_BwE
+
 ## Prosys to Cim-io server and set up Cim-io for OPC UA to IP21 TODO
