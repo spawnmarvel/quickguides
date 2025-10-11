@@ -232,7 +232,11 @@ We did not have to move any cetificates, we just marked trust.
 
 After performing these two steps and restarting both applications, **UaExpert** should be able to connect to the **Prosys OPC UA Simulator** using a secure endpoint (e.g., **Sign & Encrypt**).
 
-### Quick Security Bypass (For Testing)
+Then we have OPC UA Data
+
+![Opc ua data](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/opc_ua_data.png)
+
+#### Quick Security Bypass (For Testing)
 
 If you just need to test the connection without security, you can configure both applications to use **"None"** for the **Security Mode** and **"Anonymous"** for **User Authentication**.
 
