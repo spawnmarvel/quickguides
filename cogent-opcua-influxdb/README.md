@@ -220,7 +220,7 @@ The UaExpert client must also trust the certificate of the Prosys OPC UA Simulat
     * Find the **Prosys Simulator's certificate file** (usually a `.der` file with a name related to `SimulationServer` or `Prosys`) in the UaExpert's `PKI\rejected\certs` folder.
     * **Copy** (or **Move**) this file to the UaExpert's **trusted** certificates folder:
         * `C:\Users\<YourUserName>\AppData\Roaming\unifiedautomation\uaexpert\PKI\trusted\certs`
-4.  **Restart UaExpert** (close and reopen the application).
+(4.  **Restart UaExpert** (close and reopen the application).)
 
 
 We did not have to move any cetificates, we just marked trust.
