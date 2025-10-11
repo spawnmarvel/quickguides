@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2025-10-11T12:11:16.293Z">
+  <NamespaceUris>
+    <Uri>urn:BER-0803.goodtech.local:OPCUA:SimulationServer</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="urn:BER-0803.goodtech.local:OPCUA:SimulationServer">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.04" PublicationDate="2024-12-01T00:00:00.000Z"/>
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="UInt32">i=7</Alias>
+    <Alias Alias="NodeId">i=17</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+  </Aliases>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:Priority" BrowseName="Priority" DataType="Byte">
+    <DisplayName>Priority</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:Byte>0</uax:Byte>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:Priority" BrowseName="Priority" DataType="Byte">
+    <DisplayName>Priority</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:Byte>0</uax:Byte>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:SessionId" BrowseName="SessionId" DataType="NodeId">
+    <DisplayName>SessionId</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:SessionId" BrowseName="SessionId" DataType="NodeId">
+    <DisplayName>SessionId</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:EnableCount" BrowseName="EnableCount" DataType="UInt32">
+    <DisplayName>EnableCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:ModifyCount" BrowseName="ModifyCount" DataType="UInt32">
+    <DisplayName>ModifyCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:EnableCount" BrowseName="EnableCount" DataType="UInt32">
+    <DisplayName>EnableCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:ModifyCount" BrowseName="ModifyCount" DataType="UInt32">
+    <DisplayName>ModifyCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:DisableCount" BrowseName="DisableCount" DataType="UInt32">
+    <DisplayName>DisableCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:DisableCount" BrowseName="DisableCount" DataType="UInt32">
+    <DisplayName>DisableCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:SubscriptionId" BrowseName="SubscriptionId" DataType="UInt32">
+    <DisplayName>SubscriptionId</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>1760183312</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:SubscriptionId" BrowseName="SubscriptionId" DataType="UInt32">
+    <DisplayName>SubscriptionId</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>1760183311</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:MaxLifetimeCount" BrowseName="MaxLifetimeCount" DataType="UInt32">
+    <DisplayName>MaxLifetimeCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>2400</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:MaxLifetimeCount" BrowseName="MaxLifetimeCount" DataType="UInt32">
+    <DisplayName>MaxLifetimeCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>12000</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:MaxKeepAliveCount" BrowseName="MaxKeepAliveCount" DataType="UInt32">
+    <DisplayName>MaxKeepAliveCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>10</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:PublishingEnabled" BrowseName="PublishingEnabled" DataType="Boolean">
+    <DisplayName>PublishingEnabled</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:Boolean>true</uax:Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:MaxKeepAliveCount" BrowseName="MaxKeepAliveCount" DataType="UInt32">
+    <DisplayName>MaxKeepAliveCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>50</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=dca616ab-8670-4102-a495-07947471dee6/0:PublishingEnabled" BrowseName="PublishingEnabled" DataType="Boolean">
+    <DisplayName>PublishingEnabled</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=dca616ab-8670-4102-a495-07947471dee6</Reference>
+    </References>
+    <Value>
+      <uax:Boolean>true</uax:Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:MonitoredItemCount" BrowseName="MonitoredItemCount" DataType="UInt32">
+    <DisplayName>MonitoredItemCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=cea011eb-5cee-48ec-85ca-b351a2b0f0a5/0:NextSequenceNumber" BrowseName="NextSequenceNumber" DataType="UInt32">
+    <DisplayName>NextSequenceNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;g=cea011eb-5cee-48ec-85ca-b351a2b0f0a5</Reference>
+    </References>
+    <Value>
+      <uax:UInt32>0</uax:UInt32>
+    </Value>
+  </UAVariable>
+</UANodeSet>

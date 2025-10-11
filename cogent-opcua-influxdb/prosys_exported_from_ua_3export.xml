@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2025-10-11T12:21:43.351Z">
+  <NamespaceUris>
+    <Uri>http://www.prosysopc.com/OPCUA/SimulationServer/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://www.prosysopc.com/OPCUA/SimulationServer/" Version="1.0.0" PublicationDate="2020-02-27T12:03:03.000Z">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.04" PublicationDate="2024-12-01T00:00:00.000Z"/>
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="HasSource">ns=1;i=4006</Alias>
+    <Alias Alias="HasTarget">ns=1;i=4009</Alias>
+  </Aliases>
+  <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:ValueSimulationType" IsAbstract="true">
+    <DisplayName>ValueSimulationType</DisplayName>
+    <Description>Defines the value simulation configuration for the parent Variable.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1011</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1003</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1004</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1005</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1006</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1007</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1008</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1009</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1003" BrowseName="1:ConstantValueSimulationType">
+    <DisplayName>ConstantValueSimulationType</DisplayName>
+    <Description>Simulation configuration for constant values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1004" BrowseName="1:CounterValueSimulationType">
+    <DisplayName>CounterValueSimulationType</DisplayName>
+    <Description>Simulation configuration for counter values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1005" BrowseName="1:RandomValueSimulationType">
+    <DisplayName>RandomValueSimulationType</DisplayName>
+    <Description>Simulation configuration for random values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1006" BrowseName="1:SinusoidValueSimulationType">
+    <DisplayName>SinusoidValueSimulationType</DisplayName>
+    <Description>Simulation configuration for sinusoidal wave values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1007" BrowseName="1:TriangleValueSimulationType">
+    <DisplayName>TriangleValueSimulationType</DisplayName>
+    <Description>Simulation configuration for triangle wave values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1008" BrowseName="1:SawtoothValueSimulationType">
+    <DisplayName>SawtoothValueSimulationType</DisplayName>
+    <Description>Simulation configuration for sawtooth wave values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1009" BrowseName="1:SquareValueSimulationType">
+    <DisplayName>SquareValueSimulationType</DisplayName>
+    <Description>Simulation configuration for square wave values.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1011" BrowseName="1:SimulationType" IsAbstract="true">
+    <DisplayName>SimulationType</DisplayName>
+    <Description>Supertype for all simulation ObjectTypes.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1002</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1012</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1014</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1012" BrowseName="1:MethodSimulationType">
+    <DisplayName>MethodSimulationType</DisplayName>
+    <Description>Defines the method simulation configuration for the parent Method.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1011</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5004</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5005</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1013" BrowseName="1:SimulatedMethodActionType" IsAbstract="true">
+    <DisplayName>SimulatedMethodActionType</DisplayName>
+    <Description>Abstract supertype for simulated Method Actions</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1015</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1019</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6021</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6020</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1014" BrowseName="1:EventSimulationType">
+    <DisplayName>EventSimulationType</DisplayName>
+    <Description>Defines the event simulation configuration for the parent Object.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1011</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1015" BrowseName="1:SimulatedMethodSetActionType">
+    <DisplayName>SimulatedMethodSetActionType</DisplayName>
+    <Description>ObjectType for representing Set Actions</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1013</Reference>
+      <Reference ReferenceType="HasSource">ns=1;i=5007</Reference>
+      <Reference ReferenceType="HasTarget">ns=1;i=5008</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1016" BrowseName="1:TargetType" IsAbstract="true">
+    <DisplayName>TargetType</DisplayName>
+    <Description>Abstract supertype for Target configurations</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1017</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1020</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1022</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1017" BrowseName="1:OutputArgumentTargetType">
+    <DisplayName>OutputArgumentTargetType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1016</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1018" BrowseName="1:SourceType" IsAbstract="true">
+    <DisplayName>SourceType</DisplayName>
+    <Description>Abstract supertype for Source configurations</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1021</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1024</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1026</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;i=1027</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1019" BrowseName="1:SimulatedMethodWaitActionType">
+    <DisplayName>SimulatedMethodWaitActionType</DisplayName>
+    <Description>ObjectType for representing Wait Actions</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1013</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6026</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1020" BrowseName="1:AbsoluteNodeIdTargetType">
+    <DisplayName>AbsoluteNodeIdTargetType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1016</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6019</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1021" BrowseName="1:AbsoluteNodeIdSourceType">
+    <DisplayName>AbsoluteNodeIdSourceType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1018</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6022</Reference>
+    </References>
+  </UAObjectType>
+  <UAObjectType NodeId="ns=1;i=1022" BrowseName="1:RelativePathTargetType">
+    <DisplayName>RelativePathTargetType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1016</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6027</Reference>
+    </References>
+  </UAObjectType>
+</UANodeSet>

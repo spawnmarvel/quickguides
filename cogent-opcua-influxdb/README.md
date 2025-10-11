@@ -306,6 +306,11 @@ If you simply want to *copy the string address* of a single node (the **NodeId**
     * **NodeId:** This is the *unique address* for the node (e.g., `ns=3;i=1001` or `ns=3;s=MyObject.Temperature`). This is the most crucial identifier.
     * **BrowseName:** This is the *hierarchical name* of the node (e.g., `2:Temperature`).
 
+
+Node id
+
+![Node_id](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/node_id.png)
+
 The video below shows how to configure UaExpert, which is the client application you are successfully using.
 [UaExpert OPC UA Client](https://www.youtube.com/watch?v=-5rYJpgf_Vc)
 http://googleusercontent.com/youtube_content/0
