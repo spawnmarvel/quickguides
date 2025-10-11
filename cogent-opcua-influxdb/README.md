@@ -176,9 +176,11 @@ The Prosys OPC UA Simulator (the server) must trust the certificate of the UaExp
 1.  **Open Prosys OPC UA Simulator** and ensure it's running and accepting connections on the endpoint you're using (e.g., `opc.tcp://localhost:53530/OPCUA/SimulationServer`).
 2.  **Attempt to Connect from UaExpert:** Try to establish the connection from UaExpert. It will fail, but this action forces UaExpert to send its certificate to the Prosys Simulator.
 
-![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.jpg)
+![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.png)
 
-![add url](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_url.jpg)
+![add url](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_url.png)
+
+![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server_failed.png)
 
 3.  **Locate the Rejected Certificate in Prosys Simulator:**
     * In the Prosys Simulator, go to the **Certificates** tab (you may need to switch to **Expert Mode** under the **Options** menu to see it).
