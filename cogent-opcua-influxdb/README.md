@@ -176,9 +176,15 @@ The Prosys OPC UA Simulator (the server) must trust the certificate of the UaExp
 1.  **Open Prosys OPC UA Simulator** and ensure it's running and accepting connections on the endpoint you're using (e.g., `opc.tcp://localhost:53530/OPCUA/SimulationServer`).
 2.  **Attempt to Connect from UaExpert:** Try to establish the connection from UaExpert. It will fail, but this action forces UaExpert to send its certificate to the Prosys Simulator.
 
+Add server
+
 ![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.png)
 
+Add Url
+
 ![add url](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_url.png)
+
+Add server failed
 
 ![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server_failed.png)
 
