@@ -274,6 +274,10 @@ Here are the steps to export the address space for an object:
     * In the "Add Document" dialog, choose **XML Nodeset Export View** from the document type dropdown menu.
     * Click **Add Document**. A new tab named "XML Nodeset Export" will appear.
 
+Add xml
+
+![Add xml](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_xml.png)
+
 2.  **Select the Namespace(s) to Export:**
     * In the new **XML Nodeset Export** tab, you will see a list of **Namespaces** provided by your connected server (Prosys Simulator).
     * OPC UA servers typically have multiple namespaces. Your custom/simulated objects will reside in a namespace that is *not* index 0 (which is the standard OPC UA namespace).
