@@ -169,12 +169,17 @@ Here's the step-by-step process to resolve this mutual trust problem:
 
 ---
 
-## 1. Trust the Client Certificate (in Prosys Simulator)
+### 1. Trust the Client Certificate (in Prosys Simulator)
 
 The Prosys OPC UA Simulator (the server) must trust the certificate of the UaExpert (the client).
 
 1.  **Open Prosys OPC UA Simulator** and ensure it's running and accepting connections on the endpoint you're using (e.g., `opc.tcp://localhost:53530/OPCUA/SimulationServer`).
 2.  **Attempt to Connect from UaExpert:** Try to establish the connection from UaExpert. It will fail, but this action forces UaExpert to send its certificate to the Prosys Simulator.
+
+![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.jpg)
+
+![add url](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_url.jpg)
+
 3.  **Locate the Rejected Certificate in Prosys Simulator:**
     * In the Prosys Simulator, go to the **Certificates** tab (you may need to switch to **Expert Mode** under the **Options** menu to see it).
     * Look for the certificate for **UaExpert** (it's usually listed with its application URI, e.g., `urn:UaExpert:UnifiedAutomation:UaExpert`). It will likely be in the **Rejected** list.
@@ -185,7 +190,7 @@ The Prosys OPC UA Simulator (the server) must trust the certificate of the UaExp
 
 ---
 
-## 2. Trust the Server Certificate (in UaExpert)
+### 2. Trust the Server Certificate (in UaExpert)
 
 The UaExpert client must also trust the certificate of the Prosys OPC UA Simulator server.
 
@@ -202,7 +207,7 @@ The UaExpert client must also trust the certificate of the Prosys OPC UA Simulat
 
 ---
 
-## 3. Re-Connect
+### 3. Re-Connect
 
 After performing these two steps and restarting both applications, **UaExpert** should be able to connect to the **Prosys OPC UA Simulator** using a secure endpoint (e.g., **Sign & Encrypt**).
 
