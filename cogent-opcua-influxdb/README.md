@@ -287,6 +287,11 @@ Add xml
     * Click the **Export** button at the bottom of the "XML Nodeset Export" view.
     * You will be prompted to select a save location and a file name for the **NodeSet XML file** (e.g., `MyProsysSimulation.xml`).
 
+
+Export
+
+![Export](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/export.png)
+
 ### What is Exported?
 
 This XML file (**NodeSet2 XML**) contains the complete definition of the selected namespace, which includes the **Node IDs** for the objects, variables, data types, and methods, along with their hierarchical relationships (the address space structure).
