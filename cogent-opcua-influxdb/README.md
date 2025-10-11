@@ -191,10 +191,19 @@ Add server failed
 3.  **Locate the Rejected Certificate in Prosys Simulator:**
     * In the Prosys Simulator, go to the **Certificates** tab (you may need to switch to **Expert Mode** under the **Options** menu to see it).
     * Look for the certificate for **UaExpert** (it's usually listed with its application URI, e.g., `urn:UaExpert:UnifiedAutomation:UaExpert`). It will likely be in the **Rejected** list.
+
+Expert mode
+
+![Expert mode](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/export_mode.png)
+
 4.  **Trust the Certificate:**
     * **Right-click** on the UaExpert certificate in the rejected list.
     * Select **Trust** (or **Move to Trusted**).
 5.  **Restart the Prosys Simulator.**
+
+Trust certtificate
+
+![Trust certificate](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/trust_cert.png)
 
 ---
 
