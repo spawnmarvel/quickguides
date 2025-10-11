@@ -159,7 +159,65 @@ UaExpert Common Framework
 
 Lets connect to it:
 
-![add server](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/add_server.jpg)
+You are correct; difficulty connecting an OPC UA client like **UaExpert** to an OPC UA server like **Prosys OPC UA Simulator** when using a secure connection is **almost always a certificate trust issue** 🛡️.
+
+OPC UA clients and servers must **mutually trust** each other's security certificates to establish a secure channel. When a connection attempt fails due to a certificate issue, the public key of the rejected application (client or server) is typically moved to a "rejected" folder on the other application's file system.
+
+Here's the step-by-step process to resolve this mutual trust problem:
+
+---
+
+## 1. Trust the Client Certificate (in Prosys Simulator)
+
+The Prosys OPC UA Simulator (the server) must trust the certificate of the UaExpert (the client).
+
+1.  **Open Prosys OPC UA Simulator** and ensure it's running and accepting connections on the endpoint you're using (e.g., `opc.tcp://localhost:53530/OPCUA/SimulationServer`).
+2.  **Attempt to Connect from UaExpert:** Try to establish the connection from UaExpert. It will fail, but this action forces UaExpert to send its certificate to the Prosys Simulator.
+3.  **Locate the Rejected Certificate in Prosys Simulator:**
+    * In the Prosys Simulator, go to the **Certificates** tab (you may need to switch to **Expert Mode** under the **Options** menu to see it).
+    * Look for the certificate for **UaExpert** (it's usually listed with its application URI, e.g., `urn:UaExpert:UnifiedAutomation:UaExpert`). It will likely be in the **Rejected** list.
+4.  **Trust the Certificate:**
+    * **Right-click** on the UaExpert certificate in the rejected list.
+    * Select **Trust** (or **Move to Trusted**).
+5.  **Restart the Prosys Simulator.**
+
+---
+
+## 2. Trust the Server Certificate (in UaExpert)
+
+The UaExpert client must also trust the certificate of the Prosys OPC UA Simulator server.
+
+1.  **Attempt to Connect Again from UaExpert:** If you hadn't already, try connecting to the server's endpoint again.
+2.  **Locate the Rejected Certificate in UaExpert:**
+    * In UaExpert, you should see a pop-up window or an entry in the **Log** or **Server Diagnostics** window indicating that the server's certificate was rejected.
+    * UaExpert manages its trust list via its file system. The certificate from the Prosys Simulator is usually copied to the UaExpert's **rejected** certificates folder. You'll typically find these folders under a path like:
+        * `C:\Users\<YourUserName>\AppData\Roaming\unifiedautomation\uaexpert\PKI\rejected\certs` (The `AppData` folder is often hidden).
+3.  **Trust the Certificate:**
+    * Find the **Prosys Simulator's certificate file** (usually a `.der` file with a name related to `SimulationServer` or `Prosys`) in the UaExpert's `PKI\rejected\certs` folder.
+    * **Copy** (or **Move**) this file to the UaExpert's **trusted** certificates folder:
+        * `C:\Users\<YourUserName>\AppData\Roaming\unifiedautomation\uaexpert\PKI\trusted\certs`
+4.  **Restart UaExpert** (close and reopen the application).
+
+---
+
+## 3. Re-Connect
+
+After performing these two steps and restarting both applications, **UaExpert** should be able to connect to the **Prosys OPC UA Simulator** using a secure endpoint (e.g., **Sign & Encrypt**).
+
+### Quick Security Bypass (For Testing)
+
+If you just need to test the connection without security, you can configure both applications to use **"None"** for the **Security Mode** and **"Anonymous"** for **User Authentication**.
+
+In **Prosys OPC UA Simulator (Expert Mode)**:
+
+1.  Go to the **Endpoints** tab.
+2.  Select the relevant endpoint (usually the default `opc.tcp://...`).
+3.  Under **Security Modes**, **deselect** `Sign` and `Sign & Encrypt`. **Select** `None`.
+4.  Go to the **Users** tab.
+5.  Under **User Authentication Methods**, **deselect** all except **Anonymous**.
+6.  **Save** and **Restart** the simulator.
+
+Then, ensure you select the **"None"** security policy in UaExpert when adding the server connection.
 
 
 
