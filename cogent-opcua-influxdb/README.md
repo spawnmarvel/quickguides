@@ -222,6 +222,10 @@ The UaExpert client must also trust the certificate of the Prosys OPC UA Simulat
         * `C:\Users\<YourUserName>\AppData\Roaming\unifiedautomation\uaexpert\PKI\trusted\certs`
 4.  **Restart UaExpert** (close and reopen the application).
 
+
+We did not have to move any cetificates, we just marked trust.
+
+![Trust certificate 2](https://github.com/spawnmarvel/quickguides/blob/main/cogent-opcua-influxdb/images/trust_cert2.png)
 ---
 
 ### 3. Re-Connect
