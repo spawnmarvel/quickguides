@@ -159,7 +159,9 @@ UaExpert Common Framework
 
 Lets connect to it:
 
-You are correct; difficulty connecting an OPC UA client like **UaExpert** to an OPC UA server like **Prosys OPC UA Simulator** when using a secure connection is **almost always a certificate trust issue** 🛡️.
+### Mutually trust
+
+Difficulty connecting an OPC UA client like **UaExpert** to an OPC UA server like **Prosys OPC UA Simulator** when using a secure connection is **almost always a certificate trust issue** 🛡️.
 
 OPC UA clients and servers must **mutually trust** each other's security certificates to establish a secure channel. When a connection attempt fails due to a certificate issue, the public key of the rejected application (client or server) is typically moved to a "rejected" folder on the other application's file system.
 
