@@ -166,6 +166,14 @@ You are now connected to an entirely new, isolated database environment\!
 
 ![alterdb](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/alter_db.png)
 
+Check log location
+
+![logs location](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/loglocation.png)
+
+The logs are there also
+
+![logs](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/logs.png)
+
 ## Change password for user
 
 
