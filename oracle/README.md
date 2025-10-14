@@ -168,7 +168,7 @@ You are now connected to an entirely new, isolated database environment\!
 
 Check log location
 
-![logs location](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/loglocation.png)
+![logs location](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/log_location.png)
 
 The logs are there also
 
