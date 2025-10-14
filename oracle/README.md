@@ -104,7 +104,7 @@ Run the following SQL statement in the SQL Developer Worksheet to create a new P
 ```sql
 CREATE PLUGGABLE DATABASE MYPDB
   ADMIN USER mypdb_admin IDENTIFIED BY YourNewSecurePassword
-  FILE_NAME_CONVERT = ('XEPDB1', 'MYPDB');
+  FILE_NAME_CONVERT = ('PDBSEED', 'MYPDB');
 ```
 
 | Component | Description |
@@ -161,6 +161,10 @@ In SQL Developer, you can now create a final connection to your new database:
   * **Network Alias:** `MYPDB_ALIAS`
 
 You are now connected to an entirely new, isolated database environment\!
+
+
+
+![alterdb](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/alter_db.png)
 
 ## Change password for user
 
