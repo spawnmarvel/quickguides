@@ -165,7 +165,7 @@ To:
 ```log
 amqps://eh-rmq-bridge:<SharedAccessKey>@<your-namespace>.servicebus.windows.net:5761?cacertfile=path:/to/folder/DigiCertGlobalRootCA.pem&verify=verify_none
 ```
-***Erlang 26 Info***
+#### Erlang 26 Info general
 
 ---- This is just a place holder for the shovel application format after Erlang 26 --
 Shovel update tls 04.10.2024, not mtls (and nothing to do with AEH or ASB, just plain shovel stuff):
