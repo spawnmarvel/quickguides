@@ -993,3 +993,6 @@ https://www.rabbitmq.com/shovel-static.html
 Sevice bus
 
    
+## Erlang 26
+
+https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2ServiceBus.md#erlang-26-info-general
