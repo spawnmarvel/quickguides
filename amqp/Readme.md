@@ -995,4 +995,25 @@ Sevice bus
    
 ## Erlang 26
 
-https://github.com/spawnmarvel/quickguides/blob/main/eventhub/ReadmeAmqp2ServiceBus.md#erlang-26-info-general
+#### Erlang 26 Info general
+
+---- This is just a place holder for the shovel application format after Erlang 26 --
+Shovel update tls 04.10.2024, not mtls (and nothing to do with AEH or ASB, just plain shovel stuff):
+
+* Windows OS: Client app (running shovel) AMQP and Erlang > 26, (VERIFY_PEER by default)
+* Windows OS: Server app AMQP and Erlang <=> 26 with tls enabled
+* Copy the root cert from server app to client app on serverca.pem format
+* Build the shovel string
+
+You will have to use this format for the shovel or client at least.
+You can also check with true and add SNI:
+
+verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2
+
+Shovel:
+```log
+amqps://user:password@xx.xx.xx.xx:5671?cacertfile=path:\\to\\folder\\serverca.pem&verify=verify_none
+```
+
+---- This is just a place holder for the shovel application format after Erlang 26 --
+
