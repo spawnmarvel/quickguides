@@ -174,7 +174,13 @@ The logs are there also
 
 ![logs](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/logs.png)
 
-## Change password for user
 
+## Create table
+
+## Insert table
+
+## Update table
+
+## Change password for user
 
 ## Create job and execute it
