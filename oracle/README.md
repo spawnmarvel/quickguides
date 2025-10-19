@@ -177,6 +177,8 @@ The logs are there also
 
 ## Create table
 
+Stop/start OracleServiceXE check it, consumes memory.
+
 ## Insert table
 
 ## Update table
