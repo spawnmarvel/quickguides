@@ -269,10 +269,16 @@ Now we can create the table as mypdb_admin1
 List tables
 
 ```sql
+SELECT table_name
+FROM USER_TABLES
+ORDER BY table_name;
 
 ```
+![list table](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/list_table.png)
 
-![crEATE TABLE](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/create_table.png)
+Success create table
+
+![create table](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/create_table.png)
 
 
 ## Insert table
