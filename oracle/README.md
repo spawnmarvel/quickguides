@@ -229,13 +229,18 @@ You are now connected to an entirely new, isolated database environment\!
 
 ![connectd plugdb](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/connected_plugdb.png)
 
-## Get to know SQL developer
-
+# Get to know SQL developer and Oracle
 
 ## Create table
 
 Stop/start OracleServiceXE check it, consumes memory.
 Then login and start db
+
+```sql
+
+```
+
+List tables
 
 ```sql
 
