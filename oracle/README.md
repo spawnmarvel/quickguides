@@ -335,20 +335,24 @@ Success create table
 ![create table](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/create_table.png)
 
 
-## Insert table SQL Developer
+## Insert table SQL Developer Gui
 
 ![insert](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/insert.png)
 
-## Insert table SQL
+### Insert table SQL
 
 ```sql
 INSERT INTO "MYPDB_ADMIN1"."EMPLOYEE_DATA" (EMPLOYEE_ID, EMPLOYEE_FNAME, EMPLOYEE_LNAME) VALUES ('2', 'Steven', 'Doe')
 
+-- Commit Successful
+
+-- MYPDB1_ALIAS*: Oct 21, 2025, 11:01:03 PM: Commit successfu
 ```
 
+![insert 2](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/insert2.png)
 
 
-## Update table
+## Update table SQL Developer Gui
 
 ## Change password for user
 
