@@ -354,6 +354,8 @@ INSERT INTO "MYPDB_ADMIN1"."EMPLOYEE_DATA" (EMPLOYEE_ID, EMPLOYEE_FNAME, EMPLOYE
 
 ## Update table SQL Developer Gui
 
+![update](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/update.png)
+
 ## Change password for user
 
 ## Create job and execute it
