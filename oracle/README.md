@@ -127,8 +127,22 @@ CREATE PLUGGABLE DATABASE MYPDB1
 
 After creation, the new PDB is usually closed. You need to open it to start using it.
 
+If you are in a Multitenant Container Database (CDB), you need to check the status of all PDBs. You must run this query while connected to the CDB Root (CDB$ROOT).
+
+
 ```sql
-ALTER PLUGGABLE DATABASE MYPDB OPEN;
+SELECT NAME, OPEN_MODE, RESTRICTED
+FROM V$PDBS;
+
+```
+Check db
+
+
+![check_db](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/check_db.png)
+
+
+```sql
+ALTER PLUGGABLE DATABASE MYPDB1 OPEN;
 ```
 
 -----
