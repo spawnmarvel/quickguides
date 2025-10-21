@@ -97,6 +97,8 @@ You must connect as an administrative user (`SYS` or `SYSTEM`) to the main conta
 
 -----
 
+![sys_con](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sys_con.png)
+
 ## 2\. Execute the `CREATE PLUGGABLE DATABASE` Command
 
 Run the following SQL statement in the SQL Developer Worksheet to create a new PDB. Replace `MYPDB` with your desired new database name.
@@ -156,7 +158,7 @@ MYPDB_ALIAS =
 In SQL Developer, you can now create a final connection to your new database:
 
   * **Connection Type:** TNS
-  * **Username:** `MYPDB_ADMIN`
+  * **Username:** `mypdb_admin`
   * **Password:** `YourNewSecurePassword`
   * **Network Alias:** `MYPDB_ALIAS`
 
@@ -178,7 +180,11 @@ The logs are there also
 ## Create table
 
 Stop/start OracleServiceXE check it, consumes memory.
+Then login and start db
 
+```sql
+
+```
 ## Insert table
 
 ## Update table
