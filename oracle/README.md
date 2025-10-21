@@ -349,7 +349,7 @@ INSERT INTO "MYPDB_ADMIN1"."EMPLOYEE_DATA" (EMPLOYEE_ID, EMPLOYEE_FNAME, EMPLOYE
 -- MYPDB1_ALIAS*: Oct 21, 2025, 11:01:03 PM: Commit successfu
 ```
 
-![insert 2](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/insert2.png)
+![insert 2](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/insert_2.png)
 
 
 ## Update table SQL Developer Gui
