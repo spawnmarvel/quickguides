@@ -99,24 +99,29 @@ You must connect as an administrative user (`SYS` or `SYSTEM`) to the main conta
 
 ![sys_con](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/sys_con.png)
 
+
+This implies that you are connected to the root container instead of to a regular plug in database (pdb) where applications should be built.
+
 ## 2\. Execute the `CREATE PLUGGABLE DATABASE` Command
 
 Run the following SQL statement in the SQL Developer Worksheet to create a new PDB. Replace `MYPDB` with your desired new database name.
 
 ```sql
-CREATE PLUGGABLE DATABASE MYPDB
-  ADMIN USER mypdb_admin IDENTIFIED BY YourNewSecurePassword
-  FILE_NAME_CONVERT = ('PDBSEED', 'MYPDB');
+CREATE PLUGGABLE DATABASE MYPDB1
+  ADMIN USER mypdb_admin1 IDENTIFIED BY YourNewSecurePassword1
+  FILE_NAME_CONVERT = ('PDBSEED', 'MYPDB1');
 ```
 
 | Component | Description |
 | :--- | :--- |
-| `MYPDB` | The **name of your new database**. |
-| `ADMIN USER mypdb_admin` | Creates a local administrator account for this new PDB. |
+| `MYPDB1` | The **name of your new database**. |
+| `ADMIN USER mypdb_admin1` | Creates a local administrator account for this new PDB. |
 | `IDENTIFIED BY ...` | Sets the password for the new `mypdb_admin` user. |
 | `FILE_NAME_CONVERT` | Ensures the necessary database files are created correctly for the new PDB. |
 
 -----
+
+![mypdb1](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/mypdb1.png)
 
 ## 3\. Open the New PDB
 
