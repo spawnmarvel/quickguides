@@ -141,6 +141,13 @@ Check db
 ![check_db](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/check_db.png)
 
 
+NAME	OPEN_MODE	Meaning
+
+* MYPDB	READ WRITE	The PDB is fully open and ready for use.
+* PDB$SEED	READ ONLY	The template PDB is always read-only.
+* ANOTHERPDB	MOUNTED	The PDB is closed and not accessible by users.
+* MYPDB	READ WRITE and RESTRICTED is YES	The PDB is open, but only users with the RESTRICTED SESSION privilege can connect (DBA maintenance mode).
+
 ```sql
 ALTER PLUGGABLE DATABASE MYPDB1 OPEN;
 ```
