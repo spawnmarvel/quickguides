@@ -263,6 +263,60 @@ Grant succeeded.
 
 ```
 
+And more security
+
+```sql
+INSERT INTO "MYPDB_ADMIN1"."EMPLOYEE_DATA" (EMPLOYEE_ID, EMPLOYEE_FNAME, EMPLOYEE_LNAME) VALUES ('1', 'John', 'Doe')
+ORA-01950: no privileges on tablespace 'SYSTEM'
+ORA-06512: at line 1
+
+```
+
+```cmd
+C:\Users\imsdal>sqlplus / as sysdba
+```
+
+```sql
+SELECT file_name FROM dba_data_files WHERE tablespace_name = 'SYSTEM';
+
+FILE_NAME
+--------------------------------------------------------------------------------
+-- C:\APP\IMSDAL\PRODUCT\21C\ORADATA\XE\MYPDB1\SYSTEM01.DBF
+
+CREATE TABLESPACE USERS DATAFILE 'C:\APP\IMSDAL\PRODUCT\21C\ORADATA\XE\MYPDB1\users01.dbf' SIZE 100M AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED;
+
+-- Tablespace created.
+
+
+ALTER USER MYPDB_ADMIN1 QUOTA UNLIMITED ON USERS;
+
+-- User altered.
+
+COMMIT;
+
+-- Commit complete.
+
+ALTER USER MYPDB_ADMIN1 DEFAULT TABLESPACE USERS;
+
+-- User altered.
+
+COMMIT;
+
+-- Commit complete.
+
+-- The existing table, "MYPDB_ADMIN1"."EMPLOYEE_DATA", was created when your user's default tablespace was still set to SYSTEM. 
+-- Therefore, the table itself resides in the SYSTEM tablespace.
+
+ALTER TABLE MYPDB_ADMIN1.EMPLOYEE_DATA MOVE TABLESPACE USERS;
+
+--Table altered.
+
+COMMIT;
+
+-- Commit complete.
+
+```
+
 Now we can create the table as mypdb_admin1
 
 
@@ -281,7 +335,18 @@ Success create table
 ![create table](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/create_table.png)
 
 
-## Insert table
+## Insert table SQL Developer
+
+![insert](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/insert.png)
+
+## Insert table SQL
+
+```sql
+INSERT INTO "MYPDB_ADMIN1"."EMPLOYEE_DATA" (EMPLOYEE_ID, EMPLOYEE_FNAME, EMPLOYEE_LNAME) VALUES ('2', 'Steven', 'Doe')
+
+```
+
+
 
 ## Update table
 
