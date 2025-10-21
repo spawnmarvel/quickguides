@@ -233,18 +233,48 @@ You are now connected to an entirely new, isolated database environment\!
 
 ## Create table
 
-Stop/start OracleServiceXE check it, consumes memory.
-Then login and start db
+
+It's a common confusion when creating a new Pluggable Database (PDB) in Oracle. The user you created, mypdb_admin1, is the PDB's administrator, but by default, this user is only granted the necessary privileges to manage the PDB (like stopping/starting it) and basic session rights. It is not automatically granted the CREATE TABLE system privilege.
+
+
+```cmd
+C:\Users\imsdal>sqlplus / as sysdba
+```
+Do security
 
 ```sql
+SQL> ALTER SESSION SET CONTAINER = MYPDB1;
+
+Session altered.
+
+SQL> GRANT CREATE TABLE TO mypdb_admin1;
+
+Grant succeeded.
 
 ```
+
+For schema owners and application users, the standard practice is to grant the RESOURCE role, which includes CREATE TABLE and other privileges needed to create objects like sequences and procedures.
+
+
+```sql
+SQL> GRANT RESOURCE TO mypdb_admin1;
+
+Grant succeeded.
+
+```
+
+Now we can create the table as mypdb_admin1
+
 
 List tables
 
 ```sql
 
 ```
+
+![crEATE TABLE](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/create_table.png)
+
+
 ## Insert table
 
 ## Update table
