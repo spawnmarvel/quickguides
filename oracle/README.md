@@ -202,12 +202,12 @@ Now that the new PDB is open, you need to update your **`tnsnames.ora`** file to
 
 ```ora
 # TNS entry for the new Pluggable Database
-MYPDB_ALIAS = 
+MYPDB1_ALIAS = 
   (DESCRIPTION =
     (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
     (CONNECT_DATA =
       (SERVER = DEDICATED)
-      (SERVICE_NAME = MYPDB)  -- **Crucial: Change this to the PDB name**
+      (SERVICE_NAME = MYPDB1)  -- **Crucial: Change this to the PDB name**
     )
   )
 ```
@@ -221,23 +221,15 @@ MYPDB_ALIAS =
 In SQL Developer, you can now create a final connection to your new database:
 
   * **Connection Type:** TNS
-  * **Username:** `mypdb_admin`
-  * **Password:** `YourNewSecurePassword`
-  * **Network Alias:** `MYPDB_ALIAS`
+  * **Username:** `mypdb_admin1`
+  * **Password:** `YourNewSecurePassword1`
+  * **Network Alias:** `MYPDB1_ALIAS`
 
 You are now connected to an entirely new, isolated database environment\!
 
+![connectd plugdb](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/connected_plugdb.png)
 
-
-![alterdb](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/alter_db.png)
-
-Check log location
-
-![logs location](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/log_location.png)
-
-The logs are there also
-
-![logs](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/logs.png)
+## Get to know SQL developer
 
 
 ## Create table
