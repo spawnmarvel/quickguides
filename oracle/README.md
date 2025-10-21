@@ -148,9 +148,46 @@ NAME	OPEN_MODE	Meaning
 * ANOTHERPDB	MOUNTED	The PDB is closed and not accessible by users.
 * MYPDB	READ WRITE and RESTRICTED is YES	The PDB is open, but only users with the RESTRICTED SESSION privilege can connect (DBA maintenance mode).
 
-```sql
-ALTER PLUGGABLE DATABASE MYPDB1 OPEN;
+
+As sysdba
+
+```cmd
+C:\Users\imsdal>sqlplus / as sysdba
+
 ```
+```sql
+# C:\Users\imsdal>sqlplus / as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Tue Oct 21 21:32:48 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> ALTER PLUGGABLE DATABASE MYPDB1 OPEN;
+
+Pluggable database altered.
+
+SQL> exit
+Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+```
+
+Check db again
+
+
+```sql
+SELECT NAME, OPEN_MODE, RESTRICTED
+FROM V$PDBS;
+
+```
+
+![check_db2](https://github.com/spawnmarvel/quickguides/blob/main/oracle/images/check_db2.png)
+
 
 -----
 
