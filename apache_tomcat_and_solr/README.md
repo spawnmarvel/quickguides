@@ -191,7 +191,12 @@ xxx.exe.config
 <add key="JavaParams" value="-Xms512m -Xmx1G -Xss256k -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch"/>
 
 After update to 1.5 Gig:
+
 <add key="JavaParams" value="-Xms512m -Xmx1536m -Xss256k -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch"/>
+
+After update to 4 and 8gb Gig:
+
+<add key="JavaParams" value="-Xms4G -Xmx8G -Xss256k -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch"/>
 ```
 
 The SolrWindowsService in the Windows Services should be restarted after modifying these settings.
