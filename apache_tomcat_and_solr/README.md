@@ -6,7 +6,7 @@ https://tomcat.apache.org/
 
 If Tomcat is installed as a service:
 
-Open Tomcat Configuration: Run tomcat9w.exe (or the corresponding version, e.g., tomcat8w.exe) located in the <CATALINA_HOME>/bin directory.
+Open Tomcat Configuration: Run tomcat9w.exe as admin (or the corresponding version, e.g., tomcat8w.exe) located in the <CATALINA_HOME>/bin directory.
 
 Navigate to Java Tab: In the Apache Tomcat Properties dialog, go to the "Java" tab.
 
