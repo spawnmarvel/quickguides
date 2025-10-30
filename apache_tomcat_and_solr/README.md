@@ -131,6 +131,33 @@ Since the Windows service wrapper for Tomcat lacks a native rotation mechanism f
 
 ## Memory settings
 
+Any of the following may be occurring: Search may be slow, have long pauses, slow startup, or failures encountered when "java.lang.OutOfMemoryError: Java heap space".
+
+This JVM-Memory percent level can be adjusted with the Maximum Heap Space setting (-Xmx) described below.
+
+* Do not set the Maximum Heap Space too low since that will lead to a JVM-Memory percent level greater than 75% which can slow search responsiveness, or in extreme cases will cause OutOfMemoryException failures.
+
+* Do not set the Maximum Heap Space too high even if plenty of physical memory is available, because that can result in noticeable random pauses, and can result in extended pauses when garbage collecting. Larger heap sizes will take longer for garbage collection.
+
+* Do not set the Maximum Heap Space so high as to restrict physical memory available for the operating system resulting in excessive swapping of memory or limit OS cache or other memory resources which might impact performance.
+
+xxx.exe.config
+
+```code
+<add key="JavaParams" value="-Xms512m -Xmx1G -Xss256k -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch"/>
+
+After update to 1.5 Gig:
+<add key="JavaParams" value="-Xms512m -Xmx1536m -Xss256k -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch"/>
+```
+
+The SolrWindowsService in the Windows Services should be restarted after modifying these settings.
+
+Monitor the memory consumption.
+
+* If it is ever up to 75%, then try increasing again as needed.
+
+![solr memory](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr.png)
+
 ## Index
 
 ### Scan index once a week, use reconsile
