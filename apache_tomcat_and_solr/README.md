@@ -2,6 +2,38 @@
 
 https://tomcat.apache.org/
 
+
+## Apache tomcat and solr memory, hm.
+
+There are two places, one for apache tomcat and one for solr.
+
+You've hit a common point of confusion when running Solr inside Tomcat! 
+
+The core issue is that Tomcat and Solr do not run in separate Java Virtual Machines (JVMs) in this deployment scenario; 
+* they both run within the single Tomcat JVM.Therefore, you only need to set the heap memory ($\text{-Xms}$ and $\text{-Xmx}$) once, on the Tomcat process.
+
+The Single JVM Principle 🧠
+When you deploy Solr as a .war file (e.g., solr.war) into a standard Tomcat installation:
+
+Tomcat Starts the JVM: Tomcat is launched as a single process running the JVM.
+
+Solr is an Application: Solr is deployed as a web application (a Servlet) inside the already running Tomcat application server.
+
+Shared Memory: Both the Tomcat management threads and the Solr application threads draw memory from the same single Java heap defined by the Tomcat configuration.
+
+There is no separate "Solr process" or "Solr heap" to configure.
+
+Solr/Tomcat Heap Sizing ($\text{-Xms}$ and $\text{-Xmx}$)
+
+Solr benefits greatly from having a large, stable heap size for caching and search operations. The general recommendation is to set the initial (1$\text{-Xms}$) and maximum (2$\text{-Xmx}$) heap sizes to the same value.3 
+
+1. General Recommended Starting Point
+
+For a production Solr instance running on a server with dedicated memory:
+
+* Initial Heap Size -Xms: (4 GB)
+* Maximum Heap Size -Xmx: (4 GB)
+
 ## Memory settings
 
 If Tomcat is installed as a service:
