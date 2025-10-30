@@ -39,6 +39,8 @@ Solr's memory limit is the JVM's heap memory limit. There's no separate configur
 
 https://serverfault.com/questions/418342/limiting-solr-not-java-to-use-a-certain-amount-of-memory
 
+02393364: You just need to modify the parameter in xxxxxONESolrWindowsService.exe.config file under Solr only.
+
 ## Memory settings
 
 If Tomcat is installed as a service:
