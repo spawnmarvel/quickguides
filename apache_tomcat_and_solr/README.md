@@ -34,6 +34,11 @@ For a production Solr instance running on a server with dedicated memory:
 * Initial Heap Size -Xms: (2 GB)
 * Maximum Heap Size -Xmx: (4 GB)
 
+
+Solr's memory limit is the JVM's heap memory limit. There's no separate configuration.
+
+https://serverfault.com/questions/418342/limiting-solr-not-java-to-use-a-certain-amount-of-memory
+
 ## Memory settings
 
 If Tomcat is installed as a service:
