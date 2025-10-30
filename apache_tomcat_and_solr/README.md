@@ -1,7 +1,8 @@
 # Apache Tomcat and Solr
 
-
 https://tomcat.apache.org/
+
+## Memory settings
 
 ## Logging
 
@@ -9,56 +10,94 @@ Some issues
 
 * https://community.bmc.com/s/article/tomcat7-stdout-log-file-has-grown-to-over-70GB  
 
-That's a very common issue with Tomcat on Windows. The file, often named stdout.log or catalina.out (depending on how Tomcat is installed/run), grows indefinitely because, unlike the other rotating logs, it captures the raw \text{stdout} and \text{stderr} streams without any built-in rotation mechanism.
-Here are the three best options for you, ranging from fixing the root cause to just turning it off.
+This issue—where the **`stdout.log`** or **`catalina.out`** file grows indefinitely—is common when running **Tomcat on Windows**. This happens because, unlike other rotating logs, this file captures the raw `stdout` and `stderr` streams without a built-in rotation mechanism.
 
-### Option 1: Disable Redirection (Turn it Off)
+Here are the three most effective solutions, ranging from disabling the file to addressing the root cause.
 
-If you have other, properly rotating log files (like catalina.log and the application's logs), you can safely disable the \text{stdout} and \text{stderr} redirection, which is what is creating the large file.
+-----
 
-This method applies if Tomcat is running as a Windows Service (which is the default or common way to run it).
- * Open the Tomcat Service Manager:
-   * Go to your Tomcat bin directory (e.g., C:\Program Files\Apache Software Foundation\Tomcat X.Y\bin).
-   * Run the configuration utility for your service. The file is usually named tomcat9w.exe (or tomcat8w.exe, etc., matching your version).
- * Navigate to the Logging Tab:
-   * In the Tomcat Service Manager window, click on the "Logging" tab.
- * Clear the Redirection Fields:
-   * Find the fields for "Redirect Stdout" and "Redirect Stderr".
-   * Remove the value in these fields (they might be set to auto or a file path like logs\stdout.log). Leave them completely empty.
- * Apply and Restart:
-   * Click "Apply" and "OK".
-   * Restart the Tomcat Windows Service for the changes to take effect.
+## 1\. Disable Redirection (Turn it Off) 🚫
 
-Tomcat will now stop logging to that large \text{stdout.log} file.
+If you are using properly rotating logs (like `catalina.log` and your application's logs), you can safely disable the redirection of `stdout` and `stderr`, which is what creates the large, non-rotating file.
 
-### Option 2: Reduce the Logging Level (Recommended Fix)
+This is the fastest fix and applies if **Tomcat is running as a Windows Service** (the default/common setup).
 
-The \text{stdout} file often grows huge because your application or a library (like Hibernate, Spring, etc.) is set to a DEBUG or INFO logging level and is also printing to the console (\text{stdout}), which gets captured.
-The standard Tomcat logs use the Java Util Logging (JULI) framework, configured in:
-$CATALINA_HOME\conf\logging.properties
- * Edit logging.properties: Open the file in a text editor.
- * Remove Console Handler from JULI: The log messages handled by JULI often go to both the rotating catalina.log AND the non-rotating \text{stdout} (via the ConsoleHandler). To prevent duplication and massive \text{stdout} growth, look for this line (or similar):
-   .handlers = 1catalina.org.apache.juli.AsyncFileHandler, java.util.logging.ConsoleHandler
+1.  **Open the Tomcat Service Manager:**
+      * Navigate to your Tomcat `bin` directory (e.g., `C:\Program Files\Apache Software Foundation\Tomcat X.Y\bin`).
+      * Run the service configuration utility (e.g., **`tomcat9w.exe`** or **`tomcat8w.exe`**).
+2.  **Navigate to the Logging Tab:**
+      * In the Tomcat Service Manager window, click on the **"Logging"** tab.
+3.  **Clear the Redirection Fields:**
+      * Find the fields for **"Redirect Stdout"** and **"Redirect Stderr"**.
+      * **Remove the value in these fields.** Leave them completely empty.
+4.  **Apply and Restart:**
+      * Click **`Apply`** and **`OK`**.
+      * **Restart the Tomcat Windows Service** for the changes to take effect.
 
-   Change it to remove the ConsoleHandler:
-   .handlers = 1catalina.org.apache.juli.AsyncFileHandler
+Tomcat will now stop logging to that large `stdout.log` file.
 
- * Check Application/Library Logging: If the logs are from your application, you need to find its logging configuration (e.g., Log4j, Logback, or the application's logging.properties) and either:
-   * Increase the log level (e.g., from DEBUG to WARN or ERROR).
-   * Remove the ConsoleAppender from your application's configuration.
- * Restart Tomcat.
+-----
 
-### Option 3: Implement Log Rotation (Advanced)
+## 2\. Reduce the Logging Level (Recommended Root Fix) 🛠️
 
-Since Tomcat on Windows lacks a native rotation mechanism for \text{stdout}/\text{stderr}, you would have to use an external tool like:
- * A Scheduled Task: Write a small script (PowerShell/batch) that runs daily, stops the service, deletes/compresses the log, and restarts the service.
- * Third-party Log Rotation Utility: Use a tool like log4j (which has file size-based rotation) to take over all logging, or use a tool like Apache's rotatelogs (which is often used with Apache HTTP Server, but can be configured for Tomcat on Windows as well). This is generally complex and overkill compared to simply disabling the \text{stdout} redirection.
+The primary reason this file balloons is usually because your application or a library (like Hibernate, Spring, etc.) has its log level set to **`DEBUG`** or **`INFO`** *and* is configured to print to the console (`stdout`), which then gets captured by the service wrapper.
+
+You need to check two places: Tomcat's JULI configuration and your application's configuration.
+
+### A. Disable JULI's ConsoleHandler
+
+The standard Tomcat logs use the Java Util Logging (JULI) framework, configured in `$CATALINA_HOME\conf\logging.properties`. Log messages handled by JULI often go to both the rotating `catalina.log` **AND** the non-rotating `stdout` (via the `ConsoleHandler`).
+
+1.  **Edit `logging.properties`:** Open the file in a text editor.
+
+2.  **Remove `ConsoleHandler`:** Look for the line defining the root handlers:
+
+    ```properties
+    # BEFORE
+    .handlers = 1catalina.org.apache.juli.AsyncFileHandler, java.util.logging.ConsoleHandler
+    ```
+
+    Change it to remove the `java.util.logging.ConsoleHandler`:
+
+    ```properties
+    # AFTER (No ConsoleHandler)
+    .handlers = 1catalina.org.apache.juli.AsyncFileHandler
+    ```
+
+### B. Adjust Application/Library Logging
+
+If the remaining large logs are from your application, you need to find its logging configuration (e.g., **Log4j**, **Logback**, or application-specific XML/Properties files) and do one of the following:
+
+  * **Increase the log level** (e.g., change the root logger from `DEBUG` to **`WARN`** or **`ERROR`**).
+  * **Remove the `ConsoleAppender`** from your application's configuration entirely.
+
+<!-- end list -->
+
+3.  **Restart Tomcat.**
+
+-----
+
+## 3\. Implement Log Rotation (Advanced/External) ⚙️
+
+Since the Windows service wrapper for Tomcat lacks a native rotation mechanism for `stdout`/`stderr`, implementing rotation requires an external tool or script. This is generally more complex than the other options.
+
+  * **Scheduled Task Script:** Write a small script (e.g., PowerShell or batch) that runs via Windows Task Scheduler. This script would need to:
+    1.  Stop the Tomcat service.
+    2.  Delete, move, or compress the large log file.
+    3.  Restart the Tomcat service.
+  * **Third-party Utility:** Use a dedicated log management or rotation tool.
+      * For example, you could configure **Log4j** to take over all logging and use its file size-based rotation features.
+      * Less commonly, utilities like Apache's **`rotatelogs`** (often used with Apache HTTP Server) can be adapted, but this requires significant configuration and is usually considered overkill.
 
 
 ### Temporary files
 
-
-
 # Solr
 
-##
+## Memory settings
+
+## Index
+
+### Scan index once a week, use reconsile
+
+### Delete index 
