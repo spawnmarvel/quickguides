@@ -4,6 +4,21 @@ https://tomcat.apache.org/
 
 ## Memory settings
 
+If Tomcat is installed as a service:
+
+Open Tomcat Configuration: Run tomcat9w.exe (or the corresponding version, e.g., tomcat8w.exe) located in the <CATALINA_HOME>/bin directory.
+
+Navigate to Java Tab: In the Apache Tomcat Properties dialog, go to the "Java" tab.
+
+Modify JVM Arguments: In the "Java Options" text area, add or modify the JVM arguments like -Xms (initial heap size) and -Xmx (maximum heap size). For example:
+
+```code
+    -Xms1024m
+    -Xmx2048m
+```
+
+Apply and Restart: Click "Apply," then "OK," and restart the Tomcat service.
+
 ## Logging
 
 Some issues
