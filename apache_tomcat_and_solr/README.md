@@ -55,6 +55,10 @@ Since Tomcat on Windows lacks a native rotation mechanism for \text{stdout}/\tex
  * Third-party Log Rotation Utility: Use a tool like log4j (which has file size-based rotation) to take over all logging, or use a tool like Apache's rotatelogs (which is often used with Apache HTTP Server, but can be configured for Tomcat on Windows as well). This is generally complex and overkill compared to simply disabling the \text{stdout} redirection.
 
 
+### Temporary files
+
+
+
 # Solr
 
 ##
