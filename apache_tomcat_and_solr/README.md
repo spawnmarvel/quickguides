@@ -19,6 +19,24 @@ Modify JVM Arguments: In the "Java Options" text area, add or modify the JVM arg
 
 Apply and Restart: Click "Apply," then "OK," and restart the Tomcat service.
 
+## Tomcat Logs: Locations, Types, Configuration, and Best Practices
+
+1. catalina.out (Primary Log File)
+2. catalina.log (Tomcat Startup & Shutdown Logs)
+3. manager.log (Tomcat Manager Application Logs)
+4. localhost_access_log.*.txt (HTTP Access Logs)
+
+Additional Log Files
+
+* host-manager.log – Logs actions related to managing virtual hosts.
+* gc.log – Records Java Garbage Collection events for JVM performance analysis.
+* stderr.log / stdout.log – Captures system errors and console outputs.
+
+
+
+https://last9.io/blog/tomcat-logs/
+
+
 ## Logging
 
 Some issues
