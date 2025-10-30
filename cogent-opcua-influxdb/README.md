@@ -1,4 +1,4 @@
-# Prosys OPC UA sim, Cogent OPC UA client, InfluxDB, OPC UA expert, IP21
+# Prosys OPC UA sim, Cogent OPC UA client, InfluxDB, OPC UA expert, db21
 
 ## OPC DA Address vs. OPC UA Address
 
@@ -317,4 +317,4 @@ http://googleusercontent.com/youtube_content/0
 
 
 
-## Prosys to Cim-io server and set up Cim-io for OPC UA to IP21 TODO
+## Prosys to Cim-io server and set up Cim-io for OPC UA to db21 TODO
