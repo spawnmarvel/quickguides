@@ -25,13 +25,13 @@ There is no separate "Solr process" or "Solr heap" to configure.
 
 Solr/Tomcat Heap Sizing ($\text{-Xms}$ and $\text{-Xmx}$)
 
-Solr benefits greatly from having a large, stable heap size for caching and search operations. The general recommendation is to set the initial (1$\text{-Xms}$) and maximum (2$\text{-Xmx}$) heap sizes to the same value.3 
+Solr benefits greatly from having a large, stable heap size for caching and search operations.
 
 1. General Recommended Starting Point
 
 For a production Solr instance running on a server with dedicated memory:
 
-* Initial Heap Size -Xms: (4 GB)
+* Initial Heap Size -Xms: (2 GB)
 * Maximum Heap Size -Xmx: (4 GB)
 
 ## Memory settings
@@ -160,6 +160,8 @@ Since the Windows service wrapper for Tomcat lacks a native rotation mechanism f
 ### Temporary files
 
 # Solr
+
+https://solr.apache.org/guide/solr/latest/deployment-guide/jvm-settings.html
 
 ## Memory settings
 
