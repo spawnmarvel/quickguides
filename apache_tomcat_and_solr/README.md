@@ -17,6 +17,8 @@ Modify JVM Arguments: In the "Java Options" text area, add or modify the JVM arg
     -Xmx2048m
 ```
 
+![heap memory](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/heap.png)
+
 Apply and Restart: Click "Apply," then "OK," and restart the Tomcat service.
 
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
