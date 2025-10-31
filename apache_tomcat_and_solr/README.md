@@ -250,6 +250,9 @@ The simplest solution is to change the configuration of the client that is makin
 To solve the underlying issue of running a high-impact task and to follow the best practices discussed earlier:
  * Move Optimization: Schedule the optimization to run after the weekly scan, not before.
 
+
+20 GB index takes around 15-20 min.
+
 ### Delete index 
 
 * Uploading Data with Index Handlers
