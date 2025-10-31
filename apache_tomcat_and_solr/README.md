@@ -252,6 +252,21 @@ To solve the underlying issue of running a high-impact task and to follow the be
 
 ### Delete index 
 
+Solr 9.6.1
+
+https://follow-e-lo.com/2018/11/03/apache-solr-7-5-index-handlers-with-http/
+
+
+If you get a IndexWriter is Closed
+* stop tomcat, solr
+* remove file write.lock
+* start tomcat, solr
+
+And run the document delete all again.
+
+![rmindex](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/rmindex.png)
+
+
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
 
 1. catalina.out (Primary Log File)
