@@ -274,6 +274,23 @@ And run the document delete all again.
 ![rmindex](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/rmindex.png)
 
 
+## Resources
+
+on http://localhost:8983/solr/#/ it says 
+
+* system physical memory 45.4%, used 29.08gb, max 64 gb. 
+* Then swap space 41.%, used 30.16gb, max 73 gb. 
+* Then JVM memory 37%, used 2.98 gb, max 8gb.
+
+![resources](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/resources.png)
+
+System Physical Memory
+* Healthy. There's plenty of physical RAM available.
+* Swap Space, High. Using 30 GB of swap is the most notable metric. High swap usage, even with available physical RAM, can sometimes indicate memory pressure or a process (like Solr or another application) demanding memory that the kernel has moved to swap. This can slow down performance significantly.
+* JVM Memory (Solr Heap), Healthy. The Solr process itself is only using a moderate portion of its allocated 8 GB heap.
+
+Must investiagte more.
+
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
 
 1. catalina.out (Primary Log File)
