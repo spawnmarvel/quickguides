@@ -252,7 +252,11 @@ To solve the underlying issue of running a high-impact task and to follow the be
 
 ### Delete index 
 
-Solr 9.6.1
+* Uploading Data with Index Handlers
+
+https://solr.apache.org/guide/7_5/uploading-data-with-index-handlers.html
+
+* Solr 9.6.1
 
 https://follow-e-lo.com/2018/11/03/apache-solr-7-5-index-handlers-with-http/
 
