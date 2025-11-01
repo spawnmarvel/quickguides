@@ -442,7 +442,7 @@ However, if you are looking for a more structured way to "log" to stdout, especi
 
 https://last9.io/blog/tomcat-logs/
 
-## Apache Tomcat, solr and Python to update solr.
+## Apache Tomcat, solr and Python to update solr (stdout.log and temp files)
 
 1. Install Apache
 
@@ -462,7 +462,41 @@ pip 25.2 from C:\Users\imsdal\AppData\Local\Programs\Python\Python313\Lib\site-p
 
 https://www.python.org/downloads/windows/
 
-3. 
+3.  Solr Deployment on Tomcat 10.1 (WAR Method)
+
+* Java 17 installed and java_home set
+* Download solr
+* Binary releases: solr-9.9.0.tgz
+
+Release Type,Purpose,Includes,Effort for Deployment
+
+* Binary (.tgz / -slim.tgz),Running Solr as an application.,"Pre-compiled .jar files, the Solr WAR file, and necessary scripts/configs.",Low. You extract and deploy the existing WAR file.
+* Source (-src.tgz),Developing Solr or building a custom version.,"The raw source code files (Java, XML, etc.) and build scripts.",High. You must compile the source code first to generate the necessary .jar and .war files.
+
+
+```cmd
+C:\Users\imsdal\Desktop\tomcat apache>tar -xzf solr-9.9.0.tgz
+
+C:\Users\imsdal\Desktop\tomcat apache>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A0ED-F28C
+
+ Directory of C:\Users\imsdal\Desktop\tomcat apache
+
+11/01/2025  03:54 PM    <DIR>          .
+11/01/2025  03:34 PM    <DIR>          ..
+11/01/2025  01:57 PM        15,756,168 apache-tomcat-10.1.48.exe
+11/01/2025  01:37 PM       168,312,832 OpenJDK17U-jdk_x64_windows_hotspot_17.0.17_10.msi
+07/18/2025  10:16 PM    <DIR>          solr-9.9.0
+11/01/2025  03:52 PM       388,557,950 solr-9.9.0.tgz
+
+```
+
+
+https://solr.apache.org/downloads.html
+
+
+
 
 
 
