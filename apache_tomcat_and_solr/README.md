@@ -607,8 +607,9 @@ item_101 {Data Analytics Report} {Tech}   {49.99} 1847610895985803264 item_101
 
 Gui one doc
 
-![one doc gui](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/one_doc_gui.png)
+![one doc gui 2](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/one_doc_gui2.png)
 
+Run the same powershell again or look in the gui for numbers 
 
 Delete the item
 
