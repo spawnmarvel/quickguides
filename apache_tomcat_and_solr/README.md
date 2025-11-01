@@ -344,7 +344,11 @@ Verification
 * Navigate to http://localhost:8080 (or the port you configured).
 * If successful, you'll see the Apache Tomcat welcome page with the cat logo.
 
-![success](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/success.png)
+![success http](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/success.png)
+
+Login to Manager App
+
+![success manager](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/managerapp.png)
 
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
