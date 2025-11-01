@@ -320,7 +320,8 @@ https://last9.io/blog/tomcat-logs/
 
 https://tomcat.apache.org/
 
-* Download apache-tomcat-10.1.48-windows-x64.zip
+* Download core
+* 32-bit/64-bit Windows Service Installer (pgp, sha512)
 
 https://tomcat.apache.org/download-10.cgi
 
@@ -332,13 +333,16 @@ https://adoptium.net/temurin/releases?version=17&os=any&arch=any
 ![java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/java.png)
 
 
-* Tomcat Setup
+* Tomcat Setup windows
+
+Installing Tomcat on Windows can be done easily using the Windows installer. Its interface and functionality is similar to other wizard based installers, with only a few items of interest.
+
+So now we have:
+
+![tomcat apache](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/tomcat_apache.png)
 
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
-Tomcat Running file
-
-![tomcat running file](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/tomcat_running.png)
 
 
 ## Logging
