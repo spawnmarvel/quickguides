@@ -520,7 +520,73 @@ Select All Contents: In the webapp folder, select ALL the files and folders:
 
 Rename the file from [OriginalName].zip to solr.war
 
+lib.zip to solr.war
+
 ![war](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/war.png)
+
+Move the newly created solr.war to your target location (the parent server directory is a good choice):
+
+```cmd
+C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\
+```
+
+The resulting file, solr.war, is now ready to be copied into Tomcat's webapps directory.
+
+```cmd
+C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\solr-webapp\webapp>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A0ED-F28C
+
+ Directory of C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\solr-webapp\webapp
+
+11/01/2025  04:12 PM    <DIR>          .
+07/18/2025  10:16 PM    <DIR>          ..
+07/18/2025  10:16 PM    <DIR>          css
+07/18/2025  10:16 PM                96 error404.html
+07/18/2025  10:16 PM    <DIR>          img
+07/18/2025  10:16 PM            17,525 index.html
+07/18/2025  10:16 PM    <DIR>          js
+07/18/2025  10:16 PM    <DIR>          libs
+07/18/2025  10:16 PM    <DIR>          META-INF
+07/18/2025  10:16 PM    <DIR>          partials
+11/01/2025  04:04 PM        57,593,830 solr.war
+07/18/2025  10:16 PM    <DIR>          WEB-INF
+
+```
+
+When you open the solr.war file (using 7-Zip or WinRAR), the first things you should see inside are the WEB-INF folder, the css folder, and the index.html file—not another folder named webapp. This confirms the structure is correct for Tomcat deployment.
+
+![7zip](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/7zip.png)
+
+
+6. Deploy the WAR File to Tomcat
+
+* Locate the WAR: Find the solr.war file you just created (it should be in the solr-9.9.0/server/ directory).
+* Copy to Tomcat: Copy solr.war into Tomcat's web applications directory:
+
+$CATALINA_HOME\webapps\
+
+(Replace $CATALINA_HOME with your Tomcat 10.1 installation path).
+
+If Tomcat is running, it will immediately deploy the WAR, creating a solr folder inside webapps. If Tomcat is stopped, it will deploy on the next startup.
+
+Prepare the Solr Home Directory
+
+The Solr Home directory ($SOLR_HOME) holds all of Solr's runtime configurations and data. It must be a path separate from your Solr installation and Tomcat.
+
+* C:\solrhome
+
+Copy content
+
+* Source: C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\solr\
+* Destination: Your new $SOLR_HOME (e.g., C:\solrhome)
+
+![copy](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/copy.png)
+
+
+
+
+
 
 
 
