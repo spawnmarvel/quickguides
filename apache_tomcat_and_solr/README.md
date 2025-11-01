@@ -592,6 +592,7 @@ Solr needs certain JAR files to be visible to Tomcat's application class loader.
 Copy
 
 * C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib
+* C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\ext also
 
 Copy Libraries: Copy ALL the JAR files from the server\lib\ directory into Tomcat's shared library directory:
 
@@ -646,6 +647,102 @@ When Tomcat successfully deploys solr.war, it extracts it into a folder.
 http://localhost:8080/solr/
 
 ![404](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/404.png)
+
+If the solr folder does exist in webapps, the 404 error is usually caused by an issue in the Context file.
+
+Check the Context Path:
+
+* The solr.xml file must be named solr.xml and be located in: C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost\
+
+```cmd
+c:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A0ED-F28C
+
+ Directory of c:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost
+
+11/01/2025  04:34 PM    <DIR>          .
+11/01/2025  02:23 PM    <DIR>          ..
+11/01/2025  04:41 PM               263 solr.xml
+
+```
+
+Restart tomcat
+
+```log
+01-Nov-2025 17:04:30.403 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1005] milliseconds
+01-Nov-2025 17:04:30.490 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Nov-2025 17:04:30.490 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.48]
+01-Nov-2025 17:04:30.506 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost\solr.xml]
+01-Nov-2025 17:04:30.538 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor A docBase [C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\webapps\solr.war] inside the host appBase has been specified, and will be ignored
+01-Nov-2025 17:04:36.279 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Nov-2025 17:04:36.325 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+01-Nov-2025 17:04:36.372 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/solr] startup failed due to previous errors
+01-Nov-2025 17:04:36.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost\solr.xml] has finished in [5,882] ms
+
+
+```
+
+When the .war file is already in Tomcat's webapps folder, the docBase should simply be the name of the WAR file.
+
+C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Context docBase="solr.war"
+         crossContext="true">
+  <Environment name="solr/home"
+               type="java.lang.String"
+               value="C:\solrhome"  
+               override="true"/>
+</Context>
+
+```
+
+The "One or more listeners failed to start" error is nearly always because the Solr application cannot find its required JAR files which you were supposed to copy to Tomcat's global library folder.
+
+Same error as above
+
+While this warning isn't the cause of the SEVERE error, it indicates the docBase setting is slightly non-standard when the WAR is in the webapps folder.
+
+Open the Context file: C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost\solr.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Context crossContext="true">
+  <Environment name="solr/home"
+               type="java.lang.String"
+               value="C:\solrhome"  
+               override="true"/>
+</Context>
+```
+CRITICAL: Verify Solr Libraries (The Most Likely Cause)
+
+The "listeners failed to start" error is almost exclusively a missing dependency error.
+
+Check Library Count:
+
+* Source: C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\
+
+* Destination: C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\
+
+Copy the entire contents of the Solr server\lib folder into the Tomcat lib folder again, choosing to overwrite any duplicates just in case.
+
+I did not copy ext to 
+
+```cmd
+C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\ext
+```
+to
+
+```cmd
+C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\
+```
+
+That must be the missing part.
+
+
+
 
 
 
