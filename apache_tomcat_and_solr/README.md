@@ -583,6 +583,51 @@ Copy content
 
 ![copy](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/copy.png)
 
+This ensures your $SOLR_HOME contains the necessary solr.xml file and default configsets
+
+7. Add Required Libraries to Tomcat
+
+Solr needs certain JAR files to be visible to Tomcat's application class loader.
+
+Copy
+
+* C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib
+
+Copy Libraries: Copy ALL the JAR files from the server\lib\ directory into Tomcat's shared library directory:
+
+* C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib
+
+![libs](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/libs.png)
+
+
+8. Configure Tomcat to Find Solr Home
+
+You need to tell the Solr web application where the $SOLR_HOME is located.
+
+Navigate to Tomcat's Context Directory
+
+* $CATALINA_HOME\conf\Catalina\localhost\
+
+```cmd
+C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\Catalina\localhost
+```
+If you copy solr.war to $CATALINA_HOME\webapps\, you can simplify the docBase. Tomcat automatically manages WAR files placed here, so you only need to reference the WAR name.
+
+![copy war](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/copy_war.png)
+
+Create the Context File: Create a new file named solr.xml in this directory.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Context docBase="webapps/solr.war"
+         crossContext="true">
+  <Environment name="solr/home"
+               type="java.lang.String"
+               value="C:\solrhome"  
+               override="true"/>
+</Context>
+```
+
 
 
 
