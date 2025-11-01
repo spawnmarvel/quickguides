@@ -643,6 +643,11 @@ When Tomcat successfully deploys solr.war, it extracts it into a folder.
 ![war success](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/war_success.png)
 
 
+http://localhost:8080/solr/
+
+![404](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/404.png)
+
+
 
 
 
