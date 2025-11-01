@@ -611,12 +611,20 @@ Gui one doc
 
 Run the same powershell again or look in the gui for numbers 
 
-Delete the item
-
-Insert 2
+```log
+id       name                      category price             _version_ _root_  
+--       ----                      -------- -----             --------- ------  
+item_101 {Data Analytics Report}   {Tech}   {49.99} 1847610895985803264 item_101
+item_102 {Cloud Security Handbook} {Tech}   {79.5}  1847611679261589504 item_102
+```
 
 Detlete the full index
 
+```xml
+<delete><query>*:*</query></delete>
+```
+
+![delete index](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/delete_index.png)
 
 
 ## Logging
