@@ -341,6 +341,20 @@ So now we have:
 
 ![tomcat apache](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/tomcat_apache.png)
 
+Configuration:
+
+You'll be prompted to set the HTTP Connector Port (the default is 8080; change it if another application is using this port).
+
+You can also set a username and password for the Tomcat Administrator Login here, which is necessary for accessing the Manager App.
+
+* admin, admin
+
+Destination folder
+
+* C:\Program Files\Apache Software Foundation\Tomcat 10.1
+
+![pache installed](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/apache_installed.png)
+
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
 
