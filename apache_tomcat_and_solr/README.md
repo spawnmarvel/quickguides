@@ -430,7 +430,7 @@ Additional Log Files
 * stderr.log / stdout.log – Captures system errors and console outputs.
 
 
-## stderr.log / stdout.log – Captures system errors and console outputs. TODO Python
+## stderr.log / stdout.log – Captures system errors and console outputs.
 
 These files capture anything written to System.out and System.err (like System.out.println statements from your Java code), which is the primary role of the catalina.out file on Linux systems.
 
@@ -441,6 +441,29 @@ To log to standard output (stdout) using the print function in Python, you don't
 However, if you are looking for a more structured way to "log" to stdout, especially for debugging or system messages, the Python standard logging module is the recommended approach.
 
 https://last9.io/blog/tomcat-logs/
+
+## Apache Tomcat, solr and Python to update solr.
+
+1. Install Apache
+
+1. Install python
+
+```cmd
+C:\Users\imsdal>python --version
+Python 3.13.9
+
+C:\Users\imsdal>pip --version
+pip 25.2 from C:\Users\imsdal\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip (python 3.13)
+
+C:\Users\imsdal>pip3 --version
+pip 25.2 from C:\Users\imsdal\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip (python 3.13)
+
+```
+
+https://www.python.org/downloads/windows/
+
+3. 
+
 
 
 ## Logging
