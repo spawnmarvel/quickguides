@@ -350,6 +350,12 @@ Login to Manager App
 
 ![success manager](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/managerapp.png)
 
+Services and control panel.
+
+![service and remove](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/service_and_remove.png)
+
+
+
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
