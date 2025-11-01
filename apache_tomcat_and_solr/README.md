@@ -443,6 +443,8 @@ To log to standard output (stdout) using the print function in Python, you don't
 
 However, if you are looking for a more structured way to "log" to stdout, especially for debugging or system messages, the Python standard logging module is the recommended approach.
 
+Hosting a Python application directly within Apache Tomcat is not the standard or recommended approach, as Tomcat is fundamentally a Java Servlet container designed to run Java-based applications (Servlets, JSPs)
+
 https://last9.io/blog/tomcat-logs/
 
 ## Solr standalone cmd
@@ -618,7 +620,7 @@ item_101 {Data Analytics Report}   {Tech}   {49.99} 1847610895985803264 item_101
 item_102 {Cloud Security Handbook} {Tech}   {79.5}  1847611679261589504 item_102
 ```
 
-Detlete the full index
+Delete the full index
 
 ```xml
 <delete><query>*:*</query></delete>
