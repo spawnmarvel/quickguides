@@ -518,6 +518,11 @@ Select All Contents: In the webapp folder, select ALL the files and folders:
 
 ![solr_zip](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_zip.png)
 
+Rename the file from [OriginalName].zip to solr.war
+
+![war](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/war.png)
+
+
 
 
 
