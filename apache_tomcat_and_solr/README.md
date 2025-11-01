@@ -538,11 +538,83 @@ bin\solr.cmd create -c datatech -d _default
 
 This should successfully create your core named datatech using the _default configuration without any path errors.
 
+
+* CWD:c:\solrhome\server
+* Instance:c:\solrhome\datatech
+* Data:C:\solrhome\datatech\data
+* Index:C:\solrhome\datatech\data\index
+
 ![core](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/core.png)
 
 
-### Solr Gui and Python
 
+### Solr Gui and Powershell insert, update, delete / optimization
+
+Insert data with powershell
+
+```ps1
+# 1. Define the JSON data
+$JSONData = @'
+[
+  {
+    "id": "item_101",
+    "name": "Data Analytics Report",
+    "category": "Tech",
+    "price": 49.99
+  }
+]
+'@
+
+# 2. Define the URL
+$SolrURL = "http://localhost:8983/solr/datatech/update/json/docs?commit=true"
+
+# 3. Execute the Request
+Invoke-WebRequest -Uri $SolrURL `
+    -Method Post `
+    -ContentType 'application/json' `
+    -Body $JSONData | Out-Null
+
+```
+
+![one doc](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/one_doc.png)
+
+View and get the item
+
+```ps1
+# 1. Define the Solr Query URL (q=*:* retrieves everything)
+$SolrQueryURL = "http://localhost:8983/solr/datatech/select?q=*:*&wt=json"
+
+# 2. Execute the request and parse the JSON response
+$SolrResponse = Invoke-RestMethod -Uri $SolrQueryURL -Method Get
+
+# 3. Access the array of documents and display them
+Write-Host "Total Documents Found: $($SolrResponse.response.numFound)"
+Write-Host "----------------------"
+
+# The documents are nested under $SolrResponse.response.docs
+$SolrResponse.response.docs | Format-Table -AutoSize
+```
+
+Result
+
+```log
+id       name                    category price             _version_ _root_  
+--       ----                    -------- -----             --------- ------  
+item_101 {Data Analytics Report} {Tech}   {49.99} 1847610895985803264 item_101
+```
+
+![one doc get](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/one_doc_get.png)
+
+Gui one doc
+
+![one doc gui](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/one_doc_gui.png)
+
+
+Delete the item
+
+Insert 2
+
+Detlete the full index
 
 
 
