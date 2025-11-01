@@ -581,7 +581,7 @@ Copy content
 * Source: C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\solr\
 * Destination: Your new $SOLR_HOME (e.g., C:\solrhome)
 
-![copy](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/copy.png)
+![copy2](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/copy2.png)
 
 This ensures your $SOLR_HOME contains the necessary solr.xml file and default configsets
 
@@ -627,6 +627,41 @@ Create the Context File: Create a new file named solr.xml in this directory.
                override="true"/>
 </Context>
 ```
+
+Restart tomcat service
+
+When Tomcat sees a new .war file in webapps, it automatically extracts it into a corresponding directory (e.g., it creates a solr directory from solr.war).
+
+Clean Up and Restart Tomcat
+When Tomcat sees a new .war file in webapps, it automatically extracts it into a corresponding directory (e.g., it creates a solr directory from solr.war). If it failed the first time, this directory might contain junk from the bad startup.
+
+1. Stop Tomcat:
+
+* Go to your Tomcat bin directory (...\Tomcat 10.1\bin\).
+
+* Run shutdown.bat. or stop the service
+
+2. Clean up Failed Deployment (If necessary):
+
+* Check your Tomcat webapps directory: C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\
+
+* If you see a folder named solr (created by the initial failed attempt), delete it. Leave only the solr.war file.
+
+3. Start Tomcat:
+
+In the bin directory, run startup.bat. ro start the service
+
+Tomcat will now:
+
+* Read the solr.xml context file, which correctly points to C:\solrhome.
+
+* Find the solr.war file.
+
+* Use the libraries in Tomcat 10.1\lib\.
+
+* Perform a fresh extraction and deployment of Solr.
+
+
 
 
 
