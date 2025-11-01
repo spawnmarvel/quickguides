@@ -354,9 +354,10 @@ Services and control panel.
 
 ![service and remove](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/service_and_remove.png)
 
-
-
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
+
+# Tomcat get to know it
+
 
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
 
@@ -364,6 +365,63 @@ https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 2. catalina.log (Tomcat Startup & Shutdown Logs)
 3. manager.log (Tomcat Manager Application Logs)
 4. localhost_access_log.*.txt (HTTP Access Logs)
+
+catalina.out (Primary Log File)
+
+```log
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.48
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 10 2025 14:33:56 UTC
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.48.0
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows Server 2022
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Nov-2025 14:23:45.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot
+01-Nov-2025 14:23:46.000 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.17+10
+01-Nov-2025 14:23:46.000 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+01-Nov-2025 14:23:46.000 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Program Files\Apache Software Foundation\Tomcat 10.1
+01-Nov-2025 14:23:46.000 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Program Files\Apache Software Foundation\Tomcat 10.1
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Program Files\Apache Software Foundation\Tomcat 10.1\temp
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Program Files\Apache Software Foundation\Tomcat 10.1\conf\logging.properties
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: abort
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+01-Nov-2025 14:23:46.098 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Apache Software Foundation\Tomcat 10.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\app\imsdal\product\21c\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\WindowsApps;.]
+
+
+
+```
+
+localhost_access_log.*.txt (HTTP Access Logs)
+
+```log
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:56 +0100] "GET / HTTP/1.1" 200 11437
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /tomcat.svg HTTP/1.1" 200 68761
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /tomcat.css HTTP/1.1" 200 5981
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /bg-upper.png HTTP/1.1" 200 3103
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /bg-nav.png HTTP/1.1" 200 1401
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /bg-button.png HTTP/1.1" 200 713
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /bg-middle.png HTTP/1.1" 200 1918
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /asf-logo-wide.svg HTTP/1.1" 200 7147
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:25:58 +0100] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:43 +0100] "GET /host-manager/html HTTP/1.1" 404 773
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:47 +0100] "GET /manager/html HTTP/1.1" 401 2640
+0:0:0:0:0:0:0:1 - admin [01/Nov/2025:14:29:55 +0100] "GET /manager/html HTTP/1.1" 200 13659
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:55 +0100] "GET /manager/images/tomcat.svg HTTP/1.1" 200 68761
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:55 +0100] "GET /manager/images/asf-logo.svg HTTP/1.1" 200 7147
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:55 +0100] "GET /manager/css/manager.css HTTP/1.1" 200 2946
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:29:55 +0100] "GET /manager/images/favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [01/Nov/2025:14:30:03 +0100] "GET / HTTP/1.1" 200 11437
+
+
+```
+![access_log](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/access_log.png)
 
 Additional Log Files
 
