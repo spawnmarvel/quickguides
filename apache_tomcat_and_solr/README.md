@@ -468,11 +468,14 @@ https://www.python.org/downloads/windows/
 * Download solr
 * Binary releases: solr-9.9.0.tgz
 
+https://solr.apache.org/downloads.html
+
 Release Type,Purpose,Includes,Effort for Deployment
 
 * Binary (.tgz / -slim.tgz),Running Solr as an application.,"Pre-compiled .jar files, the Solr WAR file, and necessary scripts/configs.",Low. You extract and deploy the existing WAR file.
 * Source (-src.tgz),Developing Solr or building a custom version.,"The raw source code files (Java, XML, etc.) and build scripts.",High. You must compile the source code first to generate the necessary .jar and .war files.
 
+4. Extracting the .tgz File on Windows
 
 ```cmd
 C:\Users\imsdal\Desktop\tomcat apache>tar -xzf solr-9.9.0.tgz
@@ -492,8 +495,30 @@ C:\Users\imsdal\Desktop\tomcat apache>dir
 
 ```
 
+5. Locate and Rename the Solr WAR File
 
-https://solr.apache.org/downloads.html
+For Solr 9.9.0, the actual WAR file is no longer included in the standard binary distribution structure as a standalone file. 
+
+You need to create the WAR file yourself from the contents of the webapp directory.
+
+Follow these steps precisely to ensure the web application is structured correctly within the WAR archive.
+
+Navigate to the extracted Solr distribution folder (e.g., solr-9.9.0).
+
+```cmd
+C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\solr-webapp\webapp
+
+```
+
+Select All Contents: In the webapp folder, select ALL the files and folders:
+
+* Right-click on the selected files/folders.
+* Choose Send to Compressed (zipped) folder
+* A new file, typically named css.zip or similar, will be created.
+
+![solr_zip](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_zip.png)
+
+
 
 
 
