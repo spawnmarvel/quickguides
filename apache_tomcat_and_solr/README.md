@@ -336,6 +336,10 @@ https://adoptium.net/temurin/releases?version=17&os=any&arch=any
 
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
+Tomcat Running file
+
+![tomcat running file](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/tomcat_running.png)
+
 
 ## Logging
 
