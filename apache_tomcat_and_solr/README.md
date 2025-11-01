@@ -632,34 +632,15 @@ Restart tomcat service
 
 When Tomcat sees a new .war file in webapps, it automatically extracts it into a corresponding directory (e.g., it creates a solr directory from solr.war).
 
-Clean Up and Restart Tomcat
-When Tomcat sees a new .war file in webapps, it automatically extracts it into a corresponding directory (e.g., it creates a solr directory from solr.war). If it failed the first time, this directory might contain junk from the bad startup.
 
-1. Stop Tomcat:
+Verify Tomcat's Deployment Folder
 
-* Go to your Tomcat bin directory (...\Tomcat 10.1\bin\).
+When Tomcat successfully deploys solr.war, it extracts it into a folder.
 
-* Run shutdown.bat. or stop the service
+* Check the webapps folder: Navigate to C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\
+* Look for the solr directory: There should now be a directory named solr (created from the solr.war file).
 
-2. Clean up Failed Deployment (If necessary):
-
-* Check your Tomcat webapps directory: C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\
-
-* If you see a folder named solr (created by the initial failed attempt), delete it. Leave only the solr.war file.
-
-3. Start Tomcat:
-
-In the bin directory, run startup.bat. ro start the service
-
-Tomcat will now:
-
-* Read the solr.xml context file, which correctly points to C:\solrhome.
-
-* Find the solr.war file.
-
-* Use the libraries in Tomcat 10.1\lib\.
-
-* Perform a fresh extraction and deployment of Solr.
+![war success](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/war_success.png)
 
 
 
