@@ -594,11 +594,19 @@ Copy
 * C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib
 * C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\ext also
 
+Copy ALL JAR files directly inside: C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\ext\
+
+To C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\
+
 Copy Libraries: Copy ALL the JAR files from the server\lib\ directory into Tomcat's shared library directory:
 
 * C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib
 
 ![libs](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/libs.png)
+
+ext
+
+![ext](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/ext.png)
 
 
 8. Configure Tomcat to Find Solr Home
@@ -728,7 +736,7 @@ Check Library Count:
 
 Copy the entire contents of the Solr server\lib folder into the Tomcat lib folder again, choosing to overwrite any duplicates just in case.
 
-I did not copy ext to 
+I did not copy ext
 
 ```cmd
 C:\Users\imsdal\Desktop\tomcat apache\solr-9.9.0\server\lib\ext
@@ -740,6 +748,10 @@ C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\
 ```
 
 That must be the missing part.
+
+![ext](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/ext.png)
+
+
 
 
 
