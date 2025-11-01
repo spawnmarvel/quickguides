@@ -3,6 +3,11 @@
 https://tomcat.apache.org/
 
 
+## Documentation Index Apache Tomcat 
+
+https://tomcat.apache.org/tomcat-10.1-doc/index.html
+
+
 ## Apache tomcat and solr one JVM or two JVM?
 
 #### Scenario A:
@@ -307,6 +312,29 @@ Additional Log Files
 
 
 https://last9.io/blog/tomcat-logs/
+
+
+## Install Apache Tomcat on Windows (Windows Server 2022 Datacenter Azure Edition)
+
+* Home
+
+https://tomcat.apache.org/
+
+* Download apache-tomcat-10.1.48-windows-x64.zip
+
+https://tomcat.apache.org/download-10.cgi
+
+* Temurin 17.0.17+10, Windows 64 bit (.MSI)
+* OpenJDK17U-jdk_x64_windows_hotspot_17.0.17_10.msi
+
+https://adoptium.net/temurin/releases?version=17&os=any&arch=any
+
+![java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/java.png)
+
+
+* Tomcat Setup
+
+https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
 
 ## Logging
