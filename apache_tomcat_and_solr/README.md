@@ -362,7 +362,6 @@ Uninstall  C:\Program Files\Apache Software Foundation\Tomcat 10.1 ust for test 
 
 # Tomcat get to know it
 
-
 ## Tomcat Logs: Locations, Types, Configuration, and Best Practices
 
 1. catalina.out (Primary Log File)
@@ -446,7 +445,96 @@ However, if you are looking for a more structured way to "log" to stdout, especi
 
 https://last9.io/blog/tomcat-logs/
 
-## Solr standalone and Python to update solr
+## Solr standalone cmd
+
+Python is installed
+
+```cmd
+C:\Users\imsdal>python --version
+Python 3.13.9
+
+C:\Users\imsdal>pip --version
+pip 25.2 from C:\Users\imsdal\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip (python 3.13)
+
+```
+
+* Download solr
+* solr-9.9.0.tgz
+
+```cmd
+c:\Users\imsdal\Desktop\solr>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A0ED-F28C
+
+ Directory of c:\Users\imsdal\Desktop\solr
+
+11/01/2025  05:50 PM    <DIR>          .
+11/01/2025  05:44 PM    <DIR>          ..
+11/01/2025  03:52 PM       388,557,950 solr-9.9.0.tgz
+```
+
+https://solr.apache.org/downloads.html
+
+Extract it in same dir c:\Users\imsdal\Desktop\solr\
+
+```cmd
+tar -xzf solr-9.9.0.tgz
+````
+
+Create the Dedicated Home Directory:
+
+```cmd
+C:\solrhome
+```
+
+Copy Essential Configuration Files: You need to copy the default configuration files from the Solr installation into your new C:\solrhome. 
+
+This ensures your service has everything it needs to start.
+
+```cmd
+robocopy C:\Users\imsdal\Desktop\solr\solr-9.9.0 C:\solrhome /E /NP /NFL /NDL
+```
+* /E: Copy subdirectories, including empty ones. (Similar to xcopy /E)
+
+* /NP: No Progress—suppresses the percentage display for a cleaner output.
+
+* /NFL: No File List—don't list files being copied.
+
+* /NDL: No Directory List—don't list directories being created.
+
+Since your Solr distribution is missing the Windows service installer, running Solr standalone in the command prompt is the fastest and simplest way to get Solr working.
+
+
+Use the full path to the solr.cmd script and specify your custom SOLR_HOME.
+
+***stop tomcat service first or maybe oracle also, it is only 8 GB ram, they are all manual***
+
+Start it c:\solrhome\bin>
+
+```cmd
+solr.cmd start -s c:\solrhome
+
+```
+
+Stop it c:\solrhome\bin>
+
+```cmd
+solr.cmd stop -p 8983
+```
+![solr start](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_start.png)
+
+
+Create core in c:\solrhome\bin>
+Open a new Command Prompt window (assuming Solr is already running) and execute the following command:
+
+```cmd
+
+create -c my_new_core -d _default -s C:\solrhome
+
+```
+
+### Solr Gui and Python
+
 
 
 
