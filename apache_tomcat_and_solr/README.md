@@ -524,14 +524,22 @@ solr.cmd stop -p 8983
 ![solr start](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_start.png)
 
 
-Create core in c:\solrhome\bin>
+Create core in c:\solrhome\bin> or use the gui.
+
 Open a new Command Prompt window (assuming Solr is already running) and execute the following command:
+
+c:\solrhome\
 
 ```cmd
 
-create -c my_new_core -d _default -s C:\solrhome
-
+set SOLR_HOME=C:\solrhome
+bin\solr.cmd create -c datatech -d _default
 ```
+
+This should successfully create your core named datatech using the _default configuration without any path errors.
+
+![core](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/core.png)
+
 
 ### Solr Gui and Python
 
