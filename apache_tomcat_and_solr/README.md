@@ -296,24 +296,6 @@ System Physical Memory
 
 Must investiagte more.
 
-## Tomcat Logs: Locations, Types, Configuration, and Best Practices
-
-1. catalina.out (Primary Log File)
-2. catalina.log (Tomcat Startup & Shutdown Logs)
-3. manager.log (Tomcat Manager Application Logs)
-4. localhost_access_log.*.txt (HTTP Access Logs)
-
-Additional Log Files
-
-* host-manager.log – Logs actions related to managing virtual hosts.
-* gc.log – Records Java Garbage Collection events for JVM performance analysis.
-* stderr.log / stdout.log – Captures system errors and console outputs.
-
-
-
-https://last9.io/blog/tomcat-logs/
-
-
 ## Install Apache Tomcat on Windows (Windows Server 2022 Datacenter Azure Edition)
 
 * Home
@@ -353,10 +335,35 @@ Destination folder
 
 * C:\Program Files\Apache Software Foundation\Tomcat 10.1
 
-![pache installed](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/apache_installed.png)
+![apache installed](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/apache_installed.png)
+
+Verification
+
+* To confirm Tomcat is running:
+* Open a web browser.
+* Navigate to http://localhost:8080 (or the port you configured).
+* If successful, you'll see the Apache Tomcat welcome page with the cat logo.
+
+![success](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/success.png)
 
 https://tomcat.apache.org/tomcat-10.1-doc/setup.html
 
+## Tomcat Logs: Locations, Types, Configuration, and Best Practices
+
+1. catalina.out (Primary Log File)
+2. catalina.log (Tomcat Startup & Shutdown Logs)
+3. manager.log (Tomcat Manager Application Logs)
+4. localhost_access_log.*.txt (HTTP Access Logs)
+
+Additional Log Files
+
+* host-manager.log – Logs actions related to managing virtual hosts.
+* gc.log – Records Java Garbage Collection events for JVM performance analysis.
+* stderr.log / stdout.log – Captures system errors and console outputs.
+
+
+
+https://last9.io/blog/tomcat-logs/
 
 
 ## Logging
