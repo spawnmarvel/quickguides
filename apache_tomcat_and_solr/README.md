@@ -312,7 +312,9 @@ The higher number of IIS connections (35 vs. 17 or lower) is a strong indicator 
 
 Restart solr maybe = nope
 
-Run optimization = 
+Run optimization = nope
+
+iisreset = yes, swap down to 15.77GB
 
 
 ## Install Apache Tomcat on Windows (Windows Server 2022 Datacenter Azure Edition)
