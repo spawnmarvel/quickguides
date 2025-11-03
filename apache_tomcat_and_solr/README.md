@@ -121,6 +121,11 @@ Or Using Windows Task Manager (User-Friendly)
 * Check the box for Command line.
 * The "Command line" column will show the full command used to start each JVM, which often includes the name of the main class or the .jar file. This lets you distinguish between your applications.
 
+
+Hm, it seems that in this case solr determines JVM memory.
+
+![solr_determins_java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_determins_java.png)
+
 ## Example memory settings
 
 Solr has one major memory requirement that often catches people out:
@@ -285,7 +290,7 @@ on http://localhost:8983/solr/#/ it says
 
 * system physical memory 45.4%, used 29.08gb, max 64 gb. 
 * Then swap space 41.%, used 30.16gb, max 73 gb. 
-* Then JVM memory 37%, used 2.98 gb, max 8gb.
+* Then JVM memory 37%, used 2.98 gb, max 8gb. 
 
 ![resources](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/resources.png)
 
@@ -295,6 +300,20 @@ System Physical Memory
 * JVM Memory (Solr Heap), Healthy. The Solr process itself is only using a moderate portion of its allocated 8 GB heap.
 
 Must investiagte more.
+
+Maybe tune this to 4 or 6 se if total ram usage goes down.
+
+Other servers are low, with the same settings, swap avg is 15 GB for all .
+
+Yes, Solr can absolutely cause high swap space usage even if its Java Virtual Machine (JVM) heap memory usage (the memory controlled by Solr's -Xmx setting) appears low or stable.
+
+
+The higher number of IIS connections (35 vs. 17 or lower) is a strong indicator of increased memory demand on the problematic server and is likely the direct cause of the higher swap usage.
+
+Restart solr maybe = nope
+
+Run optimization = 
+
 
 ## Install Apache Tomcat on Windows (Windows Server 2022 Datacenter Azure Edition)
 
