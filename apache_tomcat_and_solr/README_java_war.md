@@ -1,4 +1,4 @@
-# Create a Log Generating Servlet
+# Create a Log Generating java
 
 That's a useful adjustment for a continuous, but regulated, logging load. Instead of stopping at a fixed limit like 1 million, the code will now run indefinitely until you manually stop the process (e.g., by pressing Ctrl+C in the Command Prompt).
 
@@ -101,3 +101,20 @@ Stop: To end the test, go back to the Command Prompt window where the Java progr
 Running:
 
 ![log genrator java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/log_generator_java.png)
+
+
+# The Simplest Way: Log4j2 Command Line
+
+If your primary goal is to generate dummy Log4j2 logs that are captured by Tomcat's service redirection without writing any Java code, you can use Log4j2's built-in command-line tool to run your desired logging pattern.
+
+This approach is much simpler as it requires no compilation, no Servlets, and no WAR file deployment.
+
+This method uses the Log4j2 JARs directly to run a dummy logging process that continuously writes to System.out.
+
+You need the two core Log4j2 JAR files. You must download these two files:
+
+* log4j-api-2.x.x.jar
+
+* log4j-core-2.x.x.jar
+
+Place them in a simple directory, like C:\LogTest\.
