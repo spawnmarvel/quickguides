@@ -1,85 +1,103 @@
 # Create a Log Generating Servlet
 
-The best way to generate logs within Tomcat is by creating a simple Java Servlet or a Spring Boot endpoint that writes log messages in a continuous loop when a request is made.
+That's a useful adjustment for a continuous, but regulated, logging load. Instead of stopping at a fixed limit like 1 million, the code will now run indefinitely until you manually stop the process (e.g., by pressing Ctrl+C in the Command Prompt).
 
-Simple Servlet Example (using System.out.println)
-This approach writes directly to the standard output stream, which is redirected to your file by the tomcat10w.exe configuration.
+Here is the updated Java code that implements a continuous 50-log burst followed by a 1-second pause pattern.
+
+♾️ Continuous Burst-and-Pause Log Generator
+
+
+The while loop will now run forever (while (true)) until the program is terminated.
 
 ```java
-
-import java.io.IOException;
+import java.io.FileWriter;
 import java.io.PrintWriter;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-@WebServlet("/log-generator")
-public class LogGeneratorServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-    private volatile boolean isRunning = false;
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/plain");
-
-        if (isRunning) {
-            out.println("Log generation is already running.");
-            return;
-        }
-
-        try {
-            isRunning = true;
-            out.println("Starting high-volume log generation...");
-            
-            // Loop for generating logs. Run this in a separate thread to not block the request.
-            new Thread(() -> {
-                long logCount = 0;
-                while (isRunning) {
-                    // **This is the critical line that generates the log line**
-                    // The output is directed to your file because of 'Redirect Stdout' = auto
-                    System.out.println("DUMMY_LOG_ENTRY_NUMBER_" + logCount + 
-                        ": This is a dummy log message for tuning purposes. Timestamp=" + System.currentTimeMillis());
-                    
-                    logCount++;
-                    
-                    // Add a small sleep to control the volume if necessary (e.g., 1ms)
-                    try {
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    }
-                    
-                    // Stop after a very large number of logs if needed
-                    if (logCount > 100_000_000) {
-                        isRunning = false;
-                    }
-                }
-                System.out.println("Log generation stopped after " + logCount + " entries.");
-            }).start();
-            
-        } catch (Exception e) {
-            e.printStackTrace(System.out); // Log exceptions to the output stream as well
-            isRunning = false;
-        }
-    }
+public class LogFileGenerator {
+    // *** CHANGE THIS PATH *** to match your actual target log file
+    private static final String LOG_PATH = "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\logs\\tomcat10-stdout.YYYY-MM-DD.log";
     
-    // You can implement a doPost or a separate endpoint to stop it.
-    @Override
-    public void destroy() {
-        isRunning = false;
+    // Number of logs to write in one burst before pausing
+    private static final int BURST_SIZE = 50;
+    
+    // Pause time in milliseconds after each burst (1 second = 1000 ms)
+    private static final long PAUSE_TIME_MS = 1000; 
+
+    public static void main(String[] args) {
+        long totalLogsGenerated = 0;
+        long startTime = System.currentTimeMillis();
+
+        try (FileWriter fileWriter = new FileWriter(LOG_PATH, true); // 'true' appends to the file
+             PrintWriter printWriter = new PrintWriter(fileWriter)) {
+
+            System.out.println("Starting continuous log generation to: " + LOG_PATH);
+            System.out.printf("Pattern: %d lines burst, then %dms pause. Run until manually stopped (Ctrl+C).%n", 
+                              BURST_SIZE, PAUSE_TIME_MS);
+            
+            // Outer loop runs indefinitely
+            while (true) {
+                
+                // Inner loop generates the burst of 50 logs
+                for (int i = 1; i <= BURST_SIZE; i++) {
+                    totalLogsGenerated++;
+
+                    String logEntry = String.format("DUMMY_LOG_ENTRY: COUNT=%d, TIMESTAMP=%d, LEVEL=INFO, MESSAGE=Continuous Burst I/O Test Line.", 
+                                                     totalLogsGenerated, System.currentTimeMillis());
+                    
+                    printWriter.println(logEntry);
+                }
+                
+                // Immediately flush the output buffer to ensure the logs are written to disk
+                printWriter.flush();
+                
+                // Log a progress update
+                if (totalLogsGenerated % 5000 == 0) { // Update every 5,000 logs
+                    System.out.println("Generated " + totalLogsGenerated + " logs. Pausing...");
+                }
+                
+                // --- 1 SECOND PAUSE ---
+                try {
+                    Thread.sleep(PAUSE_TIME_MS);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    System.err.println("Log generation was interrupted. Exiting loop.");
+                    break; 
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error writing to log file. Check the path and file permissions!");
+            e.printStackTrace();
+        } finally {
+             // Report final status
+            long endTime = System.currentTimeMillis();
+            System.out.printf("Log generation finished. Total logs: %d. Total running time: %.2f minutes.%n", 
+                               totalLogsGenerated, (endTime - startTime) / 60000.0);
+        }
     }
 }
 ```
-Steps to Use the Servlet:
-Package: Compile this Java code and package it as a standard WAR file (e.g., loggen.war).
 
-Deploy: Place the WAR file into your Tomcat's webapps directory.
+How to Use and Stop the Generator
+Update and Compile: Update the LOG_PATH, save the file, and compile it as before:
 
-Trigger: Access the servlet in your browser (e.g., http://localhost:8080/loggen/log-generator).
+```cmd
 
-Monitor: The logs will immediately start flowing into the file defined by the Redirect Stdout setting (e.g., tomcat10-stdout.YEAR-MONTH-DAY.log).
+javac LogFileGenerator.java
+
+```
+Run: Execute the program:
+
+```java
+
+java LogFileGenerator
+
+```
+Monitor: The program will start logging 50 lines every second. Use your performance monitoring tools to observe the disk activity.
+
+Stop: To end the test, go back to the Command Prompt window where the Java program is running and press Ctrl + C. The finally block will execute, providing the final log count and runtime.
+
+Running:
+
+![log genrator java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/log_generator_java.png)
