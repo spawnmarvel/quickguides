@@ -187,6 +187,8 @@ Apply and Restart: Click "Apply," then "OK," and restart the Tomcat service.
 - Swap space 19.5%, 14.3 gb out of 73.5GB
 - JVM, (no index yet) 2.1%, 168MB, allocated 4GB, max 8gb
 
+You can check the garbage collector logs, for example solr_gc.log. View logs chapter below.
+
 
 * -Xms2G -Xmx6G
 
