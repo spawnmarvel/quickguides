@@ -480,6 +480,25 @@ Hosting a Python application directly within Apache Tomcat is not the standard o
 
 https://last9.io/blog/tomcat-logs/
 
+### tomcat10w.exe GUI stderr.log / stdout.log parameters and generate logs
+
+auto: This is the most common and recommended value.
+* It tells the service wrapper to automatically create a dated log file for standard output.
+* [LogPrefix]-stdout.YEAR-MONTH-DAY.log
+* tomcat10-stdout.YEAR-MONTH-DAY.log
+
+A specific filename (e.g., stdout.log):
+* his redirects the standard output to a single, static file with the name you specify.
+
+An absolute or relative path and filename:
+* You can specify a full path like C:\Logs\tomcat_stdout.log to write the log file outside of the default LogPath.
+
+Empty field (no value):
+* Leaving the field empty (after removing any existing value like auto) will disable the redirection of standard output to a file.
+* generally not desirable for troubleshooting.
+
+
+
 ## Solr standalone cmd
 
 Python is installed
