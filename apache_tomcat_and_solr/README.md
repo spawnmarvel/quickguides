@@ -497,6 +497,13 @@ Empty field (no value):
 * Leaving the field empty (after removing any existing value like auto) will disable the redirection of standard output to a file.
 * generally not desirable for troubleshooting.
 
+The best way to generate logs within Tomcat is by creating a simple Java Servlet or a Spring Boot endpoint that writes log messages in a continuous loop when a request is made.
+
+README_java_war.md
+
+https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/README_java_war.md
+
+
 
 
 ## Solr standalone cmd
