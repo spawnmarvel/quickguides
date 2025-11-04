@@ -179,7 +179,17 @@ Modify JVM Arguments: In the "Java Options" text area, add or modify the JVM arg
 
 Apply and Restart: Click "Apply," then "OK," and restart the Tomcat service.
 
-# Solr
+# Solr (can tune thoose parameters, if swap space is high or usage RAM us high.)
+
+* -Xms4G -Xmx8G
+
+- Physical memory 22,4%, 14.GB out of 64GB
+- Swap space 19.5%, 14.3 gb out of 73.5GB
+- JVM, (no index yet) 2.1%, 168MB, allocated 4GB, max 8gb
+
+
+* -Xms2G -Xmx6G
+
 
 https://solr.apache.org/guide/solr/latest/deployment-guide/jvm-settings.html
 
