@@ -124,7 +124,7 @@ Or Using Windows Task Manager (User-Friendly)
 
 Hm, it seems that in this case solr determines JVM memory.
 
-![solr_determins_java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_determins_java.png)
+![solr_determins_java](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/solr_determines_java.png)
 
 ## Example memory settings
 
