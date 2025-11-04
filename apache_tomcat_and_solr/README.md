@@ -464,7 +464,7 @@ Additional Log Files
 * stderr.log / stdout.log – Captures system errors and console outputs.
 
 
-## stderr.log / stdout.log – Captures system errors and console outputs.
+## tomcat10w.exe GUI stderr.log / stdout.log – Captures system errors and console outputs.
 
 These files capture anything written to System.out and System.err (like System.out.println statements from your Java code), which is the primary role of the catalina.out file on Linux systems.
 
