@@ -51,6 +51,14 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
 
 ![page_swap_w3wp](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp.png)
 
+
+Should be done for both pools. Supplier link, due to scan that can be interrupted.
+* Ide Time-out (minutes) = 0 to off
+* Recycling/Regular Time Interval (minutes) = 0 to off
+* The rest are for logging.
+
+
+
 Adding a Time Interval Recycle to IIS
 
 Keeping the Idle Time-out at $10,080$ minutes (7 days) is acceptable for keeping the application available, but you must add a scheduled or condition-based recycle to prevent the w3wp.exe memory from growing indefinitely and consuming the swap space.
@@ -76,6 +84,8 @@ This action ensures that even with the $10,080$ minute idle timeout, the w3wp.ex
 
 ![recycle time](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/recycle_time.png)
 
+
+## Test this and set it 1 day after the scan, Fridays.
 
 If your application pool is named "SolrAppPool", the command would be:
 
