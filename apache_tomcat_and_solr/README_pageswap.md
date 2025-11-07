@@ -96,7 +96,9 @@ If your application pool is named "SolrAppPool", the command would be:
 
 ```ps1
 Import-Module WebAdministration
+Get-IISAppPool -Name "SolrAppPool"
 Restart-WebAppPool -Name "SolrAppPool"
+
 
 ```
 
