@@ -52,7 +52,7 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
 ![page_swap_w3wp2](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp2.png)
 
 
-Should be done for both pools. Supplier link, due to scan that can be interrupted.
+Supplier say Should be done for both pools. Supplier link, due to scan that can be interrupted.
 
 * Ide Time-out (minutes) = 0 to off
 * Recycling/Regular Time Interval (minutes) = 0 to off
