@@ -53,10 +53,12 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
 
 
 Should be done for both pools. Supplier link, due to scan that can be interrupted.
+
 * Ide Time-out (minutes) = 0 to off
 * Recycling/Regular Time Interval (minutes) = 0 to off
 * The rest are for logging.
 
+But keep on saying that IIS processes can become fragmented or grow in memory after long periods without recycling, hm....
 
 
 Adding a Time Interval Recycle to IIS
