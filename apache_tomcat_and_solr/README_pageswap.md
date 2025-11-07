@@ -49,7 +49,7 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
       * **Working Set:** Should be less than the Commit Size. This is the memory actually resident in physical RAM.
 
 
-![page_swap_w3wp](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w2wp.png)
+![page_swap_w3wp](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp.png)
 
 ### 2\. Adjust Windows Paging File Settings
 
