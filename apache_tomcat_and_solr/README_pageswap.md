@@ -77,6 +77,14 @@ This action ensures that even with the $10,080$ minute idle timeout, the w3wp.ex
 ![recycle time](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/recycle_time.png)
 
 
+If your application pool is named "SolrAppPool", the command would be:
+
+```ps1
+Import-Module WebAdministration
+Restart-WebAppPool -Name "SolrAppPool"
+
+```
+
 ## 🛡️ 2. Setting the Private Memory Limit (The Safety Net)
 
 If your application's memory usage (w3wp.exe) spikes to 48 GB for 10 minutes when the Solr index is optimized, setting a Private Memory Limit below that (e.g., 15 GB or 20 GB) will cause premature recycling and interrupt the optimization or warming process.
