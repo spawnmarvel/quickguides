@@ -87,7 +87,7 @@ This action ensures that even with the $10,080$ minute idle timeout, the w3wp.ex
 ![recycle time](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/recycle_time.png)
 
 
-## Test this and set it 1 day after the scan, Fridays.
+## Test this and set it 1 day after the scan, Fridays, but does it go up when optimization?
 
 We must free w2wp.exe after the scan.
 
