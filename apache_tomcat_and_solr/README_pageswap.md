@@ -51,35 +51,29 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
 
 ![page_swap_w3wp](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp.png)
 
-### 2\. Adjust Windows Paging File Settings
+Adding a Time Interval Recycle to IIS
 
-You likely have the paging file set to be **System Managed** or have a large initial size. Given your 64 GB of RAM, the swap file doesn't need to be 30 GB.
+Keeping the Idle Time-out at $10,080$ minutes (7 days) is acceptable for keeping the application available, but you must add a scheduled or condition-based recycle to prevent the w3wp.exe memory from growing indefinitely and consuming the swap space.
 
-  * **Recommendation:** Change the Windows paging file setting from *System Managed* to a **Custom Size** with a specific range, such as **16 GB minimum and 20 GB maximum**. This will free up 10 GB of disk space and reduce the OS's tendency to commit excessive virtual memory.
-      * *(Note: The old rule was $1.5 \times \text{RAM}$, but with 64 GB RAM, this is unnecessary and counterproductive.)*
+## 1. Configuring Specific Time Recycling
 
-### 3\. Solr Tuning: Explicitly Disable MMap (If Necessary)
+If you need the recycle to happen at a guaranteed low-traffic time (e.g., 3:00 AM on Sunday), use the "Specific Times" option instead of the regular time interval.
 
-If the swap commitment is still excessive, you can tell Solr/Lucene *not* to use memory mapping, forcing the OS to handle the index as standard file I/O.
 
-  * In `solrconfig.xml`, locate the `<directoryFactory>` and change the type:
+* Open IIS Manager on the Windows server.
+* In the Connections pane (left), click on Application Pools.
+* Right-click on the Application Pool and select Recycling....
+* In the Recycling settings window, focus on the "Specific Times" section.
+* Check the box next to "Specific Times".
+* Add the time(s):
+* Click the Add... button.
+* * Enter the desired recycle time, for example, 03:00:00 (3:00 AM).
+* * Note: This recycle will occur every day at 3:00 AM. If you only want it on Sunday, you must rely on an external task scheduler (like Windows Task Scheduler) to stop and start the pool, but for memory management, a daily early-morning recycle is usually recommended. If you are comfortable with a daily reset at 3:00 AM, proceed with this setting.
+* * Click Next, select any necessary events to log, and click Finish.
+* This action ensures that even with the $10,080$ minute idle timeout, th
 
-<!-- end list -->
 
-```xml
-<directoryFactory name="DirectoryFactory" 
-                  class="solr.StandardDirectoryFactory">
-    <bool name="useCompoundFile">true</bool>
-</directoryFactory>
+![recycle time](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/recycle_time.png)
 
-<directoryFactory name="DirectoryFactory" 
-                  class="solr.NRTCachingDirectoryFactory">
-    <bool name="useCompoundFile">true</bool>
-</directoryFactory>
-```
 
-  * **Warning:** Changing to a non-MMap factory like `NRTCachingDirectoryFactory` or `SimpleFSDirectory` can reduce the virtual memory commitment, but it may **slow down search performance** because Lucene loses its fastest method of accessing index files. **This should be a last resort.**
 
-**Conclusion:** The 30 GB swap is most likely **reserved backing store** for committed memory, not active swapping. You can fix this by **reducing the Windows paging file size** to a more appropriate 16-20 GB and monitoring page faults.
-
-Would you like steps on how to manually adjust the Windows paging file size?
