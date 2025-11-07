@@ -49,7 +49,7 @@ The crucial step is to see if Windows is **actively swapping** or just **reservi
       * **Working Set:** Should be less than the Commit Size. This is the memory actually resident in physical RAM.
 
 
-![page_swap_w3wp](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp.png)
+![page_swap_w3wp2](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/page_swap_w3wp2.png)
 
 
 Should be done for both pools. Supplier link, due to scan that can be interrupted.
@@ -88,6 +88,9 @@ This action ensures that even with the $10,080$ minute idle timeout, the w3wp.ex
 
 
 ## Test this and set it 1 day after the scan, Fridays.
+
+We must free w2wp.exe after the scan.
+
 
 If your application pool is named "SolrAppPool", the command would be:
 
