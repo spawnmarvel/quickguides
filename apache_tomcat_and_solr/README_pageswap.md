@@ -55,25 +55,30 @@ Adding a Time Interval Recycle to IIS
 
 Keeping the Idle Time-out at $10,080$ minutes (7 days) is acceptable for keeping the application available, but you must add a scheduled or condition-based recycle to prevent the w3wp.exe memory from growing indefinitely and consuming the swap space.
 
-## 1. Configuring Specific Time Recycling
+## 1. Configuring Specific Time Recycling (hm, what time to use, 07:00)
 
 If you need the recycle to happen at a guaranteed low-traffic time (e.g., 3:00 AM on Sunday), use the "Specific Times" option instead of the regular time interval.
 
 
-* Open IIS Manager on the Windows server.
-* In the Connections pane (left), click on Application Pools.
-* Right-click on the Application Pool and select Recycling....
-* In the Recycling settings window, focus on the "Specific Times" section.
-* Check the box next to "Specific Times".
-* Add the time(s):
-* Click the Add... button.
+1. Open IIS Manager on the Windows server.
+2. In the Connections pane (left), click on Application Pools.
+3. Right-click on the Application Pool and select Recycling....
+4. In the Recycling settings window, focus on the "Specific Times" section.
+5. Check the box next to "Specific Times".
+6. Add the time(s):
+7. Click the Add... button.
 * * Enter the desired recycle time, for example, 03:00:00 (3:00 AM).
 * * Note: This recycle will occur every day at 3:00 AM. If you only want it on Sunday, you must rely on an external task scheduler (like Windows Task Scheduler) to stop and start the pool, but for memory management, a daily early-morning recycle is usually recommended. If you are comfortable with a daily reset at 3:00 AM, proceed with this setting.
 * * Click Next, select any necessary events to log, and click Finish.
-* This action ensures that even with the $10,080$ minute idle timeout, th
+
+This action ensures that even with the $10,080$ minute idle timeout, the w3wp.exe process gets a clean memory reset daily at a guaranteed low-traffic time.
 
 
 ![recycle time](https://github.com/spawnmarvel/quickguides/blob/main/apache_tomcat_and_solr/images/recycle_time.png)
 
 
+## 🛡️ 2. Setting the Private Memory Limit (The Safety Net)
 
+If your application's memory usage (w3wp.exe) spikes to 48 GB for 10 minutes when the Solr index is optimized, setting a Private Memory Limit below that (e.g., 15 GB or 20 GB) will cause premature recycling and interrupt the optimization or warming process.
+
+In this scenario, setting a low Private Memory Limit is bad because it would treat the necessary, temporary memory spike as an error, causing instability.
