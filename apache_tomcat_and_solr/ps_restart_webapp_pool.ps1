@@ -4,3 +4,4 @@ Restart-WebAppPool -Name "SolrAppPool"
 
 # Swap space goes down after 1 min to normal 15gb
 # Run saturday, 64 bit, not 32 bit ps1
+# But does ram go down to 15gb after optimization?
