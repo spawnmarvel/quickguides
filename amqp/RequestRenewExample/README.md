@@ -34,7 +34,7 @@ A pem encoded certificate is already a “cert”, and the .cert file extension 
 
 </p>
 </details>
-* 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing)
+* 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing). The shovel server must have server auth and client auth, but the server can survie with server auth (but best if both/ i.e more shovels on server)
 
 * * If the content is on binary format, .cer*, meaning the cert content does not start with ----BEGIN CERTIFICATE-----
 * * Import the .cer* to a local MMC (add signers also for verification). Then export it in MMC to format Base64 encoded. (.cer can be Base64 encoded or binary )
