@@ -1,6 +1,6 @@
-# Requests and renew 
+# Requests and Renewals
 
-## Continue from manual steps in the main readme.md
+## Continue from manual steps in the main README.md.
 
 certreq -new
 
@@ -9,9 +9,9 @@ https://learn.microsoft.com/en-us/windows-server/administration/windows-commands
 ```cmd
 certreq –new request.inf certificate.req
 ```
-## Convert binary to human redable
+## Convert Binary to Human Readable
 
-.crt binary to .cer human readble
+.crt binary to .cer human readable
 
 ```ps1
 certutil -encode C:\tmp\server01.corp.logo.com.crt C:\tmp\server01.corp.logo.com.cer
@@ -21,7 +21,7 @@ certutil -encode C:\tmp\server01.corp.logo.com.crt C:\tmp\server01.corp.logo.com
 
 ```
 
-### Convert check format
+### Convert Check Format
 
 <details><summary>Convert pem to other formats or follow below</summary>
 <p>
@@ -47,32 +47,31 @@ A pem encoded certificate is already a “cert”, and the .cert file extension 
 
 </p>
 </details>
-* 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing). The shovel server must have server auth and client auth, but the server can survie with server auth (but best if both/ i.e more shovels on server)
+* 2 When CSR approved is back, import certificate in MMC at the personal certificate store, if the cert is not valid, import all CA's in the store also. (They are missing). The shovel server must have server auth and client auth, but the server can survive with server auth (but best if both/ i.e more shovels on server).
 
-* * If the content is on binary format, .cer*, meaning the cert content does not start with ----BEGIN CERTIFICATE-----
+* * If the content is on binary format, .cer*, meaning the cert content does not start with ----BEGIN CERTIFICATE-----.
 * * Import the .cer* to a local MMC (add signers also for verification). Then export it in MMC to format Base64 encoded. (.cer can be Base64 encoded or binary )
 * * Then you can cp the txt content to wherever
-* 2.1 When all CA's are imported in MMC, the personal should be valid. (If you cannot find the cert in mmc personal, import it direct on personal tab
-)
-* 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use just for openssl.
+* 2.1 When all CA's are imported in MMC, the personal should be valid. (If you cannot find the cert in mmc personal, import it direct on personal tab).
+* 3 Export personal from MMC as pfx (yes, export private key, include all certs if possible), save the password for later use just for OpenSSL.
 
-* * View IBM.info 
+* * View IBM.info.
 
-* 4 Now get the private key and extract the certificate fro the pfx file
+* 4 Now get the private key and extract the certificate from the pfx file.
 
-* It could be that you need to type c:\Program Files\OpenSSL-Win64\bin\openssl "enter"
+* It could be that you need to type c:\Program Files\OpenSSL-Win64\bin\openssl "enter".
 * OpenSSL>
 
-* 4.1 Run cms as admin navigate to openssl bin and check version
+* 4.1 Run CMS as admin navigate to OpenSSL bin and check version.
 ```cmd
 cd "c:\Program Files\OpenSSL-Win64\bin"
 openssl version
 ```
-* It should be OpenSSL 1.1.1m 14 Dec 2021
+* It should be OpenSSL 1.1.1m 14 Dec 2021.
 
-* * Update 05.11.2024 not tested, https://www.sslshopper.com/ssl-converter.html
-* * Public key is embedded in the SSL certificate and Private key is stored on the server and kept secret.
-* * Only possible on linux? Seems so
+* * Update 05.11.2024 not tested, https://www.sslshopper.com/ssl-converter.html.
+* * Public key is embedded in the SSL certificate and private key is stored on the server and kept secret.
+* * Only possible on Linux? Seems so.
 
 * 4.2 Run the following command to extract the private key:
 ```bash
@@ -82,26 +81,26 @@ openssl pkcs12 -in myfile.pfx -nocerts -out private.key.pem -nodes
 * 4.3 Run the following command to extract the certificate
 ```bash
 openssl pkcs12 -in myfile.pfx -clcerts -nokeys -out public.crt.pem -nodes
-# enter the same password (from 4.2)
+# enter the same password (from 4.2).
 ```
-* 4.4 Run the following command to verify CN (must be hostname(.domain.something))
+* 4.4 Run the following command to verify CN (must be hostname(.domain.something)).
 ```bash
 openssl x509 -noout -subject -in public.crt.pem
 ```
 
-* 4.5 Run the following command to verify end date (notAfter=Jan 27 10:36:48 2026 GMT)
+* 4.5 Run the following command to verify end date (notAfter=Jan 27 10:36:48 2026 GMT).
 ```bash
 openssl x509 -noout -enddate -in public.crt.pem
 ```
 
-* 4.6 Run the following command to verify serial (59000017Axxxxxxxxxxxxxxxxxxxxxxxxx)
+* 4.6 Run the following command to verify serial (59000017Axxxxxxxxxxxxxxxxxxxxxxxxx).
 ```bash
 openssl x509 -noout -serial -in public.crt.pem
 ```
 
-## Automate the above
+## Automate the Above
 
-is moved to README_auto_ps1.md
+is moved to README_auto_ps1.md.
 
 ```cmd
 # make request
@@ -122,7 +121,7 @@ c:\Program Files\OpenSSL-Win64-3\OpenSSL-Win64\bin>openssl version
 OpenSSL 3.1.2 1 Aug 2023 (Library: OpenSSL 3.1.2 1 Aug 2023)
 
 # C:\RabbitmqBaseFolder\cert
-openssl storeutl -noout -text -certs c:\RabbitmqBaseFolder\cert\ca.bundle
+openssl storeutl -noout -text -certs C:\RabbitmqBaseFolder\cert\ca.bundle
 
 ```
 
@@ -141,7 +140,7 @@ Issuer: C=US, O=Microsoft Corporation, CN=Microsoft RSA Root Certificate Authori
 Total found: 2
 ```
 
-export from mmx as pfx
+export from MMC as pfx.
 
 
 
@@ -175,7 +174,7 @@ Best Practice:
 
 
 
-## Test mtls Validating Mutual TLS Authentication 
+## Test mTLS Validating Mutual TLS Authentication 
 
 
 ### For AMQPS (or similar, like RabbitMQ) with mTLS:
@@ -186,7 +185,7 @@ Best Practice:
 - **AMQPS**: Runs on port 5671 (TLS-encrypted, often with mTLS).
 
 
-### 1. **Install OpenSSL for Windows**
+### 1. **Install OpenSSL for Windows**.
 
 
 ### **Server Side**
@@ -259,7 +258,7 @@ No, running `openssl s_client -connect your-broker-host:5671 ...` to test the AM
 
 
 
-Result after running commands, perfect
+Result after running commands, perfect.
 
 
 If you want to test your actual AMQPS broker (not just a simulated server), point the client to the real host:
@@ -268,8 +267,8 @@ If you want to test your actual AMQPS broker (not just a simulated server), poin
 openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -cert C:\path\to\client.cert.pem -CAfile C:\path\to\cacert.pem -state
 ```
 
-* On the client we used used a temp store with cert/ca and key file for test.
-* On the server AMQP we updated the bundle with new CA's 
+* On the client we used a temp store with cert/ca and key file for test.
+* On the server AMQP we updated the bundle with new CA's.
 
 ![openssl s_client](https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg)
 
