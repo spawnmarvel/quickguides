@@ -74,6 +74,7 @@ When the CSR is approved, import the certificate in MMC:
 - If the cert shows as invalid, import all CA certificates to the store
 
 > 💡 The shovel server needs **server auth** (at minimum server auth is required, since role is reciever).
+
 > 💡 The shovel client (server) needs both **server auth** and **client auth** (since role is connect and send).
 
 ### Step 2: Handle Binary Format Certificates
