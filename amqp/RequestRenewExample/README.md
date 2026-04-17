@@ -11,7 +11,7 @@ certreq –new request.inf certificate.req
 ```
 ## Convert binary to human redable
 
-.crt binary to human readble
+.crt binary to .cer human readble
 
 ```ps1
 certutil -encode C:\tmp\server01.corp.logo.com.crt C:\tmp\server01.corp.logo.com.cer
