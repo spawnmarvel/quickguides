@@ -9,6 +9,19 @@ https://learn.microsoft.com/en-us/windows-server/administration/windows-commands
 ```cmd
 certreq –new request.inf certificate.req
 ```
+## Convert binary to human redable
+
+.crt binary to human readble
+
+```ps1
+certutil -encode C:\tmp\server01.corp.logo.com.crt C:\tmp\server01.corp.logo.com.cer
+# Input Length = 2205
+# Output Length = 3088
+# CertUtil: -encode command completed successfully
+
+```
+
+### Convert check format
 
 <details><summary>Convert pem to other formats or follow below</summary>
 <p>
