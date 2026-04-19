@@ -226,7 +226,7 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 
 > ⚠️ Running `openssl s_client` to test does NOT disturb or interrupt current traffic on your RabbitMQ server.
 
-![test ssl](https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/openssl_client_test.jpg)
+![test ssl](https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/images/openssl_client_test.jpg)
 ---
 
 ## Notes
