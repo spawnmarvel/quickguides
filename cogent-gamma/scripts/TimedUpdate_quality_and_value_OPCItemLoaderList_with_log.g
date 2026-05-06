@@ -16,7 +16,7 @@ class TimedUpdate Application
 	
 	//points = [ "default:tag-osho-01", "default:tag-osho-02","default:tag-osho-03" ];
 	points = [];
-	updateSecs = 2;
+	updateSecs = 1;
 	file_name = "C:\\CogentBase\\scripts\\tags.txt";
 	
         // Define the path for your log file
@@ -74,10 +74,18 @@ local current;
         {
             val = random();
             ts = date();
+			
+			       // Capture the system time immediately before the write
+            // This avoids the "nil" issue from reading the point back
+            ts = date();
             
+			       //Perform the write (DataHub generates the timestamp here)
             // Perform the DataHub write for ALL points in the list
             datahub_write(point, val, 1, OPC_QUALITY_GOOD);
-            
+           
+		        
+			
+			
             // Only log if the point matches the specific tag
             // Note: We check for "default:tag-osho-01" because the script 
             // prepends "default:" in the readCSVFileAddPoints method.
