@@ -121,3 +121,7 @@ For tunnel you do not need OPC DA node, they are auto created at slave.
 
 https://help.softwaretoolbox.com/faq/4138
 
+
+
+## Go to cogent-gamma for installing scripts
+
