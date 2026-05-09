@@ -78,3 +78,45 @@ https://cogentdatahub.com/library/videos/#datahub-configuration-videos
 * Remote Config and DataHub as a Windows Service
 
 https://www.youtube.com/watch?v=SsHfEQHk640&list=PL94JESkkGcmJpyxzHd5emYMyv3jpcFC2R
+
+
+## Install as service
+
+* Exit Cogent and make sure all Cogent processes are gone.
+
+* Open the service Manager and set path to the same as the .exe file
+
+```ps1
+C:\CogentBase
+
+```
+
+![service](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/service.png)
+
+* Start service from the Manager and check service
+
+![running](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/running.png)
+
+* Start remote config and verify login again.
+
+## Start updated 26.11.2025 NB this comes after remote config is configured and Cogent is installed as a service
+
+
+You should set this and change it.
+
+* If you need to create tunnels, then test with that user (admin) on the remote Cogent Master, this user has full rights
+
+* If you need to create a new user on slave Cogent, you must set security equal to image below
+
+![security](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/security.png)
+
+* Now change organization to internal and edit the mirror
+
+![security2](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/security2.png)
+
+There should be no permission denied in the event log now and the tunnels from master should be available on the slave.
+
+For tunnel you do not need OPC DA node, they are auto created at slave.
+
+https://help.softwaretoolbox.com/faq/4138
+
