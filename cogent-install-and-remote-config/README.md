@@ -163,4 +163,4 @@ Result, add as many tags as you like in tags.txt, and edit updateSecs, all tags 
 This is so you can easy measure if you loose some values and reciever end.
 
 
-![tag simulator](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/tag_simulator.png)
+![tag simulator](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/tag_simu.png)
