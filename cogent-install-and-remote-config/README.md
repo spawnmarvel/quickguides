@@ -41,6 +41,27 @@ Before connecting to a DataHub instance remotely to configure it, you must first
 
 * In the Default Roles section, uncheck the RequireTotpAuthentication button because this is an automatic, non-interactive connection.
 
+![uncheck](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/remotemika.png)
+
+* With that new user still selected, in the Roles section check the Show Available button to display all the available roles. Scroll down to the RemoteConfig role and check that box.
+
+![remote_user](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/remote_user.png)
+
+* Click apply
+
+* In the DataHub Properties window, select Remote Config
+
+* Check the boxes of the features you want to be configurable. Checking a box in the Local column allows connections only from a DataHub instance running on the same machine, 
+* whereas boxes in the Remote column allow connections from a Remote Config instance running on a remote machine. If you uncheck Local and check Remote, then a user on the local machine will not be able to configure that feature.
+
+* Local is already selected, check top local box
+
+![local](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/local.png)
+
+* Now search for remote config and launch it
+
+![remote](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/remote.png)
+
 
 https://cogentdatahub.com/library/documentation/
 
