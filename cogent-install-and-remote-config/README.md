@@ -145,9 +145,20 @@ updateSecs = 1;
 file_name = "C:\\CogentBase\\scripts\\tags.txt";
 log_file_name = "C:\\CogentBase\\scripts\\write_log.txt";
 
+[...]
+ if (point == "default:tag-osho-01")
+
+
+[...]
+// Move to the next number in the array, reset to 0 if we hit 60
+    .current_idx++;
+    if (.current_idx >= 60)
+        .current_idx = 0;
 ```
 
-Result, add as many tags as you like in tags.txt, and edit updateSecs, all tags goes from 1 to 60 before start at 1 again.
+* write.log, it logs all values for tag tag-osho-01 so we have the history in a txt file, it does not log for other tags
+
+Result, add as many tags as you like in tags.txt, and edit updateSecs, all tags goes from 0 to 60 before start at 0 again.
 
 This is so you can easy measure if you loose some values and reciever end.
 
