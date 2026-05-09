@@ -43,7 +43,7 @@ Lets move the files and configure Cogent.
 
 Before connecting to a DataHub instance remotely to configure it, you must first run it as a normal program, not a service, and prepare it in two ways
 
-## Install and remote config V11
+## Enable Remote config V11
 
 * Set the Organization to Local, and in the Users tab, under Users, click the Add button and select Add BuiltIn User
 
@@ -98,7 +98,9 @@ C:\CogentBase
 
 * Start remote config and verify login again.
 
-## Start updated 26.11.2025 NB this comes after remote config is configured and Cogent is installed as a service
+## Security update on tunnels
+
+Start updated 26.11.2025 NB this comes after remote config is configured and Cogent is installed as a service
 
 
 You should set this and change it.
