@@ -125,3 +125,31 @@ https://help.softwaretoolbox.com/faq/4138
 
 ## Go to cogent-gamma for installing scripts
 
+For a quick run of set up simulator tags
+
+C:\CogentBase\Scripts
+
+* tags.txt
+* OPCItemLoader.g, load the tags.txt to OPC node and domain
+
+```txt
+connection_name = "OPC123";
+// Change this to the connection name of the connection to edit
+file_name = "C:\\CogentBase\\Scripts\\tags.txt";
+```
+
+* TimedUpdate_quality_and_value_OPCItemLoaderList_with_log_array_0_to_60.g
+
+```txt
+updateSecs = 1;
+file_name = "C:\\CogentBase\\scripts\\tags.txt";
+log_file_name = "C:\\CogentBase\\scripts\\write_log.txt";
+
+```
+
+Result, add as many tags as you like in tags.txt, and edit updateSecs, all tags goes from 1 to 60 before start at 1 again.
+
+This is so you can easy measure if you loose some values and reciever end.
+
+
+![tag simulator](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/tag_simulator.png)
