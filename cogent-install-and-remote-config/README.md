@@ -60,7 +60,7 @@ Before connecting to a DataHub instance remotely to configure it, you must first
 
 * Now search for remote config and launch it
 
-![remote](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/remote.png)
+![login](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/login.png)
 
 
 https://cogentdatahub.com/library/documentation/
