@@ -20,6 +20,8 @@ To write data to Kafka or Event Hubs, you can use the External Historian feature
 
 https://cogentdatahub.com/docs/#cdh-eventstreams.html
 
+![read](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/stream.png)
+
 ## External historians (write)
 
 This option is used for writing data to Event Hubs. To collect data from an Event Hubs stream, please see Event Streams.
@@ -32,6 +34,8 @@ This option is used for writing data to Kafka. To collect data from a Kafka even
 
 
 https://cogentdatahub.com/docs/#cdh-propexthistkafka.html
+
+![write](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/write.png)
 
 ## Video event hub
 
