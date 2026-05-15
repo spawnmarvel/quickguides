@@ -153,7 +153,7 @@ https://cogentdatahub.com/library/documentation/
 
 https://www.youtube.com/watch?v=WK_EO0e1syY
 
-## Hm, get all data in stream
+## Earliest Offset
 
 We have more messages then the 3 we just saw.
 
