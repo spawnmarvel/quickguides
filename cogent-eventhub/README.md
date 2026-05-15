@@ -54,4 +54,57 @@ https://www.youtube.com/watch?v=ZLSYUvFihgA
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
 
+Create an Event Hubs namespace
+
 ![eventhub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/eventhub.png)
+
+Now create the event hub
+
+![eventhub create](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/create_hub.png)
+
+On the hub, create a send policy.
+
+![send policy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/send_policy.png)
+
+
+
+Check data in hub
+
+![data_in_hub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/data_in_hub.png)
+
+
+
+## Insert some data using python
+
+
+```cmd
+python --version
+Python 3.13.2
+
+pip install azure-eventhub
+pip install azure-identity
+pip install aiohttp
+```
+
+Get the connection string and update script, using the send2_policy
+
+
+Test connection
+```ps1
+# Test connection to the Event Hub Namespace
+Test-NetConnection -ComputerName swceventhub03.servicebus.windows.net -Port 5671
+
+```
+
+
+Run the python script
+
+```py
+python .\send_event.py
+Successfully authenticated and sent events.
+
+```
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-python-get-started-send?tabs=passwordless%2Croles-azure-portal
+
+
