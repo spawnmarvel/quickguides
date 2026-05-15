@@ -54,21 +54,21 @@ https://www.youtube.com/watch?v=ZLSYUvFihgA
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
 
 
-Create an Event Hubs namespace
+### Create an Event Hubs namespace
 
 ![eventhub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/eventhub.png)
 
-Now create the event hub
+### Now create the event hub
 
 ![eventhub create](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/create_hub.png)
 
-On the hub, create a send policy.
+## On the hub, create a send policy.
 
 ![send policy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/send_policy.png)
 
 
 
-Check data in hub
+## Check data in hub (after excute py script)
 
 ![data_in_hub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/data_in_hub.png)
 
