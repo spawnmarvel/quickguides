@@ -152,3 +152,15 @@ https://cogentdatahub.com/library/documentation/
 
 
 https://www.youtube.com/watch?v=WK_EO0e1syY
+
+## Hm, get all data in stream
+
+We have more messages then the 3 we just saw.
+
+Earliest Offset
+
+Automatically starts the Event Stream reader from the earliest known offset. This is usually the beginning of the Event Hub stream.
+
+![offset](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/offset.png)
+
+https://cogentdatahub.com/library/documentation/
