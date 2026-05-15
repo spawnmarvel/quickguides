@@ -108,3 +108,16 @@ Successfully authenticated and sent events.
 https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-python-get-started-send?tabs=passwordless%2Croles-azure-portal
 
 
+
+## Event streams (read) Cogent
+
+
+Create a new read policy for cogent
+
+
+![read_policy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/read_policy.png)
+
+
+Configure cogent
+
+https://www.youtube.com/watch?v=WK_EO0e1syY
