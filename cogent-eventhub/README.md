@@ -44,3 +44,14 @@ https://cogentdatahub.com/docs/#cdh-propexthistkafka.html
 
 https://www.youtube.com/watch?v=ZLSYUvFihgA
 
+## Quickstart: Create an event hub using Azure portal
+
+* Choose Basic for the pricing tier. If you plan to use the namespace from Apache Kafka apps, use the Standard tier. The basic tier doesn't support Apache Kafka workloads
+
+* Leave the throughput units (for standard tier) or processing units (for premium tier) settings as it is. 
+
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create
+
+
+![eventhub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/eventhub.png)
