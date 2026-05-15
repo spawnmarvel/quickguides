@@ -6,6 +6,9 @@
 * Streaming Logic: Earliest Offset & Loops
 * Bridging to Industrial Standards (OPC DA)
 
+
+![toplogy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/toplogy.png)
+
 ## Event streams (read)
 
 
