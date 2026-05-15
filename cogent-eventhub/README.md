@@ -222,25 +222,30 @@ Event Logs: You can check the internal logs of the Azure Event Hub connection in
 Acting as an OPC DA Server
 If you don't have an existing OPC DA server and you just want an external OPC DA client (like an old HMI) to read the Azure data, you can make Cogent act as the Server:
 
+* Create a new OPC DA node,  OPC003
+
+* Create a new domain azhub01OpcDa1
+
+* Check Manually select items, ok
+
+![opcda node](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opcdanode.png)
+
 * Go to OPC DA -> OPC DA Server.
 
 * Check Act as an OPC DA Server.
 
-* Select the Azure Domain as the source.
+Now configure the bridges
 
-* Click on Configure Items or Select Items.
+* Source tag1 to destination tag1, tag2, tag3
 
-* Highlight your Azure tags (tag1, tag2, tag3) and add them to the "Exposed" list.
+* Forward (source to destination)
+
+* Apply
 
 Now, any OPC DA client can connect to Cogent directly and see your tag1, tag2, and tag3 as if they were local PLC tags.
 
 
-![opcda](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opcda.png)
-
-
-View data
-
-![opc data](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opc_data.png)
+![bridge](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/bridge.png)
 
 ## Hub stats
 
@@ -255,4 +260,3 @@ View data
 
 ### OPC da
 
-![matrocin opc](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_opc.png)
