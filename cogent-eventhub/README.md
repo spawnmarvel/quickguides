@@ -7,7 +7,7 @@
 * Bridging to Industrial Standards (OPC DA)
 
 
-![toplogy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/topology.png)
+![toplogy](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/topology1.png)
 
 ## Event streams (read)
 
