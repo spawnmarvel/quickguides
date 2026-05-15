@@ -164,3 +164,18 @@ Automatically starts the Event Stream reader from the earliest known offset. Thi
 ![offset](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/offset.png)
 
 https://cogentdatahub.com/library/documentation/
+
+## Update python to send in a loop
+
+To actually see the timestamps move and the values change in the Cogent Data Browser, we should put the sender into a loop. This simulates a real PLC or sensor pushing data every few seconds.
+
+```py
+ython send_event.py
+Starting live stream... Press Ctrl+C to stop.
+Sent batch at: 15:17:33
+Sent batch at: 15:17:38
+```
+
+
+![stream_live](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/stream_live.png)
+
