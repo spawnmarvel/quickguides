@@ -179,3 +179,26 @@ Sent batch at: 15:17:38
 
 ![stream_live](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/stream_live.png)
 
+
+## The Difference: Stream vs. Points
+
+It is a common point of confusion when starting with Event Hubs. You are right that a Stream contains every single value from start to finish, like a recorded movie. However, Cogent DataHub (and most SCADA/HMI systems) usually acts like a Projector showing only the "Current Frame."
+
+🔹 The Event Hub (The Firehose)
+Event Hub is a Temporal Store. It keeps every message you’ve sent for a specific retention period (e.g., 1 day or 7 days). If you send "Value: 10" and then "Value: 20", the Event Hub keeps both.
+
+🔹 Cogent DataHub (The Point Server)
+DataHub is a Real-Time Data Middleware. When it reads from the Event Hub, it maps the "tag" field to a Data Point. By default, the Data Browser only shows you the Current Value of that point.
+
+🔹 When message #1 arrives (tag1 = 10), DataHub shows 10.
+
+🔹 When message #2 arrives (tag1 = 20), DataHub updates the point to 20.
+
+🔹 The "10" is gone from the display, even though it still exists in the Event Hub.
+
+## How to see the History in DataHub
+If you want to see the "Start to Finish" history within Cogent, you have two main options:
+
+DataHub Historian: You must enable the Historian feature in Cogent. This will take the live stream and write every change into a local file or SQL database. You can then view the "start to finish" data in a Trend graph or a table.
+
+Event Logs: You can check the internal logs of the Azure Event Hub connection in Cogent to see the raw sequence of incoming strings, but this isn't meant for monitoring values.
