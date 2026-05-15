@@ -252,6 +252,17 @@ Now, any OPC DA client can connect to Cogent directly and see your tag1, tag2, a
 ![hub stats](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/hub_stats.png)
 
 
+## Verify in Cogent
+
+Event hub reads.
+
+![cogent event](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/cogent_event.png)
+
+Bridge to OPC DA
+
+![cogent da](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/cogent_da.png)
+
+
 ## Verify in Matricon
 
 ### The event hub
