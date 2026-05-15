@@ -120,4 +120,10 @@ Create a new read policy for cogent
 
 Configure cogent
 
+![cogent hub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/cogent_hub.png)
+
+
+https://cogentdatahub.com/library/documentation/
+
+
 https://www.youtube.com/watch?v=WK_EO0e1syY
