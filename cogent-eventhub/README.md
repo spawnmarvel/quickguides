@@ -123,6 +123,22 @@ Configure cogent
 ![cogent hub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/cogent_hub.png)
 
 
+Now at the bottom, make the format.
+
+* Test a message, add it to sample input
+* Generate a schema
+* Add script var name = 
+* Test it, and ok
+
+```json
+{"tag": "tag3", 
+"timestamp": "2026-05-15T12:20:52.399265+00:00",
+ "quality": "Bad",
+ "value": 0.0
+ }
+```
+![schema](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/schema.png)
+
 https://cogentdatahub.com/library/documentation/
 
 
