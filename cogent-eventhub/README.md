@@ -146,7 +146,7 @@ Enable the stream and press apply
 
 Run the python script again and view data
 
-![view_data](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/view_data.png
+![view_data](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/view_data.png)
 
 https://cogentdatahub.com/library/documentation/
 
