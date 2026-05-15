@@ -1,5 +1,10 @@
-# Cogent and event hub / kafka v11
+# Cogent and event hub / kafka v11 with python as sender
 
+* Azure Infrastructure Setup
+* Data Production with Python
+* Cogent DataHub Configuration (Read)
+* Streaming Logic: Earliest Offset & Loops
+* Bridging to Industrial Standards (OPC DA)
 
 ## Event streams (read)
 
