@@ -245,3 +245,14 @@ View data
 ## Hub stats
 
 ![hub stats](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/hub_stats.png)
+
+
+## Verify in Matricon
+
+### The event hub
+
+![matrocin ev](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_ev.png)
+
+### OPC da
+
+![matrocin opc](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_opc.png)
