@@ -139,6 +139,10 @@ Now at the bottom, make the format.
 ```
 ![schema](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/schema.png)
 
+Enable the stream and press apply
+
+![enable_cogent](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/enable_cogent.png)
+
 https://cogentdatahub.com/library/documentation/
 
 
