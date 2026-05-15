@@ -227,3 +227,8 @@ Now, any OPC DA client can connect to Cogent directly and see your tag1, tag2, a
 
 
 ![opcda](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opcda.png)
+
+
+View data
+
+![opc data](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opc_data.png)
