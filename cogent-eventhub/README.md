@@ -123,7 +123,7 @@ Configure cogent
 ![cogent hub](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/cogent_hub.png)
 
 
-Now at the bottom, make the format.
+Now at the bottom in paration settings press the 3 ..., make the format.
 
 * Test a message, add it to sample input
 * Generate a schema
