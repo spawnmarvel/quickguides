@@ -265,9 +265,24 @@ Bridge to OPC DA
 
 ## Verify in Matricon
 
-### The event hub
+### The event hub data and OPC Da data
 
-![matrocin ev](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_ev.png)
+Iter x.
 
-### OPC da
+![matricon_both](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_both.png)
+
+Iter x + x.
+
+![matricon_both2](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/matricon_both2.png)
+
+Restart Cogent and verify reconnect to event hub after.
+
+![restart](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/restart.png)
+
+Data success
+
+![after restart](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/after_restart.png)
+
+
+
 
