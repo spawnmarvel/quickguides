@@ -212,3 +212,18 @@ If you want to see the "Start to Finish" history within Cogent, you have two mai
 DataHub Historian: You must enable the Historian feature in Cogent. This will take the live stream and write every change into a local file or SQL database. You can then view the "start to finish" data in a Trend graph or a table.
 
 Event Logs: You can check the internal logs of the Azure Event Hub connection in Cogent to see the raw sequence of incoming strings, but this isn't meant for monitoring values.
+
+
+Acting as an OPC DA Server
+If you don't have an existing OPC DA server and you just want an external OPC DA client (like an old HMI) to read the Azure data, you can make Cogent act as the Server:
+
+* Go to OPC DA -> OPC DA Server.
+
+* Check Act as an OPC DA Server.
+
+* Select the Azure Domain as the source.
+
+Now, any OPC DA client can connect to Cogent directly and see your tag1, tag2, and tag3 as if they were local PLC tags.
+
+
+![opcda](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/opcda.png)
