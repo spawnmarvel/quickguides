@@ -223,6 +223,10 @@ If you don't have an existing OPC DA server and you just want an external OPC DA
 
 * Select the Azure Domain as the source.
 
+* Click on Configure Items or Select Items.
+
+* Highlight your Azure tags (tag1, tag2, tag3) and add them to the "Exposed" list.
+
 Now, any OPC DA client can connect to Cogent directly and see your tag1, tag2, and tag3 as if they were local PLC tags.
 
 
