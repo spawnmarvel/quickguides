@@ -1,5 +1,6 @@
 # Cogent and event hub / kafka v11 with python as sender
 
+* Local machine running Cogent
 * Azure Infrastructure Setup
 * Data Production with Python
 * Cogent DataHub Configuration (Read)
