@@ -179,33 +179,3 @@ This is so you can easy measure if you loose some values and reciever end.
 
 ![tag simulator](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/tag_simu.png)
 
-## Read the full partion with python
-
-* Edit the policy to also have listen, not only send.
-
-run script
-```py
-python .\read_all.py
-Connecting directly to Partition 0 from the START of the window...
-[2026-05-18T18:07:36.317979+00:00] Part: 0 | Tag: tag1 | Value: 42.95 | Quality: Good
-[2026-05-18T18:07:36.318225+00:00] Part: 0 | Tag: tag2 | Value: 11.14 | Quality: Good
-[2026-05-18T18:07:36.318334+00:00] Part: 0 | Tag: tag3 | Value: 1.71 | Quality: Good
-[2026-05-18T18:07:41.353198+00:00] Part: 0 | Tag: tag1 | Value: 40.51 | Quality: Good
-[2026-05-18T18:07:41.353494+00:00] Part: 0 | Tag: tag2 | Value: 17.64 | Quality: Good
-[2026-05-18T18:07:41.353605+00:00] Part: 0 | Tag: tag3 | Value: 0.09 | Quality: Good
-[2026-05-18T18:07:46.404679+00:00] Part: 0 | Tag: tag1 | Value: 48.31 | Quality: Good
-[2026-05-18T18:07:46.404773+00:00] Part: 0 | Tag: tag2 | Value: 12.18 | Quality: Good
-[2026-05-18T18:07:46.404802+00:00] Part: 0 | Tag: tag3 | Value: 2.13 | Quality: Good
-[2026-05-18T18:07:51.437593+00:00] Part: 0 | Tag: tag1 | Value: 44.65 | Quality: Good
-[2026-05-18T18:07:51.437865+00:00] Part: 0 | Tag: tag2 | Value: 17.63 | Quality: Good
-[2026-05-18T18:07:51.437996+00:00] Part: 0 | Tag: tag3 | Value: 4.77 | Quality: Good
-[2026-05-18T18:07:56.467679+00:00] Part: 0 | Tag: tag1 | Value: 44.21 | Quality: Good
-[2026-05-18T18:07:56.467774+00:00] Part: 0 | Tag: tag2 | Value: 11.73 | Quality: Good
-[2026-05-18T18:07:56.467804+00:00] Part: 0 | Tag: tag3 | Value: 0.81 | Quality: Good
-[2026-05-18T18:08:01.499738+00:00] Part: 0 | Tag: tag1 | Value: 46.03 | Quality: Good
-[2026-05-18T18:08:01.499999+00:00] Part: 0 | Tag: tag2 | Value: 18.97 | Quality: Good
-[2026-05-18T18:08:01.500110+00:00] Part: 0 | Tag: tag3 | Value: 1.19 | Quality: Good
-[2026-05-18T18:08:06.536081+00:00] Part: 0 | Tag: tag1 | Value: 48.78 | Quality: Good
-[2026-05-18T18:08:06.536336+00:00] Part: 0 | Tag: tag2 | Value: 18.91 | Quality: Good
-[2026-05-18T18:08:06.536447+00:00] Part: 0 | Tag: tag3 | Value: 3.32 | Quality: Good
-```
