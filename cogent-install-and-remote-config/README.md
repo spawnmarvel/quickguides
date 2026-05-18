@@ -1,6 +1,20 @@
 
 # Cogent install
 
+
+## Upgrading to a new version
+
+Minor
+
+* The new version will automatically pick up any existing licenses and configuration.
+
+Major
+
+* Install the new DataHub archive over your existing software.
+* The installer will automatically detect your existing license and configuration.
+
+https://cogentdatahub.com/library/documentation/
+
 ## Video Remote Config and DataHub as a Windows Service
 
 
