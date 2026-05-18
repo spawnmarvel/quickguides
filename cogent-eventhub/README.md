@@ -145,6 +145,21 @@ Now at the bottom in paration settings press the 3 ..., make the format.
  "value": 0.0
  }
 ```
+
+The code to read a message
+
+```cs
+var name = input.Json["tag"];
+var timestamp = input.Json["timestamp"];
+var quality = input.Json["quality"];
+var value = input.Json["value"];
+
+app.WritePoint (name, value, quality, timestamp)
+
+```
+
+* Save the single point template.
+
 ![schema](https://github.com/spawnmarvel/quickguides/blob/main/cogent-eventhub/images/schema.png)
 
 Enable the stream and press apply
