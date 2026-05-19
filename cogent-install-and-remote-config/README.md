@@ -25,6 +25,15 @@ Test it with v 10 to 11, configs and script C:\CogentBase
 
 ![uinstall](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/uinstall.png)
 
+
+* Cogent Datahub exe properties must be set again.
+
+```ps1
+"C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -P
+
+"C:\Program Files\Cogent\Cogent DataHub\CogentDataHub.exe" -H C:\CogentBase
+```
+* The service manager is ok and service is installed by software using correct path
 * Start cogent and login to remote config
 
 ## Video Remote Config and DataHub as a Windows Service
