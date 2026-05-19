@@ -13,7 +13,19 @@ Major
 * Install the new DataHub archive over your existing software.
 * The installer will automatically detect your existing license and configuration.
 
+ 
 https://cogentdatahub.com/library/documentation/
+
+Test it with v 10 to 11, configs and script C:\CogentBase
+
+* Stop cogent service
+* Run CogentDataHubFull_x64-11.0.3-250707-Windows.zip, unzip and exe
+* Pop up, v 10 is already running as service, do you want to unistall it?
+* Your existing config will not be removed.
+
+![uinstall](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/uinstall.png)
+
+* Start cogent and login to remote config
 
 ## Video Remote Config and DataHub as a Windows Service
 
