@@ -17,6 +17,54 @@ This guide continues from the manual steps in the main [README.md](../README.md)
 
 ---
 
+
+## Verify peer
+
+Scenario                Client settings   Server Setting  Will it work?           
+Strict mTLS (Default)	verify_peer	      verify_peer	    ❌ No (Server rejects expired client cert)
+
+Server-Only Relaxed	   verify_peer	      verify_none	     Yes (Client trusts server; Server ignores client cert date)
+
+Full Relaxed	         verify_none	      verify_none	Yes  (Both sides ignore all dates and signatures)
+
+If you want to keep your remote RabbitMQ server secure while allowing this expired client certificate to connect temporarily, you have two configuration options on the server side:
+
+Option A: Set verify = verify_none on the Server
+
+* This tells the server to completely ignore all validation parameters for any client certificate sent to it.
+
+```ini
+verify_none
+```
+
+Stay with Certificate Auth (mTLS Bypass)
+If you want to keep using the certificate files (even though the client cert is expired), you must change verify=verify_peer to verify=verify_none in the client URI, and keep your certificate paths.
+
+```ini
+{uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_none&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]}
+```
+
+Note: As we uncovered earlier, some Erlang/RabbitMQ combinations will still fail auth_mechanism=external under a global verify_none server setting because the identity parsing is skipped. If it fails, use Choice B).
+
+Option B: Turn off Client Certificate Requirement entirely
+
+* Alternatively, if you don't want to change the global verification mode, you can change the server's rabbitmq.conf to stop demanding client certificates entirely:
+
+
+```ini
+ssl_options.fail_if_no_peer_cert = false
+```
+
+If you change the remote server's configuration to ssl_options.fail_if_no_peer_cert = false, it means the server no longer demands a client certificate. It will happily accept standard TLS connections that only use a username and password.
+
+
+```ini
+{uris, ["amqps://pdp-shovel-1:password@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&verify=verify_peer&server_name_indication=pdp-shovel-2&heartbeat=15"]}
+```
+
+
+
+
 ## 1. Generate a New Certificate Request
 
 Use `certreq` to create a new certificate request:
