@@ -197,6 +197,10 @@ Result, add as many tags as you like in tags.txt, and edit updateSecs, all tags 
 
 This is so you can easy measure if you loose some values and reciever end.
 
+Remember to check this setting on the OPC da node, Manually select items, then click ok.
+
+![manual](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/manual.png)
+
 
 ![tag simulator](https://github.com/spawnmarvel/quickguides/blob/main/cogent-install-and-remote-config/images/tag_simu.png)
 
