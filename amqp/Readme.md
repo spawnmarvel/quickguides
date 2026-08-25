@@ -258,6 +258,7 @@ Latest News, https://www.openssl.org/
 
 * 14-Dec-2021OpenSSL 1.1.1m is now available, including bug fixes
 * For this you need OpenSSL 1.1.1 or lower (v 3 has an issue with -legacy and more, maybe fixed in the future)
+* When installing openssl, next, next, next and select /bin dir befoore install, not windows system dir
 
 </p>
 </details>
