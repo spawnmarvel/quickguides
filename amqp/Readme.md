@@ -335,14 +335,18 @@ RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
 
 Validate advanced.config
 ```ps1
+# You can validate the advanced.config file for syntax errors
+
 & "C:\Program Files\Erlang OTP\bin\erl.exe" -noshell -eval "case file:consult('advanced.config') of {ok, _} -> io:format('~n--- CONFIG VALID ---~n'); {error, {L, M, E}} -> io:format('~n--- SYNTAX ERROR Line ~p: ~s ---~n', [L, M:format_error(E)]) end, halt()."
 
---- CONFIG VALID ---
+# --- CONFIG VALID ---
 
+
+# You can format (remove space, empty lines etc) for the advanced.config
 
 & "C:\Program Files\Erlang OTP\bin\erl.exe" -noshell -eval "case file:consult('advanced.config') of {ok, Terms} -> Formatted = lists:map(fun(Term) -> io_lib:format('~p.~n~n', [Term]) end, Terms), file:write_file('advanced.config', Formatted), io:format('~n--- CONFIG FORMATTED ---~n'); {error, {L, M, E}} -> io:format('~n--- CANNOT FORMAT: SYNTAX ERROR Line ~p: ~s ---~n', [L, M:format_error(E)]) end, halt()."
 
---- CONFIG FORMATTED ---
+# --- CONFIG FORMATTED ---
 
 ```
 * 8 Make the queues on VM1, if the shovel is running then 9
