@@ -258,7 +258,7 @@ ssl_options.fail_if_no_peer_cert = false
 // the is unsecure, but we can check if everything works before we set up mtls
 ```
 
-While makeing the shovel you can:
+While making the shovel you can:
 
 Validate and format the advanced.config so it goes a bit faster.
 
