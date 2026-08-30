@@ -100,6 +100,16 @@ https://www.rabbitmq.com/configure.html
 * This would help avoid unnecessary confusion and Windows service re-installations.
 * Make advanced.config (with content [].) and rabbitmq.conf in the location of value example for RABBITMQ_BASE (c:software)
 
+Note: Cookie and rabbitmqctl bat issue
+
+* C:\Windows\System32\config\systemprofile\.erlang.cookie 
+* C:\Windows\.erlang.cookie
+
+```ps1
+# Place the file in the following location:
+C:\Users\<your user profile>
+```
+
 ## Configure for mtls
 
 ## Misc
