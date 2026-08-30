@@ -5,8 +5,9 @@ https://www.rabbitmq.com/shovel.html
 
 ## Table of Contents
 
-- [AMQP Shovel MTLS RFC-6125](#amqp-shovel-mtls-rfc-6125)
-* [## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol](#iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol)
+- [Useful information](#Useful-information)
+
+- [## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol](#iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol)
 * [## Open standard](#open-standard)
 * [## Server Identity Check RFC-6125](#server-identity-check-rfc-6125)
 * [## Mutal TLS](#mutal-tls)
@@ -54,6 +55,7 @@ https://www.rabbitmq.com/shovel.html
 
 
 
+## Useful information
 
 ## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
 AMQP provides a platform-agnostic method for ensuring information is safely transported between applications, among organizations, within mobile infrastructures, and across the Cloud. [...]
