@@ -10,7 +10,7 @@ https://www.oasis-open.org/news/pr/iso-and-iec-approve-oasis-amqp-advanced-messa
 
 
 ## Open standard
-AMQP v1.0 is an international standard that is ISO and IEC approved as ISO/IEC 19464:2014.
+AMQP v1.0 is an international open standard that is ISO and IEC approved as ISO/IEC 19464:2014.
 There are many reasons to develop an open standard. One of these reasons is easily implied by the term “open standard.” 
 
 With AMQP being an open standard messaging protocol it’s much easier for completely different software systems to communicate without requiring a lot of extra overhead; 
