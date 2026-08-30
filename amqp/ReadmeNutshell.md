@@ -98,7 +98,28 @@ How to generate certificates:
 
 Many ways he says, the easy way and right way is to use a internal PKI and OpenSSL
 
-* 
+* A full PKI, https://github.com/spawnmarvel/todo-and-current/blob/main/pki_store/openssl.cnf
+
+or 
+
+* A minimal PKI, https://github.com/spawnmarvel/todo-and-current/blob/main/pki_store/pki_store_minmal_root_and_server_cert_client_server_auth/README.md
+
+or
+
+A request.inf file, certreq and a cert store to by it from, but, there is one issue, the shovel applications requires the
+
+```ini
+extendedKeyUsage        = serverAuth, clientAuth
+```
+
+to work, the shovel is a client and server (VM1), the server (VM2) is just a server.
+
+So in 2026, Removal of the Client Authentication EKU from TLS Server Certificates – What You Need to Know:
+
+* https://www.ssl.com/blogs/removal-of-the-client-authentication-eku-from-tls-server-certificates-what-you-need-to-know/
+
+"Mutual TLS (mTLS) and Client Cert Scenarios: If you were using a TLS server certificate for client authentication, you will need to obtain a separate certificate with the clientAuth EKU from another source. " aka go internal PKI.
+
 
 ---
 
