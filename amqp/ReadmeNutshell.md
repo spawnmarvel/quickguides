@@ -119,7 +119,7 @@ Note: Cookie and rabbitmqctl bat issue
 * C:\Windows\.erlang.cookie
 
 ```ps1
-# Place the file in the following location:
+# Place the file in the following location, if you get an error running rabbitmqctl:
 C:\Users\<your user profile>
 ```
 
