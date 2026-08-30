@@ -76,9 +76,9 @@ Software (version example):
 * otp_win64_24.2 
 * rabbitmq-server-3.9.12
 * Win64 OpenSSL v1.1.1m (msi, Installs the most commonly used essentials of Win64 OpenSSL)
+* Get OpenSSL https://slproweb.com/products/Win32OpenSSL.html
 
-* https://slproweb.com/products/Win32OpenSSL.html
-
+---
 
 1. Install Erlang (admin)
 
@@ -90,6 +90,8 @@ ERLANG_HOME=C:\Program Files\erl-24.2 (i.e version)
 
 echo %ERLANG_HOME%
 ```
+
+---
 
 2. Set RabbitMQ environments
 
@@ -109,6 +111,35 @@ Note: Cookie and rabbitmqctl bat issue
 # Place the file in the following location:
 C:\Users\<your user profile>
 ```
+
+Set this before install RabbitMQ, use "Edit the systems environment variables gui"
+
+```cmd
+# Set this before install, preferable to to data disk, i.e F:
+RABBITMQ_BASE=c:\software
+RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
+RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
+```
+
+3. Install RabbitMQ (admin)
+
+Remember the cookie, if there is an issue.
+
+4. VM1 (Shovel client)
+
+```cmd
+# cd to sbin
+rabbitmq-plugins list
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-plugins enable rabbitmq_shovel
+rabbitmq-plugins enable rabbitmq_shovel_management
+
+# To list the enabled plugins
+rabbitmq-plugins list -e 
+
+```
+
+* 4.1 VM2 (Server) Enable rabbitmq_management, rabbitmq_auth_mechanism_ssl [For x.509 auth](https://www.rabbitmq.com/docs/plugins)
 
 ## Configure for mtls
 

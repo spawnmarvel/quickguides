@@ -314,7 +314,7 @@ C:\Users\<your user profile>
 RABBITMQ_BASE=c:\software
 RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
 RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
-``
+```
 
 * 3 Install RabbitMQ (admin)
 
