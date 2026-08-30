@@ -3,6 +3,58 @@
 https://www.rabbitmq.com/shovel.html
 * Shovel plugin
 
+## Table of Contents
+
+* [# AMQP Shovel MTLS RFC-6125](#amqp-shovel-mtls-rfc-6125)
+* [## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol](#iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol)
+* [## Open standard](#open-standard)
+* [## Server Identity Check RFC-6125](#server-identity-check-rfc-6125)
+* [## Mutal TLS](#mutal-tls)
+* [## Basic concepts of RabbitMQ:](#basic-concepts-of-rabbitmq)
+* [## AMQP Shovel MTLS URI with SNI and RFC-6125](#amqp-shovel-mtls-uri-with-sni-and-rfc-6125)
+* [## Shovel (amqp_client.ssl_options)](#shovel-amqp_clientssl_options)
+* [## SSL](#ssl)
+  * [##### 2709 Encrypt in init (Encode, Decode)](#2709-encrypt-in-init-encode-decode)
+* [## Authentication](#authentication)
+* [## Scenario and roles for this test:](#scenario-and-roles-for-this-test)
+* [## Dependencies](#dependencies)
+* [## Installing](#installing)
+* [## Environment](#environment)
+  * [### TCP 5671 configuration (test shovel communication) AMQP:](#tcp-5671-configuration-test-shovel-communication-amqp)
+  * [### SSL VM2 Server:](#ssl-vm2-server)
+  * [### 5 Update config VM2 Server:](#5-update-config-vm2-server)
+    * [#### rabbitmq.conf (easier format)](#rabbitmqconf-easier-format)
+  * [### 5.1 Update config VM1 Client:](#51-update-config-vm1-client)
+  * [### Note: if you do NOT get the behaviour mentioned above: use TCP Viewer and check connection with AMQP, then switch to AMQPS:](#note-if-you-do-not-get-the-behaviour-mentioned-above-use-tcp-viewer-and-check-connection-with-amqp-then-switch-to-amqps)
+  * [### TLS:](#tls)
+  * [### 6 Before we can configure mTLS (Client and Server): We need to have both CRS's approved for verify_peer:](#6-before-we-can-configure-mtls-client-and-server-we-need-to-have-both-crss-approved-for-verify_peer)
+    * [#### 6.1 But we can verify_peer from client if we have all server certificates and server CA's, go to section:11.03.2022 Update: Before SSL VM1 Client](#61-but-we-can-verify_peer-from-client-if-we-have-all-server-certificates-and-server-cas-go-to-section11032022-update-before-ssl-vm1-client)
+  * [### 7 Make Bundle of Root CA in this order:](#7-make-bundle-of-root-ca-in-this-order)
+  * [### SSL VM1 Client:](#ssl-vm1-client)
+  * [### 8 Update config VM1 Client:](#8-update-config-vm1-client)
+  * [### 8 Update config VM2 server:](#8-update-config-vm2-server)
+  * [### 9 Update config VM2 server](#9-update-config-vm2-server)
+  * [### TLS:](#tls-1)
+  * [### mTLS:](#mtls)
+* [## 10 Example automatic setup of queues, topic.](#10-example-automatic-setup-of-queues-topic)
+  * [### You can now the patch server, restart RabbitMQ and all queues with configuration will stay.](#you-can-now-the-patch-server-restart-rabbitmq-and-all-queues-with-configuration-will-stay)
+* [## 11 x509 (TLS/SSL) certificate Authentication Mechanism](#11-x509-tlsssl-certificate-authentication-mechanism)
+    * [#### Username Extraction from Certificate](#username-extraction-from-certificate)
+    * [#### Distinguished Name](#distinguished-name)
+    * [#### Subject Alternative Name](#subject-alternative-name)
+    * [#### Common Name](#common-name)
+    * [#### 11.1 Implement X.509](#111-implement-x509)
+  * [### After you have installed RabbitMQ, navigate to Shovel Management. URI examples is available on the webpage.](#after-you-have-installed-rabbitmq-navigate-to-shovel-management-uri-examples-is-available-on-the-webpage)
+  * [### mTLS: Upgraded to use x509 (TLS/SSL) certificate Authentication Mechanism and no credentials, login is from certificate CN and rabbit_auth_backend_internal does authorization.](#mtls-upgraded-to-use-x509-tlsssl-certificate-authentication-mechanism-and-no-credentials-login-is-from-certificate-cn-and-rabbit_auth_backend_internal-does-authorization)
+* [## 13 Common RabbitMQ Mistakes and How to Avoid Them](#13-common-rabbitmq-mistakes-and-how-to-avoid-them)
+* [## 14 rabbitmqctl(8)](#14-rabbitmqctl8)
+* [## 15 Dynamic shovel using CLI tools](#15-dynamic-shovel-using-cli-tools)
+* [## Erlang 26](#erlang-26)
+    * [#### Erlang 26 Info general](#erlang-26-info-general)
+
+
+
+
 ## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol
 AMQP provides a platform-agnostic method for ensuring information is safely transported between applications, among organizations, within mobile infrastructures, and across the Cloud. [...]
 
