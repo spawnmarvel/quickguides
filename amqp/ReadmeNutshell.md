@@ -248,14 +248,14 @@ A tls shovel is configured like this for easy troubleshooting.
 * VM2 configure tls 5671 for external and 562 for internal connections
 * VM2 configure
 
-```json
+```ini
 ssl_options.verify     = verify_peer
 ssl_options.fail_if_no_peer_cert = true
 
-// change to:
+#change to:
 ssl_options.verify     = verify_none
 ssl_options.fail_if_no_peer_cert = false
-// the is unsecure, but we can check if everything works before we set up mtls
+# the is unsecure, but we can check if everything works before we set up mtls
 ```
 
 While making the shovel you can:
@@ -291,5 +291,110 @@ Validate and format the advanced.config so it goes a bit faster.
 We now have a server VM1 and a client running a shovel to the server VM2, TCP 5671 Success AMQP.
 
 ## Configure for mtls
+
+Now that you have both certificates and the tls shovel is success, we can configure for mtls and X.509 authentication.
+
+
+VM1 advanced.config
+
+```erlang
+[
+ %% RabbitMQ Shovel Plugin
+ %%
+ %% See https://www.rabbitmq.com/docs/shovel for details
+ %% ----------------------------------------------------------------------------
+  {rabbitmq_shovel,
+  [ {shovels, [ {shovel_put_X509,
+                  [ {source,
+                      [ {protocol, amqp091},
+                        {uris, [ "amqp://" ]},
+                        {declarations, [ {'queue.declare',
+                                            [{queue, <<"AZQueueDataX509">> },  durable]},
+				            {'exchange.declare',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {type, <<"topic">>},
+                                              durable
+                                            ]},
+                                          {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"AZQueueDataX509">>},
+					 {routing_key, <<"AZQueueDataRouteX509">>}
+                                            ]}
+                                          ]},
+                        {queue, <<"AZQueueDataX509">>},
+                        {prefetch_count, 1}
+                      ]},
+                    {destination,
+                      [ {protocol, amqp091},
+                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {declarations, [
+					{'queue.declare',
+                                            [{queue, <<"AZQueueDataX509">> },  durable]},
+					 {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"AZQueueDataX509">>},
+					      {routing_key, <<"AZQueueDataRouteX509">>}
+                                            ]}
+					 ]},
+                        {publish_properties, [ {delivery_mode, 2} ]},
+                        {add_forward_headers, true}
+                          ]},
+                    {ack_mode, on_confirm},
+                    {reconnect_delay, 15}
+                  ]}
+				   %% next shovel add comma
+				   %% ,
+				   %% {shovel_put_X509_2, [
+				   %% ]}
+		
+		
+              ]}
+  ]}].
+```
+
+VM2 rabbitmq.conf
+
+```ini
+
+# ...
+
+# ssl
+listeners.ssl.default = 5671
+ssl_options.cacertfile = C:\OP\SSL\2023\ca_public.bundle
+ssl_options.certfile   = C:\OP\SSL\2023\public.crt.pem
+ssl_options.keyfile    = C:\OP\SSL\2023\private.key.pem
+ssl_options.verify     = verify_peer
+ssl_options.fail_if_no_peer_cert = true
+## When using a client certificate signed by an intermediate CA, 
+## it may be necessary to configure RabbitMQ server to use a higher verification depth.
+## The default depth is 1.
+## https://www.rabbitmq.com/ssl.html#peer-verification-depth
+ssl_options.depth  = 2
+
+# ....
+## TLS handshake timeout, in milliseconds.
+ssl_handshake_timeout = 15000
+## To use auth-mechanism-ssl, the EXTERNAL mechanism should be enabled:
+auth_mechanisms.1 = PLAIN
+auth_mechanisms.2 = AMQPLAIN
+auth_mechanisms.3 = EXTERNAL
+
+## To force x509 certificate-based authentication on all clients,
+## exclude all other mechanisms (note: this will disable password-based
+## authentication even for the management UI!):
+# auth_mechanisms.1 = EXTERNAL
+
+## To use the TLS cert's CN instead of its DN as the username
+ssl_cert_login_from   = common_name
+
+## internal for rabbit_auth_backend_internal,"internal" is an alias for rabbit_auth_backend_internal
+## https://www.rabbitmq.com/access-control.html
+auth_backends.1   = rabbit_auth_backend_internal
+
+# tls version, disables versions older than TLSv1.2
+ssl_options.versions.1 = tlsv1.2
+```
+
+
 
 ## Misc
