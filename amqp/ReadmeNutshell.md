@@ -71,6 +71,35 @@ Basic concepts of RabbitMQ and the shovel application.
 
 ## Install for tls
 
+Software (version example):
+
+* otp_win64_24.2 
+* rabbitmq-server-3.9.12
+* Win64 OpenSSL v1.1.1m (msi, Installs the most commonly used essentials of Win64 OpenSSL)
+
+* https://slproweb.com/products/Win32OpenSSL.html
+
+
+1. Install Erlang (admin)
+
+Set home after
+
+```cmd
+# Path to bin, set this after, example
+ERLANG_HOME=C:\Program Files\erl-24.2 (i.e version)
+
+echo %ERLANG_HOME%
+```
+
+2. Set RabbitMQ environments
+
+https://www.rabbitmq.com/configure.html
+
+* In the context of deployment automation this means that environment variables such as 
+* RABBITMQ_BASE and RABBITMQ_CONFIG_FILE should ideally be set before RabbitMQ is installed. 
+* This would help avoid unnecessary confusion and Windows service re-installations.
+* Make advanced.config (with content [].) and rabbitmq.conf in the location of value example for RABBITMQ_BASE (c:software)
+
 ## Configure for mtls
 
 ## Misc
