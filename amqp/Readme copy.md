@@ -66,7 +66,7 @@ Basic concepts of RabbitMQ and the shovel application.
 | Configuration File  | Format Used                            | Purpose                             |
 | ------------------- | -------------------------------------- | ----------------------------------- |
 | rabbitmq.conf       | New style format (sysctl or ini-like)  | Should be used for most settings.   |
-| advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format, like static shovels |
+| advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format, like static shovels. |
 
 
 ## Install for tls
