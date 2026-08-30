@@ -107,7 +107,7 @@ should ideally be set before RabbitMQ is installed.
 
 This would help avoid unnecessary confusion and Windows service re-installations.
 
-Add []. ti the advanced.config, that is the empty format and place advanced.config and rabbitmq.conf in the location of RABBITMQ_BASE ( example, c:software)
+Add []. inside the advanced.config, that is the empty erlang format and place advanced.config and rabbitmq.conf in the location of RABBITMQ_BASE ( example, c:software)
 
 Note: Cookie and rabbitmqctl bat issue
 
