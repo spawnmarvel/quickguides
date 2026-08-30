@@ -97,10 +97,17 @@ echo %ERLANG_HOME%
 
 https://www.rabbitmq.com/configure.html
 
-* In the context of deployment automation this means that environment variables such as 
-* RABBITMQ_BASE and RABBITMQ_CONFIG_FILE should ideally be set before RabbitMQ is installed. 
-* This would help avoid unnecessary confusion and Windows service re-installations.
-* Make advanced.config (with content [].) and rabbitmq.conf in the location of value example for RABBITMQ_BASE (c:software)
+In the context of deployment automation this means that environment variables such as:
+
+* RABBITMQ_BASE
+* RABBITMQ_CONFIG_FILE 
+* (RABBITMQ_ADVANCED_CONFIG_FILE) 
+
+should ideally be set before RabbitMQ is installed. 
+
+This would help avoid unnecessary confusion and Windows service re-installations.
+
+Add []. ti the advanced.config, that is the empty format and place advanced.config and rabbitmq.conf in the location of RABBITMQ_BASE ( example, c:software)
 
 Note: Cookie and rabbitmqctl bat issue
 
@@ -139,7 +146,24 @@ rabbitmq-plugins list -e
 
 ```
 
-* 4.1 VM2 (Server) Enable rabbitmq_management, rabbitmq_auth_mechanism_ssl [For x.509 auth](https://www.rabbitmq.com/docs/plugins)
+* 4.1 VM2 (Server)
+
+```cmd
+# cd to sbin
+rabbitmq-plugins list
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
+
+# To list the enabled plugins
+rabbitmq-plugins list -e 
+
+```
+
+rabbitmq_auth_mechanism_ssl is for x.509 authentication with certificates.
+
+* https://www.rabbitmq.com/docs/plugins
+
+
 
 ## Configure for mtls
 
