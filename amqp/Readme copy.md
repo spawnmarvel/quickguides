@@ -5,7 +5,7 @@ https://www.rabbitmq.com/shovel.html
 
 ## Table of Contents
 
-* [# AMQP Shovel MTLS RFC-6125](#amqp-shovel-mtls-rfc-6125)
+- [AMQP Shovel MTLS RFC-6125](#amqp-shovel-mtls-rfc-6125)
 * [## ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol](#iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol)
 * [## Open standard](#open-standard)
 * [## Server Identity Check RFC-6125](#server-identity-check-rfc-6125)
