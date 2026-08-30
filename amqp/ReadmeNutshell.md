@@ -82,7 +82,7 @@ Software (version example):
 
 1. Install Erlang (admin)
 
-Set home after
+Set ERLANG_HOME after it is installed, use "Edit the systems environment variables gui"
 
 ```cmd
 # Path to bin, set this after, example
