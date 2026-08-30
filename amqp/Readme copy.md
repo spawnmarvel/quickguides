@@ -33,15 +33,21 @@ AMQP v1.0 is an international open standard that is ISO and IEC approved as ISO/
 * https://www.oasis-open.org/news/pr/iso-and-iec-approve-oasis-amqp-advanced-message-queuing-protocol/
 
 
+--- 
+
 Server Identity Check RFC-6125.
 
 Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)
 
 * https://datatracker.ietf.org/doc/html/rfc6125
 
+--- 
+
 Mtls
 
 * https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
+
+---
 
 Basic concepts of RabbitMQ and the shovel application.
 
@@ -55,11 +61,12 @@ Basic concepts of RabbitMQ and the shovel application.
 
 * https://github.com/rabbitmq/rabbitmq-server/blob/v3.7.x/deps/rabbit/docs/rabbitmq.config.example
 
+---
 
 | Configuration File  | Format Used                            | Purpose                             |
 | ------------------- | -------------------------------------- | ----------------------------------- |
 | rabbitmq.conf       | New style format (sysctl or ini-like)  | Should be used for most settings.   |
-| advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format |
+| advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format, like static shovels |
 
 
 ## Install for tls
