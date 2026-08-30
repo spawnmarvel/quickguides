@@ -290,6 +290,10 @@ Validate and format the advanced.config so it goes a bit faster.
 
 We now have a server VM1 and a client running a shovel to the server VM2, TCP 5671 Success AMQP.
 
+We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI. This can be enough in many situations.
+
+
+
 ## Configure for mtls
 
 Now that you have both certificates and the tls shovel is success, we can configure for mtls and X.509 authentication.
@@ -360,9 +364,9 @@ VM2 rabbitmq.conf
 
 # ssl
 listeners.ssl.default = 5671
-ssl_options.cacertfile = C:\OP\SSL\2023\ca_public.bundle
-ssl_options.certfile   = C:\OP\SSL\2023\public.crt.pem
-ssl_options.keyfile    = C:\OP\SSL\2023\private.key.pem
+ssl_options.cacertfile = C:\OP\SSL\pdp-shovel-2.ca-bundle
+ssl_options.certfile   = C:\OP\SSL\public.crt.pem
+ssl_options.keyfile    = C:\OP\SSL\private.key.pem
 ssl_options.verify     = verify_peer
 ssl_options.fail_if_no_peer_cert = true
 ## When using a client certificate signed by an intermediate CA, 
@@ -395,6 +399,9 @@ auth_backends.1   = rabbit_auth_backend_internal
 ssl_options.versions.1 = tlsv1.2
 ```
 
+We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI.
+
+Upgraded to a trust between the client and server CA's. Forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
 
 
 ## Misc
