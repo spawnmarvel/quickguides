@@ -197,7 +197,7 @@ rabbitmq-plugins list -e
 
 ```
 
-Example list
+Example list:
 
 ```cmd
 c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins list -e
@@ -213,7 +213,7 @@ Listing plugins with pattern ".*" ...
 [E ] rabbitmq_stream            3.12.1
 ```
 
-Enable a new
+Enable a new plugin if needed:
 
 ```cmd
 c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins enable rabbitmq_trust_store
