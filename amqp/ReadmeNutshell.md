@@ -197,6 +197,46 @@ rabbitmq-plugins list -e
 
 ```
 
+Example
+
+```cmd
+c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins list -e
+Listing plugins with pattern ".*" ...
+ Configured: E = explicitly enabled; e = implicitly enabled
+ | Status: [failed to contact rabbit@BER-0803 - status not shown]
+ |/
+[E ] rabbitmq_management        3.12.1
+[e ] rabbitmq_management_agent  3.12.1
+[E ] rabbitmq_mqtt              3.12.1
+[e ] rabbitmq_shovel            3.12.1
+[E ] rabbitmq_shovel_management 3.12.1
+[E ] rabbitmq_stream            3.12.1
+[e ] rabbitmq_web_dispatch      3.12.1
+```
+
+Enable a new
+
+```cmd
+c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins enable rabbitmq_trust_store
+Enabling plugins on node rabbit@BER-0803:
+rabbitmq_trust_store
+The following plugins have been configured:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_mqtt
+  rabbitmq_shovel
+  rabbitmq_shovel_management
+  rabbitmq_stream
+  rabbitmq_trust_store
+  rabbitmq_web_dispatch
+Applying plugin configuration to rabbit@BER-0803...
+The following plugins have been enabled:
+  rabbitmq_trust_store
+
+set 8 plugins.
+Offline change; changes will take effect at broker restart.
+```
+
 ---
 
 5. VM2 (Server)
