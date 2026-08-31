@@ -197,13 +197,13 @@ rabbitmq-plugins list -e
 
 ```
 
-Example
+Example list
 
 ```cmd
 c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins list -e
 Listing plugins with pattern ".*" ...
  Configured: E = explicitly enabled; e = implicitly enabled
- | Status: [failed to contact rabbit@BER-0803 - status not shown]
+ | Status: * = running on rabbit@BER-0803
  |/
 [E ] rabbitmq_management        3.12.1
 [e ] rabbitmq_management_agent  3.12.1
@@ -211,7 +211,6 @@ Listing plugins with pattern ".*" ...
 [e ] rabbitmq_shovel            3.12.1
 [E ] rabbitmq_shovel_management 3.12.1
 [E ] rabbitmq_stream            3.12.1
-[e ] rabbitmq_web_dispatch      3.12.1
 ```
 
 Enable a new
@@ -228,12 +227,11 @@ The following plugins have been configured:
   rabbitmq_shovel_management
   rabbitmq_stream
   rabbitmq_trust_store
-  rabbitmq_web_dispatch
 Applying plugin configuration to rabbit@BER-0803...
 The following plugins have been enabled:
   rabbitmq_trust_store
 
-set 8 plugins.
+set 7 plugins.
 Offline change; changes will take effect at broker restart.
 ```
 
