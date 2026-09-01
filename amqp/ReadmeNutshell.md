@@ -542,7 +542,21 @@ Yes, cryptographically, it is equally secure.
 The underlying encryption (AES/GCM), handshake security, and mutual authentication (mTLS) remain 100% identical whether you sign server and client certificates directly with a Root Certificate Authority (CA) or through an Intermediate CA
 
 
+When your organization owns and controls the PKI infrastructure (such as an internal Microsoft Active Directory Certificate Services (AD CS) instance, HashiCorp Vault, or a dedicated internal CA server), using a direct Root CA for internal mTLS is standard practice and completely fine.
 
+Yes, building a self-managed OpenSSL PKI using .cnf files is completely valid, fully secure, and extremely common for internal industrial/OT infrastructure.
+
+When you manage your own CA using custom OpenSSL configuration files, you maintain total control over key usage, extension flags (SANs, Extended Key Usage), and certificate lifetimes without relying on third-party tools or heavy enterprise PKI software.
+
+
+```txt
+/my-custom-pki/
+├── openssl.cnf           # OpenSSL CA configuration file
+├── ca.key                # Private key of your Root CA (KEEP ON PKI MACHINE ONLY!)
+├── ca.crt                # Public certificate of your Root CA (Distributed to servers)
+├── server.key / server.crt   # Issued to destination server (pdp-shovel-2)
+└── client.key / client.crt   # Issued to source client (pdp-shovel-1)
+```
 
 ## Misc
 
