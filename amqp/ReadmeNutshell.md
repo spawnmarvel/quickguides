@@ -1,7 +1,28 @@
 # AMQP Shovel MTLS with RFC-6125
 
-https://www.rabbitmq.com/shovel.html
-* Shovel plugin
+Shovel plugin
+
+* https://www.rabbitmq.com/shovel.html
+
+Installing on Windows
+
+* https://www.rabbitmq.com/docs/install-windows
+
+rabbitmq / rabbitmq-server Releases list
+
+* https://github.com/rabbitmq/rabbitmq-server/releases
+
+Download Erlang/OTP
+
+* https://www.erlang.org/downloads
+
+RabbitMQ and Erlang/OTP Compatibility Matrix
+
+* https://www.rabbitmq.com/docs/which-erlang
+
+Win32/Win64 OpenSSL
+
+* https://slproweb.com/products/Win32OpenSSL.html
 
 ## Table of Contents
 
