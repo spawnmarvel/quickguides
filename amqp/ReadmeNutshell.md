@@ -33,6 +33,7 @@ Win32/Win64 OpenSSL
 - [Architecture Security Verdict](#architecture-security-verdict)
 - [Strengths of This Production Setup](#strengths-of-this-production-setup)
 - [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
+- [Comparison: Root CA vs. Intermediate CA Architecture](#comparison-root-ca-vs-intermediate-ca-architecture)
 - [Misc](#misc)
 
 
@@ -533,6 +534,15 @@ Confirm the user account corresponding to the certificate CN (pdp-shovel-1) is p
 
 3. CRL / Certificate Revocation Strategy:
 If a client key is ever compromised, ensure you have a process to revoke the certificate or update the CA bundle on the server without causing downtime.
+
+### Comparison: Root CA vs. Intermediate CA Architecture
+
+Yes, cryptographically, it is equally secure.
+
+The underlying encryption (AES/GCM), handshake security, and mutual authentication (mTLS) remain 100% identical whether you sign server and client certificates directly with a Root Certificate Authority (CA) or through an Intermediate CA
+
+
+
 
 ## Misc
 
