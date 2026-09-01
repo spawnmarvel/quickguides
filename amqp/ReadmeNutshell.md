@@ -326,6 +326,9 @@ Now that you have both certificates and the tls shovel is success, we can config
 
 VM1 advanced.config (client)
 
+<details>
+  <summary>Click to expand</summary>
+
 ```erlang
 [
  %% RabbitMQ Shovel Plugin
@@ -381,7 +384,12 @@ VM1 advanced.config (client)
   ]}].
 ```
 
+</details>
+
 VM2 rabbitmq.conf (server)
+
+<details>
+  <summary>Click to expand</summary>
 
 ```ini
 
@@ -428,6 +436,8 @@ We now have a client that trust the server and uses the server CA certificates, 
 
 Upgraded to a trust between the client and server CA's. Forcing the server to only accept a client with a certificate from the trust. SSL/mTLS
 
+
+</details>
 
 ## Misc
 
