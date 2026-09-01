@@ -175,7 +175,7 @@ Add:
 ```json
 []. 
 ```
-inside the advanced.config, that is the empty erlang format and place advanced.config and rabbitmq.conf in the location of RABBITMQ_BASE ( example, c:software)
+inside the advanced.config, that is the empty erlang format and place advanced.config and rabbitmq.conf in the location of RABBITMQ_BASE ( example, F:\RabbitMqStore)
 
 Note: Cookie and rabbitmqctl bat issue
 
@@ -191,9 +191,9 @@ Set this before install RabbitMQ, use "Edit the systems environment variables gu
 
 ```cmd
 # Set this before install, preferable to to data disk, i.e F:
-RABBITMQ_BASE=c:\software
-RABBITMQ_CONFIG_FILE=c:\software\rabbitmq.conf
-RABBITMQ_ADVANCED_CONFIG_FILE=c:\software\advanced.config
+RABBITMQ_BASE=F:\RabbitMqStore
+RABBITMQ_CONFIG_FILE=F:\RabbitMqStore\rabbitmq.conf
+RABBITMQ_ADVANCED_CONFIG_FILE=F:\RabbitMqStore\advanced.config
 ```
 
 ---
@@ -324,7 +324,7 @@ We now have a client that trust the server and uses the server CA certificates, 
 Now that you have both certificates and the tls shovel is success, we can configure for mtls and X.509 authentication.
 
 
-VM1 advanced.config
+VM1 advanced.config (client)
 
 ```erlang
 [
@@ -355,7 +355,7 @@ VM1 advanced.config
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=C:\\testca_store\\bundle\\pdp-shovel-1.ca-bundle&certfile=C:\\testca_store\\client\\client_certificate.pem&keyfile=C:\\testca_store\\client\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
@@ -381,7 +381,7 @@ VM1 advanced.config
   ]}].
 ```
 
-VM2 rabbitmq.conf
+VM2 rabbitmq.conf (server)
 
 ```ini
 
@@ -389,9 +389,9 @@ VM2 rabbitmq.conf
 
 # ssl
 listeners.ssl.default = 5671
-ssl_options.cacertfile = C:\OP\SSL\pdp-shovel-2.ca-bundle
-ssl_options.certfile   = C:\OP\SSL\public.crt.pem
-ssl_options.keyfile    = C:\OP\SSL\private.key.pem
+ssl_options.cacertfile = F:\RabbitMqStore\certs\pdp-shovel-2.ca-bundle
+ssl_options.certfile   = F:\RabbitMqStore\certs\public.crt.pem
+ssl_options.keyfile    = F:\RabbitMqStore\certs\private.key.pem
 ssl_options.verify     = verify_peer
 ssl_options.fail_if_no_peer_cert = true
 ## When using a client certificate signed by an intermediate CA, 
