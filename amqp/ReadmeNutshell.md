@@ -30,6 +30,9 @@ Win32/Win64 OpenSSL
 - [Useful information](#Useful-information)
 - [Install for tls](#install-for-tls)
 - [Configure for mtls](#configure-for-mtls)
+- [Architecture Security Verdict](#architecture-security-verdict)
+- [Strengths of This Production Setup](#strengths-of-this-production-setup)
+- [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
 - [Misc](#misc)
 
 
@@ -326,8 +329,39 @@ Now that you have both certificates and the tls shovel is success, we can config
 
 VM1 advanced.config (client)
 
+1. Overview Answer
+
+Yes, it auto-creates the queues on both hosts.
+
+Because you have included explicit declarations blocks in both the source and destination sections, the Shovel plugin will send those declaration commands over the AMQP connection as soon as it initializes.
+
+2. Local Host (Source) Declarations
+In your source block ("amqp://" connecting to local host):
+
+Auto-creates Queue: Declares durable queue <<"AZQueueDataX509">>.
+
+Auto-creates Exchange: Ensures topic exchange <<"amq.topic">> exists.
+
+Auto-creates Binding: Binds <<"AZQueueDataX509">> to <<"amq.topic">> using routing key <<"AZQueueDataRouteX509">>
+
+3. Remote Host (Destination) Declarations
+In your destination block ("amqps://pdp-shovel-1@xx.xx.xx.xx:5671..." connecting to remote host):
+
+Auto-creates Queue: Declares durable queue <<"AZQueueDataX509">> on the remote broker.
+
+Auto-creates Binding: Binds <<"AZQueueDataX509">> to <<"amq.topic">> with routing key <<"AZQueueDataRouteX509">> on the remote broker.
+
+4. How the Message Routing Works
+Local Host: Messages published to amq.topic with routing key AZQueueDataRouteX509 land in AZQueueDataX509.
+
+Shovel Worker: Reads messages from local queue AZQueueDataX509 with a prefetch count of 1.
+
+Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates and publishes them directly onto the remote host.
+
+
+
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand configuration</summary>
 
 ```erlang
 [
@@ -388,8 +422,36 @@ VM1 advanced.config (client)
 
 VM2 rabbitmq.conf (server)
 
+1. Alignment Analysis
+Yes, the remote host's rabbitmq.conf aligns with your Shovel configuration.
+
+The Shovel connection string you configured on the source host matches every TLS security requirement and authentication setting configured on this remote host.
+
+2. Key Configuration Matches
+Port & Protocol (amqps://...:5671): The remote host exposes TLS on listeners.ssl.default = 5671, matching your Shovel URI.
+
+X.509 Peer Verification: The remote host enforces ssl_options.verify = verify_peer and ssl_options.fail_if_no_peer_cert = true. Your Shovel URI explicitly passes matching query parameters (verify=verify_peer&fail_if_no_peer_cert=true).
+
+External Authentication (auth_mechanism=external): The remote host enables auth_mechanisms.3 = EXTERNAL, allowing the Shovel client to authenticate via its X.509 client certificate rather than a username/password.
+
+Username Mapping (ssl_cert_login_from = common_name): The remote host extracts the Common Name (CN) from your client certificate (client_certificate.pem) and uses it as the RabbitMQ username. In your Shovel URI (amqps://pdp-shovel-1@...), the CN inside client_certificate.pem must be pdp-shovel-1.
+
+TLS Versioning: The remote host restricts connections to ssl_options.versions.1 = tlsv1.2, which modern Erlang OTP releases support out of the box.
+
+3. Critical Gotchas to Check
+
+User Permissions on Remote Host:
+
+Because ssl_cert_login_from = common_name translates the login name to pdp-shovel-1, you must ensure a user named pdp-shovel-1 exists in the remote RabbitMQ internal database with full write/declare permissions on the target vhost (/):
+
+Intermediate CA Chains:
+The remote config explicitly sets ssl_options.depth = 2. Ensure that the CA bundle configured in your Shovel URI (pdp-shovel-1.ca-bundle) includes the complete certificate authority chain leading up to the root CA.
+
+SNI Matching:
+Your Shovel URI specifies server_name_indication=pdp-shovel-2. The SAN (Subject Alternative Name) or CN in the remote server's certificate (public.crt.pem) must match pdp-shovel-2 or the TLS handshake will fail verification.
+
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand configuration</summary>
 
 ```ini
 
@@ -438,6 +500,39 @@ Upgraded to a trust between the client and server CA's. Forcing the server to on
 
 
 </details>
+
+
+### Architecture Security Verdict
+
+Yes, this is an enterprise-grade, highly secure Shovel setup.
+
+By combining mutual TLS (mTLS), hardware-level certificate authentication, strict cipher parameters, and automatic queue topology declarations, this pattern follows defense-in-depth principles for cross-datacenter message routing.
+
+
+### Strengths of This Production Setup
+
+* Cryptographic Identity Verification (mTLS): Enforcing verify_peer and fail_if_no_peer_cert = true on both ends prevents Unauthorized Access and Man-In-The-Middle (MITM) inspection.
+
+* Passwordless Authentication (auth_mechanism = external): Using X.509 client certificates mapped directly via ssl_cert_login_from = common_name removes static plain-text passwords from configuration files and memory.
+
+* Traffic Isolation & TLS 1.2+ Enforced: Restricting connections to modern TLS versions blocks legacy protocol fallback attacks (such as POODLE or BEAST).
+
+* Delivery Guarantees (ack_mode = on_confirm): Shovel will only remove messages from the source queue after receiving an explicit publisher confirm from the remote broker, guaranteeing zero message loss during network drops or restarts.
+
+* Network Interruption Recovery: Parameters like reconnect_delay = 15 and heartbeat = 15 ensure quick detection of dead TCP sockets and silent recovery across WAN connections.
+
+### Remaining Production Hardening Checklist
+
+Before marking the deployment final, verify these operational controls on the host operating systems:
+
+1. Private Key ACLs on Disk:
+Ensure private_key.pem on the source host and private.key.pem on the destination host have restricted Windows ACLs (readable strictly by the system user running the RabbitMQ service, e.g., LOCAL SYSTEM or a dedicated service account).
+
+2. User Permissions on Destination Broker:
+Confirm the user account corresponding to the certificate CN (pdp-shovel-1) is provisioned on the remote host with appropriate write scope:
+
+3. CRL / Certificate Revocation Strategy:
+If a client key is ever compromised, ensure you have a process to revoke the certificate or update the CA bundle on the server without causing downtime.
 
 ## Misc
 
