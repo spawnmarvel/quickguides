@@ -187,6 +187,7 @@ Remember the cookie, if there is an issue.
 
 ```cmd
 # cd to sbin
+
 rabbitmq-plugins.bat list
 # or
 rabbitmq-plugins list
@@ -199,44 +200,7 @@ rabbitmq-plugins list -e
 
 ```
 
-Example list:
-
-```cmd
-c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins list -e
-Listing plugins with pattern ".*" ...
- Configured: E = explicitly enabled; e = implicitly enabled
- | Status: * = running on rabbit@BER-0803
- |/
-[E ] rabbitmq_management        3.12.1
-[e ] rabbitmq_management_agent  3.12.1
-[E ] rabbitmq_mqtt              3.12.1
-[e ] rabbitmq_shovel            3.12.1
-[E ] rabbitmq_shovel_management 3.12.1
-[E ] rabbitmq_stream            3.12.1
-```
-
-Enable a new plugin if needed:
-
-```cmd
-c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins enable rabbitmq_trust_store
-Enabling plugins on node rabbit@BER-0803:
-rabbitmq_trust_store
-The following plugins have been configured:
-  rabbitmq_management
-  rabbitmq_management_agent
-  rabbitmq_mqtt
-  rabbitmq_shovel
-  rabbitmq_shovel_management
-  rabbitmq_stream
-  rabbitmq_trust_store
-Applying plugin configuration to rabbit@BER-0803...
-The following plugins have been enabled:
-  rabbitmq_trust_store
-
-set 7 plugins.
-Offline change; changes will take effect at broker restart.
-```
-
+(View example in misc section if needed.)
 ---
 
 5. VM2 (Server)
@@ -526,4 +490,44 @@ rabbitmqctl.bat list_connections
 
 rabbitmqctl.bat list_consumers
 
+```
+
+4. Plugins
+
+Example list:
+
+```cmd
+c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins list -e
+Listing plugins with pattern ".*" ...
+ Configured: E = explicitly enabled; e = implicitly enabled
+ | Status: * = running on rabbit@BER-0803
+ |/
+[E ] rabbitmq_management        3.12.1
+[e ] rabbitmq_management_agent  3.12.1
+[E ] rabbitmq_mqtt              3.12.1
+[e ] rabbitmq_shovel            3.12.1
+[E ] rabbitmq_shovel_management 3.12.1
+[E ] rabbitmq_stream            3.12.1
+```
+
+Enable a new plugin if needed:
+
+```cmd
+c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>rabbitmq-plugins enable rabbitmq_trust_store
+Enabling plugins on node rabbit@BER-0803:
+rabbitmq_trust_store
+The following plugins have been configured:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_mqtt
+  rabbitmq_shovel
+  rabbitmq_shovel_management
+  rabbitmq_stream
+  rabbitmq_trust_store
+Applying plugin configuration to rabbit@BER-0803...
+The following plugins have been enabled:
+  rabbitmq_trust_store
+
+set 7 plugins.
+Offline change; changes will take effect at broker restart.
 ```
