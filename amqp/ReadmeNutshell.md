@@ -187,6 +187,8 @@ Remember the cookie, if there is an issue.
 
 ```cmd
 # cd to sbin
+rabbitmq-plugins.bat list
+# or
 rabbitmq-plugins list
 rabbitmq-plugins enable rabbitmq_management
 rabbitmq-plugins enable rabbitmq_shovel
@@ -443,3 +445,70 @@ Upgraded to a trust between the client and server CA's. Forcing the server to on
 
 
 ## Misc
+
+
+### RabbitMQ commands
+
+1. Application & Node Management
+
+```cmd
+rabbitmqctl.bat status
+```
+Shoves, name, plugins, config, disk interface etc
+
+2. User & Access Management
+
+```cmd
+
+cd c:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.1\sbin>
+
+rabbitmqctl.bat add_user lima pass123
+Adding user "lima" ...
+Done. Don't forget to grant the user permissions to some virtual hosts! See 'rabbitmqctl help set_permissions' to learn more.
+
+rabbitmqctl.bat change_password lima newpass123
+Changing password for user "lima" ...
+
+
+rabbitmqctl.bat set_user_tags lima administrator
+Setting tags for user "lima" to [administrator] ...
+
+rabbitmqctl.bat set_permissions -p / lima ".*" ".*" ".*"
+Setting permissions for user "lima" in vhost "/" ...
+```
+
+https://www.rabbitmq.com/docs/cli
+
+In order to create a passwordless user, create one with any password that passes validation and clear the password using rabbitmqctl's clear_password command:
+
+```cmd
+>rabbitmqctl.bat add_user x509name "2be-removed"
+Adding user "x509name" ...
+Done. Don't forget to grant the user permissions to some virtual hosts! See 'rabbitmqctl help set_permissions' to learn more.
+
+rabbitmqctl.bat set_user_tags x509name administrator
+
+rabbitmqctl.bat set_permissions -p / x509name ".*" ".*" ".*"
+
+rabbitmqctl clear_password x509name
+Clearing password for user "x509name" ...
+```
+
+https://www.rabbitmq.com/docs/passwords
+
+3. Listing & Monitoring Resources
+
+```cmd
+
+
+rabbitmqctl.bat list_queues
+ 
+rabbitmqctl.bat list_exchanges
+
+rabbitmqctl.bat list_bindings
+
+rabbitmqctl.bat list_connections
+
+rabbitmqctl.bat list_consumers
+
+```
