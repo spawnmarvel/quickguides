@@ -233,7 +233,7 @@ openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openss
 ### Process Overview
 
 1. **Generate on Host A (Secure Machine)**
-   - Create private key and CSR
+   - Create private key and CSR or .pfx file (this requires a password that follows with it)
    - Send CSR to Certificate Authority (CA)
    - Or generate cert and key local
 
@@ -242,7 +242,7 @@ openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openss
    - Or sign the cert and key local
 
 3. **Transfer to App Host (Host B)**
-   - Securely copy private key and certificate
+   - Securely copy private key and certificate or the pfx file
    - Use secure methods: `scp`, `rsync` over SSH
    - Verify that cert and key matches and that all atributtes are present
 
