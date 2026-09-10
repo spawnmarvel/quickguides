@@ -151,7 +151,7 @@ cd "c:\Program Files\OpenSSL-Win64\bin"
 openssl version
 ```
 
-> ✅ Recommended: OpenSSL 1.1.1m 14 Dec 2021 or later
+> ✅ Recommended: OpenSSL 3.1.4 24 Oct 2023 (Library: OpenSSL 3.1.4 24 Oct 2023)or later
 
 ### Extract Private Key
 ```bash
