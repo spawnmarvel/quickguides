@@ -235,13 +235,16 @@ openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openss
 1. **Generate on Host A (Secure Machine)**
    - Create private key and CSR
    - Send CSR to Certificate Authority (CA)
+   - Or generate cert and key local
 
 2. **Get Signed Certificate**
    - CA signs and returns the certificate
+   - Or sign the cert and key local
 
 3. **Transfer to App Host (Host B)**
    - Securely copy private key and certificate
    - Use secure methods: `scp`, `rsync` over SSH
+   - Verify that cert and key matches and that all atributtes are present
 
 ### Important Notes
 
