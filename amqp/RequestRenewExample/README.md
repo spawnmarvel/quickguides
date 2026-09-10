@@ -149,6 +149,7 @@ Check OpenSSL version:
 ```cmd
 cd "c:\Program Files\OpenSSL-Win64\bin"
 openssl version
+OpenSSL 3.1.4 24 Oct 2023 (Library: OpenSSL 3.1.4 24 Oct 2023)
 ```
 
 > ✅ Recommended: OpenSSL 3.1.4 24 Oct 2023 (Library: OpenSSL 3.1.4 24 Oct 2023)or later
