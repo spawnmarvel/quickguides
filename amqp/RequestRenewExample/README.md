@@ -199,7 +199,7 @@ openssl storeutl -noout -text -certs C:\RabbitmqBaseFolder\cert\ca.bundle
 
 ---
 
-## 6. Automate the Process
+## 6. Automate the Process tbd
 
 For automated certificate requests, see [README_auto_ps1.md](README_auto_ps1.md).
 
@@ -220,6 +220,15 @@ certreq -accept certnew.cer
 ## 7. Generate CSR on Different Host
 
 Yes! You can generate the CSR and private key on a different host, then transfer both to your app host for mTLS.
+
+** Just make sure that to check .crt vs key**
+**Rename public.crt.pem to public.crt, 
+
+```bash
+
+# Check the .crt and .key files match by comparing the modulus of each file. If they match, the key pair is valid.
+openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\OP\SSL\private.key.pem | openssl sha256
+```
 
 ### Process Overview
 
