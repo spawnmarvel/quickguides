@@ -189,6 +189,7 @@ openssl x509 -noout -modulus -in C:\my-custom-pki\public.crt | openssl sha256 &&
 ```
 
 ### View CA Bundle
+** You can get info about all certs in the bundle if you need to**
 ```bash
 openssl storeutl -noout -text -certs C:\RabbitmqBaseFolder\cert\ca.bundle
 ```
