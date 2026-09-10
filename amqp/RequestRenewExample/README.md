@@ -188,6 +188,8 @@ openssl x509 -noout -serial -in public.crt.pem
 openssl x509 -noout -modulus -in C:\my-custom-pki\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\my-custom-pki\private.key.pem | openssl sha256
 ```
 
+![cert key and pem](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/cert.png)
+
 ### View CA Bundle
 ** You can get info about all certs in the bundle if you need to**
 ```bash
