@@ -186,7 +186,7 @@ openssl x509 -noout -serial -in public.crt.pem
 **Check .crt vs key**
 **Rename public.crt.pem to public.crt, 
 # Check the .crt and .key files match by comparing the modulus of each file. If they match, the key pair is valid.
-openssl x509 -noout -modulus -in C:\my-custom-pki\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\my-custom-pki\private.key.pem | openssl sha256
+openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\OP\SSL\private.key.pem | openssl sha256
 ```
 
 ![cert key and pem](https://github.com/spawnmarvel/quickguides/blob/main/amqp/images/cert.png)
