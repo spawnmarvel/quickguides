@@ -372,7 +372,7 @@ Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates
 
 #### Notes 17.09.2026
 
-Set this at rabbitmq.conf besides other configuration parameters before you satrt the shovel with ssl parameters.
+Set this at rabbitmq.conf besides other configuration parameters before you start the shovel with ssl parameters.
 
 
 Server remote rabbitmq.conf
