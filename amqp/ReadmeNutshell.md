@@ -388,7 +388,7 @@ Client shovel
 
 ```log
 
-2026-09-17 11:06:33.119000+02:00 [warning] <0.1065.0> Shovel 'shovel_put_xxxx' failed to connect (URI: amqps://10.10.10.10:5671): ACCESS_REFUSED - Login was refused using authentication mechanism EXTERNAL. For details see the broker logfile.
+2026-09-17 11:06:33.119000+02:00 [warning] <0.1065.0> Shovel 'put_x509' failed to connect (URI: amqps://10.10.10.10:5671): ACCESS_REFUSED - Login was refused using authentication mechanism EXTERNAL. For details see the broker logfile.
 
 ```
 
@@ -396,7 +396,7 @@ Server
 
 ```log
 2026-09-17 11:31:27.936000+02:00 [info] <0.222761.0> accepting AMQP connection 44.44.44.444:64427 -> 10.10.10.10:5671
-2026-09-17 11:31:27.936000+02:00 [info] <0.222767.0> connection 44.44.44.444:64428 -> 10.10.10.10:5671 has a client-provided name: Shovel shovel_put_nova_opc
+2026-09-17 11:31:27.936000+02:00 [info] <0.222767.0> connection 44.44.44.444:64428 -> 10.10.10.10:5671 has a client-provided name: Shovel put_x509
 2026-09-17 11:31:27.936000+02:00 [error] <0.222767.0> Error on AMQP connection <0.222767.0> (44.44.44.444:64428 -> 10.10.10.10:5671, state: starting):
 2026-09-17 11:31:27.936000+02:00 [error] <0.222767.0> EXTERNAL login refused: connection peer presented no TLS (x.509) certificate
 
@@ -502,43 +502,228 @@ Your Shovel URI specifies server_name_indication=pdp-shovel-2. The SAN (Subject 
 
 ```ini
 
-# ...
+## RabbitMQ configuration example:
+## https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example
 
-# ssl
+###########################################################################
+## ACCESS CONTROL
+###########################################################################
+
+## The default "guest" user is only permitted to connect from localhost.
+loopback_users.guest = true
+
+###########################################################################
+## RESOURCE LIMITS
+###########################################################################
+
+## Memory high watermark.
+## RabbitMQ will apply flow control when memory usage exceeds 50%.
+## https://www.rabbitmq.com/memory.html
+vm_memory_high_watermark.relative = 0.5
+
+## Minimum free disk space before flow control is activated.
+disk_free_limit.absolute = 5GB
+
+###########################################################################
+## LOGGING
+###########################################################################
+
+## Keep 5 log files, each up to 10 MB.
+log.file.rotation.count = 5
+log.file.rotation.size  = 10485760
+
+###########################################################################
+## AMQP LISTENERS
+###########################################################################
+
+## Standard AMQP listener (no TLS).
+## Used by clients authenticating with username/password.
+##
+## To disable:
+## listeners.tcp = none
+listeners.tcp.default = 5672
+
+## AMQP over TLS (SSL)
 listeners.ssl.default = 5671
-ssl_options.cacertfile = F:\RabbitMqStore\certs\pdp-shovel-2.ca-bundle
-ssl_options.certfile   = F:\RabbitMqStore\certs\public.crt.pem
-ssl_options.keyfile    = F:\RabbitMqStore\certs\private.key.pem
-ssl_options.verify     = verify_peer
-ssl_options.fail_if_no_peer_cert = true
-## When using a client certificate signed by an intermediate CA, 
-## it may be necessary to configure RabbitMQ server to use a higher verification depth.
-## The default depth is 1.
-## https://www.rabbitmq.com/ssl.html#peer-verification-depth
-ssl_options.depth  = 2
 
-# ....
-## TLS handshake timeout, in milliseconds.
+###########################################################################
+## TLS CERTIFICATES
+###########################################################################
+
+## Server certificate presented to TLS clients.
+
+ssl_options.cacertfile = D:\RabbitMqStore\certs\ca_public.bundle
+ssl_options.certfile   = D:\RabbitMqStore\certs\public.crt.pem
+ssl_options.keyfile    = D:\RabbitMqStore\certs\private.key.pem
+
+###########################################################################
+## MUTUAL TLS (mTLS)
+###########################################################################
+
+## Request and verify client certificates.
+## Every client connecting on port 5671 must present a valid
+## X.509 certificate signed by the configured CA.
+##
+## This enables mutual TLS (mTLS):
+## - Client verifies the RabbitMQ server certificate.
+## - RabbitMQ verifies the client certificate.
+##
+## This is required when using EXTERNAL authentication
+## (for example RabbitMQ Shovel with auth_mechanism=external).
+
+ssl_options.verify = verify_peer
+ssl_options.fail_if_no_peer_cert = true
+
+## If client certificates are signed by an intermediate CA,
+## verification depth may need to be increased.
+## Default = 1
+##
+## https://www.rabbitmq.com/ssl.html#peer-verification-depth
+ssl_options.depth = 2
+
+## Allow only TLS 1.2
+ssl_options.versions.1 = tlsv1.2
+
+###########################################################################
+## RABBITMQ SHOVEL TLS
+###########################################################################
+
+## Static Shovel destination URIs support TLS query parameters.
+##
+## Available parameters include:
+##
+##   cacertfile
+##   certfile
+##   keyfile
+##   verify
+##   fail_if_no_peer_cert
+##   server_name_indication
+##   auth_mechanism
+##   heartbeat
+##   connection_timeout
+##   channel_max
+##   versions
+##
+## Example:
+##
+## {uris,
+##   ["amqps://client@server:5671?
+##     cacertfile=D:\\RabbitMqStore\\certs\\ca_public.bundle
+##     &certfile=D:\\RabbitMqStore\\certs\\public.crt.pem
+##     &keyfile=D:\\RabbitMqStore\\certs\\private.key.pem
+##     &verify=verify_peer
+##     &server_name_indication=rabbitmq01.example.com
+##     &auth_mechanism=external
+##     &heartbeat=15"]}
+##
+## Documentation:
+## https://www.rabbitmq.com/uri-query-parameters.html
+##
+## RabbitMQ plugins such as Shovel and Federation use Erlang TLS libraries
+## internally. If additional TLS verification settings are required,
+## see:
+##
+## https://www.rabbitmq.com/ssl.html#erlang-client
+
+###########################################################################
+## MANAGEMENT UI (HTTPS)
+###########################################################################
+
+## Disable unsecured HTTP management if HTTPS is used.
+## management.tcp.port = 15672
+
+## HTTPS Management UI
+management.ssl.port       = 15671
+management.ssl.cacertfile = D:\RabbitMqStore\certs\ca_public.bundle
+management.ssl.certfile   = D:\RabbitMqStore\certs\public.crt.pem
+management.ssl.keyfile    = D:\RabbitMqStore\certs\private.key.pem
+
+## HTTP Strict Transport Security (HSTS)
+management.hsts.policy = max-age=31536000; includeSubDomains
+
+## Allow only TLS 1.2 for the management UI.
+management.ssl.versions.1 = tlsv1.2
+
+###########################################################################
+## TLS
+###########################################################################
+
+## TLS handshake timeout in milliseconds.
+## Optional. Remove to use RabbitMQ defaults.
 ssl_handshake_timeout = 15000
-## To use auth-mechanism-ssl, the EXTERNAL mechanism should be enabled:
+
+###########################################################################
+## AUTHENTICATION
+###########################################################################
+
+## Enabled authentication mechanisms:
+##
+## PLAIN
+## -------
+## RabbitMQ username/password authentication.
+##
+## AMQPLAIN
+## --------
+## Legacy AMQP 0-9-1 username/password authentication.
+##
+## EXTERNAL
+## --------
+## X.509 client certificate authentication.
+##
+## This configuration allows:
+##
+## • Username/password clients on port 5672.
+##
+## • X.509 certificate clients on port 5671
+##   (for example RabbitMQ Shovel using
+##   auth_mechanism=external).
+##
+## Since mTLS is enforced on port 5671
+## (verify_peer + fail_if_no_peer_cert=true),
+## every client connecting to 5671 must present
+## a valid client certificate.
+
 auth_mechanisms.1 = PLAIN
 auth_mechanisms.2 = AMQPLAIN
 auth_mechanisms.3 = EXTERNAL
 
-## To force x509 certificate-based authentication on all clients,
-## exclude all other mechanisms (note: this will disable password-based
-## authentication even for the management UI!):
-# auth_mechanisms.1 = EXTERNAL
+## To require certificate authentication only,
+## enable EXTERNAL as the only authentication mechanism.
+##
+## This disables username/password authentication.
+##
+## auth_mechanisms.1 = EXTERNAL
 
-## To use the TLS cert's CN instead of its DN as the username
-ssl_cert_login_from   = common_name
+###########################################################################
+## CERTIFICATE USER MAPPING
+###########################################################################
 
-## internal for rabbit_auth_backend_internal,"internal" is an alias for rabbit_auth_backend_internal
+## Use the client certificate Common Name (CN)
+## as the RabbitMQ username when using EXTERNAL
+## authentication.
+##
+## Example:
+##
+## Client certificate:
+##   Subject: CN=epn-no1-wmq-001
+##
+## RabbitMQ user:
+##   epn-no1-wmq-001
+
+ssl_cert_login_from = common_name
+
+###########################################################################
+## AUTHENTICATION BACKEND
+###########################################################################
+
+## Use the internal RabbitMQ user database.
+##
+## "internal" is an alias for:
+## rabbit_auth_backend_internal
+##
 ## https://www.rabbitmq.com/access-control.html
-auth_backends.1   = rabbit_auth_backend_internal
 
-# tls version, disables versions older than TLSv1.2
-ssl_options.versions.1 = tlsv1.2
+auth_backends.1 = rabbit_auth_backend_internal
 ```
 
 We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI.
