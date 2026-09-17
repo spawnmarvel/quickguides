@@ -410,6 +410,8 @@ Server
 
 #### advanced.config example ip :frog:
 
+vm1
+
 <details>
   <summary>Click to expand configuration</summary>
 
@@ -525,6 +527,8 @@ Under those assumptions, your configuration follows the standard mTLS model and 
 
 #### advanced.config example DNS :frog:
 
+vm1
+
 <details>
   <summary>Click to expand configuration</summary>
 
@@ -585,38 +589,10 @@ Under those assumptions, your configuration follows the standard mTLS model and 
 
 </details>
 
-VM2 rabbitmq.conf (server)
-
-1. Alignment Analysis
-Yes, the remote host's rabbitmq.conf aligns with your Shovel configuration.
-
-The Shovel connection string you configured on the source host matches every TLS security requirement and authentication setting configured on this remote host.
-
-2. Key Configuration Matches
-Port & Protocol (amqps://...:5671): The remote host exposes TLS on listeners.ssl.default = 5671, matching your Shovel URI.
-
-X.509 Peer Verification: The remote host enforces ssl_options.verify = verify_peer and ssl_options.fail_if_no_peer_cert = true. Your Shovel URI explicitly passes matching query parameters (verify=verify_peer).
-
-External Authentication (auth_mechanism=external): The remote host enables auth_mechanisms.3 = EXTERNAL, allowing the Shovel client to authenticate via its X.509 client certificate rather than a username/password.
-
-Username Mapping (ssl_cert_login_from = common_name): The remote host extracts the Common Name (CN) from your client certificate (client_certificate.pem) and uses it as the RabbitMQ username. In your Shovel URI (amqps://pdp-shovel-1@...), the CN inside client_certificate.pem must be pdp-shovel-1.
-
-TLS Versioning: The remote host restricts connections to ssl_options.versions.1 = tlsv1.2, which modern Erlang OTP releases support out of the box.
-
-1. Critical Gotchas to Check
-
-User Permissions on Remote Host:
-
-Because ssl_cert_login_from = common_name translates the login name to pdp-shovel-1, you must ensure a user named pdp-shovel-1 exists in the remote RabbitMQ internal database with full write/declare permissions on the target vhost (/):
-
-Intermediate CA Chains:
-The remote config explicitly sets ssl_options.depth = 2. Ensure that the CA bundle configured in your Shovel URI (pdp-shovel-1.ca-bundle) includes the complete certificate authority chain leading up to the root CA.
-
-SNI Matching:
-Your Shovel URI specifies server_name_indication=pdp-shovel-2. The SAN (Subject Alternative Name) or CN in the remote server's certificate (public.crt.pem) must match pdp-shovel-2 or the TLS handshake will fail verification.
-
 
 #### rabbitmq.conf example :frog:
+
+VM2 rabbitmq.conf (server)
 
 <details>
   <summary>Click to expand configuration</summary>
@@ -846,6 +822,35 @@ ssl_cert_login_from = common_name
 
 auth_backends.1 = rabbit_auth_backend_internal
 ```
+
+1. Alignment Analysis
+Yes, the remote host's rabbitmq.conf aligns with your Shovel configuration.
+
+The Shovel connection string you configured on the source host matches every TLS security requirement and authentication setting configured on this remote host.
+
+2. Key Configuration Matches
+Port & Protocol (amqps://...:5671): The remote host exposes TLS on listeners.ssl.default = 5671, matching your Shovel URI.
+
+X.509 Peer Verification: The remote host enforces ssl_options.verify = verify_peer and ssl_options.fail_if_no_peer_cert = true. Your Shovel URI explicitly passes matching query parameters (verify=verify_peer).
+
+External Authentication (auth_mechanism=external): The remote host enables auth_mechanisms.3 = EXTERNAL, allowing the Shovel client to authenticate via its X.509 client certificate rather than a username/password.
+
+Username Mapping (ssl_cert_login_from = common_name): The remote host extracts the Common Name (CN) from your client certificate (client_certificate.pem) and uses it as the RabbitMQ username. In your Shovel URI (amqps://pdp-shovel-1@...), the CN inside client_certificate.pem must be pdp-shovel-1.
+
+TLS Versioning: The remote host restricts connections to ssl_options.versions.1 = tlsv1.2, which modern Erlang OTP releases support out of the box.
+
+1. Critical Gotchas to Check
+
+User Permissions on Remote Host:
+
+Because ssl_cert_login_from = common_name translates the login name to pdp-shovel-1, you must ensure a user named pdp-shovel-1 exists in the remote RabbitMQ internal database with full write/declare permissions on the target vhost (/):
+
+Intermediate CA Chains:
+The remote config explicitly sets ssl_options.depth = 2. Ensure that the CA bundle configured in your Shovel URI (pdp-shovel-1.ca-bundle) includes the complete certificate authority chain leading up to the root CA.
+
+SNI Matching:
+
+Your Shovel URI specifies server_name_indication=pdp-shovel-2. The SAN (Subject Alternative Name) or CN in the remote server's certificate (public.crt.pem) must match pdp-shovel-2 or the TLS handshake will fail verification.
 
 We now have a client that trust the server and uses the server CA certificates, verifies server, checks that the server present a certificate with our configured SNI in CN of the sertificate. Shovel is configured with AMQPS, SSL/TLS towards the server. Forcing the client to only accept a server with a certificate from the trust and a matching SNI.
 
