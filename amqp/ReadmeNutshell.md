@@ -33,8 +33,8 @@ Win32/Win64 OpenSSL
   - [Install for tls](#install-for-tls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
-      - [advanced.config example](#advancedconfig-example)
-      - [rabbitmq.conf example](#rabbitmqconf-example)
+      - [advanced.config example :frog:](#advancedconfig-example-frog)
+      - [rabbitmq.conf example :frog:](#rabbitmqconf-example-frog)
     - [Architecture Security Verdict](#architecture-security-verdict)
     - [Strengths of This Production Setup](#strengths-of-this-production-setup)
     - [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
@@ -368,7 +368,7 @@ Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates
 
 
 
-#### advanced.config example
+#### advanced.config example :frog:
 
 <details>
   <summary>Click to expand configuration</summary>
@@ -461,7 +461,7 @@ SNI Matching:
 Your Shovel URI specifies server_name_indication=pdp-shovel-2. The SAN (Subject Alternative Name) or CN in the remote server's certificate (public.crt.pem) must match pdp-shovel-2 or the TLS handshake will fail verification.
 
 
-#### rabbitmq.conf example
+#### rabbitmq.conf example :frog:
 
 <details>
   <summary>Click to expand configuration</summary>
