@@ -291,7 +291,7 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 
 #### ✅ Successful mTLS Handshake
 
-- **OpenSSL output client:** `Verify return code: 0 (ok)`
+- **OpenSSL output client:** `Verify return code: 0 (ok), CONNECTED(0000018C), or similar to below`
 
 Example logs at client
 
