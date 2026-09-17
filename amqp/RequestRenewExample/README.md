@@ -221,12 +221,16 @@ certreq -accept certnew.cer
 
 Yes! You can generate the CSR and private key on a different host, then transfer both to your app host for mTLS.
 
-** Just make sure that to check .crt vs key**
-**Rename public.crt.pem to public.crt, 
+***Just make sure that to check .crt vs key***
+
+If you have public.crt, then rename it to to public.crt.pem for AMQP format. 
 
 ```bash
 
-# Check the .crt and .key files match by comparing the modulus of each file. If they match, the key pair is valid.
+# Check taht the
+# .crt and .key file
+# matches by comparing the modulus of each file. If they match, the key pair is valid.
+
 openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\OP\SSL\private.key.pem | openssl sha256
 ```
 
