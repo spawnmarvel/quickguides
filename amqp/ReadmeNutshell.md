@@ -442,7 +442,7 @@ Server
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@44.44.44.44:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
