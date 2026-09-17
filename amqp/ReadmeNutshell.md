@@ -474,7 +474,7 @@ The Shovel connection string you configured on the source host matches every TLS
 2. Key Configuration Matches
 Port & Protocol (amqps://...:5671): The remote host exposes TLS on listeners.ssl.default = 5671, matching your Shovel URI.
 
-X.509 Peer Verification: The remote host enforces ssl_options.verify = verify_peer and ssl_options.fail_if_no_peer_cert = true. Your Shovel URI explicitly passes matching query parameters (verify=verify_peer&fail_if_no_peer_cert=true).
+X.509 Peer Verification: The remote host enforces ssl_options.verify = verify_peer and ssl_options.fail_if_no_peer_cert = true. Your Shovel URI explicitly passes matching query parameters (verify=verify_peer).
 
 External Authentication (auth_mechanism=external): The remote host enables auth_mechanisms.3 = EXTERNAL, allowing the Shovel client to authenticate via its X.509 client certificate rather than a username/password.
 
@@ -482,7 +482,7 @@ Username Mapping (ssl_cert_login_from = common_name): The remote host extracts t
 
 TLS Versioning: The remote host restricts connections to ssl_options.versions.1 = tlsv1.2, which modern Erlang OTP releases support out of the box.
 
-3. Critical Gotchas to Check
+1. Critical Gotchas to Check
 
 User Permissions on Remote Host:
 
@@ -742,6 +742,76 @@ By combining mutual TLS (mTLS), hardware-level certificate authentication, stric
 
 
 ### Strengths of This Production Setup
+
+Mutual TLS (mTLS) is one of the standard ways to protect against man-in-the-middle (MITM) attacks, but it's the combination of client-side and server-side verification that matters.
+
+In your setup:
+
+On the Shovel (TLS client):
+
+```txt
+verify=verify_peer
+cacertfile=...
+server_name_indication=pdp-shovel-2
+```
+
+This causes the Shovel to:
+
+- Verify that the server's certificate chains to your trusted CA.
+- Verify the server's identity (subject to the client library's hostname verification behavior).
+- Reject an attacker pretending to be your RabbitMQ broker unless they have a certificate trusted by your CA and matching the expected server identity.
+
+On the destination RabbitMQ (TLS server):
+
+```ini
+ssl_options.verify = verify_peer
+ssl_options.fail_if_no_peer_cert = true
+```
+
+This causes the broker to:
+
+- Require every client to present a certificate.
+- Verify that the certificate chains to a trusted CA.
+- Reject clients without a valid certificate.
+
+So each party authenticates the other:
+
+```txt
+Shovel  <========== TLS ==========>  RabbitMQ
+
+verifies server certificate      verifies client certificate
+```
+
+That is mutual TLS.
+
+Regarding MITM specifically:
+
+If an attacker intercepts the connection, they would need to present a server certificate that the Shovel trusts. If they don't have a certificate issued by a trusted CA (or another certificate under your trust model that is accepted), the Shovel will reject the connection.
+
+Likewise, if the attacker tries to connect to the destination broker as the client, they would need a valid client certificate trusted by the broker, or the broker will reject the connection.
+
+So you do not need fail_if_no_peer_cert in the Shovel to protect against MITM. The critical client-side setting is:
+
+```txt
+verify=verify_peer
+```
+
+along with:
+
+- a trusted CA (cacertfile),- the correct server identity (server_name_indication and, if hostname verification is enabled by the client, a matching certificate).
+The server-side setting fail_if_no_peer_cert=true is about authenticating clients, not about the client protecting itself against MITM. That protection comes from the client's certificate validation.
+
+***Looking only at the RabbitMQ configuration and the static Shovel configuration, it follows the recommended pattern for X.509-authenticated Shovels.***
+
+Specifically:
+
+- On the destination broker:
+  - listeners.ssl.default = 5671 ✔  - ssl_options.cacertfile ✔  - ssl_options.certfile ✔  - ssl_options.keyfile ✔  - ssl_options.verify = verify_peer ✔  - ssl_options.fail_if_no_peer_cert = true ✔  - auth_mechanisms includes EXTERNAL ✔  - ssl_cert_login_from = common_name ✔
+- On the Shovel:
+  - amqps://... ✔  - cacertfile ✔  - certfile ✔  - keyfile ✔  - verify=verify_peer ✔  - server_name_indication ✔  - auth_mechanism=external ✔
+That combination provides mutual TLS and certificate-based authentication for the Shovel.
+
+
 
 * Cryptographic Identity Verification (mTLS): Enforcing verify_peer and fail_if_no_peer_cert = true on both ends prevents Unauthorized Access and Man-In-The-Middle (MITM) inspection.
 
