@@ -521,6 +521,8 @@ X509v3 Subject Alternative Name:
 
 The Shovel was changed to connect using the server's DNS name instead of its IP address. A corresponding DNS/hosts entry resolves that hostname to the server's IP address. The server's X.509 certificate contains the same DNS name in its Subject Alternative Name (SAN), allowing the client to verify that it is communicating with the intended RabbitMQ server. This aligns the connection endpoint with the certificate identity and follows TLS best practices.
 
+Under those assumptions, your configuration follows the standard mTLS model and provides strong protection against MITM attacks.
+
 #### advanced.config example DNS :frog:
 
 <details>
