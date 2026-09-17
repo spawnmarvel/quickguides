@@ -35,6 +35,7 @@ Win32/Win64 OpenSSL
   - [Configure for mtls](#configure-for-mtls)
       - [Notes 17.09.2026 new erlang and rabbitmq version](#notes-17092026-new-erlang-and-rabbitmq-version)
       - [advanced.config example ip :frog:](#advancedconfig-example-ip-frog)
+      - [MITM and DNS](#mitm-and-dns)
       - [advanced.config example DNS :frog:](#advancedconfig-example-dns-frog)
       - [rabbitmq.conf example :frog:](#rabbitmqconf-example-frog)
     - [Architecture Security Verdict](#architecture-security-verdict)
@@ -407,54 +408,6 @@ Server
 ```
 
 
-Previously, the Shovel connected to: 44.44.44.444
-
-On server
-```bash
-# run this on the server
-openssl x509 -in E:\RabbitMqStore\certs\public.crt.pem -noout -text
-```
-
-while the server certificate identified:
-
-```text
-X509v3 Subject Alternative Name:
-    DNS:pdp-shovel-2
-```
-
-Edit this on client where the shovels is
-
-```cmd
-C:\Windows\System32\drivers\etc\hosts
-```
-
-Open hosts and add a line such as:
-
-```txt
-
-44.44.44.444  pdp-shovel-2
-
-```
-
-the Shovel could connect using:
-
-```bash
-amqps://pdp-shovel-2:5671
-```
-
-Windows resolved that hostname to 10.127.12.37 before the TCP connection was made.
-- During the TLS handshake:
-  - The client connected to 10.127.12.37 (after DNS/hosts resolution).  - It identified the intended server as it20-no1-ta-284.  - The server presented a certificate containing:
-
-```text
-X509v3 Subject Alternative Name:
-    DNS:pdp-shovel-2
-```
-
- - That identity now matches the name the client used.
-
-The Shovel was changed to connect using the server's DNS name instead of its IP address. A corresponding DNS/hosts entry resolves that hostname to the server's IP address. The server's X.509 certificate contains the same DNS name in its Subject Alternative Name (SAN), allowing the client to verify that it is communicating with the intended RabbitMQ server. This aligns the connection endpoint with the certificate identity and follows TLS best practices.
-
 #### advanced.config example ip :frog:
 
 <details>
@@ -517,6 +470,56 @@ The Shovel was changed to connect using the server's DNS name instead of its IP 
 
 </details>
 
+
+#### MITM and DNS
+
+Previously, the Shovel connected to: 44.44.44.444
+
+On server
+```bash
+# run this on the server
+openssl x509 -in E:\RabbitMqStore\certs\public.crt.pem -noout -text
+```
+
+while the server certificate identified:
+
+```text
+X509v3 Subject Alternative Name:
+    DNS:pdp-shovel-2
+```
+
+Edit this on client where the shovels is
+
+```cmd
+C:\Windows\System32\drivers\etc\hosts
+```
+
+Open hosts and add a line such as:
+
+```txt
+
+44.44.44.444  pdp-shovel-2
+
+```
+
+the Shovel could connect using:
+
+```bash
+amqps://pdp-shovel-2:5671
+```
+
+Windows resolved that hostname to 10.127.12.37 before the TCP connection was made.
+- During the TLS handshake:
+  - The client connected to 10.127.12.37 (after DNS/hosts resolution).  - It identified the intended server as it20-no1-ta-284.  - The server presented a certificate containing:
+
+```text
+X509v3 Subject Alternative Name:
+    DNS:pdp-shovel-2
+```
+
+ - That identity now matches the name the client used.
+
+The Shovel was changed to connect using the server's DNS name instead of its IP address. A corresponding DNS/hosts entry resolves that hostname to the server's IP address. The server's X.509 certificate contains the same DNS name in its Subject Alternative Name (SAN), allowing the client to verify that it is communicating with the intended RabbitMQ server. This aligns the connection endpoint with the certificate identity and follows TLS best practices.
 
 #### advanced.config example DNS :frog:
 
