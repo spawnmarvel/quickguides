@@ -26,15 +26,20 @@ Win32/Win64 OpenSSL
 
 ## Table of Contents
 
-- [Assumptions](#assumptions)
-- [Useful information](#Useful-information)
-- [Install for tls](#install-for-tls)
-- [Configure for mtls](#configure-for-mtls)
-- [Architecture Security Verdict](#architecture-security-verdict)
-- [Strengths of This Production Setup](#strengths-of-this-production-setup)
-- [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
-- [Comparison: Root CA vs. Intermediate CA Architecture](#comparison-root-ca-vs-intermediate-ca-architecture)
-- [Misc](#misc)
+- [AMQP Shovel MTLS with RFC-6125](#amqp-shovel-mtls-with-rfc-6125)
+  - [Table of Contents](#table-of-contents)
+  - [Assumptions](#assumptions)
+  - [Useful information](#useful-information)
+  - [Install for tls](#install-for-tls)
+  - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
+  - [Configure for mtls](#configure-for-mtls)
+    - [Architecture Security Verdict](#architecture-security-verdict)
+    - [Strengths of This Production Setup](#strengths-of-this-production-setup)
+    - [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
+    - [Comparison: Root CA vs. Intermediate CA Architecture](#comparison-root-ca-vs-intermediate-ca-architecture)
+  - [Misc](#misc)
+    - [Queues, topic and exchanges](#queues-topic-and-exchanges)
+    - [RabbitMQ commands](#rabbitmq-commands)
 
 
 ## Assumptions
@@ -393,7 +398,7 @@ Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
