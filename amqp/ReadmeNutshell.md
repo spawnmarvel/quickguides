@@ -444,7 +444,7 @@ vm1
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-1@44.44.44.44:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@44.44.44.44:5671?cacertfile=E:\\RabbitMqStore\\certs\\ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
@@ -561,7 +561,7 @@ vm1
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-1@pdp-shovel-2:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@pdp-shovel-2:5671?cacertfile=E:\\RabbitMqStore\\certs\\ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
@@ -916,12 +916,6 @@ If an attacker intercepts the connection, they would need to present a server ce
 
 Likewise, if the attacker tries to connect to the destination broker as the client, they would need a valid client certificate trusted by the broker, or the broker will reject the connection.
 
-So you do not need fail_if_no_peer_cert in the Shovel to protect against MITM. The critical client-side setting is:
-
-```txt
-verify=verify_peer
-```
-
 along with:
 
 - a trusted CA (cacertfile),- the correct server identity (server_name_indication and, if hostname verification is enabled by the client, a matching certificate).
@@ -929,7 +923,7 @@ The server-side setting fail_if_no_peer_cert=true is about authenticating client
 
 ***Looking only at the RabbitMQ configuration and the static Shovel configuration, it follows the recommended pattern for X.509-authenticated Shovels.***
 
-By switching to the hostname and making it resolvable, you addressed the server identity part of the TLS configuration.
+By switching to the hostname and making it resolvable, you addressed the server identity part of the TLS configuration for the client.
 
 Specifically:
 
