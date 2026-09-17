@@ -335,6 +335,14 @@ SSL-Session:
 [...]
 
 ```
+
+Key Verification Points
+
+* Network Connection: CONNECTED(0000018C) confirms TCP connectivity on port 5671 is working.
+* Certificate Verification: Verification: OK confirms the server's certificate (CN=remote-fqdn-cn) issued by CN=InternalRootCA is trusted via your specified cacert.pem.
+* Mutual Authentication (mTLS): The client successfully sent its certificate (client.cert.pem) and completed key exchange (write client key exchange).
+* Cipher & Protocol: Negotiated TLSv1.2 using cipher suite ECDHE-RSA-AES256-GCM-SHA384.
+
 - **RabbitMQ logs remote:** Successful TLS handshake (may show AMQP protocol header error after - this is expected as s_client does not send AMQP frames)
 
 #### ❌ Failed Handshake
