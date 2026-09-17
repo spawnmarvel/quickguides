@@ -34,7 +34,8 @@ Win32/Win64 OpenSSL
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
       - [Notes 17.09.2026](#notes-17092026)
-      - [advanced.config example :frog:](#advancedconfig-example-frog)
+      - [advanced.config example ip :frog:](#advancedconfig-example-ip-frog)
+      - [advanced.config example DNS :frog:](#advancedconfig-example-dns-frog)
       - [rabbitmq.conf example :frog:](#rabbitmqconf-example-frog)
     - [Architecture Security Verdict](#architecture-security-verdict)
     - [Strengths of This Production Setup](#strengths-of-this-production-setup)
@@ -402,7 +403,56 @@ Server
 
 ```
 
-#### advanced.config example :frog:
+
+Previously, the Shovel connected to: 44.44.44.444
+
+On server
+```bash
+# run this on the server
+openssl x509 -in E:\RabbitMqStore\certs\public.crt.pem -noout -text
+```
+
+while the server certificate identified:
+
+```text
+X509v3 Subject Alternative Name:
+    DNS:pdp-shovel-2
+```
+
+Edit this on client where the shovels is
+
+```cmd
+C:\Windows\System32\drivers\etc\hosts
+```
+
+Open hosts and add a line such as:
+
+```txt
+
+44.44.44.444  pdp-shovel-2
+
+```
+
+the Shovel could connect using:
+
+```bash
+amqps://pdp-shovel-2:5671
+```
+
+Windows resolved that hostname to 10.127.12.37 before the TCP connection was made.
+- During the TLS handshake:
+  - The client connected to 10.127.12.37 (after DNS/hosts resolution).  - It identified the intended server as it20-no1-ta-284.  - The server presented a certificate containing:
+
+```text
+X509v3 Subject Alternative Name:
+    DNS:pdp-shovel-2
+```
+
+ - That identity now matches the name the client used.
+
+The Shovel was changed to connect using the server's DNS name instead of its IP address. A corresponding DNS/hosts entry resolves that hostname to the server's IP address. The server's X.509 certificate contains the same DNS name in its Subject Alternative Name (SAN), allowing the client to verify that it is communicating with the intended RabbitMQ server. This aligns the connection endpoint with the certificate identity and follows TLS best practices.
+
+#### advanced.config example ip :frog:
 
 <details>
   <summary>Click to expand configuration</summary>
@@ -437,6 +487,66 @@ Server
                     {destination,
                       [ {protocol, amqp091},
                         {uris, ["amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {declarations, [
+					{'queue.declare',
+                                            [{queue, <<"AZQueueDataX509">> },  durable]},
+					 {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"AZQueueDataX509">>},
+					      {routing_key, <<"AZQueueDataRouteX509">>}
+                                            ]}
+					 ]},
+                        {publish_properties, [ {delivery_mode, 2} ]},
+                        {add_forward_headers, true}
+                          ]},
+                    {ack_mode, on_confirm},
+                    {reconnect_delay, 15}
+                  ]}
+				   %% next shovel add comma
+				   %% ,
+				   %% {shovel_put_X509_2, [
+				   %% ]}
+		
+		
+              ]}
+  ]}].
+```
+
+#### advanced.config example DNS :frog:
+
+<details>
+  <summary>Click to expand configuration</summary>
+
+```erlang
+[
+ %% RabbitMQ Shovel Plugin
+ %%
+ %% See https://www.rabbitmq.com/docs/shovel for details
+ %% ----------------------------------------------------------------------------
+  {rabbitmq_shovel,
+  [ {shovels, [ {shovel_put_X509,
+                  [ {source,
+                      [ {protocol, amqp091},
+                        {uris, [ "amqp://" ]},
+                        {declarations, [ {'queue.declare',
+                                            [{queue, <<"AZQueueDataX509">> },  durable]},
+				            {'exchange.declare',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {type, <<"topic">>},
+                                              durable
+                                            ]},
+                                          {'queue.bind',
+                                            [ {exchange, <<"amq.topic">>},
+                                              {queue,    <<"AZQueueDataX509">>},
+					 {routing_key, <<"AZQueueDataRouteX509">>}
+                                            ]}
+                                          ]},
+                        {queue, <<"AZQueueDataX509">>},
+                        {prefetch_count, 1}
+                      ]},
+                    {destination,
+                      [ {protocol, amqp091},
+                        {uris, ["amqps://pdp-shovel-2@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
@@ -803,13 +913,38 @@ The server-side setting fail_if_no_peer_cert=true is about authenticating client
 
 ***Looking only at the RabbitMQ configuration and the static Shovel configuration, it follows the recommended pattern for X.509-authenticated Shovels.***
 
+By switching to the hostname and making it resolvable, you addressed the server identity part of the TLS configuration.
+
 Specifically:
 
 - On the destination broker:
-  - listeners.ssl.default = 5671 ✔  - ssl_options.cacertfile ✔  - ssl_options.certfile ✔  - ssl_options.keyfile ✔  - ssl_options.verify = verify_peer ✔  - ssl_options.fail_if_no_peer_cert = true ✔  - auth_mechanisms includes EXTERNAL ✔  - ssl_cert_login_from = common_name ✔
+  - `listeners.ssl.default = 5671` ✔
+  - `ssl_options.cacertfile` ✔
+  - `ssl_options.certfile` ✔
+  - `ssl_options.keyfile` ✔
+  - `ssl_options.verify = verify_peer` ✔
+  - `ssl_options.fail_if_no_peer_cert = true` ✔
+  - `auth_mechanisms` includes `EXTERNAL` ✔
+  - `ssl_cert_login_from = common_name` ✔
+
 - On the Shovel:
-  - amqps://... ✔  - cacertfile ✔  - certfile ✔  - keyfile ✔  - verify=verify_peer ✔  - server_name_indication ✔  - auth_mechanism=external ✔
-That combination provides mutual TLS and certificate-based authentication for the Shovel.
+  - `amqps://it20-no1-ta-284:5671` ✔
+  - `cacertfile` ✔
+  - `certfile` ✔
+  - `keyfile` ✔
+  - `verify=verify_peer` ✔
+  - `server_name_indication=pdp-shovel-2` ✔
+  - `auth_mechanism=external` ✔
+  - The hostname used in the URI resolves to the destination broker's IP address (via DNS or `hosts`) ✔
+  - The server certificate contains a Subject Alternative Name (SAN) matching the hostname (`DNS:pdp-shovel-2`) ✔
+
+This combination provides:
+
+- Mutual TLS (mTLS).
+- Server certificate validation using a trusted CA.
+- Client certificate validation by the RabbitMQ broker.
+- Certificate-based authentication using the `EXTERNAL` mechanism.
+- Validation that the client is connecting to the intended RabbitMQ server through a hostname that matches the certificate's Subject Alternative Name (SAN), which is the recommended TLS deployment pattern.
 
 
 
