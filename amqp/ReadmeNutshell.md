@@ -33,7 +33,7 @@ Win32/Win64 OpenSSL
   - [Install for tls](#install-for-tls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
-      - [Notes 17.09.2026](#notes-17092026)
+      - [Notes 17.09.2026 new erlang and rabbitmq version](#notes-17092026-new-erlang-and-rabbitmq-version)
       - [advanced.config example ip :frog:](#advancedconfig-example-ip-frog)
       - [advanced.config example DNS :frog:](#advancedconfig-example-dns-frog)
       - [rabbitmq.conf example :frog:](#rabbitmqconf-example-frog)
@@ -371,7 +371,10 @@ Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates
 
 
 
-#### Notes 17.09.2026
+#### Notes 17.09.2026 new erlang and rabbitmq version
+
+* RabbitMQ 4.3.5
+* Erlang 27.3.4.16
 
 Set this at rabbitmq.conf besides other configuration parameters before you start the shovel with ssl parameters.
 
@@ -511,6 +514,9 @@ The Shovel was changed to connect using the server's DNS name instead of its IP 
               ]}
   ]}].
 ```
+
+</details>
+
 
 #### advanced.config example DNS :frog:
 
