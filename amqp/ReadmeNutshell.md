@@ -33,6 +33,7 @@ Win32/Win64 OpenSSL
   - [Install for tls](#install-for-tls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
+      - [Notes 17.09.2026](#notes-17092026)
       - [advanced.config example :frog:](#advancedconfig-example-frog)
       - [rabbitmq.conf example :frog:](#rabbitmqconf-example-frog)
     - [Architecture Security Verdict](#architecture-security-verdict)
@@ -367,6 +368,39 @@ Shovel Worker: Reads messages from local queue AZQueueDataX509 with a prefetch c
 Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates and publishes them directly onto the remote host.
 
 
+
+
+#### Notes 17.09.2026
+
+Set this at rabbitmq.conf besides other configuration parameters before you satrt the shovel with ssl parameters.
+
+
+Server remote rabbitmq.conf
+
+```ini
+ssl_options.verify = verify_peer
+ssl_options.fail_if_no_peer_cert = true
+```
+
+Else you could get:
+
+Client shovel
+
+```log
+
+2026-09-17 11:06:33.119000+02:00 [warning] <0.1065.0> Shovel 'shovel_put_xxxx' failed to connect (URI: amqps://10.10.10.10:5671): ACCESS_REFUSED - Login was refused using authentication mechanism EXTERNAL. For details see the broker logfile.
+
+```
+
+Server
+
+```log
+2026-09-17 11:31:27.936000+02:00 [info] <0.222761.0> accepting AMQP connection 44.44.44.444:64427 -> 10.10.10.10:5671
+2026-09-17 11:31:27.936000+02:00 [info] <0.222767.0> connection 44.44.44.444:64428 -> 10.10.10.10:5671 has a client-provided name: Shovel shovel_put_nova_opc
+2026-09-17 11:31:27.936000+02:00 [error] <0.222767.0> Error on AMQP connection <0.222767.0> (44.44.44.444:64428 -> 10.10.10.10:5671, state: starting):
+2026-09-17 11:31:27.936000+02:00 [error] <0.222767.0> EXTERNAL login refused: connection peer presented no TLS (x.509) certificate
+
+```
 
 #### advanced.config example :frog:
 
