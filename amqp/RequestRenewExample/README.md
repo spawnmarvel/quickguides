@@ -284,6 +284,39 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 
 #### ✅ Successful mTLS Handshake
 - **OpenSSL output:** `Verify return code: 0 (ok)`
+
+Example
+
+```log
+Connecting to 10.10.100.10
+CONNECTED(0000018C)
+SSL_connect:before SSL initialization
+SSL_connect:SSLv3/TLS write client hello
+SSL_connect:SSLv3/TLS write client hello
+Can't use SSL_get_servername
+SSL_connect:SSLv3/TLS read server hello
+depth=1 CN=InternalRootCA
+verify return:1
+depth=0 CN=remote-fqdn-cn
+verify return:1
+SSL_connect:SSLv3/TLS read server certificate
+SSL_connect:SSLv3/TLS read server key exchange
+SSL_connect:SSLv3/TLS read server done
+SSL_connect:SSLv3/TLS write client key exchange
+SSL_connect:SSLv3/TLS write change cipher spec
+SSL_connect:SSLv3/TLS write finished
+SSL_connect:SSLv3/TLS write finished
+SSL_connect:SSLv3/TLS read change cipher spec
+SSL_connect:SSLv3/TLS read finished
+
+Certificate chain
+[...]
+
+SSL handshake has read 2919 bytes and written 1615 bytes
+Verification: OK
+
+
+```
 - **RabbitMQ logs:** Successful TLS handshake (may show AMQP protocol header error after - this is expected as s_client does not send AMQP frames)
 
 #### ❌ Failed Handshake
