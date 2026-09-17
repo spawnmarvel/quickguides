@@ -293,9 +293,9 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 
 - **OpenSSL output client:** `Verify return code: 0 (ok)`
 
-Example logs
+Example logs at client
 
-```bash
+```log
 Connecting to 10.10.100.10
 CONNECTED(0000018C)
 SSL_connect:before SSL initialization
