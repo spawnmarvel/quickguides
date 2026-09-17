@@ -356,7 +356,7 @@ Auto-creates Exchange: Ensures topic exchange <<"amq.topic">> exists.
 Auto-creates Binding: Binds <<"AZQueueDataX509">> to <<"amq.topic">> using routing key <<"AZQueueDataRouteX509">>
 
 3. Remote Host (Destination) Declarations
-In your destination block ("amqps://pdp-shovel-1@xx.xx.xx.xx:5671..." connecting to remote host):
+In your destination block ("amqps://pdp-shovel-1@44.44.44.44:5671..." connecting to remote host):
 
 Auto-creates Queue: Declares durable queue <<"AZQueueDataX509">> on the remote broker.
 
@@ -561,7 +561,7 @@ vm1
                       ]},
                     {destination,
                       [ {protocol, amqp091},
-                        {uris, ["amqps://pdp-shovel-2@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
+                        {uris, ["amqps://pdp-shovel-1@pdp-shovel-2:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&verify=verify_peer&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"]},
                         {declarations, [
 					{'queue.declare',
                                             [{queue, <<"AZQueueDataX509">> },  durable]},
@@ -944,7 +944,7 @@ Specifically:
   - `ssl_cert_login_from = common_name` ✔
 
 - On the Shovel:
-  - `amqps://it20-no1-ta-284:5671` ✔
+  - `amqps://pdp-shovel-1@pdp-shovel-2:5671` ✔
   - `cacertfile` ✔
   - `certfile` ✔
   - `keyfile` ✔
