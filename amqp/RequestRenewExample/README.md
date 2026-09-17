@@ -315,6 +315,16 @@ Certificate chain
 SSL handshake has read 2919 bytes and written 1615 bytes
 Verification: OK
 
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Protocol: TLSv1.2
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+
+[...]
 
 ```
 - **RabbitMQ logs:** Successful TLS handshake (may show AMQP protocol header error after - this is expected as s_client does not send AMQP frames)
