@@ -276,6 +276,13 @@ openssl s_client -connect 127.0.0.1:5671 -key C:\path\to\client.key.pem -cert C:
 ```
 
 #### Test Against Real Broker (e.g., RabbitMQ)
+
+* Remote broker is configured with tls in rabbitmq.conf
+* Either verify peer or none
+* Fail if not peer certs false or true
+* Firewall is open 
+
+
 ```bash
 openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -cert C:\path\to\client.cert.pem -CAfile C:\path\to\cacert.pem -state
 ```
@@ -283,7 +290,8 @@ openssl s_client -connect your-broker-host:5671 -key C:\path\to\client.key.pem -
 ### Interpreting Results
 
 #### ✅ Successful mTLS Handshake
-- **OpenSSL output:** `Verify return code: 0 (ok)`
+
+- **OpenSSL output client:** `Verify return code: 0 (ok)`
 
 Example
 
@@ -327,10 +335,11 @@ SSL-Session:
 [...]
 
 ```
-- **RabbitMQ logs:** Successful TLS handshake (may show AMQP protocol header error after - this is expected as s_client does not send AMQP frames)
+- **RabbitMQ logs remote:** Successful TLS handshake (may show AMQP protocol header error after - this is expected as s_client does not send AMQP frames)
 
 #### ❌ Failed Handshake
-- **OpenSSL output:** SSL alert error
+
+- **OpenSSL output client:** SSL alert error
   ```
   error:14094410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure
   ```
