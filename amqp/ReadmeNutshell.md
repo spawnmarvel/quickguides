@@ -1,5 +1,47 @@
 # AMQP Shovel MTLS with RFC-6125
 
+
+## Table of Contents
+
+- [AMQP Shovel MTLS with RFC-6125](#amqp-shovel-mtls-with-rfc-6125)
+  - [Table of Contents](#table-of-contents)
+  - [Summary of the README Section](#summary-of-the-readme-section)
+  - [Assumptions](#assumptions)
+  - [links](#links)
+  - [Useful information](#useful-information)
+  - [URI Query Parameters new 4.3](#uri-query-parameters-new-43)
+  - [Install in general and configure for tls or mtls](#install-in-general-and-configure-for-tls-or-mtls)
+  - [Configure for mtls](#configure-for-mtls)
+      - [Configure for mtls with new erlang and rabbitmq version](#configure-for-mtls-with-new-erlang-and-rabbitmq-version)
+      - [advanced.config mtls example ip :frog:](#advancedconfig-mtls-example-ip-frog)
+      - [MITM and DNS](#mitm-and-dns)
+      - [advanced.config mtls example DNS :frog:](#advancedconfig-mtls-example-dns-frog)
+      - [rabbitmq.conf mtls example :frog:](#rabbitmqconf-mtls-example-frog)
+    - [Architecture Security Verdict](#architecture-security-verdict)
+    - [Strengths of This Production Setup](#strengths-of-this-production-setup)
+    - [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
+    - [Comparison: Root CA vs. Intermediate CA Architecture](#comparison-root-ca-vs-intermediate-ca-architecture)
+  - [Misc](#misc)
+    - [Queues, topic and exchanges](#queues-topic-and-exchanges)
+    - [RabbitMQ commands](#rabbitmq-commands)
+
+
+## Summary of the README Section
+
+The guide provides a concise operational runbook for deploying a secure RabbitMQ broker using updated package repositories, configuring TLS certificate pairs, enabling management plugins, and verifying secure client connections.
+
+## Assumptions
+
+This guides assumes you know a bit about all the following:
+
+* Networking and security
+* Powershell
+* Openssl
+* X.509
+* RabbitMQ and Erlang
+
+## links 
+
 Shovel plugin
 
 * https://www.rabbitmq.com/shovel.html
@@ -23,40 +65,8 @@ RabbitMQ and Erlang/OTP Compatibility Matrix
 Win32/Win64 OpenSSL
 
 * https://slproweb.com/products/Win32OpenSSL.html
-
-## Table of Contents
-
-- [AMQP Shovel MTLS with RFC-6125](#amqp-shovel-mtls-with-rfc-6125)
-  - [Table of Contents](#table-of-contents)
-  - [Assumptions](#assumptions)
-  - [Useful information](#useful-information)
-  - [URI Query Parameters new 4.3](#uri-query-parameters-new-43)
-  - [Install in general and configure for tls or mtls](#install-in-general-and-configure-for-tls-or-mtls)
-  - [Configure for mtls](#configure-for-mtls)
-      - [Configure for mtls with new erlang and rabbitmq version](#configure-for-mtls-with-new-erlang-and-rabbitmq-version)
-      - [advanced.config mtls example ip :frog:](#advancedconfig-mtls-example-ip-frog)
-      - [MITM and DNS](#mitm-and-dns)
-      - [advanced.config mtls example DNS :frog:](#advancedconfig-mtls-example-dns-frog)
-      - [rabbitmq.conf mtls example :frog:](#rabbitmqconf-mtls-example-frog)
-    - [Architecture Security Verdict](#architecture-security-verdict)
-    - [Strengths of This Production Setup](#strengths-of-this-production-setup)
-    - [Remaining Production Hardening Checklist](#remaining-production-hardening-checklist)
-    - [Comparison: Root CA vs. Intermediate CA Architecture](#comparison-root-ca-vs-intermediate-ca-architecture)
-  - [Misc](#misc)
-    - [Queues, topic and exchanges](#queues-topic-and-exchanges)
-    - [RabbitMQ commands](#rabbitmq-commands)
-
-
-## Assumptions
-
-This guides assumes you know a bit about all the following:
-
-* Networking and security
-* Powershell
-* Openssl
-* X.509
-* RabbitMQ and Erlang
-
+  
+  
 ## Useful information
 
 ISO and IEC Approve OASIS AMQP Advanced Message Queuing Protocol.
