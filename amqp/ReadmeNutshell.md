@@ -248,6 +248,8 @@ rabbitmq-plugins list -e
 
 ```
 
+View misc for examples.
+
 ---
 
 1. VM2 (Server)
