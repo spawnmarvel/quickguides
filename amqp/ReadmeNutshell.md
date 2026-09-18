@@ -30,7 +30,7 @@ Win32/Win64 OpenSSL
   - [Table of Contents](#table-of-contents)
   - [Assumptions](#assumptions)
   - [Useful information](#useful-information)
-  - [URI Query Parameters](#uri-query-parameters)
+  - [URI Query Parameters new 4.3](#uri-query-parameters-new-43)
   - [Install for tls](#install-for-tls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
@@ -105,7 +105,7 @@ Basic concepts of RabbitMQ and the shovel application.
 | advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format, like static shovels. |
 
 
-## URI Query Parameters 
+## URI Query Parameters new 4.3
 
 For rabbitmq 4.3 is updated.
 
