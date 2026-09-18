@@ -34,7 +34,7 @@ Win32/Win64 OpenSSL
   - [Install in general and configure for tls or mtls](#install-in-general-and-configure-for-tls-or-mtls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
-      - [Install for tls new erlang and rabbitmq version](#install-for-tls-new-erlang-and-rabbitmq-version)
+      - [Configure for mtls with new erlang and rabbitmq version](#configure-for-mtls-with-new-erlang-and-rabbitmq-version)
       - [advanced.config mtls example ip :frog:](#advancedconfig-mtls-example-ip-frog)
       - [MITM and DNS](#mitm-and-dns)
       - [advanced.config mtls example DNS :frog:](#advancedconfig-mtls-example-dns-frog)
@@ -397,7 +397,7 @@ Shovel Worker: Reads messages from local queue AZQueueDataX509 with a prefetch c
 Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates and publishes them directly onto the remote host.
 
 
-#### Install for tls new erlang and rabbitmq version
+#### Configure for mtls with new erlang and rabbitmq version
 
 * RabbitMQ 4.3.5
 * Erlang 27.3.4.16
