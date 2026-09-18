@@ -32,7 +32,6 @@ Win32/Win64 OpenSSL
   - [Useful information](#useful-information)
   - [URI Query Parameters new 4.3](#uri-query-parameters-new-43)
   - [Install in general and configure for tls or mtls](#install-in-general-and-configure-for-tls-or-mtls)
-  - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
       - [Configure for mtls with new erlang and rabbitmq version](#configure-for-mtls-with-new-erlang-and-rabbitmq-version)
       - [advanced.config mtls example ip :frog:](#advancedconfig-mtls-example-ip-frog)
@@ -249,10 +248,9 @@ rabbitmq-plugins list -e
 
 ```
 
-(View example in misc section if needed.)
 ---
 
-5. VM2 (Server)
+1. VM2 (Server)
 
 ```cmd
 # cd to sbin
