@@ -30,10 +30,11 @@ Win32/Win64 OpenSSL
   - [Table of Contents](#table-of-contents)
   - [Assumptions](#assumptions)
   - [Useful information](#useful-information)
+  - [URI Query Parameters](#uri-query-parameters)
   - [Install for tls](#install-for-tls)
   - [(View example in misc section if needed.)](#view-example-in-misc-section-if-needed)
   - [Configure for mtls](#configure-for-mtls)
-      - [Notes 17.09.2026 new erlang and rabbitmq version](#notes-17092026-new-erlang-and-rabbitmq-version)
+      - [Install for tls new erlang and rabbitmq version](#install-for-tls-new-erlang-and-rabbitmq-version)
       - [advanced.config example ip :frog:](#advancedconfig-example-ip-frog)
       - [MITM and DNS](#mitm-and-dns)
       - [advanced.config example DNS :frog:](#advancedconfig-example-dns-frog)
@@ -103,6 +104,19 @@ Basic concepts of RabbitMQ and the shovel application.
 | rabbitmq.conf       | New style format (sysctl or ini-like)  | Should be used for most settings.   |
 | advanced.config     | Classic (Erlang terms)                 | A limited number of settings that cannot be expressed in the new style configuration format, like static shovels. |
 
+
+## URI Query Parameters 
+
+For rabbitmq 4.3 is updated.
+
+
+* cacertfile, certfile, keyfile
+* password, The passphrase for the private key file specified by keyfile (we do not use that)
+* verify, server_name_indication
+* auth_mechanism
+* [...]
+
+https://www.rabbitmq.com/docs/uri-query-parameters
 
 ## Install for tls
 
@@ -372,7 +386,7 @@ Remote Host: Transfers messages over TLS (amqps) using X.509 client certificates
 
 
 
-#### Notes 17.09.2026 new erlang and rabbitmq version
+#### Install for tls new erlang and rabbitmq version
 
 * RabbitMQ 4.3.5
 * Erlang 27.3.4.16
@@ -387,7 +401,7 @@ ssl_options.verify = verify_peer
 ssl_options.fail_if_no_peer_cert = true
 ```
 
-Else you could get:
+Else you could get a funny cert error, event though you are using a cert:
 
 Client shovel
 
