@@ -56,13 +56,13 @@ KeyUsage = 0xa0
 2.5.29.17 = "{text}"
 _continue_ = "dns=hostname.domain.com&"
 _continue_ = "dns=hostname&"
-_continue_ = "dns=alias1.domain.com&"
+_continue_ = "dns=alias1.domain.com"
 
 check the above in ssl checker, you will see:
 Common Name (CN)	hostname.domain.com
 SANS	hostname.domain.com, hostname
 
-* Even if the server is not in domain and nslookup gives just hostname it resolves after importing all certs, root, inter and personal to mmc.
+* Even if the server is not in domain and nslookup gives just hostname it resolves after importing all certs, root, inter and personal to mmc. !
 
 
 
