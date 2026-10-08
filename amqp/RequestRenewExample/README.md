@@ -403,3 +403,68 @@ Air-Gapped & High-Security Lockdowns
 Fixed, Permanent Infrastructure Links
 
 4. If a messaging bridge between two datacenters is a permanent piece of infrastructure (e.g., streaming audit logs from datacenter A to datacenter B) that will not change for years, dynamic runtime alterations offer no real benefit. Setting it up as a static shovel ensures it remains hardcoded into the server's configuration.
+
+
+Configuration in rabbitmq.conf (Server Private Key)
+
+```ini
+# Server TLS Port
+listeners.ssl.default = 5671
+
+# Certificates and Keys
+ssl_options.cacertfile = F:\RabbitMqStore\certs\pdp-shovel-2.ca-bundle
+ssl_options.certfile   = F:\RabbitMqStore\certs\public.crt.pem
+ssl_options.keyfile    = F:\RabbitMqStore\certs\private.key.pem
+
+# Passphrase for the encrypted private.key.pem
+ssl_options.password   = YourSecretKeyPassphrase
+
+# Peer Verification & Depth
+ssl_options.verify     = verify_peer
+ssl_options.fail_if_no_peer_cert = true
+ssl_options.depth      = 2
+
+# Authentication
+auth_mechanisms.1 = PLAIN
+auth_mechanisms.2 = AMQPLAIN
+auth_mechanisms.3 = EXTERNAL
+ssl_cert_login_from = common_name
+```
+
+Configuration in advanced.config (Shovel Client Private Key)
+
+```erl
+[
+  {rabbitmq_shovel,
+    [ {shovels, 
+        [ {shovel_put_X509,
+            [ {source,
+                [ {protocol, amqp091},
+                  {uris, [ "amqp://" ]},
+                  {declarations, [
+                    {'queue.declare', [{queue, <<"AZQueueDataX509">>}, durable]},
+                    {'exchange.declare', [{exchange, <<"amq.topic">>}, {type, <<"topic">>}, durable]},
+                    {'queue.bind', [{exchange, <<"amq.topic">>}, {queue, <<"AZQueueDataX509">>}, {routing_key, <<"AZQueueDataRouteX509">>}]}
+                  ]},
+                  {queue, <<"AZQueueDataX509">>},
+                  {prefetch_count, 1}
+                ]},
+              {destination,
+                [ {protocol, amqp091},
+                  {uris, [
+                    "amqps://pdp-shovel-1@xx.xx.xx.xx:5671?cacertfile=E:\\RabbitMqStore\\certs\\pdp-shovel-1.ca-bundle&certfile=E:\\RabbitMqStore\\certs\\client_certificate.pem&keyfile=E:\\RabbitMqStore\\certs\\private_key.pem&password=YourSecretKeyPassphrase&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=pdp-shovel-2&auth_mechanism=external&heartbeat=15"
+                  ]},
+                  {declarations, [
+                    {'queue.declare', [{queue, <<"AZQueueDataX509">>}, durable]},
+                    {'queue.bind', [{exchange, <<"amq.topic">>}, {queue, <<"AZQueueDataX509">>}, {routing_key, <<"AZQueueDataRouteX509">>}]}
+                  ]},
+                  {publish_properties, [{delivery_mode, 2}]},
+                  {add_forward_headers, true}
+                ]},
+              {ack_mode, on_confirm},
+              {reconnect_delay, 15}
+            ]}
+        ]}
+    ]}
+].
+```
