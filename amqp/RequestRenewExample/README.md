@@ -378,9 +378,12 @@ Key Verification Points
 * Apply Least Privilege Access: Restrict file access exclusively to the account running the RabbitMQ Windows service (e.g., NT AUTHORITY\SYSTEM or a dedicated service account) and local Administrators with Read-Only (:R) access.
 
 * Store Keys Outside Public Paths: Avoid saving certificates in user desktops or shared C:\Temp folders. Place them in a restricted directory (e.g., C:\RabbitMqStore\certs\).
+  
+* No Network Shares for Private Keys: Never host private.key.pem on an open SMB or shared network drive. Keep the key stored on the local physical volume of the host machine.
 
+* Encrypt at Rest: Ensure the local partition hosting the keys is encrypted using BitLocker to protect against physical machine theft or disk cloning.
 
-Can We Hot Reload Static Shovels? (Clarification)
+### Can We Hot Reload Static Shovels? (Clarification)
 
 * No, you cannot hot-reload the shovel configuration itself.
 * Updating advanced.config (Shovel URIs, Queues, Routing Keys): NO. RabbitMQ only parses advanced.config when the node boots. Any changes to the shovel parameters inside advanced.config require a full service restart (Restart-Service RabbitMQ).
@@ -405,7 +408,7 @@ Fixed, Permanent Infrastructure Links
 4. If a messaging bridge between two datacenters is a permanent piece of infrastructure (e.g., streaming audit logs from datacenter A to datacenter B) that will not change for years, dynamic runtime alterations offer no real benefit. Setting it up as a static shovel ensures it remains hardcoded into the server's configuration.
 
 
-Configuration in rabbitmq.conf (Server Private Key)
+### Configuration in rabbitmq.conf (Server Private Key)
 
 ```ini
 # Server TLS Port
@@ -431,7 +434,7 @@ auth_mechanisms.3 = EXTERNAL
 ssl_cert_login_from = common_name
 ```
 
-Configuration in advanced.config (Shovel Client Private Key)
+### Configuration in advanced.config (Shovel Client Private Key)
 
 ```erl
 [
