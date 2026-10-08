@@ -14,6 +14,7 @@ This guide continues from the manual steps in the main [README.md](../README.md)
 6. [Automate the Process](#6-automate-the-process)
 7. [Generate CSR on Different Host](#7-generate-csr-on-different-host)
 8. [Test mTLS Authentication](#8-test-mtls-authentication)
+9. [Secure private keys](#9-secure-private-keys)
 
 ---
 
@@ -367,3 +368,38 @@ Key Verification Points
 - Public key is embedded in the SSL certificate
 - Private key is stored on the server and kept secret
 - The Shovel server requires both server auth and client auth for full mTLS support
+
+## 9. Secure private keys
+
+1. Host-Level Access Controls (OS Permissions)
+
+* Strip Inherited Permissions (icacls): Disable inheritance on the directory and files housing private.key.pem so default users (e.g., Users, Authenticated Users) cannot read them.
+
+* Apply Least Privilege Access: Restrict file access exclusively to the account running the RabbitMQ Windows service (e.g., NT AUTHORITY\SYSTEM or a dedicated service account) and local Administrators with Read-Only (:R) access.
+
+* Store Keys Outside Public Paths: Avoid saving certificates in user desktops or shared C:\Temp folders. Place them in a restricted directory (e.g., C:\RabbitMqStore\certs\).
+
+
+Can We Hot Reload Static Shovels? (Clarification)
+
+* No, you cannot hot-reload the shovel configuration itself.
+* Updating advanced.config (Shovel URIs, Queues, Routing Keys): NO. RabbitMQ only parses advanced.config when the node boots. Any changes to the shovel parameters inside advanced.config require a full service restart (Restart-Service RabbitMQ).
+
+Why Use Static Shovels Instead of Dynamic Shovels?
+
+Infrastructure as Code (IaC) & Immutable Server Deploymen
+
+1. Static shovels are defined in plain text files (advanced.config) on disk. This allows you to check your entire cross-datacenter topology into version control (Git) and deploy it automatically using configuration management tools (Ansible, Terraform, Chef, or Puppet).
+
+Resilience Against Mnesia Database Wipes
+
+2. Dynamic shovels are stored inside RabbitMQ's internal Mnesia database. If a node suffers a database corruption, a cluster reset, or a complete disk wipe, all dynamic shovels are permanently lost unless restored from a database backup. Static shovels are recreated automatically whenever the node boots because their definition lives in advanced.config on disk.
+
+
+Air-Gapped & High-Security Lockdowns
+
+3. In high-security OT/industrial environments where administrative APIs or the Web Management UI are disabled or locked down to read-only mode, static shovels prevent unauthorized users from modifying or deleting core data links via the API. The shovel configuration can only be altered by an administrator with OS-level access to edit advanced.config
+
+Fixed, Permanent Infrastructure Links
+
+4. If a messaging bridge between two datacenters is a permanent piece of infrastructure (e.g., streaming audit logs from datacenter A to datacenter B) that will not change for years, dynamic runtime alterations offer no real benefit. Setting it up as a static shovel ensures it remains hardcoded into the server's configuration.
