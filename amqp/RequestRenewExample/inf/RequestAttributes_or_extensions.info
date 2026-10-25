@@ -13,7 +13,7 @@ _continue_ = "url=https://www.fabrikam.com&"
 _continue_ = "ipaddress=172.31.10.134&"
 _continue_ = "email=hazem@fabrikam.com&"
 _continue_ = "upn=hazem@fabrikam.com&"
-_continue_ = "guid=f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39&"
+_continue_ = "guid=f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39"
 
 
 
