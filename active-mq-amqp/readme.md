@@ -7,6 +7,7 @@
   - [RabbitMQ limitations with mtls on windows server](#rabbitmq-limitations-with-mtls-on-windows-server)
   - [Switch to Apache ActiveMQ (or Apache ActiveMQ Artemis),](#switch-to-apache-activemq-or-apache-activemq-artemis)
   - [Apache Active MQ 1, 2 and 3](#apache-active-mq-1-2-and-3)
+  - [RabbitMQ vs ActiveMQ 30 to 50 one-to-one connections](#rabbitmq-vs-activemq-30-to-50-one-to-one-connections)
 
 ## RabbitMQ limitations with mtls on windows server
 
@@ -69,3 +70,16 @@ Once OpenJDK and ActiveMQ are running, you can handle your mTLS certificates usi
 * Use Java's built-in keytool utility (which comes with OpenJDK) to import your certificates into a .p12 (PKCS12) or .jks keystore.
 *  Point your ActiveMQ transport connector configuration inside activemq.xml to that keystore file and provide the password, keeping your private keys safely encrypted inside the keystore container.
 *  
+
+## RabbitMQ vs ActiveMQ 30 to 50 one-to-one connections
+
+With a maximum of 30 to 50 connections and a one-to-one, direct messaging pattern, your workload is extremely light for any modern message broker.
+
+Both RabbitMQ and ActiveMQ (Artemis or Classic) will handle this load effortlessly without breaking a sweat. Neither option will run into performance bottlenecks or resource limits at this scale.
+
+Which one should you pick based on your needs?
+
+* Choose ActiveMQ if you prefer managing certificates inside a password-protected Java keystore/truststore rather than handling unencrypted flat files and Windows ACL permissions (icacls) on disk.
+* Choose RabbitMQ if you prefer a smaller footprint, native Erlang/AMQP tooling, and are comfortable securing the flat .pem keys using Windows service permissions.
+
+At 30–50 connections, performance won't be the deciding factor—ease of management and how your team prefers handling security/certificates should drive your choice!
