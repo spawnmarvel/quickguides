@@ -266,7 +266,7 @@ If RDP clipboard restrictions block binary file transfers (.pfx), you can tempor
 
 1. On your local machine (where you downloaded the .pfx), encode it to Base64:
 ```ps1
-[Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\path\to\cert.pfx")) | Out-File "C:\path\to\cert_base64.txt"
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\giti2026\cert.pfx")) | Out-File "C:\giti2026\cert_base64.txt"
 
 
 ```
@@ -274,11 +274,25 @@ If RDP clipboard restrictions block binary file transfers (.pfx), you can tempor
 3. On the remote Windows server, decode the text back into a valid .pfx file using PowerShell:
 
 ```ps1
-$base64 = Get-Content -Path "C:\path\to\cert_base64.txt" -Raw
-[IO.File]::WriteAllBytes("C:\path\to\imported_cert.pfx", [Convert]::FromBase64String($base64))
+$base64 = Get-Content -Path "C:\giti2026\cert_base64.txt" -Raw
+[IO.File]::WriteAllBytes("C:\giti2026\imported_cert.pfx", [Convert]::FromBase64String($base64))
+```
+
+Check files
+
+```ps1
+cd c:\giti2026\
+ls
+
+-a---          09.11.2026    15:08           4554 cert_base64.txt
+-a---          09.11.2026    15:07           3414 cert.pfx
+
+-a---          09.11.2026    15:09           3414 imported_cert.pfx
+
 ```
 4. Verification: Check that imported_cert.pfx exists in the target folder and matches the original file size.
-  
+5. Import the .pfx file into the Local Machine personal store:
+6. Bind Certificate in IIS Manager
 
 ---
 
