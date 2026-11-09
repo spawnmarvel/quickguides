@@ -235,6 +235,7 @@ If you have public.crt, then rename it to to public.crt.pem for AMQP format.
 openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openssl rsa -noout -modulus -in C:\OP\SSL\private.key.pem | openssl sha256
 ```
 
+
 ### Process Overview
 
 1. **Generate on Host A (Secure Machine)**
@@ -256,6 +257,28 @@ openssl x509 -noout -modulus -in C:\OP\SSL\public.crt | openssl sha256 && openss
 - Windows Certificate Manager on Host B will not have the original enrollment request
 - The pending request will appear as "orphaned" - this is harmless
 - **Best Practice:** Delete unused "Certificate Enrollment Request" entries to keep the store clean
+
+#### Transferring the .pfx File via RDP Clipboard (Hex/Base64 Trick ps1)
+
+A .pfx (or .p12) file contains the private key, the primary public certificate, and the full intermediate/root CA certificate chain bundled together. That is why it is the standard and required format for importing certificates into IIS, as IIS needs the private key to decrypt SSL/TLS traffic.
+
+If RDP clipboard restrictions block binary file transfers (.pfx), you can temporarily encode the .pfx file into a Base64 text string on your local machine, copy that text across the RDP session, paste it into a file on the Windows server, and decode it back into a .pfx file using PowerShell.
+
+1. On your local machine (where you downloaded the .pfx), encode it to Base64:
+```ps1
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\path\to\cert.pfx")) | Out-File "C:\path\to\cert_base64.txt"
+
+
+```
+2. Open cert_base64.txt, copy the text block, and paste it into a new text file named cert_base64.txt on your remote Windows server via the RDP clipboard.
+3. On the remote Windows server, decode the text back into a valid .pfx file using PowerShell:
+
+```ps1
+$base64 = Get-Content -Path "C:\path\to\cert_base64.txt" -Raw
+[IO.File]::WriteAllBytes("C:\path\to\imported_cert.pfx", [Convert]::FromBase64String($base64))
+```
+4. Verification: Check that imported_cert.pfx exists in the target folder and matches the original file size.
+  
 
 ---
 
