@@ -24,7 +24,7 @@ This guide continues from the manual steps in the main [README.md](../README.md)
     - [Extract Certificate](#extract-certificate)
     - [Verify the Certificate](#verify-the-certificate)
     - [View CA Bundle](#view-ca-bundle)
-  - [6. Automate the Process tbd](#6-automate-the-process-tbd)
+  - [6. Automate the Process tbd, na no more of this, we use Ansible in KVM repos](#6-automate-the-process-tbd-na-no-more-of-this-we-use-ansible-in-kvm-repos)
     - [Basic Commands](#basic-commands)
   - [7. Generate CSR on Different Host](#7-generate-csr-on-different-host)
     - [Process Overview](#process-overview)
@@ -237,7 +237,7 @@ openssl storeutl -noout -text -certs C:\RabbitmqBaseFolder\cert\ca.bundle
 
 ---
 
-## 6. Automate the Process tbd
+## 6. Automate the Process tbd, na no more of this, we use Ansible in KVM repos
 
 For automated certificate requests, see [README_auto_ps1.md](README_auto_ps1.md).
 
