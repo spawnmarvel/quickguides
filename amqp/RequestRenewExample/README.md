@@ -39,7 +39,6 @@ This guide continues from the manual steps in the main [README.md](../README.md)
     - [Interpreting Results](#interpreting-results)
       - [✅ Successful mTLS Handshake](#-successful-mtls-handshake)
       - [❌ Failed Handshake](#-failed-handshake)
-  - [](#)
   - [Notes](#notes)
   - [9. Secure private keys](#9-secure-private-keys)
     - [Can We Hot Reload Static Shovels? (Clarification)](#can-we-hot-reload-static-shovels-clarification)
@@ -436,6 +435,7 @@ Key Verification Points
 > ⚠️ Running `openssl s_client` to test does NOT disturb or interrupt current traffic on your RabbitMQ server.
 
 ![test ssl](https://github.com/spawnmarvel/quickguides/blob/main/amqp/RequestRenewExample/images/openssl_client_test.jpg)
+
 ---
 
 ## Notes
