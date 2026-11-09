@@ -328,7 +328,7 @@ ls
 
 ```
 4. Verification: Check that imported_cert.pfx exists in the target folder and matches the original file size.
-5. Import the .pfx file into the Local Machine personal store:
+5. Import the .pfx file into the Local Machine personal store with the password you got.
 6. Bind Certificate in IIS Manager
 
 ---
